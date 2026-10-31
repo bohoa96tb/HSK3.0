@@ -1,5 +1,8 @@
 // Validator for data/content.json: schema shape, unique IDs, cross-references,
 // source provenance and rights, audio segment timestamps.
+// Content is organised as one `pilot` lesson (Bài 1) plus `additionalLessons`
+// (Bài 2, ...) that all share the same shape; every check runs per lesson and
+// IDs must be unique across lessons.
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -31,72 +34,101 @@ const bookIds = new Set((data.books || []).map((b) => b.id));
 for (const b of data.books || []) {
   if (!sourceIds.has(b.sourceId)) err(`book ${b.id}: unknown sourceId ${b.sourceId}`);
 }
+const contents = [data.pilot, ...(data.additionalLessons || [])].filter(Boolean);
+const contentByLesson = new Map(contents.map((c) => [c.lessonId, c]));
 const lessonIds = new Set();
 for (const l of data.lessons || []) {
   if (!l.id || lessonIds.has(l.id)) err(`lesson id missing/duplicate: ${l.id}`);
   lessonIds.add(l.id);
   if (!bookIds.has(l.bookId)) err(`lesson ${l.id}: unknown bookId ${l.bookId}`);
   checkRefs(l.sourceRefs, `lesson ${l.id}`);
-  if (l.publicationStatus === "pilot-ready" && l.id !== data.pilot.lessonId) err(`lesson ${l.id}: pilot-ready but not the pilot lesson`);
-}
-const pilot = data.pilot;
-if (!pilot || !lessonIds.has(pilot.lessonId)) err("pilot.lessonId does not resolve");
-const kpIds = new Set();
-for (const kp of pilot.knowledgePoints || []) {
-  if (!kp.id || kpIds.has(kp.id)) err(`knowledge point id missing/duplicate: ${kp.id}`);
-  kpIds.add(kp.id);
-  checkRefs(kp.sourceRefs, `knowledge ${kp.id}`);
-  if (!kp.kindLabel) err(`knowledge ${kp.id}: kindLabel missing (must state its true role)`);
-}
-const sentenceIds = new Set((pilot.reader?.sentences || []).map((s) => s.id));
-for (const s of pilot.reader?.sentences || []) {
-  checkRefs(s.sourceRefs, `sentence ${s.id}`);
-  if (!s.zh || !s.pinyin || !s.vi) err(`sentence ${s.id}: zh/pinyin/vi all required`);
-}
-for (const kp of pilot.knowledgePoints || []) {
-  for (const sid of kp.sentenceIds || []) if (!sentenceIds.has(sid)) err(`knowledge ${kp.id}: unknown sentenceId ${sid}`);
-  for (const eid of kp.exerciseIds || []) {
-    if (!(pilot.exerciseSet.items || []).some((i) => i.id === eid)) err(`knowledge ${kp.id}: unknown exerciseId ${eid}`);
+  if (l.publicationStatus === "pilot-ready" && !contentByLesson.has(l.id)) err(`lesson ${l.id}: pilot-ready but has no lesson content`);
+  if (l.publicationStatus !== "pilot-ready" && contentByLesson.has(l.id)) err(`lesson ${l.id}: has lesson content but is not pilot-ready`);
+  const c = contentByLesson.get(l.id);
+  if (c) {
+    for (const gid of l.grammarIds || []) if (!c.knowledgePoints.some((k) => k.id === gid)) err(`lesson ${l.id}: grammarId ${gid} not in its content`);
+    if ((l.grammarIds || []).length !== c.knowledgePoints.length) err(`lesson ${l.id}: grammarIds do not cover all knowledge points of its content`);
+    for (const sid of l.sectionIds || []) if (!c.intro.sections.some((x) => x.id === sid)) err(`lesson ${l.id}: sectionId ${sid} not in its intro sections`);
   }
 }
-for (const w of [...(pilot.prepWords || []), ...(pilot.reader?.vocab || [])]) {
-  if (!w.zh || !w.pinyin || !w.vi) err(`word ${w.id}: zh/pinyin/vi all required`);
-  checkRefs(w.sourceRefs, `word ${w.id}`);
-}
+if (!data.pilot || !lessonIds.has(data.pilot.lessonId)) err("pilot.lessonId does not resolve");
+for (const c of contents) if (!lessonIds.has(c.lessonId)) err(`lesson content ${c.lessonId}: no matching lesson entry`);
+
+// Global ID spaces (across all lessons)
+const kpIds = new Set(contents.flatMap((c) => (c.knowledgePoints || []).map((k) => k.id)));
+const sentenceIds = new Set();
 const trackIds = new Set();
-for (const t of pilot.reader?.audioTracks || []) {
-  if (!t.id || trackIds.has(t.id)) err(`track id missing/duplicate: ${t.id}`);
-  trackIds.add(t.id);
-  if (!/^https:\/\/cdn\.baulchino\.com\//.test(t.url)) err(`track ${t.id}: audio must stream from the Baulchino source CDN`);
-  if (!(t.durationSec > 0)) err(`track ${t.id}: durationSec must be positive`);
-  for (const seg of t.segments || []) {
-    if (seg.start < 0 || seg.end > t.durationSec || seg.start >= seg.end) err(`track ${t.id}: segment out of range`);
-    if (t.segmentsStatus !== "verified") err(`track ${t.id}: segments present but segmentsStatus is not "verified"`);
-  }
-  if ((t.segments || []).length === 0 && t.segmentsStatus !== "unverified") err(`track ${t.id}: no segments but segmentsStatus is not "unverified"`);
-}
-for (const g of pilot.reader.passages || []) {
- if (!trackIds.has(g.audioTrackId)) err(`passage ${g.id}: missing track`);
- for (const id of g.sentenceIds) if (!sentenceIds.has(id)) err(`passage ${g.id}: missing sentence ${id}`);
- checkRefs(g.sourceRefs, `passage ${g.id}`);
-}
 const exIds = new Set();
-for (const item of pilot.exerciseSet?.items || []) {
-  if (!item.id || exIds.has(item.id)) err(`exercise id missing/duplicate: ${item.id}`);
-  exIds.add(item.id);
-  if (item.answerStatus === "verified-from-visual" && (!item.answerEvidence || !item.image)) err(`exercise ${item.id}: visual answer needs evidence and image`);
-  checkRefs(item.sourceRefs, `exercise ${item.id}`);
-  for (const g of item.grammarIds || []) if (!kpIds.has(g)) err(`exercise ${item.id}: unknown grammarId ${g}`);
-  if (["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
-    if (!item.options.some((o) => o.id === item.answer)) err(`exercise ${item.id}: answer not among options`);
-  } else if (item.answer != null) {
-    err(`exercise ${item.id}: unverified answers must not be auto-graded (answer must be null)`);
+const summary = [];
+for (const c of contents) {
+  const tag = `lesson content ${c.lessonId}`;
+  if (!c.intro?.goalVi || !Array.isArray(c.intro?.sections) || c.intro.sections.length !== 7) err(`${tag}: intro with goalVi and 7 sections required`);
+  const localKp = new Set();
+  for (const kp of c.knowledgePoints || []) {
+    if (!kp.id || localKp.has(kp.id)) err(`knowledge point id missing/duplicate within ${tag}: ${kp.id}`);
+    localKp.add(kp.id);
+    checkRefs(kp.sourceRefs, `knowledge ${kp.id}`);
+    if (!kp.kindLabel) err(`knowledge ${kp.id}: kindLabel missing (must state its true role)`);
   }
-}
-for (const t of pilot.selfCheckTasks || []) {
-  if (t.answerStatus !== "unverified") err(`self-check ${t.id}: answerStatus must be "unverified" in this pilot`);
-  if (t.audioTrackId && !trackIds.has(t.audioTrackId)) err(`self-check ${t.id}: unknown audioTrackId`);
-  checkRefs(t.sourceRefs, `self-check ${t.id}`);
+  const localSentences = new Set((c.reader?.sentences || []).map((x) => x.id));
+  for (const sen of c.reader?.sentences || []) {
+    if (!sen.id || sentenceIds.has(sen.id)) err(`sentence id missing/duplicate: ${sen.id}`);
+    sentenceIds.add(sen.id);
+    checkRefs(sen.sourceRefs, `sentence ${sen.id}`);
+    if (!sen.zh || !sen.pinyin || !sen.vi) err(`sentence ${sen.id}: zh/pinyin/vi all required`);
+    if (sen.transcriptStatus !== "print-verified") err(`sentence ${sen.id}: transcriptStatus must be "print-verified"`);
+  }
+  for (const kp of c.knowledgePoints || []) {
+    for (const sid of kp.sentenceIds || []) if (!localSentences.has(sid)) err(`knowledge ${kp.id}: unknown sentenceId ${sid} in its own lesson`);
+  }
+  for (const w of [...(c.prepWords || []), ...(c.reader?.vocab || []), ...(c.foundationWords || [])]) {
+    if (!w.zh || !w.pinyin || !w.vi) err(`word ${w.id}: zh/pinyin/vi all required`);
+    checkRefs(w.sourceRefs, `word ${w.id}`);
+  }
+  for (const t of c.reader?.audioTracks || []) {
+    if (!t.id || trackIds.has(t.id)) err(`track id missing/duplicate: ${t.id}`);
+    trackIds.add(t.id);
+    if (!/^https:\/\/cdn\.baulchino\.com\//.test(t.url)) err(`track ${t.id}: audio must stream from the Baulchino source CDN`);
+    if (!(t.durationSec > 0)) err(`track ${t.id}: durationSec must be positive`);
+    for (const seg of t.segments || []) {
+      if (seg.start < 0 || seg.end > t.durationSec || seg.start >= seg.end) err(`track ${t.id}: segment out of range`);
+      if (t.segmentsStatus !== "verified") err(`track ${t.id}: segments present but segmentsStatus is not "verified"`);
+    }
+    if ((t.segments || []).length === 0 && t.segmentsStatus !== "unverified") err(`track ${t.id}: no segments but segmentsStatus is not "unverified"`);
+    if (t.sourceRefs) checkRefs(t.sourceRefs, `track ${t.id}`);
+  }
+  for (const g of c.reader.passages || []) {
+    if (!trackIds.has(g.audioTrackId)) err(`passage ${g.id}: missing track`);
+    for (const id of g.sentenceIds) if (!localSentences.has(id)) err(`passage ${g.id}: missing sentence ${id}`);
+    checkRefs(g.sourceRefs, `passage ${g.id}`);
+  }
+  for (const item of c.exerciseSet?.items || []) {
+    if (!item.id || exIds.has(item.id)) err(`exercise id missing/duplicate: ${item.id}`);
+    exIds.add(item.id);
+    if (item.answerStatus === "verified-from-visual" && (!item.answerEvidence || !item.image)) err(`exercise ${item.id}: visual answer needs evidence and image`);
+    checkRefs(item.sourceRefs, `exercise ${item.id}`);
+    for (const g of item.grammarIds || []) if (!kpIds.has(g)) err(`exercise ${item.id}: unknown grammarId ${g}`);
+    if (["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
+      if (!item.options.some((o) => o.id === item.answer)) err(`exercise ${item.id}: answer not among options`);
+    } else if (item.answer != null) {
+      err(`exercise ${item.id}: unverified answers must not be auto-graded (answer must be null)`);
+    }
+  }
+  for (const kp of c.knowledgePoints || []) {
+    for (const eid of kp.exerciseIds || []) {
+      if (!contents.some((x) => (x.exerciseSet.items || []).some((i) => i.id === eid))) err(`knowledge ${kp.id}: unknown exerciseId ${eid}`);
+    }
+  }
+  const localTracks = new Set((c.reader?.audioTracks || []).map((t) => t.id));
+  for (const t of c.selfCheckTasks || []) {
+    if (t.answerStatus !== "unverified") err(`self-check ${t.id}: answerStatus must be "unverified"`);
+    if (t.audioTrackId && !localTracks.has(t.audioTrackId)) err(`self-check ${t.id}: unknown audioTrackId`);
+    if (!Array.isArray(t.prompts) || !t.prompts.length) err(`self-check ${t.id}: prompts missing`);
+    checkRefs(t.sourceRefs, `self-check ${t.id}`);
+  }
+  if (c.apply?.audioTrackId && !localTracks.has(c.apply.audioTrackId)) err(`${tag}: apply audioTrackId unknown`);
+  if (c.apply) checkRefs(c.apply.sourceRefs, `${tag} apply`);
+  summary.push(`${c.lessonId}: ${c.knowledgePoints.length} knowledge points, ${c.reader.sentences.length} sentences, ${c.exerciseSet.items.length} auto-graded exercises, ${c.selfCheckTasks.length} self-check tasks, ${c.reader.audioTracks.length} audio tracks`);
 }
 // No copied book/media assets may live in the repository data.
 const raw = JSON.stringify(data);
@@ -108,4 +140,4 @@ if (errors.length) {
   console.error(`validate: FAILED with ${errors.length} error(s)`);
   process.exit(1);
 }
-console.log(`validate: OK — ${data.sources.length} sources, ${data.books.length} books, ${data.lessons.length} lessons, ${pilot.knowledgePoints.length} knowledge points, ${pilot.reader.sentences.length} sentences, ${pilot.exerciseSet.items.length} auto-graded exercises, ${pilot.selfCheckTasks.length} self-check tasks, ${pilot.reader.audioTracks.length} audio tracks`);
+console.log(`validate: OK — ${data.sources.length} sources, ${data.books.length} books, ${data.lessons.length} lessons | ${summary.join(" | ")}`);

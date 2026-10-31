@@ -22,7 +22,7 @@ chưa đọc nội dung, chưa xuất bản.
 | Bài | Tên Trung (mục lục Workbook) | Tên Anh (mục lục Workbook) | Tên Việt (biên tập) | Trang in bắt đầu (Workbook) | Track Textbook | Track Workbook | Trạng thái app |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | AI小语，你好！ | Hello, AI Xiaoyu! | AI Tiểu Ngữ, xin chào! | 001 | 7 | 2 | **Pilot** — đã đọc nội dung trang in 001–004 |
-| 2 | 我叫李文 | My name is Li Wen | Tôi tên là Lý Văn | 005 | 7 | 2 | Chỉ mục lục |
+| 2 | 我叫李文 | My name is Li Wen | Tôi tên là Lý Văn | 005 | 7 | 2 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 005–009 và Workbook 005–008 (xem mục 4) |
 | 3 | 我是中国人 | I'm Chinese | Tôi là người Trung Quốc | 009 | 7 | 2 | Chỉ mục lục |
 | 4 | 我有两个孩子 | I have two children | Tôi có hai người con | 013 | 6 | 3 | Chỉ mục lục |
 | 5 | 今天我休息 | I'm off today | Hôm nay tôi nghỉ | 022 | 6 | 3 | Chỉ mục lục |
@@ -124,4 +124,22 @@ tự tạo câu hỏi/đáp án nhiễu.
 | Chọn hội thoại theo hình | Workbook 004 / 11, bài 5 | Không cần audio | 3 câu; đáp án suy luận trực quan |
 | Nghe–viết thanh mẫu/vận mẫu/thanh điệu | Workbook 004 / 11, bài 2–4 | Workbook 1-2 | Có ô ghi đáp án; chưa chấm |
 
-Nội dung thay thế các kết luận cũ trong tài liệu về Textbook chưa đọc được và 6 câu trắc nghiệm. Không thay trạng thái bài 2–15.
+Nội dung thay thế các kết luận cũ trong tài liệu về Textbook chưa đọc được và 6 câu trắc nghiệm. Không thay trạng thái bài 3–15.
+
+## 4. Map chi tiết — Bài 2 我叫李文 (đã đối chiếu trực quan 2026-11-01)
+
+**Bài 2: 我叫李文 / My name is Li Wen** — Textbook trang in 005–009 = PDF 20–24; Workbook trang in 005–008 = PDF 12–15. Người dùng cho phép bắt đầu Bài 2 ngày 2026-11-01; tên bài đối chiếu cả hai sách (cùng ghi 我叫李文).
+
+| Nội dung | Trang in / PDF | Audio | Trạng thái trong app |
+| --- | --- | --- | --- |
+| Hội thoại 1: hỏi tên trong lớp （请问，你叫什么名字？) | Textbook 006 / 21 | Textbook 2-1 | 2 lượt thoại print-verified |
+| Hội thoại 2: nhận nhầm người, 对不起 / 没关系 | Textbook 007 / 22 | Textbook 2-3 | 4 lượt thoại print-verified |
+| Hội thoại 3: lần đầu gặp, 很高兴认识你 | Textbook 008 / 23 | Textbook 2-5 | 4 lượt thoại print-verified |
+| 15 từ mới (3 nhóm theo hội thoại) | Textbook 006–007, 009 / 21–22, 24 | Textbook 2-2, 2-4, 2-6 (chỉ ghi nguồn, app phát theo hội thoại) | Mục Từ cần biết |
+| Điểm kiến thức: 叫 hỏi/nói tên · 是/不是 · xin lỗi · trật tự từ cơ bản （主+谓+宾） · cấu tạo tên họ trước tên sau | Textbook 005–009 / 20–24 | — | 5 điểm chính ở Mục 3 |
+| Nền phát âm: j/q/x ghép i/ü; quy tắc viết yi/wu/yu, bỏ chấm ü, iou→you/iu | Workbook 005–007 / 12–14 | Workbook 2-1 | 2 điểm nền ở Mục 3 |
+| Nghe–viết thanh mẫu / vận mẫu / thanh điệu | Workbook 008 / 15, bài 1–3 (9 + 15 + 12 ô) | Workbook 2-2 | Tự đối chiếu, lưu nháp, không chấm (sách không in đáp án) |
+| Nhìn hình chọn hội thoại, bài 4 (4 hình) | Workbook 008 / 15 | — | 4 câu chấm tự động; đáp án là suy luận biên tập từ hình (`verified-from-visual`), không phải đáp án chính thức |
+| Tự nói: đóng vai hỏi tên / tự giới thiệu bằng tên thật | Textbook 006, 009 / 21, 24 | Textbook 2-1 | Mục 6; app không chấm phát âm |
+
+Audio Bài 2 đối ứng theo ký hiệu in trong sách, thời lượng đo bằng ffprobe (xem `docs/SOURCE_AUDIT.md`); chưa nghe kiểm chứng, chưa có timestamp câu nên chỉ phát cả track — cùng giới hạn như Bài 1. Trang mở rộng Textbook 009 (câu líu lưỡi, bonus) không đưa vào app.

@@ -136,3 +136,15 @@ Thay 6 câu trắc nghiệm tự soạn gắn nhãn nguồn sai bằng bài ch�
 4 hình trích nhỏ theo yêu cầu người dùng, có attribution; không PDF/MP3 trong repo. Quyền nguồn vẫn unknown, không gán giấy phép mở. Không dùng ảnh web khác thay hình có vai trò quyết định đáp án.
 
 Lịch sử điểm cũ được giữ, loại câu tự soạn khỏi hàng đợi ôn hiện tại. Tiến độ nội dung cũ được lưu snapshot một lần khi nâng sang textbook-pilot-v2; lộ trình mới bắt đầu lại vì nội dung đã đổi đáng kể. Các bản sửa nhỏ sau không reset.
+
+## D09 — Bài 2 và khái quát hóa nhiều bài, 01/11/2026 JST
+
+Người dùng cho phép bắt đầu HSK1 Bài 2 （我叫李文） ngày 2026-11-01, dùng Bài 1 hiện hành làm mẫu; chỉ làm Bài 2, không làm Bài 3, không nhập hàng loạt.
+
+Nội dung bài thứ hai trở đi nằm ở `additionalLessons` trong `data/content.json`, cùng shape với `pilot` (Bài 1 giữ nguyên vị trí để không đổi dữ liệu đã phát hành). Renderer dùng chung qua `contentFor(lessonId)`; mọi bài `pilot-ready` phải có content entry và ngược lại (validator bắt buộc).
+
+Phiên làm bài tập tách theo bộ bài tập: `progress.exerciseSessions[setId]`, đồng thời giữ `exerciseSession` làm bản sao của phiên gần nhất để tương thích ngược. Migration gieo `exerciseSessions` từ `exerciseSession` cũ; tiến độ, lần làm bài, nháp và hàng đợi ôn của Bài 1 không đổi khi thêm Bài 2. Nháp tự đối chiếu lưu theo `progress.drafts[taskId:index]`.
+
+Đáp án bài chọn hội thoại theo hình của Workbook Bài 2 là suy luận biên tập đã đối chiếu trực quan từng hình (`verified-from-visual` kèm `answerEvidence`), không phải đáp án chính thức — cùng quy ước với Bài 1. Ba bài nghe–viết Bài 2 không có đáp án trong sách nên giữ `unverified`, chỉ lưu nháp và tự đánh giá.
+
+Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở index.html và các module để tránh cache cũ sau khi thêm bài.

@@ -240,6 +240,82 @@
         "type": "object"
       },
       "type": "array"
+    },
+    "additionalLessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exerciseSet": {
+            "properties": {
+              "items": {
+                "items": {
+                  "properties": {
+                    "answer": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "answerStatus": {
+                      "enum": [
+                        "verified-from-print",
+                        "verified-from-visual",
+                        "unverified"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "promptVi",
+                    "options",
+                    "answerStatus",
+                    "explanationVi",
+                    "sourceRefs"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "knowledgePoints": {
+            "items": {
+              "properties": {
+                "sourceRefs": {
+                  "$ref": "#/$defs/sourceRefs"
+                }
+              },
+              "required": [
+                "id",
+                "kind",
+                "kindLabel",
+                "title",
+                "explanationVi",
+                "pattern",
+                "sourceRefs"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "lessonId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lessonId",
+          "intro",
+          "prepWords",
+          "knowledgePoints",
+          "reader",
+          "exerciseSet",
+          "selfCheckTasks",
+          "apply"
+        ]
+      }
     }
   },
   "required": [

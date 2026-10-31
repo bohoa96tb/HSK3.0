@@ -78,7 +78,9 @@ export function emptyProgress() {
     attempts: [], // {id, exerciseId, lessonId, optionId, correct, firstAttempt, hintUsed, at}
     selfChecks: {}, // taskId -> {rating, at}
     reviewItems: {}, // itemId -> {sourceItemId, kind, intervalStep, dueAt, lastResult, attempts}
-    exerciseSession: null, // {setId, index, answers:{}, checked:{}, hintUsed:{}}
+    exerciseSession: null, // latest session mirror: {setId, index, answers:{}, checked:{}, hintUsed:{}}
+    exerciseSessions: {}, // setId -> session, so each lesson keeps its own exercise state
+    drafts: {}, // self-check taskId:index -> learner's own written answer (never auto-graded)
     audioState: {}, // trackId -> {position, trackUrl}
     sessions: [], // {date, minutes} active-study estimates recorded on section completion
   };
@@ -92,7 +94,7 @@ export function validateProgress(data) {
   if (data.schemaVersion !== PROGRESS_SCHEMA_VERSION) {
     errors.push(`schemaVersion phải là ${PROGRESS_SCHEMA_VERSION} (đang là ${JSON.stringify(data.schemaVersion)}).`);
   }
-  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState"]) {
+  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState", "exerciseSessions", "drafts"]) {
     if (data[key] !== undefined && (typeof data[key] !== "object" || data[key] === null || Array.isArray(data[key]))) {
       errors.push(`Trường "${key}" phải là một đối tượng.`);
     }
@@ -115,6 +117,8 @@ export function migrateProgress(data) {
     selfChecks: data.selfChecks || {},
     reviewItems: data.reviewItems || {},
     exerciseSession: data.exerciseSession ?? null,
+    exerciseSessions: data.exerciseSessions || (data.exerciseSession?.setId ? { [data.exerciseSession.setId]: data.exerciseSession } : {}),
+    drafts: data.drafts || {},
     audioState: data.audioState || {},
     sessions: data.sessions || [],
   };

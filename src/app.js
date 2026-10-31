@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=learning-3";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=learning-3";
-import * as player from "./player.js?v=learning-3";
+import { gradeChoice, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson2";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson2";
+import * as player from "./player.js?v=20261101-lesson2";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -18,6 +18,23 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 function sourceById(id) { return CONTENT.sources.find((s) => s.id === id); }
 function lessonById(id) { return CONTENT.lessons.find((l) => l.id === id); }
+function contentFor(lessonId) {
+  if (!lessonId || lessonId === CONTENT.pilot.lessonId) return CONTENT.pilot;
+  return (CONTENT.additionalLessons || []).find((c) => c.lessonId === lessonId) || null;
+}
+function allContents() { return [CONTENT.pilot, ...(CONTENT.additionalLessons || [])]; }
+function allTracks() { return allContents().flatMap((c) => c.reader.audioTracks); }
+function readyLessons() { return CONTENT.lessons.filter((l) => l.publicationStatus === "pilot-ready" && contentFor(l.id)); }
+function kpLessonId(kpId) { const c = allContents().find((c) => c.knowledgePoints.some((k) => k.id === kpId)); return c ? c.lessonId : CONTENT.pilot.lessonId; }
+function continueLesson() {
+  const rs = readyLessons();
+  if (!rs.length) return lessonById(CONTENT.pilot.lessonId);
+  const p = loadProgress();
+  const started = rs.filter((l) => p.lessons[l.id]?.lastSectionId && contentFor(l.id).intro.sections.some((x) => !lessonState(l.id).completedSections.includes(x.id)));
+  started.sort((a, b) => String(p.lessons[b.id].updatedAt || "").localeCompare(String(p.lessons[a.id].updatedAt || "")));
+  if (started[0]) return started[0];
+  return rs.find((l) => contentFor(l.id).intro.sections.some((x) => !lessonState(l.id).completedSections.includes(x.id))) || rs[0];
+}
 function refText(r) {
   const src = sourceById(r.sourceId);
   const parts = [];
@@ -78,8 +95,8 @@ function render() {
   if (page === "course") return viewCourse(seg[1]);
   if (page === "lesson") return viewLesson(seg[1], seg[2], query);
   if (page === "grammar") return viewGrammar(seg[1]);
-  if (page === "reader") { const l = CONTENT.pilot.lessonId; return go(`#/lesson/${l}/reader`); }
-  if (page === "exercise") { const l = CONTENT.pilot.lessonId; return go(`#/lesson/${l}/exercises`); }
+  if (page === "reader") { const l = continueLesson().id; return go(`#/lesson/${l}/reader`); }
+  if (page === "exercise") { const l = continueLesson().id; return go(`#/lesson/${l}/exercises`); }
   if (page === "review") return viewReview();
   if (page === "progress") return viewProgress();
   if (page === "settings") return viewSettings();
@@ -99,35 +116,36 @@ function navActive() {
 
 // ---------- Today ----------
 function viewToday() {
-  navActive(); const p=loadProgress(), l=lessonById(CONTENT.pilot.lessonId), st=lessonState(l.id);
-  const sections=CONTENT.pilot.intro.sections;
+  navActive(); const p=loadProgress(), l=continueLesson(), c=contentFor(l.id), st=lessonState(l.id);
+  const sections=c.intro.sections;
   const next=sections.find(x=>!st.completedSections.includes(x.id));
   const due=Object.values(p.reviewItems).filter(x=>isDue(x,Date.now())).length;
   const done=st.completedSections.filter(x=>sections.some(y=>y.id===x)).length;
+  const img=c.intro.contextImage;
   main.innerHTML=`${header("Mỗi ngày, một chút tiếng Trung.","Học để hiểu. Nghe để nhớ. Dùng ngay trong cuộc sống.")}
     <div class="dashboard"><section class="hero card">
-      <div class="hero-copy"><p class="kicker">KHÓA HỌC CỦA BẠN · HSK 1</p><h2>Bắt đầu từ<br>một lời chào<span class="hero-hanzi" lang="zh-CN">你好！</span></h2>
-      <p>Chào hỏi, cảm ơn và tạm biệt.<br>Một bài học nhỏ cho cuộc trò chuyện đầu tiên.</p>
-      <div class="hero-meta"><span>◷ Khoảng 20 phút</span><span>♫ 3 hội thoại</span></div>
-      <a class="btn primary" href="#/lesson/${l.id}/${st.lastSectionId || next?.id || 'intro'}">${done?'Tiếp tục học':'Bắt đầu bài 1'} <span aria-hidden="true">→</span></a></div>
-      <figure class="hero-image"><img src="assets/lesson-01/classroom.webp" alt="Các học sinh chào nhau trong lớp — hình trích từ Textbook Bài 1" width="436" height="239"><figcaption>Chào cả lớp · Textbook, trang 002</figcaption></figure>
+      <div class="hero-copy"><p class="kicker">KHÓA HỌC CỦA BẠN · HSK 1 · BÀI ${l.lessonNumber}</p><h2>${esc(l.titleVi)}<span class="hero-hanzi" lang="zh-CN">${esc(l.titleZh)}</span></h2>
+      <p>${esc(c.intro.goalVi)}</p>
+      <div class="hero-meta"><span>◷ Khoảng ${c.intro.estimatedMinutes} phút</span><span>♫ ${c.reader.passages.length} hội thoại</span></div>
+      <a class="btn primary" href="#/lesson/${l.id}/${st.lastSectionId || next?.id || 'intro'}">${done?'Tiếp tục học':'Bắt đầu bài '+l.lessonNumber} <span aria-hidden="true">→</span></a></div>
+      ${img?`<figure class="hero-image"><img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}
     </section>
     <div class="dashboard-side"><section class="card"><p class="kicker">BƯỚC NHỎ HÔM NAY</p><h2>${done}<span class="muted"> / ${sections.length} mục</span></h2><div class="progress-bar"><div style="width:${done/sections.length*100}%"></div></div><p class="muted small">${next ? 'Tiếp theo: '+esc(next.titleVi) : 'Bạn đã đi hết các mục của bài.'}</p><a href="#/progress">Xem tiến độ →</a></section>
     <section class="card review-teaser"><span class="eyebrow">ÔN ĐỂ NHỚ LÂU</span><h2>${due ? due+' mục đến hạn' : 'Dành một phút ôn lại'}</h2><p class="muted small">Ôn những phần bạn còn chậm, theo nhịp của bạn.</p><a href="#/review">Mở sổ ôn tập →</a></section></div></div>
     <div class="section-heading"><h2>Học theo cách của bạn</h2><a href="#/course/HSK%201">Xem lộ trình →</a></div>
-    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>您, 们 và lời nói lịch sự.</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>Nhìn hình, chọn hội thoại phù hợp.</p><span>Luyện tập →</span></a></div>
-    <p class="source-footer">Bài 1 đang mở · Học liệu từ Baulchino · <a href="#/sources">Nguồn và phạm vi đã kiểm tra</a></p>`;
+    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>${esc(c.intro.courseTagsVi||'')}</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>${esc(c.exerciseSet.titleVi)}</p><span>Luyện tập →</span></a></div>
+    <p class="source-footer">${readyLessons().map(x=>'Bài '+x.lessonNumber).join(' và ')} đang mở · Học liệu từ Baulchino · <a href="#/sources">Nguồn và phạm vi đã kiểm tra</a></p>`;
 }
 
 // ---------- Course ----------
 function viewCourse(level) {
  navActive();
  main.innerHTML=`${header('Lộ trình học','Đi từ lời chào đầu tiên đến những cuộc trò chuyện hằng ngày.')}
- <div class="course-banner"><div><p class="kicker">SƠ CẤP · HSK 1</p><h2>Những bước đầu với tiếng Trung</h2><p>15 bài trong mục lục · Bài 1 đã mở</p></div><span class="course-mark" lang="zh-CN">学</span></div>
+ <div class="course-banner"><div><p class="kicker">SƠ CẤP · HSK 1</p><h2>Những bước đầu với tiếng Trung</h2><p>${CONTENT.lessons.length} bài trong mục lục · ${readyLessons().length} bài đã mở</p></div><span class="course-mark" lang="zh-CN">学</span></div>
  <div class="section-heading"><h2>Danh sách bài học</h2><span class="muted small">Theo thứ tự giáo trình</span></div>
  <div class="lesson-list">${CONTENT.lessons.map(l=>{
  const ready=l.publicationStatus==='pilot-ready',st=lessonState(l.id);
- return `<article class="row-card ${ready?'available':'upcoming'}"><span class="lesson-num">${String(l.lessonNumber).padStart(2,'0')}</span><div class="grow"><h2 lang="zh-CN">${esc(l.titleZh)}</h2><p>${esc(l.titleVi)}</p><span class="tag">${ready?(st.completedSections.length?'Đang học':'Sẵn sàng học'):'Chưa mở'}</span>${ready?'<span class="small muted"> Chào hỏi · Xưng hô · Phát âm</span>':''}</div>${ready?`<a class="btn primary" href="#/lesson/${l.id}">Vào bài →</a>`:`<a class="btn ghost small" href="#/lesson/${l.id}">Chi tiết</a>`}</article>`;}).join('')}</div>
+ return `<article class="row-card ${ready?'available':'upcoming'}"><span class="lesson-num">${String(l.lessonNumber).padStart(2,'0')}</span><div class="grow"><h2 lang="zh-CN">${esc(l.titleZh)}</h2><p>${esc(l.titleVi)}</p><span class="tag">${ready?(st.completedSections.length?'Đang học':'Sẵn sàng học'):'Chưa mở'}</span>${ready?`<span class="small muted"> ${esc(contentFor(l.id)?.intro.courseTagsVi||'')}</span>`:''}</div>${ready?`<a class="btn primary" href="#/lesson/${l.id}">Vào bài →</a>`:`<a class="btn ghost small" href="#/lesson/${l.id}">Chi tiết</a>`}</article>`;}).join('')}</div>
  <details class="card"><summary>Các cấp học tiếp theo</summary><p>HSK 2–4 có trong danh mục nguồn. Nội dung chưa được biên tập và nghiệm thu để mở học.</p><a href="#/sources">Xem sách và audio nguồn →</a></details>`;
 }
 
@@ -136,26 +154,27 @@ function viewLesson(lessonId, sectionId, query) {
   navActive();
   const lesson = lessonById(lessonId);
   if (!lesson) { main.innerHTML = `<section class="card"><h1>Không tìm thấy bài</h1><a class="btn" href="#/course/HSK%201">Về lộ trình</a></section>`; return; }
-  if (lesson.publicationStatus !== "pilot-ready") {
+  if (lesson.publicationStatus !== "pilot-ready" || !contentFor(lesson.id)) {
     main.innerHTML = `${header(`Bài ${lesson.lessonNumber}: ${lesson.titleZh}`, lesson.titleVi)}
     <section class="card warn"><h2>Bài đang kiểm tra nguồn</h2><p>${esc(lesson.publicationNote)}</p>${refsHtml(lesson.sourceRefs)}
     <p><a class="btn" href="#/sources/src-baul-books">Mở trang sách Baulchino</a> <a class="btn ghost" href="#/course/HSK%201">Quay lại lộ trình</a></p></section>`;
     return;
   }
-  if (!sectionId) return viewLessonIntro(lesson);
-  const sections = CONTENT.pilot.intro.sections;
+  const content = contentFor(lesson.id);
+  if (!sectionId) return viewLessonIntro(lesson, content);
+  const sections = content.intro.sections;
   const idx = sections.findIndex((s) => s.id === sectionId);
   if (idx === -1) return viewLessonIntro(lesson);
   const prev = sections[idx - 1]; const next = sections[idx + 1];
   update(p => {const l=(p.lessons[lesson.id] ||= {completedSections:[]}); l.lastSectionId=sectionId;});
   let body = "";
-  if (sectionId === "intro") body = sectionIntroHtml(lesson, true);
-  if (sectionId === "prep") body = sectionPrepHtml();
-  if (sectionId === "knowledge") body = sectionKnowledgeHtml(query);
-  if (sectionId === "reader") body = sectionReaderHtml();
-  if (sectionId === "exercises") body = sectionExercisesHtml();
-  if (sectionId === "apply") body = sectionApplyHtml();
-  if (sectionId === "summary") body = sectionSummaryHtml(lesson);
+  if (sectionId === "intro") body = sectionIntroHtml(lesson, content);
+  if (sectionId === "prep") body = sectionPrepHtml(content);
+  if (sectionId === "knowledge") body = sectionKnowledgeHtml(content);
+  if (sectionId === "reader") body = sectionReaderHtml(content);
+  if (sectionId === "exercises") body = sectionExercisesHtml(content);
+  if (sectionId === "apply") body = sectionApplyHtml(content);
+  if (sectionId === "summary") body = sectionSummaryHtml(lesson, content);
   main.innerHTML = `
   <div class="lesson-top"><a class="btn ghost" href="#/lesson/${lesson.id}">← Thoát về bài</a>
   <span class="muted">Mục ${idx + 1}/${sections.length}: ${esc(sections[idx].titleVi)}</span></div>
@@ -167,23 +186,25 @@ function viewLesson(lessonId, sectionId, query) {
     ${next ? `<a class="btn primary" href="#/lesson/${lesson.id}/${next.id}">Tiếp tục →</a>` : `<a class="btn primary" href="#/today">Về Hôm nay</a>`}
   </div>`;
   $("#done-btn").onclick = () => { markSectionDone(lesson.id, sectionId); render(); };
-  bindSection(sectionId);
+  bindSection(sectionId, content);
 }
 
-function viewLessonIntro(lesson) {
+function viewLessonIntro(lesson, content) {
+  content = content || contentFor(lesson.id);
   const st = lessonState(lesson.id);
   main.innerHTML = `${header(`HSK 1 · Bài ${lesson.lessonNumber}`, lesson.titleVi)}
-  ${sectionIntroHtml(lesson, false)}
+  ${sectionIntroHtml(lesson, content)}
   <section class="card"><h2>Các mục cần học</h2>
-  ${CONTENT.pilot.intro.sections.map((s) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${s.id}">${esc(s.titleVi)}</a><span class="tag">${st.completedSections.includes(s.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
+  ${content.intro.sections.map((s) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${s.id}">${esc(s.titleVi)}</a><span class="tag">${st.completedSections.includes(s.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
   <a class="btn primary big" href="#/lesson/${lesson.id}/${st.lastSectionId || "intro"}">${st.completedSections.length ? "Tiếp tục học" : "Bắt đầu"}</a></section>`;
-  bindSection("intro");
+  bindSection("intro", content);
 }
 
-function sectionIntroHtml(lesson) {
- return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI 01</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">Một lời chào đúng lúc, một cách xưng hô lịch sự.</p>
- <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list"><li>Chào một người và chào cả nhóm.</li><li>Dùng 您 khi nói với người mình kính trọng.</li><li>Nói cảm ơn, đáp lời cảm ơn và tạm biệt.</li></ul><p class="muted">Học trong khoảng 20 phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài 1</p></div><img class="context-image" src="assets/lesson-01/classroom.webp" alt="Học sinh trong lớp chào cô giáo" width="436" height="239"></div>
- <p class="study-tip">Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện bằng hình. Phần phát âm là kiến thức bổ trợ, bạn có thể mở khi cần.</p>${refsHtml(lesson.sourceRefs)}</section>`;
+function sectionIntroHtml(lesson, content) {
+ const intro = content.intro; const img = intro.contextImage;
+ return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
+ <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Học trong khoảng ${intro.estimatedMinutes} phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}">`:''}</div>
+ <p class="study-tip">${esc(intro.studyTipVi||'')}</p>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>`;
 }
 
 // ---------- Lesson sections ----------
@@ -208,23 +229,27 @@ function bindToggles() {
 }
 function applyFontScale() { document.documentElement.style.setProperty("--font-scale", String(settings().fontScale || 1)); }
 
-function sectionPrepHtml() {
+function sectionPrepHtml(content) {
  const s=settings();
- return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">12 mục từ xuất hiện trong Bài 1. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${togglesHtml('prep')}<div class="word-grid">${CONTENT.pilot.prepWords.map(w=>`<article class="word-card"><div class="pinyin">${s.showPinyinPrep?esc(w.pinyin):'&nbsp;'}</div><div class="zh" lang="zh-CN">${esc(w.zh)}</div><div class="vi">${esc(w.vi)}</div></article>`).join('')}</div><p class="study-tip">Các thẻ từ chưa có đoạn audio riêng đã xác minh. Nghe chúng trong hội thoại ở bước Nghe & đọc.</p>${refsHtml([CONTENT.pilot.prepWords[0].sourceRefs[0],CONTENT.pilot.prepWords[1].sourceRefs[0],CONTENT.pilot.prepWords[8].sourceRefs[0]])}</section>`;
+ const firstRefs=[]; const seenPages=new Set();
+ for(const w of content.prepWords){const r=w.sourceRefs[0]; if(r && !seenPages.has(r.pdfPage)){seenPages.add(r.pdfPage); firstRefs.push(r);} }
+ return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${togglesHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card"><div class="pinyin">${s.showPinyinPrep?esc(w.pinyin):'&nbsp;'}</div><div class="zh" lang="zh-CN">${esc(w.zh)}</div><div class="vi">${esc(w.vi)}</div></article>`).join('')}</div><p class="study-tip">Các thẻ từ chưa có đoạn audio riêng đã xác minh. Nghe chúng trong hội thoại ở bước Nghe & đọc.</p>${refsHtml(firstRefs)}</section>`;
 }
 
-function knowledgeCardHtml(kp,{linkBack=null}={}) {
+function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
+ const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=kp.kind==='foundation-pronunciation';
  return `<article class="card grammar-card" id="${esc(kp.id)}"><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
  ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span>${foundation||settings().showPinyinSentences?`<span class="pinyin">${esc(e.pinyin)}</span>`:''}<p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
- ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=CONTENT.pilot.reader.sentences.find(x=>x.id===id);return `<a class="btn ghost small" href="#/lesson/${CONTENT.pilot.lessonId}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`;}).join('')}</div>`:''}
+ ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=contentFor(kpLesson).reader.sentences.find(x=>x.id===id);return sen?`<a class="btn ghost small" href="#/lesson/${kpLesson}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`:'';}).join('')}</div>`:''}
  ${refsHtml(kp.sourceRefs)}${linkBack?`<a class="btn primary" href="${esc(linkBack)}">← Quay lại câu đang làm</a>`:''}</article>`;
 }
 
-function sectionKnowledgeHtml() {
- const main=CONTENT.pilot.knowledgePoints.filter(x=>x.kind!=='foundation-pronunciation');
- const foundation=CONTENT.pilot.knowledgePoints.filter(x=>x.kind==='foundation-pronunciation');
- return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>Ba điều cần nhớ</h2></div></div>${togglesHtml('sentences')}${main.map(x=>knowledgeCardHtml(x)).join('')}<details class="foundation"><summary>Ôn phát âm nền tảng: âm tiết, thanh điệu và vần</summary>${foundation.map(x=>knowledgeCardHtml(x)).join('')}</details>`;
+function sectionKnowledgeHtml(content) {
+ const main=content.knowledgePoints.filter(x=>x.kind!=='foundation-pronunciation');
+ const foundation=content.knowledgePoints.filter(x=>x.kind==='foundation-pronunciation');
+ const countWord={1:'Một',2:'Hai',3:'Ba',4:'Bốn',5:'Năm',6:'Sáu',7:'Bảy',8:'Tám'}[main.length]||String(main.length);
+ return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${togglesHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
 }
 
 function trackRowHtml(track) {
@@ -243,24 +268,24 @@ function trackRowHtml(track) {
       <button class="btn ghost" data-repeat>Nghe lại từ đầu</button></div>` : ""}
     </div></article>`;
 }
-function sectionReaderHtml() {
- const r=CONTENT.pilot.reader,s=settings(),query=parseRoute().query;
+function sectionReaderHtml(content) {
+ const r=content.reader,s=settings(),query=parseRoute().query;
  const selected=r.sentences.find(x=>x.id===query.sentence);
  const group=r.passages.find(x=>x.id===(selected?.passageId||query.passage))||r.passages[0];
  const track=r.audioTracks.find(x=>x.id===group.audioTrackId);
- return `<section class="card reader-card"><p class="kicker">NGHE TRONG NGỮ CẢNH</p><h2>Những cuộc trò chuyện đầu tiên</h2>
- <nav class="passage-tabs" aria-label="Chọn hội thoại">${r.passages.map((g,i)=>`<a class="${g.id===group.id?'selected':''}" href="#/lesson/${CONTENT.pilot.lessonId}/reader?passage=${g.id}" ${g.id===group.id?'aria-current="true"':''}>${i+1}. ${esc(g.title)}</a>`).join('')}</nav>
+ return `<section class="card reader-card"><p class="kicker">NGHE TRONG NGỮ CẢNH</p><h2>${esc(r.headingVi||r.titleVi)}</h2>
+ <nav class="passage-tabs" aria-label="Chọn hội thoại">${r.passages.map((g,i)=>`<a class="${g.id===group.id?'selected':''}" href="#/lesson/${content.lessonId}/reader?passage=${g.id}" ${g.id===group.id?'aria-current="true"':''}>${i+1}. ${esc(g.title)}</a>`).join('')}</nav>
  <h3>${esc(group.title)}</h3><p class="muted">${esc(group.context)}</p><div id="tracks">${trackRowHtml(track)}</div>
  <details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>${togglesHtml('sentences')}
- ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}"><span class="speaker">${esc(sen.speaker)}</span><div>${s.showPinyinSentences?`<div class="pinyin">${esc(sen.pinyin)}</div>`:''}<div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div>${s.showViSentences?`<div class="vi">${esc(sen.vi)}</div>`:`<button class="btn ghost small" data-reveal="${id}">Xem nghĩa</button><div class="vi hidden" id="vi-${id}">${esc(sen.vi)}</div>`}${CONTENT.pilot.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div></div>`;}).join('')}
+ ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}"><span class="speaker">${esc(sen.speaker)}</span><div>${s.showPinyinSentences?`<div class="pinyin">${esc(sen.pinyin)}</div>`:''}<div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div>${s.showViSentences?`<div class="vi">${esc(sen.vi)}</div>`:`<button class="btn ghost small" data-reveal="${id}">Xem nghĩa</button><div class="vi hidden" id="vi-${id}">${esc(sen.vi)}</div>`}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div></div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details><p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
  <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang. Chưa đối chiếu bằng nghe và chưa có mốc từng câu; bản in không bao gồm lời dẫn của audio. Hiện chỉ phát toàn track.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
 }
 
 let readerEpoch = 0;
-function bindReader() {
+function bindReader(content) {
   bindToggles();
-  const r = CONTENT.pilot.reader;
+  const r = content.reader;
   const epoch = ++readerEpoch;
   let lastKey = "";
   const rerenderTracks = () => {
@@ -299,17 +324,31 @@ function bindReader() {
 }
 
 // ---------- Exercises ----------
-function ensureSession() {
+function ensureSession(content) {
+  const setId = content.exerciseSet.id;
   const p = loadProgress();
-  if (!p.exerciseSession || p.exerciseSession.setId !== CONTENT.pilot.exerciseSet.id) {
-    update((pp) => { pp.exerciseSession = { setId: CONTENT.pilot.exerciseSet.id, index: 0, answers: {}, checked: {}, hintUsed: {} }; });
+  if (!p.exerciseSessions?.[setId]) {
+    update((pp) => {
+      pp.exerciseSessions ||= {};
+      pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {} };
+      pp.exerciseSession = pp.exerciseSessions[setId];
+    });
   }
-  return loadProgress().exerciseSession;
+  return loadProgress().exerciseSessions[setId];
 }
-function recordAttempt(item, optionId, correct, hintUsed) {
+function updateSession(content, mut) {
+  const setId = content.exerciseSet.id;
+  update((pp) => {
+    pp.exerciseSessions ||= {};
+    if (!pp.exerciseSessions[setId]) pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {} };
+    mut(pp.exerciseSessions[setId]);
+    pp.exerciseSession = pp.exerciseSessions[setId];
+  });
+}
+function recordAttempt(item, optionId, correct, hintUsed, lessonId) {
   update((p) => {
     const prior = p.attempts.filter((a) => a.exerciseId === item.id);
-    p.attempts.push({ id: `att-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, exerciseId: item.id, lessonId: CONTENT.pilot.lessonId, optionId, correct, firstAttempt: prior.length === 0, hintUsed: !!hintUsed, at: new Date().toISOString() });
+    p.attempts.push({ id: `att-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, exerciseId: item.id, lessonId, optionId, correct, firstAttempt: prior.length === 0, hintUsed: !!hintUsed, at: new Date().toISOString() });
     if (!correct) {
       const key = `ex-${item.id}`;
       const existing = p.reviewItems[key];
@@ -317,12 +356,12 @@ function recordAttempt(item, optionId, correct, hintUsed) {
     }
   });
 }
-function sectionExercisesHtml() {
-  const set = CONTENT.pilot.exerciseSet;
-  let ses = ensureSession();
+function sectionExercisesHtml(content) {
+  const set = content.exerciseSet;
+  let ses = ensureSession(content);
   const requested=parseRoute().query.item;
   const requestedIndex=set.items.findIndex(i=>i.id===requested);
-  if(requestedIndex>=0 && ses.reviewTarget!==requested){update(p=>{p.exerciseSession.index=requestedIndex;p.exerciseSession.reviewTarget=requested;delete p.exerciseSession.checked[requested];});ses=ensureSession();}
+  if(requestedIndex>=0 && ses.reviewTarget!==requested){updateSession(content,(ss)=>{ss.index=requestedIndex;ss.reviewTarget=requested;delete ss.checked[requested];});ses=ensureSession(content);}
   const item = set.items[ses.index];
   const attempts = loadProgress().attempts;
   const sum = summarizeAttempts(attempts, set.items.map((i) => i.id));
@@ -330,7 +369,7 @@ function sectionExercisesHtml() {
     return `<section class="card"><h2>Đã làm hết câu hỏi chấm tự động</h2>
     <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu.</p>
     <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button>
-    ${selfCheckHtml()}</section>`;
+    ${selfCheckHtml(content)}</section>`;
   }
   const checked = ses.checked[item.id];
   const chosen = ses.answers[item.id];
@@ -339,7 +378,7 @@ function sectionExercisesHtml() {
   <p class="muted">${esc(set.noteVi)}</p>
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
-  <h3>${esc(item.promptVi)}</h3>${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>Hình gốc · Workbook trang 004, bài 5</figcaption></figure>` : ""}
+  <h3>${esc(item.promptVi)}</h3>${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
   <form id="ex-form">
   ${item.options.map((o) => `<label class="option ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
@@ -355,41 +394,42 @@ function sectionExercisesHtml() {
   </form>
   ${refsHtml(item.sourceRefs)}
   </section>
-  <details class="card workbook-tasks"><summary>Luyện nghe và viết thêm · 3 bài trong sách</summary>${selfCheckHtml()}</details>`;
+  <details class="card workbook-tasks"><summary>Luyện nghe và viết thêm · ${content.selfCheckTasks.length} bài trong sách</summary>${selfCheckHtml(content)}</details>`;
 }
-function selfCheckHtml() {
+function selfCheckHtml(content) {
  const p=loadProgress();
- return `<section><h2>Nghe và viết</h2><p class="muted">Workbook trang 004, bài 2–4. Mỗi ô được lưu tự động. Chưa có đáp án audio đã xác minh nên phần này không chấm điểm.</p>
- ${CONTENT.pilot.selfCheckTasks.map(t=>{const mine=p.selfChecks[t.id];return `<article class="selftask" id="${t.id}"><h3>${esc(t.titleVi)}</h3><p>${esc(t.instructionVi)}</p><button class="btn" data-play-task="${esc(t.audioTrackId)}">▶ Nghe track Workbook 1-2</button><div class="answer-grid">${t.prompts.map((v,i)=>`<label><span>${i+1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i+1}" value="${esc(p.drafts?.[t.id+':'+i]||'')}" autocomplete="off"></label>`).join('')}</div><p class="small muted">Tự đánh giá mức nhớ, không phải kết quả đúng/sai.</p><div class="row-actions">${[['forgot','Chưa nhớ'],['slow','Còn chậm'],['known','Nhớ']].map(([k,v])=>`<button class="btn small ${mine?.rating===k?'primary':''}" data-selfrate="${t.id}:${k}">${v}</button>`).join('')}</div>${refsHtml(t.sourceRefs)}</article>`;}).join('')}</section>`;
+ return `<section><h2>Nghe và viết</h2><p class="muted">${esc(content.selfCheckIntroVi||'')}</p>
+ ${content.selfCheckTasks.map(t=>{const mine=p.selfChecks[t.id];return `<article class="selftask" id="${t.id}"><h3>${esc(t.titleVi)}</h3><p>${esc(t.instructionVi)}</p><button class="btn" data-play-task="${esc(t.audioTrackId)}">${esc(content.selfCheckListenVi||'▶ Nghe track')}</button><div class="answer-grid">${t.prompts.map((v,i)=>`<label><span>${i+1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i+1}" value="${esc(p.drafts?.[t.id+':'+i]||'')}" autocomplete="off"></label>`).join('')}</div><p class="small muted">Tự đánh giá mức nhớ, không phải kết quả đúng/sai.</p><div class="row-actions">${[['forgot','Chưa nhớ'],['slow','Còn chậm'],['known','Nhớ']].map(([k,v])=>`<button class="btn small ${mine?.rating===k?'primary':''}" data-selfrate="${t.id}:${k}">${v}</button>`).join('')}</div>${refsHtml(t.sourceRefs)}</article>`;}).join('')}</section>`;
 }
 
-function bindExercises() {
+function bindExercises(content) {
   $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
-  const set = CONTENT.pilot.exerciseSet;
-  const ses = ensureSession();
+  const set = content.exerciseSet;
+  const ses = ensureSession(content);
   const item = set.items[ses.index];
   const form = $("#ex-form");
   if (form && item) {
-    form.onchange = () => {const value=new FormData(form).get('opt'); if(value)update(p=>{p.exerciseSession.answers[item.id]=String(value);});};
+    form.onchange = () => {const value=new FormData(form).get('opt'); if(value)updateSession(content,(ss)=>{ss.answers[item.id]=String(value);});};
     form.onsubmit = (e) => {
       e.preventDefault();
       const chosen = new FormData(form).get("opt");
       if (!chosen) return;
       const res = gradeChoice(item, String(chosen));
       if (!res.graded) return;
-      update((p) => { p.exerciseSession.answers[item.id] = String(chosen); p.exerciseSession.checked[item.id] = true; });
-      recordAttempt(item, String(chosen), res.correct, loadProgress().exerciseSession.hintUsed[item.id]);
+      const hintUsed = !!ensureSession(content).hintUsed[item.id];
+      updateSession(content,(ss)=>{ ss.answers[item.id] = String(chosen); ss.checked[item.id] = true; });
+      recordAttempt(item, String(chosen), res.correct, hintUsed, content.lessonId);
       render();
     };
     const hint = $("#hint-btn");
-    if (hint) hint.onclick = () => { update((p) => { p.exerciseSession.hintUsed[item.id] = true; }); render(); };
-    const next = $("#next-q"); if (next) next.onclick = () => { update((p) => { p.exerciseSession.index += 1; }); render(); };
-    const fin = $("#finish-q"); if (fin) fin.onclick = () => { update((p) => { p.exerciseSession.index = set.items.length; }); render(); };
+    if (hint) hint.onclick = () => { updateSession(content,(ss)=>{ ss.hintUsed[item.id] = true; }); render(); };
+    const next = $("#next-q"); if (next) next.onclick = () => { updateSession(content,(ss)=>{ ss.index += 1; }); render(); };
+    const fin = $("#finish-q"); if (fin) fin.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length; }); render(); };
   }
   const restart = $("#restart-set");
-  if (restart) restart.onclick = () => { update((p) => { p.exerciseSession = { setId: set.id, index: 0, answers: {}, checked: {}, hintUsed: {} }; }); render(); };
+  if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; }); render(); };
   $$("[data-play-task]").forEach((b) => b.onclick = () => {
-    const track = CONTENT.pilot.reader.audioTracks.find((t) => t.id === b.dataset.playTask);
+    const track = content.reader.audioTracks.find((t) => t.id === b.dataset.playTask);
     if (track) player.playTrack(track, { rate: settings().playbackRate });
   });
   $$("[data-selfrate]").forEach((b) => b.onclick = () => {
@@ -405,39 +445,42 @@ function bindExercises() {
   });
 }
 
-function sectionApplyHtml() {
-  const a = CONTENT.pilot.apply;
-  const track = CONTENT.pilot.reader.audioTracks.find((t) => t.id === a.audioTrackId);
+function sectionApplyHtml(content) {
+  const a = content.apply;
+  const track = content.reader.audioTracks.find((t) => t.id === a.audioTrackId);
   return `<section class="card"><h2>Vận dụng: ${esc(a.titleVi)}</h2><p>${esc(a.instructionVi)}</p>
   ${trackRowHtml(track)}
-  <p class="muted">Nhiệm vụ đóng vai và thay tên thật lấy từ Textbook trang 002–003. Không có đánh giá tự động hay AI chấm nói trong phạm vi pilot.</p>
+  <p class="muted">${esc(a.noteVi||'')}</p>
   ${refsHtml(a.sourceRefs)}</section>`;
 }
-function sectionSummaryHtml(lesson) {
-  const set = CONTENT.pilot.exerciseSet;
+function sectionSummaryHtml(lesson, content) {
+  const set = content.exerciseSet;
   const p = loadProgress();
   const sum = summarizeAttempts(p.attempts, set.items.map((i) => i.id));
   const wrongIds = [...new Set(p.attempts.filter((a) => !a.correct && set.items.some(i=>i.id===a.exerciseId)).map((a) => a.exerciseId))];
   const st = lessonState(lesson.id);
   return `<section class="card"><h2>Tổng kết bài</h2>
-  <p>Đã hoàn thành <strong>${st.completedSections.length}/${CONTENT.pilot.intro.sections.length}</strong> mục.</p>
+  <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}. Điểm làm lại và gợi ý được ghi riêng, không gộp vào điểm lần đầu.</p>
   ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = set.items.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
+  <h3>Học lại từng mục</h3>
+  ${content.intro.sections.map((x) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${x.id}">${esc(x.titleVi)}</a><span class="tag">${st.completedSections.includes(x.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
   <p class="muted">Mức “đã học” ở đây chỉ nghĩa là đã xem/làm các mục. App không coi một mục là “đã nắm vững” nếu thiếu bài tập kiểm chứng — với bài này, phần nghe–viết vẫn là tự đánh giá.</p>
   <p class="row-actions"><a class="btn" href="#/review">Tới Ôn tập</a><a class="btn primary" href="#/course/HSK%201">Về lộ trình</a></p></section>`;
 }
 
 // ---------- Grammar ----------
-function allKnowledge() { return CONTENT.pilot.knowledgePoints; }
+function allKnowledge() { return allContents().flatMap((c) => c.knowledgePoints); }
 function viewGrammar(id, queryOverride) {
   navActive();
   const { query } = parseRoute();
   if (id) {
     const kp = allKnowledge().find((k) => k.id === id);
     if (!kp) { main.innerHTML = `<section class="card"><h1>Không tìm thấy điểm kiến thức</h1><a class="btn" href="#/grammar">Về tra cứu</a></section>`; return; }
-    const ret = query.return && ['exercises','summary','reader','knowledge'].includes(query.return) ? `#/lesson/${CONTENT.pilot.lessonId}/${query.return}${query.sentence?'?sentence='+encodeURIComponent(query.sentence):''}` : null;
-    main.innerHTML = `${knowledgeCardHtml(kp, { linkBack: ret })}
-    <section class="card"><h2>Bài có dùng điểm này</h2><p class="row-line"><a href="#/lesson/${CONTENT.pilot.lessonId}">HSK 1 · Bài 1: ${esc(lessonById(CONTENT.pilot.lessonId).titleZh)}</a><span class="tag">Textbook + Workbook</span></p></section>`;
+    const kpLesson = kpLessonId(kp.id); const kpLessonObj = lessonById(kpLesson);
+    const ret = query.return && ['exercises','summary','reader','knowledge'].includes(query.return) ? `#/lesson/${kpLesson}/${query.return}${query.sentence?'?sentence='+encodeURIComponent(query.sentence):''}` : null;
+    main.innerHTML = `${knowledgeCardHtml(kp, { linkBack: ret, lessonId: kpLesson })}
+    <section class="card"><h2>Bài có dùng điểm này</h2><p class="row-line"><a href="#/lesson/${kpLesson}">HSK 1 · Bài ${kpLessonObj.lessonNumber}: ${esc(kpLessonObj.titleZh)}</a><span class="tag">Textbook + Workbook</span></p></section>`;
     return;
   }
   const q = queryOverride ?? query.q ?? "";
@@ -447,18 +490,20 @@ function viewGrammar(id, queryOverride) {
   <input id="gq" type="search" value="${esc(q)}" placeholder="Ví dụ: thanh điệu, er, bā, ni hao…" autocomplete="off">
   <button class="btn" type="submit">Tìm</button></form>
   ${list.length ? list.map((kp) => `<article class="row-card"><div class="grow"><h2>${esc(kp.title)}</h2>
-    <p>${esc(kp.explanationVi.slice(0, 140))}…</p><p class="muted small">${esc(kp.kindLabel)} · Bài 1 · HSK 1</p></div>
+    <p>${esc(kp.explanationVi.slice(0, 140))}…</p><p class="muted small">${esc(kp.kindLabel)} · Bài ${lessonById(kpLessonId(kp.id)).lessonNumber} · HSK 1</p></div>
     <a class="btn" href="#/grammar/${esc(kp.id)}">Xem</a></article>`).join("")
-    : `<section class="card"><h2>Chưa có kết quả</h2><p class="muted">Thử từ khóa khác, chẳng hạn 您, 们, cảm ơn hoặc thanh điệu. Hiện danh mục chỉ gồm Bài 1 đã mở.</p></section>`}`;
+    : `<section class="card"><h2>Chưa có kết quả</h2><p class="muted">Thử từ khóa khác, chẳng hạn 您, 们, 叫, xin lỗi hoặc thanh điệu. Hiện danh mục gồm các bài đã mở trong lộ trình.</p></section>`}`;
   $("#gform").onsubmit = (e) => { e.preventDefault(); go(`#/grammar?q=${encodeURIComponent($("#gq").value)}`); };
 }
 
 // ---------- Review / Progress / Settings / Sources ----------
 function describeReviewItem(item) {
-  const ex = CONTENT.pilot.exerciseSet.items.find((i) => i.id === item.sourceItemId);
-  if (ex) return { title: ex.promptVi, href: `#/lesson/${CONTENT.pilot.lessonId}/exercises?item=${ex.id}`, grammarId: ex.grammarIds[0] };
-  const task = CONTENT.pilot.selfCheckTasks.find((t) => t.id === item.sourceItemId);
-  if (task) return { title: task.titleVi, href: `#/lesson/${CONTENT.pilot.lessonId}/exercises`, grammarId: null };
+  for (const c of allContents()) {
+    const ex = c.exerciseSet.items.find((i) => i.id === item.sourceItemId);
+    if (ex) return { title: ex.promptVi, href: `#/lesson/${c.lessonId}/exercises?item=${ex.id}`, grammarId: ex.grammarIds[0] };
+    const task = c.selfCheckTasks.find((t) => t.id === item.sourceItemId);
+    if (task) return { title: task.titleVi, href: `#/lesson/${c.lessonId}/exercises`, grammarId: null };
+  }
   return { title: item.sourceItemId, href: "#/review", grammarId: null };
 }
 function viewReview() {
@@ -490,18 +535,19 @@ function viewReview() {
 function viewProgress() {
   navActive();
   const p = loadProgress();
-  const pilot = lessonById(CONTENT.pilot.lessonId);
-  const st = lessonState(pilot.id);
-  const set = CONTENT.pilot.exerciseSet;
-  const sum = summarizeAttempts(p.attempts, set.items.map((i) => i.id));
+  const rs = readyLessons();
   main.innerHTML = `${header("Tiến độ", "“Đã học” và “đã nắm vững” là hai việc khác nhau")}
-  <section class="card"><h2>${esc(pilot.level)} · Bài 1 (pilot)</h2>
-  <p>Mục đã hoàn thành: <strong>${st.completedSections.length}/${CONTENT.pilot.intro.sections.length}</strong> — đây là mức “đã học/đã xem”.</p>
+  ${rs.map((lesson) => { const c = contentFor(lesson.id); const st = lessonState(lesson.id); const set = c.exerciseSet;
+    const sum = summarizeAttempts(p.attempts, set.items.map((i) => i.id));
+    const selfDone = c.selfCheckTasks.filter((t) => p.selfChecks[t.id]).length;
+    return `<section class="card"><h2>${esc(lesson.level)} · Bài ${lesson.lessonNumber}: ${esc(lesson.titleZh)}</h2>
+  <p>Mục đã hoàn thành: <strong>${st.completedSections.length}/${c.intro.sections.length}</strong> — đây là mức “đã học/đã xem”.</p>
   <p>Bài tập chấm tự động: đã trả lời ${sum.answered}/${set.items.length} câu; điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; làm lại ${sum.retried} câu; dùng gợi ý ${sum.hintUsedCount} câu.</p>
-  <p>Bài nghe–viết tự đánh giá: ${Object.keys(p.selfChecks).length}/${CONTENT.pilot.selfCheckTasks.length} bài đã tự đánh giá. Các bài này <strong>không</strong> được tính là “đã nắm vững” vì chưa có đáp án kiểm chứng để chấm.</p>
-  <p>Mục ôn đang theo dõi: ${Object.keys(p.reviewItems).length}.</p></section>
-  <section class="card"><h2>Các bài còn lại của HSK 1</h2>
-  <p class="muted">Bài 2–15 mới ở mức mục lục đã kiểm chứng; chưa có tiến độ vì chưa mở bài học.</p>
+  <p>Bài nghe–viết tự đánh giá: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá. Các bài này <strong>không</strong> được tính là “đã nắm vững” vì chưa có đáp án kiểm chứng để chấm.</p>
+  <p class="row-actions"><a class="btn" href="#/lesson/${lesson.id}">Mở Bài ${lesson.lessonNumber}</a></p></section>`; }).join("")}
+  <section class="card"><h2>Tổng quan</h2>
+  <p>Mục ôn đang theo dõi: ${Object.keys(p.reviewItems).length}.</p>
+  <p class="muted">Các bài còn lại của HSK 1 mới ở mức mục lục đã kiểm chứng; chưa có tiến độ vì chưa mở bài học.</p>
   <a class="btn" href="#/course/HSK%201">Xem lộ trình</a></section>`;
 }
 
@@ -577,13 +623,14 @@ function viewSources(id) {
 }
 
 // ---------- Section binding, mini player, boot ----------
-function bindSection(sectionId) {
+function bindSection(sectionId, content) {
+  content = content || contentFor(continueLesson().id) || CONTENT.pilot;
   if (sectionId === "prep" || sectionId === "knowledge") bindToggles();
-  if (sectionId === "reader") bindReader();
-  if (sectionId === "exercises") bindExercises();
+  if (sectionId === "reader") bindReader(content);
+  if (sectionId === "exercises") bindExercises(content);
   if (sectionId === "apply") {
     $$("[data-play]").forEach((b) => b.onclick = () => {
-      const track = CONTENT.pilot.reader.audioTracks.find((t) => t.id === b.dataset.play);
+      const track = content.reader.audioTracks.find((t) => t.id === b.dataset.play);
       if (track) player.playTrack(track, { rate: settings().playbackRate });
     });
     $$("[data-seek]").forEach((el) => el.onchange = () => player.seek(Number(el.value)));
@@ -606,7 +653,7 @@ function renderMini() {
     <button class="btn small" id="mini-toggle">${st.playing ? "Tạm dừng" : "Phát"}</button>
     <button class="btn small ghost" id="mini-stop">Dừng</button>${st.error?`<a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở nguồn ↗</a>`:""}`;
   $("#mini-toggle").onclick = () => {
-    const track = CONTENT.pilot.reader.audioTracks.find((t) => t.id === st.trackId);
+    const track = allTracks().find((t) => t.id === st.trackId);
     if (track) player.playTrack(track, { rate: settings().playbackRate });
   };
   $("#mini-stop").onclick = () => { player.pause(); player.seek(0); };

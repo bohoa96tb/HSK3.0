@@ -77,3 +77,23 @@ thể (đã đọc trang nào / kiểm HEAD ra sao / số byte / thời lượng
 - Danh mục audio HTML có đúng URL Textbook 01-1, 01-3, 01-5. GET thành công và ffprobe đo lần lượt 6.367256s, 9.651125s, 9.494756s. Không suy ra nội dung đã nghe từ HTTP/duration.
 - Transcript 10 lượt là lời thoại bản in; không gồm lời dẫn nếu audio có. Chưa xác minh bằng nghe hoặc mốc từng câu, vì vậy phát toàn track.
 - Bốn hình trích nhỏ ghi tại assets/lesson-01/ATTRIBUTION.md theo yêu cầu người dùng. Quyền nguồn vẫn unknown. Không commit PDF hoặc MP3; không dùng ảnh mạng thay đề.
+
+## Kiểm tra 01/11/2026 — Bài 2 我叫李文 (đối chiếu trực quan, không chỉ OCR)
+
+Người dùng cho phép bắt đầu Bài 2 ngày 2026-11-01. Đã đọc trực quan bằng ảnh render:
+
+| Thành phần | Nguồn | Trang in / PDF | Số mục / track | Kiểm chứng | Vị trí trong app |
+| --- | --- | --- | --- | --- | --- |
+| Tên bài, mục tiêu, bối cảnh hội thoại 1 | Textbook | 005 / PDF 20 | — | Đã đọc trực quan | Mục 1 Bắt đầu; ảnh lớp học trích cùng trang |
+| Hội thoại 1 (hỏi tên) + 6 từ mới ①–⑥ | Textbook | 006 / PDF 21 | Track 2-1 (hội thoại), 2-2 (từ) | Lời thoại đối chiếu bản in | Hội thoại 1; Từ cần biết |
+| Hội thoại 2 (nhận nhầm, xin lỗi) + 5 từ mới ⑦–⑪ | Textbook | 007 / PDF 22 | Track 2-3, 2-4 | Lời thoại đối chiếu bản in | Hội thoại 2; Từ cần biết |
+| Tiểu Ngữ giảng đường: trật tự từ cơ bản + Hội thoại 3 | Textbook | 008 / PDF 23 | Track 2-5 | Đã đọc trực quan | Điểm kiến thức word-order; Hội thoại 3 |
+| 4 từ mới ⑫–⑮ + hoạt động cặp | Textbook | 009 / PDF 24 | Track 2-6 | Đã đọc trực quan | Từ cần biết; Mục 6 Tự nói |
+| Phát âm: thanh mẫu/vận mẫu (2) j/q/x; thẻ hình; quy tắc viết (1) | Workbook | 005–006 / PDF 12–13 | Track WB 2-1 | Đã đọc trực quan | Điểm kiến thức nền phát âm |
+| Quy tắc viết (2)–(4): j/q/x + ü; iou → you / iu | Workbook | 007 / PDF 14 | Track WB 2-1 | Đã đọc trực quan | Điểm kiến thức nền chính tả |
+| Nghe–viết thanh mẫu (9 ô), vận mẫu (15 ô), thanh điệu (12 âm tiết) | Workbook | 008 / PDF 15 | Track WB 2-2 | Đề đối chiếu bản in; sách không in đáp án → `unverified`, không chấm tự động | 3 bài tự đối chiếu ở Mục 5 |
+| Bài 4: nhìn hình chọn hội thoại (4 hình, 4 hội thoại in sẵn) | Workbook | 008 / PDF 15 | — | Hội thoại in sẵn; ghép hình→hội thoại là **suy luận biên tập** từ hình đã phóng to đối chiếu (không phải đáp án chính thức): hình 1→③, 2→①, 3→④, 4→② (`verified-from-visual`) | 4 câu chấm tự động ở Mục 5 |
+| Audio Textbook Bài 2 (7 track) + Workbook Bài 2 (2 track) | Trang audio Baulchino, CDN `new-hsk-books-audios/hsk-1-{textbook,workbook}/lesson-02/` | — | TB 02-1…02-7; WB 02-1, 02-2 | Đã tải file và đo ffprobe (không đưa vào repo): TB 5,377 / 15,281 / 13,222 / 13,587 / 11,814 / 10,459 / 22,969 giây; WB 418,233 / 252,736 giây. Đối ứng theo ký hiệu in trong sách; **chưa nghe kiểm chứng**, chưa có timestamp câu → chỉ phát cả track | Mục 4 và Mục 5/6 |
+
+- Trang mở rộng Textbook 009 (câu líu lưỡi track 2-7, nội dung bonus) **không** đưa vào app — giữ cùng phạm vi như Bài 1.
+- Hình trích Bài 2 ghi tại `assets/lesson-02/ATTRIBUTION.md` (1 ảnh lớp học + 4 hình bài tập). Quyền nguồn vẫn `unknown`. Không commit PDF/MP3.

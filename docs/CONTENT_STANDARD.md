@@ -159,3 +159,11 @@ tiêu số bài mỗi lần trước khi biết độ phức tạp của bài.
 - Không có placeholder, không có bài/câu tự sinh, không có ví dụ không nguồn.
 - Các mục không áp dụng / thiếu nguồn được ghi rõ trong dữ liệu và hiển
   thị trung thực trong app.
+
+## Bổ sung 01/11/2026 — nguồn câu hỏi và transcript
+
+`sourceRefs` trỏ đến từ/ví dụ không chứng minh đề trắc nghiệm là nguyên bản. Phải kiểm tra cả yêu cầu, lựa chọn và hình của đề. Không tự tạo distractor rồi gọi là câu sách.
+
+`verified-from-visual`: đáp án suy từ hình/ngữ cảnh đã kiểm chứng, cần answerEvidence và hình gốc. Hiển thị rõ không phải đáp án chính thức. `print-verified`: lời thoại đã chép đúng bản in, chưa phải audio-verified. Nghe–viết chưa có đáp án vẫn unverified và không chấm tự động.
+
+Hình trích có ý nghĩa sư phạm, có attribution, giữ nguyên ngữ cảnh. Không thay ảnh bài tập bằng ảnh trang trí.

@@ -75,13 +75,19 @@ for (const t of pilot.reader?.audioTracks || []) {
   }
   if ((t.segments || []).length === 0 && t.segmentsStatus !== "unverified") err(`track ${t.id}: no segments but segmentsStatus is not "unverified"`);
 }
+for (const g of pilot.reader.passages || []) {
+ if (!trackIds.has(g.audioTrackId)) err(`passage ${g.id}: missing track`);
+ for (const id of g.sentenceIds) if (!sentenceIds.has(id)) err(`passage ${g.id}: missing sentence ${id}`);
+ checkRefs(g.sourceRefs, `passage ${g.id}`);
+}
 const exIds = new Set();
 for (const item of pilot.exerciseSet?.items || []) {
   if (!item.id || exIds.has(item.id)) err(`exercise id missing/duplicate: ${item.id}`);
   exIds.add(item.id);
+  if (item.answerStatus === "verified-from-visual" && (!item.answerEvidence || !item.image)) err(`exercise ${item.id}: visual answer needs evidence and image`);
   checkRefs(item.sourceRefs, `exercise ${item.id}`);
   for (const g of item.grammarIds || []) if (!kpIds.has(g)) err(`exercise ${item.id}: unknown grammarId ${g}`);
-  if (item.answerStatus === "verified-from-print") {
+  if (["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
     if (!item.options.some((o) => o.id === item.answer)) err(`exercise ${item.id}: answer not among options`);
   } else if (item.answer != null) {
     err(`exercise ${item.id}: unverified answers must not be auto-graded (answer must be null)`);

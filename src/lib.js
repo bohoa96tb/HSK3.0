@@ -35,7 +35,7 @@ export function matchesQuery(haystacks, query) {
 }
 
 export function gradeChoice(item, optionId) {
-  if (!item || item.answerStatus !== "verified-from-print") {
+  if (!item || !["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
     return { graded: false, reason: "unverified-answer" };
   }
   return { graded: true, correct: optionId === item.answer };
@@ -48,7 +48,7 @@ export function nextReviewState(prev, rating, nowMs) {
   let nextStep;
   if (rating === "forgot") nextStep = 0;
   else if (rating === "slow") nextStep = step;
-  else if (rating === "known") nextStep = Math.min(step + 1, REVIEW_INTERVALS_DAYS.length - 1);
+  else if (rating === "known") nextStep = prev ? Math.min(step + 1, REVIEW_INTERVALS_DAYS.length - 1) : 0;
   else throw new Error(`unknown rating: ${rating}`);
   const days = REVIEW_INTERVALS_DAYS[nextStep];
   return {

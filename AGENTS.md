@@ -42,7 +42,7 @@ Tài liệu này là quy tắc làm việc bắt buộc cho mọi phiên làm vi
   `docs/SOURCE_AUDIT.md`). Nút tải miễn phí trên trang nguồn **không** phải
   là quyền tái xuất bản.
 - Khi chưa có căn cứ tái xuất bản: app chỉ **liên kết và phát trực tiếp từ
-  nguồn** (link/stream). Không sao chép, không lưu trữ bản sao.
+  nguồn** (link/stream). Không lưu trữ bản sao PDF/MP3. Ngoại lệ do người dùng yêu cầu ở lượt sửa 31/10–01/11/2026: cho phép trích nhỏ hình đúng bài để minh họa và làm bài tập, phải ghi nguồn; không coi đây là giấy phép mở.
 - **Không commit PDF, MP3 hoặc toàn văn sách vào repo công khai.**
 - Không dùng proxy hoặc giải pháp vượt hạn chế để nhúng nguồn.
 - Không tự liên hệ bên thứ ba (kể cả chủ nguồn) khi chưa được người dùng cho phép.
@@ -57,18 +57,19 @@ python3 -m http.server 8000
 # Mở: http://localhost:8000/  (base path khi triển khai GitHub Pages: /HSK3.0/)
 ```
 
-Không cần cài dependency để chạy app. Validator và test dùng Node.js có sẵn.
+Không cần dependency để chạy app. Kiểm thử DOM dùng jsdom (devDependency); chạy npm ci trước npm run check.
 
 ## 5. Lệnh kiểm tra
 
 ```bash
+npm ci                    # dependency chỉ cho kiểm thử DOM
 node scripts/validate.mjs   # kiểm schema, ID, liên kết, nguồn, timestamp
 node --test tests/*.test.mjs          # unit test (node:test)
 ```
 
 - Chạy cả hai lệnh trước khi commit/PR. Ghi kết quả thật (số test pass/fail)
   vào `docs/CHECKPOINT.md` và `docs/QA_REPORT.md`.
-- CI GitHub Actions chạy validator + test trên mỗi PR. CI xanh **không** phải
+- CI GitHub Actions chưa được cấu hình do quyền workflow của lần trước. Không tuyên bố CI xanh; chạy npm run check cục bộ. CI xanh **không** phải
   bằng chứng nội dung ngôn ngữ đúng hoặc audio đã nghe — QA nội dung ghi riêng.
 - Kiểm giao diện ở 4 bề rộng: 360, 390, 768 và 1440 px.
 

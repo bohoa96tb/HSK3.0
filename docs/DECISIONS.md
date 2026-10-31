@@ -123,3 +123,16 @@ Ngày chốt các quyết định dưới đây: **2026-10-31**, trừ khi ghi k
 - **Ảnh hưởng:** …
 - **Xem lại khi:** …
 ```
+
+
+## D08 — Bản học liệu và UX mới, 01/11/2026 JST
+
+Người dùng yêu cầu trực tiếp sửa toàn bộ UI và rà nguồn, gồm hình trích từ sách. Giữ app tĩnh và GitHub Pages, không chuyển hosting. Mở khóa Textbook bằng tải PDF và render PyMuPDF; trang 16–19 là Bài 1.
+
+Thay 6 câu trắc nghiệm tự soạn gắn nhãn nguồn sai bằng bài chọn hình nguyên bản Workbook bài 5. 3 đáp án hình là suy luận biên tập đã đối chiếu trực quan (`verified-from-visual`), không phải đáp án chính thức. Không sinh câu hỏi mới.
+
+10 lượt thoại được đối chiếu bản in, ghép 3 track sách giáo khoa theo ký hiệu in. `print-verified` không đồng nghĩa audio-verified; chưa bật timestamp hay nghe từng câu. Phát âm Workbook tách thành phần bổ trợ.
+
+4 hình trích nhỏ theo yêu cầu người dùng, có attribution; không PDF/MP3 trong repo. Quyền nguồn vẫn unknown, không gán giấy phép mở. Không dùng ảnh web khác thay hình có vai trò quyết định đáp án.
+
+Lịch sử điểm cũ được giữ, loại câu tự soạn khỏi hàng đợi ôn hiện tại. Tiến độ nội dung cũ được lưu snapshot một lần khi nâng sang textbook-pilot-v2; lộ trình mới bắt đầu lại vì nội dung đã đổi đáng kể. Các bản sửa nhỏ sau không reset.

@@ -113,3 +113,15 @@ tự tạo câu hỏi/đáp án nhiễu.
   đủ quy trình mục 8 của `docs/MASTER_PLAN.md` cho bài đó.
 - Sau khi pilot Bài 1 được người dùng nghiệm thu mới mở rộng sang bài tiếp
   theo; không nhập hàng loạt.
+
+## Bản cập nhật 01/11/2026 — Bài 1 đã đối chiếu Textbook
+
+| Nội dung | Trang in / PDF | Audio | Trạng thái |
+| --- | --- | --- | --- |
+| Chào người mới gặp | Textbook 001 / 16 | Textbook 1-1 | 2 lượt thoại print-verified |
+| Chào cô giáo và cả lớp; 您 và 们 | Textbook 002 / 17 | Textbook 1-3 | 4 lượt thoại print-verified |
+| Cảm ơn/tạm biệt | Textbook 003 / 18 | Textbook 1-5 | 4 lượt thoại print-verified |
+| Chọn hội thoại theo hình | Workbook 004 / 11, bài 5 | Không cần audio | 3 câu; đáp án suy luận trực quan |
+| Nghe–viết thanh mẫu/vận mẫu/thanh điệu | Workbook 004 / 11, bài 2–4 | Workbook 1-2 | Có ô ghi đáp án; chưa chấm |
+
+Nội dung thay thế các kết luận cũ trong tài liệu về Textbook chưa đọc được và 6 câu trắc nghiệm. Không thay trạng thái bài 2–15.

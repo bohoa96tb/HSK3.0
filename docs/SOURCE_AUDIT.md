@@ -65,3 +65,15 @@ chỉ có Mock Test và bìa sau). Đáp án các bài nghe 2–4 của Bài 1
 thể (đã đọc trang nào / kiểm HEAD ra sao / số byte / thời lượng), và
 `rightsStatus` riêng. Chỉ đổi `rightsStatus` khi có bằng chứng tương ứng.
 - Không nâng trạng thái kiểm chứng dựa trên suy đoán hoặc trí nhớ.
+
+## Kiểm tra lại 31/10–01/11/2026 — thay thế kết luận chưa đọc Textbook
+
+- Tải trực tiếp Textbook (66.692.625 byte, 144 trang) và Workbook (73.963.050 byte, 139 trang); bản scan không có text layer. Render PyMuPDF và đọc trực quan, không dựa vào OCR.
+- Textbook PDF 16–18 / trang in 001–003: đối chiếu ba hội thoại, 12 mục từ, mục tiêu, chú giải 您 và nghĩa 们. PDF 19 / trang 004 là phần đọc nhanh/mở rộng, chưa đưa thành bài mới.
+- Workbook PDF 8–11 / trang 001–004: đọc lại bảng âm tiết, vần có ü (bản trước thiếu trong liệt kê), thanh điệu, đề bài 1–5.
+- Bài nghe thanh điệu có 12 ô, thứ tự theo hàng: lao, neng, ge, ba / fen, kan, bai, li / gong, mang, gou, hou. Bản cũ ghi 10 âm và có âm không thuộc đề; đã sửa.
+- Sáu câu ex-01…ex-06 trước đây là câu biên tập dựa trên sách, không phải đề nguyên bản. Đã rút khỏi nội dung và điểm hiện hành. Không xóa lịch sử lưu trên máy người học.
+- Bài 5 chọn hình: giữ ba hình và ba hội thoại gốc. Ghép 1→1, 2→3, 3→2 là kết luận biên tập theo hình/ngữ cảnh, không khẳng định có answer key chính thức.
+- Danh mục audio HTML có đúng URL Textbook 01-1, 01-3, 01-5. GET thành công và ffprobe đo lần lượt 6.367256s, 9.651125s, 9.494756s. Không suy ra nội dung đã nghe từ HTTP/duration.
+- Transcript 10 lượt là lời thoại bản in; không gồm lời dẫn nếu audio có. Chưa xác minh bằng nghe hoặc mốc từng câu, vì vậy phát toàn track.
+- Bốn hình trích nhỏ ghi tại assets/lesson-01/ATTRIBUTION.md theo yêu cầu người dùng. Quyền nguồn vẫn unknown. Không commit PDF hoặc MP3; không dùng ảnh mạng thay đề.

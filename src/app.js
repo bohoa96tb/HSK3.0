@@ -321,12 +321,22 @@ function bindReader() {
   bindToggles();
   const r = CONTENT.pilot.reader;
   const epoch = ++readerEpoch;
-  let tick = 0;
+  let lastKey = "";
   const rerenderTracks = () => {
     if (epoch !== readerEpoch) return; // a newer reader render owns the UI now
-    tick += 1;
-    if (tick % 2 === 1 && !player.getState().playing) { /* still refresh on state changes */ }
-    const el = $("#tracks"); if (el) { el.innerHTML = r.audioTracks.map(trackRowHtml).join(""); bindTrackControls(); }
+    const st = player.getState();
+    const el = $("#tracks"); if (!el) { renderMini(); return; }
+    const key = `${st.trackId}|${st.playing}|${st.error ? "err" : ""}`;
+    if (key === lastKey) {
+      // Same track/state: update time in place so controls are not rebuilt
+      // mid-click (rebuilding on every timeupdate broke the pause button).
+      const cur = el.querySelector("[data-cur]"); if (cur) cur.textContent = player.fmtTime(st.currentTime);
+      const range = el.querySelector("[data-seek]"); if (range && document.activeElement !== range) range.value = Math.floor(st.currentTime);
+      renderMini();
+      return;
+    }
+    lastKey = key;
+    el.innerHTML = r.audioTracks.map(trackRowHtml).join(""); bindTrackControls();
     renderMini();
   };
   player.subscribe(rerenderTracks);
@@ -412,7 +422,7 @@ function selfCheckHtml() {
     <a class="btn ghost" href="#/sources/src-hsk1-workbook-pdf">Mở nguồn sách</a>
     <div class="row-actions" role="group" aria-label="Tự đánh giá ${esc(t.titleVi)}">
       ${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, label]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${esc(t.id)}:${k}">${label}</button>`).join("")}
-    </div>${mine ? `<p class="muted small">Lần tự đánh giá gần nhất: ${esc(mine.rating)} · ${esc(new Date(mine.at).toLocaleString("vi-VN"))}</p>` : ""}
+    </div>${mine ? `<p class="muted small">Lần tự đánh giá gần nhất: ${esc({ forgot: "Chưa nhớ", slow: "Còn chậm", known: "Nhớ" }[mine.rating] || mine.rating)} · ${esc(new Date(mine.at).toLocaleString("vi-VN"))}</p>` : ""}
     ${refsHtml(t.sourceRefs)}</article>`;
   }).join("")}</section>`;
 }

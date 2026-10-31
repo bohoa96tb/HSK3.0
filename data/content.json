@@ -1,0 +1,1434 @@
+{
+ "contentVersion": "2026.10.31-pilot1",
+ "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
+ "sources": [
+  {
+   "id": "src-baul-books",
+   "kind": "catalogue-page",
+   "title": "Baulchino — New HSK 3.0 Books (2026)",
+   "url": "https://www.baulchino.com/new-hsk-books-2026",
+   "retrievedAt": "2026-10-31",
+   "rightsStatus": "unknown",
+   "rightsEvidence": "Trang không có tuyên bố giấy phép cho sách/audio (đã tìm license/copyright/permission: không có).",
+   "verification": "Đã đọc trực tiếp 2026-10-31: danh mục HSK1 (Textbook/Workbook/Writing), HSK2 (Textbook/Workbook/Writing), HSK3 (Textbook/Workbook), HSK4A (Textbook), HSK4B (Textbook)."
+  },
+  {
+   "id": "src-baul-audios",
+   "kind": "catalogue-page",
+   "title": "Baulchino — New HSK Audio Files (HSK 3.0 2026 Edition)",
+   "url": "https://www.baulchino.com/new-hsk-audios-2026",
+   "retrievedAt": "2026-10-31",
+   "rightsStatus": "unknown",
+   "rightsEvidence": "Trang không có tuyên bố giấy phép cho audio.",
+   "verification": "Đã đọc trực tiếp + trích payload trang 2026-10-31: 506 URL MP3; nhóm HSK1–3 Textbook/Workbook và HSK4A Textbook."
+  },
+  {
+   "id": "src-hsk1-textbook-pdf",
+   "kind": "book-pdf",
+   "title": "New HSK 3.0 Level 1 — Textbook (PDF qua Baulchino)",
+   "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1.pdf",
+   "retrievedAt": "2026-10-31",
+   "rightsStatus": "unknown",
+   "verification": "Mới xác minh URL tồn tại trong trang sách. CHƯA đọc được nội dung (công cụ đọc web báo lỗi rỗng 2026-10-31): mục lục, hội thoại, ngữ pháp và đáp án của Textbook đều chưa kiểm chứng."
+  },
+  {
+   "id": "src-hsk1-workbook-pdf",
+   "kind": "book-pdf",
+   "title": "新HSK教程1 学练手册 — New HSK Course 1 Workbook (PDF qua Baulchino)",
+   "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1-workbook.pdf",
+   "retrievedAt": "2026-10-31",
+   "rightsStatus": "unknown",
+   "verification": "Đã tải và đọc trực quan 2026-10-31: bản quét CamScanner, 139 trang PDF, 73.963.050 byte, không có lớp chữ. Bìa: NXB Ngoại ngữ FLTRP, tổng chủ biên 郭风岚; ISBN bìa sau 978-7-5213-7177-2; lời tựa 2025-12 xác nhận bộ sách theo HSK 3.0. Đã đọc: mục lục (PDF tr.7), Bài 1 (PDF tr.8–11 = trang in 001–004), các trang cuối (Mock Test + bìa sau; không thấy mục đáp án)."
+  },
+  {
+   "id": "src-hsk1-writing-pdf",
+   "kind": "book-pdf",
+   "title": "New HSK 3.0 Level 1 — Writing (PDF qua Baulchino)",
+   "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1-writing.pdf",
+   "retrievedAt": "2026-10-31",
+   "rightsStatus": "unknown",
+   "verification": "Mới xác minh URL trong trang sách; chưa đọc nội dung."
+  }
+ ],
+ "books": [
+  {
+   "id": "book-hsk1-textbook",
+   "level": "HSK 1",
+   "kind": "Textbook",
+   "titleEn": "New HSK 3.0 Level 1 — Textbook",
+   "sourceId": "src-hsk1-textbook-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Đã thấy trong danh mục Baulchino; chưa đọc nội dung."
+  },
+  {
+   "id": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "kind": "Workbook",
+   "titleEn": "New HSK Course 1 Workbook (学练手册)",
+   "sourceId": "src-hsk1-workbook-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "partially-read",
+   "noteVi": "Đã đọc mục lục và Bài 1 trực quan; là sách companion của Textbook, gồm Study/Practice/Test."
+  },
+  {
+   "id": "book-hsk1-writing",
+   "level": "HSK 1",
+   "kind": "Writing",
+   "titleEn": "New HSK 3.0 Level 1 — Writing",
+   "sourceId": "src-hsk1-writing-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Đã thấy trong danh mục; chưa đọc nội dung."
+  },
+  {
+   "id": "book-hsk2",
+   "level": "HSK 2",
+   "kind": "Textbook/Workbook/Writing",
+   "titleEn": "New HSK 3.0 Level 2",
+   "sourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Mới ở mức danh mục trang sách; chưa đọc quyển nào."
+  },
+  {
+   "id": "book-hsk3",
+   "level": "HSK 3",
+   "kind": "Textbook/Workbook",
+   "titleEn": "New HSK 3.0 Level 3",
+   "sourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Mới ở mức danh mục trang sách; chưa đọc quyển nào."
+  },
+  {
+   "id": "book-hsk4a",
+   "level": "HSK 4A",
+   "kind": "Textbook",
+   "titleEn": "New HSK 3.0 Level 4A — Textbook",
+   "sourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Mới ở mức danh mục trang sách."
+  },
+  {
+   "id": "book-hsk4b",
+   "level": "HSK 4B",
+   "kind": "Textbook",
+   "titleEn": "New HSK 3.0 Level 4B — Textbook",
+   "sourceId": "src-baul-books",
+   "publicationStatus": "catalogue-verified",
+   "noteVi": "Mới ở mức danh mục trang sách; trang audio đã khảo sát chưa liệt kê audio 4B."
+  }
+ ],
+ "lessons": [
+  {
+   "id": "hsk1-l01",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 01",
+   "lessonNumber": 1,
+   "titleZh": "AI小语，你好！",
+   "titleEn": "Hello, AI Xiaoyu!",
+   "titleVi": "AI Tiểu Ngữ, xin chào!",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 8,
+     "printedPage": 1,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 7,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Bài pilot: nội dung sách bài tập đã kiểm chứng trực quan trang in 001–004.",
+   "grammarIds": [
+    "kp-hsk1-l01-syllable",
+    "kp-hsk1-l01-tones",
+    "kp-hsk1-l01-initials-finals"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk1-l02",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 02",
+   "lessonNumber": 2,
+   "titleZh": "我叫李文",
+   "titleEn": "My name is Li Wen",
+   "titleVi": "Tôi tên là Lý Văn",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 12,
+     "printedPage": 5,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 7,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l03",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 03",
+   "lessonNumber": 3,
+   "titleZh": "我是中国人",
+   "titleEn": "I'm Chinese",
+   "titleVi": "Tôi là người Trung Quốc",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 16,
+     "printedPage": 9,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 7,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l04",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 04",
+   "lessonNumber": 4,
+   "titleZh": "我有两个孩子",
+   "titleEn": "I have two children",
+   "titleVi": "Tôi có hai người con",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 20,
+     "printedPage": 13,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 3,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l05",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 05",
+   "lessonNumber": 5,
+   "titleZh": "今天我休息",
+   "titleEn": "I'm off today",
+   "titleVi": "Hôm nay tôi nghỉ",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 29,
+     "printedPage": 22,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 3,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l06",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 06",
+   "lessonNumber": 6,
+   "titleZh": "你的手机号是多少？",
+   "titleEn": "What's your cell phone number?",
+   "titleVi": "Số điện thoại của bạn là bao nhiêu?",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 38,
+     "printedPage": 31,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 3,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l07",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 07",
+   "lessonNumber": 7,
+   "titleZh": "我晚上六点半下班",
+   "titleEn": "I'll finish work at 6:30 in the evening",
+   "titleVi": "Tôi tan làm lúc 6 giờ rưỡi tối",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 46,
+     "printedPage": 39,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l08",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 08",
+   "lessonNumber": 8,
+   "titleZh": "我爸爸也在医院工作",
+   "titleEn": "My father also works at a hospital",
+   "titleVi": "Bố tôi cũng làm việc ở bệnh viện",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 55,
+     "printedPage": 48,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l09",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 09",
+   "lessonNumber": 9,
+   "titleZh": "我明天上午在学校学习",
+   "titleEn": "I'll be studying at school tomorrow morning",
+   "titleVi": "Sáng mai tôi học ở trường",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 64,
+     "printedPage": 57,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l10",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 10",
+   "lessonNumber": 10,
+   "titleZh": "这儿的苹果真便宜！",
+   "titleEn": "The apples here are really affordable!",
+   "titleVi": "Táo ở đây thật rẻ!",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 73,
+     "printedPage": 66,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l11",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 11",
+   "lessonNumber": 11,
+   "titleZh": "我读大学呢",
+   "titleEn": "I'm studying at university",
+   "titleVi": "Tôi đang học đại học",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 82,
+     "printedPage": 75,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l12",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 12",
+   "lessonNumber": 12,
+   "titleZh": "昨天下雪了",
+   "titleEn": "It snowed yesterday",
+   "titleVi": "Hôm qua tuyết rơi",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 91,
+     "printedPage": 84,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l13",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 13",
+   "lessonNumber": 13,
+   "titleZh": "请给我一杯茶",
+   "titleEn": "I'll have a cup of tea, please",
+   "titleVi": "Cho tôi một tách trà",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 100,
+     "printedPage": 93,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l14",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 14",
+   "lessonNumber": 14,
+   "titleZh": "我看了一个电影",
+   "titleEn": "I watched a movie",
+   "titleVi": "Tôi đã xem một bộ phim",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 109,
+     "printedPage": 102,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  },
+  {
+   "id": "hsk1-l15",
+   "bookId": "book-hsk1-workbook",
+   "level": "HSK 1",
+   "sourceUnit": "Lesson 15",
+   "lessonNumber": 15,
+   "titleZh": "大兴机场见！",
+   "titleEn": "See you at Daxing Airport!",
+   "titleVi": "Hẹn gặp nhau ở sân bay Đại Hưng!",
+   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 118,
+     "printedPage": 111,
+     "section": "目录 Contents (mục lục)"
+    }
+   ],
+   "textbookAudioTrackCount": 6,
+   "workbookAudioTrackCount": 2,
+   "publicationStatus": "catalogue-only",
+   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
+   "grammarIds": [],
+   "sectionIds": []
+  }
+ ],
+ "pilot": {
+  "lessonId": "hsk1-l01",
+  "intro": {
+   "goalVi": "Đọc đúng nền phát âm của Bài 1 theo sách bài tập: hiểu một âm tiết gồm những phần nào, nhận ra 4 thanh điệu và các thanh mẫu/vận mẫu đầu tiên; làm quen 3 hội thoại chào hỏi in ở cuối bài.",
+   "estimatedMinutes": 10,
+   "sections": [
+    {
+     "id": "intro",
+     "titleVi": "Giới thiệu"
+    },
+    {
+     "id": "prep",
+     "titleVi": "Chuẩn bị: thẻ từ của bài"
+    },
+    {
+     "id": "knowledge",
+     "titleVi": "Điểm kiến thức: âm tiết & thanh điệu"
+    },
+    {
+     "id": "reader",
+     "titleVi": "Đọc và nghe"
+    },
+    {
+     "id": "exercises",
+     "titleVi": "Luyện tập"
+    },
+    {
+     "id": "apply",
+     "titleVi": "Vận dụng: nghe và đọc lại"
+    },
+    {
+     "id": "summary",
+     "titleVi": "Tổng kết"
+    }
+   ]
+  },
+  "prepWords": [
+   {
+    "id": "w-1",
+    "zh": "茶",
+    "pinyin": "chá",
+    "vi": "trà",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 8,
+      "printedPage": 1,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-2",
+    "zh": "狗",
+    "pinyin": "gǒu",
+    "vi": "con chó",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 8,
+      "printedPage": 1,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-3",
+    "zh": "猫",
+    "pinyin": "māo",
+    "vi": "con mèo",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 8,
+      "printedPage": 1,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-4",
+    "zh": "菜",
+    "pinyin": "cài",
+    "vi": "rau; món ăn",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 8,
+      "printedPage": 1,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-5",
+    "zh": "杯子",
+    "pinyin": "bēizi",
+    "vi": "cái cốc, cái ly",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-6",
+    "zh": "学生",
+    "pinyin": "xuésheng",
+    "vi": "học sinh, sinh viên",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-7",
+    "zh": "老师",
+    "pinyin": "lǎoshī",
+    "vi": "thầy cô giáo",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   },
+   {
+    "id": "w-8",
+    "zh": "鸡蛋",
+    "pinyin": "jīdàn",
+    "vi": "trứng gà",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+     }
+    ]
+   }
+  ],
+  "knowledgePoints": [
+   {
+    "id": "kp-hsk1-l01-syllable",
+    "kind": "foundation-pronunciation",
+    "kindLabel": "Điểm kiến thức nền — phát âm (không phải ngữ pháp câu)",
+    "title": "Âm tiết tiếng Hán gồm những phần nào?",
+    "explanationVi": "Theo sách (trang in 001): một chữ Hán thường ứng với một âm tiết. Âm tiết thường gồm thanh mẫu (âm đầu), vận mẫu (phần vần) và thanh điệu; có khi âm tiết chỉ gồm vận mẫu và thanh điệu. Phần tiếng Việt này là bản dịch/chú giải biên tập từ phần giải thích song ngữ Trung–Anh in trong sách.",
+    "pattern": "Âm tiết = Thanh mẫu + Vận mẫu + Thanh điệu (thanh mẫu có thể vắng mặt)",
+    "examples": [
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "noteVi": "b (thanh mẫu) + a (vận mẫu), thanh 1"
+     },
+     {
+      "zh": "拔",
+      "pinyin": "bá",
+      "noteVi": "cùng âm tiết ba, thanh 2"
+     },
+     {
+      "zh": "把",
+      "pinyin": "bǎ",
+      "noteVi": "cùng âm tiết ba, thanh 3"
+     },
+     {
+      "zh": "爸",
+      "pinyin": "bà",
+      "noteVi": "cùng âm tiết ba, thanh 4"
+     },
+     {
+      "zh": "阿",
+      "pinyin": "ā",
+      "noteVi": "không có thanh mẫu, thanh 1"
+     },
+     {
+      "zh": "啊",
+      "pinyin": "á",
+      "noteVi": "không có thanh mẫu, thanh 2"
+     }
+    ],
+    "positionVi": "Bảng ví dụ in ở trang 001 xếp bốn thanh của cùng một âm tiết ba cạnh nhau để so sánh.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 8,
+      "printedPage": 1,
+      "section": "小语讲堂 · 语音 1 汉语音节"
+     }
+    ],
+    "sentenceIds": [
+     "s-d1a"
+    ],
+    "exerciseIds": [
+     "ex-02"
+    ]
+   },
+   {
+    "id": "kp-hsk1-l01-tones",
+    "kind": "foundation-pronunciation",
+    "kindLabel": "Điểm kiến thức nền — phát âm (không phải ngữ pháp câu)",
+    "title": "Bốn thanh điệu cơ bản",
+    "explanationVi": "Theo sách (trang in 002–003): tiếng Hán có 4 thanh cơ bản — thanh 1 (cao ngang, 55), thanh 2 (đi lên, 35), thanh 3 (xuống rồi lên, 214), thanh 4 (đi xuống, 51). Dấu thanh đặt trên nguyên âm chính của vận mẫu. Thanh khác nhau thì nghĩa của âm tiết cũng khác nhau. Phần tiếng Việt là chú giải biên tập từ nội dung in trong sách.",
+    "pattern": "Thanh 1 (55) · Thanh 2 (35) · Thanh 3 (214) · Thanh 4 (51)",
+    "examples": [
+     {
+      "zh": "八/拔/把/爸",
+      "pinyin": "bā bá bǎ bà",
+      "noteVi": "bốn thanh của âm tiết ba, trang in 001"
+     },
+     {
+      "zh": "—",
+      "pinyin": "mō mó mǒ mò",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+     },
+     {
+      "zh": "—",
+      "pinyin": "fū fú fǔ fù",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+     },
+     {
+      "zh": "—",
+      "pinyin": "dī dí dǐ dì",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+     },
+     {
+      "zh": "—",
+      "pinyin": "tāo táo tǎo tào",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+     }
+    ],
+    "positionVi": "Xem đường thanh ở trang in 003: thanh 1 ngang cao, thanh 2 đi lên, thanh 3 võng xuống rồi lên, thanh 4 đi xuống.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 3 声调"
+     },
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 10,
+      "printedPage": 3,
+      "section": "小语讲堂 · 语音 3 声调"
+     }
+    ],
+    "sentenceIds": [],
+    "exerciseIds": [
+     "ex-02",
+     "ex-04"
+    ]
+   },
+   {
+    "id": "kp-hsk1-l01-initials-finals",
+    "kind": "foundation-pronunciation",
+    "kindLabel": "Điểm kiến thức nền — phát âm (không phải ngữ pháp câu)",
+    "title": "Thanh mẫu và vận mẫu (1)",
+    "explanationVi": "Theo sách (trang in 002): thanh mẫu và vận mẫu ghép lại thành âm tiết, nhưng không phải thanh mẫu nào cũng ghép được với mọi vận mẫu. Bảng của bài này gồm các thanh mẫu b, p, m, f, d, t, n, l, g, k, h và các vận mẫu a, o, e, i, u, er, ai, ei, ao, ou, an, en, ang, eng, ong. Riêng “er” không kết hợp với thanh mẫu nào — nó đứng riêng thành một âm tiết. Phần tiếng Việt là chú giải biên tập từ nội dung in trong sách.",
+    "pattern": "Thanh mẫu (b p m f · d t n l · g k h) + Vận mẫu (a o e i u er · ai ei ao ou · an en · ang eng ong)",
+    "examples": [
+     {
+      "zh": "茶",
+      "pinyin": "chá",
+      "noteVi": "thẻ từ trang 001"
+     },
+     {
+      "zh": "狗",
+      "pinyin": "gǒu",
+      "noteVi": "thẻ từ trang 001"
+     },
+     {
+      "zh": "猫",
+      "pinyin": "māo",
+      "noteVi": "thẻ từ trang 001"
+     },
+     {
+      "zh": "菜",
+      "pinyin": "cài",
+      "noteVi": "thẻ từ trang 001"
+     }
+    ],
+    "positionVi": "Bảng thanh mẫu – vận mẫu in ở trang in 002; các thẻ từ nghe–đọc lại ở trang in 001–002.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 9,
+      "printedPage": 2,
+      "section": "小语讲堂 · 语音 2 声母和韵母（1）"
+     }
+    ],
+    "sentenceIds": [],
+    "exerciseIds": [
+     "ex-01",
+     "ex-05",
+     "ex-06"
+    ]
+   }
+  ],
+  "reader": {
+   "passageId": "psg-wb-l01",
+   "titleVi": "Hội thoại in trong bài tập 5 (trang in 004) và thẻ từ trang in 003",
+   "noteVi": "Ba hội thoại dưới đây được chép từ phần 听读练 bài 5 của sách bài tập. Pinyin chép theo bản in; nghĩa Việt là chú giải biên tập. Audio của bài là 2 track của sách bài tập: track 1-1 gắn với phần Pronunciation và track 1-2 gắn với phần Listen, Read, and Practice (số track in ngay trong sách). Chưa có mốc thời gian theo câu đã kiểm chứng nên app chỉ phát cả track, không phát từng câu.",
+   "sentences": [
+    {
+     "id": "s-d1a",
+     "speaker": "A",
+     "zh": "你好！",
+     "pinyin": "Nǐ hǎo!",
+     "vi": "Xin chào!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 1"
+      }
+     ]
+    },
+    {
+     "id": "s-d1b",
+     "speaker": "B",
+     "zh": "你好！",
+     "pinyin": "Nǐ hǎo!",
+     "vi": "Xin chào!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 1"
+      }
+     ]
+    },
+    {
+     "id": "s-d2a",
+     "speaker": "A",
+     "zh": "你好！",
+     "pinyin": "Nǐ hǎo!",
+     "vi": "Xin chào!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 2"
+      }
+     ]
+    },
+    {
+     "id": "s-d2b",
+     "speaker": "B",
+     "zh": "你们好！",
+     "pinyin": "Nǐmen hǎo!",
+     "vi": "Chào các bạn!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 2"
+      }
+     ]
+    },
+    {
+     "id": "s-d3a",
+     "speaker": "A",
+     "zh": "谢谢！",
+     "pinyin": "Xièxie!",
+     "vi": "Cảm ơn!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 3"
+      }
+     ]
+    },
+    {
+     "id": "s-d3b",
+     "speaker": "B",
+     "zh": "不客气！",
+     "pinyin": "Bú kèqi!",
+     "vi": "Không có gì!",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 3"
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "id": "rw-1",
+     "zh": "口",
+     "pinyin": "kǒu",
+     "vi": "cái miệng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-2",
+     "zh": "饭",
+     "pinyin": "fàn",
+     "vi": "cơm",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-3",
+     "zh": "喝",
+     "pinyin": "hē",
+     "vi": "uống",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-4",
+     "zh": "二",
+     "pinyin": "èr",
+     "vi": "số hai",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-5",
+     "zh": "你好",
+     "pinyin": "nǐ hǎo",
+     "vi": "xin chào",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-6",
+     "zh": "朋友",
+     "pinyin": "péngyou",
+     "vi": "bạn bè",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-7",
+     "zh": "面包",
+     "pinyin": "miànbāo",
+     "vi": "bánh mì",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-8",
+     "zh": "妹妹",
+     "pinyin": "mèimei",
+     "vi": "em gái",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-9",
+     "zh": "房间",
+     "pinyin": "fángjiān",
+     "vi": "căn phòng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-10",
+     "zh": "白天",
+     "pinyin": "báitiān",
+     "vi": "ban ngày",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-11",
+     "zh": "饭店",
+     "pinyin": "fàndiàn",
+     "vi": "quán ăn, nhà hàng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    },
+    {
+     "id": "rw-12",
+     "zh": "电脑",
+     "pinyin": "diànnǎo",
+     "vi": "máy tính",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 10,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语音 3 · thẻ từ kèm hình"
+      }
+     ]
+    }
+   ],
+   "audioTracks": [
+    {
+     "id": "trk-wb-l01-1",
+     "label": "Track 1-1 · Pronunciation (phát âm)",
+     "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-01/01-1.mp3",
+     "durationSec": 252.2,
+     "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-10-31 (file không đưa vào repo).",
+     "bookRef": "Workbook Bài 1, phần 一、语音, ký hiệu track 1-1 in ở trang in 001",
+     "segments": [],
+     "segmentsStatus": "unverified",
+     "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino."
+    },
+    {
+     "id": "trk-wb-l01-2",
+     "label": "Track 1-2 · Listen, Read, and Practice (nghe – đọc – luyện)",
+     "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-01/01-2.mp3",
+     "durationSec": 371.3,
+     "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-10-31 (file không đưa vào repo).",
+     "bookRef": "Workbook Bài 1, phần 二、听读练, ký hiệu track 1-2 in ở trang in 004",
+     "segments": [],
+     "segmentsStatus": "unverified",
+     "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino."
+    }
+   ]
+  },
+  "exerciseSet": {
+   "id": "set-wb-l01-auto",
+   "titleVi": "Câu hỏi về nội dung đã in trong Bài 1 (chấm tự động)",
+   "noteVi": "Mọi lựa chọn và đáp án đều lấy trực tiếp từ trang in của sách bài tập; câu hỏi và giải thích tiếng Việt là phần biên tập. Điểm lần đầu, lần làm lại và lần có dùng gợi ý được ghi riêng.",
+   "items": [
+    {
+     "id": "ex-01",
+     "type": "multiple-choice",
+     "promptVi": "Trong các thẻ từ kèm hình ở trang in 001 của sách bài tập, từ nào có Pinyin là “māo”?",
+     "options": [
+      {
+       "id": "a",
+       "zh": "茶",
+       "pinyin": "chá"
+      },
+      {
+       "id": "b",
+       "zh": "狗",
+       "pinyin": "gǒu"
+      },
+      {
+       "id": "c",
+       "zh": "猫",
+       "pinyin": "māo"
+      },
+      {
+       "id": "d",
+       "zh": "菜",
+       "pinyin": "cài"
+      }
+     ],
+     "answer": "c",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "Đáp án là 猫 (māo — con mèo), đúng như thẻ từ in ở trang 001.",
+     "hintVi": "Nhìn lại 4 thẻ từ đầu tiên ở trang in 001: trà, chó, mèo, rau.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 语音 1 · thẻ từ"
+      }
+     ],
+     "grammarIds": [
+      "kp-hsk1-l01-initials-finals"
+     ]
+    },
+    {
+     "id": "ex-02",
+     "type": "multiple-choice",
+     "promptVi": "Theo bảng âm tiết ở trang in 001, “bǎ 把” mang thanh điệu nào?",
+     "options": [
+      {
+       "id": "a",
+       "labelVi": "Thanh 1"
+      },
+      {
+       "id": "b",
+       "labelVi": "Thanh 2"
+      },
+      {
+       "id": "c",
+       "labelVi": "Thanh 3"
+      },
+      {
+       "id": "d",
+       "labelVi": "Thanh 4"
+      }
+     ],
+     "answer": "c",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "Bảng ở trang 001 xếp bā (thanh 1), bá (thanh 2), bǎ (thanh 3), bà (thanh 4). Dấu ở bǎ là dấu thanh 3.",
+     "hintVi": "Thứ tự bốn cột trong bảng là thanh 1, 2, 3, 4.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 语音 1 · bảng 汉语音节"
+      }
+     ],
+     "grammarIds": [
+      "kp-hsk1-l01-syllable",
+      "kp-hsk1-l01-tones"
+     ]
+    },
+    {
+     "id": "ex-03",
+     "type": "multiple-choice",
+     "promptVi": "Theo hội thoại in ở bài tập 5 (trang in 004), khi A nói “谢谢！” thì B đáp lại thế nào?",
+     "options": [
+      {
+       "id": "a",
+       "zh": "你好！",
+       "pinyin": "Nǐ hǎo!"
+      },
+      {
+       "id": "b",
+       "zh": "你们好！",
+       "pinyin": "Nǐmen hǎo!"
+      },
+      {
+       "id": "c",
+       "zh": "不客气！",
+       "pinyin": "Bú kèqi!"
+      }
+     ],
+     "answer": "c",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "Hội thoại 3 in trong sách: A nói 谢谢！(Cảm ơn!), B đáp 不客气！(Không có gì!).",
+     "hintVi": "Tìm hội thoại có 谢谢 ở trang in 004.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 5",
+       "item": "hội thoại 3"
+      }
+     ],
+     "grammarIds": []
+    },
+    {
+     "id": "ex-04",
+     "type": "multiple-choice",
+     "promptVi": "Theo các nhóm âm tiết bốn thanh in ở bài 听读练 1 (trang in 004), “mò” là âm tiết mang thanh nào?",
+     "options": [
+      {
+       "id": "a",
+       "labelVi": "Thanh 1"
+      },
+      {
+       "id": "b",
+       "labelVi": "Thanh 2"
+      },
+      {
+       "id": "c",
+       "labelVi": "Thanh 3"
+      },
+      {
+       "id": "d",
+       "labelVi": "Thanh 4"
+      }
+     ],
+     "answer": "d",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "Nhóm in trong sách: mō (1), mó (2), mǒ (3), mò (4). Dấu huyền là thanh 4.",
+     "hintVi": "Mỗi nhóm ở trang 004 được xếp theo thứ tự thanh 1 → 4.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 11,
+       "printedPage": 4,
+       "section": "听读练 · bài 1"
+      }
+     ],
+     "grammarIds": [
+      "kp-hsk1-l01-tones"
+     ]
+    },
+    {
+     "id": "ex-05",
+     "type": "multiple-choice",
+     "promptVi": "Trong các thẻ từ kèm hình ở trang in 002, từ nào có Pinyin là “lǎoshī”?",
+     "options": [
+      {
+       "id": "a",
+       "zh": "杯子",
+       "pinyin": "bēizi"
+      },
+      {
+       "id": "b",
+       "zh": "学生",
+       "pinyin": "xuésheng"
+      },
+      {
+       "id": "c",
+       "zh": "老师",
+       "pinyin": "lǎoshī"
+      },
+      {
+       "id": "d",
+       "zh": "鸡蛋",
+       "pinyin": "jīdàn"
+      }
+     ],
+     "answer": "c",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "老师 (lǎoshī — thầy cô giáo), đúng thẻ từ in ở trang in 002.",
+     "hintVi": "Bốn thẻ ở trang 002: cốc, học sinh, giáo viên, trứng gà.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 9,
+       "printedPage": 2,
+       "section": "小语讲堂 · 语音 1 · thẻ từ"
+      }
+     ],
+     "grammarIds": [
+      "kp-hsk1-l01-initials-finals"
+     ]
+    },
+    {
+     "id": "ex-06",
+     "type": "multiple-choice",
+     "promptVi": "Theo phần giải thích ở trang in 002, vận mẫu “er” kết hợp với thanh mẫu như thế nào?",
+     "options": [
+      {
+       "id": "a",
+       "labelVi": "Không kết hợp với thanh mẫu nào; “er” đứng riêng thành một âm tiết"
+      },
+      {
+       "id": "b",
+       "labelVi": "Kết hợp được với mọi thanh mẫu trong bảng"
+      },
+      {
+       "id": "c",
+       "labelVi": "Chỉ kết hợp với b, p, m, f"
+      }
+     ],
+     "answer": "a",
+     "answerStatus": "verified-from-print",
+     "explanationVi": "Sách ghi rõ: vận mẫu “er” không kết hợp với bất kỳ thanh mẫu nào và đứng riêng thành một âm tiết (trang in 002).",
+     "hintVi": "Đọc câu cuối của mục 2 ở trang in 002.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 9,
+       "printedPage": 2,
+       "section": "小语讲堂 · 语音 2 声母和韵母（1）"
+      }
+     ],
+     "grammarIds": [
+      "kp-hsk1-l01-initials-finals"
+     ]
+    }
+   ]
+  },
+  "selfCheckTasks": [
+   {
+    "id": "st-01",
+    "titleVi": "Nghe và viết thanh mẫu (bài 2, trang in 004)",
+    "instructionVi": "Phát track 1-2, nghe từng âm tiết, tự viết thanh mẫu nghe được vào vở rồi đọc to lại — đúng như yêu cầu in trong sách. Sách bài tập không in đáp án cho bài này và đáp án chưa được kiểm chứng độc lập, nên app không chấm tự động: làm xong hãy tự đánh giá.",
+    "audioTrackId": "trk-wb-l01-2",
+    "answerStatus": "unverified",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 11,
+      "printedPage": 4,
+      "section": "听读练 · bài 2"
+     }
+    ]
+   },
+   {
+    "id": "st-02",
+    "titleVi": "Nghe và viết vận mẫu (bài 3, trang in 004)",
+    "instructionVi": "Phát track 1-2, nghe và viết phần vận mẫu còn thiếu sau các thanh mẫu đã cho trong sách, rồi đọc to lại. Đáp án chưa kiểm chứng — app không chấm tự động, chỉ ghi tự đánh giá của bạn.",
+    "audioTrackId": "trk-wb-l01-2",
+    "answerStatus": "unverified",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 11,
+      "printedPage": 4,
+      "section": "听读练 · bài 3"
+     }
+    ]
+   },
+   {
+    "id": "st-03",
+    "titleVi": "Nghe và đánh dấu thanh điệu (bài 4, trang in 004)",
+    "instructionVi": "Phát track 1-2, nghe các âm tiết lao, fen, kan, ge, bai, li, gong, mang, gou, hou (Pinyin chưa có dấu thanh, in ở trang 004) và tự đánh dấu thanh nghe được. Đáp án chưa kiểm chứng — app không chấm tự động.",
+    "audioTrackId": "trk-wb-l01-2",
+    "answerStatus": "unverified",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 11,
+      "printedPage": 4,
+      "section": "听读练 · bài 4"
+     }
+    ]
+   },
+   {
+    "id": "st-04",
+    "titleVi": "Nhìn hình, chọn hội thoại đúng (bài 5, trang in 004)",
+    "instructionVi": "Bài này chấm theo hình in trong sách nên cần mở sách ở trang in 004 (PDF trang 11): với mỗi hình, chọn hội thoại phù hợp trong 3 hội thoại đã in. Ba hội thoại cũng có trong mục Đọc/nghe của app để bạn đối chiếu lời thoại.",
+    "audioTrackId": null,
+    "answerStatus": "unverified",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 11,
+      "printedPage": 4,
+      "section": "听读练 · bài 5"
+     }
+    ]
+   }
+  ],
+  "apply": {
+   "titleVi": "Nghe và đọc lại theo sách",
+   "instructionVi": "Sách hướng dẫn: “Nhìn hình, nghe audio trước, rồi đọc to lại” (trang in 001 và 003). Hãy phát track 1-1, nghe các thẻ từ và đọc to lại từng từ; sau đó tự đánh giá. App không chấm phần này và không dùng nhận dạng giọng nói.",
+   "audioTrackId": "trk-wb-l01-1",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 8,
+     "printedPage": 1,
+     "section": "小语讲堂 · 语音 1 · hướng dẫn 跟读"
+    },
+    {
+     "sourceId": "src-hsk1-workbook-pdf",
+     "pdfPage": 10,
+     "printedPage": 3,
+     "section": "小语讲堂 · 语音 3 · hướng dẫn 跟读"
+    }
+   ]
+  }
+ }
+}

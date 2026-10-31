@@ -382,3 +382,7 @@ Cuối mỗi phiên cập nhật checkpoint với đúng một bước tiếp th
 Một pilot tốt phải chứng minh được: có thể đọc dễ trên điện thoại, hiểu một điểm ngữ pháp, nghe đúng câu, làm bài tập nguồn, xem lỗi và quay lại đúng giải thích, đóng mở vẫn tiếp tục được. Nếu chưa thể hiển thị nội dung đầy đủ do nguồn/quyền, phải ghi rõ pilot mới chứng minh khung và điều hướng, chưa đạt pilot học liệu.
 
 Không gọi sản phẩm là “đầy đủ HSK 3.0” trước khi ma trận nguồn và ánh xạ đề cương chứng minh được điều đó.
+
+## Điều chỉnh thực hiện — 01/11/2026
+
+Người dùng yêu cầu sửa trực tiếp toàn bộ giao diện và rà lại học liệu, bổ sung hình từ sách khi cần. Phạm vi hiện tại là hoàn thiện Bài 1, chưa mở M7. Textbook đã đọc được; dùng 3 hội thoại/10 lượt cùng các track tương ứng, tách nền phát âm Workbook. Chi tiết thay đổi, nguồn và giới hạn tại DECISIONS D08 và SOURCE_AUDIT cập nhật.

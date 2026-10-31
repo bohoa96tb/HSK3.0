@@ -368,7 +368,8 @@ function sectionExercisesHtml(content) {
   if (!item) {
     return `<section class="card"><h2>Đã làm hết câu hỏi chấm tự động</h2>
     <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu.</p>
-    <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button>
+    <div class="row-actions"><button class="btn" type="button" id="back-last">← Xem lại câu cuối</button>
+    <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button></div>
     ${selfCheckHtml(content)}</section>`;
   }
   const checked = ses.checked[item.id];
@@ -384,11 +385,13 @@ function sectionExercisesHtml(content) {
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
     <span>${o.zh ? `<span class="zh-inline">${esc(o.zh)}</span> ${checked && o.pinyin ? `<span class="pinyin">${esc(o.pinyin)}</span>` : ""}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
-    <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button></div>
+    <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
+    ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>
     ${ses.hintUsed[item.id] ? `<p class="hint">Gợi ý: ${esc(item.hintVi)} <span class="muted">(đã ghi nhận dùng gợi ý)</span></p>` : ""}`
   : `<div class="feedback ${result.correct ? "ok" : "bad"}" role="status">
       <p><strong>${result.correct ? "Đúng." : "Chưa đúng."}</strong> ${esc(item.explanationVi)}</p>
       ${item.grammarIds.length ? `<a class="btn" href="#/grammar/${esc(item.grammarIds[0])}?return=exercises">Ôn lại cách dùng</a>` : ""}
+      ${ses.index > 0 ? `<button class="btn" type="button" id="prev-q">← Câu trước</button>` : ""}
       ${ses.index + 1 < set.items.length ? `<button class="btn primary" type="button" id="next-q">Câu tiếp theo</button>` : `<button class="btn primary" type="button" id="finish-q">Xem tổng kết bài tập</button>`}
     </div>`}
   </form>
@@ -425,7 +428,10 @@ function bindExercises(content) {
     if (hint) hint.onclick = () => { updateSession(content,(ss)=>{ ss.hintUsed[item.id] = true; }); render(); };
     const next = $("#next-q"); if (next) next.onclick = () => { updateSession(content,(ss)=>{ ss.index += 1; }); render(); };
     const fin = $("#finish-q"); if (fin) fin.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length; }); render(); };
+    const prev = $("#prev-q"); if (prev) prev.onclick = () => { updateSession(content,(ss)=>{ ss.index -= 1; }); render(); };
   }
+  const backLast = $("#back-last");
+  if (backLast) backLast.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length - 1; }); render(); };
   const restart = $("#restart-set");
   if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; }); render(); };
   $$("[data-play-task]").forEach((b) => b.onclick = () => {

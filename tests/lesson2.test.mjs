@@ -131,6 +131,12 @@ test('exercise sessions and drafts stay separate per lesson and survive navigati
   // Back to Bài 2: wrong answer and feedback are still there
   await route('lesson/hsk1-l02/exercises');
   assert.ok($('.feedback.bad'));
+  // Previous-question navigation keeps the checked state and feedback
+  $('#next-q').click();
+  assert.match($('#main').textContent, /Câu 2\/4/);
+  $('#prev-q').click();
+  assert.match($('#main').textContent, /Câu 1\/4/);
+  assert.ok($('.feedback.bad'));
   // Drafts are kept per task and survive leaving the page (refresh equivalent: state lives in localStorage)
   const input = $('[data-draft="st-l02-03:0"]');
   input.value = 'xué'; input.dispatchEvent(new window.Event('input', { bubbles: true }));

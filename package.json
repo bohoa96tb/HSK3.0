@@ -1,0 +1,10 @@
+{
+  "name": "hsk3-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/app.js && node --check src/lib.js && node --check src/store.js && node --check src/player.js && node scripts/validate.mjs && node --test tests/*.test.mjs"
+  }
+}

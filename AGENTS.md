@@ -84,8 +84,15 @@ Khi người dùng nói "Tiếp tục":
 3. Thực hiện đúng `nextTask` duy nhất ghi trong checkpoint, trong chặng
    hiện tại (M0 → M6, rồi pilot). Không lập lại kế hoạch từ đầu, không hỏi
    lại quyết định đã chốt trong `docs/DECISIONS.md`.
-4. Trước khi pilot được người dùng nghiệm thu: chỉ hoàn thiện pilot và sửa
-   lỗi. Không nhập hàng loạt bài HSK 1, không chuyển cấp.
+4. Người dùng đã nghiệm thu Bài 1–2 bản ux3 làm chuẩn (01/11/2026, D13).
+   "Tiếp tục" nghĩa là: hoàn thiện bài đang dở, hoặc làm trọn bài kế tiếp
+   theo thứ tự chương trình (nguồn → nội dung → tích hợp → QA → PR → merge
+   → kiểm live → cập nhật checkpoint), không chờ nghiệm thu từng bài.
+   Mỗi lượt ưu tiên một bài đầy đủ, không nhập hàng loạt bài sơ sài. Bài đã
+   phát hành và QA live đạt ghi trạng thái completed_with_documented_limits;
+   các giới hạn (audio chưa nghe thẩm định, chưa thử thiết bị thật, quyền
+   nguồn unknown) ghi riêng, không chặn bài kế tiếp và không tự coi là đã
+   giải quyết.
 
 Cuối mỗi phiên, cập nhật `docs/CHECKPOINT.md` với: chặng và bài đang làm,
 việc đã hoàn tất cùng bằng chứng, lỗi/phần bị chặn, kiểm thử đã chạy và kết

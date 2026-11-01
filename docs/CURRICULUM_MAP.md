@@ -14,8 +14,8 @@ Số track theo bài lấy từ danh mục trang audio Baulchino ngày 2026-10-3
 bài 1–3 và 7–15 mỗi bài 2 track, bài 4–6 mỗi bài 3 track). Đây là số đếm ở
 mức danh mục, chưa kiểm tra phát từng track.
 
-Trạng thái xuất bản app: Bài 1–3 đã xuất bản đầy đủ (Bài 3 ngày 2026-11-01,
-chuẩn ux3 + D13). Bài 4–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
+Trạng thái xuất bản app: Bài 1–4 đã xuất bản đầy đủ (Bài 4 ngày 2026-11-01,
+chuẩn ux3 + D13/D15). Bài 5–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
 
 ## 1. Bảng 15 bài HSK1
 
@@ -163,3 +163,12 @@ Audio Bài 2 đối ứng theo ký hiệu in trong sách, thời lượng đo b�
 | Nhìn hình chọn hội thoại (4 hình) | Workbook 012 | WB 3-2 | 4 câu chấm tự động; đáp án ③④①② khớp tài liệu đáp án đăng lại |
 
 Audio Bài 3 đối ứng theo ký hiệu in trong sách, thời lượng đo bằng ffprobe (xem `docs/SOURCE_AUDIT.md`); loa theo đơn vị căn bằng ASR (`asr-draft`), chưa nghe kiểm chứng; thiếu loa riêng cho 吗 và 嘴. Bài tập tổng hợp cuối Textbook (điền từ + miêu tả hình) là hoạt động lớp không đáp án in — không đưa vào app, như Bài 2.
+
+## 6. Map chi tiết — Bài 4 我有两个孩子 (đã đối chiếu trực quan 2026-11-01)
+
+- **Textbook tr. in 018–025 (PDF 33–40)**: mục tiêu — câu 有 (sở hữu), "A……，B呢？", số từ và lượng từ, hỏi–trả lời tuổi. Khởi động: 五、哥哥、学生、六十岁、妈妈、老师. Hội thoại 1 (track 4-1, ở nhà): 一飞忙吗？…她有二十个学生。Từ mới 4-2 （有、多少、个）; 小语讲堂 1 有 (phủ định 没/没有， ví dụ luyện đọc nguyên văn).
+- 小语讲堂 2 （数字， tr.020–021): bảng 0–99; 100–10.000 （一百、二百零八、九百九十九、一千、一千五百二十八、九千九百九十九）; quy tắc 二/两 （第二 vs 两个人、两口人、两本书）; luyện đọc 十二、二十二、一百二十二.
+- Hội thoại 2 (track 4-3, ở công ty): câu hỏi in tr.021, hội thoại in tr.022 — 我有两个哥哥，你呢？/ 我家有四口人…Từ mới 4-4 (10 từ). 小语讲堂 3 呢 (1) (cấu trúc A……，B呢？ + 3 ví dụ luyện đọc, tr.023); 小语讲堂 4 量词 （个/口， [Số + Lượng từ + (Danh từ)], tr.023).
+- Hội thoại 3 (track 4-5, trên phố): câu hỏi in tr.024 — 王一雪 có hai con; con gái 十二 tuổi; mẹo Tiểu Ngữ: dưới 10 tuổi hỏi 几岁， từ 10 tuổi hỏi 多大. Từ mới 4-6 (8 từ). Bài tập tổng hợp tr.025 là hoạt động lớp, không đáp án in — không chuyển thành câu chấm điểm.
+- **Workbook tr. in 013–018 (PDF 20–25)**: phát âm (track 4-1): biến điệu thanh 3 (bảng đổi 214→35 + bộ từ kèm hình A: 你好、哪里、小语、水果） và thanh nhẹ (tương phản 东西/买卖/孙子 + bộ từ kèm hình B: 妈妈、爸爸、椅子、饺子； tiếp 谢谢、衣服、漂亮、早上 ở đầu tr.015) → 12 từ nền trong app. 听读练 (track 4-2, tr.015): nhiệm vụ 1 chọn âm tiết 8 cặp in sẵn → chuyển thành bài gõ âm tiết tự chấm theo D15; nhiệm vụ 2–4 là luyện đọc theo bản in, không chấm điểm. **模拟测练 (tr.016–018, nghe câu 1–10 + đọc 11–20) KHÔNG đưa vào bài theo D15** — phần thi thử gộp Bài 1–4, để dành tính năng riêng nếu làm sau.
+- **App**: 21 từ mới, 6 điểm kiến thức, 14 câu/3 đoạn, 4 câu hỏi hiểu hội thoại (verified-from-print, đáp án 1/2/2/2), 1 bài chọn âm tiết 8 ô (verified-editorial), ảnh ngữ cảnh phòng khách (trang PDF 34). Loa theo đơn vị: đủ 14/14 câu, 21/21 từ mới, 12/12 từ nền; lựa chọn của 4 câu hỏi không có loa riêng (từ đơn lẻ, hai lựa chọn không xuất hiện trong hội thoại nên không có đoạn trung thực).

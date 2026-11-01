@@ -212,3 +212,30 @@ Phạm vi: chỉ Bài 1–2 và thành phần dùng chung; không mở Bài 3. �
 - **Rà soát ô 1 bài vận mẫu (st-l03-02), âm tiết zū/zǔ**: đề bản in cho sẵn thanh mẫu "z", người học viết vận mẫu kèm dấu thanh. Lời đọc đăng lại (Scribd 1067878415, tr. in 008) chép **zū** (thanh 1). ASR: lượt base nghe ra chữ 祖 (zǔ), lượt kiểm chứng thứ hai bằng model small cũng nghe ra 祖 (zǔ) — cả hai lượt đều nghiêng thanh 3. Đáp án đang dùng: **ū** (theo lời đọc). ū và ǔ **không** tương đương (chế độ vận mẫu chấm cả dấu thanh). Quyết định theo D14: giữ đáp án theo lời đọc — tài liệu chép lại chính track này — và ghi công khai độ không chắc ngay trong `answerEvidence` của bài; ô này là ô còn chưa chắc nhất của bộ bài, chỉ một lượt nghe bởi người mới chốt được. Trạng thái bài vẫn `verified-editorial`; không nâng trạng thái audio.
 - **Rà soát ô 15 bài vận mẫu (st-l03-02), âm tiết 谁**: đề cho sẵn "sh", viết vận mẫu. Lời đọc chép **shéi** → đáp án đang dùng **éi**. Nguồn ngôn ngữ: 谁 có hai âm chuẩn shéi/shuí — chính Textbook Bài 3 ghi âm chính shéi và lưu ý "cũng đọc shuí"; ASR chỉ nhận ra chữ 谁, không phân biệt được hai âm, nên phát biểu trước đây "ASR nghe ra shuí" là nói quá — rút lại. Cách chấm hiện tại: theo lời đọc (éi); người học viết uí sẽ bị tính sai ô này. Giới hạn này ghi rõ trong `answerEvidence` của bài và quyết định D14.
 - **Thay đổi kèm theo**: `contentVersion` tăng lên `20261101-lesson3-2` chỉ để chống cache cho thay đổi chữ bằng chứng trên; nội dung học không đổi. Kiểm thử local sau thay đổi: validator đạt, 41/41 test đạt.
+
+## Bài 4 — 我有两个孩子 (01/11/2026)
+
+### 1. Nguồn và đối chiếu
+
+Textbook tr. in 018–025, Workbook tr. in 013–018 đọc trực quan; lời đọc đăng lại (Scribd 1067878415) phần Bài 4 tr. in 009–012 (听读练 tr. in 010); tài liệu đáp án đăng lại (Scribd 1077395370) in đáp án 听读练 nhiệm vụ 1 khớp 8/8 với lời đọc; Hán–Việt tra từng chữ ở Thi Viện. Chi tiết ở `docs/SOURCE_AUDIT.md` mục Bài 4 và `docs/CURRICULUM_MAP.md` mục 6. Ba quyết định biên tập ở D15 (chế độ chấm syllable; câu hỏi hiểu hội thoại của Textbook thành câu chấm tự động verified-from-print; không đưa 模拟测练 vào bài).
+
+### 2. Kiểm thử tự động (local)
+
+`npm run check`: validator đạt (4 bài; Hán–Việt 66/66; 128 ô nghe–viết/chọn âm tiết), **44/44 test đạt** — gồm test mới Bài 4 (số lượng, đáp án 1/2/2/2, Hán–Việt điểm kiểm, thời lượng track Textbook, hiển thị thân câu promptZh trong DOM, chấm syllable: nhập đúng/mate của cặp/dấu thanh dạng số) và test hồi quy Bài 1–3. `git diff --check` sạch.
+
+### 3. QA nội dung độc lập
+
+QA độc lập (không tham gia biên soạn) đối chiếu trang in: **PASS**. Đã xác minh: 14/14 câu khớp từng ký tự và người nói; 21/21 từ mới đúng thứ tự/pinyin/nghĩa; 6 điểm kiến thức trung thực (gồm 208/1528 và quy tắc 二/两 theo tr.021); 4 đáp án suy ra độc lập từ hội thoại in đều đúng; liên kết ôn tập của cả 4 câu đều trỏ đúng điểm dạy đáp án (không lặp lỗi mẫu D13); 8 cặp âm tiết và đáp án thuộc đúng cặp; Hán–Việt điểm kiểm 5 mục bảo vệ được trước từ điển （没有 MỘT HỮU, 几 KỶ, 大 ĐẠI, 多少 ĐA THIỂU, 孩子 HÀI TỬ); hồi quy: ô shéi của Bài 3 giữ 'éi' + ghi chú rà soát, wb2-picture-1 giữ kp-hsk1-l02-word-order.
+
+Hai ghi chú nhỏ, không chặn, đã cân nhắc và giữ nguyên có lý do ghi rõ: (1) pinyin của 学生 trong app viết xuésheng (thanh nhẹ) trong khi sách in xuéshēng — đây là quy ước chung của cả dự án từ Bài 1 (dữ liệu Bài 1 cũng viết xuésheng), thay riêng Bài 4 sẽ làm mất nhất quán; ghi nhận là việc toàn cục nếu Hoa muốn đổi. (2) Câu wb4-text-2: bản in để chỗ trống ở "杨同乐家有（）。" với lựa chọn 两口人/四口人/五口人； app tách thành thân câu "…（ ）口人。" với lựa chọn chỉ là số 两/四/五 — nội dung gộp lại tương đương, đáp án không đổi.
+
+### 4. Nghiệm thu live (bản đã merge, contentVersion 20261101-lesson4-1)
+
+Đạt toàn bộ các luồng chính trên bản live: lộ trình hiện 4 bài đã mở; trang Bài 4 đủ 4 mục tiêu + ảnh phòng khách; Từ cần biết 21 thẻ, Hán–Việt bật/tắt hoạt động （没有 → MỘT HỮU; trạng thái bật sẵn trên hồ sơ kiểm tra là tùy chọn đã lưu, mặc định tắt vẫn khóa bằng test); Nghe & đọc 3 đoạn, loa đủ 14/14 câu; Bài tập 4 câu hiển thị thân câu tiếng Trung, chấm 4/4, liên kết ôn tập câu 4 trỏ kp-hsk1-l04-numbers; bài chọn âm tiết: nút nghe ghi đoạn 0:11–0:57 (không phát từ 0:00), nhập đúng 8/8, đổi sang âm còn lại của cặp bị chấm sai và hiện đáp án, tải lại trang khôi phục đúng kết quả lần kiểm tra gần nhất trong khi điểm lần đầu giữ nguyên. Hồi quy: Bài 3 mở bình thường, văn bằng chứng của bài nghe–viết 2 hiển thị đủ; Bài 1 (12 thẻ từ) và Bài 2 (15 thẻ từ) tải bình thường.
+
+### 5. Giới hạn còn lại (ghi thẳng)
+
+- Mọi đoạn loa vẫn `asr-draft`, chưa nghe kiểm chứng bởi người; Bài 4 đủ loa câu/từ nhưng chưa thẩm định bằng tai người.
+- CI GitHub Actions chưa tạo được qua connector (403) — kiểm thử trên là local + nghiệm thu live, không gọi là CI.
+- Chưa thử Android thật; tuyến responsive Bài 4 đã thêm vào `tests/responsive.html` ở PR bookkeeping nhưng chưa chạy kiểm iframe.
+- 模拟测练 của Workbook Bài 4 (nghe 1–10, đọc 11–20, có đáp án đăng lại) không nằm trong bài theo D15.

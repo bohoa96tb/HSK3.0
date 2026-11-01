@@ -115,6 +115,11 @@ export function gradeDictationCell(task, index, input) {
       candTone === expFinal.tone && candTone !== 0;
     return { graded: true, correct };
   }
+  if (task.gradingMode === "syllable") {
+    // The learner types the whole syllable they heard, tone mark or tone
+    // number; it must reproduce the read syllable exactly (base + tone).
+    return { graded: true, correct: given.base === syllable.base && given.tone === syllable.tone && given.tone !== 0 };
+  }
   if (task.gradingMode === "tone") {
     let tone = given.tone;
     if (/^[0-5]$/.test(raw)) tone = Number(raw) % 5;

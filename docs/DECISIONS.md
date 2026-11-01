@@ -190,3 +190,9 @@ Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở ind
 - Khi đề bản in, tài liệu lời đọc và ASR lệch nhau: đáp án lấy theo **lời đọc** (tài liệu chép lại chính track nghe) sau khi đã khớp đề bản in; ASR chỉ là bản nháp hỗ trợ thứ tự, không lật đáp án của lời đọc. Tiền lệ: ô hěn Bài 1; ô 1 bài vận mẫu Bài 3 (lời đọc zū, hai lượt ASR base/small đều nghe ra chữ thanh 3 zǔ — ū và ǔ không tương đương vì chấm vận mẫu kèm dấu thanh; đáp án giữ ū theo lời đọc và ghi công khai độ không chắc ngay trong `answerEvidence` của bài).
 - Âm có hai cách đọc chuẩn （谁 shéi/shuí): đáp án chấm theo âm in trong lời đọc (shéi → vận mẫu éi); ASR không phân biệt được hai âm này nên không dùng làm bằng chứng chọn âm. Người học viết theo âm còn lại (uí) sẽ bị tính sai ô đó — giới hạn này ghi rõ trong bằng chứng của bài, không âm thầm nới đáp án.
 - Không vì các điểm trên mà nâng trạng thái audio: mọi đoạn loa vẫn `asr-draft`, chưa nghe kiểm chứng bởi người.
+## D15 — Bài 4: thích ứng hai dạng bài khác mẫu Bài 1–3 (01/11/2026)
+
+- Bài 1 của phần 听读练 Bài 4 là "chọn âm tiết nghe được" (8 cặp âm tiết gần giống), không phải điền khuyết như Bài 1–3. App giữ nguyên yêu cầu nghe–phân biệt bằng một chế độ chấm mới `syllable` trong cùng khối nghe–viết: người học gõ cả âm tiết nghe được (dấu thanh hoặc số thanh), đáp án đối chiếu theo tài liệu lời đọc như chuẩn D10/D14. Đề hiển thị nguyên cặp âm tiết in trong sách.
+- Câu chấm điểm của Bài 4 lấy từ chính Textbook: hai câu hỏi hiểu hội thoại in sẵn sau Hội thoại 2 và Hội thoại 3 (chọn A/B/C), đáp án suy ra trực tiếp từ lời thoại đã in trong cùng cuốn sách (`verified-from-print`). Bài 4 không có bài "nhìn hình chọn hội thoại" trong 听读练.
+- Phần 模拟测练 ở cuối Workbook Bài 4 (tr. in 016–018, track 4-3) là bài kiểm tra mô phỏng tích lũy nhiều bài, không phải nội dung riêng của Bài 4 — không đưa vào bài này; ghi rõ trong CURRICULUM_MAP/SOURCE_AUDIT để xét làm tính năng riêng sau nếu cần.
+

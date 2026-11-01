@@ -265,3 +265,19 @@ Theo yêu cầu của Hoa sau phát hành Bài 5:
 - **Loa lựa chọn Bài 4–5:** rà từng lựa chọn theo token nguyên từ trong track hội thoại của bài (ASR): bổ sung 15 đoạn cho 8 câu in (Bài 4: 10/12, thiếu 姐姐/三个 vì không xuất hiện; Bài 5: 5/12, thiếu 不/不会/星期三/星期六/上班/名字/工作） + 20/25 lượt lựa chọn của 5 câu tổng hợp （6月22号 không có đoạn). Tổng toàn app 76/90 lựa chọn có loa; ma trận đầy đủ ở SOURCE_AUDIT. Vẫn `asr-draft`, chưa nghe kiểm chứng.
 - **QA độc lập:** ĐẠT cả 4 mảng (conflict + migration an toàn dữ liệu khác; đáp án comp 5/5 duy nhất hợp lý; track/đoạn loa khớp hội thoại; đếm độc lập 76/90). Hai ghi chú đã rõ: migration là một chiều theo `conflictCells` hiện hành (đúng thiết kế D16) và answerEvidence của comp không cần ghi giới hạn hình (bài chữ, không phải bài hình).
 - **Kiểm tra:** validator đạt; **50/50 test** (47 cũ + 3 conflict); contentVersion 20261101-lesson5-2, tăng ?v= ở index.html và cả các import nội bộ src/.
+
+## Bài 6 — 你的手机号是多少？ (01/11/2026, PR #26)
+
+Textbook tr. in 035–042, Workbook tr. in 031–032 đọc trực quan; lời đọc đăng lại (Scribd 1067878415) phần Bài 6 tr. in 014; tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án 听读练 Bài 6; Hán–Việt tra từng chữ ở Thi Viện. Chi tiết ở `docs/SOURCE_AUDIT.md` mục Bài 6 và `docs/CURRICULUM_MAP.md` mục 8.
+
+### Kiểm tra mã
+
+`npm run check`: validator đạt (6 bài; Hán–Việt 110/110; 142 ô nghe–viết/chọn âm tiết verified-editorial — 136 ô Bài 1–5 sau khi trừ ô source-conflict + 6 ô Bài 6), **53/53 test đạt** — gồm test mới Bài 6 (22 từ/5 điểm/14 câu/8 track, đáp án 3/2/3/2 + 5/2/4/3/1, Hán–Việt điểm kiểm THỦ CƠ/NA NHI/TƯỞNG/CẬT/CHẨM MA/XUẤT TÔ XA, pinyin đọc số điện thoại, chấm âm tiết đôi gồm cả cặp phân biệt ở âm tiết thứ hai, bài 2 nhi hóa giữ unverified) và cập nhật đếm bao phủ ở ux/ux3 (câu có đoạn 77, từ mới 108/110, từ nền 64/71, lựa chọn 106/127; Hán–Việt 110) cùng contentVersion ở test Bài 3–5. Thay đổi mã chấm: mode 'syllable' so dãy thanh điệu từng âm tiết thay cho một thanh gộp — test Bài 1–5 (âm tiết đơn) vẫn đạt nguyên vẹn. `git diff --check` sạch.
+
+### QA độc lập (đối chiếu dữ liệu với ảnh trang in)
+
+ĐẠT cả 6 mảng: từ mới 22/22 khớp bản in; 14 câu hội thoại khớp từng chữ (gồm pinyin đọc số điện thoại); đáp án 9/9 duy nhất hợp lý và liên kết ôn tập hợp lý; chấm âm tiết đôi kiểm bằng node — đáp án đúng qua (dấu + số), thành viên còn lại của cặp bị loại, kể cả dōngxi/dōngxī và shǒujī/shǒují; st-l06-02 unverified không answers; 5 điểm kiến thức nhất quán với bản in. Không lỗi.
+
+### Nghiệm thu live
+
+Đạt 8/9 bước ở lượt đầu và đạt trọn ở lượt kiểm lại: lộ trình hiện 6 bài đã mở; trang Bài 6 đủ mục tiêu + ảnh ở trường (Textbook tr.036); Từ cần biết 22 thẻ, Hán–Việt đúng （手机 THỦ CƠ, 吃 CẬT, 怎么 CHẨM MA); Nghe & đọc 3 đoạn, loa câu số điện thoại phát đúng đoạn riêng; Bài tập chấm đúng/sai đúng, liên kết ôn của câu 2 trỏ kp-hsk1-l06-serial và quay lại giữ trạng thái, câu tổng hợp chấm đúng; bài chọn âm tiết đôi: đoạn phát 0:12–0:47, 'nabian' không thanh bị chấm sai, và ở lượt kiểm lại 'dong1xi' ĐÚNG (1/1), 'dong1xi1' SAI với đáp án dōngxi, 'shou3ji1' ĐÚNG — ở lượt đầu trường hợp 'dong1xi' từng bị chấm sai do CDN còn phục vụ lib.js bản cũ ngay sau phát hành (đã xác minh lib.js trên URL thật chứa logic mới và kiểm lại đạt; không phải lỗi dữ liệu hay mã đã merge); bài 2 nhi hóa không có nút Kiểm tra; refresh giữ kết quả; hồi quy Bài 5 bình thường (22 thẻ). Iframe responsive (tests/responsive.html) cho 3 tuyến Bài 6 ĐẠT ở 360/390/768/1440, gồm cỡ chữ tối đa ở 390 và mini player mở ở 390 trên tuyến Nghe & đọc (đệm dưới đo thật 98px, nội dung cuối trang tới được). Không đồng nghĩa đã nghe thẩm định đoạn loa hoặc đã thử Android thật.

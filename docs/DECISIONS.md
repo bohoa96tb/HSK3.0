@@ -148,3 +148,12 @@ Phiên làm bài tập tách theo bộ bài tập: `progress.exerciseSessions[se
 Đáp án bài chọn hội thoại theo hình của Workbook Bài 2 là suy luận biên tập đã đối chiếu trực quan từng hình (`verified-from-visual` kèm `answerEvidence`), không phải đáp án chính thức — cùng quy ước với Bài 1. Ba bài nghe–viết Bài 2 không có đáp án trong sách nên giữ `unverified`, chỉ lưu nháp và tự đánh giá.
 
 Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở index.html và các module để tránh cache cũ sau khi thêm bài.
+
+## D10 — Đáp án nghe–viết Bài 1–2 và chấm theo đoạn, 01/11/2026 JST
+
+- Thêm trạng thái đáp án `verified-editorial`: đáp án biên tập đã đối chiếu ba chiều (đề bản in + tài liệu lời đọc + thứ tự âm tiết trong track qua ASR nháp local), phân biệt với đáp án chính thức của NXB. Cả 6 bài nghe–viết Bài 1–2 (78 ô) dùng trạng thái này và được chấm tự động; mỗi bài lưu `scriptSyllables`, `answers`, `answerEvidence`, `gradingMode`, `version`.
+- Nguồn bổ sung (ghi ở `docs/SOURCE_AUDIT.md`): tài liệu lời đọc và tài liệu đáp án đăng lại trên Scribd (xuất xứ chưa xác nhận; hai bản đăng lại của tài liệu đáp án tính là một nguồn), xinhsk bị chặn ở đăng nhập, trang FLTRP chính thức chỉ xác nhận ấn bản/ISBN. Quyền vẫn `unknown`.
+- Sửa đề ô 10 bài thanh mẫu Bài 1: "__ ēn" → "__ ěn" (bản in + lời đọc đều là ěn/hěn).
+- Chấm theo quy tắc ở CONTENT_STANDARD bổ sung 01/11/2026: thanh mẫu chấm phụ âm đầu; vận mẫu bắt buộc dấu thanh; thanh điệu nhận dấu/số; u≠ü trừ sau j/q/x; điểm lần đầu khóa riêng trong `progress.dictation`, làm lại không ghi đè, xem lời đọc trước khi làm được ghi `peeked`; ô sai lần đầu vào hàng đợi ôn với khóa `dict-<taskId>:<ô>`. Tự đánh giá cũ giữ nguyên, không chuyển thành điểm.
+- Audio: thêm `playSegment` và mốc đoạn theo bài nghe–viết (`audioSegment`) từ ASR nháp đối chiếu lời đọc; hội thoại vẫn phát cả track; nghe từng câu vẫn tắt.
+- CI: thử tạo `.github/workflows/ci.yml` qua GitHub connector ngày 01/11/2026 vẫn bị **403 "Resource not accessible by integration"**. Bản workflow hoàn chỉnh để tại `docs/ci/ci.yml`; cần người dùng tạo `.github/workflows/ci.yml` từ bản đó qua giao diện web GitHub hoặc cấp quyền workflow cho GitHub App. Kiểm thử tiếp tục chạy local (`npm run check`).

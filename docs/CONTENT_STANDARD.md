@@ -167,3 +167,14 @@ tiêu số bài mỗi lần trước khi biết độ phức tạp của bài.
 `verified-from-visual`: đáp án suy từ hình/ngữ cảnh đã kiểm chứng, cần answerEvidence và hình gốc. Hiển thị rõ không phải đáp án chính thức. `print-verified`: lời thoại đã chép đúng bản in, chưa phải audio-verified. Nghe–viết chưa có đáp án vẫn unverified và không chấm tự động.
 
 Hình trích có ý nghĩa sư phạm, có attribution, giữ nguyên ngữ cảnh. Không thay ảnh bài tập bằng ảnh trang trí.
+
+## Bổ sung 01/11/2026 — quy trình đối chiếu tài liệu lời đọc / đáp án rời (chuẩn cho các bài sau)
+
+Khi Workbook không in đáp án, đi theo thứ tự: (1) đề và lời thoại vẫn chỉ lấy từ bản in qua Baulchino; (2) tìm tài liệu lời đọc （听力材料） và tài liệu đáp án （习题答案） của **đúng ấn bản** — ưu tiên kênh nhà xuất bản; bản đăng lại (Scribd và tương tự) chỉ là đầu mối đối chiếu, và nhiều bản đăng lại của cùng một tài liệu chỉ tính là **một** nguồn; (3) đọc trực quan/lớp chữ định vị của tài liệu, không sửa ký tự lỗi bằng suy đoán; (4) đối chiếu ba chiều: đề bản in ↔ lời đọc ↔ dãy âm tiết trong track (ASR local chỉ làm bản nháp, không tải học liệu lên dịch vụ ngoài, không coi kết quả máy là xác minh cuối).
+
+Ghi **ba thuộc tính riêng** cho mỗi đáp án: xuất xứ tài liệu (chính thức / đăng lại), căn cứ đúng (bản in / lời đọc / nghe đối chiếu), và trạng thái nghe audio (chưa nghe / nháp ASR / đã nghe kiểm chứng). Phân loại trong app:
+- `verified` / `verified-from-print`: đáp án từ bản in hoặc kênh chính thức đã kiểm chứng.
+- `verified-editorial`: đáp án biên tập đã đối chiếu đủ ba chiều trên nhưng chưa chứng minh là bản đáp án chính thức — **được chấm tự động**, kèm `answerEvidence` và `scriptSyllables`, UI ghi rõ căn cứ.
+- `unverified`: không chấm tự động (tự đối chiếu / tự đánh giá), không tính vào mẫu số điểm.
+
+Quy tắc chấm nghe–viết: thanh mẫu chỉ chấm phụ âm đầu (nhập cả âm tiết thì âm tiết phải khớp hoàn toàn); vận mẫu bắt buộc kèm dấu thanh như lời đọc; thanh điệu chấp nhận Pinyin có dấu, số thanh sau âm tiết hoặc chỉ số thanh, thiếu dấu là sai. Không đồng nhất u/ü; riêng sau j/q/x, u viết thay ü được chấp nhận theo quy tắc chính tả của chính bài học. `v` được hiểu là ü khi nhập. Sửa đề/đáp án phải tăng `version` của bài tập và tăng contentVersion; tự đánh giá cũ không bao giờ được chuyển thành điểm chấm tự động. Mốc đoạn audio chỉ lưu khi đã đối chiếu vị trí câu hướng dẫn và dãy âm tiết; không chia đều thời lượng, không suy mốc từng ô khi ranh giới chưa chắc.

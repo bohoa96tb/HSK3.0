@@ -97,3 +97,32 @@ Người dùng cho phép bắt đầu Bài 2 ngày 2026-11-01. Đã đọc trự
 
 - Trang mở rộng Textbook 009 (câu líu lưỡi track 2-7, nội dung bonus) **không** đưa vào app — giữ cùng phạm vi như Bài 1.
 - Hình trích Bài 2 ghi tại `assets/lesson-02/ATTRIBUTION.md` (1 ảnh lớp học + 4 hình bài tập). Quyền nguồn vẫn `unknown`. Không commit PDF/MP3.
+
+## Kiểm tra 01/11/2026 — tài liệu lời đọc và đáp án Workbook Bài 1–2 (nguồn bổ sung đối chiếu)
+
+Người dùng cho phép tìm nguồn bổ sung để đối chiếu đáp án/transcript của đúng bộ New HSK Course (FLTRP). Ba thuộc tính được ghi riêng: **xuất xứ tài liệu**, **độ đúng của đáp án**, **đã nghe audio** — không gộp thành một cờ "verified".
+
+| Nguồn | URL | Xuất xứ | Đã đọc gì | Kết luận dùng được |
+| --- | --- | --- | --- | --- |
+| Lời đọc Workbook 1 （新HSK教程1 学练手册 听力材料） | scribd.com/document/1067878415 | Bản đăng lại của người dùng Scribd; **chưa xác nhận kênh chính thức của NXB** | Lớp chữ định vị của tài liệu: Bài 1 trang in 002 (âm tiết đọc bài 2–4), Bài 2 trang in 005–006 (bài 1–3) | Âm tiết đọc cho cả 6 bài nghe–viết; khớp bản in Workbook và khớp thứ tự âm tiết trong track (ASR nháp) |
+| Đáp án Workbook 1 （新HSK教程1 学练手册 习题答案） | scribd.com/document/1077395370 | Bản đăng lại; bản 1044886104 là **cùng một tài liệu**, không tính là nguồn độc lập thứ hai | Trang 1 của tài liệu: phần Bài 1–2 | Tài liệu **không in đáp án nghe–viết** (đáp án nằm ở tài liệu lời đọc); đáp án chọn hình Bài 1 = ①③②, Bài 2 = ③①④② — khớp ghép hình biên tập đã có trong app |
+| xinhsk — New HSK 1 Workbook downloads | xinhsk.com/download/new-hsk-1-wb | Trang tổng hợp của bên thứ ba | Trang liệt kê gói Audio + Listening Text PDF + Kunci Jawaban PDF | **Bị chặn ở đăng nhập** ("Masuk ke akunmu untuk membuka tautan download"); không vượt giới hạn truy cập, chỉ ghi nhận gói tài liệu tồn tại |
+| FLTRP — trang HSK chính thức | fltrp.com/en/hsk/ | **Nguồn nhà xuất bản** | Trang giới thiệu bộ New HSK Course | Xác nhận: bộ sách do CLEC/CTI ủy quyền, FLTRP xuất bản độc quyền; New HSK Course 1 ISBN 978-7-5213-6774-4 (khớp chỉ đạo đối chiếu). Trang không công bố đáp án/lời đọc tải tự do và không có tuyên bố cấp phép tái xuất bản → quyền vẫn `unknown` |
+
+### Đối chiếu đề – lời đọc – đáp án (6 bài nghe–viết, 78 ô)
+
+Đề lấy từ bản in Workbook (đọc trực quan); "âm tiết đọc" lấy từ tài liệu lời đọc; đáp án là phần đề yêu cầu. Thứ tự ô là thứ tự in theo hàng.
+
+| Bài | Trang in Workbook | Âm tiết đọc (theo lời đọc) | Đáp án chấm | Đoạn audio trong track |
+| --- | --- | --- | --- | --- |
+| Bài 1 · bài 2 viết thanh mẫu (15 ô) | 004 | dà gěi pán bù mǎi lěng fó hǎo tóng hěn bān dōu kè nǐ máng | d g p b m l f h t h b d k n m | WB 1-2: 106,9–187,6s |
+| Bài 1 · bài 3 viết vận mẫu (15 ô) | 004 | tā hěn māo dì fáng dōng hàn gǒu péng gē kāi fēi nù lěng bō | ā ěn āo ì áng ōng àn ǒu éng ē āi ēi ù ěng ō (kèm dấu thanh) | WB 1-2: 187,6–274,6s |
+| Bài 1 · bài 4 đánh dấu thanh điệu (12 ô) | 004 | lǎo néng gè bā fēn kàn bái lǐ gōng máng gǒu hòu | thanh 3 2 4 1 1 4 2 3 1 2 3 4 | WB 1-2: 274,6–338,7s |
+| Bài 2 · bài 1 viết thanh mẫu (9 ô) | 008 | qián jīn xiǎng jiào xiè qǐng jǐ qù xià | q j x j x q j q x | WB 2-2: 3,4–51,3s |
+| Bài 2 · bài 2 viết vận mẫu (15 ô) | 008 | jiàn xiě qù jiào qǐng xué jiǎo xīng jiě qián xiàn qǐ jiā xiū quán | iàn iě ù iào ǐng ué iǎo īng iě ián iàn ǐ iā iū uán (kèm dấu thanh) | WB 2-2: 51,3–135,9s |
+| Bài 2 · bài 3 đánh dấu thanh điệu (12 ô) | 008 | xué jiào qún jiǔ xīn qǐng xià jiā qù jī xiǎo jiě | thanh 2 4 2 3 1 3 4 1 4 1 3 3 | WB 2-2: 135,9–209,2s |
+
+- **Ô 10 bài 2 Bài 1**: app trước đây ghi đề "__ ēn" — sai. Bản in Workbook (đọc trực quan lại trang in 004) ghi **ěn**, tài liệu lời đọc ghi **hěn**, ASR nháp trên track cũng nhận 很 (hěn). Đã sửa đề thành "__ ěn", đáp án thanh mẫu h.
+- **ASR nháp** (faster-whisper base, chạy local trên file tải từ Baulchino, không tải học liệu lên dịch vụ ngoài): dãy âm tiết nhận được trên track WB 1-2 và WB 2-2 khớp thứ tự với lời đọc ở các ô nhận diện được (kể cả hěn ở ô 10); 6 track hội thoại Textbook Bài 1–2 cho nội dung khớp lời thoại bản in về câu và thứ tự. ASR chỉ là bản nháp đối chiếu, **không** thay thế nghe kiểm chứng bởi người; dấu thanh không kết luận từ ASR.
+- **Mốc đoạn** lấy từ vị trí câu hướng dẫn + dãy âm tiết trong track (ASR) đối chiếu lời đọc; chỉ bật nghe theo đoạn bài tập, không chia mốc từng ô.
+- Các dòng trạng thái cũ trong tài liệu này ghi bài nghe–viết là `unverified` (mục kiểm tra Bài 1 và Bài 2) được thay thế bởi mục này: đáp án nay là **biên tập đã đối chiếu** (`verified-editorial`), vẫn không phải đáp án chính thức của NXB.

@@ -167,3 +167,14 @@ Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở ind
   3. Kết quả lần kiểm tra gần nhất của nghe–viết lưu bền trong `progress.dictation[].last` (kèm đáp án người học đã nhập) để khôi phục phản hồi sau refresh; ô bị sửa sau chấm chuyển trạng thái "cần kiểm tra lại". Điểm lần đầu không đổi.
   4. Ba bài nghe–viết thành accordion có thanh thao tác sticky theo bài.
 - Hệ quả: validator cho phép segment/ref mang trạng thái `asr-draft` (trước đây chặn mọi segment chưa verified) nhưng bắt buộc khai trạng thái; CONTENT_STANDARD bổ sung chính sách căn đoạn bằng máy. Kiểm thử tăng lên 30 (thêm ux.test.mjs).
+
+## D12 — Hán–Việt mặc định tắt; hỗ trợ Mục 5 ghi riêng; mini player đo chiều cao thật (01/11/2026, lượt ux3)
+
+- Bối cảnh: bản ux2 còn thiếu Nghĩa ở Mục 2, Mục 5 chỉ có cỡ chữ (dữ liệu lựa chọn chưa có Pinyin/nghĩa), thẻ từ thừa khoảng trắng, mini player che nội dung cuối trang, tên mức chữ "Thường" chiếm hàng chính.
+- Quyết định:
+  1. Hán–Việt là trường dữ liệu riêng (`hanViet`/`hanVietStatus`/`hanVietNoteVi`) với nguồn từ điển riêng ghi trong SOURCE_AUDIT, mặc định **tắt**, lưu lựa chọn trên thiết bị. Chữ đa âm chọn theo ngữ cảnh từ, không ghép âm đầu tiên; chưa xác minh thì để `missing` rõ ràng. Bài 1–2 đạt 27/27 đã rà.
+  2. Thanh hỗ trợ theo phạm vi: Mục 2 đủ Pinyin/Nghĩa/Hán–Việt/A−/A+; Mục 5 đủ Pinyin/Nghĩa/A−/A+. "Nghĩa" chỉ điều khiển bản dịch, không ẩn hướng dẫn/phản hồi. Tên mức chữ chuyển vào nhãn trợ năng của nút cỡ chữ.
+  3. Hỗ trợ Mục 5 được ghi nhận: bật Pinyin/Nghĩa khi câu chưa chấm (hoặc đã bật sẵn khi câu hiện ra) thì `supportUsed` của câu đó = true và đi vào bản ghi attempt; tổng kết/tiến độ báo số câu có hỗ trợ tách riêng. Lịch sử cũ không có trường này được hiểu là không ghi nhận hỗ trợ — không diễn giải lại, không reset.
+  4. Nghe–viết dùng chung khóa hỗ trợ với Mục 5 nhưng bị chặn bởi quy tắc lộ đáp án: trước khi chấm không hiện gì thêm; Pinyin lời đọc chỉ hiện ở ô đã kiểm tra; xem trước vẫn qua "Xem lời đọc" và ghi `peeked` như D10.
+  5. Mini player: một hàng, tên rút gọn ellipsis, có thu gọn và đóng; JS đo chiều cao thật của các lớp cố định và công bố `--mini-h`/`--mini-bottom`/`--chrome-bottom` để suy ra đệm cuối trang và vị trí thanh điều hướng bài — thay các số bottom cố định chồng nhau trước đây.
+- Hệ quả: settings có thêm `showViPrep`, `showHanVietPrep`, `showPinyinExercises`, `showViExercises` (migration cộng mặc định an toàn: Nghĩa thẻ từ bật, còn lại tắt); validator bắt buộc Hán–Việt hợp lệ cho mọi mục từ và Pinyin/nghĩa cho mọi lựa chọn; kiểm thử tăng lên 37 (thêm ux3.test.mjs, gồm test hồi quy vòng QA 1: bật hỗ trợ từ thanh nghe–viết cũng phải ghi supportUsed).

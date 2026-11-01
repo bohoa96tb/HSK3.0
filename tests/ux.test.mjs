@@ -58,7 +58,8 @@ test('support bar toggles aids in place: no re-render, no route change, settings
   assert.equal(location.hash, '#/lesson/hsk1-l01/prep');
   $('[data-support="font-up"]').click(); await tick();
   assert.equal(state().settings.fontScale, 1.15);
-  assert.match($('.font-level').textContent, /Lớn/);
+  assert.match(document.querySelector('[data-support="font-up"]').getAttribute('aria-label'), /Lớn/); // level name lives in the accessible label, not the main row (ux3)
+  assert.equal($('.support-bar').textContent.includes('Thường'), false);
   $('[data-support="font-up"]').click(); $('[data-support="font-down"]').click(); await tick();
   assert.equal(state().settings.fontScale, 1.15);
   // Support bar exists on the other learning sections too

@@ -85,6 +85,21 @@ for (const c of contents) {
     if (!w.zh || !w.pinyin || !w.vi) err(`word ${w.id}: zh/pinyin/vi all required`);
     checkRefs(w.sourceRefs, `word ${w.id}`);
   }
+  // Han-Viet (ux3): a separate, sourced field on every prep word. A verified
+  // reading must actually be present; anything unverified must be explicitly
+  // marked missing — never guessed from per-character first readings.
+  for (const w of c.prepWords || []) {
+    if (w.hanVietStatus === "verified-editorial" && !sourceIds.has("src-hanviet-thivien")) err(`prep word ${w.id}: verified hanViet requires the src-hanviet-thivien dictionary source`);
+    if (!["verified-editorial", "missing"].includes(w.hanVietStatus || "")) err(`prep word ${w.id}: hanVietStatus must be verified-editorial|missing`);
+    if (w.hanVietStatus === "verified-editorial" && (!w.hanViet || w.hanViet !== w.hanViet.toUpperCase())) err(`prep word ${w.id}: verified hanViet must be a non-empty uppercase reading`);
+    if (w.hanVietStatus === "missing" && w.hanViet != null) err(`prep word ${w.id}: missing hanViet must be null`);
+  }
+  // Exercise options (ux3): every Chinese option needs pinyin + Vietnamese
+  // meaning so support toggles work uniformly on all options, not only the
+  // correct one.
+  for (const it of c.exerciseSet?.items || []) for (const o of it.options || []) {
+    if (o.zh && (!o.pinyin || !o.vi)) err(`exercise ${it.id} option ${o.id}: zh options require pinyin and vi`);
+  }
   for (const t of c.reader?.audioTracks || []) {
     if (!t.id || trackIds.has(t.id)) err(`track id missing/duplicate: ${t.id}`);
     trackIds.add(t.id);

@@ -173,16 +173,20 @@ export function emptyProgress() {
     schemaVersion: PROGRESS_SCHEMA_VERSION,
     settings: {
       showPinyinPrep: true,
+      showViPrep: true,
+      showHanVietPrep: false,
       showPinyinSentences: false,
       showViSentences: false,
+      showPinyinExercises: false,
+      showViExercises: false,
       fontScale: 1,
       playbackRate: 1,
     },
     lessons: {}, // lessonId -> {completedSections:[], lastSectionId, updatedAt}
-    attempts: [], // {id, exerciseId, lessonId, optionId, correct, firstAttempt, hintUsed, at}
+    attempts: [], // {id, exerciseId, lessonId, optionId, correct, firstAttempt, hintUsed, supportUsed, at} — supportUsed = Pinyin/Nghĩa của Mục 5 đã bật khi làm câu đó
     selfChecks: {}, // taskId -> {rating, at}
     reviewItems: {}, // itemId -> {sourceItemId, kind, intervalStep, dueAt, lastResult, attempts}
-    exerciseSession: null, // latest session mirror: {setId, index, answers:{}, checked:{}, hintUsed:{}}
+    exerciseSession: null, // latest session mirror: {setId, index, answers:{}, checked:{}, hintUsed:{}, supportUsed:{}}
     exerciseSessions: {}, // setId -> session, so each lesson keeps its own exercise state
     drafts: {}, // self-check taskId:index -> learner's own written answer (never auto-graded)
     dictation: {}, // taskId -> {first:{idx:bool}, tries:{idx:n}, peeked:bool, updatedAt} — first-attempt results are never overwritten
@@ -239,13 +243,14 @@ export function summarizeAttempts(attempts, exerciseIds) {
     if (!byExercise.has(a.exerciseId)) byExercise.set(a.exerciseId, []);
     byExercise.get(a.exerciseId).push(a);
   }
-  let firstTotal = 0, firstCorrect = 0, retried = 0, hintUsedCount = 0;
+  let firstTotal = 0, firstCorrect = 0, retried = 0, hintUsedCount = 0, supportUsedCount = 0;
   for (const [, list] of byExercise) {
     const sorted = [...list].sort((x, y) => new Date(x.at) - new Date(y.at));
     firstTotal += 1;
     if (sorted[0].correct) firstCorrect += 1;
     if (sorted.length > 1) retried += 1;
     if (sorted.some((a) => a.hintUsed)) hintUsedCount += 1;
+    if (sorted.some((a) => a.supportUsed)) supportUsedCount += 1;
   }
-  return { answered: byExercise.size, firstTotal, firstCorrect, retried, hintUsedCount };
+  return { answered: byExercise.size, firstTotal, firstCorrect, retried, hintUsedCount, supportUsedCount };
 }

@@ -139,6 +139,20 @@
                       "verified-from-visual",
                       "unverified"
                     ]
+                  },
+                  "options": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "pinyin": {
+                          "type": "string"
+                        },
+                        "vi": {
+                          "type": "string"
+                        }
+                      }
+                    }
                   }
                 },
                 "required": [
@@ -179,6 +193,33 @@
         },
         "lessonId": {
           "type": "string"
+        },
+        "prepWords": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "hanViet": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Âm Hán–Việt viết hoa; null khi hanVietStatus=missing"
+              },
+              "hanVietStatus": {
+                "enum": [
+                  "verified-editorial",
+                  "missing"
+                ]
+              },
+              "hanVietNoteVi": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "hanVietStatus"
+            ]
+          }
         }
       },
       "required": [

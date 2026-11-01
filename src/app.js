@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-ux2";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-ux2";
-import * as player from "./player.js?v=20261101-ux2";
+import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-ux3";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-ux3";
+import * as player from "./player.js?v=20261101-ux3";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -97,6 +97,7 @@ function render() {
   applyDisplaySettings();
   restoreScrollAnchor(savedAnchor);
   lastRenderedHash = location.hash;
+  syncChromeInsets();
 }
 function renderInner() {
   const transcript = document.querySelector(".transcript");
@@ -233,52 +234,92 @@ function sectionIntroHtml(lesson, content) {
 // ---------- Lesson sections ----------
 const FONT_LEVELS = [1, 1.15, 1.3];
 const FONT_LABELS = { 1: "Thường", 1.15: "Lớn", 1.3: "Rất lớn" };
-// Shared support bar: display aids are applied by flipping classes on
-// <main> and a CSS variable — never by re-rendering — so toggling Pinyin,
-// meaning or font size cannot move the scroll position, close the
-// transcript, drop focus, lose drafts or restart audio.
+// Shared support bar (ux3): compact chips, applied in place by flipping
+// classes on <main> and a CSS variable — never by re-rendering — so toggling
+// Pinyin, meaning, Han-Viet or font size cannot move the scroll position,
+// close the transcript, drop focus, lose drafts or restart audio.
+// Scope -> settings keys. "dictation" shares the exercise keys (both live in
+// Mục 5) but reveals nothing by itself: dictation answers stay gated behind
+// Kiểm tra / Xem lời đọc (see dictationHtml).
+const SUPPORT_KEYS = {
+  prep:      { pinyin: "showPinyinPrep", vi: "showViPrep" },
+  sentences: { pinyin: "showPinyinSentences", vi: "showViSentences" },
+  exercises: { pinyin: "showPinyinExercises", vi: "showViExercises" },
+  dictation: { pinyin: "showPinyinExercises", vi: "showViExercises" },
+};
 function supportBarHtml(scope) {
-  const s = settings();
-  const pinyinOn = scope === "prep" ? s.showPinyinPrep : s.showPinyinSentences;
+  const st = settings();
+  const keys = SUPPORT_KEYS[scope];
+  const fontName = FONT_LABELS[st.fontScale] || "Thường";
+  const btn = (kind, label, pressed, extra = "") => `<button type="button" class="support-btn" data-support="${kind}" data-scope="${scope}" aria-pressed="${pressed}" ${extra}>${label}</button>`;
   return `<div class="support-bar" role="group" aria-label="Hỗ trợ hiển thị">
-    ${scope !== "font" ? `<button type="button" class="support-btn" data-support="pinyin" data-scope="${scope}" aria-pressed="${pinyinOn}">Pinyin</button>` : ""}
-    ${scope === "sentences" ? `<button type="button" class="support-btn" data-support="vi" aria-pressed="${s.showViSentences}">Nghĩa Việt</button>` : ""}
-    <span class="support-font"><button type="button" class="support-btn font-btn" data-support="font-down" aria-label="Giảm cỡ chữ">A−</button><span class="font-level">${FONT_LABELS[s.fontScale] || "Thường"}</span><button type="button" class="support-btn font-btn" data-support="font-up" aria-label="Tăng cỡ chữ">A+</button></span>
+    ${keys ? btn("pinyin", "Pinyin", st[keys.pinyin]) : ""}
+    ${keys ? btn("vi", "Nghĩa", st[keys.vi]) : ""}
+    ${scope === "prep" ? btn("hanviet", "Hán–Việt", st.showHanVietPrep) : ""}
+    <span class="support-font"><button type="button" class="support-btn font-btn" data-support="font-down" data-scope="${scope}" aria-label="Giảm cỡ chữ (mức hiện tại: ${fontName})">A−</button><button type="button" class="support-btn font-btn" data-support="font-up" data-scope="${scope}" aria-label="Tăng cỡ chữ (mức hiện tại: ${fontName})">A+</button></span>
   </div>`;
 }
 function applyDisplaySettings() {
-  const s = settings();
-  main.classList.toggle("off-pinyin-prep", !s.showPinyinPrep);
-  main.classList.toggle("off-pinyin-sent", !s.showPinyinSentences);
-  main.classList.toggle("off-vi-sent", !s.showViSentences);
+  const st = settings();
+  main.classList.toggle("off-pinyin-prep", !st.showPinyinPrep);
+  main.classList.toggle("off-vi-prep", !st.showViPrep);
+  main.classList.toggle("off-hv-prep", !st.showHanVietPrep);
+  main.classList.toggle("off-pinyin-sent", !st.showPinyinSentences);
+  main.classList.toggle("off-vi-sent", !st.showViSentences);
+  main.classList.toggle("off-pinyin-ex", !st.showPinyinExercises);
+  main.classList.toggle("off-vi-ex", !st.showViExercises);
   applyFontScale();
   $$("[data-support]").forEach((b) => {
-    if (b.dataset.support === "pinyin") b.setAttribute("aria-pressed", String(b.dataset.scope === "prep" ? s.showPinyinPrep : s.showPinyinSentences));
-    if (b.dataset.support === "vi") b.setAttribute("aria-pressed", String(s.showViSentences));
+    const keys = SUPPORT_KEYS[b.dataset.scope];
+    if (b.dataset.support === "pinyin" && keys) b.setAttribute("aria-pressed", String(!!st[keys.pinyin]));
+    if (b.dataset.support === "vi" && keys) b.setAttribute("aria-pressed", String(!!st[keys.vi]));
+    if (b.dataset.support === "hanviet") b.setAttribute("aria-pressed", String(!!st.showHanVietPrep));
+    if (b.dataset.support === "font-down" || b.dataset.support === "font-up") {
+      const name = FONT_LABELS[st.fontScale] || "Thường";
+      b.setAttribute("aria-label", `${b.dataset.support === "font-up" ? "Tăng" : "Giảm"} cỡ chữ (mức hiện tại: ${name})`);
+    }
   });
-  $$(".font-level").forEach((el) => { el.textContent = FONT_LABELS[s.fontScale] || "Thường"; });
-  $$("[data-setting]").forEach((el) => { if (el.type === "checkbox") el.checked = !!s[el.dataset.setting]; });
-  $$("[data-setting-select]").forEach((el) => { el.value = String(s[el.dataset.settingSelect]); });
+  $$(".font-level").forEach((el) => { el.textContent = FONT_LABELS[st.fontScale] || "Thường"; });
+  $$("[data-setting]").forEach((el) => { if (el.type === "checkbox") el.checked = !!st[el.dataset.setting]; });
+  $$("[data-setting-select]").forEach((el) => { el.value = String(st[el.dataset.settingSelect]); });
+}
+// Turning Pinyin/Nghĩa ON inside Mục 5 choice exercises is recorded as
+// support used for the question currently on screen (first-attempt history
+// is never rewritten; the flag travels with the next attempt record).
+function recordExerciseSupport() {
+  const { seg } = parseRoute();
+  if (seg[0] !== "lesson" || seg[2] !== "exercises") return;
+  const content = contentFor(seg[1]); if (!content) return;
+  const ses = ensureSession(content);
+  const item = content.exerciseSet.items[ses.index];
+  if (!item || ses.checked[item.id]) return;
+  updateSession(content, (ss) => { (ss.supportUsed ||= {})[item.id] = true; });
 }
 function bindSupportBar() {
   $$("[data-support]").forEach((b) => { b.onclick = () => {
     const kind = b.dataset.support;
+    const keys = SUPPORT_KEYS[b.dataset.scope];
+    let turnedOn = false;
     update((p) => {
-      if (kind === "pinyin") { const key = b.dataset.scope === "prep" ? "showPinyinPrep" : "showPinyinSentences"; p.settings[key] = !p.settings[key]; }
-      if (kind === "vi") p.settings.showViSentences = !p.settings.showViSentences;
+      if (kind === "pinyin" && keys) { p.settings[keys.pinyin] = !p.settings[keys.pinyin]; turnedOn = !!p.settings[keys.pinyin]; }
+      if (kind === "vi" && keys) { p.settings[keys.vi] = !p.settings[keys.vi]; turnedOn = !!p.settings[keys.vi]; }
+      if (kind === "hanviet") { p.settings.showHanVietPrep = !p.settings.showHanVietPrep; turnedOn = !!p.settings.showHanVietPrep; }
       if (kind === "font-down" || kind === "font-up") { let i = FONT_LEVELS.indexOf(p.settings.fontScale || 1); if (i < 0) i = 0; i = kind === "font-up" ? Math.min(FONT_LEVELS.length - 1, i + 1) : Math.max(0, i - 1); p.settings.fontScale = FONT_LEVELS[i]; }
     });
     applyDisplaySettings();
+    syncChromeInsets();
+    if (turnedOn && (kind === "pinyin" || kind === "vi") && (b.dataset.scope === "exercises" || b.dataset.scope === "dictation")) recordExerciseSupport();
   }; });
 }
-function applyFontScale() { document.documentElement.style.setProperty("--font-scale", String(settings().fontScale || 1)); }
+function applyFontScale() { const v = String(settings().fontScale || 1); document.documentElement.style.setProperty("--font-scale", v); document.documentElement.dataset.fontScale = v; }
 
 // One speaker component for every Chinese unit. `audio` is a draft-aligned
 // segment ref ({trackId,start,end,status}) or null when the unit has no
 // segment of its own yet.
+const SPEAK_ICON = `<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 9v6h4l5 4.5v-15L7 9H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.4 7.4 0 0 1 0 10.4"/></svg>`;
 function speakBtnHtml(audio, label) {
-  if (!audio) return `<span class="no-audio">Chưa có audio riêng</span>`;
-  return `<button type="button" class="speak-btn" data-speak data-track="${esc(audio.trackId)}" data-start="${audio.start}" data-end="${audio.end}" aria-label="Nghe: ${esc(label)}" title="Nghe mục này">🔊</button>`;
+  if (!audio) return `<span class="no-audio" title="Chưa có audio riêng cho mục này — từ này vẫn có trong track ở bước Nghe & đọc">Chưa có audio</span>`;
+  return `<button type="button" class="speak-btn" data-speak data-track="${esc(audio.trackId)}" data-start="${audio.start}" data-end="${audio.end}" aria-label="Nghe: ${esc(label)}" title="Nghe mục này">${SPEAK_ICON}</button>`;
 }
 function sentenceAudio(content, sen) {
   const group = content.reader.passages.find((g) => g.id === sen.passageId);
@@ -288,10 +329,9 @@ function sentenceAudio(content, sen) {
 }
 
 function sectionPrepHtml(content) {
- const s=settings();
  const firstRefs=[]; const seenPages=new Set();
  for(const w of content.prepWords){const r=w.sourceRefs[0]; if(r && !seenPages.has(r.pdfPage)){seenPages.add(r.pdfPage); firstRefs.push(r);} }
- return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-head"><div class="pinyin tog-pinyin-prep">${esc(w.pinyin)}</div>${speakBtnHtml(w.audio, w.zh)}</div><div class="zh" lang="zh-CN">${esc(w.zh)}</div><div class="vi">${esc(w.vi)}</div></article>`).join('')}</div>${(() => { const missing = content.prepWords.filter((w) => !w.audio); return `<p class="study-tip">Loa trên thẻ phát đoạn đọc từ trong track từ mới của sách (căn đoạn bằng máy, chưa nghe kiểm chứng).${missing.length ? ` Chưa có loa riêng: <span lang="zh-CN">${missing.map((w) => esc(w.zh)).join("、")}</span> — nghe các từ này trong hội thoại ở bước Nghe & đọc.` : ""}</p>`; })()}${refsHtml(firstRefs)}</section>`;
+ return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-top"><span class="zh" lang="zh-CN">${esc(w.zh)}</span>${speakBtnHtml(w.audio, w.zh)}</div><div class="pinyin tog-pinyin-prep" lang="zh-Latn">${esc(w.pinyin)}</div>${w.hanViet ? `<div class="hanviet tog-hv-prep">HV: ${esc(w.hanViet)}</div>` : `<div class="hanviet tog-hv-prep hanviet-missing">HV: chưa xác minh</div>`}<div class="vi tog-vi-prep">${esc(w.vi)}</div>${w.hanVietNoteVi ? `<p class="hv-note tog-hv-prep">${esc(w.hanVietNoteVi)}</p>` : ""}</article>`).join('')}</div>${(() => { const missing = content.prepWords.filter((w) => !w.audio); return `<p class="study-tip">Loa trên thẻ phát đoạn đọc từ trong track từ mới của sách (căn đoạn bằng máy, chưa nghe kiểm chứng). Âm Hán–Việt chỉ là cách đọc Hán–Việt của chữ, không thay cho nghĩa hiện đại hay phát âm tiếng Trung.${missing.length ? ` Chưa có loa riêng: <span lang="zh-CN">${missing.map((w) => esc(w.zh)).join("、")}</span> — nghe các từ này trong hội thoại ở bước Nghe & đọc.` : ""}</p>`; })()}${refsHtml(firstRefs)}</section>`;
 }
 
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
@@ -389,7 +429,7 @@ function ensureSession(content) {
   if (!p.exerciseSessions?.[setId]) {
     update((pp) => {
       pp.exerciseSessions ||= {};
-      pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {} };
+      pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {}, supportUsed: {} };
       pp.exerciseSession = pp.exerciseSessions[setId];
     });
   }
@@ -399,15 +439,15 @@ function updateSession(content, mut) {
   const setId = content.exerciseSet.id;
   update((pp) => {
     pp.exerciseSessions ||= {};
-    if (!pp.exerciseSessions[setId]) pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {} };
+    if (!pp.exerciseSessions[setId]) pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {}, supportUsed: {} };
     mut(pp.exerciseSessions[setId]);
     pp.exerciseSession = pp.exerciseSessions[setId];
   });
 }
-function recordAttempt(item, optionId, correct, hintUsed, lessonId) {
+function recordAttempt(item, optionId, correct, hintUsed, lessonId, supportUsed) {
   update((p) => {
     const prior = p.attempts.filter((a) => a.exerciseId === item.id);
-    p.attempts.push({ id: `att-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, exerciseId: item.id, lessonId, optionId, correct, firstAttempt: prior.length === 0, hintUsed: !!hintUsed, at: new Date().toISOString() });
+    p.attempts.push({ id: `att-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, exerciseId: item.id, lessonId, optionId, correct, firstAttempt: prior.length === 0, hintUsed: !!hintUsed, supportUsed: !!supportUsed, at: new Date().toISOString() });
     if (!correct) {
       const key = `ex-${item.id}`;
       const existing = p.reviewItems[key];
@@ -426,7 +466,7 @@ function sectionExercisesHtml(content) {
   const sum = summarizeAttempts(attempts, set.items.map((i) => i.id));
   if (!item) {
     return `<section class="card"><h2>Đã làm hết câu hỏi chấm tự động</h2>
-    <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu.</p>
+    <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu · Đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0} câu.</p>
     <div class="row-actions"><button class="btn" type="button" id="back-last">← Xem lại câu cuối</button>
     <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button></div>
     ${dictationHtml(content)}</section>`;
@@ -434,15 +474,16 @@ function sectionExercisesHtml(content) {
   const checked = ses.checked[item.id];
   const chosen = ses.answers[item.id];
   const result = checked ? gradeChoice(item, chosen) : null;
-  return `<section class="card" id="exercise-card" data-anchor><h2>Luyện tập</h2>${supportBarHtml('font')}
-  <p class="muted">${esc(set.noteVi)}</p>
+  const supportOn = !!(ses.supportUsed?.[item.id]);
+  return `<section class="card" id="exercise-card" data-anchor><h2>Luyện tập</h2>${supportBarHtml('exercises')}
+  <p class="muted">${esc(set.noteVi)}</p>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
   <h3>${esc(item.promptVi)}</h3>${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
   <form id="ex-form">
   ${item.options.map((o) => `<label class="option ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
-    <span>${o.zh ? `<span class="zh-inline">${esc(o.zh)}</span> ${checked && o.pinyin ? `<span class="pinyin">${esc(o.pinyin)}</span>` : ""} ${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
+    <span class="option-body">${o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
     <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
     ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>
@@ -464,7 +505,7 @@ function fmtClock(sec) { return `${Math.floor(sec / 60)}:${String(Math.floor(sec
 function dictationHtml(content) {
  const p = loadProgress();
  const focusTask = parseRoute().query.task;
- return `${supportBarHtml('font')}<p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
+ return `${supportBarHtml('dictation')}<p class="support-note">Pinyin/Nghĩa ở phần nghe–viết: phần âm và dấu thanh đang để trống là đáp án, nên không hiện trước khi chấm. Bật Pinyin sẽ hiện Pinyin của lời đọc ở các ô đã kiểm tra; muốn xem trước thì dùng “Xem lời đọc” (được ghi nhận đã xem). Các ô luyện âm/thanh lẻ không có nghĩa câu riêng để hiện.</p><p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
  ${content.selfCheckTasks.map((t, ti) => {
   const mine = p.selfChecks[t.id];
   const graded = t.answerStatus === "verified-editorial";
@@ -486,7 +527,7 @@ function dictationHtml(content) {
   </div>
   ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${lastVals.length ? ` · lần kiểm tra gần nhất: ${lastVals.filter((r) => r.correct).length}/${lastVals.length} ô đúng` : ""}</p>` : ""}
   ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
-  <div class="answer-grid">${t.prompts.map((v, i) => { const draft = p.drafts?.[t.id + ":" + i] || ""; const r = last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}</label>`; }).join("")}</div>
+  <div class="answer-grid">${t.prompts.map((v, i) => { const draft = p.drafts?.[t.id + ":" + i] || ""; const r = last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
   ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
   <p class="small muted">${graded ? "Chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB. Tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
   <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>
@@ -495,6 +536,8 @@ function dictationHtml(content) {
 
 function bindExercises(content) {
   bindSupportBar();
+  { const st0 = settings(); const ses0 = ensureSession(content); const it0 = content.exerciseSet.items[ses0.index];
+    if (it0 && !ses0.checked[it0.id] && (st0.showPinyinExercises || st0.showViExercises)) updateSession(content, (ss) => { (ss.supportUsed ||= {})[it0.id] = true; }); }
   $$("[data-dict-task]").forEach((d) => d.addEventListener("toggle", () => { if (d.open) dictOpenTasks.add(d.dataset.dictTask); else dictOpenTasks.delete(d.dataset.dictTask); }));
   $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
   const set = content.exerciseSet;
@@ -509,9 +552,11 @@ function bindExercises(content) {
       if (!chosen) return;
       const res = gradeChoice(item, String(chosen));
       if (!res.graded) return;
-      const hintUsed = !!ensureSession(content).hintUsed[item.id];
+      const curSes = ensureSession(content);
+      const hintUsed = !!curSes.hintUsed[item.id];
+      const supportUsed = !!(curSes.supportUsed?.[item.id]);
       updateSession(content,(ss)=>{ ss.answers[item.id] = String(chosen); ss.checked[item.id] = true; });
-      recordAttempt(item, String(chosen), res.correct, hintUsed, content.lessonId);
+      recordAttempt(item, String(chosen), res.correct, hintUsed, content.lessonId, supportUsed);
       render();
     };
     const hint = $("#hint-btn");
@@ -523,7 +568,7 @@ function bindExercises(content) {
   const backLast = $("#back-last");
   if (backLast) backLast.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length - 1; }); render(); };
   const restart = $("#restart-set");
-  if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; }); render(); };
+  if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; ss.supportUsed = {}; }); render(); };
   $$("[data-play-task]").forEach((b) => b.onclick = () => {
     const track = content.reader.audioTracks.find((t) => t.id === b.dataset.playTask);
     if (!track) return;
@@ -608,7 +653,7 @@ function sectionSummaryHtml(lesson, content) {
   const st = lessonState(lesson.id);
   return `<section class="card"><h2>Tổng kết bài</h2>
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
-  <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}. Điểm làm lại và gợi ý được ghi riêng, không gộp vào điểm lần đầu.</p>
+  <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0}. Điểm làm lại, gợi ý và hỗ trợ được ghi riêng, không gộp vào điểm lần đầu và không diễn giải lại lịch sử cũ.</p>
   ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = set.items.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
   <h3>Học lại từng mục</h3>
   ${content.intro.sections.map((x) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${x.id}">${esc(x.titleVi)}</a><span class="tag">${st.completedSections.includes(x.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
@@ -700,7 +745,7 @@ function viewProgress() {
     const selfDone = c.selfCheckTasks.filter((t) => p.selfChecks[t.id]).length;
     return `<section class="card"><h2>${esc(lesson.level)} · Bài ${lesson.lessonNumber}: ${esc(lesson.titleZh)}</h2>
   <p>Mục đã hoàn thành: <strong>${st.completedSections.length}/${c.intro.sections.length}</strong> — đây là mức “đã học/đã xem”.</p>
-  <p>Bài tập chấm tự động: đã trả lời ${sum.answered}/${set.items.length} câu; điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; làm lại ${sum.retried} câu; dùng gợi ý ${sum.hintUsedCount} câu.</p>
+  <p>Bài tập chấm tự động: đã trả lời ${sum.answered}/${set.items.length} câu; điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; làm lại ${sum.retried} câu; dùng gợi ý ${sum.hintUsedCount} câu; dùng Pinyin/Nghĩa hỗ trợ ${sum.supportUsedCount || 0} câu.</p>
   <p>Bài nghe–viết: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá mức nhớ; điểm chấm tự động (đáp án đã đối chiếu) xem ở mục Tổng kết của bài và ngay trong phần Luyện tập.</p>
   <p class="row-actions"><a class="btn" href="#/lesson/${lesson.id}">Mở Bài ${lesson.lessonNumber}</a></p></section>`; }).join("")}
   <section class="card"><h2>Tổng quan</h2>
@@ -715,13 +760,17 @@ function viewSettings() {
   main.innerHTML = `${header("Cài đặt", "Cài đặt được lưu trên thiết bị này, không cần tài khoản")}
   <section class="card"><h2>Hiển thị</h2>
   <label class="switch-row"><input type="checkbox" data-setting="showPinyinPrep" ${s.showPinyinPrep ? "checked" : ""}> Hiện Pinyin ở phần Chuẩn bị (thẻ từ)</label>
+  <label class="switch-row"><input type="checkbox" data-setting="showViPrep" ${s.showViPrep ? "checked" : ""}> Hiện nghĩa ở phần Chuẩn bị (thẻ từ)</label>
+  <label class="switch-row"><input type="checkbox" data-setting="showHanVietPrep" ${s.showHanVietPrep ? "checked" : ""}> Hiện âm Hán–Việt ở thẻ từ (mặc định tắt)</label>
   <label class="switch-row"><input type="checkbox" data-setting="showPinyinSentences" ${s.showPinyinSentences ? "checked" : ""}> Hiện Pinyin ở câu trong bài đọc</label>
   <label class="switch-row"><input type="checkbox" data-setting="showViSentences" ${s.showViSentences ? "checked" : ""}> Hiện nghĩa Việt ở câu trong bài đọc</label>
+  <label class="switch-row"><input type="checkbox" data-setting="showPinyinExercises" ${s.showPinyinExercises ? "checked" : ""}> Hiện Pinyin ở Luyện tập (được ghi là có hỗ trợ khi đang làm bài)</label>
+  <label class="switch-row"><input type="checkbox" data-setting="showViExercises" ${s.showViExercises ? "checked" : ""}> Hiện nghĩa ở Luyện tập (được ghi là có hỗ trợ khi đang làm bài)</label>
   <label class="switch-row">Cỡ chữ <select data-setting-select="fontScale">
     ${[1, 1.15, 1.3].map((v) => `<option value="${v}" ${String(s.fontScale) === String(v) ? "selected" : ""}>${v === 1 ? "Thường" : v === 1.15 ? "Lớn" : "Rất lớn"}</option>`).join("")}</select></label>
   <label class="switch-row">Tốc độ phát mặc định <select id="rate-setting">
     ${[0.75, 1, 1.25].map((v) => `<option value="${v}" ${String(s.playbackRate) === String(v) ? "selected" : ""}>${v}×</option>`).join("")}</select></label>
-  <p class="muted small">Hai công tắc Pinyin/nghĩa hoạt động độc lập và được nhớ cho lần học sau.</p></section>
+  <p class="muted small">Các công tắc Pinyin/nghĩa/Hán–Việt hoạt động độc lập với nhau và được nhớ cho lần học sau. Nghĩa chỉ ẩn bản dịch của từ/câu, không ẩn hướng dẫn hay phản hồi đúng/sai.</p></section>
   <section class="card"><h2>Sao lưu tiến độ</h2>
   <p class="muted">Xuất bản sao lưu JSON (có schemaVersion) để chuyển máy hoặc khôi phục. Khi nhập, app kiểm tra dữ liệu, cho xem tóm tắt trước, và tự giữ một bản sao của tiến độ hiện tại trước khi ghi đè.</p>
   <p class="row-actions"><button class="btn" id="export-btn">Xuất bản sao lưu</button>
@@ -798,23 +847,60 @@ function bindSection(sectionId, content) {
   }
 }
 let miniKey = '';
+let miniCollapsed = false;
+let miniDismissedTrack = null;
+// Measure the fixed layers (mini player, bottom nav, sticky lesson nav)
+// and publish their real heights as CSS variables, so page padding and the
+// lesson nav offset always match the actual chrome — on expand/collapse,
+// rotation and font-size changes alike. No fixed bottom guesses.
+function syncChromeInsets() {
+  const run = () => {
+    try {
+      const root = document.documentElement;
+      const miniEl = document.getElementById("miniplayer");
+      const miniH = miniEl && !miniEl.classList.contains("hidden") ? miniEl.offsetHeight : 0;
+      const bottomNav = document.getElementById("bottomnav");
+      const view = document.defaultView;
+      const navVisible = bottomNav && view && view.getComputedStyle(bottomNav).display !== "none" && !document.body.classList.contains("studying");
+      const navH = navVisible ? bottomNav.offsetHeight : 0;
+      const lessonNav = document.querySelector(".lesson-nav");
+      const lessonNavH = document.body.classList.contains("studying") && lessonNav ? lessonNav.offsetHeight : 0;
+      root.style.setProperty("--mini-h", `${miniH}px`);
+      root.style.setProperty("--mini-bottom", `${Math.max(navH, lessonNavH)}px`);
+      root.style.setProperty("--chrome-bottom", `${miniH + Math.max(navH, lessonNavH)}px`);
+    } catch { /* layout measurement is best-effort; CSS defaults still apply */ }
+  };
+  if (typeof requestAnimationFrame === "function") requestAnimationFrame(run); else run();
+}
 function renderMini() {
   const st = player.getState();
-  const key=`${st.trackId}|${st.playing}|${st.error}|${Math.floor(st.duration)}`;
-  if (key===miniKey && $("#mini-time")) {$("#mini-time").textContent=`${player.fmtTime(st.currentTime)} / ${player.fmtTime(st.duration)}`;return;}
+  // A dismissal lasts until the track changes or the learner deliberately
+  // starts playback again (close pauses first, so playing=true afterwards
+  // can only come from a fresh, explicit play action).
+  if (miniDismissedTrack === st.trackId && st.playing) miniDismissedTrack = null;
+  if (!st.trackId || miniDismissedTrack === st.trackId) {
+    if (!st.trackId) { mini.innerHTML = ""; mini.classList.add("hidden"); miniKey = ""; syncChromeInsets(); return; }
+    mini.innerHTML = ""; mini.classList.add("hidden"); syncChromeInsets(); return;
+  }
+  const key=`${st.trackId}|${st.playing}|${st.error}|${Math.floor(st.duration)}|${miniCollapsed}`;
+  if (key===miniKey && $("#mini-time")) { const t=$("#mini-time"); if (t) t.textContent=`${player.fmtTime(st.currentTime)} / ${player.fmtTime(st.duration)}`; return; }
   miniKey=key;
-  if (!st.trackId) { mini.innerHTML = ""; mini.classList.add("hidden"); return; }
   mini.classList.remove("hidden");
-  mini.innerHTML = `<span class="mini-label">🔊 ${esc(st.label || "Audio")}</span>
-    <span class="muted small" id="mini-time">${player.fmtTime(st.currentTime)} / ${player.fmtTime(st.duration)}</span>
+  mini.classList.toggle("mini-collapsed", miniCollapsed);
+  const label = st.label || "Audio";
+  mini.innerHTML = `<button class="btn small" id="mini-toggle" aria-label="${st.playing ? "Tạm dừng" : "Phát"}">${st.playing ? "❚❚" : "▶"}</button>
+    <span class="mini-label" title="${esc(label)}">${esc(label)}</span>
+    ${miniCollapsed ? "" : `<span class="muted small" id="mini-time">${player.fmtTime(st.currentTime)} / ${player.fmtTime(st.duration)}</span>`}
     ${st.error ? `<span class="mini-error">${esc(st.error)}</span>` : ""}
-    <button class="btn small" id="mini-toggle">${st.playing ? "Tạm dừng" : "Phát"}</button>
-    <button class="btn small ghost" id="mini-stop">Dừng</button>${st.error?`<a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở nguồn ↗</a>`:""}`;
+    <button class="btn small ghost" id="mini-collapse" aria-expanded="${!miniCollapsed}" aria-label="${miniCollapsed ? "Mở rộng trình phát" : "Thu gọn trình phát"}">${miniCollapsed ? "▴" : "▾"}</button>
+    <button class="btn small ghost" id="mini-close" aria-label="Đóng trình phát">✕</button>${st.error?`<a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở nguồn ↗</a>`:""}`;
   $("#mini-toggle").onclick = () => {
     const track = allTracks().find((t) => t.id === st.trackId);
     if (track) player.playTrack(track, { rate: settings().playbackRate });
   };
-  $("#mini-stop").onclick = () => { player.pause(); player.seek(0); };
+  $("#mini-collapse").onclick = () => { miniCollapsed = !miniCollapsed; miniKey = ""; renderMini(); syncChromeInsets(); };
+  $("#mini-close").onclick = () => { miniDismissedTrack = st.trackId; player.pause(); miniKey = ""; renderMini(); syncChromeInsets(); };
+  syncChromeInsets();
 }
 player.subscribe(renderMini);
 
@@ -862,4 +948,5 @@ async function boot() {
   render();
 }
 window.addEventListener("hashchange", render);
+window.addEventListener("resize", syncChromeInsets);
 boot();

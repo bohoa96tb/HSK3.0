@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-dictation-1",
+  "contentVersion": "20261101-ux1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -617,7 +617,13 @@
             "printedPage": 1,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-2",
+          "start": 0.0,
+          "end": 0.88,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-2",
@@ -631,7 +637,8 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": null
       },
       {
         "id": "tbw-3",
@@ -645,7 +652,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 3.55,
+          "end": 4.38,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-4",
@@ -659,7 +672,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 4.55,
+          "end": 6.28,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-5",
@@ -673,7 +692,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 7.85,
+          "end": 8.58,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-6",
@@ -687,7 +712,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 10.25,
+          "end": 11.48,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-7",
@@ -701,7 +732,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 13.05,
+          "end": 13.98,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-8",
@@ -715,7 +752,13 @@
             "printedPage": 2,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-4",
+          "start": 16.05,
+          "end": 16.98,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-9",
@@ -729,7 +772,13 @@
             "printedPage": 3,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-6",
+          "start": 0.0,
+          "end": 0.88,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-10",
@@ -743,7 +792,13 @@
             "printedPage": 3,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-6",
+          "start": 2.55,
+          "end": 5.88,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-11",
@@ -757,7 +812,13 @@
             "printedPage": 3,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-6",
+          "start": 5.75,
+          "end": 8.48,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "tbw-12",
@@ -771,7 +832,13 @@
             "printedPage": 3,
             "section": "生词 · Từ mới"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-tb-l01-6",
+          "start": 8.95,
+          "end": 9.98,
+          "status": "asr-draft"
+        }
       }
     ],
     "knowledgePoints": [
@@ -786,7 +853,13 @@
           {
             "zh": "老师，您好！",
             "pinyin": "Lǎoshī, nín hǎo!",
-            "noteVi": "Chúng em chào cô ạ!"
+            "noteVi": "Chúng em chào cô ạ!",
+            "audio": {
+              "trackId": "trk-tb-l01-3",
+              "start": 1.95,
+              "end": 3.86,
+              "status": "asr-draft"
+            }
           }
         ],
         "positionVi": "Quan sát phần được dùng trong các câu dưới đây.",
@@ -814,12 +887,24 @@
           {
             "zh": "你们好！",
             "pinyin": "Nǐmen hǎo!",
-            "noteVi": "Chào các bạn!"
+            "noteVi": "Chào các bạn!",
+            "audio": {
+              "trackId": "trk-tb-l01-3",
+              "start": 4.95,
+              "end": 6.34,
+              "status": "asr-draft"
+            }
           },
           {
             "zh": "同学们，再见！",
             "pinyin": "Tóngxuémen, zàijiàn!",
-            "noteVi": "Tạm biệt các em!"
+            "noteVi": "Tạm biệt các em!",
+            "audio": {
+              "trackId": "trk-tb-l01-5",
+              "start": 3.69,
+              "end": 5.76,
+              "status": "asr-draft"
+            }
           }
         ],
         "positionVi": "Quan sát phần được dùng trong các câu dưới đây.",
@@ -848,12 +933,24 @@
           {
             "zh": "谢谢！",
             "pinyin": "Xièxie!",
-            "noteVi": "Cảm ơn!"
+            "noteVi": "Cảm ơn!",
+            "audio": {
+              "trackId": "trk-tb-l01-5",
+              "start": 0.0,
+              "end": 0.86,
+              "status": "asr-draft"
+            }
           },
           {
             "zh": "不客气！",
             "pinyin": "Bú kèqi!",
-            "noteVi": "Không có gì!"
+            "noteVi": "Không có gì!",
+            "audio": {
+              "trackId": "trk-tb-l01-5",
+              "start": 1.55,
+              "end": 3.08,
+              "status": "asr-draft"
+            }
           }
         ],
         "positionVi": "Quan sát phần được dùng trong các câu dưới đây.",
@@ -883,32 +980,38 @@
           {
             "zh": "八",
             "pinyin": "bā",
-            "noteVi": "b (thanh mẫu) + a (vận mẫu), thanh 1"
+            "noteVi": "b (thanh mẫu) + a (vận mẫu), thanh 1",
+            "audio": null
           },
           {
             "zh": "拔",
             "pinyin": "bá",
-            "noteVi": "cùng âm tiết ba, thanh 2"
+            "noteVi": "cùng âm tiết ba, thanh 2",
+            "audio": null
           },
           {
             "zh": "把",
             "pinyin": "bǎ",
-            "noteVi": "cùng âm tiết ba, thanh 3"
+            "noteVi": "cùng âm tiết ba, thanh 3",
+            "audio": null
           },
           {
             "zh": "爸",
             "pinyin": "bà",
-            "noteVi": "cùng âm tiết ba, thanh 4"
+            "noteVi": "cùng âm tiết ba, thanh 4",
+            "audio": null
           },
           {
             "zh": "阿",
             "pinyin": "ā",
-            "noteVi": "không có thanh mẫu, thanh 1"
+            "noteVi": "không có thanh mẫu, thanh 1",
+            "audio": null
           },
           {
             "zh": "啊",
             "pinyin": "á",
-            "noteVi": "không có thanh mẫu, thanh 2"
+            "noteVi": "không có thanh mẫu, thanh 2",
+            "audio": null
           }
         ],
         "positionVi": "Bảng ví dụ in ở trang 001 xếp bốn thanh của cùng một âm tiết ba cạnh nhau để so sánh.",
@@ -934,27 +1037,32 @@
           {
             "zh": "八/拔/把/爸",
             "pinyin": "bā bá bǎ bà",
-            "noteVi": "bốn thanh của âm tiết ba, trang in 001"
+            "noteVi": "bốn thanh của âm tiết ba, trang in 001",
+            "audio": null
           },
           {
             "zh": "—",
             "pinyin": "mō mó mǒ mò",
-            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+            "audio": null
           },
           {
             "zh": "—",
             "pinyin": "fū fú fǔ fù",
-            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+            "audio": null
           },
           {
             "zh": "—",
             "pinyin": "dī dí dǐ dì",
-            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+            "audio": null
           },
           {
             "zh": "—",
             "pinyin": "tāo táo tǎo tào",
-            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004"
+            "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+            "audio": null
           }
         ],
         "positionVi": "Xem đường thanh ở trang in 003: thanh 1 ngang cao, thanh 2 đi lên, thanh 3 võng xuống rồi lên, thanh 4 đi xuống.",
@@ -986,22 +1094,46 @@
           {
             "zh": "茶",
             "pinyin": "chá",
-            "noteVi": "thẻ từ trang 001"
+            "noteVi": "thẻ từ trang 001",
+            "audio": {
+              "trackId": "trk-wb-l01-1",
+              "start": 57.61,
+              "end": 60.3,
+              "status": "asr-draft"
+            }
           },
           {
             "zh": "狗",
             "pinyin": "gǒu",
-            "noteVi": "thẻ từ trang 001"
+            "noteVi": "thẻ từ trang 001",
+            "audio": {
+              "trackId": "trk-wb-l01-1",
+              "start": 61.71,
+              "end": 63.24,
+              "status": "asr-draft"
+            }
           },
           {
             "zh": "猫",
             "pinyin": "māo",
-            "noteVi": "thẻ từ trang 001"
+            "noteVi": "thẻ từ trang 001",
+            "audio": {
+              "trackId": "trk-wb-l01-1",
+              "start": 64.67,
+              "end": 66.2,
+              "status": "asr-draft"
+            }
           },
           {
             "zh": "菜",
             "pinyin": "cài",
-            "noteVi": "thẻ từ trang 001"
+            "noteVi": "thẻ từ trang 001",
+            "audio": {
+              "trackId": "trk-wb-l01-1",
+              "start": 67.61,
+              "end": 68.64,
+              "status": "asr-draft"
+            }
           }
         ],
         "positionVi": "Bảng thanh mẫu – vận mẫu in ở trang in 002; các thẻ từ nghe–đọc lại ở trang in 001–002.",
@@ -1392,7 +1524,20 @@
           "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-1.mp3",
           "durationSec": 6.367,
           "bookRef": "Textbook · track 1-1",
-          "segments": [],
+          "segments": [
+            {
+              "sentenceId": "tb-s1",
+              "start": 0.09,
+              "end": 2.6,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s2",
+              "start": 3.55,
+              "end": 5.76,
+              "status": "asr-draft"
+            }
+          ],
           "segmentsStatus": "unverified",
           "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
           "transcriptStatus": "print-verified",
@@ -1404,7 +1549,8 @@
               "section": "课文 1"
             }
           ],
-          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026."
+          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026.",
+          "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
         },
         {
           "id": "trk-tb-l01-3",
@@ -1412,7 +1558,32 @@
           "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-3.mp3",
           "durationSec": 9.651,
           "bookRef": "Textbook · track 1-3",
-          "segments": [],
+          "segments": [
+            {
+              "sentenceId": "tb-s3",
+              "start": 0.0,
+              "end": 0.88,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s4",
+              "start": 1.95,
+              "end": 3.86,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s5",
+              "start": 4.95,
+              "end": 6.34,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s6",
+              "start": 6.95,
+              "end": 8.96,
+              "status": "asr-draft"
+            }
+          ],
           "segmentsStatus": "unverified",
           "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
           "transcriptStatus": "print-verified",
@@ -1424,7 +1595,8 @@
               "section": "课文 2"
             }
           ],
-          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026."
+          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026.",
+          "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
         },
         {
           "id": "trk-tb-l01-5",
@@ -1432,7 +1604,32 @@
           "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-5.mp3",
           "durationSec": 9.495,
           "bookRef": "Textbook · track 1-5",
-          "segments": [],
+          "segments": [
+            {
+              "sentenceId": "tb-s7",
+              "start": 0.0,
+              "end": 0.86,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s8",
+              "start": 1.55,
+              "end": 3.08,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s9",
+              "start": 3.69,
+              "end": 5.76,
+              "status": "asr-draft"
+            },
+            {
+              "sentenceId": "tb-s10",
+              "start": 6.71,
+              "end": 8.56,
+              "status": "asr-draft"
+            }
+          ],
           "segmentsStatus": "unverified",
           "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
           "transcriptStatus": "print-verified",
@@ -1444,7 +1641,68 @@
               "section": "课文 3"
             }
           ],
-          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026."
+          "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 31/10/2026.",
+          "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
+        },
+        {
+          "id": "trk-tb-l01-2",
+          "label": "Từ mới · Hội thoại 1",
+          "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-2.mp3",
+          "durationSec": 6.628,
+          "bookRef": "Textbook · track 1-2",
+          "segments": [],
+          "segmentsStatus": "unverified",
+          "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+          "transcriptStatus": "print-verified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 16,
+              "printedPage": 1,
+              "section": "生词 · Từ mới"
+            }
+          ],
+          "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+        },
+        {
+          "id": "trk-tb-l01-4",
+          "label": "Từ mới · Hội thoại 2",
+          "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-4.mp3",
+          "durationSec": 18.304,
+          "bookRef": "Textbook · track 1-4",
+          "segments": [],
+          "segmentsStatus": "unverified",
+          "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+          "transcriptStatus": "print-verified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 17,
+              "printedPage": 2,
+              "section": "生词 · Từ mới"
+            }
+          ],
+          "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+        },
+        {
+          "id": "trk-tb-l01-6",
+          "label": "Từ mới · Hội thoại 3",
+          "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-6.mp3",
+          "durationSec": 11.684,
+          "bookRef": "Textbook · track 1-6",
+          "segments": [],
+          "segmentsStatus": "unverified",
+          "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+          "transcriptStatus": "print-verified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 18,
+              "printedPage": 3,
+              "section": "生词 · Từ mới"
+            }
+          ],
+          "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
         }
       ],
       "passages": [
@@ -1523,15 +1781,33 @@
           "options": [
             {
               "id": "1",
-              "zh": "A: 你好！ B: 你好！"
+              "zh": "A: 你好！ B: 你好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 350.97,
+                "end": 355.22,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "2",
-              "zh": "A: 你好！ B: 你们好！"
+              "zh": "A: 你好！ B: 你们好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 359.97,
+                "end": 363.88,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "3",
-              "zh": "A: 谢谢！ B: 不客气！"
+              "zh": "A: 谢谢！ B: 不客气！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 367.95,
+                "end": 371.3,
+                "status": "asr-draft"
+              }
             }
           ],
           "answer": "1",
@@ -1565,15 +1841,33 @@
           "options": [
             {
               "id": "1",
-              "zh": "A: 你好！ B: 你好！"
+              "zh": "A: 你好！ B: 你好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 350.97,
+                "end": 355.22,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "2",
-              "zh": "A: 你好！ B: 你们好！"
+              "zh": "A: 你好！ B: 你们好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 359.97,
+                "end": 363.88,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "3",
-              "zh": "A: 谢谢！ B: 不客气！"
+              "zh": "A: 谢谢！ B: 不客气！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 367.95,
+                "end": 371.3,
+                "status": "asr-draft"
+              }
             }
           ],
           "answer": "3",
@@ -1607,15 +1901,33 @@
           "options": [
             {
               "id": "1",
-              "zh": "A: 你好！ B: 你好！"
+              "zh": "A: 你好！ B: 你好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 350.97,
+                "end": 355.22,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "2",
-              "zh": "A: 你好！ B: 你们好！"
+              "zh": "A: 你好！ B: 你们好！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 359.97,
+                "end": 363.88,
+                "status": "asr-draft"
+              }
             },
             {
               "id": "3",
-              "zh": "A: 谢谢！ B: 不客气！"
+              "zh": "A: 谢谢！ B: 不客气！",
+              "audio": {
+                "trackId": "trk-wb-l01-2",
+                "start": 367.95,
+                "end": 371.3,
+                "status": "asr-draft"
+              }
             }
           ],
           "answer": "2",
@@ -1716,7 +2028,7 @@
           "m"
         ],
         "answerEvidence": "Đáp án biên tập đã đối chiếu: đề lấy từ bản in Workbook; âm tiết đọc lấy từ tài liệu lời đọc (听力材料, bản đăng lại Scribd, trang in 002); thứ tự âm tiết khớp bản nháp ASR chạy local trên track Workbook của Baulchino. Tài liệu đáp án đăng lại không in đáp án nghe–viết. Đây không phải đáp án chính thức của NXB đã chứng minh được.",
-        "guideVi": "Nghe đoạn đọc rồi chỉ nhập thanh mẫu nghe được (ví dụ: h). Cũng có thể nhập cả âm tiết — hệ thống chỉ chấm phần thanh mẫu.",
+        "guideVi": "Nghe đoạn đọc rồi chỉ nhập thanh mẫu nghe được (ví dụ: h). Cũng có thể nhập cả âm tiết — nếu nhập cả âm tiết thì âm tiết phải khớp hoàn toàn mới tính đúng phần thanh mẫu.",
         "audioSegment": {
           "start": 106.9,
           "end": 187.6
@@ -1796,7 +2108,7 @@
           "ō"
         ],
         "answerEvidence": "Đáp án biên tập đã đối chiếu: đề lấy từ bản in Workbook; âm tiết đọc lấy từ tài liệu lời đọc (听力材料, bản đăng lại Scribd, trang in 002); thứ tự âm tiết khớp bản nháp ASR chạy local trên track Workbook của Baulchino. Tài liệu đáp án đăng lại không in đáp án nghe–viết. Đây không phải đáp án chính thức của NXB đã chứng minh được.",
-        "guideVi": "Nghe đoạn đọc rồi nhập vận mẫu kèm dấu thanh (ví dụ: ěn). Cũng có thể nhập cả âm tiết — hệ thống chỉ chấm phần vận mẫu và dấu thanh.",
+        "guideVi": "Nghe đoạn đọc rồi nhập vận mẫu kèm dấu thanh (ví dụ: ěn). Cũng có thể nhập cả âm tiết — nếu nhập cả âm tiết, hệ thống tách thanh mẫu và chỉ chấm vận mẫu kèm dấu thanh.",
         "audioSegment": {
           "start": 187.6,
           "end": 274.6
@@ -1893,7 +2205,11 @@
           "section": "Luyện hội thoại theo cặp"
         }
       ],
-      "noteVi": "Nhiệm vụ đóng vai và thay tên thật lấy từ Textbook trang 002–003. Không có đánh giá tự động hay AI chấm nói trong phạm vi pilot."
+      "noteVi": "Nhiệm vụ đóng vai và thay tên thật lấy từ Textbook trang 002–003. Không có đánh giá tự động hay AI chấm nói trong phạm vi pilot.",
+      "samplePassageIds": [
+        "tb-dialogue-2",
+        "tb-dialogue-3"
+      ]
     },
     "foundationWords": [
       {
@@ -1908,7 +2224,13 @@
             "printedPage": 1,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 57.61,
+          "end": 60.3,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-2",
@@ -1922,7 +2244,13 @@
             "printedPage": 1,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 61.71,
+          "end": 63.24,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-3",
@@ -1936,7 +2264,13 @@
             "printedPage": 1,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 64.67,
+          "end": 66.2,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-4",
@@ -1950,7 +2284,13 @@
             "printedPage": 1,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 67.61,
+          "end": 68.64,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-5",
@@ -1964,7 +2304,13 @@
             "printedPage": 2,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 69.61,
+          "end": 72.5,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-6",
@@ -1978,7 +2324,13 @@
             "printedPage": 2,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 72.37,
+          "end": 74.44,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-7",
@@ -1992,7 +2344,13 @@
             "printedPage": 2,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 75.61,
+          "end": 77.46,
+          "status": "asr-draft"
+        }
       },
       {
         "id": "w-8",
@@ -2006,10 +2364,16 @@
             "printedPage": 2,
             "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
           }
-        ]
+        ],
+        "audio": {
+          "trackId": "trk-wb-l01-1",
+          "start": 78.61,
+          "end": 80.38,
+          "status": "asr-draft"
+        }
       }
     ],
-    "selfCheckIntroVi": "Workbook trang 004, bài 2–4. Mỗi ô được lưu tự động. Chưa có đáp án audio đã xác minh nên phần này không chấm điểm.",
+    "selfCheckIntroVi": "Workbook trang 004, bài 2–4. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
     "selfCheckListenVi": "▶ Nghe track Workbook 1-2"
   },
   "editorialAudit": {
@@ -2094,7 +2458,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 0.0,
+            "end": 2.68,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-2",
@@ -2108,7 +2478,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 2.95,
+            "end": 3.78,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-3",
@@ -2122,7 +2498,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 5.45,
+            "end": 6.28,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-4",
@@ -2136,7 +2518,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 7.75,
+            "end": 8.78,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-5",
@@ -2150,7 +2538,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 10.05,
+            "end": 12.58,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-6",
@@ -2164,7 +2558,13 @@
               "printedPage": 6,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-2",
+            "start": 12.45,
+            "end": 13.58,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-7",
@@ -2178,7 +2578,13 @@
               "printedPage": 7,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-4",
+            "start": 0.0,
+            "end": 0.78,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-8",
@@ -2192,7 +2598,13 @@
               "printedPage": 7,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-4",
+            "start": 1.95,
+            "end": 3.08,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-9",
@@ -2206,7 +2618,13 @@
               "printedPage": 7,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-4",
+            "start": 3.95,
+            "end": 5.78,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-10",
@@ -2220,7 +2638,13 @@
               "printedPage": 7,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-4",
+            "start": 7.35,
+            "end": 10.38,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-11",
@@ -2234,7 +2658,13 @@
               "printedPage": 7,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-4",
+            "start": 10.25,
+            "end": 11.58,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-12",
@@ -2248,7 +2678,13 @@
               "printedPage": 9,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-6",
+            "start": 0.15,
+            "end": 1.18,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-13",
@@ -2262,7 +2698,13 @@
               "printedPage": 9,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-6",
+            "start": 1.25,
+            "end": 5.18,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-14",
@@ -2276,7 +2718,13 @@
               "printedPage": 9,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-6",
+            "start": 5.35,
+            "end": 6.48,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02w-15",
@@ -2290,7 +2738,13 @@
               "printedPage": 9,
               "section": "生词 · Từ mới"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-tb-l02-6",
+            "start": 7.95,
+            "end": 8.78,
+            "status": "asr-draft"
+          }
         }
       ],
       "knowledgePoints": [
@@ -2305,17 +2759,35 @@
             {
               "zh": "请问，你叫什么名字？",
               "pinyin": "Qǐngwèn, nǐ jiào shénme míngzi?",
-              "noteVi": "Xin hỏi, bạn tên là gì?"
+              "noteVi": "Xin hỏi, bạn tên là gì?",
+              "audio": {
+                "trackId": "trk-tb-l02-1",
+                "start": 0.06,
+                "end": 2.61,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "我叫陈天中。",
               "pinyin": "Wǒ jiào Chén Tiānzhōng.",
-              "noteVi": "Tôi tên là Trần Thiên Trung."
+              "noteVi": "Tôi tên là Trần Thiên Trung.",
+              "audio": {
+                "trackId": "trk-tb-l02-1",
+                "start": 3.18,
+                "end": 5.01,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "很高兴认识你。",
               "pinyin": "Hěn gāoxìng rènshi nǐ.",
-              "noteVi": "Rất vui được gặp bạn."
+              "noteVi": "Rất vui được gặp bạn.",
+              "audio": {
+                "trackId": "trk-tb-l02-5",
+                "start": 6.35,
+                "end": 8.3,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "叫 đứng sau chủ ngữ và trước tên: 我 (chủ ngữ) + 叫 (động từ) + 陈天中 (tân ngữ) — sách phân tích mẫu này ở trang in 008.",
@@ -2354,12 +2826,24 @@
             {
               "zh": "我是白家月。",
               "pinyin": "Wǒ shì Bái Jiāyuè.",
-              "noteVi": "Tôi là Bạch Gia Nguyệt."
+              "noteVi": "Tôi là Bạch Gia Nguyệt.",
+              "audio": {
+                "trackId": "trk-tb-l02-3",
+                "start": 6.93,
+                "end": 8.5,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "我不是安妮。",
               "pinyin": "Wǒ bú shì Ānnī.",
-              "noteVi": "Tôi không phải là An Ni."
+              "noteVi": "Tôi không phải là An Ni.",
+              "audio": {
+                "trackId": "trk-tb-l02-3",
+                "start": 5.03,
+                "end": 6.62,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "不 đứng ngay trước 是, không đứng sau. Đây là cách dùng gặp trong hội thoại 2 của bài này.",
@@ -2387,12 +2871,24 @@
             {
               "zh": "对不起！",
               "pinyin": "Duìbuqǐ!",
-              "noteVi": "Xin lỗi!"
+              "noteVi": "Xin lỗi!",
+              "audio": {
+                "trackId": "trk-tb-l02-3",
+                "start": 9.29,
+                "end": 10.6,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "没关系！",
               "pinyin": "Méi guānxi!",
-              "noteVi": "Không sao đâu!"
+              "noteVi": "Không sao đâu!",
+              "audio": {
+                "trackId": "trk-tb-l02-3",
+                "start": 11.41,
+                "end": 12.86,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "Cả hai câu đều đứng độc lập, dùng ngay sau sự việc cần xin lỗi.",
@@ -2423,12 +2919,24 @@
             {
               "zh": "你叫什么名字？",
               "pinyin": "Nǐ jiào shénme míngzi?",
-              "noteVi": "Bạn tên là gì? (câu luyện đọc của sách)"
+              "noteVi": "Bạn tên là gì? (câu luyện đọc của sách)",
+              "audio": {
+                "trackId": "trk-tb-l02-1",
+                "start": 1.36,
+                "end": 2.61,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "我叫白家月。",
               "pinyin": "Wǒ jiào Bái Jiāyuè.",
-              "noteVi": "Tôi tên là Bạch Gia Nguyệt. (câu luyện đọc của sách)"
+              "noteVi": "Tôi tên là Bạch Gia Nguyệt. (câu luyện đọc của sách)",
+              "audio": {
+                "trackId": "trk-tb-l02-5",
+                "start": 3.99,
+                "end": 5.56,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "Giữ đúng thứ tự này khi tự đặt câu giới thiệu tên; đừng đảo tân ngữ lên trước động từ.",
@@ -2457,12 +2965,24 @@
             {
               "zh": "李文",
               "pinyin": "Lǐ Wén",
-              "noteVi": "họ Lý (李) + tên Văn (文)"
+              "noteVi": "họ Lý (李) + tên Văn (文)",
+              "audio": {
+                "trackId": "trk-tb-l02-5",
+                "start": 1.57,
+                "end": 2.2,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "白家月",
               "pinyin": "Bái Jiāyuè",
-              "noteVi": "họ Bạch (白) + tên Gia Nguyệt (家月)"
+              "noteVi": "họ Bạch (白) + tên Gia Nguyệt (家月)",
+              "audio": {
+                "trackId": "trk-tb-l02-3",
+                "start": 7.29,
+                "end": 8.5,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "Khi giới thiệu, nói cả họ và tên liền nhau sau 我叫, không tách rời.",
@@ -2491,22 +3011,46 @@
             {
               "zh": "鸡",
               "pinyin": "jī",
-              "noteVi": "thẻ hình trang in 006"
+              "noteVi": "thẻ hình trang in 006",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 176.21,
+                "end": 177.16,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "七",
               "pinyin": "qī",
-              "noteVi": "thẻ hình trang in 006"
+              "noteVi": "thẻ hình trang in 006",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 182.33,
+                "end": 182.86,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "写",
               "pinyin": "xiě",
-              "noteVi": "thẻ hình trang in 006"
+              "noteVi": "thẻ hình trang in 006",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 112.37,
+                "end": 112.9,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "请",
               "pinyin": "qǐng",
-              "noteVi": "thẻ hình trang in 006"
+              "noteVi": "thẻ hình trang in 006",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 186.43,
+                "end": 187.96,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "Bảng thanh mẫu – vận mẫu in ở Workbook trang in 005; nghe và đọc theo track Workbook 2-1.",
@@ -2532,17 +3076,30 @@
             {
               "zh": "雨",
               "pinyin": "yǔ",
-              "noteVi": "thẻ hình trang in 006 — yu đứng một mình"
+              "noteVi": "thẻ hình trang in 006 — yu đứng một mình",
+              "audio": null
             },
             {
               "zh": "九",
               "pinyin": "jiǔ",
-              "noteVi": "thẻ hình trang in 007 — iou rút thành iu"
+              "noteVi": "thẻ hình trang in 007 — iou rút thành iu",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 386.67,
+                "end": 388.2,
+                "status": "asr-draft"
+              }
             },
             {
               "zh": "朋友",
               "pinyin": "péngyou",
-              "noteVi": "thẻ hình trang in 007 — you đứng một mình"
+              "noteVi": "thẻ hình trang in 007 — you đứng một mình",
+              "audio": {
+                "trackId": "trk-wb-l02-1",
+                "start": 409.85,
+                "end": 411.1,
+                "status": "asr-draft"
+              }
             }
           ],
           "positionVi": "Các quy tắc và âm tiết luyện đọc in ở Workbook trang in 006–007; nghe và đọc theo track Workbook 2-1.",
@@ -2771,7 +3328,20 @@
             "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-1.mp3",
             "durationSec": 5.377,
             "bookRef": "Textbook · track 2-1",
-            "segments": [],
+            "segments": [
+              {
+                "sentenceId": "l02-s1",
+                "start": 0.06,
+                "end": 2.61,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s2",
+                "start": 3.18,
+                "end": 5.01,
+                "status": "asr-draft"
+              }
+            ],
             "segmentsStatus": "unverified",
             "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
             "transcriptStatus": "print-verified",
@@ -2783,7 +3353,8 @@
                 "section": "课文 1"
               }
             ],
-            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026.",
+            "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
           },
           {
             "id": "trk-tb-l02-3",
@@ -2791,7 +3362,32 @@
             "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-3.mp3",
             "durationSec": 13.222,
             "bookRef": "Textbook · track 2-3",
-            "segments": [],
+            "segments": [
+              {
+                "sentenceId": "l02-s3",
+                "start": 0.19,
+                "end": 2.08,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s4",
+                "start": 2.95,
+                "end": 8.5,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s5",
+                "start": 9.29,
+                "end": 10.6,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s6",
+                "start": 11.41,
+                "end": 12.86,
+                "status": "asr-draft"
+              }
+            ],
             "segmentsStatus": "unverified",
             "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
             "transcriptStatus": "print-verified",
@@ -2803,7 +3399,8 @@
                 "section": "课文 2"
               }
             ],
-            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026.",
+            "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
           },
           {
             "id": "trk-tb-l02-5",
@@ -2811,7 +3408,32 @@
             "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-5.mp3",
             "durationSec": 11.814,
             "bookRef": "Textbook · track 2-5",
-            "segments": [],
+            "segments": [
+              {
+                "sentenceId": "l02-s7",
+                "start": 0.0,
+                "end": 2.2,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s8",
+                "start": 3.07,
+                "end": 5.56,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s9",
+                "start": 6.35,
+                "end": 8.3,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l02-s10",
+                "start": 8.67,
+                "end": 11.1,
+                "status": "asr-draft"
+              }
+            ],
             "segmentsStatus": "unverified",
             "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
             "transcriptStatus": "print-verified",
@@ -2823,7 +3445,68 @@
                 "section": "课文 3"
               }
             ],
-            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026.",
+            "segmentsSource": "asr-draft: faster-whisper word timestamps aligned to the print-verified transcript; not human-verified"
+          },
+          {
+            "id": "trk-tb-l02-2",
+            "label": "Từ mới · Hội thoại 1",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-2.mp3",
+            "durationSec": 15.281,
+            "bookRef": "Textbook · track 2-2",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 21,
+                "printedPage": 6,
+                "section": "生词 · Từ mới"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+          },
+          {
+            "id": "trk-tb-l02-4",
+            "label": "Từ mới · Hội thoại 2",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-4.mp3",
+            "durationSec": 13.587,
+            "bookRef": "Textbook · track 2-4",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 22,
+                "printedPage": 7,
+                "section": "生词 · Từ mới"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+          },
+          {
+            "id": "trk-tb-l02-6",
+            "label": "Từ mới · Hội thoại 3",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-6.mp3",
+            "durationSec": 10.459,
+            "bookRef": "Textbook · track 2-6",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 24,
+                "printedPage": 9,
+                "section": "生词 · Từ mới"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
           }
         ],
         "passages": [
@@ -2908,19 +3591,43 @@
             "options": [
               {
                 "id": "1",
-                "zh": "A: 老师，再见！ B: 再见！"
+                "zh": "A: 老师，再见！ B: 再见！",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 215.95,
+                  "end": 220.72,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
-                "zh": "A: 对不起。 B: 没关系。"
+                "zh": "A: 对不起。 B: 没关系。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 224.11,
+                  "end": 227.46,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
-                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。"
+                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 231.69,
+                  "end": 237.4,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "4",
-                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。"
+                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 242.97,
+                  "end": 249.8,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "3",
@@ -2954,19 +3661,43 @@
             "options": [
               {
                 "id": "1",
-                "zh": "A: 老师，再见！ B: 再见！"
+                "zh": "A: 老师，再见！ B: 再见！",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 215.95,
+                  "end": 220.72,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
-                "zh": "A: 对不起。 B: 没关系。"
+                "zh": "A: 对不起。 B: 没关系。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 224.11,
+                  "end": 227.46,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
-                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。"
+                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 231.69,
+                  "end": 237.4,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "4",
-                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。"
+                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 242.97,
+                  "end": 249.8,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "1",
@@ -3000,19 +3731,43 @@
             "options": [
               {
                 "id": "1",
-                "zh": "A: 老师，再见！ B: 再见！"
+                "zh": "A: 老师，再见！ B: 再见！",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 215.95,
+                  "end": 220.72,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
-                "zh": "A: 对不起。 B: 没关系。"
+                "zh": "A: 对不起。 B: 没关系。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 224.11,
+                  "end": 227.46,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
-                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。"
+                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 231.69,
+                  "end": 237.4,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "4",
-                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。"
+                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 242.97,
+                  "end": 249.8,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "4",
@@ -3046,19 +3801,43 @@
             "options": [
               {
                 "id": "1",
-                "zh": "A: 老师，再见！ B: 再见！"
+                "zh": "A: 老师，再见！ B: 再见！",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 215.95,
+                  "end": 220.72,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
-                "zh": "A: 对不起。 B: 没关系。"
+                "zh": "A: 对不起。 B: 没关系。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 224.11,
+                  "end": 227.46,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
-                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。"
+                "zh": "A: 很高兴认识你。 B: 认识你我也很高兴。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 231.69,
+                  "end": 237.4,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "4",
-                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。"
+                "zh": "A: 大家好，我叫白家月。 B: 白家月，你好。",
+                "audio": {
+                  "trackId": "trk-wb-l02-2",
+                  "start": 242.97,
+                  "end": 249.8,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "2",
@@ -3140,7 +3919,7 @@
             "x"
           ],
           "answerEvidence": "Đáp án biên tập đã đối chiếu: đề lấy từ bản in Workbook; âm tiết đọc lấy từ tài liệu lời đọc (听力材料, bản đăng lại Scribd, trang in 005); thứ tự âm tiết khớp bản nháp ASR chạy local trên track Workbook của Baulchino. Tài liệu đáp án đăng lại không in đáp án nghe–viết. Đây không phải đáp án chính thức của NXB đã chứng minh được.",
-          "guideVi": "Nghe đoạn đọc rồi chỉ nhập thanh mẫu nghe được (j, q hoặc x). Cũng có thể nhập cả âm tiết — hệ thống chỉ chấm phần thanh mẫu.",
+          "guideVi": "Nghe đoạn đọc rồi chỉ nhập thanh mẫu nghe được (j, q hoặc x). Cũng có thể nhập cả âm tiết — nếu nhập cả âm tiết thì âm tiết phải khớp hoàn toàn mới tính đúng phần thanh mẫu.",
           "audioSegment": {
             "start": 3.4,
             "end": 51.3
@@ -3299,7 +4078,7 @@
           "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local với lời đọc); nghe theo đoạn bài tập, chưa chia mốc từng ô và chưa nghe kiểm chứng bởi người."
         }
       ],
-      "selfCheckIntroVi": "Workbook trang 008, bài 1–3. Mỗi ô được lưu tự động. Chưa có đáp án audio đã xác minh nên phần này không chấm điểm.",
+      "selfCheckIntroVi": "Workbook trang 008, bài 1–3. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
       "selfCheckListenVi": "▶ Nghe track Workbook 2-2",
       "apply": {
         "titleVi": "Đóng vai và tự giới thiệu bằng tên thật",
@@ -3319,6 +4098,10 @@
             "printedPage": 9,
             "section": "分角色朗读对话 · 两人一组，用自己的名字自我介绍"
           }
+        ],
+        "samplePassageIds": [
+          "l02-dialogue-1",
+          "l02-dialogue-3"
         ]
       },
       "foundationWords": [
@@ -3334,7 +4117,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 176.21,
+            "end": 177.16,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-2",
@@ -3348,7 +4137,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 182.33,
+            "end": 182.86,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-3",
@@ -3362,7 +4157,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 112.37,
+            "end": 112.9,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-4",
@@ -3376,7 +4177,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 186.43,
+            "end": 187.96,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-5",
@@ -3390,7 +4197,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 187.83,
+            "end": 189.36,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-6",
@@ -3404,7 +4217,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 192.03,
+            "end": 193.56,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-7",
@@ -3418,7 +4237,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 194.25,
+            "end": 195.58,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-8",
@@ -3432,7 +4257,13 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 195.45,
+            "end": 198.8,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-9",
@@ -3446,7 +4277,8 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": null
         },
         {
           "id": "l02fw-10",
@@ -3460,7 +4292,8 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": null
         },
         {
           "id": "l02fw-11",
@@ -3474,7 +4307,8 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": null
         },
         {
           "id": "l02fw-12",
@@ -3488,7 +4322,8 @@
               "printedPage": 6,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": null
         },
         {
           "id": "l02fw-13",
@@ -3502,7 +4337,13 @@
               "printedPage": 7,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 386.67,
+            "end": 388.2,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-14",
@@ -3516,7 +4357,13 @@
               "printedPage": 7,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 409.85,
+            "end": 411.1,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-15",
@@ -3530,7 +4377,13 @@
               "printedPage": 7,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 411.85,
+            "end": 413.82,
+            "status": "asr-draft"
+          }
         },
         {
           "id": "l02fw-16",
@@ -3544,7 +4397,13 @@
               "printedPage": 7,
               "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
             }
-          ]
+          ],
+          "audio": {
+            "trackId": "trk-wb-l02-1",
+            "start": 415.31,
+            "end": 417.12,
+            "status": "asr-draft"
+          }
         }
       ]
     }

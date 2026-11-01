@@ -92,11 +92,23 @@ for (const c of contents) {
     if (!(t.durationSec > 0)) err(`track ${t.id}: durationSec must be positive`);
     for (const seg of t.segments || []) {
       if (seg.start < 0 || seg.end > t.durationSec || seg.start >= seg.end) err(`track ${t.id}: segment out of range`);
-      if (t.segmentsStatus !== "verified") err(`track ${t.id}: segments present but segmentsStatus is not "verified"`);
+      if (!["asr-draft", "verified"].includes(seg.status || "")) err(`track ${t.id}: segment needs status asr-draft|verified (machine alignment is not human verification)`);
     }
     if ((t.segments || []).length === 0 && t.segmentsStatus !== "unverified") err(`track ${t.id}: no segments but segmentsStatus is not "unverified"`);
     if (t.sourceRefs) checkRefs(t.sourceRefs, `track ${t.id}`);
   }
+  const checkAudioRef = (ref, where) => {
+    if (ref === undefined || ref === null) return;
+    const tr = (c.reader.audioTracks || []).find((x) => x.id === ref.trackId);
+    if (!tr) return err(`${where}: audio track ${ref.trackId} not in lesson`);
+    if (!(ref.start >= 0 && ref.end > ref.start && ref.end <= tr.durationSec)) err(`${where}: audio segment out of range`);
+    if (ref.status !== "asr-draft" && ref.status !== "verified") err(`${where}: audio status must be asr-draft|verified`);
+  };
+  for (const w of c.prepWords || []) checkAudioRef(w.audio, `prep word ${w.id}`);
+  for (const w of c.foundationWords || []) checkAudioRef(w.audio, `foundation word ${w.zh}`);
+  for (const kp of c.knowledgePoints || []) for (const e of kp.examples || []) checkAudioRef(e.audio, `example ${kp.id}`);
+  for (const it of c.exerciseSet?.items || []) for (const o of it.options || []) checkAudioRef(o.audio, `option ${it.id}/${o.id}`);
+  for (const pid of c.apply?.samplePassageIds || []) if (!(c.reader.passages || []).some((g) => g.id === pid)) err(`apply samplePassageIds: unknown passage ${pid}`);
   for (const g of c.reader.passages || []) {
     if (!trackIds.has(g.audioTrackId)) err(`passage ${g.id}: missing track`);
     for (const id of g.sentenceIds) if (!localSentences.has(id)) err(`passage ${g.id}: missing sentence ${id}`);

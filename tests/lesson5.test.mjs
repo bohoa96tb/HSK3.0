@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 
 test('lesson 5 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l5, 'additionalLessons must contain hsk1-l05');
-  assert.equal(content.contentVersion, '20261101-lesson6-2');
+  assert.equal(content.contentVersion, '20261101-lesson6-3');
   assert.equal(l5.prepWords.length, 22);
   for (const w of l5.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);

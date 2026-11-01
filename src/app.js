@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson8-1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson8-1";
-import * as player from "./player.js?v=20261101-lesson8-1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-device-feedback1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-device-feedback1";
+import * as player from "./player.js?v=20261101-device-feedback1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -228,7 +228,7 @@ function sectionIntroHtml(lesson, content) {
  const intro = content.intro; const img = intro.contextImage;
  return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
  <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Học trong khoảng ${intro.estimatedMinutes} phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
- <p class="study-tip">${esc(intro.studyTipVi||'')}</p>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>`;
+ <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>`;
 }
 
 // ---------- Lesson sections ----------
@@ -321,6 +321,20 @@ function speakBtnHtml(audio, label) {
   if (!audio) return `<span class="no-audio" title="Chưa có audio riêng cho mục này — từ này vẫn có trong track ở bước Nghe & đọc">Chưa có audio</span>`;
   return `<button type="button" class="speak-btn" data-speak data-track="${esc(audio.trackId)}" data-start="${audio.start}" data-end="${audio.end}" aria-label="Nghe: ${esc(label)}" title="Nghe mục này">${SPEAK_ICON}</button>`;
 }
+// Speaker for short units (words, options, examples): the device's own
+// speech synthesis reads the text — no segment is cut from a book track
+// (D20). Dialogue sentences keep their book-audio segment buttons.
+// What the device voice should actually say: drop dialogue speaker
+// labels ("A: … B: …") and turn "/" separators into pauses, so the
+// synthesis does not read the labels or the slash aloud.
+function speakable(text) {
+  return String(text).replace(/\s*[A-D][:：]\s*/g, ' ').replace(/\//g, ' ').replace(/\s+/g, ' ').trim();
+}
+function ttsBtnHtml(text) {
+  const say = speakable(text);
+  return `<button type="button" class="speak-btn" data-tts="${esc(say)}" aria-label="Nghe: ${esc(text)}" title="Nghe mục này (giọng đọc của thiết bị)">${SPEAK_ICON}</button>`;
+}
+const HAS_HAN = /\p{Script=Han}/u;
 function sentenceAudio(content, sen) {
   const group = content.reader.passages.find((g) => g.id === sen.passageId);
   const track = group && content.reader.audioTracks.find((t) => t.id === group.audioTrackId);
@@ -331,14 +345,14 @@ function sentenceAudio(content, sen) {
 function sectionPrepHtml(content) {
  const firstRefs=[]; const seenPages=new Set();
  for(const w of content.prepWords){const r=w.sourceRefs[0]; if(r && !seenPages.has(r.pdfPage)){seenPages.add(r.pdfPage); firstRefs.push(r);} }
- return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-top"><span class="zh" lang="zh-CN">${esc(w.zh)}</span>${speakBtnHtml(w.audio, w.zh)}</div><div class="pinyin tog-pinyin-prep" lang="zh-Latn">${esc(w.pinyin)}</div>${w.hanViet ? `<div class="hanviet tog-hv-prep">HV: ${esc(w.hanViet)}</div>` : `<div class="hanviet tog-hv-prep hanviet-missing">HV: chưa xác minh</div>`}<div class="vi tog-vi-prep">${esc(w.vi)}</div>${w.hanVietNoteVi ? `<p class="hv-note tog-hv-prep">${esc(w.hanVietNoteVi)}</p>` : ""}</article>`).join('')}</div>${(() => { const missing = content.prepWords.filter((w) => !w.audio); return `<p class="study-tip">Loa trên thẻ phát đoạn đọc từ trong track từ mới của sách (căn đoạn bằng máy, chưa nghe kiểm chứng). Âm Hán–Việt chỉ là cách đọc Hán–Việt của chữ, không thay cho nghĩa hiện đại hay phát âm tiếng Trung.${missing.length ? ` Chưa có loa riêng: <span lang="zh-CN">${missing.map((w) => esc(w.zh)).join("、")}</span> — nghe các từ này trong hội thoại ở bước Nghe & đọc.` : ""}</p>`; })()}${refsHtml(firstRefs)}</section>`;
+ return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-top"><span class="zh" lang="zh-CN">${esc(w.zh)}</span>${ttsBtnHtml(w.zh)}</div><div class="pinyin tog-pinyin-prep" lang="zh-Latn">${esc(w.pinyin)}</div>${w.hanViet ? `<div class="hanviet tog-hv-prep">HV: ${esc(w.hanViet)}</div>` : `<div class="hanviet tog-hv-prep hanviet-missing">HV: chưa xác minh</div>`}<div class="vi tog-vi-prep">${esc(w.vi)}</div>${w.hanVietNoteVi ? `<p class="hv-note tog-hv-prep">${esc(w.hanVietNoteVi)}</p>` : ""}</article>`).join('')}</div><details class="study-tip"><summary>Ghi chú về loa và Hán–Việt</summary><p>Loa trên thẻ dùng giọng đọc tiếng Trung có sẵn của trình duyệt/thiết bị để đọc từng từ — không phải audio của sách. Audio gốc của sách được dùng cho hội thoại và các bài nghe ở những mục sau. Âm Hán–Việt chỉ là cách đọc Hán–Việt của chữ, không thay cho nghĩa hiện đại hay phát âm tiếng Trung.</p></details>${refsHtml(firstRefs)}</section>`;
 }
 
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=kp.kind==='foundation-pronunciation';
  return `<article class="card grammar-card" id="${esc(kp.id)}" data-anchor><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
- ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${speakBtnHtml(e.audio, e.zh)}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
+ ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
  ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=contentFor(kpLesson).reader.sentences.find(x=>x.id===id);return sen?`<a class="btn ghost small" href="#/lesson/${kpLesson}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`:'';}).join('')}</div>`:''}
  ${refsHtml(kp.sourceRefs)}${linkBack?`<a class="btn primary" href="${esc(linkBack)}">← Quay lại câu đang làm</a>`:''}</article>`;
 }
@@ -476,14 +490,14 @@ function sectionExercisesHtml(content) {
   const result = checked ? gradeChoice(item, chosen) : null;
   const supportOn = !!(ses.supportUsed?.[item.id]);
   return `<section class="card" id="exercise-card" data-anchor><h2>Luyện tập</h2>${supportBarHtml('exercises')}
-  <p class="muted">${esc(set.noteVi)}</p>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
+  <details class="set-note"><summary>Ghi chú về bộ câu hỏi</summary><p class="muted">${esc(set.noteVi)}</p></details>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
   <h3>${esc(item.promptVi)}</h3>${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
   <form id="ex-form">
   ${item.options.map((o, oi) => `<label class="option ${o.image ? "option-has-pic" : ""} ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
-    <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
+    <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${HAS_HAN.test(o.zh) ? ttsBtnHtml(o.zh) : ""}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
     <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
     ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>
@@ -924,6 +938,12 @@ main.addEventListener("click", (e) => {
   if (st.playing && st.segment && st.segment.trackId === track.id && Math.abs(st.segment.start - Number(b.dataset.start)) < 0.01) { player.pause(); return; }
   b.classList.add("loading");
   player.playSegment(track, { start: Number(b.dataset.start), end: Number(b.dataset.end), rate: settings().playbackRate });
+});
+main.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-tts]");
+  if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  player.speakText(b.dataset.tts);
 });
 player.subscribe((st) => {
   $$("[data-speak]").forEach((b) => {

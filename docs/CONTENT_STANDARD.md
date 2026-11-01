@@ -218,6 +218,11 @@ Khi hai nguồn của chính bộ sách mâu thuẫn nhau ở đúng đặc đi�
 ### Bài luyện phân biệt không phải bài chọn đáp án (Bài 6–7)
 Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê cả hai dạng, dùng `kind=listening-comparison`, hướng dẫn đọc cả cặp, ghi bằng chứng mục tiêu ở `practiceEvidence`, không thêm answers/gradingMode. Nháp là ghi chú cá nhân, không chấm đúng/sai. Giữ khác với trạng thái thiếu đáp án của một bài thực sự cần chọn đáp án. Bài dựa trên hình phải hiển thị hình có nguồn; không thay bằng mô tả suy đoán đáp án. Các mốc nghe dùng duy nhất audioSegment, validator phải kiểm cho cả bài không chấm và chặn trường segment cũ.
 
+## Bổ sung D20 (01/11/2026) — Loa đơn vị ngắn, text phụ và ảnh trên điện thoại
+- Loa cho từ cần biết/ví dụ/lựa chọn dùng giọng đọc của thiết bị (xem DECISIONS D20); không cắt đoạn track từ mới hai lượt đọc. Câu hội thoại và bài nghe giữ audio sách.
+- Text không trực tiếp thuộc bài học (ghi chú nguồn gốc bộ câu hỏi, ghi chú học tập) phải thu gọn mặc định trong giao diện người học.
+- Bài tập có hình: hai cột ở mọi bề rộng màn hình; một ảnh chiếm nửa bề rộng.
+
 ## Bổ sung 01/11/2026 — Chuẩn minh họa vẽ mới và kiểm mốc đoạn audio (D19, Hoa chỉ đạo và nghiệm thu)
 
 Áp dụng cho mọi bài tập có hình từ Bài 8 trở đi (Bài 3 và Bài 7 dùng ảnh trích sách theo ngoại lệ trước đó, không tự động thay đổi):

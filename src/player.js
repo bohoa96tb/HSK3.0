@@ -1,5 +1,5 @@
 // One audio element; source media is streamed, never copied into the repo.
-import { loadProgress, update } from './store.js?v=20261101-lesson8-1';
+import { loadProgress, update } from './store.js?v=20261101-device-feedback1';
 const audio = new Audio();
 audio.preload = 'none';
 const listeners = new Set();
@@ -18,6 +18,7 @@ export function subscribe(fn){listeners.add(fn);fn(getState());return()=>listene
 async function start(){try{await audio.play();}catch(e){if(e.name!=='AbortError'){lastError='Chưa phát được audio. Chạm Phát để thử lại.';emit();}}}
 export function playTrack(track,{rate=1}={}){
  if(!track)return;
+ try{window.speechSynthesis?.cancel();}catch(e){}
  stopAt=null;currentSegment=null;
  const retry=!!lastError;lastError=null;
  if(current?.id===track.id&&!retry){audio.playbackRate=rate;if(audio.paused){if(audio.ended)audio.currentTime=0;start();}else audio.pause();emit();return;}
@@ -31,6 +32,7 @@ export function playTrack(track,{rate=1}={}){
 // segments); playback pauses itself at `end` via the timeupdate guard.
 export function playSegment(track,{start:segStart=0,end:segEnd=null,rate=1}={}){
  if(!track)return;
+ try{window.speechSynthesis?.cancel();}catch(e){}
  lastError=null;
  stopAt=(segEnd!=null&&segEnd>segStart)?segEnd:null;
  currentSegment={trackId:track.id,start:segStart,end:stopAt};
@@ -40,6 +42,26 @@ export function playSegment(track,{start:segStart=0,end:segEnd=null,rate=1}={}){
  audio.src=track.url;
  audio.onloadedmetadata=()=>{if(version!==generation)return;audio.currentTime=segStart;emit();};
  start();emit();
+}
+// Per-unit pronunciation via the device/browser's built-in speech
+// synthesis (user direction 2026-11-01, D20): short units (words,
+// exercise options, knowledge-point examples) are no longer cut from
+// the book tracks — the vocabulary tracks read each word twice (two
+// voices) and a machine cut mid-track sounds unnatural and can leak
+// the second reading on Android. Book audio stays in use for whole
+// dialogues and listening tasks, where each line is read once.
+export function speakText(text){
+ try{
+  if(!('speechSynthesis' in window))return false;
+  pause();
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='zh-CN';u.rate=0.92;
+  const v=window.speechSynthesis.getVoices().find(x=>/^zh([-_]|$)/i.test(x.lang||''));
+  if(v)u.voice=v;
+  window.speechSynthesis.speak(u);
+  return true;
+ }catch(e){return false;}
 }
 export function pause(){stopAt=null;audio.pause();emit();}
 export function seek(sec){if(Number.isFinite(sec)&&audio.readyState>=1){audio.currentTime=Math.max(0,Math.min(sec,Number.isFinite(audio.duration)?audio.duration:sec));persist();emit();}}

@@ -322,3 +322,12 @@ Giới hạn đã biết: chưa Android thật; chưa CI GitHub Actions (403 —
 - Bổ sung QA độc lập lần cuối cho caption: sectionIntroHtml nay có figure/img/figcaption, dữ liệu escape đúng, Bài6 tr.036 và Bài7 tr.046 hiện đúng; test xác nhận tại intro, không nhầm dashboard. Không có lỗi chặn phát hành trong phạm vi nguồn/code; browser/responsive sẽ nghiệm thu sau triển khai.
 - Hai lỗi khi chạy test đầu: mock mới chưa mô phỏng loadedmetadata nên chưa seek, và assertion cũ khớp nguyên văn hướng dẫn cũ. Đã sửa mock và assertion câu mới; giữ nguyên các assertion hành vi không lộ đáp án. Không dùng kết quả mock làm bằng chứng kiểm nghe.
 - Giới hạn giữ nguyên: không nghe thẩm định audio bởi người, chưa Android thật, mốc là nháp, một số loa còn thiếu, quyền tái xuất bản unknown. Không mở Bài8.
+
+### Nghiệm thu sau triển khai — lượt hoàn thiện Bài6–7
+- PR #39 merge 8d652c31e579cec9c3547061343dfad5795d947f; Pages run41285859946 success, contentVersion20261101-lessons67-practice1. Đối chiếu byte index.html/src/app.js/data/content.json live khớp merge.
+- Caption: Bài6 Bắt đầu hiện “Ở trường · Textbook, trang 036”; Bài7 hiện “Đang gọi điện · Textbook, trang 046”. Thiếu caption trước đây là lỗi renderer thực, không thể chỉ kết luận do tìm chuỗi khác dấu phẩy.
+- Nghe–so sánh: live Bài6 t2 có hướng dẫn nghe cả hai dạng, ghi chú cá nhân, không nút chấm; bấm phát thấy bộ đếm tiến0:53 trong đoạn0:47–1:52. Bài7 t1 quan sát phát từ1:07. Không gọi kiểm bộ đếm là nghe kiểm chứng ngữ nghĩa.
+- Lưu nháp: ghi “So sánh âm r” tại Bài6 t2, “So sánh luồng hơi” tại Bài7 t1; reload/mở lại vẫn nguyên.
+- Ảnh:4/4 ảnh Bài6 và4/4 ảnh Bài7 loaded với naturalWidth>0; đúng khung câu, có caption trang in. Quan sát desktop lưới2cột và390px1cột.
+- Responsive iframe: hai tuyến exercises Bài6/Bài7 ×360/390/768/1440, body scrollWidth bằng clientWidth (345/375/753/1425 tương ứng); không tràn ngang. Đây là iframe trên desktop, không phải Android thật.
+- Kết luận: đạt phạm vi sửa nguồn/mục tiêu bài/ảnh/caption/hành vi nháp và đoạn phát. Chưa kiểm nghe bởi người; chưa xác minh lại ngữ nghĩa toàn bộ đoạn loa cũ; các đơn vị thiếu loa không được thay bằng TTS hoặc timestamp đoán. CI và quyền nguồn vẫn chưa được giải quyết.

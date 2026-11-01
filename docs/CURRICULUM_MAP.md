@@ -14,8 +14,8 @@ Số track theo bài lấy từ danh mục trang audio Baulchino ngày 2026-10-3
 bài 1–3 và 7–15 mỗi bài 2 track, bài 4–6 mỗi bài 3 track). Đây là số đếm ở
 mức danh mục, chưa kiểm tra phát từng track.
 
-Trạng thái xuất bản app: chỉ Bài 1 là pilot. Bài 2–15 mới ở mức mục lục —
-chưa đọc nội dung, chưa xuất bản.
+Trạng thái xuất bản app: Bài 1–3 đã xuất bản đầy đủ (Bài 3 ngày 2026-11-01,
+chuẩn ux3 + D13). Bài 4–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
 
 ## 1. Bảng 15 bài HSK1
 
@@ -143,3 +143,23 @@ Nội dung thay thế các kết luận cũ trong tài liệu về Textbook chư
 | Tự nói: đóng vai hỏi tên / tự giới thiệu bằng tên thật | Textbook 006, 009 / 21, 24 | Textbook 2-1 | Mục 6; app không chấm phát âm |
 
 Audio Bài 2 đối ứng theo ký hiệu in trong sách, thời lượng đo bằng ffprobe (xem `docs/SOURCE_AUDIT.md`); chưa nghe kiểm chứng, chưa có timestamp câu nên chỉ phát cả track — cùng giới hạn như Bài 1. Trang mở rộng Textbook 009 (câu líu lưỡi, bonus) không đưa vào app.
+
+## 5. Map chi tiết — Bài 3 我是中国人 (đã đối chiếu trực quan 2026-11-01)
+
+**Bài 3: 我是中国人 / I am Chinese** — Textbook trang in 010–015 = PDF 25–30; Workbook trang in 009–012 = PDF 16–19. Phát hành theo quy tắc D13 (không chờ nghiệm thu từng bài).
+
+| Thành phần | Nguồn in | Track | Trong app |
+|---|---|---|---|
+| Mục tiêu: câu 是， trợ từ 的， câu hỏi 吗 | Textbook 010 | — | Mục 1 + 3 điểm kiến thức chính |
+| Hội thoại 1: ở quán cà phê （李文/白家月） | Textbook 011 | 3-1 | Đoạn 1, 3 câu, `print-verified` |
+| Từ mới 3-2 + 小语讲堂 1 （是） | Textbook 011–012 | 3-2 | Trong 18 từ Mục 2 + `kp-hsk1-l03-shi` |
+| Hội thoại 2: xem ảnh trong điện thoại | Textbook 012–013 | 3-3 | Đoạn 2, 4 câu |
+| Từ mới 3-4 + 小语讲堂 2 （的 + quy tắc lược 的） | Textbook 013 | 3-4 | `kp-hsk1-l03-de` |
+| Hội thoại 3: gọi video về nhà | Textbook 014 | 3-5 | Đoạn 3, 8 câu |
+| Từ mới 3-6 + 小语讲堂 3 （吗） | Textbook 014–015 | 3-6 | `kp-hsk1-l03-ma` |
+| Phát âm: thanh/vận mẫu 3 + từ kèm hình (12 từ) | Workbook 009–011 | WB 3-1 | 2 điểm nền + Mục 2 phần phát âm |
+| Quy tắc viết: u→w; uei/uen→ui/un | Workbook 010–011 | WB 3-1 | `kp-hsk1-l03-spelling` |
+| Nghe–viết 3 bài (12/15/15 ô) | Workbook 011–012 | WB 3-2 | Chấm tự động `verified-editorial` (bản in + lời đọc đăng lại tr. in 008 + ASR) |
+| Nhìn hình chọn hội thoại (4 hình) | Workbook 012 | WB 3-2 | 4 câu chấm tự động; đáp án ③④①② khớp tài liệu đáp án đăng lại |
+
+Audio Bài 3 đối ứng theo ký hiệu in trong sách, thời lượng đo bằng ffprobe (xem `docs/SOURCE_AUDIT.md`); loa theo đơn vị căn bằng ASR (`asr-draft`), chưa nghe kiểm chứng; thiếu loa riêng cho 吗 và 嘴. Bài tập tổng hợp cuối Textbook (điền từ + miêu tả hình) là hoạt động lớp không đáp án in — không đưa vào app, như Bài 2.

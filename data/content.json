@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson8-path1",
+ "contentVersion": "20261102-lesson8-lookup1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -20295,7 +20295,116 @@
      "exampleZh": "下午两点你能到吗？",
      "exampleVi": "Chiều 2 giờ bạn đến được không?"
     }
-   ]
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong lời thoại, ví dụ hoặc câu mẫu để tra nhanh. Muốn tra cả cụm, bấm “Tra cụm” ngay dưới câu rồi chạm từ đầu và từ cuối.",
+    "extras": [
+     {
+      "zh": "小猫",
+      "pinyin": "xiǎomāo",
+      "hanViet": "TIỂU MIÊU",
+      "vi": "mèo con; con mèo nhỏ",
+      "status": "verified-editorial",
+      "noteVi": "Âm Hán–Việt của chữ đã được kiểm chứng trong từ vựng của dự án; nghĩa theo ngữ cảnh Bài 8."
+     },
+     {
+      "zh": "这只",
+      "pinyin": "zhè zhī",
+      "hanViet": "GIÁ CHÍCH",
+      "vi": "con này (chỉ định + lượng từ, như 这只小猫 = con mèo này)",
+      "status": "verified-editorial",
+      "noteVi": "Cụm ở ô 小语助力 (Textbook tr.055). Âm Hán–Việt ghép từ hai âm đã kiểm chứng: 这 = GIÁ (Bài 3), 只 = CHÍCH (Bài 8)."
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "một (số 1; trong 一只小猫 là “một con mèo”)",
+      "status": "verified-editorial",
+      "noteVi": "Trong 一只小猫, 一 đọc biến điệu thành yì （只 đọc thanh 1; quy tắc: 一 đọc yí trước thanh 4, yì trước các thanh còn lại); ghi yī là dạng gốc."
+     },
+     {
+      "zh": "好",
+      "pinyin": "hǎo",
+      "hanViet": "HẢO",
+      "vi": "tốt; được, ừ (trong 好的 = được, ừ)",
+      "status": "verified-editorial",
+      "noteVi": "Âm Hán–Việt của chữ đã được kiểm chứng trong từ vựng của dự án; nghĩa theo ngữ cảnh Bài 8."
+     },
+     {
+      "zh": "两",
+      "pinyin": "liǎng",
+      "hanViet": null,
+      "vi": "hai (dùng trước lượng từ; 两点 = 2 giờ)",
+      "status": "verified-editorial",
+      "noteVi": "Chưa ghi âm Hán–Việt vì dự án chưa có căn cứ đã kiểm chứng cho chữ này."
+     },
+     {
+      "zh": "胡",
+      "pinyin": "Hú",
+      "hanViet": "HỒ",
+      "vi": "họ Hồ",
+      "status": "verified-editorial",
+      "noteVi": "Âm Hán–Việt của chữ đã được kiểm chứng trong từ vựng của dự án; nghĩa theo ngữ cảnh Bài 8."
+     },
+     {
+      "zh": "小雪",
+      "pinyin": "Xiǎoxuě",
+      "hanViet": null,
+      "vi": "Tiểu Tuyết (tên người trong câu luyện đọc của sách)",
+      "status": "verified-editorial",
+      "noteVi": "Tên người trong câu luyện đọc của điểm kiến thức về vị trí. Chữ 雪 chưa có âm Hán–Việt đã kiểm chứng trong dự án nên chưa ghi."
+     },
+     {
+      "zh": "上",
+      "pinyin": "shàng",
+      "hanViet": "THƯỢNG",
+      "vi": "trên, phía trên (từ chỉ phía của bài)",
+      "status": "verified-editorial",
+      "noteVi": "Âm Hán–Việt của chữ đã được kiểm chứng trong từ vựng của dự án; nghĩa theo ngữ cảnh Bài 8."
+     },
+     {
+      "zh": "听力",
+      "pinyin": "tīnglì",
+      "hanViet": null,
+      "vi": "thính lực",
+      "status": "verified-editorial",
+      "noteVi": "Theo ví dụ của điểm kiến thức về từ điệp âm (Workbook tr.048). Chưa ghi âm Hán–Việt vì dự án chưa có căn cứ đã kiểm chứng cho chữ này."
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": null,
+      "vi": "mười",
+      "status": "verified-editorial",
+      "noteVi": "Theo phần chữ Hán của Workbook tr.049–050. Chưa ghi âm Hán–Việt vì dự án chưa có căn cứ đã kiểm chứng cho chữ này."
+     },
+     {
+      "zh": "二十",
+      "pinyin": "èrshí",
+      "hanViet": null,
+      "vi": "hai mươi",
+      "status": "verified-editorial",
+      "noteVi": "Theo phần chữ Hán của Workbook tr.049–050. Chưa ghi âm Hán–Việt vì dự án chưa có căn cứ đã kiểm chứng cho chữ này."
+     }
+    ],
+    "phrases": [
+     {
+      "zh": "在医院工作",
+      "pinyin": "zài yīyuàn gōngzuò",
+      "vi": "làm việc ở bệnh viện",
+      "status": "verified-editorial",
+      "noteVi": "Cụm trong tên bài và Hội thoại 3: 我爸爸也在医院工作。"
+     },
+     {
+      "zh": "在学校吃午饭",
+      "pinyin": "zài xuéxiào chī wǔfàn",
+      "vi": "ăn cơm trưa ở trường",
+      "status": "verified-editorial",
+      "noteVi": "Câu của Hội thoại 2 và ví dụ của điểm kiến thức 在."
+     }
+    ]
+   }
   }
  ]
 }

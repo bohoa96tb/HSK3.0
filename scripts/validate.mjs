@@ -216,3 +216,17 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`validate: OK — ${data.sources.length} sources, ${data.books.length} books, ${data.lessons.length} lessons | ${summary.join(" | ")}`);
+
+// D24: optional tap-to-lookup data (pilot: Bài 8). Entries are project-curated;
+// a null hanViet is an honest "not yet verified" state, never a guess.
+for (const c of contents) {
+  if (!c.lookup) continue;
+  for (const [kind, arr] of [["extras", c.lookup.extras || []], ["phrases", c.lookup.phrases || []]]) {
+    if (!Array.isArray(arr)) err(`${c.lessonId}: lookup.${kind} must be an array`);
+    for (const e of arr) {
+      if (!e.zh || !e.pinyin || !e.vi) err(`${c.lessonId}: lookup.${kind} entry needs zh/pinyin/vi (${e.zh || "?"})`);
+      if (e.status !== "verified-editorial") err(`${c.lessonId}: lookup.${kind} ${e.zh}: status must be verified-editorial`);
+      if (e.hanViet !== null && e.hanViet !== undefined && (typeof e.hanViet !== "string" || e.hanViet !== e.hanViet.toUpperCase())) err(`${c.lessonId}: lookup.${kind} ${e.zh}: hanViet must be uppercase or null`);
+    }
+  }
+}

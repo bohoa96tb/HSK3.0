@@ -287,3 +287,27 @@ Textbook tr. in 035–042, Workbook tr. in 031–032 đọc trực quan; lời �
 Vòng QA đầy đủ của lượt rà soát (khác lượt tóm tắt trước) bắt thêm 2 lỗi ngữ nghĩa mà test chưa bao phủ, cả hai đã sửa ở contentVersion 20261101-lesson6-2 kèm test hồi quy:
 1. `wb5-text-2`: đoạn loa 5.75–7.25 của track 5-1 (đọc 星期日） bị gán nhầm cho lựa chọn 星期三 (id 1); lựa chọn đúng 星期日 (id 3) lại không có loa. Đã chuyển đoạn sang id 3; tổng số lựa chọn có loa không đổi (106/127 toàn app). Thêm test bảo vệ chung: mọi đoạn loa của lựa chọn Bài 4–5 phải đọc đúng nguyên văn lựa chọn trong track đã gán.
 2. `wb5-comp-5`: thân câu app ghi thêm 它 ("我也很（ ）它。") trong khi bản in tr.033 là "我也很______。" không có 它. Đã sửa thân câu/pinyin/dịch/bằng chứng theo đúng bản in (đáp án 喜欢 không đổi); nhân tiện sửa dấu câu của wb5-comp-4 thành ！ như bản in.
+
+## Quy trình áp dụng từ Bài 7 (D17)
+
+Mỗi mục QA của một bài từ Bài 7 trở đi phải ghi rõ năm loại bằng chứng riêng biệt: (a) test tự động, (b) đối chiếu trực quan bản in, (c) đối chiếu ASR, (d) kiểm nghe thực tế, (e) kiểm giao diện (trình duyệt/iframe/thiết bị thật). Kết luận đạt chỉ ghi sau khi báo cáo QA độc lập đầy đủ đã về và vòng sửa–kiểm lại đã khép trong nhánh. Test so dữ liệu với chính dữ liệu không được ghi là kiểm chứng độc lập; kiểm ánh xạ audio không được ghi là kiểm nghe.
+
+## Bài 7 — 我晚上六点半下班 (2026-11-01, quy trình D17)
+
+**Kết luận: ĐẠT sau một vòng sửa trong nhánh; đã khép QA trước phát hành.**
+
+QA độc lập (đối chiếu trực quan bản in Textbook PDF 60–67 / Workbook PDF 46–48) kiểm ngữ nghĩa từng mảng:
+
+- Từ mới 27/27, hội thoại 14/14 câu (từng chữ + dấu câu + người nói), đáp án 9/9 (duy nhất; gồm hai câu tổng hợp tách từ câu in hai chỗ trống — thân câu khớp bản in), 6 điểm kiến thức (nội dung + ví dụ nguyên văn, không mâu thuẫn), 28 cặp phát âm của hai bài phân biệt, 4 khung câu dùng hình để nói: đều ĐẠT ở vòng 1.
+- **Lỗi vòng 1 (đã sửa và QA kiểm lại đạt ở vòng 2):**
+  1. Ánh xạ loa từ mới: 7/27 đoạn ban đầu (lấy theo token ASR) tràn sang từ kề （早上/上午 gối nhau, 分 chứa đầu 课， 见 chứa cuối 下午， 电影 tràn sang 事， 上课 gối 呢， 家 tràn sang 里）. Đã căn lại toàn bộ 27 đoạn theo phân tích khoảng lặng (silence-burst) của ba track từ mới — mỗi từ đọc hai lần, đoạn chỉ phủ lần đọc đầu; hai đoạn ví dụ điểm kiến thức cũng thu hẹp tương ứng. QA vòng 2 quét lại cả 27 đoạn + 2 ví dụ: không còn đoạn nào chứa từ ngoài nhãn.
+  2. Liên kết ôn tập: wb7-text-2 trỏ kp-ne là sai (ô trống kiểm tra cụm động từ 上课； 呢 đã cho sẵn trong câu nguồn, không phải thứ được kiểm tra) → gỡ, để trống; wb7-text-3 thiếu liên kết (thân câu của chính câu hỏi là câu trần thuật + 呢 cần hoàn thành) → thêm kp-ne; wb7-comp-4 trỏ kp-adverbial là gán gần đúng (ô trống là chọn từ trong ngân hàng) → gỡ, để trống theo quy tắc D17. exerciseIds đồng bộ hai chiều; QA vòng 2 xác nhận khớp.
+
+Bằng chứng tách theo năm loại theo D17:
+- **Test tự động:** validator đạt; 59/59 test (tests/lesson7.test.mjs khóa đáp án, liên kết sau sửa và trạng thái unverified của hai bài phát âm). Đây là kiểm tra tính nhất quán dữ liệu, không thay kiểm chứng độc lập.
+- **Đối chiếu trực quan bản in:** toàn bộ mảng nội dung ở trên do QA độc lập đọc trực tiếp PDF đối chiếu dữ liệu.
+- **Đối chiếu ASR:** hai lượt faster-whisper (có/không VAD) + phân tích khoảng lặng để căn đoạn; thứ tự và ranh giới đoạn là căn bằng máy.
+- **Kiểm nghe thực tế:** CHƯA thực hiện — mọi đoạn giữ `asr-draft`. Hai bài phân biệt phát âm giữ `unverified`, không chấm tự động: đã thử đọc tài liệu lời đọc đăng lại (Scribd) hai lượt trong ngày để đối chiếu, cả hai lượt trang không tải xong, không có căn cứ nâng trạng thái.
+- **Kiểm giao diện:** nghiệm thu live + iframe responsive sau phát hành (cập nhật dưới đây khi có kết quả).
+
+Giới hạn đã biết: chưa Android thật; chưa CI GitHub Actions (403 — handoff ở docs/ci/); quyền nguồn unknown.

@@ -14,8 +14,8 @@ Số track theo bài lấy từ danh mục trang audio Baulchino ngày 2026-10-3
 bài 1–3 và 7–15 mỗi bài 2 track, bài 4–6 mỗi bài 3 track). Đây là số đếm ở
 mức danh mục, chưa kiểm tra phát từng track.
 
-Trạng thái xuất bản app: Bài 1–6 đã xuất bản đầy đủ (Bài 6 ngày 2026-11-01,
-chuẩn ux3 + D13/D15). Bài 7–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
+Trạng thái xuất bản app: Bài 1–7 đã xuất bản đầy đủ (Bài 7 ngày 2026-11-01,
+chuẩn ux3 + D13/D15/D17). Bài 8–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
 
 ## 1. Bảng 15 bài HSK1
 
@@ -27,7 +27,7 @@ chuẩn ux3 + D13/D15). Bài 7–15 mới ở mức mục lục — chưa đọc
 | 4 | 我有两个孩子 | I have two children | Tôi có hai người con | 013 | 6 | 3 | Chỉ mục lục |
 | 5 | 今天我休息 | I'm off today | Hôm nay tôi nghỉ | 022 | 6 | 3 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 027–034 và Workbook 022–024 (xem mục 7) |
 | 6 | 你的手机号是多少？ | What's your cell phone number? | Số điện thoại của bạn là bao nhiêu? | 031 | 6 | 3 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 035–042 và Workbook 031–032 (xem mục 8) |
-| 7 | 我晚上六点半下班 | I'll finish work at 6:30 in the evening | Tôi tan làm lúc sáu giờ rưỡi tối | 039 | 6 | 2 | Chỉ mục lục |
+| 7 | 我晚上六点半下班 | I'll finish work at 6:30 in the evening | Tôi tan làm lúc sáu giờ rưỡi tối | 039 | 6 | 2 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 045–052 và Workbook 039–041 (xem mục 9) |
 | 8 | 我爸爸也在医院工作 | My father also works at a hospital | Bố tôi cũng làm việc ở bệnh viện | 048 | 6 | 2 | Chỉ mục lục |
 | 9 | 我明天上午在学校学习 | I'll be studying at school tomorrow morning | Sáng mai tôi học ở trường | 057 | 6 | 2 | Chỉ mục lục |
 | 10 | 这儿的苹果真便宜！ | The apples here are really affordable! | Táo ở đây thật rẻ! | 066 | 6 | 2 | Chỉ mục lục |
@@ -188,3 +188,11 @@ Audio Bài 3 đối ứng theo ký hiệu in trong sách, thời lượng đo b�
 - Hội thoại 3 (track 6-5, ở nhà): câu hỏi nghe hiểu in tr.038 （王一雪一家人想去西安饭店（ ）→ 吃晚饭； 刘小明不想吃（ ）→ 包子） — 星期天我们去哪儿吃晚饭？…我们怎么去？/ 坐出租车去。Từ mới 6-6 （吃、晚饭、那边、包子、非常、好吃、米饭、怎么、坐、出租车） + tên riêng 西安饭店； 小语讲堂 2 连动句（1）(tr.040: mục đích + cách thức), 3 疑问代词“怎么” (tr.041). Bài tập tổng hợp tr.041: chọn từ điền trống 5 chỗ (ngân hàng 多少/买/米饭/坐/去） → 5 câu chấm tự động wb6-comp-1..5 (đáp án 5/2/4/3/1); dùng hình để nói 4 khung câu → bài tự luyện st-l06-03 không chấm. Hai câu hỏi mở cuối Hội thoại 3 (tr.039) là câu hỏi thảo luận, không chuyển thành câu chấm điểm.
 - **Workbook tr. in 031–032 (PDF 38–39)**: phát âm (track 6-1): 儿化 — bảng 6 cặp gốc → dạng nhi hóa （这→这儿、哪→哪儿、画→画儿、盖→盖儿、个→个儿、眼→眼儿） + 8 từ kèm hình （面条儿、好玩儿、一点儿、饭馆儿、那儿、这儿、玩儿、歌儿） → 13 từ nền trong app （这儿 trùng giữa bảng và hình, tính một lần); quy tắc viết 隔音符号 (tr.032: shí'èr, Xī'ān, Tiān'ān Mén). 听读练 (track 6-2, tr.032): bài 1 chọn âm tiết đôi 6 cặp → bài gõ âm tiết tự chấm theo D15 (đáp án theo lời đọc đăng lại tr. in 014 + ASR: nàbiān, dōngxi, chāoshì, wǎnfàn, shǒujī, diànhuà); bài 2 phân biệt nhi hóa 6 cặp — tài liệu lời đọc không liệt kê đáp án và sách đặt bài này là bài đọc theo → giữ bài tự luyện không chấm (st-l06-02). **模拟测练 (từ tr.033) KHÔNG đưa vào bài theo D15.**
 - **App**: 22 từ mới, 5 điểm kiến thức, 14 câu/3 đoạn, 9 câu chấm tự động (4 nghe hiểu + 5 tổng hợp), 1 bài chọn âm tiết đôi 6 ô (verified-editorial), 2 bài tự luyện không chấm, ảnh ngữ cảnh ở trường (Textbook tr.036). Loa theo đơn vị: đủ 14/14 câu, 22/22 từ mới, 11/13 từ nền （盖儿/个儿 chưa có loa riêng), 30/37 lựa chọn.
+
+## 9. Map chi tiết — Bài 7 我晚上六点半下班 (đã đối chiếu trực quan 2026-11-01)
+
+- **Textbook tr. in 045–052 (PDF 60–67)**: mục tiêu — nói giờ giấc của sự việc （点/分 và các từ chỉ buổi), trợ từ “吧” (1) đề nghị/thương lượng, trợ từ “呢” (2) khẳng định sự việc, vị trí trạng ngữ thời gian/phó từ. Hội thoại 1 (track 7-1, qua điện thoại): 现在几点？/ 早上八点四十。/ 我上午十点十分有课。/ 好的，我们下午两点见吧。Từ mới 7-2 （现在、点、早上、上午、分、课、下午、见、吧）; 小语讲堂 1 时间的表达（2) và 2 语气助词“吧”（1) (tr.047–048).
+- Hội thoại 2 (track 7-3, ở trường): câu hỏi nghe hiểu in tr.048 （李文下午想去（ ）→ 看电影； 白家月明天下午还（ ）→ 上课） — 下午我想去电影院看电影，你去吗？/ 我不想去，下午还有事。/ 好的。明天呢？/ 我明天下午两点还上课呢，四点半下课。Từ mới 7-4 （电影院、看、电影、事、上课、呢、半、下课）; 小语讲堂 3 副词、时间词作状语的位置 (tr.049–050) và 4 语气助词“呢”（2) (tr.050).
+- Hội thoại 3 (track 7-5, Vương Nhất Tuyết gọi điện cho Lưu Minh): câu hỏi nghe hiểu in tr.050 （刘明（ ）呢 → 在家里； 王一雪（ ）下班 → 六点半） — 喂，你在哪儿呢？/ 我在家里呢。/ 我晚上六点半下班。/ 我八点去医院上班。/ 好的，你去店里买些菜吧。/ 好，我十分钟后去。Từ mới 7-6 （在、家、里、晚上、医院、上班、店、菜、分钟、后）; mẹo phát âm 里 (phương vị từ đọc nhẹ "li"). Bài tập tổng hợp tr.052: chọn từ điền trống 5 chỗ (ngân hàng 医院/十二点半/课/现在/见） → 5 câu chấm tự động wb7-comp-1..5 (đáp án 3/2/5/4/1); dùng hình để nói 4 khung câu → bài tự luyện st-l07-03 không chấm. Hai câu hỏi mở cuối Hội thoại 3 (tr.051) là câu hỏi thảo luận, không chuyển thành câu chấm điểm.
+- **Workbook tr. in 039–041 (PDF 46–48)**: phát âm (track 7-1): phân biệt thanh mẫu đưa hơi/không đưa hơi — 6 nhóm cặp b-p, d-t, g-k, j-q, zh-ch, z-c, bảng 12 cặp âm tiết (tr.039); phân biệt vận mẫu mũi trước/sau –n/–ng, 16 cặp (tr.040); bài đọc giới thiệu chữ Hán (không phải bài tập). Hai bài phân biệt thành hai bài ở khối nghe–viết (st-l07-01/02); trạng thái chấm theo bằng chứng lời đọc đăng lại. **模拟测练 (từ tr.042) KHÔNG đưa vào bài theo D15.**
+- **App**: 27 từ mới, 6 điểm kiến thức, 14 câu/3 đoạn, 9 câu chấm tự động (4 nghe hiểu + 5 tổng hợp), 2 bài phân biệt phát âm + 1 bài tự luyện không chấm, ảnh ngữ cảnh qua điện thoại (Textbook tr.046). Loa theo đơn vị: đủ 14/14 câu, 27/27 từ mới, 26/37 lựa chọn; bài này không có từ nền dạng chữ (nội dung phát âm là các cặp âm tiết).

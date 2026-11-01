@@ -8,7 +8,7 @@
 - checksRun: npm run check — validator đạt (6 bài; Hán–Việt 110/110; 142 ô verified-editorial), 53/53 test đạt; git diff --check sạch. CI GitHub Actions vẫn chưa tạo được qua connector (403); bản bàn giao docs/ci/ci.yml — cần Hoa tạo .github/workflows/ci.yml qua web GitHub hoặc cấp quyền workflow.
 - blockers: quyền tái xuất bản vẫn unknown; mọi đoạn loa vẫn asr-draft, chưa nghe kiểm chứng bởi người; đơn vị chưa có loa riêng: 大家 (Bài 1), 雨/五/一/椅子 (Bài 2), 吗/嘴 (Bài 3), 盖儿/个儿 (Bài 6) cùng các lựa chọn/ví dụ đã ghi ở từng lượt; ô 5 Bài 5 ở trạng thái source-conflict (D16) chờ bằng chứng giải quyết xung đột; trang Tiến độ chỉ dẫn tới điểm nghe–viết ở Tổng kết/Luyện tập chứ không in điểm trực tiếp; chưa thử Android thật.
 - evidence: docs/SOURCE_AUDIT.md (mục Bài 5 + bổ sung rà soát, mục Bài 6), docs/QA_REPORT.md (mục Bài 5, lượt rà soát Bài 5, mục Bài 6), docs/DECISIONS.md D13–D16, docs/CONTENT_STANDARD.md (quy tắc source-conflict), docs/UI_SPEC.md mục 11
-- baselineCommit: cebd8fcc0e03880796c1f090b91d4eb9df93513f (trước đính chính QA vòng 2)
+- baselineCommit: fdbbd9bf47afeae0b3e84aacf1756734050ba4ee (PR #28, đính chính QA vòng 2 Bài 5; contentVersion live 20261101-lesson6-2, đã đối chiếu khớp byte)
 - branch: main (PR #26)
 - deploymentUrl: https://bohoa96tb.github.io/HSK3.0/
 - release (Bài 6): PR #26 merge 03d6e27a; contentVersion live 20261101-lesson6-1 (đã đối chiếu content.json trên URL thật khớp byte bản local); ảnh assets/lesson-06/classroom.webp tải lên qua web GitHub và đối chiếu git blob sha khớp bản local (25ec966d…; raw.githubusercontent có lúc trả 404 thoáng qua cho nhánh có dấu /, đã xác minh qua API); file văn bản đẩy qua connector push-files, đối chiếu byte khớp.

@@ -135,8 +135,9 @@ for (const c of contents) {
     if (item.answerStatus === "verified-from-visual" && (!item.answerEvidence || !item.image)) err(`exercise ${item.id}: visual answer needs evidence and image`);
     checkRefs(item.sourceRefs, `exercise ${item.id}`);
     for (const g of item.grammarIds || []) if (!kpIds.has(g)) err(`exercise ${item.id}: unknown grammarId ${g}`);
-    if (["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
+    if (["verified-from-print", "verified-from-visual", "verified-editorial"].includes(item.answerStatus)) {
       if (!item.options.some((o) => o.id === item.answer)) err(`exercise ${item.id}: answer not among options`);
+      if (item.answerStatus === "verified-editorial" && !item.answerEvidence) err(`exercise ${item.id}: editorial answers need documented cross-check evidence`);
     } else if (item.answer != null) {
       err(`exercise ${item.id}: unverified answers must not be auto-graded (answer must be null)`);
     }

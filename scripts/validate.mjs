@@ -159,6 +159,13 @@ for (const c of contents) {
     } else if (t.answerStatus === "verified-editorial") {
       if (!["initial", "final", "tone", "syllable"].includes(t.gradingMode)) err(`self-check ${t.id}: gradingMode must be initial/final/tone/syllable`);
       if (!t.answerEvidence) err(`self-check ${t.id}: verified-editorial needs answerEvidence`);
+      if (t.conflictCells !== undefined) {
+        if (!Array.isArray(t.conflictCells) || !t.conflictCells.length) err(`self-check ${t.id}: conflictCells must be a non-empty array when present`);
+        else {
+          for (const idx of t.conflictCells) if (!Number.isInteger(idx) || idx < 0 || idx >= t.prompts.length) err(`self-check ${t.id}: conflictCells index ${idx} out of range`);
+          if (!t.conflictNoteVi) err(`self-check ${t.id}: conflictCells requires conflictNoteVi`);
+        }
+      }
       if (!Array.isArray(t.answers) || t.answers.length !== t.prompts.length) err(`self-check ${t.id}: answers must cover every prompt`);
       if (!Array.isArray(t.scriptSyllables) || t.scriptSyllables.length !== t.prompts.length) err(`self-check ${t.id}: scriptSyllables must cover every prompt`);
       if (Array.isArray(t.answers) && Array.isArray(t.scriptSyllables)) {

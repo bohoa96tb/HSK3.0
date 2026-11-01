@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson5-1",
+  "contentVersion": "20261101-lesson5-2",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -8171,7 +8171,13 @@
                 "id": "1",
                 "zh": "妹妹",
                 "pinyin": "mèimei",
-                "vi": "em gái"
+                "vi": "em gái",
+                "audio": {
+                  "trackId": "trk-tb-l04-3",
+                  "start": 12.05,
+                  "end": 12.55,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
@@ -8183,7 +8189,13 @@
                 "id": "3",
                 "zh": "哥哥",
                 "pinyin": "gēge",
-                "vi": "anh trai"
+                "vi": "anh trai",
+                "audio": {
+                  "trackId": "trk-tb-l04-3",
+                  "start": 1.45,
+                  "end": 1.95,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "1",
@@ -8220,19 +8232,37 @@
                 "id": "1",
                 "zh": "两",
                 "pinyin": "liǎng",
-                "vi": "hai"
+                "vi": "hai",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 4.25,
+                  "end": 4.75,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
                 "zh": "四",
                 "pinyin": "sì",
-                "vi": "bốn"
+                "vi": "bốn",
+                "audio": {
+                  "trackId": "trk-tb-l04-3",
+                  "start": 8.95,
+                  "end": 9.25,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
                 "zh": "五",
                 "pinyin": "wǔ",
-                "vi": "năm"
+                "vi": "năm",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 11.65,
+                  "end": 12.15,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "2",
@@ -8270,13 +8300,25 @@
                 "id": "1",
                 "zh": "一个",
                 "pinyin": "yí gè",
-                "vi": "một"
+                "vi": "một",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 5.85,
+                  "end": 6.55,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
                 "zh": "两个",
                 "pinyin": "liǎng gè",
-                "vi": "hai"
+                "vi": "hai",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 4.25,
+                  "end": 4.95,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
@@ -8313,19 +8355,37 @@
                 "id": "1",
                 "zh": "五",
                 "pinyin": "wǔ",
-                "vi": "năm"
+                "vi": "năm",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 11.65,
+                  "end": 12.15,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
                 "zh": "十二",
                 "pinyin": "shí'èr",
-                "vi": "mười hai"
+                "vi": "mười hai",
+                "audio": {
+                  "trackId": "trk-tb-l04-5",
+                  "start": 15.55,
+                  "end": 16.25,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
                 "zh": "二十",
                 "pinyin": "èrshí",
-                "vi": "hai mươi"
+                "vi": "hai mươi",
+                "audio": {
+                  "trackId": "trk-tb-l04-1",
+                  "start": 8.15,
+                  "end": 8.75,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "2",
@@ -9265,7 +9325,8 @@
             "l05-s4"
           ],
           "exerciseIds": [
-            "wb5-text-2"
+            "wb5-text-2",
+            "wb5-comp-1"
           ]
         },
         {
@@ -9310,7 +9371,9 @@
           "sentenceIds": [
             "l05-s2"
           ],
-          "exerciseIds": []
+          "exerciseIds": [
+            "wb5-comp-1"
+          ]
         },
         {
           "id": "kp-hsk1-l05-hui",
@@ -9358,7 +9421,8 @@
             "l05-s8"
           ],
           "exerciseIds": [
-            "wb5-text-1"
+            "wb5-text-1",
+            "wb5-comp-3"
           ]
         },
         {
@@ -10127,7 +10191,7 @@
       "exerciseSet": {
         "id": "set-tb-l05-text-v1",
         "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-        "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 030) và Hội thoại 3 (trang 031). Đáp án lấy từ chính lời thoại in trong sách.",
+        "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 030) và Hội thoại 3 (trang 031), đáp án lấy từ chính lời thoại in trong sách; cộng năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 033, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của trang 033 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
         "items": [
           {
             "id": "wb5-text-1",
@@ -10140,7 +10204,13 @@
                 "id": "1",
                 "zh": "会",
                 "pinyin": "huì",
-                "vi": "biết (làm)"
+                "vi": "biết (làm)",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 2.65,
+                  "end": 2.97,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
@@ -10183,7 +10253,13 @@
                 "id": "1",
                 "zh": "星期三",
                 "pinyin": "Xīngqīsān",
-                "vi": "thứ tư"
+                "vi": "thứ tư",
+                "audio": {
+                  "trackId": "trk-tb-l05-1",
+                  "start": 5.75,
+                  "end": 7.25,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "2",
@@ -10232,13 +10308,25 @@
                 "id": "2",
                 "zh": "下班",
                 "pinyin": "xiàbān",
-                "vi": "tan làm"
+                "vi": "tan làm",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 2.25,
+                  "end": 3.25,
+                  "status": "asr-draft"
+                }
               },
               {
                 "id": "3",
                 "zh": "休息",
                 "pinyin": "xiūxi",
-                "vi": "nghỉ ngơi"
+                "vi": "nghỉ ngơi",
+                "audio": {
+                  "trackId": "trk-tb-l05-1",
+                  "start": 8.75,
+                  "end": 9.45,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "2",
@@ -10285,7 +10373,13 @@
                 "id": "3",
                 "zh": "电脑",
                 "pinyin": "diànnǎo",
-                "vi": "máy tính"
+                "vi": "máy tính",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 5.05,
+                  "end": 5.65,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "3",
@@ -10308,6 +10402,396 @@
               }
             ],
             "grammarIds": []
+          },
+          {
+            "id": "wb5-comp-1",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 1: Hôm nay …",
+            "promptZh": "今天（ ）。",
+            "promptPinyin": "Jīntiān ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn / rau",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 9.65,
+                  "end": 10.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "喜欢",
+                "pinyin": "xǐhuan",
+                "vi": "thích",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 11.05,
+                  "end": 11.55,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "6月22号",
+                "pinyin": "6 yuè 22 hào",
+                "vi": "ngày 22 tháng 6"
+              },
+              {
+                "id": "4",
+                "zh": "新",
+                "pinyin": "xīn",
+                "vi": "mới",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 7.75,
+                  "end": 8.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "真",
+                "pinyin": "zhēn",
+                "vi": "thật / rất",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 8.75,
+                  "end": 9.55,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answerStatus": "verified-from-print",
+            "explanationVi": "“今天6月22号。” — hôm nay là ngày 22 tháng 6. Đây là câu vị ngữ danh từ: ngày tháng đứng ngay sau 今天， không cần 是.",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033. Đáp án suy ra duy nhất từ bản in: trong 5 từ cho sẵn chỉ “6月22号” là ngày tháng, và mẫu câu vị ngữ danh từ + cách nói thời gian của chính bài (hội thoại 1 và điểm kiến thức) khớp với nó.",
+            "grammarIds": [
+              "kp-hsk1-l05-time",
+              "kp-hsk1-l05-nominal-predicate"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": "033",
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "answer": "3",
+            "hintVi": "Chỉ một từ trong ngân hàng là ngày tháng."
+          },
+          {
+            "id": "wb5-comp-2",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 2: Dương Đồng Lạc có một cái máy tính …",
+            "promptZh": "杨同乐有一个（ ）电脑。",
+            "promptPinyin": "Yáng Tónglè yǒu yí gè ( ) diànnǎo.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn / rau",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 9.65,
+                  "end": 10.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "喜欢",
+                "pinyin": "xǐhuan",
+                "vi": "thích",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 11.05,
+                  "end": 11.55,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "6月22号",
+                "pinyin": "6 yuè 22 hào",
+                "vi": "ngày 22 tháng 6"
+              },
+              {
+                "id": "4",
+                "zh": "新",
+                "pinyin": "xīn",
+                "vi": "mới",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 7.75,
+                  "end": 8.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "真",
+                "pinyin": "zhēn",
+                "vi": "thật / rất",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 8.75,
+                  "end": 9.55,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answerStatus": "verified-from-print",
+            "explanationVi": "“有一个新电脑” — có một cái máy tính mới. Hội thoại 3 của bài cũng nói “是我的新电脑”.",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033; “新电脑” xuất hiện nguyên văn trong hội thoại 3 của bài (bản in trang 032), và trong ngân hàng từ chỉ “新” đứng được trước 电脑.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": "033",
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "answer": "4",
+            "hintVi": "Nhớ cụm “新电脑” ở Hội thoại 3."
+          },
+          {
+            "id": "wb5-comp-3",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 3: Bạn biết làm hai … này không?",
+            "promptZh": "你会做这两个（ ）吗？",
+            "promptPinyin": "Nǐ huì zuò zhè liǎng gè ( ) ma?",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn / rau",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 9.65,
+                  "end": 10.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "喜欢",
+                "pinyin": "xǐhuan",
+                "vi": "thích",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 11.05,
+                  "end": 11.55,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "6月22号",
+                "pinyin": "6 yuè 22 hào",
+                "vi": "ngày 22 tháng 6"
+              },
+              {
+                "id": "4",
+                "zh": "新",
+                "pinyin": "xīn",
+                "vi": "mới",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 7.75,
+                  "end": 8.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "真",
+                "pinyin": "zhēn",
+                "vi": "thật / rất",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 8.75,
+                  "end": 9.55,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answerStatus": "verified-from-print",
+            "explanationVi": "“你会做这两个菜吗？” — bạn biết làm hai món này không? Mẫu 会 + động từ của Hội thoại 2.",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033; trong ngân hàng từ chỉ “菜” là danh từ món ăn đứng sau lượng từ 个 trong mẫu 你会做…吗 của bài.",
+            "grammarIds": [
+              "kp-hsk1-l05-hui"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": "033",
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "answer": "1",
+            "hintVi": "Từ chỉ món ăn trong ngân hàng từ."
+          },
+          {
+            "id": "wb5-comp-4",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 4, chỗ trống 1: Máy tính của bạn … đẹp",
+            "promptZh": "你的电脑（ ）好看。",
+            "promptPinyin": "Nǐ de diànnǎo ( ) hǎokàn.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn / rau",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 9.65,
+                  "end": 10.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "喜欢",
+                "pinyin": "xǐhuan",
+                "vi": "thích",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 11.05,
+                  "end": 11.55,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "6月22号",
+                "pinyin": "6 yuè 22 hào",
+                "vi": "ngày 22 tháng 6"
+              },
+              {
+                "id": "4",
+                "zh": "新",
+                "pinyin": "xīn",
+                "vi": "mới",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 7.75,
+                  "end": 8.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "真",
+                "pinyin": "zhēn",
+                "vi": "thật / rất",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 8.75,
+                  "end": 9.55,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answerStatus": "verified-from-print",
+            "explanationVi": "“你的电脑真好看。” — máy tính của bạn đẹp thật. Hội thoại 3 của bài có câu “真好看！”.",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033; “真好看” xuất hiện nguyên văn trong hội thoại 3 của bài (bản in trang 032), và chỉ “真” đứng được trước tính từ 好看 trong ngân hàng từ.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": "033",
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "answer": "5",
+            "hintVi": "Nhớ câu “真好看！” ở Hội thoại 3."
+          },
+          {
+            "id": "wb5-comp-5",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 4, chỗ trống 2: Tôi cũng rất … nó",
+            "promptZh": "我也很（ ）它。",
+            "promptPinyin": "Wǒ yě hěn ( ) tā.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn / rau",
+                "audio": {
+                  "trackId": "trk-tb-l05-3",
+                  "start": 9.65,
+                  "end": 10.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "喜欢",
+                "pinyin": "xǐhuan",
+                "vi": "thích",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 11.05,
+                  "end": 11.55,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "6月22号",
+                "pinyin": "6 yuè 22 hào",
+                "vi": "ngày 22 tháng 6"
+              },
+              {
+                "id": "4",
+                "zh": "新",
+                "pinyin": "xīn",
+                "vi": "mới",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 7.75,
+                  "end": 8.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "真",
+                "pinyin": "zhēn",
+                "vi": "thật / rất",
+                "audio": {
+                  "trackId": "trk-tb-l05-5",
+                  "start": 8.75,
+                  "end": 9.55,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answerStatus": "verified-from-print",
+            "explanationVi": "“我也很喜欢它。” — tôi cũng rất thích nó: nguyên văn câu cuối Hội thoại 3 của bài.",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033; câu đầy đủ “我也很喜欢它” là nguyên văn hội thoại 3 của bài (bản in trang 032).",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": "033",
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "answer": "2",
+            "hintVi": "Nguyên văn câu cuối Hội thoại 3."
           }
         ]
       },
@@ -10363,16 +10847,43 @@
             "tōu",
             "shí"
           ],
-          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (8 cặp âm tiết) lấy từ bản in Workbook trang in 023; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 013); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 5-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) liệt kê bài này nhưng không in đáp án âm tiết. Đây là đối chiếu biên tập, không phải đáp án chính thức của nhà xuất bản và chưa nghe kiểm chứng bởi người. ĐIỂM CHƯA CHẮC CÔNG KHAI (theo D14): ở ô 5, cặp in trong sách là jiǎ/xiǎ nhưng tài liệu lời đọc ghi âm tiết được đọc là jiā (thanh 1) và bản nháp ASR cũng nghe ra jiā — đáp án giữ jiā theo lời đọc; người học gõ jiǎ theo cặp in sẽ bị tính sai ô này. Đây là mâu thuẫn trong chính tài liệu nguồn, ghi rõ để người học biết.",
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (8 cặp âm tiết) lấy từ bản in Workbook trang in 023; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 013); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 5-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án cho bài này (chỉ liệt kê số thứ tự trống). Ô 5 ở trạng thái source-conflict (xem conflictNoteVi): cặp in là jiǎ/xiǎ nhưng lời đọc ghi jiā, và cao độ của âm tiết trong bản thu phẳng ở mức cao (kiểm bằng máy, không phải nghe thẩm định) — không khớp thanh 3 của cả hai thành viên cặp in; xung đột chưa giải quyết được nên ô này tạm ngừng chấm theo quy tắc source-conflict (D16), không chấm theo jiā như trước. Đây không phải đáp án chính thức của nhà xuất bản.",
           "guideVi": "Nghe track Workbook 5-2 (đoạn của bài này), với mỗi cặp hãy gõ cả âm tiết bạn nghe được — kèm dấu thanh hoặc số thanh (ví dụ gē hoặc ge1). Cặp âm tiết in trong sách hiện ở mỗi ô.",
           "audioSegment": {
             "start": 13.5,
             "end": 58.4
           },
-          "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người."
+          "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người.",
+          "conflictCells": [
+            4
+          ],
+          "conflictNoteVi": "Ô 5 tạm không chấm: đề in cặp jiǎ/xiǎ nhưng lời đọc và bản thu đều là jiā (thanh 1) — hai nguồn mâu thuẫn ngay ở thanh điệu đang kiểm tra. Ô vẫn để luyện nghe; kết quả ô này không tính vào điểm và không vào hàng đợi ôn tập."
+        },
+        {
+          "id": "st-l05-02",
+          "kind": "speaking",
+          "titleVi": "Dùng hình để nói (Textbook trang 033) — tự luyện, không chấm tự động",
+          "instructionVi": "Nhìn 4 hình ở Textbook trang 033 và hoàn thành 4 khung câu của sách: (1) 今天______。(lịch tháng 9 năm 2025, khoanh ngày 7) (2) 杨同乐会______。(hình một người đang nấu ăn) (3) 我______两个菜。(hình hai đĩa món ăn) (4) 今天是______年______月1号，______。(lịch tháng 5 năm 2025, khoanh ngày 1)",
+          "prompts": [
+            "今天______。",
+            "杨同乐会______。",
+            "我______两个菜。",
+            "今天是______年______月1号，______。"
+          ],
+          "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu với từ mới và hội thoại của bài. App không chấm bài này: sách không in đáp án và phần điền phụ thuộc vào hình.",
+          "answerStatus": "unverified",
+          "audioTrackId": "trk-tb-l05-5",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": "033",
+              "section": "综合练习 · 看图说话"
+            }
+          ]
         }
       ],
-      "selfCheckIntroVi": "Workbook trang 023, bài 1. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
+      "selfCheckIntroVi": "Workbook trang 023, bài 1. Mỗi ô được lưu tự động. 7/8 ô có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); ô 5 tạm không chấm vì nguồn mâu thuẫn (ghi chú ngay tại ô). Chưa phải đáp án chính thức của NXB.",
       "selfCheckListenVi": "▶ Nghe track Workbook 5-2",
       "apply": {
         "titleVi": "Đóng vai và hỏi ngày tháng theo tình huống thật",

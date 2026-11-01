@@ -1,14 +1,14 @@
 # CHECKPOINT — HSK3.0
 
 - milestone: Bài 1–5 đã phát hành theo chuẩn ux3 (Bài 5: PR #23); quy tắc tiếp tục theo D13 — mỗi lượt "Tiếp tục" hoàn thành trọn một bài, không chờ nghiệm thu từng bài
-- status: lessons1-5_completed_with_documented_limits
+- status: lessons1-5_completed_with_documented_limits (Bài 5 đã gồm lượt rà soát source-conflict/bài tập tổng hợp/loa lựa chọn, contentVersion 20261101-lesson5-2)
 - currentLessonId: hsk1-l05
 - lastCompletedTask: Bài 5 今天我休息 (PR #23 merge 863aae58, contentVersion 20261101-lesson5-1): 22 từ mới + Hán–Việt 22/22 (tổng 88/88), 5 điểm kiến thức （时间的表达（1) / 名词谓语句 / 能愿动词“会” + nền biến điệu của 不 và của 一）, 14 câu/3 hội thoại print-verified, 8 track, 4 câu hỏi nghe hiểu in trong Textbook verified-from-print (đáp án 1/3/2/3), 1 bài chọn âm tiết 8 ô verified-editorial theo chế độ "syllable" (lời đọc đăng lại tr. in 013 + ASR; tài liệu đáp án đăng lại không in đáp án âm tiết Bài 5), 10 từ nền (chính là từ ví dụ của hai bảng biến điệu) — loa theo đơn vị đủ 14/14 câu, 22/22 từ mới, 10/10 từ nền. QA độc lập đạt, 2 lỗi đã sửa trước PR (liên kết ôn wb5-text-2 → kp-hsk1-l05-time; pinyin ví dụ 1992 theo bản in "yī"). ĐIỂM CHƯA CHẮC CÔNG KHAI (D14): ô 5 bài chọn âm tiết — lời đọc ghi jiā trong khi cặp in là jiǎ/xiǎ, ASR cũng nghe jiā; đáp án giữ jiā, ghi rõ trong answerEvidence. Phần 模拟测练 Workbook Bài 5 (tr. in 025–030) KHÔNG đưa vào bài theo D15; bài tập tổng hợp Textbook tr.033 ghi nhận nhưng chưa chuyển vào app.
 - nextTask: Bài 6 你的手机号是多少？ (Textbook tr. in 035–042; Workbook tr. in 031–034 + phần 模拟测练 sau đó không đưa vào theo D15) khi Hoa gửi "Tiếp tục".
 - checksRun: npm run check — validator đạt (5 bài; Hán–Việt 88/88; 136 ô nghe–viết/chọn âm tiết verified-editorial), 47/47 test đạt; git diff --check sạch. CI GitHub Actions vẫn chưa tạo được qua connector (403); bản bàn giao docs/ci/ci.yml — cần Hoa tạo .github/workflows/ci.yml qua web GitHub hoặc cấp quyền workflow.
 - blockers: quyền tái xuất bản vẫn unknown; mọi đoạn loa vẫn asr-draft, chưa nghe kiểm chứng bởi người; đơn vị chưa có loa riêng: 大家 (Bài 1), 雨/五/一/椅子 (Bài 2), 吗/嘴 (Bài 3) cùng các âm tiết/ví dụ đã ghi ở các lượt trước; lựa chọn bài tập Bài 4–5 không có loa riêng; trang Tiến độ chỉ dẫn tới điểm nghe–viết ở Tổng kết/Luyện tập chứ không in điểm trực tiếp; chưa thử Android thật.
 - evidence: docs/SOURCE_AUDIT.md (mục Bài 5), docs/QA_REPORT.md (mục Bài 5), docs/DECISIONS.md D13–D15, docs/UI_SPEC.md mục 11
-- baselineCommit: 863aae587fe8a607d7cb503ed203883a6c106b9c
+- baselineCommit: 5d91902ff0f8f27420b396ee77e2cc43acfa97ba (trước lượt rà soát Bài 5)
 - branch: main (PR #23)
 - deploymentUrl: https://bohoa96tb.github.io/HSK3.0/
 - release (Bài 5): PR #23 merge 863aae58; contentVersion live 20261101-lesson5-1 (đã đối chiếu content.json trên URL thật khớp byte bản local); ảnh assets/lesson-05/classroom.webp tải lên qua web GitHub (commit c9845ec) và đối chiếu sha256 khớp bản local (a706fc57…); file văn bản đẩy qua connector push-files, đối chiếu byte khớp.

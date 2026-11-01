@@ -332,6 +332,7 @@ h3{font-size:1rem}
 .answer-grid .cell-note.ok { color: #2e7d32; }
 .answer-grid .cell-note.bad { color: #b3261e; }
 .dict-score { font-size: 0.92rem; }
+.dict-conflict-note { color: #b45309; border-left: 3px solid #b45309; padding-left: 8px; }
 .script-box { border: 1px dashed var(--line, #ccc); border-radius: 8px; padding: 8px 12px; margin: 8px 0; }
 
 /* Support bar: sticky, in-place display aids (no re-render) */

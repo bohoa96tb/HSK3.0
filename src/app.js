@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson4-1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson4-1";
-import * as player from "./player.js?v=20261101-lesson4-1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson5-2";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson5-2";
+import * as player from "./player.js?v=20261101-lesson5-2";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -520,6 +520,7 @@ function dictationHtml(content) {
   return `<details class="dict-task" id="${t.id}" data-dict-task="${t.id}" data-anchor ${open ? "open" : ""}><summary><span class="dict-task-title">${esc(t.titleVi)}</span><span class="tag">${graded ? (firstVals.length ? `Lần đầu: ${firstCorrect}/${firstVals.length} ô` : "Chưa chấm") : "Tự đánh giá"}</span></summary>
   <p>${esc(t.instructionVi)}</p>
   ${graded ? `<p class="small muted">${esc(t.guideVi || "")}</p>` : ""}
+  ${t.conflictCells?.length ? `<p class="small dict-conflict-note">${esc(t.conflictNoteVi || "")}</p>` : ""}
   <div class="dict-actions"><button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>
   ${graded ? `<button class="btn primary" data-check-dict="${t.id}">Kiểm tra</button>
   ${lastVals.some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
@@ -527,7 +528,7 @@ function dictationHtml(content) {
   </div>
   ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${lastVals.length ? ` · lần kiểm tra gần nhất: ${lastVals.filter((r) => r.correct).length}/${lastVals.length} ô đúng` : ""}</p>` : ""}
   ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
-  <div class="answer-grid">${t.prompts.map((v, i) => { const draft = p.drafts?.[t.id + ":" + i] || ""; const r = last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
+  <div class="answer-grid">${t.prompts.map((v, i) => { const conflict = isConflictCell(t, i); const draft = p.drafts?.[t.id + ":" + i] || ""; const r = conflict ? null : last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${conflict ? `<span class="cell-note warn">Tạm không chấm — nguồn đang mâu thuẫn, cứ luyện nghe và gõ thử.</span>` : r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
   ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
   <p class="small muted">${graded ? "Chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB. Tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
   <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>
@@ -934,6 +935,16 @@ async function boot() {
     const res = await fetch("data/content.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     CONTENT = await res.json();
+    update(p=>{
+      for (const c of [CONTENT.pilot, ...(CONTENT.additionalLessons || [])]) {
+        for (const task of c.selfCheckTasks || []) {
+          if (!task.conflictCells?.length) continue;
+          const e = p.dictation?.[task.id];
+          if (e) { for (const idx of task.conflictCells) { if (e.first) delete e.first[idx]; if (e.last) delete e.last[idx]; } }
+          for (const idx of task.conflictCells) delete p.reviewItems[`dict-${task.id}:${idx}`];
+        }
+      }
+    });
     update(p=>{if(p.learningRevision !== 'textbook-pilot-v2'){
       const retired=new Set(CONTENT.editorialAudit?.retiredExerciseIds||[]);
       p.archivedReviewItems ||= {};

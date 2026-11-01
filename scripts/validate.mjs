@@ -3,7 +3,7 @@
 // Content is organised as one `pilot` lesson (Bài 1) plus `additionalLessons`
 // (Bài 2, ...) that all share the same shape; every check runs per lesson and
 // IDs must be unique across lessons.
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -154,6 +154,22 @@ for (const c of contents) {
     if (t.audioTrackId && !localTracks.has(t.audioTrackId)) err(`self-check ${t.id}: unknown audioTrackId`);
     if (!Array.isArray(t.prompts) || !t.prompts.length) err(`self-check ${t.id}: prompts missing`);
     checkRefs(t.sourceRefs, `self-check ${t.id}`);
+    if (t.segment) err(`self-check ${t.id}: obsolete segment field; use audioSegment`);
+    if (t.audioSegment) {
+      const track = localTrackById.get(t.audioTrackId);
+      const { start, end } = t.audioSegment;
+      if (!(Number.isFinite(start) && Number.isFinite(end) && start >= 0 && end > start && track && end <= track.durationSec)) err(`self-check ${t.id}: audioSegment out of track range`);
+    }
+    if (t.kind === "listening-comparison") {
+      if (t.answerStatus !== "unverified" || !t.practiceEvidence || !t.guideVi) err(`self-check ${t.id}: comparison practice requires evidence, guidance and no auto-grading`);
+    }
+    if (t.promptImages) {
+      if (t.promptImages.length !== t.prompts.length) err(`self-check ${t.id}: every picture prompt needs its illustration`);
+      for (const fig of t.promptImages) {
+        if (!fig.src || !existsSync(new URL(`../${fig.src}`, import.meta.url)) || !fig.alt || !fig.captionVi) err(`self-check ${t.id}: invalid picture asset`);
+        checkRefs(fig.sourceRefs, `self-check ${t.id} picture`);
+      }
+    }
     if (t.answerStatus === "unverified") {
       if (t.answers != null || t.gradingMode != null) err(`self-check ${t.id}: unverified tasks must not carry answers/gradingMode`);
     } else if (t.answerStatus === "verified-editorial") {
@@ -178,11 +194,6 @@ for (const c of contents) {
           if (t.gradingMode === "tone" && a !== tone) err(`self-check ${t.id} cell ${i + 1}: tone answer ${a} does not match script syllable "${syl}" (tone ${tone})`);
           if (t.gradingMode === "syllable" && (stripMarks(a) !== base || ([...String(a)].map((ch) => TONE_OF[ch]).find(Boolean) || 0) !== tone)) err(`self-check ${t.id} cell ${i + 1}: syllable answer "${a}" does not match script syllable "${syl}"`);
         });
-      }
-      if (t.audioSegment) {
-        const track = localTrackById.get(t.audioTrackId);
-        const { start, end } = t.audioSegment;
-        if (!(start >= 0 && end > start && track && end <= track.durationSec)) err(`self-check ${t.id}: audioSegment out of track range`);
       }
     } else {
       err(`self-check ${t.id}: unknown answerStatus "${t.answerStatus}"`);

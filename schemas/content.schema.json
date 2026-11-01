@@ -220,6 +220,60 @@
               "hanVietStatus"
             ]
           }
+        },
+        "selfCheckTasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "speaking",
+                  "listening-comparison"
+                ]
+              },
+              "practiceEvidence": {
+                "type": "string"
+              },
+              "audioSegment": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "end": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                },
+                "required": [
+                  "start",
+                  "end"
+                ]
+              },
+              "audioSegmentStatus": {
+                "type": "string"
+              },
+              "promptImages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "src",
+                    "alt",
+                    "captionVi",
+                    "sourceRefs"
+                  ]
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "segment"
+              ]
+            }
+          }
         }
       },
       "required": [
@@ -344,6 +398,60 @@
           },
           "lessonId": {
             "type": "string"
+          },
+          "selfCheckTasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "speaking",
+                    "listening-comparison"
+                  ]
+                },
+                "practiceEvidence": {
+                  "type": "string"
+                },
+                "audioSegment": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "end": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  },
+                  "required": [
+                    "start",
+                    "end"
+                  ]
+                },
+                "audioSegmentStatus": {
+                  "type": "string"
+                },
+                "promptImages": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "src",
+                      "alt",
+                      "captionVi",
+                      "sourceRefs"
+                    ]
+                  }
+                }
+              },
+              "not": {
+                "required": [
+                  "segment"
+                ]
+              }
+            }
           }
         },
         "required": [

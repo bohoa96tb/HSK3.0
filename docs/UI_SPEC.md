@@ -34,3 +34,5 @@ Dữ liệu/ảnh động không làm đổi đáp án theo ngẫu nhiên. Kết
 
 ### Hoàn thiện tự luyện Bài 6–7
 Bài listening-comparison hiện cặp đầy đủ, hướng dẫn nghe–so sánh–đọc theo, ô ghi chú rõ nhãn, tự đánh giá riêng và không nút chấm. Bài speaking có promptImages hiển thị ảnh trước từng khung câu; hai cột ở mọi bề rộng (kể cả điện thoại, cập nhật D20). Không có nút phát track không liên quan. Mốc nghe nháp có nhãn tham khảo.
+
+Bổ sung (D21): bài học có thể có bộ bài bổ trợ riêng (`suppExerciseSet`, ví dụ đề mô phỏng của sách) hiển thị thành thẻ riêng ngay dưới thẻ luyện tập chính trong Mục 5, dùng cùng cơ chế làm bài nhưng session và điểm lần đầu tách theo từng bộ; câu nghe trong bộ bổ trợ có nút “Nghe đoạn của câu này” phát đúng đoạn audio của câu.

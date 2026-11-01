@@ -239,3 +239,19 @@ Hai ghi chú nhỏ, không chặn, đã cân nhắc và giữ nguyên có lý do
 - CI GitHub Actions chưa tạo được qua connector (403) — kiểm thử trên là local + nghiệm thu live, không gọi là CI.
 - Chưa thử Android thật; tuyến responsive Bài 4 đã thêm vào `tests/responsive.html` ở PR bookkeeping nhưng chưa chạy kiểm iframe.
 - 模拟测练 của Workbook Bài 4 (nghe 1–10, đọc 11–20, có đáp án đăng lại) không nằm trong bài theo D15.
+
+## Bài 5 — 今天我休息 (01/11/2026, PR #23)
+
+Textbook tr. in 027–034, Workbook tr. in 022–024 đọc trực quan (mục lục in IX đính chính trang bắt đầu của bài: 027); lời đọc đăng lại (Scribd 1067878415) phần Bài 5 tr. in 013; tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án âm tiết Bài 5 (chỉ liệt kê số thứ tự trống) — đáp án chọn âm tiết đối chiếu lời đọc + ASR theo D10/D14; Hán–Việt tra từng chữ ở Thi Viện. Chi tiết ở `docs/SOURCE_AUDIT.md` mục Bài 5 và `docs/CURRICULUM_MAP.md` mục 7.
+
+### Kiểm tra mã
+
+`npm run check`: validator đạt (5 bài; Hán–Việt 88/88; 136 ô nghe–viết/chọn âm tiết verified-editorial — 128 ô Bài 1–4 + 8 ô Bài 5), **47/47 test đạt** — gồm test mới Bài 5 (số lượng 22 từ/5 điểm/14 câu/8 track, đáp án 1/3/2/3, Hán–Việt điểm kiểm HÀO/TINH KỲ/TỐ/NHẤT TA/THÁI, thời lượng track Textbook, hiển thị thân câu trong DOM, chấm syllable gồm cả trường hợp ô 5 jiā ≠ cả hai thành viên của cặp in) và cập nhật đếm bao phủ ở ux/ux3 (câu 63, từ mới 86/88 có loa, từ nền 53/58, lựa chọn 41/65; Hán–Việt 88) cùng contentVersion ở test Bài 3–4. `git diff --check` sạch.
+
+### QA độc lập (đối chiếu dữ liệu với ảnh trang in)
+
+ĐẠT các mục từ mới 22/22, câu hội thoại 14/14, cặp âm tiết 8/8, từ nền 10/10 và mục lessons[]; hai lỗi đã sửa trước khi mở PR: (1) câu wb5-text-2 liên kết ôn tập trỏ kp-hsk1-l05-hui trong khi đáp án kiểm tra thứ trong tuần — đã đổi sang kp-hsk1-l05-time và đồng bộ `exerciseIds` hai chiều (tiền lệ D13); (2) pinyin ví dụ năm 1992 ở kp-time ghi "yì…" theo biến điệu trong khi bản in tr.029 ghi "yī…" — đã sửa theo bản in. Điểm chưa chắc công khai theo D14: ô 5 bài chọn âm tiết — lời đọc ghi jiā, cặp in là jiǎ/xiǎ, ASR cũng nghe jiā; đáp án giữ jiā và ghi rõ trong `answerEvidence`.
+
+### Nghiệm thu live
+
+Đạt toàn bộ 8 bước trên bản live: lộ trình hiện 5 bài đã mở; trang Bài 5 đủ mục tiêu + ảnh văn phòng (Textbook tr.032); Từ cần biết 22 thẻ, Hán–Việt hiển thị đúng （今天 KIM THIÊN, 号 HÀO, 做 TỐ PHẠN) — trạng thái bật sẵn trên hồ sơ kiểm tra là tùy chọn đã lưu, mặc định tắt vẫn khóa bằng test DOM; Nghe & đọc 3 đoạn, loa câu “今天9月8号。” phát đúng đoạn riêng; Bài tập 4 câu hiển thị thân câu, chấm đúng/sai đúng, liên kết ôn tập của câu 2 trỏ kp-hsk1-l05-time và quay lại không mất trạng thái; bài chọn âm tiết: nút nghe ghi đoạn 0:13–0:58 và phát từ ~0:13, nhập ge1/qiang3 chấm đúng, nhập jia3 ở ô 5 bị chấm sai với đáp án jiā như thiết kế; refresh giữ nguyên kết quả; hồi quy Bài 4 tải bình thường (21 thẻ từ). Iframe responsive (tests/responsive.html) cho 3 tuyến Bài 5 ĐẠT ở 360/390/768/1440, gồm cỡ chữ tối đa và mini player mở ở 390 (thanh bước học tự cuộn ngang trong nội bộ ở 360/390 là hành vi đã biết từ các bài trước, không tràn trang). Không đồng nghĩa đã nghe thẩm định đoạn loa hoặc đã thử Android thật.

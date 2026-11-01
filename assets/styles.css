@@ -324,3 +324,12 @@ h3{font-size:1rem}
 
 
 .skip-link:focus{position:fixed;left:10px;top:10px;width:auto;height:auto;clip:auto;z-index:99;background:white;padding:12px}
+
+/* Dictation grading (verified-editorial answers) */
+.answer-grid input.cell-right { border-color: #2e7d32; background: #eef7ee; }
+.answer-grid input.cell-wrong { border-color: #b3261e; background: #fdf0ef; }
+.answer-grid .cell-note { display: block; font-size: 0.82rem; margin-top: 2px; }
+.answer-grid .cell-note.ok { color: #2e7d32; }
+.answer-grid .cell-note.bad { color: #b3261e; }
+.dict-score { font-size: 0.92rem; }
+.script-box { border: 1px dashed var(--line, #ccc); border-radius: 8px; padding: 8px 12px; margin: 8px 0; }

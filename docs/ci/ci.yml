@@ -1,0 +1,21 @@
+# CI for HSK3.0 — hand-over copy. Canonical location: .github/workflows/ci.yml
+# Runs the same checks as local: validator + unit/DOM tests via npm run check.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    name: Validator và unit test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run check

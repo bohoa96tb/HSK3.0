@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson2";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson2";
-import * as player from "./player.js?v=20261101-lesson2";
+import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-dictation";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-dictation";
+import * as player from "./player.js?v=20261101-dictation";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -370,7 +370,7 @@ function sectionExercisesHtml(content) {
     <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu.</p>
     <div class="row-actions"><button class="btn" type="button" id="back-last">← Xem lại câu cuối</button>
     <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button></div>
-    ${selfCheckHtml(content)}</section>`;
+    ${dictationHtml(content)}</section>`;
   }
   const checked = ses.checked[item.id];
   const chosen = ses.answers[item.id];
@@ -397,12 +397,37 @@ function sectionExercisesHtml(content) {
   </form>
   ${refsHtml(item.sourceRefs)}
   </section>
-  <details class="card workbook-tasks"><summary>Luyện nghe và viết thêm · ${content.selfCheckTasks.length} bài trong sách</summary>${selfCheckHtml(content)}</details>`;
+  <section class="card dictation-block"><h2>Nghe và viết trong sách</h2>${dictationHtml(content)}</section>`;
 }
-function selfCheckHtml(content) {
- const p=loadProgress();
- return `<section><h2>Nghe và viết</h2><p class="muted">${esc(content.selfCheckIntroVi||'')}</p>
- ${content.selfCheckTasks.map(t=>{const mine=p.selfChecks[t.id];return `<article class="selftask" id="${t.id}"><h3>${esc(t.titleVi)}</h3><p>${esc(t.instructionVi)}</p><button class="btn" data-play-task="${esc(t.audioTrackId)}">${esc(content.selfCheckListenVi||'▶ Nghe track')}</button><div class="answer-grid">${t.prompts.map((v,i)=>`<label><span>${i+1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i+1}" value="${esc(p.drafts?.[t.id+':'+i]||'')}" autocomplete="off"></label>`).join('')}</div><p class="small muted">Tự đánh giá mức nhớ, không phải kết quả đúng/sai.</p><div class="row-actions">${[['forgot','Chưa nhớ'],['slow','Còn chậm'],['known','Nhớ']].map(([k,v])=>`<button class="btn small ${mine?.rating===k?'primary':''}" data-selfrate="${t.id}:${k}">${v}</button>`).join('')}</div>${refsHtml(t.sourceRefs)}</article>`;}).join('')}</section>`;
+const dictResults = new Map(); // taskId -> {idx: {correct, expected}} from the latest check this session
+const dictRevealed = new Set(); // taskIds whose listening script is currently shown
+function fmtClock(sec) { return `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`; }
+function dictationHtml(content) {
+ const p = loadProgress();
+ return `<p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
+ ${content.selfCheckTasks.map((t) => {
+  const mine = p.selfChecks[t.id];
+  const graded = t.answerStatus === "verified-editorial";
+  const entry = p.dictation?.[t.id];
+  const firstVals = entry ? Object.values(entry.first || {}) : [];
+  const firstCorrect = firstVals.filter(Boolean).length;
+  const last = dictResults.get(t.id);
+  const seg = t.audioSegment;
+  const playLabel = seg ? `▶ Nghe đoạn của bài này (${fmtClock(seg.start)}–${fmtClock(seg.end)})` : esc(content.selfCheckListenVi || "▶ Nghe track");
+  return `<article class="selftask" id="${t.id}"><h3>${esc(t.titleVi)}</h3><p>${esc(t.instructionVi)}</p>
+  ${graded ? `<p class="small muted">${esc(t.guideVi || "")}</p>` : ""}
+  <div class="row-actions"><button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>
+  ${graded ? `<button class="btn primary" data-check-dict="${t.id}">Kiểm tra</button>
+  ${last && Object.values(last).some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
+  <button class="btn ghost" data-peek-dict="${t.id}">${dictRevealed.has(t.id) ? "Ẩn lời đọc" : "Xem lời đọc"}</button>` : ""}
+  </div>
+  ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${last ? ` · lần kiểm tra gần nhất: ${Object.values(last).filter((r) => r.correct).length}/${Object.keys(last).length} ô đúng` : ""}</p>` : ""}
+  ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
+  <div class="answer-grid">${t.prompts.map((v, i) => { const r = last?.[i]; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(p.drafts?.[t.id + ":" + i] || "")}" autocomplete="off" class="${r ? (r.correct ? "cell-right" : "cell-wrong") : ""}">${r ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(r.expected)}</span>`) : ""}</label>`; }).join("")}</div>
+  ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
+  <p class="small muted">${graded ? "Chấm theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
+  <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>
+  ${refsHtml(t.sourceRefs)}</article>`; }).join("")}`;
 }
 
 function bindExercises(content) {
@@ -436,8 +461,58 @@ function bindExercises(content) {
   if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; }); render(); };
   $$("[data-play-task]").forEach((b) => b.onclick = () => {
     const track = content.reader.audioTracks.find((t) => t.id === b.dataset.playTask);
-    if (track) player.playTrack(track, { rate: settings().playbackRate });
+    if (!track) return;
+    if (b.dataset.segStart != null) player.playSegment(track, { start: Number(b.dataset.segStart), end: Number(b.dataset.segEnd), rate: settings().playbackRate });
+    else player.playTrack(track, { rate: settings().playbackRate });
   });
+  $$("[data-peek-dict]").forEach((b) => b.onclick = () => {
+    const taskId = b.dataset.peekDict;
+    if (dictRevealed.has(taskId)) { dictRevealed.delete(taskId); }
+    else {
+      dictRevealed.add(taskId);
+      update((p) => { const e = (p.dictation ||= {})[taskId] ||= { first: {}, tries: {}, peeked: false }; if (!Object.keys(e.first || {}).length) e.peeked = true; });
+    }
+    render();
+  });
+  const runDictCheck = (task, onlyWrong) => {
+    const results = {};
+    task.prompts.forEach((_, i) => {
+      if (onlyWrong) { const prev = dictResults.get(task.id)?.[i]; if (!prev || prev.correct) return; }
+      const input = document.querySelector(`[data-draft="${task.id}:${i}"]`);
+      const res = gradeDictationCell(task, i, input?.value ?? "");
+      if (res.graded) results[i] = { correct: res.correct, expected: dictationExpected(task, i) };
+    });
+    if (!Object.keys(results).length) return;
+    const prevAll = dictResults.get(task.id) || {};
+    dictResults.set(task.id, { ...prevAll, ...results });
+    update((p) => {
+      const e = (p.dictation ||= {})[task.id] ||= { first: {}, tries: {}, peeked: false };
+      e.first ||= {}; e.tries ||= {};
+      for (const [idx, r] of Object.entries(results)) {
+        e.tries[idx] = (e.tries[idx] || 0) + 1;
+        if (!(idx in e.first)) {
+          e.first[idx] = r.correct;
+          const key = `dict-${task.id}:${idx}`;
+          if (!r.correct && !p.reviewItems[key]) {
+            p.reviewItems[key] = { sourceItemId: `${task.id}:${idx}`, kind: "dictation", intervalStep: 0, dueAt: new Date(Date.now() + REVIEW_INTERVALS_DAYS[0] * 86400000).toISOString(), lastResult: "wrong", attempts: 1 };
+          }
+        } else if (r.correct) {
+          const key = `dict-${task.id}:${idx}`;
+          const prevItem = p.reviewItems[key];
+          if (prevItem && prevItem.lastResult === "wrong") {
+            const sched = nextReviewState(prevItem, "known", Date.now());
+            p.reviewItems[key] = { ...prevItem, ...sched, lastResult: "correct", attempts: (prevItem.attempts || 1) + 1 };
+          }
+        }
+      }
+      e.updatedAt = new Date().toISOString();
+    });
+    render();
+  };
+  $$("[data-check-dict]").forEach((b) => b.onclick = () => { const task = content.selfCheckTasks.find((t) => t.id === b.dataset.checkDict); if (task) runDictCheck(task, false); });
+  $$("[data-redo-dict]").forEach((b) => b.onclick = () => { const task = content.selfCheckTasks.find((t) => t.id === b.dataset.redoDict); if (task) runDictCheck(task, true); });
+  const taskTarget = parseRoute().query.task;
+  if (taskTarget) { const el = document.getElementById(taskTarget); if (el) el.scrollIntoView({ block: "start" }); }
   $$("[data-selfrate]").forEach((b) => b.onclick = () => {
     const [taskId, rating] = b.dataset.selfrate.split(":");
     update((p) => {
@@ -471,7 +546,8 @@ function sectionSummaryHtml(lesson, content) {
   ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = set.items.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
   <h3>Học lại từng mục</h3>
   ${content.intro.sections.map((x) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${x.id}">${esc(x.titleVi)}</a><span class="tag">${st.completedSections.includes(x.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
-  <p class="muted">Mức “đã học” ở đây chỉ nghĩa là đã xem/làm các mục. App không coi một mục là “đã nắm vững” nếu thiếu bài tập kiểm chứng — với bài này, phần nghe–viết vẫn là tự đánh giá.</p>
+  ${(() => { const lines = content.selfCheckTasks.filter((t) => t.answerStatus === "verified-editorial").map((t) => { const e = p.dictation?.[t.id]; if (!e || !Object.keys(e.first || {}).length) return ""; const vals = Object.values(e.first); const wrongIdx = Object.entries(e.first).filter(([, v]) => !v).map(([k]) => Number(k)); return `<p>Nghe–viết “${esc(t.titleVi)}”: điểm lần đầu <strong>${vals.filter(Boolean).length}/${vals.length}</strong> ô${e.peeked ? " (đã xem lời đọc trước)" : ""}.${wrongIdx.length ? ` Ô sai: ${wrongIdx.map((i) => `<a href="#/lesson/${lesson.id}/exercises?task=${t.id}">${i + 1} (${esc(t.scriptSyllables?.[i] || "")})</a>`).join(", ")} — đã đưa vào Ôn tập.` : ""}</p>`; }).join(""); return lines ? `<h3>Nghe–viết đã chấm</h3>${lines}` : ""; })()}
+  <p class="muted">Mức “đã học” ở đây chỉ nghĩa là đã xem/làm các mục. App không coi một mục là “đã nắm vững” nếu thiếu bài tập kiểm chứng.</p>
   <p class="row-actions"><a class="btn" href="#/review">Tới Ôn tập</a><a class="btn primary" href="#/course/HSK%201">Về lộ trình</a></p></section>`;
 }
 
@@ -504,6 +580,14 @@ function viewGrammar(id, queryOverride) {
 
 // ---------- Review / Progress / Settings / Sources ----------
 function describeReviewItem(item) {
+  if (item.kind === "dictation" && typeof item.sourceItemId === "string") {
+    const cut = item.sourceItemId.lastIndexOf(":");
+    const taskId = item.sourceItemId.slice(0, cut), idx = Number(item.sourceItemId.slice(cut + 1));
+    for (const c of allContents()) {
+      const task = c.selfCheckTasks.find((t) => t.id === taskId);
+      if (task) return { title: `Nghe–viết: ${task.scriptSyllables?.[idx] || task.prompts[idx]} — ${task.titleVi}`, href: `#/lesson/${c.lessonId}/exercises?task=${taskId}`, grammarId: null };
+    }
+  }
   for (const c of allContents()) {
     const ex = c.exerciseSet.items.find((i) => i.id === item.sourceItemId);
     if (ex) return { title: ex.promptVi, href: `#/lesson/${c.lessonId}/exercises?item=${ex.id}`, grammarId: ex.grammarIds[0] };
@@ -520,7 +604,7 @@ function viewReview() {
   const upcoming = items.filter((i) => !isDue(i, Date.now())).sort((a, b) => new Date(a.dueAt) - new Date(b.dueAt));
   main.innerHTML = `${header("Ôn tập", "Ôn bằng chính câu/bài đã làm sai hoặc tự đánh giá chưa nhớ — app không tự tạo câu mới")}
   ${due.length ? `<section class="card"><h2>Đến hạn ôn (${due.length})</h2>
-    ${due.map((i) => { const d = describeReviewItem(i); return `<article class="row-line-col"><p><strong>${esc(d.title)}</strong><br><span class="muted small">Nguồn: ${i.kind === "exercise" ? "câu làm sai" : "tự đánh giá"} · đã ôn/làm ${i.attempts} lần · hạn ôn: ${esc(new Date(i.dueAt).toLocaleDateString("vi-VN"))}</span></p>
+    ${due.map((i) => { const d = describeReviewItem(i); return `<article class="row-line-col"><p><strong>${esc(d.title)}</strong><br><span class="muted small">Nguồn: ${i.kind === "exercise" ? "câu làm sai" : i.kind === "dictation" ? "nghe–viết làm sai" : "tự đánh giá"} · đã ôn/làm ${i.attempts} lần · hạn ôn: ${esc(new Date(i.dueAt).toLocaleDateString("vi-VN"))}</span></p>
     <span class="row-actions"><a class="btn" href="${esc(d.href)}">Làm lại tại bài</a>
     ${d.grammarId ? `<a class="btn ghost" href="#/grammar/${esc(d.grammarId)}?return=exercises">Xem giải thích</a>` : ""}
     ${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, label]) => `<button class="btn small" data-review-rate="${esc(i.key)}:${k}">${label}</button>`).join("")}</span></article>`; }).join("")}

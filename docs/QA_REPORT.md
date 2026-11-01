@@ -156,3 +156,26 @@ Trạng thái thử nghiệm còn lại trong profile trình duyệt QA (không 
 
 ### Giới hạn còn lại
 - Chưa nghe kiểm chứng toàn bộ audio bởi người; chưa có timestamp từng câu (chỉ có mốc đoạn); đáp án nghe–viết là biên tập đã đối chiếu, không phải đáp án NXB đã chứng minh; quyền nguồn vẫn unknown; chưa thử Android thật (checklist ngắn ở CHECKPOINT).
+
+## Lượt UX: thanh hỗ trợ, loa theo đơn vị, nghe–viết khôi phục (01/11/2026 JST, PR #9/#10/#11)
+
+### Đã sửa
+- Lỗi nhảy trang khi bật/tắt Pinyin (tái hiện trước đó: scrollY 455→0): nguyên nhân là mọi thay đổi hiển thị đều render lại toàn trang và render() cuộn về 0. Nay thanh hỗ trợ dùng chung áp dụng tại chỗ (class + biến CSS), không render; render cùng route khôi phục vị trí theo phần tử neo.
+- Loa theo đơn vị từ các track nguồn (thêm 6 track từ mới vào dữ liệu), căn đoạn bằng ASR (trạng thái `asr-draft`). Độ phủ: câu 20/20; từ mới 26/27; từ kèm hình 20/24; lựa chọn bài tập 25/25; ví dụ 26/33 đơn vị thật. Mục thiếu hiện "Chưa có audio riêng" （大家； 雨、五、一、椅子; 6 âm tiết đơn lẻ).
+- Nghe–viết: accordion 3 bài + thanh thao tác sticky theo bài; kết quả lần kiểm tra gần nhất lưu bền (`dictation.last`) và khôi phục sau refresh; ô đã sửa sau chấm hiện "Đã sửa — cần kiểm tra lại"; xóa toàn bộ chữ "không chấm điểm/không tính điểm" (giới thiệu chung, hướng dẫn thanh mẫu, và — sau phát hiện của nghiệm thu live — cả `instructionVi` của từng bài, PR #11).
+
+### Kiểm thử tự động (local)
+- Validator OK (gồm kiểm audio refs và trạng thái segment); **30/30 test đạt**, thêm `tests/ux.test.mjs`: thanh hỗ trợ đổi tại chỗ (cùng nút DOM trước/sau, route không đổi, thiết lập lưu bền), loa phát đúng đoạn và chuyển loa thay thế, loa trong lựa chọn không chọn đáp án, nghe–viết khôi phục sau điều hướng + ô sửa báo kiểm tra lại + điểm lần đầu khóa, hồi quy 78 ô giữ nguyên.
+
+### Nghiệm thu trên URL thật (sau PR #9, contentVersion 20261101-ux1; PR #10/#11 là điều chỉnh vị trí + chữ, đã đối chiếu lại trên live)
+- Không nhảy trang: cuộn ~400–600 px trong transcript Bài 1, lần lượt bấm Pinyin, Nghĩa Việt, A+ — vị trí khung hình giữ nguyên ở cả ba lần, transcript vẫn mở (đối chiếu bằng ảnh vị trí; công cụ từ xa không xuất được số scrollY dạng số — bằng chứng không render lại nằm ở test DOM nút-phần tử).
+- Đang phát audio ở Hội thoại 2 (0,75×) rồi bấm Pinyin: thời gian vẫn tăng 0:03→0:06, không phát lại, không dừng.
+- Loa thẻ từ 老师 phát đúng track từ mới; thẻ 大家 hiện "Chưa có audio riêng" (11/12 thẻ có loa). Loa câu chuyển đoạn đúng, bấm lại thì dừng; loa trong lựa chọn bài tập không chọn radio (checked: false) và chấm vẫn đúng sau đó.
+- Nghe–viết Bài 2: chấm xue2 đúng / jiao1 sai hiện đáp án jiao4; **refresh giữ nguyên dấu và điểm lần đầu 1/2**; sửa ô thành jiao4 rồi refresh: hiện "Đã sửa — cần kiểm tra lại", điểm lần đầu vẫn 1/2.
+- Phiên kiểm thử ghi nhận nghe thấy tiếng nói thật ở hội thoại và đoạn từ mới.
+- Bề rộng bằng **khung iframe**: 3 route (Bài 1 Bài tập, Bài 1 Nghe & đọc, Bài 2 Bài tập) × 360/390/768/1440 đều đạt, mini player không che thanh hỗ trợ/điều hướng. Sau vòng này, thanh hỗ trợ ở Nghe & đọc được chuyển ra đầu thẻ đọc (PR #10) và khối nghe–viết có thanh cỡ chữ riêng.
+
+### Giới hạn còn lại
+- Mọi đoạn loa là căn bằng máy (ASR), **chưa nghe kiểm chứng bởi người**; một số ví dụ là đoạn cắt trong câu dài hơn. 12 đơn vị chưa có loa riêng (liệt kê ở SOURCE_AUDIT).
+- Mini player cố định ở đáy che một dải nội dung cuối trang khi cuộn tới cuối (hành vi cũ, các nút điều hướng vẫn dùng được).
+- Chưa thử Android thật; CI vẫn chờ tạo workflow từ docs/ci/ci.yml; quyền nguồn vẫn unknown.

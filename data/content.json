@@ -1958,7 +1958,7 @@
       {
         "id": "st-01",
         "titleVi": "Nghe và viết thanh mẫu (bài 2, trang in 004)",
-        "instructionVi": "Nghe track Workbook 1-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+        "instructionVi": "Nghe đoạn của bài này trong track Workbook 1-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
         "audioTrackId": "trk-wb-l01-2",
         "answerStatus": "verified-editorial",
         "sourceRefs": [
@@ -2038,7 +2038,7 @@
       {
         "id": "st-02",
         "titleVi": "Nghe và viết vận mẫu (bài 3, trang in 004)",
-        "instructionVi": "Nghe track Workbook 1-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+        "instructionVi": "Nghe đoạn của bài này trong track Workbook 1-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
         "audioTrackId": "trk-wb-l01-2",
         "answerStatus": "verified-editorial",
         "sourceRefs": [
@@ -2118,7 +2118,7 @@
       {
         "id": "st-03",
         "titleVi": "Nghe và đánh dấu thanh điệu (bài 4, trang in 004)",
-        "instructionVi": "Nghe track Workbook 1-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+        "instructionVi": "Nghe đoạn của bài này trong track Workbook 1-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
         "audioTrackId": "trk-wb-l01-2",
         "answerStatus": "verified-editorial",
         "sourceRefs": [
@@ -3867,7 +3867,7 @@
         {
           "id": "st-l02-01",
           "titleVi": "Nghe và viết thanh mẫu (bài 1, trang in 008)",
-          "instructionVi": "Nghe track Workbook 2-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 2-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
           "audioTrackId": "trk-wb-l02-2",
           "answerStatus": "verified-editorial",
           "sourceRefs": [
@@ -3929,7 +3929,7 @@
         {
           "id": "st-l02-02",
           "titleVi": "Nghe và viết vận mẫu (bài 2, trang in 008)",
-          "instructionVi": "Nghe track Workbook 2-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 2-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
           "audioTrackId": "trk-wb-l02-2",
           "answerStatus": "verified-editorial",
           "sourceRefs": [
@@ -4009,7 +4009,7 @@
         {
           "id": "st-l02-03",
           "titleVi": "Nghe và đánh dấu thanh điệu (bài 3, trang in 008)",
-          "instructionVi": "Nghe track Workbook 2-2 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã nghe kiểm chứng; không tính điểm.",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 2-2 và điền phần còn thiếu. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
           "audioTrackId": "trk-wb-l02-2",
           "answerStatus": "verified-editorial",
           "sourceRefs": [

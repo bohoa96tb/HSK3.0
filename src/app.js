@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-dictation";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-dictation";
-import * as player from "./player.js?v=20261101-dictation";
+import { gradeChoice, gradeDictationCell, dictationExpected, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-ux1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-ux1";
+import * as player from "./player.js?v=20261101-ux1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -75,7 +75,30 @@ function parseRoute() {
 }
 function go(hash) { if (location.hash === hash) render(); else location.hash = hash; }
 
+let lastRenderedHash = null;
+function captureScrollAnchor() {
+  if (location.hash !== lastRenderedHash) return null;
+  let best = null;
+  for (const el of document.querySelectorAll("[data-anchor]")) {
+    const r = el.getBoundingClientRect();
+    if (r.bottom > 60 && r.top < window.innerHeight && (!best || Math.abs(r.top) < Math.abs(best.top))) best = { id: el.id, top: r.top };
+  }
+  return { anchor: best, y: window.scrollY };
+}
+function restoreScrollAnchor(saved) {
+  if (!saved) return;
+  const el = saved.anchor?.id ? document.getElementById(saved.anchor.id) : null;
+  if (el) { const d = el.getBoundingClientRect().top - saved.anchor.top; if (d) window.scrollBy(0, d); }
+  else if (Math.abs(window.scrollY - saved.y) > 1) window.scrollTo(0, saved.y);
+}
 function render() {
+  const savedAnchor = captureScrollAnchor();
+  renderInner();
+  applyDisplaySettings();
+  restoreScrollAnchor(savedAnchor);
+  lastRenderedHash = location.hash;
+}
+function renderInner() {
   const transcript = document.querySelector(".transcript");
   if (transcript) readerOpen=transcript.open;
   if (sectionUnsubscribe) { sectionUnsubscribe(); sectionUnsubscribe = null; }
@@ -90,7 +113,7 @@ function render() {
   const page = seg[0] || "today";
   document.body.classList.toggle("studying", page === "lesson" && !!seg[2]);
   main.dataset.page = page;
-  window.scrollTo(0, 0);
+  if (location.hash !== lastRenderedHash) window.scrollTo(0, 0);
   if (page === "today") return viewToday();
   if (page === "course") return viewCourse(seg[1]);
   if (page === "lesson") return viewLesson(seg[1], seg[2], query);
@@ -208,39 +231,74 @@ function sectionIntroHtml(lesson, content) {
 }
 
 // ---------- Lesson sections ----------
-function togglesHtml(scope) {
+const FONT_LEVELS = [1, 1.15, 1.3];
+const FONT_LABELS = { 1: "Thường", 1.15: "Lớn", 1.3: "Rất lớn" };
+// Shared support bar: display aids are applied by flipping classes on
+// <main> and a CSS variable — never by re-rendering — so toggling Pinyin,
+// meaning or font size cannot move the scroll position, close the
+// transcript, drop focus, lose drafts or restart audio.
+function supportBarHtml(scope) {
   const s = settings();
-  const pinyinKey = scope === "prep" ? "showPinyinPrep" : "showPinyinSentences";
-  return `<div class="toggles" role="group" aria-label="Tùy chọn hiển thị">
-    <label><input type="checkbox" data-setting="${pinyinKey}" ${s[pinyinKey] ? "checked" : ""}> Pinyin</label>
-    ${scope === "sentences" ? `<label><input type="checkbox" data-setting="showViSentences" ${s.showViSentences ? "checked" : ""}> Nghĩa Việt</label>` : ""}
-    <label>Cỡ chữ <select data-setting-select="fontScale">
-      ${[1, 1.15, 1.3].map((v) => `<option value="${v}" ${String(s.fontScale) === String(v) ? "selected" : ""}>${v === 1 ? "Thường" : v === 1.15 ? "Lớn" : "Rất lớn"}</option>`).join("")}
-    </select></label>
+  const pinyinOn = scope === "prep" ? s.showPinyinPrep : s.showPinyinSentences;
+  return `<div class="support-bar" role="group" aria-label="Hỗ trợ hiển thị">
+    ${scope !== "font" ? `<button type="button" class="support-btn" data-support="pinyin" data-scope="${scope}" aria-pressed="${pinyinOn}">Pinyin</button>` : ""}
+    ${scope === "sentences" ? `<button type="button" class="support-btn" data-support="vi" aria-pressed="${s.showViSentences}">Nghĩa Việt</button>` : ""}
+    <span class="support-font"><button type="button" class="support-btn font-btn" data-support="font-down" aria-label="Giảm cỡ chữ">A−</button><span class="font-level">${FONT_LABELS[s.fontScale] || "Thường"}</span><button type="button" class="support-btn font-btn" data-support="font-up" aria-label="Tăng cỡ chữ">A+</button></span>
   </div>`;
 }
-function bindToggles() {
-  $$("[data-setting]").forEach((el) => el.addEventListener("change", () => {
-    update((p) => { p.settings[el.dataset.setting] = el.checked; }); render();
-  }));
-  $$("[data-setting-select]").forEach((el) => el.addEventListener("change", () => {
-    update((p) => { p.settings[el.dataset.settingSelect] = Number(el.value); }); applyFontScale(); render();
-  }));
+function applyDisplaySettings() {
+  const s = settings();
+  main.classList.toggle("off-pinyin-prep", !s.showPinyinPrep);
+  main.classList.toggle("off-pinyin-sent", !s.showPinyinSentences);
+  main.classList.toggle("off-vi-sent", !s.showViSentences);
+  applyFontScale();
+  $$("[data-support]").forEach((b) => {
+    if (b.dataset.support === "pinyin") b.setAttribute("aria-pressed", String(b.dataset.scope === "prep" ? s.showPinyinPrep : s.showPinyinSentences));
+    if (b.dataset.support === "vi") b.setAttribute("aria-pressed", String(s.showViSentences));
+  });
+  $$(".font-level").forEach((el) => { el.textContent = FONT_LABELS[s.fontScale] || "Thường"; });
+  $$("[data-setting]").forEach((el) => { if (el.type === "checkbox") el.checked = !!s[el.dataset.setting]; });
+  $$("[data-setting-select]").forEach((el) => { el.value = String(s[el.dataset.settingSelect]); });
+}
+function bindSupportBar() {
+  $$("[data-support]").forEach((b) => { b.onclick = () => {
+    const kind = b.dataset.support;
+    update((p) => {
+      if (kind === "pinyin") { const key = b.dataset.scope === "prep" ? "showPinyinPrep" : "showPinyinSentences"; p.settings[key] = !p.settings[key]; }
+      if (kind === "vi") p.settings.showViSentences = !p.settings.showViSentences;
+      if (kind === "font-down" || kind === "font-up") { let i = FONT_LEVELS.indexOf(p.settings.fontScale || 1); if (i < 0) i = 0; i = kind === "font-up" ? Math.min(FONT_LEVELS.length - 1, i + 1) : Math.max(0, i - 1); p.settings.fontScale = FONT_LEVELS[i]; }
+    });
+    applyDisplaySettings();
+  }; });
 }
 function applyFontScale() { document.documentElement.style.setProperty("--font-scale", String(settings().fontScale || 1)); }
+
+// One speaker component for every Chinese unit. `audio` is a draft-aligned
+// segment ref ({trackId,start,end,status}) or null when the unit has no
+// segment of its own yet.
+function speakBtnHtml(audio, label) {
+  if (!audio) return `<span class="no-audio">Chưa có audio riêng</span>`;
+  return `<button type="button" class="speak-btn" data-speak data-track="${esc(audio.trackId)}" data-start="${audio.start}" data-end="${audio.end}" aria-label="Nghe: ${esc(label)}" title="Nghe mục này">🔊</button>`;
+}
+function sentenceAudio(content, sen) {
+  const group = content.reader.passages.find((g) => g.id === sen.passageId);
+  const track = group && content.reader.audioTracks.find((t) => t.id === group.audioTrackId);
+  const segm = track?.segments?.find((x) => x.sentenceId === sen.id);
+  return segm ? { trackId: track.id, start: segm.start, end: segm.end, status: segm.status } : null;
+}
 
 function sectionPrepHtml(content) {
  const s=settings();
  const firstRefs=[]; const seenPages=new Set();
  for(const w of content.prepWords){const r=w.sourceRefs[0]; if(r && !seenPages.has(r.pdfPage)){seenPages.add(r.pdfPage); firstRefs.push(r);} }
- return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${togglesHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card"><div class="pinyin">${s.showPinyinPrep?esc(w.pinyin):'&nbsp;'}</div><div class="zh" lang="zh-CN">${esc(w.zh)}</div><div class="vi">${esc(w.vi)}</div></article>`).join('')}</div><p class="study-tip">Các thẻ từ chưa có đoạn audio riêng đã xác minh. Nghe chúng trong hội thoại ở bước Nghe & đọc.</p>${refsHtml(firstRefs)}</section>`;
+ return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-head"><div class="pinyin tog-pinyin-prep">${esc(w.pinyin)}</div>${speakBtnHtml(w.audio, w.zh)}</div><div class="zh" lang="zh-CN">${esc(w.zh)}</div><div class="vi">${esc(w.vi)}</div></article>`).join('')}</div>${(() => { const missing = content.prepWords.filter((w) => !w.audio); return `<p class="study-tip">Loa trên thẻ phát đoạn đọc từ trong track từ mới của sách (căn đoạn bằng máy, chưa nghe kiểm chứng).${missing.length ? ` Chưa có loa riêng: <span lang="zh-CN">${missing.map((w) => esc(w.zh)).join("、")}</span> — nghe các từ này trong hội thoại ở bước Nghe & đọc.` : ""}</p>`; })()}${refsHtml(firstRefs)}</section>`;
 }
 
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=kp.kind==='foundation-pronunciation';
- return `<article class="card grammar-card" id="${esc(kp.id)}"><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
- ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span>${foundation||settings().showPinyinSentences?`<span class="pinyin">${esc(e.pinyin)}</span>`:''}<p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
+ return `<article class="card grammar-card" id="${esc(kp.id)}" data-anchor><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
+ ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${speakBtnHtml(e.audio, e.zh)}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
  ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=contentFor(kpLesson).reader.sentences.find(x=>x.id===id);return sen?`<a class="btn ghost small" href="#/lesson/${kpLesson}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`:'';}).join('')}</div>`:''}
  ${refsHtml(kp.sourceRefs)}${linkBack?`<a class="btn primary" href="${esc(linkBack)}">← Quay lại câu đang làm</a>`:''}</article>`;
 }
@@ -249,7 +307,7 @@ function sectionKnowledgeHtml(content) {
  const main=content.knowledgePoints.filter(x=>x.kind!=='foundation-pronunciation');
  const foundation=content.knowledgePoints.filter(x=>x.kind==='foundation-pronunciation');
  const countWord={1:'Một',2:'Hai',3:'Ba',4:'Bốn',5:'Năm',6:'Sáu',7:'Bảy',8:'Tám'}[main.length]||String(main.length);
- return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${togglesHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
+ return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
 }
 
 function trackRowHtml(track) {
@@ -276,15 +334,15 @@ function sectionReaderHtml(content) {
  return `<section class="card reader-card"><p class="kicker">NGHE TRONG NGỮ CẢNH</p><h2>${esc(r.headingVi||r.titleVi)}</h2>
  <nav class="passage-tabs" aria-label="Chọn hội thoại">${r.passages.map((g,i)=>`<a class="${g.id===group.id?'selected':''}" href="#/lesson/${content.lessonId}/reader?passage=${g.id}" ${g.id===group.id?'aria-current="true"':''}>${i+1}. ${esc(g.title)}</a>`).join('')}</nav>
  <h3>${esc(group.title)}</h3><p class="muted">${esc(group.context)}</p><div id="tracks">${trackRowHtml(track)}</div>
- <details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>${togglesHtml('sentences')}
- ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}"><span class="speaker">${esc(sen.speaker)}</span><div>${s.showPinyinSentences?`<div class="pinyin">${esc(sen.pinyin)}</div>`:''}<div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div>${s.showViSentences?`<div class="vi">${esc(sen.vi)}</div>`:`<button class="btn ghost small" data-reveal="${id}">Xem nghĩa</button><div class="vi hidden" id="vi-${id}">${esc(sen.vi)}</div>`}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div></div>`;}).join('')}
+ <details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>${supportBarHtml('sentences')}
+ ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details><p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
- <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang. Chưa đối chiếu bằng nghe và chưa có mốc từng câu; bản in không bao gồm lời dẫn của audio. Hiện chỉ phát toàn track.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
+ <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang (đã đối chiếu bản in, chưa nghe kiểm chứng). Mỗi câu có loa riêng: đoạn câu được căn bằng máy từ audio (ASR) nên là mốc nháp, chưa được người nghe xác nhận; vẫn có thể nghe cả track như trước. Bản in không bao gồm lời dẫn của audio.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
 }
 
 let readerEpoch = 0;
 function bindReader(content) {
-  bindToggles();
+  bindSupportBar();
   const r = content.reader;
   const epoch = ++readerEpoch;
   let lastKey = "";
@@ -310,7 +368,8 @@ function bindReader(content) {
   sectionUnsubscribe = player.subscribe(rerenderTracks);
   bindTrackControls();
   $$("[data-reveal]").forEach((b) => b.addEventListener("click", () => {
-    const el = document.getElementById(`vi-${b.dataset.reveal}`); if (el) el.classList.remove("hidden"); b.remove();
+    const el = document.getElementById(`vi-${b.dataset.reveal}`); if (!el) return;
+    const on = el.classList.toggle("revealed"); b.textContent = on ? "Ẩn nghĩa" : "Xem nghĩa";
   }));
   function bindTrackControls() {
     $$("[data-play]").forEach((b) => b.onclick = () => {
@@ -375,7 +434,7 @@ function sectionExercisesHtml(content) {
   const checked = ses.checked[item.id];
   const chosen = ses.answers[item.id];
   const result = checked ? gradeChoice(item, chosen) : null;
-  return `<section class="card"><h2>Luyện tập</h2>
+  return `<section class="card" id="exercise-card" data-anchor><h2>Luyện tập</h2>${supportBarHtml('font')}
   <p class="muted">${esc(set.noteVi)}</p>
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
@@ -383,7 +442,7 @@ function sectionExercisesHtml(content) {
   <form id="ex-form">
   ${item.options.map((o) => `<label class="option ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
-    <span>${o.zh ? `<span class="zh-inline">${esc(o.zh)}</span> ${checked && o.pinyin ? `<span class="pinyin">${esc(o.pinyin)}</span>` : ""}` : esc(o.labelVi || "")}</span></label>`).join("")}
+    <span>${o.zh ? `<span class="zh-inline">${esc(o.zh)}</span> ${checked && o.pinyin ? `<span class="pinyin">${esc(o.pinyin)}</span>` : ""} ${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
     <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
     ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>
@@ -399,38 +458,44 @@ function sectionExercisesHtml(content) {
   </section>
   <section class="card dictation-block"><h2>Nghe và viết trong sách</h2>${dictationHtml(content)}</section>`;
 }
-const dictResults = new Map(); // taskId -> {idx: {correct, expected}} from the latest check this session
 const dictRevealed = new Set(); // taskIds whose listening script is currently shown
+const dictOpenTasks = new Set(); // dictation tasks currently expanded (first task open by default)
 function fmtClock(sec) { return `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`; }
 function dictationHtml(content) {
  const p = loadProgress();
+ const focusTask = parseRoute().query.task;
  return `<p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
- ${content.selfCheckTasks.map((t) => {
+ ${content.selfCheckTasks.map((t, ti) => {
   const mine = p.selfChecks[t.id];
   const graded = t.answerStatus === "verified-editorial";
   const entry = p.dictation?.[t.id];
   const firstVals = entry ? Object.values(entry.first || {}) : [];
   const firstCorrect = firstVals.filter(Boolean).length;
-  const last = dictResults.get(t.id);
+  const last = entry?.last || {};
+  const lastVals = Object.values(last);
   const seg = t.audioSegment;
   const playLabel = seg ? `▶ Nghe đoạn của bài này (${fmtClock(seg.start)}–${fmtClock(seg.end)})` : esc(content.selfCheckListenVi || "▶ Nghe track");
-  return `<article class="selftask" id="${t.id}"><h3>${esc(t.titleVi)}</h3><p>${esc(t.instructionVi)}</p>
+  const open = ti === 0 || dictOpenTasks.has(t.id) || focusTask === t.id;
+  return `<details class="dict-task" id="${t.id}" data-dict-task="${t.id}" data-anchor ${open ? "open" : ""}><summary><span class="dict-task-title">${esc(t.titleVi)}</span><span class="tag">${graded ? (firstVals.length ? `Lần đầu: ${firstCorrect}/${firstVals.length} ô` : "Chưa chấm") : "Tự đánh giá"}</span></summary>
+  <p>${esc(t.instructionVi)}</p>
   ${graded ? `<p class="small muted">${esc(t.guideVi || "")}</p>` : ""}
-  <div class="row-actions"><button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>
+  <div class="dict-actions"><button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>
   ${graded ? `<button class="btn primary" data-check-dict="${t.id}">Kiểm tra</button>
-  ${last && Object.values(last).some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
+  ${lastVals.some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
   <button class="btn ghost" data-peek-dict="${t.id}">${dictRevealed.has(t.id) ? "Ẩn lời đọc" : "Xem lời đọc"}</button>` : ""}
   </div>
-  ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${last ? ` · lần kiểm tra gần nhất: ${Object.values(last).filter((r) => r.correct).length}/${Object.keys(last).length} ô đúng` : ""}</p>` : ""}
+  ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${lastVals.length ? ` · lần kiểm tra gần nhất: ${lastVals.filter((r) => r.correct).length}/${lastVals.length} ô đúng` : ""}</p>` : ""}
   ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
-  <div class="answer-grid">${t.prompts.map((v, i) => { const r = last?.[i]; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(p.drafts?.[t.id + ":" + i] || "")}" autocomplete="off" class="${r ? (r.correct ? "cell-right" : "cell-wrong") : ""}">${r ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(r.expected)}</span>`) : ""}</label>`; }).join("")}</div>
+  <div class="answer-grid">${t.prompts.map((v, i) => { const draft = p.drafts?.[t.id + ":" + i] || ""; const r = last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}</label>`; }).join("")}</div>
   ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
-  <p class="small muted">${graded ? "Chấm theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
+  <p class="small muted">${graded ? "Chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB. Tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
   <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>
-  ${refsHtml(t.sourceRefs)}</article>`; }).join("")}`;
+  ${refsHtml(t.sourceRefs)}</details>`; }).join("")}`;
 }
 
 function bindExercises(content) {
+  bindSupportBar();
+  $$("[data-dict-task]").forEach((d) => d.addEventListener("toggle", () => { if (d.open) dictOpenTasks.add(d.dataset.dictTask); else dictOpenTasks.delete(d.dataset.dictTask); }));
   $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
   const set = content.exerciseSet;
   const ses = ensureSession(content);
@@ -475,19 +540,18 @@ function bindExercises(content) {
     render();
   });
   const runDictCheck = (task, onlyWrong) => {
+    const entry = loadProgress().dictation?.[task.id];
     const results = {};
     task.prompts.forEach((_, i) => {
-      if (onlyWrong) { const prev = dictResults.get(task.id)?.[i]; if (!prev || prev.correct) return; }
+      if (onlyWrong) { const prev = entry?.last?.[i]; if (!prev || prev.correct) return; }
       const input = document.querySelector(`[data-draft="${task.id}:${i}"]`);
       const res = gradeDictationCell(task, i, input?.value ?? "");
-      if (res.graded) results[i] = { correct: res.correct, expected: dictationExpected(task, i) };
+      if (res.graded) results[i] = { correct: res.correct, input: input?.value ?? "" };
     });
     if (!Object.keys(results).length) return;
-    const prevAll = dictResults.get(task.id) || {};
-    dictResults.set(task.id, { ...prevAll, ...results });
     update((p) => {
       const e = (p.dictation ||= {})[task.id] ||= { first: {}, tries: {}, peeked: false };
-      e.first ||= {}; e.tries ||= {};
+      e.first ||= {}; e.tries ||= {}; e.last = { ...(e.last || {}), ...results };
       for (const [idx, r] of Object.entries(results)) {
         e.tries[idx] = (e.tries[idx] || 0) + 1;
         if (!(idx in e.first)) {
@@ -529,8 +593,10 @@ function bindExercises(content) {
 function sectionApplyHtml(content) {
   const a = content.apply;
   const track = content.reader.audioTracks.find((t) => t.id === a.audioTrackId);
-  return `<section class="card"><h2>Vận dụng: ${esc(a.titleVi)}</h2><p>${esc(a.instructionVi)}</p>
-  ${trackRowHtml(track)}
+  const samples = (a.samplePassageIds || []).flatMap((pid) => { const g = content.reader.passages.find((x) => x.id === pid); return g ? g.sentenceIds.map((id) => content.reader.sentences.find((x) => x.id === id)) : []; }).filter(Boolean);
+  return `<section class="card" data-anchor><h2>Vận dụng: ${esc(a.titleVi)}</h2><p>${esc(a.instructionVi)}</p>
+  ${trackRowHtml(track)}${supportBarHtml('sentences')}
+  ${samples.length ? `<h3>Câu mẫu để đóng vai</h3>${samples.map((sen) => `<div class="sentence" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div><div class="vi tog-vi-sent">${esc(sen.vi)}</div></div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`).join("")}` : ""}
   <p class="muted">${esc(a.noteVi||'')}</p>
   ${refsHtml(a.sourceRefs)}</section>`;
 }
@@ -561,8 +627,9 @@ function viewGrammar(id, queryOverride) {
     if (!kp) { main.innerHTML = `<section class="card"><h1>Không tìm thấy điểm kiến thức</h1><a class="btn" href="#/grammar">Về tra cứu</a></section>`; return; }
     const kpLesson = kpLessonId(kp.id); const kpLessonObj = lessonById(kpLesson);
     const ret = query.return && ['exercises','summary','reader','knowledge'].includes(query.return) ? `#/lesson/${kpLesson}/${query.return}${query.sentence?'?sentence='+encodeURIComponent(query.sentence):''}` : null;
-    main.innerHTML = `${knowledgeCardHtml(kp, { linkBack: ret, lessonId: kpLesson })}
+    main.innerHTML = `${supportBarHtml('sentences')}${knowledgeCardHtml(kp, { linkBack: ret, lessonId: kpLesson })}
     <section class="card"><h2>Bài có dùng điểm này</h2><p class="row-line"><a href="#/lesson/${kpLesson}">HSK 1 · Bài ${kpLessonObj.lessonNumber}: ${esc(kpLessonObj.titleZh)}</a><span class="tag">Textbook + Workbook</span></p></section>`;
+    bindSupportBar();
     return;
   }
   const q = queryOverride ?? query.q ?? "";
@@ -602,7 +669,7 @@ function viewReview() {
   const items = Object.entries(p.reviewItems).map(([key, v]) => ({ key, ...v }));
   const due = items.filter((i) => isDue(i, Date.now()));
   const upcoming = items.filter((i) => !isDue(i, Date.now())).sort((a, b) => new Date(a.dueAt) - new Date(b.dueAt));
-  main.innerHTML = `${header("Ôn tập", "Ôn bằng chính câu/bài đã làm sai hoặc tự đánh giá chưa nhớ — app không tự tạo câu mới")}
+  main.innerHTML = `${header("Ôn tập", "Ôn bằng chính câu/bài đã làm sai hoặc tự đánh giá chưa nhớ — app không tự tạo câu mới")}${supportBarHtml('font')}
   ${due.length ? `<section class="card"><h2>Đến hạn ôn (${due.length})</h2>
     ${due.map((i) => { const d = describeReviewItem(i); return `<article class="row-line-col"><p><strong>${esc(d.title)}</strong><br><span class="muted small">Nguồn: ${i.kind === "exercise" ? "câu làm sai" : i.kind === "dictation" ? "nghe–viết làm sai" : "tự đánh giá"} · đã ôn/làm ${i.attempts} lần · hạn ôn: ${esc(new Date(i.dueAt).toLocaleDateString("vi-VN"))}</span></p>
     <span class="row-actions"><a class="btn" href="${esc(d.href)}">Làm lại tại bài</a>
@@ -611,6 +678,7 @@ function viewReview() {
     <p class="muted small">Lịch ôn đề xuất của sản phẩm: 1, 3, 7, 14, 30 ngày; trả lời sai quay về 1 ngày.</p></section>`
   : `<section class="card"><h2>Chưa có mục đến hạn</h2><p class="muted">Làm bài tập hoặc tự đánh giá một bài nghe–viết để tạo mục ôn. Lịch ôn chỉ tính từ thao tác học thật, không tạo dữ liệu mẫu.</p></section>`}
   ${upcoming.length ? `<section class="card"><h2>Sắp đến hạn</h2>${upcoming.map((i) => { const d = describeReviewItem(i); return `<p class="row-line"><span>${esc(d.title)}</span><span class="tag">${esc(new Date(i.dueAt).toLocaleDateString("vi-VN"))}</span></p>`; }).join("")}</section>` : ""}`;
+  bindSupportBar();
   $$("[data-review-rate]").forEach((b) => b.onclick = () => {
     const [key, rating] = b.dataset.reviewRate.split(":");
     update((pp) => {
@@ -633,7 +701,7 @@ function viewProgress() {
     return `<section class="card"><h2>${esc(lesson.level)} · Bài ${lesson.lessonNumber}: ${esc(lesson.titleZh)}</h2>
   <p>Mục đã hoàn thành: <strong>${st.completedSections.length}/${c.intro.sections.length}</strong> — đây là mức “đã học/đã xem”.</p>
   <p>Bài tập chấm tự động: đã trả lời ${sum.answered}/${set.items.length} câu; điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; làm lại ${sum.retried} câu; dùng gợi ý ${sum.hintUsedCount} câu.</p>
-  <p>Bài nghe–viết tự đánh giá: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá. Các bài này <strong>không</strong> được tính là “đã nắm vững” vì chưa có đáp án kiểm chứng để chấm.</p>
+  <p>Bài nghe–viết: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá mức nhớ; điểm chấm tự động (đáp án đã đối chiếu) xem ở mục Tổng kết của bài và ngay trong phần Luyện tập.</p>
   <p class="row-actions"><a class="btn" href="#/lesson/${lesson.id}">Mở Bài ${lesson.lessonNumber}</a></p></section>`; }).join("")}
   <section class="card"><h2>Tổng quan</h2>
   <p>Mục ôn đang theo dõi: ${Object.keys(p.reviewItems).length}.</p>
@@ -715,7 +783,7 @@ function viewSources(id) {
 // ---------- Section binding, mini player, boot ----------
 function bindSection(sectionId, content) {
   content = content || contentFor(continueLesson().id) || CONTENT.pilot;
-  if (sectionId === "prep" || sectionId === "knowledge") bindToggles();
+  if (sectionId === "prep" || sectionId === "knowledge" || sectionId === "apply") bindSupportBar();
   if (sectionId === "reader") bindReader(content);
   if (sectionId === "exercises") bindExercises(content);
   if (sectionId === "apply") {
@@ -749,6 +817,30 @@ function renderMini() {
   $("#mini-stop").onclick = () => { player.pause(); player.seek(0); };
 }
 player.subscribe(renderMini);
+
+// Speaker buttons: one delegated handler so every [data-speak] button in
+// any view behaves the same. A click never selects an answer, opens a card
+// or changes progress — it only plays (or pauses) that unit's own segment.
+// Starting another unit replaces the current segment (single audio element).
+main.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-speak]");
+  if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  const track = allTracks().find((t) => t.id === b.dataset.track);
+  if (!track) return;
+  const st = player.getState();
+  if (st.playing && st.segment && st.segment.trackId === track.id && Math.abs(st.segment.start - Number(b.dataset.start)) < 0.01) { player.pause(); return; }
+  b.classList.add("loading");
+  player.playSegment(track, { start: Number(b.dataset.start), end: Number(b.dataset.end), rate: settings().playbackRate });
+});
+player.subscribe((st) => {
+  $$("[data-speak]").forEach((b) => {
+    const active = st.segment && st.segment.trackId === b.dataset.track && Math.abs(st.segment.start - Number(b.dataset.start)) < 0.01;
+    b.classList.toggle("playing", !!(active && st.playing));
+    if (!active || st.playing) b.classList.remove("loading");
+    b.classList.toggle("load-error", !!(active && st.error));
+  });
+});
 
 async function boot() {
   applyFontScale();

@@ -157,3 +157,13 @@ Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở ind
 - Chấm theo quy tắc ở CONTENT_STANDARD bổ sung 01/11/2026: thanh mẫu chấm phụ âm đầu; vận mẫu bắt buộc dấu thanh; thanh điệu nhận dấu/số; u≠ü trừ sau j/q/x; điểm lần đầu khóa riêng trong `progress.dictation`, làm lại không ghi đè, xem lời đọc trước khi làm được ghi `peeked`; ô sai lần đầu vào hàng đợi ôn với khóa `dict-<taskId>:<ô>`. Tự đánh giá cũ giữ nguyên, không chuyển thành điểm.
 - Audio: thêm `playSegment` và mốc đoạn theo bài nghe–viết (`audioSegment`) từ ASR nháp đối chiếu lời đọc; hội thoại vẫn phát cả track; nghe từng câu vẫn tắt.
 - CI: thử tạo `.github/workflows/ci.yml` qua GitHub connector ngày 01/11/2026 vẫn bị **403 "Resource not accessible by integration"**. Bản workflow hoàn chỉnh để tại `docs/ci/ci.yml`; cần người dùng tạo `.github/workflows/ci.yml` từ bản đó qua giao diện web GitHub hoặc cấp quyền workflow cho GitHub App. Kiểm thử tiếp tục chạy local (`npm run check`).
+
+## D11 — Thanh hỗ trợ áp dụng tại chỗ; loa theo đơn vị với đoạn căn bằng máy (01/11/2026)
+
+- Bối cảnh: bản live tái hiện lỗi bật Pinyin ở Nghe & đọc làm trang nhảy về đầu (scrollY 455→0) vì mọi thay đổi hiển thị đều render lại toàn trang; thẻ từ và câu hội thoại chưa có loa riêng; chữ hướng dẫn nghe–viết còn nói "không chấm điểm" sau khi đã chấm tự động.
+- Quyết định:
+  1. Thanh hỗ trợ dùng chung (Pinyin/Nghĩa/Cỡ chữ) áp dụng bằng class + biến CSS, không render lại; render cùng route khôi phục vị trí theo phần tử neo. Thiết lập vẫn lưu trong `settings` hiện có (không đổi khóa, không mất tương thích).
+  2. Loa theo đơn vị dùng một thành phần chung và một audio duy nhất; ánh xạ lưu trên chính đơn vị dữ liệu với trạng thái `asr-draft`. Độ phủ đạt được: câu hội thoại 20/20, từ mới 26/27 （大家 bị gộp khi đọc), từ kèm hình 20/24 （雨/五/一/椅子 không nhận diện tin cậy được token), lựa chọn bài tập 25/25, ví dụ điểm kiến thức 26/33 đơn vị thật (thiếu 6 âm tiết đơn lẻ + 雨）. Không mục nào được nâng lên "đã nghe kiểm chứng".
+  3. Kết quả lần kiểm tra gần nhất của nghe–viết lưu bền trong `progress.dictation[].last` (kèm đáp án người học đã nhập) để khôi phục phản hồi sau refresh; ô bị sửa sau chấm chuyển trạng thái "cần kiểm tra lại". Điểm lần đầu không đổi.
+  4. Ba bài nghe–viết thành accordion có thanh thao tác sticky theo bài.
+- Hệ quả: validator cho phép segment/ref mang trạng thái `asr-draft` (trước đây chặn mọi segment chưa verified) nhưng bắt buộc khai trạng thái; CONTENT_STANDARD bổ sung chính sách căn đoạn bằng máy. Kiểm thử tăng lên 30 (thêm ux.test.mjs).

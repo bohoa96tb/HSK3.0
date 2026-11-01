@@ -126,3 +126,10 @@ Người dùng cho phép tìm nguồn bổ sung để đối chiếu đáp án/t
 - **ASR nháp** (faster-whisper base, chạy local trên file tải từ Baulchino, không tải học liệu lên dịch vụ ngoài): dãy âm tiết nhận được trên track WB 1-2 và WB 2-2 khớp thứ tự với lời đọc ở các ô nhận diện được (kể cả hěn ở ô 10); 6 track hội thoại Textbook Bài 1–2 cho nội dung khớp lời thoại bản in về câu và thứ tự. ASR chỉ là bản nháp đối chiếu, **không** thay thế nghe kiểm chứng bởi người; dấu thanh không kết luận từ ASR.
 - **Mốc đoạn** lấy từ vị trí câu hướng dẫn + dãy âm tiết trong track (ASR) đối chiếu lời đọc; chỉ bật nghe theo đoạn bài tập, không chia mốc từng ô.
 - Các dòng trạng thái cũ trong tài liệu này ghi bài nghe–viết là `unverified` (mục kiểm tra Bài 1 và Bài 2) được thay thế bởi mục này: đáp án nay là **biên tập đã đối chiếu** (`verified-editorial`), vẫn không phải đáp án chính thức của NXB.
+
+
+## Ánh xạ audio theo đơn vị (01/11/2026)
+
+Phương pháp: tải thêm các track từ mới Textbook (L1: 1-2/1-4/1-6; L2: 2-2/2-4/2-6) và chạy ASR local (faster-whisper, có và không VAD — bản không VAD thu được các từ bị VAD bỏ) trên các track nguồn; căn đoạn theo văn bản đã đối chiếu bản in: câu hội thoại theo ranh giới đoạn ASR (số đoạn khớp số câu ở cả 6 track), từ mới theo đoạn đọc từng từ, từ kèm hình theo khối đọc thẻ hình trong track Workbook, lựa chọn bài tập theo khối hội thoại cuối track nghe–viết (cho phép lệch 1 ký tự đồng âm khi căn, ví dụ 家/嘉). Riêng 鸡/七 ở Bài 2 được gán theo vị trí trong khối thẻ hình vì ASR ghi sai ký tự ("7."/棋); 写 và 雨/五/一/椅子 không có token nhận diện tin cậy nên để thiếu.
+
+Độ phủ: câu hội thoại 20/20; từ mới 26/27 (thiếu 大家 — bị gộp vào token "大家好" khi đọc); từ kèm hình 20/24 (thiếu 雨、五、一、椅子); lựa chọn hội thoại bài tập 25/25; ví dụ trong điểm kiến thức 26/33 đơn vị thật (thiếu 6 âm tiết 八/拔/把/爸/阿/啊 và 雨; không tính 4 dấu "—" và chuỗi gộp "八/拔/把/爸" là đơn vị). Một số ví dụ là mệnh đề cắt trong lượt thoại dài hơn (ví dụ 我是白家月) — vẫn là đoạn trong đúng track hội thoại. Mọi đoạn đều là `asr-draft`: căn bằng máy, **chưa nghe kiểm chứng bởi người**; trạng thái nghe của các track không đổi.

@@ -41,8 +41,8 @@ test('lesson 2 content matches the printed books: counts, pages, answers, prompt
   assert.equal(l2.knowledgePoints.filter((k) => k.kind !== 'foundation-pronunciation').length, 5);
   assert.equal(l2.reader.sentences.length, 10);
   assert.equal(l2.reader.passages.length, 3);
-  assert.equal(l2.reader.audioTracks.length, 5);
-  assert.deepEqual(l2.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb')).map((t) => t.durationSec), [5.377, 13.222, 11.814]);
+  assert.equal(l2.reader.audioTracks.length, 8); // 5 pilot tracks + 3 word-list tracks for per-word speakers
+  assert.deepEqual(l2.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb')).map((t) => t.durationSec), [5.377, 13.222, 11.814, 15.281, 13.587, 10.459]); // dialogues, then the three word-list tracks
   assert.equal(l2.exerciseSet.items.length, 4);
   assert.deepEqual(l2.exerciseSet.items.map((i) => i.answer), ['3', '1', '4', '2']);
   for (const item of l2.exerciseSet.items) {
@@ -100,12 +100,16 @@ test('lesson 2 renders all 7 sections, links back to lesson 1, and lesson 1 stil
 test('lesson 2 reader uses its own track and independent reading aids', async () => {
   await route('lesson/hsk1-l02/reader?passage=l02-dialogue-2');
   $('.transcript').open = true;
-  change('[data-setting="showPinyinSentences"]', true);
+  const transcriptEl = $('.transcript');
+  document.querySelector('[data-support="pinyin"]').click();
+  assert.equal($('.transcript'), transcriptEl); // applied in place: no re-render
   assert.ok($('.transcript').open);
   assert.equal(document.querySelectorAll('.sentence .pinyin').length, 4);
-  assert.equal(document.querySelectorAll('.sentence .vi:not(.hidden)').length, 0);
-  change('[data-setting="showViSentences"]', true);
-  assert.equal(document.querySelectorAll('.sentence .vi:not(.hidden)').length, 4);
+  assert.equal($('#main').classList.contains('off-pinyin-sent'), false);
+  assert.equal($('#main').classList.contains('off-vi-sent'), true);
+  document.querySelector('[data-support="vi"]').click();
+  assert.equal($('#main').classList.contains('off-vi-sent'), false);
+  assert.equal($('.transcript'), transcriptEl);
   document.querySelector('[data-play]').click();
   await tick();
   assert.match(audios[0].src, /lesson-02\/02-3\.mp3$/);

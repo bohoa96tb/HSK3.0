@@ -50,10 +50,14 @@ test('all pages render and lesson completion is idempotent',async()=>{
 
 test('reader controls preserve transcript, independently toggle aids and use the matching track',async()=>{
  await route('lesson/hsk1-l01/reader?passage=tb-dialogue-2');$('.transcript').open=true;
- change('[data-setting="showPinyinSentences"]',true);
+ const transcriptEl=$('.transcript');
+ document.querySelector('[data-support="pinyin"]').click();
+ assert.equal($('.transcript'),transcriptEl); // in-place toggle: same node, no re-render, no scroll reset
  assert.ok($('.transcript').open);assert.equal(document.querySelectorAll('.sentence .pinyin').length,4);
- assert.equal(document.querySelectorAll('.sentence .vi:not(.hidden)').length,0);
- change('[data-setting="showViSentences"]',true);assert.equal(document.querySelectorAll('.sentence .vi:not(.hidden)').length,4);
+ assert.equal($('#main').classList.contains('off-pinyin-sent'),false);
+ assert.equal($('#main').classList.contains('off-vi-sent'),true);
+ document.querySelector('[data-support="vi"]').click();assert.equal($('#main').classList.contains('off-vi-sent'),false);
+ assert.equal($('.transcript'),transcriptEl);
  click('[data-play]');await tick();assert.match(audios[0].src,/01-3.mp3$/);assert.equal(audios[0].paused,false);
  click('[data-play]');assert.equal(audios[0].paused,true);
  await route('lesson/hsk1-l01/reader?sentence=tb-s9');assert.ok($('#tb-s9').classList.contains('highlighted'));assert.match($('#tracks').textContent,/Hội thoại 3/);

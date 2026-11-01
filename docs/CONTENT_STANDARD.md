@@ -178,3 +178,10 @@ Ghi **ba thuộc tính riêng** cho mỗi đáp án: xuất xứ tài liệu (ch
 - `unverified`: không chấm tự động (tự đối chiếu / tự đánh giá), không tính vào mẫu số điểm.
 
 Quy tắc chấm nghe–viết: thanh mẫu chỉ chấm phụ âm đầu (nhập cả âm tiết thì âm tiết phải khớp hoàn toàn); vận mẫu bắt buộc kèm dấu thanh như lời đọc; thanh điệu chấp nhận Pinyin có dấu, số thanh sau âm tiết hoặc chỉ số thanh, thiếu dấu là sai. Không đồng nhất u/ü; riêng sau j/q/x, u viết thay ü được chấp nhận theo quy tắc chính tả của chính bài học. `v` được hiểu là ü khi nhập. Sửa đề/đáp án phải tăng `version` của bài tập và tăng contentVersion; tự đánh giá cũ không bao giờ được chuyển thành điểm chấm tự động. Mốc đoạn audio chỉ lưu khi đã đối chiếu vị trí câu hướng dẫn và dãy âm tiết; không chia đều thời lượng, không suy mốc từng ô khi ranh giới chưa chắc.
+
+## Bổ sung 01/11/2026 — Loa theo đơn vị và căn đoạn bằng máy
+
+- Khi bổ sung loa cho từ/câu, đoạn phải lấy từ đúng track nguồn của sách (track từ mới cho thẻ từ, track hội thoại cho câu, track Workbook cho bài tập), căn bằng căn chỉnh máy (ASR word timestamps) trên **đúng văn bản đã đối chiếu bản in**, và lưu kèm trạng thái `asr-draft`.
+- Căn đoạn bằng máy **không** phải nghe kiểm chứng: không đổi trạng thái "đã nghe xác minh" của track/câu, không dùng làm bằng chứng phát âm chuẩn. Đơn vị không căn được tin cậy (ASR bỏ token, token không nhận diện được, từ bị gộp khi đọc) thì để trống và ghi vào danh sách thiếu, không chia đều thời lượng, không ghép âm tiết rời.
+- Phân biệt đoạn đọc độc lập (từ trong track từ mới) với đoạn cắt trong câu (ví dụ là mệnh đề con của một lượt thoại): cả hai đều ghi `asr-draft`; khi báo cáo độ phủ phải nêu riêng số cắt trong câu nếu dùng.
+- Cập nhật chính sách cũ: mốc từng câu ở trạng thái nháp máy được phép **phát thử** qua loa theo đơn vị (vì người học cần nghe tại chỗ), nhưng trạng thái kiểm chứng vẫn là chưa xác minh và phải hiển thị đúng như vậy trong tài liệu; chỉ khi đã nghe kiểm chứng bởi người mới nâng trạng thái.

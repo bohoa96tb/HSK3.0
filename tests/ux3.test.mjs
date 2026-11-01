@@ -128,7 +128,7 @@ test('dictation: pinyin toggle reveals nothing before checking; the read syllabl
   await route('lesson/hsk1-l01/exercises');
   const dictBar = $$('.support-bar').find((b) => b.dataset && b.querySelector('[data-scope="dictation"]'));
   assert.ok(dictBar, 'dictation block has its own support bar');
-  assert.match(document.body.textContent, /không hiện trước khi chấm/);
+  assert.match(document.body.textContent, /không làm lộ đáp án trước khi chấm/);
   const taskEl = $('#st-01');
   assert.equal(taskEl.querySelector('.script-box'), null);
   dictBar.querySelector('[data-support="pinyin"]').click(); await tick();

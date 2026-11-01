@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson7-2";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson7-2";
-import * as player from "./player.js?v=20261101-lesson7-2";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lessons67-practice1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lessons67-practice1";
+import * as player from "./player.js?v=20261101-lessons67-practice1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -227,7 +227,7 @@ function viewLessonIntro(lesson, content) {
 function sectionIntroHtml(lesson, content) {
  const intro = content.intro; const img = intro.contextImage;
  return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
- <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Học trong khoảng ${intro.estimatedMinutes} phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}">`:''}</div>
+ <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Học trong khoảng ${intro.estimatedMinutes} phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
  <p class="study-tip">${esc(intro.studyTipVi||'')}</p>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>`;
 }
 
@@ -497,7 +497,7 @@ function sectionExercisesHtml(content) {
   </form>
   ${refsHtml(item.sourceRefs)}
   </section>
-  <section class="card dictation-block"><h2>Nghe và viết trong sách</h2>${dictationHtml(content)}</section>`;
+  <section class="card dictation-block"><h2>Luyện tập bổ trợ theo sách</h2>${dictationHtml(content)}</section>`;
 }
 const dictRevealed = new Set(); // taskIds whose listening script is currently shown
 const dictOpenTasks = new Set(); // dictation tasks currently expanded (first task open by default)
@@ -505,10 +505,13 @@ function fmtClock(sec) { return `${Math.floor(sec / 60)}:${String(Math.floor(sec
 function dictationHtml(content) {
  const p = loadProgress();
  const focusTask = parseRoute().query.task;
- return `${supportBarHtml('dictation')}<p class="support-note">Pinyin/Nghĩa ở phần nghe–viết: phần âm và dấu thanh đang để trống là đáp án, nên không hiện trước khi chấm. Bật Pinyin sẽ hiện Pinyin của lời đọc ở các ô đã kiểm tra; muốn xem trước thì dùng “Xem lời đọc” (được ghi nhận đã xem). Các ô luyện âm/thanh lẻ không có nghĩa câu riêng để hiện.</p><p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
+ const hasGraded = content.selfCheckTasks.some(t => t.answerStatus === 'verified-editorial');
+ return `${supportBarHtml('dictation')}<p class="support-note">${hasGraded ? 'Ở bài chọn/điền có chấm điểm, Pinyin không làm lộ đáp án trước khi chấm; xem trước qua “Xem lời đọc” sẽ được ghi nhận. ' : ''}Các cặp so sánh được hiển thị đầy đủ để nghe và đọc theo. Âm tiết luyện phát âm không có nghĩa câu riêng; các khung tự nói được giữ bằng chữ Hán như đề sách.</p><p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
  ${content.selfCheckTasks.map((t, ti) => {
   const mine = p.selfChecks[t.id];
   const graded = t.answerStatus === "verified-editorial";
+  const comparison = t.kind === "listening-comparison";
+  const speaking = t.kind === "speaking" && t.promptImages;
   const entry = p.dictation?.[t.id];
   const firstVals = entry ? Object.values(entry.first || {}) : [];
   const firstCorrect = firstVals.filter(Boolean).length;
@@ -517,18 +520,20 @@ function dictationHtml(content) {
   const seg = t.audioSegment;
   const playLabel = seg ? `▶ Nghe đoạn của bài này (${fmtClock(seg.start)}–${fmtClock(seg.end)})` : esc(content.selfCheckListenVi || "▶ Nghe track");
   const open = ti === 0 || dictOpenTasks.has(t.id) || focusTask === t.id;
-  return `<details class="dict-task" id="${t.id}" data-dict-task="${t.id}" data-anchor ${open ? "open" : ""}><summary><span class="dict-task-title">${esc(t.titleVi)}</span><span class="tag">${graded ? (firstVals.length ? `Lần đầu: ${firstCorrect}/${firstVals.length} ô` : "Chưa chấm") : "Tự đánh giá"}</span></summary>
+  return `<details class="dict-task" id="${t.id}" data-dict-task="${t.id}" data-anchor ${open ? "open" : ""}><summary><span class="dict-task-title">${esc(t.titleVi)}</span><span class="tag">${graded ? (firstVals.length ? `Lần đầu: ${firstCorrect}/${firstVals.length} ô` : "Chưa chấm") : comparison ? "Nghe · so sánh · đọc theo" : "Tự đánh giá"}</span></summary>
   <p>${esc(t.instructionVi)}</p>
-  ${graded ? `<p class="small muted">${esc(t.guideVi || "")}</p>` : ""}
+  ${t.guideVi ? `<p class="small muted">${esc(t.guideVi)}</p>` : ""}
+  ${comparison ? `<p class="practice-purpose">Bài luyện đọc cả hai dạng — không có đáp án duy nhất. Ô dưới mỗi cặp là ghi chú cá nhân, không phải ô trả lời.</p>` : ""}
   ${t.conflictCells?.length ? `<p class="small dict-conflict-note">${esc(t.conflictNoteVi || "")}</p>` : ""}
-  <div class="dict-actions"><button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>
+  <div class="dict-actions">${t.audioTrackId ? `<button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>` : ""}
   ${graded ? `<button class="btn primary" data-check-dict="${t.id}">Kiểm tra</button>
   ${lastVals.some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
   <button class="btn ghost" data-peek-dict="${t.id}">${dictRevealed.has(t.id) ? "Ẩn lời đọc" : "Xem lời đọc"}</button>` : ""}
   </div>
+  ${t.audioSegmentStatus === "asr-draft" ? `<p class="small muted">Mốc nghe tham khảo, chưa được người nghe xác nhận. Có thể mở track gốc ở phần Nguồn bài học để đối chiếu.</p>` : ""}
   ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${lastVals.length ? ` · lần kiểm tra gần nhất: ${lastVals.filter((r) => r.correct).length}/${lastVals.length} ô đúng` : ""}</p>` : ""}
   ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
-  <div class="answer-grid">${t.prompts.map((v, i) => { const conflict = isConflictCell(t, i); const draft = p.drafts?.[t.id + ":" + i] || ""; const r = conflict ? null : last[i]; const edited = r && draft !== r.input; return `<label><span>${i + 1}. <span lang="zh-Latn">${esc(v)}</span></span><input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — câu ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${conflict ? `<span class="cell-note warn">Tạm không chấm — nguồn đang mâu thuẫn, cứ luyện nghe và gõ thử.</span>` : r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
+  <div class="answer-grid ${speaking ? "picture-practice-grid" : ""}">${t.prompts.map((v, i) => { const conflict = isConflictCell(t, i); const draft = p.drafts?.[t.id + ":" + i] || ""; const r = conflict ? null : last[i]; const edited = r && draft !== r.input; const fig = t.promptImages?.[i]; return `<label>${fig ? `<figure><img src="${esc(fig.src)}" alt="${esc(fig.alt)}" loading="lazy"><figcaption>${esc(fig.captionVi)}</figcaption></figure>` : ""}<span>${i + 1}. <span lang="${speaking ? "zh-CN" : "zh-Latn"}">${esc(v)}</span></span>${comparison || speaking ? `<span class="small muted">${comparison ? "Ghi chú nghe và đọc" : "Câu bạn muốn nói"}</span>` : ""}<input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — ${comparison ? "ghi chú cặp" : "câu"} ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${conflict ? `<span class="cell-note warn">Tạm không chấm — nguồn đang mâu thuẫn, cứ luyện nghe và gõ thử.</span>` : r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
   ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
   <p class="small muted">${graded ? "Chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB. Tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
   <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>

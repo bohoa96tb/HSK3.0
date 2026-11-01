@@ -313,3 +313,12 @@ Bằng chứng tách theo năm loại theo D17:
 Giới hạn đã biết: chưa Android thật; chưa CI GitHub Actions (403 — handoff ở docs/ci/); quyền nguồn unknown.
 
 **Bổ sung sau báo cáo QA vòng 2 đầy đủ (contentVersion 20261101-lesson7-2):** báo cáo đầy đủ của vòng 2 (về sau bản tóm tắt) kèm hai ghi chú không chặn merge: (a) đoạn của 吧 và 后 phủ cả hai lần đọc của chính từ thay vì chỉ lần đầu; (b) đoạn ví dụ của điểm 呢 cắt cụt ~0,17s cuối của trợ từ 呢. Đã xử lý cả hai: 吧 → 20.58–20.90, 后 → 26.00–27.20 (chỉ lần đọc đầu), ví dụ 呢 → kéo dài tới 16.15 để trọn trợ từ. Kết luận ĐẠT của vòng 2 không đổi.
+
+## Hoàn thiện Bài 6–7 theo yêu cầu người dùng — 01/11/2026
+- Nội dung đã đọc trực quan: Workbook tr.032/039/040; Textbook tr.041/042/052. Tìm lời đọc Scribd tr.016/019 và đối chiếu mục tiêu cả hai dạng. Sửa hướng dẫn và lỗi dấu thanh bìn, trích tám hình, gỡ mô tả giờ suy đoán; nguồn chi tiết ở SOURCE_AUDIT mục cuối.
+- Code: renderer phân biệt nghe–so sánh và bài nói theo hình; mốc audio được đọc cả cho bài không chấm; validator chặn trường segment lỗi và kiểm khoảng nghe/ảnh với sourceRefs cho mọi trạng thái.
+- Kiểm local: validator đạt, 63/63 test đạt, git diff --check sạch. Bộ mới kiểm mục tiêu nghe cả cặp không chấm, mốc phát/dừng (Audio giả lập), giữ ghi chú sau điều hướng, đủ8 ảnh có nguồn và caption đúng màn intro.
+- QA độc lập đầy đủ đã nhận và đọc trước merge: đọc6 trang nguồn + ảnh phóng to dấu thanh, kiểm8 WebP, data/renderer/validator/CSS/tests/docs. Xác nhận sáu cặp nhi hóa,12 cặp đưa hơi,16 cặp mũi (đã sửa bìn),8 khung câu và thứ tự ảnh khớp bản in. Không tạo đáp án duy nhất hoặc đổi điểm cũ. QA bắt thêm hướng dẫn chung còn ám chỉ mọi bài đều có ô trống — đã sửa theo hasGraded, kiểm lại đạt.
+- Bổ sung QA độc lập lần cuối cho caption: sectionIntroHtml nay có figure/img/figcaption, dữ liệu escape đúng, Bài6 tr.036 và Bài7 tr.046 hiện đúng; test xác nhận tại intro, không nhầm dashboard. Không có lỗi chặn phát hành trong phạm vi nguồn/code; browser/responsive sẽ nghiệm thu sau triển khai.
+- Hai lỗi khi chạy test đầu: mock mới chưa mô phỏng loadedmetadata nên chưa seek, và assertion cũ khớp nguyên văn hướng dẫn cũ. Đã sửa mock và assertion câu mới; giữ nguyên các assertion hành vi không lộ đáp án. Không dùng kết quả mock làm bằng chứng kiểm nghe.
+- Giới hạn giữ nguyên: không nghe thẩm định audio bởi người, chưa Android thật, mốc là nháp, một số loa còn thiếu, quyền tái xuất bản unknown. Không mở Bài8.

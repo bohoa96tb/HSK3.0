@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson7-2",
+  "contentVersion": "20261101-lessons67-practice1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -13258,7 +13258,7 @@
             },
             {
               "sourceId": "src-wb-listening-script",
-              "printedPage": "014",
+              "printedPage": "016",
               "section": "听读练 bài 1 — lời đọc"
             }
           ],
@@ -13288,7 +13288,7 @@
             "shǒujī",
             "diànhuà"
           ],
-          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (6 cặp âm tiết đôi) lấy từ bản in Workbook trang in 032; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 014); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 6-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án cho bài này (chỉ liệt kê số thứ tự trống). Đây không phải đáp án chính thức của nhà xuất bản.",
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (6 cặp âm tiết đôi) lấy từ bản in Workbook trang in 032; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 016); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 6-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án cho bài này (chỉ liệt kê số thứ tự trống). Đây không phải đáp án chính thức của nhà xuất bản.",
           "audioSegment": {
             "start": 12.6,
             "end": 47.8
@@ -13297,7 +13297,7 @@
         {
           "id": "st-l06-02",
           "titleVi": "Phân biệt dạng nhi hóa và không nhi hóa (bài 2, trang in 032)",
-          "instructionVi": "Nghe đoạn của bài này trong track Workbook 6-2: ở mỗi cặp, sách đọc một dạng (nhi hóa hoặc không nhi hóa) — gõ lại dạng bạn nghe được vào ô. Sách dùng bài này để nghe phân biệt rồi đọc theo; tài liệu lời đọc không liệt kê đáp án cho bài này nên app không chấm, bạn tự đối chiếu bằng tai nghe và dãy luyện đọc ở mục Kiến thức.",
+          "instructionVi": "Nghe và so sánh hai dạng trong từng cặp, rồi đọc theo cả hai dạng. Đây là bài phân biệt nhi hóa, không phải chọn một đáp án đúng. Ô ghi chú là để bạn tự ghi điều nghe được; không tính điểm.",
           "audioTrackId": "trk-wb-l06-2",
           "answerStatus": "unverified",
           "sourceRefs": [
@@ -13306,6 +13306,11 @@
               "pdfPage": 39,
               "printedPage": 32,
               "section": "听读练 · bài 2"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": "016",
+              "section": "Lời đọc: các cặp so sánh được liệt kê đầy đủ; không phải đáp án chọn một dạng"
             }
           ],
           "prompts": [
@@ -13315,22 +13320,30 @@
             "yíkuàir / yí kuài",
             "jiāyóu / jiāyóur",
             "chàng gēr / chàng gē"
-          ]
+          ],
+          "kind": "listening-comparison",
+          "guideVi": "Lượt 1: nhìn từng cặp và nghe. Lượt 2: đọc theo, chú ý âm kết thúc có r. Lượt 3: tự đọc lại hai dạng rồi tự đánh giá. Giữ nguyên dấu thanh và khoảng cách của bản in.",
+          "practiceEvidence": "Workbook trang in 032 yêu cầu phân biệt rồi đọc theo; tài liệu lời đọc đăng lại trang 016 in cả hai dạng của sáu cặp. Không có đáp án duy nhất để chấm.",
+          "audioSegment": {
+            "start": 47.8,
+            "end": 112.963
+          },
+          "audioSegmentStatus": "asr-draft",
+          "audioSegmentEvidence": "Phần còn lại của track 6-2 sau đoạn bài 1 kết thúc 47.8s đã có trong dữ liệu; điểm cuối là thời lượng file. Đây là mốc tham khảo theo ranh giới bài, chưa nghe kiểm chứng; có thể gồm lời hướng dẫn."
         },
         {
           "id": "st-l06-03",
           "kind": "speaking",
           "titleVi": "Dùng hình để nói (Textbook trang 041–042) — tự luyện, không chấm tự động",
-          "instructionVi": "Nhìn 4 hình ở Textbook trang 041–042 và hoàn thành 4 khung câu của sách: (1) 她的______是多少？(hình tay cầm điện thoại) (2) 我想______超市______牛奶。(hình siêu thị) (3) 王一雪想______去超市。(hình taxi) (4) 这些包子非常______。(hình bánh bao)",
+          "instructionVi": "Nhìn từng hình trích từ sách, dùng từ và cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
           "prompts": [
             "她的______是多少？",
             "我想______超市______牛奶。",
             "王一雪想______去超市。",
             "这些包子非常______。"
           ],
-          "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu với từ mới và hội thoại của bài. App không chấm bài này: sách không in đáp án và phần điền phụ thuộc vào hình.",
+          "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
           "answerStatus": "unverified",
-          "audioTrackId": "trk-tb-l06-5",
           "sourceRefs": [
             {
               "sourceId": "src-hsk1-textbook-pdf",
@@ -13344,10 +13357,64 @@
               "printedPage": 42,
               "section": "综合练习 · 用本课新学的词语和语言点描述图片"
             }
+          ],
+          "promptImages": [
+            {
+              "src": "assets/lesson-06/speaking-1.webp",
+              "alt": "Hình 1 của bài dùng hình để nói — Bài 6",
+              "captionVi": "Textbook, trang 041 · hình 1",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 56,
+                  "printedPage": 41,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-06/speaking-2.webp",
+              "alt": "Hình 2 của bài dùng hình để nói — Bài 6",
+              "captionVi": "Textbook, trang 041 · hình 2",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 56,
+                  "printedPage": 41,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-06/speaking-3.webp",
+              "alt": "Hình 3 của bài dùng hình để nói — Bài 6",
+              "captionVi": "Textbook, trang 042 · hình 3",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 57,
+                  "printedPage": 42,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-06/speaking-4.webp",
+              "alt": "Hình 4 của bài dùng hình để nói — Bài 6",
+              "captionVi": "Textbook, trang 042 · hình 4",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 57,
+                  "printedPage": 42,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            }
           ]
         }
       ],
-      "selfCheckIntroVi": "Workbook trang 032. Bài 1 (chọn âm tiết đôi) có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); bài 2 (phân biệt nhi hóa) và bài dùng hình để nói không chấm tự động. Mỗi ô được lưu tự động. Chưa phải đáp án chính thức của NXB.",
+      "selfCheckIntroVi": "Gồm bài luyện theo sách và bài dùng hình để nói. Bài chọn có đáp án được chấm riêng; bài so sánh phát âm và tự nói không có đáp án duy nhất. Nháp và tự đánh giá được giữ độc lập với điểm.",
       "selfCheckListenVi": "▶ Nghe track Workbook 6-2",
       "apply": {
         "titleVi": "Đóng vai và hỏi số điện thoại thật của nhau",
@@ -15745,7 +15812,7 @@
         {
           "id": "st-l07-01",
           "titleVi": "Phân biệt thanh mẫu đưa hơi / không đưa hơi (bài 1, trang in 039)",
-          "instructionVi": "Nghe track Workbook 7-1 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã đối chiếu; không tính điểm.",
+          "instructionVi": "Nghe và phân biệt hai dạng trong từng cặp, rồi đọc theo cả hai dạng. Đây là bài luyện so sánh phát âm, không có một đáp án duy nhất. Ghi chú của bạn được lưu tự động; không chấm đúng/sai.",
           "audioTrackId": "trk-wb-l07-1",
           "answerStatus": "unverified",
           "sourceRefs": [
@@ -15754,6 +15821,11 @@
               "pdfPage": 46,
               "printedPage": 39,
               "section": "语音 1 · 送气声母和不送气声母辨析"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": "019",
+              "section": "Lời đọc: các cặp so sánh được liệt kê đầy đủ; không phải đáp án chọn một dạng"
             }
           ],
           "prompts": [
@@ -15770,15 +15842,20 @@
             "jǔ / qǔ",
             "guā / kuā"
           ],
-          "segment": {
+          "kind": "listening-comparison",
+          "audioSegment": {
             "start": 67.6,
             "end": 148.6
-          }
+          },
+          "audioSegmentStatus": "asr-draft",
+          "audioSegmentEvidence": "Giữ mốc căn bằng máy của lượt Bài 7 và chuẩn hóa sang audioSegment để trình phát sử dụng; chưa kiểm nghe bởi người.",
+          "practiceEvidence": "Workbook trang in 039–040 và tài liệu lời đọc đăng lại trang 019 đều liệt kê hai dạng mỗi cặp, yêu cầu nghe phân biệt rồi đọc theo.",
+          "guideVi": "Chú ý luồng hơi khi đọc các cặp thanh mẫu: b/p, d/t, g/k, j/q, zh/ch, z/c. Nghe, đọc theo từng cặp, rồi tự đọc lại."
         },
         {
           "id": "st-l07-02",
           "titleVi": "Phân biệt vận mẫu mũi trước / mũi sau (bài 2, trang in 040)",
-          "instructionVi": "Nghe track Workbook 7-1 và điền phần còn thiếu. Ghi chú của bạn được lưu tự động. Chưa có đáp án đã đối chiếu; không tính điểm.",
+          "instructionVi": "Nghe và phân biệt hai dạng trong từng cặp, rồi đọc theo cả hai dạng. Đây là bài luyện so sánh phát âm, không có một đáp án duy nhất. Ghi chú của bạn được lưu tự động; không chấm đúng/sai.",
           "audioTrackId": "trk-wb-l07-1",
           "answerStatus": "unverified",
           "sourceRefs": [
@@ -15787,6 +15864,11 @@
               "pdfPage": 47,
               "printedPage": 40,
               "section": "语音 2 · 前鼻音韵母和后鼻音韵母辨析"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": "019",
+              "section": "Lời đọc: các cặp so sánh được liệt kê đầy đủ; không phải đáp án chọn một dạng"
             }
           ],
           "prompts": [
@@ -15804,28 +15886,33 @@
             "chēn / chēng",
             "lín / líng",
             "xiǎn / xiǎng",
-            "bīn / bìng",
+            "bìn / bìng",
             "qīn / qīng"
           ],
-          "segment": {
+          "kind": "listening-comparison",
+          "audioSegment": {
             "start": 166.0,
             "end": 267.9
-          }
+          },
+          "audioSegmentStatus": "asr-draft",
+          "audioSegmentEvidence": "Giữ mốc căn bằng máy của lượt Bài 7 và chuẩn hóa sang audioSegment để trình phát sử dụng; chưa kiểm nghe bởi người.",
+          "practiceEvidence": "Workbook trang in 039–040 và tài liệu lời đọc đăng lại trang 019 đều liệt kê hai dạng mỗi cặp, yêu cầu nghe phân biệt rồi đọc theo.",
+          "guideVi": "Chú ý phần cuối âm tiết: –n và –ng. Nghe từng cặp rồi đọc lại cả hai dạng. Giữ thanh điệu đúng như bản in.",
+          "sourceDifferenceVi": "Cặp 15 trên bản in là bìn / bìng; lượt nhập trước ghi nhầm bīn. Đã phóng to ảnh Workbook trang 040 để sửa dấu thanh."
         },
         {
           "id": "st-l07-03",
           "kind": "speaking",
           "titleVi": "Dùng hình để nói (Textbook trang 052) — tự luyện, không chấm tự động",
-          "instructionVi": "Nhìn 4 hình ở Textbook trang 052 và hoàn thành 4 khung câu của sách: (1) 现在是______点______分。(hình tay cầm đồng hồ báo thức chỉ khoảng 7 giờ 55) (2) 我们上午______吧。(hình đồng hồ treo tường chỉ 10 giờ) (3) 我今天晚上______还______呢。(hình đồng hồ tím trong đêm) (4) 妹妹______有课。(hình đồng hồ chỉ 2 giờ)",
+          "instructionVi": "Nhìn từng hình trích từ sách, dùng từ và cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
           "prompts": [
             "现在是______点______分。",
             "我们上午______吧。",
             "我今天晚上______还______呢。",
             "妹妹______有课。"
           ],
-          "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu với từ mới và hội thoại của bài. App không chấm bài này: sách không in đáp án và phần điền phụ thuộc vào hình.",
+          "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
           "answerStatus": "unverified",
-          "audioTrackId": "trk-tb-l07-5",
           "sourceRefs": [
             {
               "sourceId": "src-hsk1-textbook-pdf",
@@ -15833,10 +15920,64 @@
               "printedPage": 52,
               "section": "综合练习 · 用本课新学的词语和语言点描述图片"
             }
+          ],
+          "promptImages": [
+            {
+              "src": "assets/lesson-07/speaking-1.webp",
+              "alt": "Hình 1 của bài dùng hình để nói — Bài 7",
+              "captionVi": "Textbook, trang 052 · hình 1",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 67,
+                  "printedPage": 52,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-07/speaking-2.webp",
+              "alt": "Hình 2 của bài dùng hình để nói — Bài 7",
+              "captionVi": "Textbook, trang 052 · hình 2",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 67,
+                  "printedPage": 52,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-07/speaking-3.webp",
+              "alt": "Hình 3 của bài dùng hình để nói — Bài 7",
+              "captionVi": "Textbook, trang 052 · hình 3",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 67,
+                  "printedPage": 52,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/lesson-07/speaking-4.webp",
+              "alt": "Hình 4 của bài dùng hình để nói — Bài 7",
+              "captionVi": "Textbook, trang 052 · hình 4",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk1-textbook-pdf",
+                  "pdfPage": 67,
+                  "printedPage": 52,
+                  "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+                }
+              ]
+            }
           ]
         }
       ],
-      "selfCheckIntroVi": "Workbook trang 039–040, hai bài phân biệt phát âm. Mỗi ô được lưu tự động.",
+      "selfCheckIntroVi": "Gồm bài luyện theo sách và bài dùng hình để nói. Bài chọn có đáp án được chấm riêng; bài so sánh phát âm và tự nói không có đáp án duy nhất. Nháp và tự đánh giá được giữ độc lập với điểm.",
       "selfCheckListenVi": "▶ Nghe track Workbook 7-1",
       "apply": {
         "titleVi": "Đóng vai và hẹn giờ gặp theo tình huống thật",

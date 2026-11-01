@@ -47,3 +47,10 @@ Bổ sung (D21): bài học có thể có bộ bài bổ trợ riêng (`suppExer
 - Mục Tự nói: nhiệm vụ tách riêng từng khối (tình huống, mẫu + loa, từ thay, nút đã luyện có `aria-pressed`); ghi rõ app không chấm nói.
 - Mục Tổng kết: khối 3 điều chính (khi có `summaryPoints`), trạng thái chưa làm bài tập trung thực, nút tiếp tục mục chưa xong, chi tiết gợi ý/hỗ trợ trong phần thu gọn.
 - Kiểm tra bề rộng bắt buộc giữ nguyên 360/390/768/1440; vùng chạm ≥44px cho nút mới; trạng thái đúng/sai của "Thử ngay" có chữ, không chỉ màu.
+
+## 13. Tra từ bằng chạm và mục thu gọn thông tin (D24)
+
+- Bài có `lookup`: các câu ở bề mặt đọc được tách thành ô từ bấm được (nút chữ, cao tối thiểu 32px, focus rõ). Bảng tra: điện thoại là sheet cố định sát cuối màn hình (trên mini player, theo --player-inset), máy tính là popover cạnh từ, tự lật lên khi thiếu chỗ dưới. Đóng bằng ×, chạm ngoài, Escape; chạm từ khác thì đổi nội dung; không tự cuộn trang, không tự phát âm.
+- Nội dung bảng tra: chữ Hán, Pinyin, Hán–Việt (hoặc "Chưa có dữ liệu đã kiểm chứng"), nghĩa theo ngữ cảnh, nút "Nghe phát âm (giọng máy)", từ thành phần (nếu tách nhỏ được), dòng trạng thái nguồn dữ liệu.
+- Tra cụm: nút "Tra cụm" dưới câu; chế độ chọn theo ô từ (đầu → cuối) + thanh thao tác riêng; không dùng chọn văn bản gốc của trình duyệt.
+- `details.info-fold` là mẫu thống nhất cho chữ giải thích dài: summary tối thiểu 44px, nhãn theo người học (Cách làm bài, Cách tính lịch ôn, Thông tin thêm, Nguồn).

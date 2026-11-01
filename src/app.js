@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261102-lesson8-path1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-path1";
-import * as player from "./player.js?v=20261102-lesson8-path1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-lookup1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-lookup1";
+import * as player from "./player.js?v=20261102-lesson8-lookup1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -92,6 +92,7 @@ function restoreScrollAnchor(saved) {
   else if (Math.abs(window.scrollY - saved.y) > 1) window.scrollTo(0, saved.y);
 }
 function render() {
+  closeLookup(); clearPhraseSelection();
   if (!parseRoute().query.item) lastDeepLinkItem = null;
   const savedAnchor = captureScrollAnchor();
   renderInner();
@@ -387,7 +388,8 @@ function bindPrep(content) {
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=['foundation-pronunciation','foundation-characters'].includes(kp.kind);
- const exampleHtml = (e) => `<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`;
+ const kpContent = contentFor(kpLesson);
+ const exampleHtml = (e) => `<div class="example"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(e.zh, kpContent)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p>${phraseBtnHtml(kpContent)}</div>`;
  const visibleExamples = kp.useWhenVi ? kp.examples.slice(0, 2) : kp.examples;
  const extraExamples = kp.useWhenVi ? kp.examples.slice(2) : [];
  const qc = kp.quickCheck;
@@ -415,6 +417,194 @@ function bindQuickChecks() {
   });
 }
 
+
+// ===== D24: tap-to-lookup (pilot: lessons carrying a `lookup` block) =====
+// Segmentation is dictionary-driven (lib.segmentZh) over the project's own
+// curated vocabulary, so a tap always lands on an entry the project has
+// verified — or honestly reports missing data. Lookup is only wired into
+// reading surfaces (dialogues, knowledge examples, speaking samples,
+// summary examples), never into exercise prompts/options.
+let _baseLexicon = null;
+function baseLexicon() {
+  if (_baseLexicon) return _baseLexicon;
+  const map = new Map();
+  for (const c of CONTENT.additionalLessons || []) {
+    for (const w of c.prepWords || []) {
+      if (!map.has(w.zh)) map.set(w.zh, { zh: w.zh, pinyin: w.pinyin, hanViet: w.hanViet || null, vi: w.vi, hanVietNoteVi: w.hanVietNoteVi || null, originVi: `Từ vựng đã đối chiếu của dự án · Bài ${c.lessonNumber || ""}`.trim() });
+    }
+  }
+  _baseLexicon = map;
+  return map;
+}
+function lessonLexicon(content) {
+  const map = new Map(baseLexicon());
+  for (const e of content.lookup?.extras || []) map.set(e.zh, { zh: e.zh, pinyin: e.pinyin, hanViet: e.hanViet ?? null, vi: e.vi, noteVi: e.noteVi || null, originVi: "Mục bổ sung đã kiểm duyệt riêng cho bài này" });
+  return map;
+}
+function lookupOn(content) { return !!(content && content.lookup); }
+function zhTokensHtml(zh, content) {
+  if (!lookupOn(content) || !HAS_HAN.test(zh)) return esc(zh);
+  const toks = segmentZh(zh, lessonLexicon(content));
+  return toks.map((t, i) => t.punct
+    ? `<span class="tok-punct" data-toki="${i}">${esc(t.text)}</span>`
+    : `<button type="button" class="tok" data-tok="${esc(t.text)}" data-toki="${i}" data-lesson="${esc(content.lessonId)}" aria-haspopup="dialog">${esc(t.text)}</button>`).join("");
+}
+function phraseBtnHtml(content) {
+  return lookupOn(content) ? `<button type="button" class="btn ghost small" data-phrase-btn>Tra cụm</button>` : "";
+}
+let lookupPop = null, lookupReturnFocus = null, phraseSel = null;
+function ensureLookupPop() {
+  if (lookupPop) return lookupPop;
+  const el = document.createElement("div");
+  el.className = "lookup-pop"; el.id = "lookup-pop";
+  el.setAttribute("role", "dialog"); el.setAttribute("aria-label", "Tra từ");
+  el.hidden = true;
+  document.body.appendChild(el);
+  lookupPop = el;
+  return el;
+}
+function closeLookup() {
+  if (lookupPop) lookupPop.hidden = true;
+  if (lookupReturnFocus && document.contains(lookupReturnFocus)) lookupReturnFocus.focus();
+  lookupReturnFocus = null;
+}
+function lookupSpeak(text, msgEl) {
+  try {
+    if (!("speechSynthesis" in window)) { msgEl.textContent = "Thiết bị không hỗ trợ giọng đọc."; return; }
+    const voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+    if (voices.length && !voices.some((v) => /^zh([-_]|$)/i.test(v.lang || ""))) { msgEl.textContent = "Thiết bị chưa có giọng đọc tiếng Trung."; return; }
+    if (!player.speakText(text)) msgEl.textContent = "Không phát được âm thanh trên thiết bị này.";
+  } catch { msgEl.textContent = "Không phát được âm thanh trên thiết bị này."; }
+}
+function componentsOf(text, content) {
+  const lex = lessonLexicon(content);
+  if (!lex.has(text)) return [];
+  const sub = new Map(lex); sub.delete(text);
+  const toks = segmentZh(text, sub);
+  return toks.length > 1 && toks.some((t) => t.entry) ? toks : [];
+}
+function openLookupCard(html, anchorBtn) {
+  const pop = ensureLookupPop();
+  pop.innerHTML = html;
+  pop.hidden = false;
+  lookupReturnFocus = anchorBtn || null;
+  if (window.innerWidth > 640 && anchorBtn) {
+    const r = anchorBtn.getBoundingClientRect();
+    const pw = 320, ph = pop.offsetHeight || 240;
+    let left = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + window.innerWidth - pw - 8);
+    let top = r.bottom + window.scrollY + 6;
+    if (r.bottom + ph + 12 > window.innerHeight) top = Math.max(window.scrollY + 8, r.top + window.scrollY - ph - 6);
+    pop.style.left = `${left}px`; pop.style.top = `${top}px`;
+  } else { pop.style.left = ""; pop.style.top = ""; }
+  const closeBtn = pop.querySelector("[data-lk-close]");
+  if (closeBtn) closeBtn.focus();
+}
+function entryCardHtml(entry, content) {
+  const chips = componentsOf(entry.zh, content);
+  return `<div class="lk-head"><span class="lk-zh" lang="zh-CN">${esc(entry.zh)}</span><button type="button" class="btn ghost lk-close" data-lk-close aria-label="Đóng bảng tra">×</button></div>
+  <dl>
+    <dt>Pinyin</dt><dd lang="zh-Latn">${esc(entry.pinyin)}</dd>
+    <dt>Hán–Việt</dt><dd>${entry.hanViet ? esc(entry.hanViet) : "Chưa có dữ liệu đã kiểm chứng"}</dd>
+    <dt>Nghĩa</dt><dd>${esc(entry.vi)}</dd>
+  </dl>
+  <p><button type="button" class="btn small" data-lk-speak="${esc(entry.zh)}">🔊 Nghe phát âm (giọng máy)</button> <span class="lk-note" data-lk-msg role="status"></span></p>
+  ${entry.hanVietNoteVi ? `<p class="lk-note">${esc(entry.hanVietNoteVi)}</p>` : ""}
+  ${entry.noteVi ? `<p class="lk-note">${esc(entry.noteVi)}</p>` : ""}
+  ${chips.length ? `<p class="lk-note">Từ thành phần:</p><div class="lk-chips">${chips.map((t) => t.entry ? `<button type="button" class="btn ghost small" data-tok="${esc(t.text)}" data-lesson="${esc(content.lessonId)}">${esc(t.text)}</button>` : `<span class="tag">${esc(t.text)}</span>`).join("")}</div>` : ""}
+  <p class="lk-status">Dữ liệu: ${esc(entry.originVi || "dữ liệu của dự án")} · Phát âm bằng giọng máy của thiết bị, không phải audio gốc của sách.</p>`;
+}
+function missingCardHtml(text) {
+  return `<div class="lk-head"><span class="lk-zh" lang="zh-CN">${esc(text)}</span><button type="button" class="btn ghost lk-close" data-lk-close aria-label="Đóng bảng tra">×</button></div>
+  <p>Chưa có dữ liệu cho mục này.</p>
+  <p><button type="button" class="btn small" data-lk-speak="${esc(text)}">🔊 Nghe phát âm (giọng máy)</button> <span class="lk-note" data-lk-msg role="status"></span></p>
+  <p class="lk-status">Dự án chưa kiểm duyệt được Pinyin, Hán–Việt và nghĩa của mục này nên không hiển thị đoán.</p>`;
+}
+function openWordLookup(btn) {
+  const content = contentFor(btn.dataset.lesson);
+  if (!content) return;
+  const text = btn.dataset.tok;
+  const entry = lessonLexicon(content).get(text);
+  openLookupCard(entry ? entryCardHtml(entry, content) : missingCardHtml(text), btn);
+}
+function clearPhraseSelection() {
+  if (phraseSel) {
+    phraseSel.wrap.querySelectorAll(".tok").forEach((b) => b.classList.remove("tok-selected", "tok-range"));
+    phraseSel.bar?.remove();
+  }
+  phraseSel = null;
+}
+function phraseResult(spanText, content, anchorBtn) {
+  const phrase = (content.lookup?.phrases || []).find((x) => x.zh === spanText);
+  if (phrase) {
+    openLookupCard(`<div class="lk-head"><span class="lk-zh" lang="zh-CN">${esc(phrase.zh)}</span><button type="button" class="btn ghost lk-close" data-lk-close aria-label="Đóng bảng tra">×</button></div>
+    <dl><dt>Pinyin</dt><dd lang="zh-Latn">${esc(phrase.pinyin)}</dd><dt>Nghĩa của cả cụm</dt><dd>${esc(phrase.vi)}</dd></dl>
+    <p><button type="button" class="btn small" data-lk-speak="${esc(phrase.zh)}">🔊 Nghe phát âm (giọng máy)</button> <span class="lk-note" data-lk-msg role="status"></span></p>
+    ${phrase.noteVi ? `<p class="lk-note">${esc(phrase.noteVi)}</p>` : ""}
+    <p class="lk-status">Dữ liệu: cụm đã kiểm duyệt riêng cho bài này · Phát âm bằng giọng máy của thiết bị.</p>`, anchorBtn);
+    return;
+  }
+  const toks = segmentZh(spanText, lessonLexicon(content));
+  openLookupCard(`<div class="lk-head"><span class="lk-zh" lang="zh-CN">${esc(spanText)}</span><button type="button" class="btn ghost lk-close" data-lk-close aria-label="Đóng bảng tra">×</button></div>
+  <p>Chưa có giải thích cho cả cụm. Đây là các từ thành phần:</p>
+  <div class="lk-chips">${toks.map((t) => t.entry ? `<button type="button" class="btn ghost small" data-tok="${esc(t.text)}" data-lesson="${esc(content.lessonId)}">${esc(t.text)}</button>` : `<span class="tag">${esc(t.text)}</span>`).join("")}</div>
+  <p class="lk-status">Nghĩa từng từ đã đối chiếu của dự án; app không tự ghép thành bản dịch của cả cụm.</p>`, anchorBtn);
+}
+document.addEventListener("click", (e) => {
+  const pop = lookupPop;
+  if (pop && !pop.hidden && !e.target.closest("#lookup-pop") && !e.target.closest("[data-tok]") && !e.target.closest("[data-phrase-btn]")) closeLookup();
+  const closeBtn = e.target.closest("[data-lk-close]");
+  if (closeBtn) { closeLookup(); return; }
+  const speakBtn = e.target.closest("[data-lk-speak]");
+  if (speakBtn) { lookupSpeak(speakBtn.dataset.lkSpeak, speakBtn.parentElement.querySelector("[data-lk-msg]")); return; }
+  const phraseBtn = e.target.closest("[data-phrase-btn]");
+  if (phraseBtn) {
+    clearPhraseSelection(); closeLookup();
+    const wrap = phraseBtn.closest("section, article, div")?.querySelector("[data-tok-wrap]");
+    if (!wrap) return;
+    const bar = document.createElement("div");
+    bar.className = "phrase-bar";
+    bar.innerHTML = `<span>Chạm từ đầu rồi chạm từ cuối của cụm.</span><button type="button" class="btn primary small" data-phrase-confirm disabled>Tra cụm đã chọn</button><button type="button" class="btn ghost small" data-phrase-cancel>Hủy</button>`;
+    wrap.after(bar);
+    phraseSel = { wrap, bar, start: null, end: null, btn: phraseBtn };
+    phraseBtn.focus();
+    return;
+  }
+  if (e.target.closest("[data-phrase-cancel]")) { const b = phraseSel?.btn; clearPhraseSelection(); if (b) b.focus(); return; }
+  if (e.target.closest("[data-phrase-confirm]")) {
+    if (!phraseSel || phraseSel.start === null || phraseSel.end === null) return;
+    const { wrap, start, end, btn } = phraseSel;
+    const parts = [...wrap.querySelectorAll("[data-toki]")].filter((n) => { const i = Number(n.dataset.toki); return i >= start && i <= end; }).map((n) => n.textContent).join("");
+    const lessonId = wrap.querySelector("[data-tok]")?.dataset.lesson;
+    const content = contentFor(lessonId);
+    clearPhraseSelection();
+    if (content && parts) phraseResult(parts, content, btn);
+    return;
+  }
+  const tok = e.target.closest("[data-tok]");
+  if (tok) {
+    if (phraseSel && tok.closest("[data-tok-wrap]") === phraseSel.wrap) {
+      const i = Number(tok.dataset.toki);
+      if (phraseSel.start === null || (phraseSel.start !== null && phraseSel.end !== null)) { phraseSel.start = i; phraseSel.end = null; }
+      else phraseSel.end = i;
+      if (phraseSel.end !== null && phraseSel.end < phraseSel.start) [phraseSel.start, phraseSel.end] = [phraseSel.end, phraseSel.start];
+      phraseSel.wrap.querySelectorAll("[data-tok]").forEach((b) => {
+        const j = Number(b.dataset.toki);
+        b.classList.toggle("tok-selected", j === phraseSel.start || j === phraseSel.end);
+        b.classList.toggle("tok-range", phraseSel.end !== null && j > phraseSel.start && j < phraseSel.end);
+      });
+      phraseSel.bar.querySelector("[data-phrase-confirm]").disabled = phraseSel.end === null;
+      return;
+    }
+    if (tok.closest("#lookup-pop")) { // component chip inside the popover
+      const content = contentFor(tok.dataset.lesson);
+      if (content) { const entry = lessonLexicon(content).get(tok.dataset.tok); openLookupCard(entry ? entryCardHtml(entry, content) : missingCardHtml(tok.dataset.tok), tok); }
+      return;
+    }
+    openWordLookup(tok);
+  }
+});
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { if (phraseSel) clearPhraseSelection(); else closeLookup(); } });
+
 function sectionKnowledgeHtml(content) {
  const isFoundation = (x) => ['foundation-pronunciation','foundation-characters'].includes(x.kind);
  const isTip = (x) => String(x.kindLabel || "").startsWith("Mẹo");
@@ -422,7 +612,7 @@ function sectionKnowledgeHtml(content) {
  const tips=content.knowledgePoints.filter(x=>!isFoundation(x) && isTip(x));
  const foundation=content.knowledgePoints.filter(isFoundation);
  const countWord={1:'Một',2:'Hai',3:'Ba',4:'Bốn',5:'Năm',6:'Sáu',7:'Bảy',8:'Tám'}[main.length]||String(main.length);
- return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${tips.length?`<details class="tips-block"><summary>Mẹo nhỏ trong bài — xem khi gặp câu liên quan (không phải điểm chính)</summary>${tips.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
+ return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${lookupOn(content) ? `<p class="muted small">${esc(content.lookup.introVi || "")}</p>` : ""}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${tips.length?`<details class="tips-block"><summary>Mẹo nhỏ trong bài — xem khi gặp câu liên quan (không phải điểm chính)</summary>${tips.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
 }
 function bindKnowledge() { bindSupportBar(); bindQuickChecks(); }
 
@@ -449,12 +639,12 @@ function sectionReaderHtml(content) {
  const track=r.audioTracks.find(x=>x.id===group.audioTrackId);
  return `<section class="card reader-card"><p class="kicker">NGHE TRONG NGỮ CẢNH</p><h2>${esc(r.headingVi||r.titleVi)}</h2>
  <nav class="passage-tabs" aria-label="Chọn hội thoại">${r.passages.map((g,i)=>`<a class="${g.id===group.id?'selected':''}" href="#/lesson/${content.lessonId}/reader?passage=${g.id}" ${g.id===group.id?'aria-current="true"':''}>${i+1}. ${esc(g.title)}</a>`).join('')}</nav>
- <h3>${esc(group.title)}</h3><p class="muted">${esc(group.context)}</p><div id="tracks">${trackRowHtml(track)}</div>
+ <h3>${esc(group.title)}</h3><p class="muted">${esc(group.context)}</p>${lookupOn(content) ? `<p class="muted small">${esc(content.lookup.introVi || "")}</p>` : ""}<div id="tracks">${trackRowHtml(track)}</div>
  ${(() => { const gidx = r.passages.findIndex((g) => g.id === group.id);
    const relKps = content.knowledgePoints.filter((k) => !String(k.kindLabel || "").startsWith("Mẹo") && (k.sentenceIds || []).some((id) => group.sentenceIds.includes(id)));
    return `<div class="row-actions reader-links"><a class="btn ghost small" href="#/lesson/${content.lessonId}/prep">Xem từ của bài này</a>${relKps.map((k) => `<a class="btn ghost small" href="#/grammar/${esc(k.id)}?return=reader&passage=${esc(group.id)}">Điểm chính: ${esc(k.title)}</a>`).join("")}${group.checkItemId ? `<a class="btn small" href="#/lesson/${content.lessonId}/exercises?item=${esc(group.checkItemId)}">${esc(group.checkLabelVi || "Câu hỏi ngắn sau khi nghe")} →</a>` : ""}</div>`; })()}
  ${supportBarHtml('sentences')}<details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
- ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
+ ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(sen.zh, content)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${phraseBtnHtml(content)}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details><p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
  <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang (đã đối chiếu bản in, chưa nghe kiểm chứng). Mỗi câu có loa riêng: đoạn câu được căn bằng máy từ audio (ASR) nên là mốc nháp, chưa được người nghe xác nhận; vẫn có thể nghe cả track như trước. Bản in không bao gồm lời dẫn của audio.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
 }
@@ -557,7 +747,7 @@ function exerciseCardHtml(content, set, prefix) {
   const supportOn = !!(ses.supportUsed?.[item.id]);
   const seg = item.audioSegment;
   return `<section class="card" ${isMain ? 'id="exercise-card"' : 'id="supp-exercise-card"'} data-anchor><h2>${isMain ? "Luyện tập" : esc(set.titleVi || "Bài tập bổ trợ")}</h2>${isMain ? supportBarHtml('exercises') : ""}
-  <details class="set-note"><summary>Ghi chú về bộ câu hỏi</summary><p class="muted">${esc(set.noteVi)}</p></details>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
+  <details class="set-note"><summary>Ghi chú về bộ câu hỏi</summary><p class="muted">${esc(set.noteVi)}</p></details>${supportOn && !checked ? `<p class="support-note">Câu này đang dùng hỗ trợ — kết quả sẽ ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
   ${isPronunciationItem(item) ? `<p class="tag">Bài luyện âm — Pinyin chính là nội dung cần phân biệt nên được hiện sẵn.</p>` : (checked ? "" : `<p class="muted small">Pinyin và nghĩa của câu và các lựa chọn sẽ hiện sau khi bạn kiểm tra, để bạn tự làm trước.</p>`)}
@@ -612,7 +802,7 @@ function dictationHtml(content) {
  const p = loadProgress();
  const focusTask = parseRoute().query.task;
  const hasGraded = content.selfCheckTasks.some(t => t.answerStatus === 'verified-editorial');
- return `${supportBarHtml('dictation')}<p class="support-note">${hasGraded ? 'Ở bài chọn/điền có chấm điểm, Pinyin không làm lộ đáp án trước khi chấm; xem trước qua “Xem lời đọc” sẽ được ghi nhận. ' : ''}Các cặp so sánh được hiển thị đầy đủ để nghe và đọc theo. Âm tiết luyện phát âm không có nghĩa câu riêng; các khung tự nói được giữ bằng chữ Hán như đề sách.</p><p class="muted">${esc(content.selfCheckIntroVi || "")}</p>
+ return `${supportBarHtml('dictation')}<details class="info-fold"><summary>Cách làm bài</summary><p>${hasGraded ? 'Ở bài chọn/điền có chấm điểm, Pinyin không làm lộ đáp án trước khi chấm; xem trước lời đọc sẽ được ghi nhận vào kết quả. ' : ''}Các cặp so sánh hiện đầy đủ để nghe và đọc theo. Bài luyện phát âm chỉ có âm tiết, không có nghĩa câu riêng; các khung tự nói giữ nguyên chữ Hán như đề sách.</p></details>${content.selfCheckIntroVi ? `<details class="info-fold"><summary>Thông tin thêm</summary><p>${esc(content.selfCheckIntroVi)}</p></details>` : ""}
  ${content.selfCheckTasks.map((t, ti) => {
   const mine = p.selfChecks[t.id];
   const graded = t.answerStatus === "verified-editorial";
@@ -634,14 +824,14 @@ function dictationHtml(content) {
   <div class="dict-actions">${t.audioTrackId ? `<button class="btn" data-play-task="${esc(t.audioTrackId)}" ${seg ? `data-seg-start="${seg.start}" data-seg-end="${seg.end}"` : ""}>${playLabel}</button>` : ""}
   ${graded ? `<button class="btn primary" data-check-dict="${t.id}">Kiểm tra</button>
   ${lastVals.some((r) => !r.correct) ? `<button class="btn" data-redo-dict="${t.id}">Làm lại câu sai</button>` : ""}
-  <button class="btn ghost" data-peek-dict="${t.id}">${dictRevealed.has(t.id) ? "Ẩn lời đọc" : "Xem lời đọc"}</button>` : ""}
+  <button class="btn ghost" data-peek-dict="${t.id}">${dictRevealed.has(t.id) ? "Ẩn lời đọc" : "Xem lời đọc"}</button>${!dictRevealed.has(t.id) ? `<span class="muted small">Xem trước sẽ được ghi nhận.</span>` : ""}` : ""}
   </div>
   ${t.audioSegmentStatus === "asr-draft" ? `<p class="small muted">Mốc nghe tham khảo, chưa được người nghe xác nhận. Có thể mở track gốc ở phần Nguồn bài học để đối chiếu.</p>` : ""}
   ${graded && firstVals.length ? `<p class="dict-score" role="status">Điểm lần đầu: <strong>${firstCorrect}/${firstVals.length}</strong> ô đã kiểm tra${entry.peeked ? ` · đã xem lời đọc trước khi làm lần đầu` : ""}${lastVals.length ? ` · lần kiểm tra gần nhất: ${lastVals.filter((r) => r.correct).length}/${lastVals.length} ô đúng` : ""}</p>` : ""}
   ${graded && entry?.peeked && !firstVals.length ? `<p class="dict-score">Đã xem lời đọc — điểm lần đầu của bài này sẽ được ghi kèm lưu ý đó.</p>` : ""}
   <div class="answer-grid ${speaking ? "picture-practice-grid" : ""}">${t.prompts.map((v, i) => { const conflict = isConflictCell(t, i); const draft = p.drafts?.[t.id + ":" + i] || ""; const r = conflict ? null : last[i]; const edited = r && draft !== r.input; const fig = t.promptImages?.[i]; return `<label>${fig ? `<figure><img src="${esc(fig.src)}" alt="${esc(fig.alt)}" loading="lazy"><figcaption>${esc(fig.captionVi)}</figcaption></figure>` : ""}<span>${i + 1}. <span lang="${speaking ? "zh-CN" : "zh-Latn"}">${esc(v)}</span></span>${comparison || speaking ? `<span class="small muted">${comparison ? "Ghi chú nghe và đọc" : "Câu bạn muốn nói"}</span>` : ""}<input type="text" data-draft="${t.id}:${i}" aria-label="${esc(t.titleVi)} — ${comparison ? "ghi chú cặp" : "câu"} ${i + 1}" value="${esc(draft)}" autocomplete="off" class="${r && !edited ? (r.correct ? "cell-right" : "cell-wrong") : edited ? "cell-edited" : ""}">${conflict ? `<span class="cell-note warn">Tạm không chấm — nguồn đang mâu thuẫn, cứ luyện nghe và gõ thử.</span>` : r && !edited ? (r.correct ? `<span class="cell-note ok">Đúng</span>` : `<span class="cell-note bad">Đáp án: ${esc(dictationExpected(t, i))}</span>`) : edited ? `<span class="cell-note warn">Đã sửa — cần kiểm tra lại</span>` : ""}${r && !edited && t.scriptSyllables?.[i] ? `<span class="cell-script tog-pinyin-ex">Lời đọc: <span lang="zh-Latn">${esc(t.scriptSyllables[i])}</span></span>` : ""}</label>`; }).join("")}</div>
   ${dictRevealed.has(t.id) ? `<div class="script-box"><p class="small muted">Lời đọc của bài (theo tài liệu lời đọc của sách):</p><p lang="zh-Latn">${(t.scriptSyllables || []).map(esc).join(" · ")}</p></div>` : ""}
-  <p class="small muted">${graded ? "Chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB. Tự đánh giá mức nhớ vẫn giữ riêng bên dưới." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
+  <p class="small muted">${graded ? "Chấm tự động · đáp án đã đối chiếu, chưa phải đáp án chính thức của NXB." : "Tự đánh giá mức nhớ, không phải kết quả đúng/sai."}</p>
   <div class="row-actions">${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, v]) => `<button class="btn small ${mine?.rating === k ? "primary" : ""}" data-selfrate="${t.id}:${k}">${v}</button>`).join("")}</div>
   ${refsHtml(t.sourceRefs)}</details>`; }).join("")}`;
 }
@@ -766,7 +956,7 @@ function sectionApplyHtml(content) {
     ${supportBarHtml('sentences')}
     ${a.tasks.map((t) => `<article class="speak-task" id="${esc(t.id)}" data-anchor><h3>${esc(t.titleVi)}</h3>
       <p>${esc(t.situationVi)}</p>
-      <div class="example"><span class="zh-sentence" lang="zh-CN">${esc(t.sampleZh)}</span> ${ttsBtnHtml(t.sampleZh)}${t.samplePinyin ? `<span class="pinyin tog-pinyin-sent" lang="zh-Latn">${esc(t.samplePinyin)}</span>` : ""}<p class="muted tog-vi-sent">${esc(t.sampleVi)}</p></div>
+      <div class="example"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(t.sampleZh, content)}</span> ${ttsBtnHtml(t.sampleZh)}${t.samplePinyin ? `<span class="pinyin tog-pinyin-sent" lang="zh-Latn">${esc(t.samplePinyin)}</span>` : ""}<p class="muted tog-vi-sent">${esc(t.sampleVi)}</p>${phraseBtnHtml(content)}</div>
       <p class="small">${esc(t.swapVi)}</p>
       <p class="small muted">${esc(t.sourceNoteVi || "")}</p>
       <button class="btn ${done[t.id] ? "primary" : ""}" type="button" data-speak-done="${esc(t.id)}" aria-pressed="${!!done[t.id]}">${done[t.id] ? "✓ Đã luyện nhiệm vụ này" : "Đánh dấu đã luyện"}</button>
@@ -792,7 +982,7 @@ function sectionSummaryHtml(lesson, content) {
   const attempted = sum.firstTotal > 0 || (suppSum ? suppSum.firstTotal > 0 : false);
   const mainNotAttempted = sum.firstTotal === 0 && suppSum && suppSum.firstTotal > 0;
   return `<section class="card"><h2>Tổng kết bài</h2>
-  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><br><span class="zh-sentence" lang="zh-CN">${esc(pt.exampleZh)}</span><p class="muted">${esc(pt.exampleVi)}</p></div>`).join("")}` : ""}
+  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><br><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span><p class="muted">${esc(pt.exampleVi)}</p>${phraseBtnHtml(content)}</div>`).join("")}` : ""}
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   ${nextSection ? `<p class="row-actions"><a class="btn primary" href="#/lesson/${lesson.id}/${nextSection.id}">Tiếp tục: ${esc(nextSection.titleVi)} →</a></p>` : ""}
   <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>.</p>
@@ -864,7 +1054,7 @@ function viewReview() {
     <span class="row-actions"><a class="btn" href="${esc(d.href)}">Làm lại tại bài</a>
     ${d.grammarId ? `<a class="btn ghost" href="#/grammar/${esc(d.grammarId)}?return=exercises">Xem giải thích</a>` : ""}
     ${[["forgot", "Chưa nhớ"], ["slow", "Còn chậm"], ["known", "Nhớ"]].map(([k, label]) => `<button class="btn small" data-review-rate="${esc(i.key)}:${k}">${label}</button>`).join("")}</span></article>`; }).join("")}
-    <p class="muted small">Lịch ôn đề xuất của sản phẩm: 1, 3, 7, 14, 30 ngày; trả lời sai quay về 1 ngày.</p></section>`
+    <details class="info-fold"><summary>Cách tính lịch ôn</summary><p class="muted small">Lịch ôn đề xuất của sản phẩm: 1, 3, 7, 14, 30 ngày; trả lời sai quay về 1 ngày.</p></details></section>`
   : `<section class="card"><h2>Chưa có mục đến hạn</h2><p class="muted">Làm bài tập hoặc tự đánh giá một bài nghe–viết để tạo mục ôn. Lịch ôn chỉ tính từ thao tác học thật, không tạo dữ liệu mẫu.</p></section>`}
   ${upcoming.length ? `<section class="card"><h2>Sắp đến hạn</h2>${upcoming.map((i) => { const d = describeReviewItem(i); return `<p class="row-line"><span>${esc(d.title)}</span><span class="tag">${esc(new Date(i.dueAt).toLocaleDateString("vi-VN"))}</span></p>`; }).join("")}</section>` : ""}`;
   bindSupportBar();

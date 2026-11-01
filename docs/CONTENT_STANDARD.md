@@ -246,3 +246,8 @@ Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê 
 5. **Ba khu bài tập:** A Luyện sau bài (chính) / B Luyện thêm (tự đối chiếu, ghi rõ có chấm tự động hay không) / C Đề mô phỏng (điểm và session riêng, không tự khởi động, không bắt buộc).
 6. **Trạng thái học:** "Đã xem" = đã mở/tự đánh dấu mục; "Đã luyện" = đã hoàn thành hoạt động tương ứng (với tự nói là tự đánh dấu đã luyện); "Cần ôn" = có câu/ô sai trong hàng đợi ôn. Không dùng "đã nắm vững" cho thao tác bấm nút hoặc mở trang. Khi chưa làm bài tập, tổng kết hiện "Bạn chưa làm bài tập".
 7. **Tương thích dữ liệu cũ:** nâng cấp hiển thị không đổi ID, đáp án, session, điểm lần đầu hay hàng đợi ôn; trường progress mới phải là khóa cộng thêm tùy chọn, dữ liệu cũ thiếu trường đó phải chạy bình thường.
+
+## Bổ sung D24 (02/11/2026): chữ giải thích và tra từ trong bài
+
+- Chữ giải thích về hệ thống (chấm điểm, ghi nhận hỗ trợ, biên soạn/đối chiếu, kỹ thuật) không hiện mặc định trong luồng học; đặt trong `details.info-fold` nhãn người học hoặc rút thành một câu ngắn đúng điểm dùng (chuẩn D24, DECISIONS). Cảnh báo/ghi chú quyền nguồn giữ nguyên ý nghĩa.
+- Tra từ bằng chạm chỉ bật ở bài có khối `lookup` và chỉ trên bề mặt đọc (lời thoại, ví dụ kiến thức, câu mẫu tự nói, ví dụ tổng kết). Không bao giờ gắn vào bề mặt kiểm tra trước khi chấm. Mục từ điển chỉ lấy từ dữ liệu đã đối chiếu của dự án + mục bổ sung kiểm duyệt ghi trong `lookup.extras/phrases` (status verified-editorial); trường chưa có căn cứ (điển hình Hán–Việt của chữ ít gặp) để null và hiển thị "Chưa có dữ liệu đã kiểm chứng" — cấm điền đoán. Giấy phép nguồn ngoài chưa rõ thì không nhập (CVDICT là ví dụ đã loại).

@@ -301,3 +301,34 @@ export function summarizeAttempts(attempts, exerciseIds) {
   }
   return { answered: byExercise.size, firstTotal, firstCorrect, retried, hintUsedCount, supportUsedCount };
 }
+
+// D24: dictionary-driven segmentation for tap-to-lookup. The dictionary IS
+// the project's curated lexicon, so boundaries always align with entries the
+// project has verified — and curating an entry is also the way to fix a
+// boundary. Longest match wins (胡医生 before 医生). Characters with no entry
+// stay single-character tokens; punctuation is grouped as non-word tokens.
+export function segmentZh(text, dict) {
+  const words = dict instanceof Map ? dict : new Map();
+  let maxLen = 0;
+  for (const k of words.keys()) if (k.length > maxLen) maxLen = k.length;
+  const isHan = (ch) => ch >= "\u4e00" && ch <= "\u9fff";
+  const tokens = [];
+  let i = 0;
+  while (i < text.length) {
+    const ch = text[i];
+    if (!isHan(ch)) {
+      let j = i + 1;
+      while (j < text.length && !isHan(text[j])) j++;
+      tokens.push({ text: text.slice(i, j), entry: null, punct: true });
+      i = j; continue;
+    }
+    let hit = null;
+    for (let L = Math.min(maxLen, text.length - i); L >= 1; L--) {
+      const cand = text.slice(i, i + L);
+      if (words.has(cand)) { hit = cand; break; }
+    }
+    if (hit) { tokens.push({ text: hit, entry: words.get(hit) }); i += hit.length; }
+    else { tokens.push({ text: ch, entry: null }); i += 1; }
+  }
+  return tokens;
+}

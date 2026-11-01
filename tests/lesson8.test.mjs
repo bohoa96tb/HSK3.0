@@ -116,3 +116,14 @@ test('lesson 8 option audio maps to the track that actually speaks the option (D
     for (const o of item(id).options) assert.equal(o.audio.trackId, 'trk-wb-l08-1', `${id}/${o.id}`);
   }
 });
+
+test('lesson 8 QA fixes: printed wording kept verbatim and alt text describes only what is drawn', () => {
+  const neng = l8.knowledgePoints.find((k) => k.id === 'kp-hsk1-l08-neng');
+  assert.equal(neng.examples[2].zh, '我不能去学校吃午饭。'); // printed p.058 reads 吃午饭, not 吃饭
+  assert.ok(neng.explanationVi.includes('吃午饭'));
+  const pos = l8.knowledgePoints.find((k) => k.id === 'kp-hsk1-l08-positional');
+  assert.ok(!pos.explanationVi.includes('cả ba ý này'));
+  const warmOpts = item('wb8-warm-3').options;
+  assert.ok(!warmOpts.some((o) => (o.imageAlt || '').includes('Books')));
+  assert.ok(!l8.intro.contextImage.alt.includes('ghế'));
+});

@@ -16058,7 +16058,7 @@
         ],
         "contextImage": {
           "src": "assets/lesson-08/context-cat-under-table.webp",
-          "alt": "Minh họa vẽ lại: mèo con ở dưới bàn, cạnh ghế và tủ sách",
+          "alt": "Minh họa vẽ lại: mèo con nằm ở dưới bàn",
           "caption": "Minh họa vẽ lại theo cảnh Hội thoại 1 (mèo dưới bàn) · Textbook, trang 055",
           "width": 418,
           "height": 401
@@ -16609,7 +16609,7 @@
           "kind": "grammar",
           "kindLabel": "Ngữ pháp cơ bản",
           "title": "Phương vị từ: 上、下、里、外、前、后",
-          "explanationVi": "Sách nêu các phương vị từ đã học trong sách này: “上、下、里、外、前、后” (và dạng “外边”). Phương vị từ đặt sau danh từ chỉ nơi chốn để nói vị trí cụ thể: 桌子下 (dưới bàn), 书店前 (trước hiệu sách), 房间外 (ngoài phòng). Hội thoại 1 dùng cả ba ý này: 房间外有一只小猫 / 它在桌子下呢.",
+          "explanationVi": "Sách nêu các phương vị từ đã học trong sách này: “上、下、里、外、前、后” (và dạng “外边”). Phương vị từ đặt sau danh từ chỉ nơi chốn để nói vị trí cụ thể: 桌子下 (dưới bàn), 书店前 (trước hiệu sách), 房间外 (ngoài phòng). Hội thoại 1 dùng hai ý 房间外 và 桌子下: 房间外有一只小猫 / 它在桌子下呢; còn 书店前 xuất hiện ở Hội thoại 2.",
           "pattern": "Danh từ nơi chốn + 上/下/里/外/前/后 （+边）",
           "examples": [
             {
@@ -16699,7 +16699,7 @@
           "kind": "grammar",
           "kindLabel": "Ngữ pháp cơ bản",
           "title": "Động từ năng nguyện “能”: có thể",
-          "explanationVi": "Sách nêu: 能愿动词 “能” biểu thị “có thể”, đặt trước động từ. Câu hỏi: 下午两点你能到吗？ (chiều 2 giờ bạn đến được không?). Phủ định dùng “不能”: 我不能去学校吃饭 (tôi không thể đến trường ăn cơm).",
+          "explanationVi": "Sách nêu: 能愿动词 “能” biểu thị “có thể”, đặt trước động từ. Câu hỏi: 下午两点你能到吗？ (chiều 2 giờ bạn đến được không?). Phủ định dùng “不能”: 我不能去学校吃午饭 (tôi không thể đến trường ăn cơm trưa).",
           "pattern": "Chủ ngữ + 能/不能 + động từ; câu hỏi: …能…吗？",
           "examples": [
             {
@@ -16713,9 +16713,9 @@
               "noteVi": "Bố có thể đi — ví dụ của sách"
             },
             {
-              "zh": "我不能去学校吃饭。",
-              "pinyin": "Wǒ bù néng qù xuéxiào chī fàn.",
-              "noteVi": "Tôi không thể đến trường ăn cơm — ví dụ của sách (dạng phủ định)"
+              "zh": "我不能去学校吃午饭。",
+              "pinyin": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
+              "noteVi": "Tôi không thể đến trường ăn cơm trưa — ví dụ của sách (dạng phủ định)"
             }
           ],
           "positionVi": "能 đứng trước động từ chính; phủ định 不能 đứng ngay trước động từ.",
@@ -18078,7 +18078,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",
@@ -18149,7 +18149,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",
@@ -18220,7 +18220,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",
@@ -18291,7 +18291,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",
@@ -18362,7 +18362,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",
@@ -18433,7 +18433,7 @@
                 "pinyin": "shūdiàn",
                 "vi": "hiệu sách",
                 "image": "assets/lesson-08/warm-bookstore.webp",
-                "imageAlt": "Minh họa vẽ lại: hiệu sách với biển Books"
+                "imageAlt": "Minh họa vẽ lại: hiệu sách với các kệ sách"
               },
               {
                 "id": "2",

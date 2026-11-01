@@ -308,6 +308,6 @@ Bằng chứng tách theo năm loại theo D17:
 - **Đối chiếu trực quan bản in:** toàn bộ mảng nội dung ở trên do QA độc lập đọc trực tiếp PDF đối chiếu dữ liệu.
 - **Đối chiếu ASR:** hai lượt faster-whisper (có/không VAD) + phân tích khoảng lặng để căn đoạn; thứ tự và ranh giới đoạn là căn bằng máy.
 - **Kiểm nghe thực tế:** CHƯA thực hiện — mọi đoạn giữ `asr-draft`. Hai bài phân biệt phát âm giữ `unverified`, không chấm tự động: đã thử đọc tài liệu lời đọc đăng lại (Scribd) hai lượt trong ngày để đối chiếu, cả hai lượt trang không tải xong, không có căn cứ nâng trạng thái.
-- **Kiểm giao diện:** nghiệm thu live + iframe responsive sau phát hành (cập nhật dưới đây khi có kết quả).
+- **Kiểm giao diện:** nghiệm thu live trên URL thật đạt 8/8 bước (lộ trình hiện 7 bài; 27 thẻ từ + Hán–Việt đúng; loa câu Hội thoại 3 phát đúng đoạn; nút Ôn lại của câu 4 mở đúng điểm Cách nói giờ (2) và quay lại đúng câu; hai bài phát âm không có chấm tự động; tiến độ giữ sau reload; hồi quy Bài 6 chấm âm tiết và ô source-conflict Bài 5 còn nguyên). Kiểm responsive bằng iframe tests/responsive.html: 3 tuyến × 360/390/768/1440 đạt 12/12, cộng tuyến Từ cần biết ở 390 với cỡ chữ lớn nhất đạt. Chưa kiểm trên thiết bị Android thật.
 
 Giới hạn đã biết: chưa Android thật; chưa CI GitHub Actions (403 — handoff ở docs/ci/); quyền nguồn unknown.

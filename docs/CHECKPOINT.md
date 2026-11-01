@@ -1,18 +1,16 @@
 # CHECKPOINT — HSK3.0
 
-- milestone: HSK1 Bài 2 hoàn thiện theo mẫu Bài 1; chưa bắt đầu Bài 3
-- status: lesson2_deployed_pending_human_acceptance
+- milestone: Bài 1 và Bài 2 hoàn thiện phần nghe–viết còn thiếu; chưa bắt đầu Bài 3
+- status: lessons1-2_dictation_deployed_pending_human_acceptance
 - currentLessonId: hsk1-l02
-- lastCompletedTask: Bài 2 我叫李文 — đối chiếu trực quan Textbook trang in 005–009 và Workbook 005–008; 15 từ mới, 7 điểm kiến thức, 3 hội thoại/10 lượt thoại print-verified, 4 câu chọn hội thoại theo hình (đáp án suy luận biên tập `verified-from-visual`), 3 bài nghe–viết `unverified` có lưu nháp; khái quát hóa app sang nhiều bài (additionalLessons, exerciseSessions theo bộ bài, migration giữ tiến độ Bài 1).
-- nextTask: chờ người dùng nghiệm thu Bài 2 trên bản live. Sau nghiệm thu mới mở Bài 3. Việc tồn đọng chung: nghe đối chiếu các track Bài 1 và Bài 2, xác minh timestamp trước khi bật nghe từng câu.
-- checksRun: npm run check — validator đạt (2 bài sẵn sàng), 17/17 test đạt gồm bộ test Bài 2 mới và hồi quy Bài 1; git diff --check sạch. Chưa coi DOM test là visual/browser/audio QA. CI GitHub Actions chưa cấu hình (lịch sử thiếu quyền) — kiểm tra chạy local, không tuyên bố CI.
-- blockers: transcript Bài 1 và Bài 2 đã đối chiếu bản in nhưng chưa nghe xác minh track/ranh giới từng câu; đáp án nghe–viết của cả hai bài chưa có (sách không in đáp án); chưa thử Android thật; quyền tái xuất bản vẫn unknown.
-- evidence: docs/SOURCE_AUDIT.md (mục Bài 2), docs/QA_REPORT.md (mục Bài 2), assets/lesson-02/ATTRIBUTION.md, docs/CURRICULUM_MAP.md mục 4
-- baselineCommit: d64c151677bc39a00f9d405da0580d7d60255993
-- branch: main (PR #5 từ lesson/hsk1-lesson-2)
+- lastCompletedTask: Hoàn thiện nghe–viết Bài 1–2 (PR #7): đáp án biên tập đã đối chiếu cho 78/78 ô của 6 bài nghe–viết (bản in + tài liệu lời đọc đăng lại + ASR nháp local), chấm tự động theo quy tắc thanh mẫu/vận mẫu/thanh điệu, nghe theo đoạn bài tập (mốc từ ASR đối chiếu lời đọc), sửa đề ô 10 Bài 1 "__ ēn" → "__ ěn". QA_REPORT có bảng Trạng thái hiện tại ở đầu; quy trình đối chiếu tài liệu rời ghi ở CONTENT_STANDARD; quyết định D10.
+- nextTask: chờ người dùng nghiệm thu lượt hoàn thiện này trên bản live. Sau nghiệm thu mới mở Bài 3 (theo quy trình nguồn chuẩn, gồm tìm tài liệu lời đọc/đáp án rời như CONTENT_STANDARD bổ sung 01/11/2026).
+- checksRun: npm run check — validator đạt (2 bài; kiểm nhất quán đáp án ↔ lời đọc cho 78 ô), 25/25 test đạt (thêm 8 test nghe–viết); git diff --check sạch. CI GitHub Actions: tạo .github/workflows/ci.yml qua connector ngày 01/11/2026 vẫn bị 403 "Resource not accessible by integration"; bản bàn giao hoàn chỉnh ở docs/ci/ci.yml — cần người dùng tạo file đó qua web GitHub hoặc cấp quyền workflow cho GitHub App. Không coi Pages build là CI.
+- blockers: quyền tái xuất bản vẫn unknown; audio chưa được nghe kiểm chứng bởi người (mới có ASR nháp + quan sát nghe của phiên kiểm thử trình duyệt); timestamp từng câu chưa có (chỉ có mốc đoạn bài tập); chưa thử Android thật — checklist thử nhanh cho người dùng: mở Bài 1 → Luyện tập trên điện thoại, nghe một đoạn, nhập vài ô, bấm Kiểm tra, xoay ngang/dọc và kiểm tra bàn phím không che nút Kiểm tra.
+- evidence: docs/SOURCE_AUDIT.md (mục đối chiếu lời đọc/đáp án 01/11/2026), docs/QA_REPORT.md (bảng Trạng thái hiện tại + mục Hoàn thiện nghe–viết), docs/DECISIONS.md D10, docs/CONTENT_STANDARD.md (bổ sung 01/11/2026)
+- baselineCommit: cb193847c0a66eb33f396b0f4445e968e8992b9b
+- branch: main (PR #7 từ fix/l1-l2-dictation)
 - deploymentUrl: https://bohoa96tb.github.io/HSK3.0/
 
-Bài 1 giữ nguyên trạng thái và giới hạn đã ghi ở các lượt trước; việc được phép làm Bài 2 không đổi các mục "chưa xác minh" của Bài 1 thành đã xác minh.
-
-- release: PR #5 merged d64c151677bc39a00f9d405da0580d7d60255993; contentVersion live 20261101-lesson2-1 (đã đối chiếu content.json và hình trên URL thật). Hình nhị phân tải qua giao diện web GitHub (commit dd46ffc) và đối chiếu sha256 khớp bản local; bản thử qua API connector bị lưu thành text base64 đã bị xóa trước khi merge.
-- liveChecks: nghiệm thu live sau PR #5 đạt các luồng chính (lộ trình, 7 mục, transcript/Pinyin/nghĩa độc lập, phát track 2-3 hết 0:13, làm sai có giải thích + ôn, refresh giữ điểm 3/4, Tiến độ có cả hai bài, iframe 360/390/768/1440 không tràn ngang). Một thiếu sót điều hướng (chưa có nút quay lại câu trước) đã sửa trong PR bookkeeping kèm test; chi tiết ở docs/QA_REPORT.md mục Bài 2. Không đồng nghĩa nghe thẩm định nội dung audio hoặc đã thử Android thật.
+- release: PR #7 merged cb193847c0a66eb33f396b0f4445e968e8992b9b; contentVersion live 20261101-dictation-1 (đã đối chiếu qua content.json trên URL thật trước nghiệm thu).
+- liveChecks: nghiệm thu live sau PR #7 đạt 8/8 bước: khối nghe–viết tách 3 bài với nút nghe theo đoạn (nhãn hiển thị làm tròn xuống giây, ví dụ đoạn 106,9s hiện 1:46), ô 10 hiện "__ ěn", phát đoạn chạy và tạm dừng đúng, chấm lao3 đúng / neng4 sai hiện "Đáp án: neng2" và điểm lần đầu 1/2, Xem lời đọc hiển thị đúng dãy âm tiết, refresh giữ nháp và điểm lần đầu, Bài 2 chấm xue2 đúng, hồi quy Nghe & đọc + Tiến độ đạt; phiên kiểm thử ghi nhận nghe thấy tiếng Trung ở đoạn nghe–viết và hội thoại 1. Kiểm bề rộng bằng khung iframe: 2 route bài tập × 390/768/1440 không tràn ngang (360 đã đạt ở vòng QA Bài 2 trước đó; không phải thiết bị thật). Ghi nhận: sau refresh, nhãn đúng/sai chi tiết từng ô không hiển thị lại (điểm và danh sách ô sai ở Tổng kết vẫn giữ) — hành vi hiện tại, không phải mất dữ liệu. Không đồng nghĩa đã nghe thẩm định toàn bộ audio hoặc đã thử Android thật.

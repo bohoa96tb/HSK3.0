@@ -62,3 +62,12 @@
 - Nghiệm thu live: tương tác đạt các mục chính (chi tiết ở QA_REPORT mục D23); iframe 360 đủ 7 route + 390 ba route chính không tràn ngang. Lưu ý: 4 câu chọn dạng lặp nằm ở khu A vì thuộc bộ 19 câu chính (trình tự Workbook + tập điểm lần đầu đã phát hành); khu B là các bài tự luyện.
 - Tồn tại giữ nguyên: chưa nghe kiểm chứng audio bởi người (mốc asr-draft), chưa Android thật cho các thay đổi vòng này, CI Actions chưa tạo được (403), quyền sách/audio unknown, thời lượng học là ước lượng chưa đo.
 - nextTask: Bài 9 khi Hoa nói "Tiếp tục" — áp dụng thêm chuẩn thí điểm D23 (lộ trình, nhóm từ theo hội thoại, quy tắc Pinyin) cùng D17/D19/D20/D22.
+
+## Vòng ẩn chữ dài + tra từ Bài 8 — thí điểm (D24, 2026-11-02)
+
+- Phát hành: nhánh feat/lesson-8-lookup → PR #50, merge 1e38f6c0; contentVersion 20261102-lesson8-lookup1. Đối chiếu byte remote 13/13 file khớp local; live 5/5 file runtime khớp byte.
+- Phần A: mẫu details.info-fold dùng chung (Cách làm bài / Thông tin thêm / Cách tính lịch ôn) áp ở thành phần dùng chung; ô vàng khối Luyện thêm thu gọn; gợi ý "Xem trước sẽ được ghi nhận." cạnh nút Xem lời đọc; dòng ghi nguồn chấm rút một dòng giữ cảnh báo NXB; câu báo hỗ trợ rút ngắn.
+- Phần B: tra từ chạm thí điểm CHỈ Bài 8 ở bề mặt đọc (lời thoại/ví dụ kiến thức/câu mẫu tự nói/ví dụ tổng kết); tách từ bằng từ điển dự án (segmentZh); lookup.extras 11 mục + phrases 2 cụm, hanViet chưa có căn cứ để null và báo rõ; tra cụm chạm từ đầu→cuối; giọng máy thiết bị ghi nhãn. Độ phủ tách từ 39/39 văn bản đích. Bài tập/Thử ngay/prep: 0 token.
+- QA D17 hai vòng cả nội dung và code (chi tiết QA_REPORT mục D24): nội dung v1 1 TB （这只 → GIÁ CHÍCH) + 3 nhẹ → v2 còn 1 nhẹ biến điệu 一 → đã sửa; code v1 59/59 + sửa quan sát nhẹ thành phần → v2 16/16 đạt. Test 110/110.
+- Nghiệm thu live tương tác 5/5 đạt (tra 医院 yīyuàn/Y VIỆN; cụm 在医院工作 nghĩa cả cụm; 只 zhī lượng từ + ghi chú zhǐ; Luyện tập chỉ còn mục thu gọn đóng mặc định, bài tập không có nút tra; Bài 1 không có tra từ). Chưa kiểm nghe (giọng tra là giọng máy), chưa Android thật cho vòng này.
+- nextTask: Bài 9 khi Hoa nói "Tiếp tục" — áp dụng D17/D19/D20/D22/D23/D24 (kiểm kê độ phủ gồm tra từ + ẩn chữ dài ngay từ đầu nếu Hoa muốn mở rộng thí điểm).

@@ -138,7 +138,8 @@ test('progress and summary surfaces report the mock set separately', async () =>
 
 test('coverage round: tips, hanzi KP, reading-answer task and full apply are present', () => {
   const kps = Object.fromEntries(l8.knowledgePoints.map((k) => [k.id, k]));
-  assert.deepEqual(l8.knowledgePoints.map((k) => k.id), ['kp-hsk1-l08-tip-measure', 'kp-hsk1-l08-positional', 'kp-hsk1-l08-zai', 'kp-hsk1-l08-neng', 'kp-hsk1-l08-tip-xiao', 'kp-hsk1-l08-reduplication', 'kp-hsk1-l08-hanzi-writing']);
+  // D23 pilot order: the 3 main points first, then the two tips, then foundations.
+  assert.deepEqual(l8.knowledgePoints.map((k) => k.id), ['kp-hsk1-l08-positional', 'kp-hsk1-l08-zai', 'kp-hsk1-l08-neng', 'kp-hsk1-l08-tip-measure', 'kp-hsk1-l08-tip-xiao', 'kp-hsk1-l08-reduplication', 'kp-hsk1-l08-hanzi-writing']);
   assert.equal(kps['kp-hsk1-l08-tip-measure'].sourceRefs[0].printedPage, '055');
   assert.equal(kps['kp-hsk1-l08-tip-xiao'].sourceRefs[0].printedPage, '059');
   const hz = kps['kp-hsk1-l08-hanzi-writing'];
@@ -155,7 +156,7 @@ test('coverage round: tips, hanzi KP, reading-answer task and full apply are pre
 test('coverage round renders: knowledge section shows tips + hanzi foundation; apply and task present', async () => {
   await route('lesson/hsk1-l08/knowledge');
   const main = $('#main');
-  assert.match(main.textContent, /Năm điều cần nhớ/);
+  assert.match(main.textContent, /Ba điều cần nhớ/);
   assert.match(main.textContent, /Đại từ chỉ định \+ lượng từ/);
   assert.match(main.textContent, /Gọi thân mật/);
   const fnd = main.querySelector('details.foundation');

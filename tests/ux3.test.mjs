@@ -103,8 +103,11 @@ test('exercises: pinyin/meaning apply uniformly to all options and support use i
   assert.ok(card.querySelector('[data-support="vi"]'));
   const opts = $$('#exercise-card .option');
   assert.equal(opts.length, 4);
-  assert.equal($$('#exercise-card .tog-pinyin-ex').length, 4); // every option, not only the correct one
-  assert.equal($$('#exercise-card .tog-vi-ex').length, 4);
+  // D23 (Lesson 8 pilot rule, Hoa 2026-11-02): Pinyin/meaning of a question and
+  // its options are NOT rendered before grading at all (leak-proof in the DOM,
+  // not just hidden by a toggle). They appear for every option after grading.
+  assert.equal($$('#exercise-card .tog-pinyin-ex').length, 0);
+  assert.equal($$('#exercise-card .tog-vi-ex').length, 0);
   // Speaker inside an option still does not select it.
   const speak = $('#exercise-card .option [data-tts]');
   speak.click(); await tick();
@@ -122,6 +125,9 @@ test('exercises: pinyin/meaning apply uniformly to all options and support use i
   const att = state().attempts.find((a) => a.exerciseId === itemId);
   assert.ok(att); assert.equal(att.correct, true); assert.equal(att.supportUsed, true);
   assert.equal(att.hintUsed, false);
+  // After grading, support renders uniformly for every option (D23).
+  assert.equal($$('#exercise-card .tog-pinyin-ex').length, 4);
+  assert.equal($$('#exercise-card .tog-vi-ex').length, 4);
 });
 
 test('dictation: pinyin toggle reveals nothing before checking; the read syllable appears after checking', async () => {

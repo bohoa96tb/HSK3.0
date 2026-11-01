@@ -179,3 +179,6 @@ Trạng thái thử nghiệm còn lại trong profile trình duyệt QA (không 
 - Mọi đoạn loa là căn bằng máy (ASR), **chưa nghe kiểm chứng bởi người**; một số ví dụ là đoạn cắt trong câu dài hơn. 12 đơn vị chưa có loa riêng (liệt kê ở SOURCE_AUDIT).
 - Mini player cố định ở đáy che một dải nội dung cuối trang khi cuộn tới cuối (hành vi cũ, các nút điều hướng vẫn dùng được).
 - Chưa thử Android thật; CI vẫn chờ tạo workflow từ docs/ci/ci.yml; quyền nguồn vẫn unknown.
+
+### Bổ sung sau nghiệm thu (PR #13, contentVersion 20261101-ux2)
+- Kiểm tra nhanh đầu tiên sau PR #10 báo thanh hỗ trợ vẫn nằm trong transcript: nguyên nhân là hồ sơ trình duyệt kiểm tra giữ app.js bản ux1 trong cache vì PR #10 không đổi tham số `?v=` (file trên Pages đã đúng mã mới — đã đối chiếu trực tiếp). PR #13 tăng `?v=` và contentVersion lên `20261101-ux2`; kiểm tra lại trên cùng hồ sơ: thanh hỗ trợ ở Nghe & đọc hiện ở đầu thẻ đọc (ngoài transcript) và khối nghe–viết có cụm cỡ chữ riêng — đều ĐẠT. Quy tắc rút ra: mọi PR đổi mã phải tăng `?v=` trong cùng PR.

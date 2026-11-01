@@ -157,7 +157,7 @@ for (const c of contents) {
     if (t.answerStatus === "unverified") {
       if (t.answers != null || t.gradingMode != null) err(`self-check ${t.id}: unverified tasks must not carry answers/gradingMode`);
     } else if (t.answerStatus === "verified-editorial") {
-      if (!["initial", "final", "tone"].includes(t.gradingMode)) err(`self-check ${t.id}: gradingMode must be initial/final/tone`);
+      if (!["initial", "final", "tone", "syllable"].includes(t.gradingMode)) err(`self-check ${t.id}: gradingMode must be initial/final/tone/syllable`);
       if (!t.answerEvidence) err(`self-check ${t.id}: verified-editorial needs answerEvidence`);
       if (!Array.isArray(t.answers) || t.answers.length !== t.prompts.length) err(`self-check ${t.id}: answers must cover every prompt`);
       if (!Array.isArray(t.scriptSyllables) || t.scriptSyllables.length !== t.prompts.length) err(`self-check ${t.id}: scriptSyllables must cover every prompt`);
@@ -169,6 +169,7 @@ for (const c of contents) {
           if (t.gradingMode === "initial" && !base.startsWith(String(a))) err(`self-check ${t.id} cell ${i + 1}: initial answer "${a}" does not match script syllable "${syl}"`);
           if (t.gradingMode === "final" && !base.endsWith(stripMarks(a))) err(`self-check ${t.id} cell ${i + 1}: final answer "${a}" does not match script syllable "${syl}"`);
           if (t.gradingMode === "tone" && a !== tone) err(`self-check ${t.id} cell ${i + 1}: tone answer ${a} does not match script syllable "${syl}" (tone ${tone})`);
+          if (t.gradingMode === "syllable" && (stripMarks(a) !== base || ([...String(a)].map((ch) => TONE_OF[ch]).find(Boolean) || 0) !== tone)) err(`self-check ${t.id} cell ${i + 1}: syllable answer "${a}" does not match script syllable "${syl}"`);
         });
       }
       if (t.audioSegment) {

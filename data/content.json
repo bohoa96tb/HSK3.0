@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson3-2",
+  "contentVersion": "20261101-lesson4-1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -29,7 +29,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24) và Bài 3 (trang in 010–015, PDF 25–30): đối chiếu mục tiêu, 3 hội thoại, 18 từ mới + 4 tên riêng, 3 điểm Tiểu Ngữ giảng đường （是/的/吗）. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
+      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24), Bài 3 (trang in 010–015, PDF 25–30) và Bài 4 (trang in 018–025, PDF 33–40): đối chiếu mục tiêu, 3 hội thoại, 21 từ mới, 4 điểm Tiểu Ngữ giảng đường （有/ số từ / 呢 / lượng từ) và câu hỏi hiểu hội thoại in sau Hội thoại 2–3. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
     },
     {
       "id": "src-hsk1-workbook-pdf",
@@ -38,7 +38,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1-workbook.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2 và trang in 009–012 (PDF 16–19) cho Bài 3: phát âm zh/ch/sh/r/z/c/s, quy tắc viết u→w và uei/uen→ui/un, 3 bài nghe–viết (12/15/15 ô) và bài 4 chọn hội thoại theo 4 hình. Đáp án nghe–viết đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
+      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2, trang in 009–012 (PDF 16–19) cho Bài 3 và trang in 013–018 (PDF 20–25) cho Bài 4: biến điệu thanh 3, thanh nhẹ, 12 từ kèm hình, bài nghe chọn âm tiết (8 cặp) và các bài đọc theo; phần Mô phỏng kiểm tra (tr. in 016–018) là bài tích lũy nhiều bài, không thuộc nội dung Bài 4 trong app (D15). Đáp án nghe đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
     },
     {
       "id": "src-hsk1-writing-pdf",
@@ -57,7 +57,7 @@
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
       "rightsEvidence": "Bản đăng lại bởi người dùng Scribd; không có tuyên bố giấy phép và chưa xác nhận đây là kênh của NXB FLTRP.",
-      "verification": "Đã đọc lớp chữ định vị của tài liệu ngày 2026-11-01: Bài 1 ở trang in 002 (âm tiết đọc cho bài 2–4), Bài 2 ở trang in 005–006 (bài 1–3), Bài 3 ở trang in 008 (bài 1–3). Nội dung khớp bản in Workbook và khớp thứ tự âm tiết nghe được qua ASR nháp trên track nguồn."
+      "verification": "Đã đọc trực quan các phần Bài 1 (trang in 002), Bài 2 (005–006), Bài 3 (008) và Bài 4 (010) trong bản hiển thị của tài liệu: dãy âm tiết đọc cho các bài nghe–viết Bài 1–3 và 8 âm tiết được đọc của bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng)."
     },
     {
       "id": "src-wb-answer-key",
@@ -67,7 +67,7 @@
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
       "rightsEvidence": "Bản đăng lại bởi người dùng Scribd (bản 1044886104 là cùng một tài liệu, không tính là nguồn độc lập); chưa xác nhận kênh chính thức của NXB.",
-      "verification": "Đã đọc tài liệu ngày 2026-11-01: phần đáp án KHÔNG in đáp án nghe–viết (đáp án nằm ở tài liệu lời đọc); đáp án chọn hình Bài 1 là ①③②, Bài 2 là ③①④② và Bài 3 là ③④①② — khớp với đối chiếu trực quan đã có trong app."
+      "verification": "Đã đối chiếu đáp án chọn hình Bài 1 (①③②), Bài 2 (③①④②), Bài 3 (③④①②) và đáp án bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng — khớp hoàn toàn tài liệu lời đọc) trong bản hiển thị của tài liệu. Tài liệu này không in đáp án nghe–viết của Bài 1–3."
     },
     {
       "id": "src-hanviet-thivien",
@@ -282,28 +282,49 @@
     },
     {
       "id": "hsk1-l04",
-      "bookId": "book-hsk1-workbook",
+      "bookId": "book-hsk1-textbook",
       "level": "HSK 1",
       "sourceUnit": "Lesson 04",
       "lessonNumber": 4,
       "titleZh": "我有两个孩子",
       "titleEn": "I have two children",
       "titleVi": "Tôi có hai người con",
-      "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+      "titleProvenance": "Đối chiếu tên Bài 4 ở Textbook trang in 018 và Workbook trang in 013 — cả hai đều là 我有两个孩子 / I have two children.",
       "sourceRefs": [
+        {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 33,
+          "printedPage": 18,
+          "section": "Bài 4 · mục tiêu và khởi động"
+        },
         {
           "sourceId": "src-hsk1-workbook-pdf",
           "pdfPage": 20,
           "printedPage": 13,
-          "section": "目录 Contents (mục lục)"
+          "section": "Bài 4 · 语音"
         }
       ],
       "textbookAudioTrackCount": 6,
       "workbookAudioTrackCount": 3,
-      "publicationStatus": "catalogue-only",
-      "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-      "grammarIds": [],
-      "sectionIds": []
+      "publicationStatus": "pilot-ready",
+      "publicationNote": "Nói \"có\" bằng 有， hỏi lại bằng 呢， số từ và lượng từ 个/口， hỏi tuổi; kèm biến điệu thanh 3, thanh nhẹ và bài tập sách.",
+      "grammarIds": [
+        "kp-hsk1-l04-you",
+        "kp-hsk1-l04-numbers",
+        "kp-hsk1-l04-ne",
+        "kp-hsk1-l04-measure",
+        "kp-hsk1-l04-tone-sandhi",
+        "kp-hsk1-l04-neutral-tone"
+      ],
+      "sectionIds": [
+        "intro",
+        "prep",
+        "knowledge",
+        "reader",
+        "exercises",
+        "apply",
+        "summary"
+      ]
     },
     {
       "id": "hsk1-l05",
@@ -6633,6 +6654,1996 @@
             }
           ],
           "audio": null
+        }
+      ]
+    },
+    {
+      "lessonId": "hsk1-l04",
+      "intro": {
+        "goalVi": "Nói \"có/không có\" người và vật bằng 有， hỏi lại bằng 呢， đếm số và dùng lượng từ 个/口， hỏi và nói tuổi.",
+        "estimatedMinutes": 25,
+        "sections": [
+          {
+            "id": "intro",
+            "titleVi": "Bắt đầu"
+          },
+          {
+            "id": "prep",
+            "titleVi": "Từ cần biết"
+          },
+          {
+            "id": "knowledge",
+            "titleVi": "Hiểu cách dùng"
+          },
+          {
+            "id": "reader",
+            "titleVi": "Nghe & đọc"
+          },
+          {
+            "id": "exercises",
+            "titleVi": "Luyện tập"
+          },
+          {
+            "id": "apply",
+            "titleVi": "Tự nói"
+          },
+          {
+            "id": "summary",
+            "titleVi": "Tổng kết"
+          }
+        ],
+        "leadVi": "Từ quốc tịch ở Bài 3, sang gia đình: có mấy anh chị em, nhà có mấy người.",
+        "outcomesVi": [
+          "Nói và hỏi về sở hữu: 她有多少个学生？— 她有二十个学生。",
+          "Hỏi lại lịch sự bằng 呢： 我有两个哥哥，你呢？",
+          "Đếm số 0–99 và hàng trăm/nghìn; phân biệt 二 và 两.",
+          "Nói về gia đình và tuổi: 我家有四口人。他今年五岁。"
+        ],
+        "contextImage": {
+          "src": "assets/lesson-04/classroom.webp",
+          "alt": "Lưu Minh và Vương Nhất Tuyết trò chuyện ở phòng khách — hình trích từ Textbook Bài 4",
+          "caption": "Ở nhà · Textbook, trang 019",
+          "width": 685,
+          "height": 385
+        },
+        "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (biến điệu thanh 3, thanh nhẹ) là kiến thức bổ trợ, bạn có thể mở khi cần.",
+        "foundationSummaryVi": "Ôn phát âm nền tảng: biến điệu hai thanh 3 và thanh nhẹ",
+        "courseTagsVi": "Gia đình · Câu chữ 有 · 呢 · Số từ và lượng từ",
+        "priorLessonNoteVi": "Bài này dùng lại câu hỏi 吗 và mẫu 她是… ở Bài 3, mở rộng sang hỏi số lượng và gia đình.",
+        "priorLessonId": "hsk1-l03"
+      },
+      "prepWords": [
+        {
+          "id": "l04w-1",
+          "zh": "有",
+          "pinyin": "yǒu",
+          "vi": "có",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 34,
+              "printedPage": 19,
+              "section": "生词 · Từ mới 4-2"
+            }
+          ],
+          "hanViet": "HỮU",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-2",
+            "start": 0.0,
+            "end": 0.9,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-2",
+          "zh": "多少",
+          "pinyin": "duōshao",
+          "vi": "bao nhiêu",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 34,
+              "printedPage": 19,
+              "section": "生词 · Từ mới 4-2"
+            }
+          ],
+          "hanViet": "ĐA THIỂU",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-2",
+            "start": 2.4,
+            "end": 3.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-3",
+          "zh": "个",
+          "pinyin": "gè",
+          "vi": "lượng từ chung: cái, người, …",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 34,
+              "printedPage": 19,
+              "section": "生词 · Từ mới 4-2"
+            }
+          ],
+          "hanViet": "CÁ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-2",
+            "start": 5.6,
+            "end": 6.3,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-4",
+          "zh": "哥哥",
+          "pinyin": "gēge",
+          "vi": "anh trai",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "CA CA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 0.0,
+            "end": 2.4,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-5",
+          "zh": "呢",
+          "pinyin": "ne",
+          "vi": "trợ từ cuối câu hỏi: \"còn … thì sao?\"",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "NI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 2.8,
+            "end": 3.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-6",
+          "zh": "没有",
+          "pinyin": "méiyǒu",
+          "vi": "không có",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "MỘT HỮU",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chữ 没 có âm Hán–Việt là \"một\" (như chữ 沒）; trong 没有 nó đọc \"méi\" và nghĩa là \"không có\", khác hẳn nghĩa \"một\".",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 5.3,
+            "end": 8.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-7",
+          "zh": "家",
+          "pinyin": "jiā",
+          "vi": "nhà; gia đình",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "GIA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 8.5,
+            "end": 9.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-8",
+          "zh": "几",
+          "pinyin": "jǐ",
+          "vi": "mấy (để hỏi số lượng nhỏ)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "KỶ",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chữ 几 đọc \"jǐ\" (hỏi \"mấy\") có âm Hán–Việt \"kỷ\"; khi đọc \"jī\" (gần như, hầu như) âm Hán–Việt là \"cơ\".",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 11.0,
+            "end": 11.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-9",
+          "zh": "口",
+          "pinyin": "kǒu",
+          "vi": "lượng từ đếm thành viên gia đình (…口人）",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "KHẨU",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 13.0,
+            "end": 14.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-10",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "BA BA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 16.0,
+            "end": 16.7,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-11",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "MA MA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 18.0,
+            "end": 21.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-12",
+          "zh": "妹妹",
+          "pinyin": "mèimei",
+          "vi": "em gái",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "MUỘI MUỘI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 22.3,
+            "end": 23.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-13",
+          "zh": "和",
+          "pinyin": "hé",
+          "vi": "và",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 37,
+              "printedPage": 22,
+              "section": "生词 · Từ mới 4-4"
+            }
+          ],
+          "hanViet": "HÒA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-4",
+            "start": 23.8,
+            "end": 24.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-14",
+          "zh": "儿子",
+          "pinyin": "érzi",
+          "vi": "con trai",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "NHI TỬ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 0.2,
+            "end": 2.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-15",
+          "zh": "孩子",
+          "pinyin": "háizi",
+          "vi": "trẻ con; con (nói chung)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "HÀI TỬ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 2.6,
+            "end": 3.7,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-16",
+          "zh": "女儿",
+          "pinyin": "nǚ'ér",
+          "vi": "con gái",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "NHỮ NHI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 5.6,
+            "end": 8.4,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-17",
+          "zh": "岁",
+          "pinyin": "suì",
+          "vi": "tuổi (lượng từ tuổi tác)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "TUẾ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 8.5,
+            "end": 9.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-18",
+          "zh": "他",
+          "pinyin": "tā",
+          "vi": "anh ấy; ông ấy (ngôi thứ ba, nam)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "THA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 11.0,
+            "end": 12.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-19",
+          "zh": "今年",
+          "pinyin": "jīnnián",
+          "vi": "năm nay",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "KIM NIÊN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 13.8,
+            "end": 14.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-20",
+          "zh": "多",
+          "pinyin": "duō",
+          "vi": "bao nhiêu (trong 多大: bao nhiêu tuổi/lớn)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "ĐA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 16.0,
+            "end": 16.9,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04w-21",
+          "zh": "大",
+          "pinyin": "dà",
+          "vi": "lớn; (tuổi) lớn trong 多大",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 40,
+              "printedPage": 25,
+              "section": "生词 · Từ mới 4-6"
+            }
+          ],
+          "hanViet": "ĐẠI",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Từ điển còn ghi âm \"thái\" cho chữ này ở một số ngữ cảnh cổ; trong bài （多大， dà) âm Hán–Việt dùng là \"đại\".",
+          "audio": {
+            "trackId": "trk-tb-l04-6",
+            "start": 18.5,
+            "end": 19.2,
+            "status": "asr-draft"
+          }
+        }
+      ],
+      "knowledgePoints": [
+        {
+          "id": "kp-hsk1-l04-you",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Câu chữ 有 (1): nói \"có\" người hoặc vật",
+          "explanationVi": "Sách nêu: trong bài này 有 nghĩa là sở hữu — có một người hay một vật. Phủ định của 有 là 没 hoặc 没有： đặt ngay trước phần bị phủ định, không dùng 不. Hỏi số lượng bằng 多少 hoặc 几 kèm lượng từ: 她有多少个学生？(cô ấy có bao nhiêu học sinh?).",
+          "pattern": "Chủ ngữ + 有 + (số từ + lượng từ) + danh từ · phủ định: Chủ ngữ + 没/没有 + …",
+          "examples": [
+            {
+              "zh": "她有二十个学生。",
+              "pinyin": "Tā yǒu èrshí gè xuésheng.",
+              "noteVi": "Cô ấy có hai mươi học sinh. (câu luyện đọc của sách)"
+            },
+            {
+              "zh": "她有一个姐姐。",
+              "pinyin": "Tā yǒu yí gè jiějie.",
+              "noteVi": "Cô ấy có một người chị gái. (câu luyện đọc của sách)"
+            },
+            {
+              "zh": "我没/没有姐姐。",
+              "pinyin": "Wǒ méi/méiyǒu jiějie.",
+              "noteVi": "Tôi không có chị gái. (câu luyện đọc của sách)"
+            }
+          ],
+          "positionVi": "没/没有 đứng ngay trước danh từ bị phủ định; không nói 不有.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 34,
+              "printedPage": 19,
+              "section": "小语讲堂 1 · “有”字句（1）"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 35,
+              "printedPage": 20,
+              "section": "小语讲堂 1 · câu luyện đọc"
+            }
+          ],
+          "sentenceIds": [
+            "l04-s3",
+            "l04-s4",
+            "l04-s6"
+          ],
+          "exerciseIds": [
+            "wb4-text-1",
+            "wb4-text-2"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l04-numbers",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Số từ: 0–99, hàng trăm/nghìn và cách đọc số 2",
+          "explanationVi": "Sách nêu: số trong tiếng Trung viết bằng chữ số Ả-rập hoặc chữ Hán. 0–99 ghép theo chục: 十 (10), 十一 (11), 二十 (20), 二十二 (22)… Từ 100 đến 10.000 ghép theo trăm/nghìn: 一百 (100), 二百零八 (208), 一千五百二十八 (1528). Riêng số \"2\": đọc 二 (èr) trong số đếm và số thứ tự （第二）, nhưng đọc 两 (liǎng) khi đứng trước lượng từ （两个人、两本书）. Về tuổi: với trẻ dưới 10 tuổi hỏi bằng 几岁， từ 10 tuổi trở lên thường hỏi 多大 (ghi chú của sách ở Hội thoại 3).",
+          "pattern": "…十… (chục) · …百… (trăm) · …千… (nghìn) · 二 èr trong số đếm/thứ tự, 两 liǎng + lượng từ",
+          "examples": [
+            {
+              "zh": "二百零八",
+              "pinyin": "èrbǎi líng bā",
+              "noteVi": "208 — số luyện đọc của sách"
+            },
+            {
+              "zh": "一千五百二十八",
+              "pinyin": "yìqiān wǔbǎi èrshíbā",
+              "noteVi": "1528 — số luyện đọc của sách"
+            },
+            {
+              "zh": "两个人",
+              "pinyin": "liǎng gè rén",
+              "noteVi": "hai người — \"2\" đọc 两 trước lượng từ (ví dụ của sách)"
+            },
+            {
+              "zh": "两本书",
+              "pinyin": "liǎng běn shū",
+              "noteVi": "hai quyển sách — ví dụ của sách"
+            }
+          ],
+          "positionVi": "Ghép số theo hàng từ lớn xuống nhỏ; 零 (líng) lấp hàng trống ở giữa như trong 二百零八.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 35,
+              "printedPage": 20,
+              "section": "小语讲堂 2 · 数字的表达 (1)"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 36,
+              "printedPage": 21,
+              "section": "小语讲堂 2 · 数字的表达 (2)(3)"
+            }
+          ],
+          "sentenceIds": [
+            "l04-s4",
+            "l04-s12",
+            "l04-s14"
+          ],
+          "exerciseIds": [
+            "wb4-text-4"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l04-ne",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Trợ từ 呢 (1): hỏi lại \"còn … thì sao?\"",
+          "explanationVi": "Sách nêu: 呢 ở cuối câu tạo câu hỏi về tình huống vừa nhắc tới trước đó — cấu trúc cơ bản: A……，B呢？Ví dụ sau khi nói mình có hai anh trai thì hỏi lại người nghe: 你呢？(còn bạn thì sao?).",
+          "pattern": "A……，B + 呢？",
+          "examples": [
+            {
+              "zh": "我有两个哥哥，你呢？",
+              "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
+              "noteVi": "Tôi có hai anh trai, còn bạn thì sao? (câu luyện đọc của sách)"
+            },
+            {
+              "zh": "我叫白家月，你呢？",
+              "pinyin": "Wǒ jiào Bái Jiāyuè, nǐ ne?",
+              "noteVi": "Tôi tên là Bạch Gia Nguyệt, còn bạn? (câu luyện đọc của sách)"
+            },
+            {
+              "zh": "我是中国人，你呢？",
+              "pinyin": "Wǒ shì Zhōngguó rén, nǐ ne?",
+              "noteVi": "Tôi là người Trung Quốc, còn bạn? (câu luyện đọc của sách)"
+            }
+          ],
+          "positionVi": "呢 chỉ đứng ở cuối câu hỏi đáp lại; phần trước dấu phẩy là tình huống đã nêu.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 23,
+              "section": "小语讲堂 3 · 语气助词“呢”（1）"
+            }
+          ],
+          "sentenceIds": [
+            "l04-s5"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l04-measure",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Lượng từ 个/口 và cấu trúc [Số + Lượng từ + (Danh từ)]",
+          "explanationVi": "Sách nêu: khi nói số lượng, sau số từ thường phải có lượng từ. Bài này học lượng từ danh từ chỉ số người/vật: 个 (lượng từ chung: 两个学生） và 口 (đếm thành viên gia đình: 四口人）. Cấu trúc: Số từ + Lượng từ + (Danh từ).",
+          "pattern": "Số từ + 个/口 + danh từ",
+          "examples": [
+            {
+              "zh": "四口人",
+              "pinyin": "sì kǒu rén",
+              "noteVi": "bốn người (trong gia đình) — cụm luyện đọc của sách"
+            },
+            {
+              "zh": "两个学生",
+              "pinyin": "liǎng gè xuésheng",
+              "noteVi": "hai học sinh — cụm luyện đọc của sách"
+            },
+            {
+              "zh": "二十个学生",
+              "pinyin": "èrshí gè xuésheng",
+              "noteVi": "hai mươi học sinh — trong Hội thoại 1"
+            }
+          ],
+          "positionVi": "Không bỏ lượng từ giữa số và danh từ: nói 两个哥哥， không nói *二哥哥.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 23,
+              "section": "小语讲堂 4 · 名量词和名量结构"
+            }
+          ],
+          "sentenceIds": [
+            "l04-s7",
+            "l04-s8"
+          ],
+          "exerciseIds": [
+            "wb4-text-2",
+            "wb4-text-3"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l04-tone-sandhi",
+          "kind": "foundation-pronunciation",
+          "kindLabel": "Phát âm nền tảng",
+          "title": "Biến điệu: hai thanh 3 liền nhau, thanh đầu đọc thành thanh 2",
+          "explanationVi": "Workbook Bài 4: khi hai âm tiết thanh 3 đọc liền nhau, âm tiết đầu đọc thành thanh 2 (214+214 → 35+214), nhưng Pinyin vẫn ghi thanh 3 như cũ. Ví dụ của sách: 你好 nǐ+hǎo đọc thành ní+hǎo; 哪里 nǎ+lǐ → ná+lǐ; 可以 kě+yǐ → ké+yǐ; 很好 hěn+hǎo → hén+hǎo.",
+          "pattern": "thanh 3 + thanh 3 → đọc: thanh 2 + thanh 3 (vẫn viết thanh 3 + thanh 3)",
+          "examples": [
+            {
+              "zh": "你好",
+              "pinyin": "nǐ hǎo → ní hǎo",
+              "noteVi": "xin chào — bảng biến điệu trang in 013",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 59.5,
+                "end": 60.7,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "哪里",
+              "pinyin": "nǎlǐ →nálǐ",
+              "noteVi": "ở đâu — bảng biến điệu trang in 013",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 62.0,
+                "end": 64.0,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "可以",
+              "pinyin": "kěyǐ → kéyǐ",
+              "noteVi": "có thể — bảng biến điệu trang in 013",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 66.7,
+                "end": 67.9,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "水果",
+              "pinyin": "shuǐguǒ",
+              "noteVi": "hoa quả — âm tiết luyện đọc trang in 013 (đọc shuíguǒ)",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 82.9,
+                "end": 85.3,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "所以",
+              "pinyin": "suǒyǐ",
+              "noteVi": "cho nên — âm tiết luyện đọc trang in 013 (đọc suóyǐ)",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 101.1,
+                "end": 102.5,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "手表",
+              "pinyin": "shǒubiǎo",
+              "noteVi": "đồng hồ đeo tay — âm tiết luyện đọc trang in 013 (đọc shóubiǎo)",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 112.2,
+                "end": 114.5,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "Bảng biến điệu và dãy âm tiết in ở Workbook trang in 013; nghe và đọc theo track Workbook 4-1.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 20,
+              "printedPage": 13,
+              "section": "小语讲堂 · 语音 1 两个三声音节的连读变调"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l04-neutral-tone",
+          "kind": "foundation-pronunciation",
+          "kindLabel": "Phát âm nền tảng",
+          "title": "Thanh nhẹ （轻声）: đọc nhẹ và ngắn, không ghi dấu thanh",
+          "explanationVi": "Workbook Bài 4: ngoài bốn thanh cơ bản, có âm tiết không mang thanh, đọc nhẹ và ngắn — gọi là thanh nhẹ, khi viết thường không ghi dấu thanh, ví dụ jiǎozi （饺子）, bàba （爸爸）. Có từ đổi nghĩa theo thanh nhẹ: 东西 đọc dōngxī là \"đông tây (phương hướng)\", đọc dōngxi (thanh nhẹ) là \"đồ vật\"; 买卖 mǎi mài là \"mua và bán\", mǎimai là \"việc buôn bán\".",
+          "pattern": "âm tiết thanh nhẹ: không dấu thanh, đọc nhẹ/ngắn (…zi, …ba, …ma, …fu)",
+          "examples": [
+            {
+              "zh": "饺子",
+              "pinyin": "jiǎozi",
+              "noteVi": "sủi cảo — ví dụ của sách, trang in 014",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 165.4,
+                "end": 167.6,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "爸爸",
+              "pinyin": "bàba",
+              "noteVi": "bố — ví dụ của sách, trang in 014",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 156.9,
+                "end": 158.3,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "东西",
+              "pinyin": "dōngxi",
+              "noteVi": "đồ vật — cặp đối chiếu của sách (dōngxī = phương hướng đông tây)"
+            },
+            {
+              "zh": "椅子",
+              "pinyin": "yǐzi",
+              "noteVi": "cái ghế — thẻ hình trang in 014",
+              "audio": {
+                "trackId": "trk-wb-l04-1",
+                "start": 161.4,
+                "end": 163.5,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "Phần giải thích và cặp đối chiếu in ở Workbook trang in 014; nghe và đọc theo track Workbook 4-1.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 2 轻声"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        }
+      ],
+      "reader": {
+        "passageId": "psg-tb-l04",
+        "titleVi": "Hội thoại Textbook Bài 4",
+        "headingVi": "Gia đình và số lượng",
+        "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+        "sentences": [
+          {
+            "id": "l04-s1",
+            "speaker": "Lưu Minh",
+            "zh": "一飞忙吗？",
+            "pinyin": "Yīfēi máng ma?",
+            "vi": "Nhất Phi có bận không?",
+            "passageId": "l04-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-1",
+              "start": 0.37,
+              "end": 1.85,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s2",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "她很忙。",
+            "pinyin": "Tā hěn máng.",
+            "vi": "Cô ấy rất bận.",
+            "passageId": "l04-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-1",
+              "start": 2.59,
+              "end": 3.9,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s3",
+            "speaker": "Lưu Minh",
+            "zh": "她有多少个学生？",
+            "pinyin": "Tā yǒu duōshao gè xuésheng?",
+            "vi": "Cô ấy có bao nhiêu học sinh?",
+            "passageId": "l04-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-1",
+              "start": 4.77,
+              "end": 6.55,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s4",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "她有二十个学生。",
+            "pinyin": "Tā yǒu èrshí gè xuésheng.",
+            "vi": "Cô ấy có hai mươi học sinh.",
+            "passageId": "l04-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-1",
+              "start": 7.31,
+              "end": 9.55,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s5",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "我有两个哥哥，你呢？",
+            "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
+            "vi": "Tôi có hai anh trai, còn bạn thì sao?",
+            "passageId": "l04-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-3",
+              "start": 0.3,
+              "end": 3.05,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s6",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "我没有哥哥。",
+            "pinyin": "Wǒ méiyǒu gēge.",
+            "vi": "Tôi không có anh trai.",
+            "passageId": "l04-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-3",
+              "start": 3.52,
+              "end": 5.3,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s7",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "你家有几口人？",
+            "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+            "vi": "Nhà bạn có mấy người?",
+            "passageId": "l04-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-3",
+              "start": 5.38,
+              "end": 7.55,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s8",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "我家有四口人，爸爸、妈妈、妹妹和我。",
+            "pinyin": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+            "vi": "Nhà tôi có bốn người: bố, mẹ, em gái và tôi.",
+            "passageId": "l04-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-3",
+              "start": 7.95,
+              "end": 13.4,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s9",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "这是您儿子吗？",
+            "pinyin": "Zhè shì nín érzi ma?",
+            "vi": "Đây là con trai của chị ạ?",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 0.37,
+              "end": 1.95,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s10",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "是的。我有两个孩子，一个儿子，一个女儿。",
+            "pinyin": "Shì de. Wǒ yǒu liǎng gè háizi, yí gè érzi, yí gè nǚ'ér.",
+            "vi": "Đúng vậy. Tôi có hai người con, một con trai, một con gái.",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 3.07,
+              "end": 8.8,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s11",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "您儿子几岁？",
+            "pinyin": "Nín érzi jǐ suì?",
+            "vi": "Con trai chị mấy tuổi ạ?",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 8.8,
+              "end": 10.5,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s12",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "他今年五岁。",
+            "pinyin": "Tā jīnnián wǔ suì.",
+            "vi": "Cháu năm nay năm tuổi.",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 10.95,
+              "end": 12.5,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s13",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "您女儿多大？",
+            "pinyin": "Nín nǚ'ér duō dà?",
+            "vi": "Con gái chị bao nhiêu tuổi ạ?",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 12.95,
+              "end": 14.3,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l04-s14",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "她今年十二。",
+            "pinyin": "Tā jīnnián shí'èr.",
+            "vi": "Cháu năm nay mười hai tuổi.",
+            "passageId": "l04-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l04-5",
+              "start": 14.95,
+              "end": 16.35,
+              "status": "asr-draft"
+            }
+          }
+        ],
+        "vocab": [],
+        "audioTracks": [
+          {
+            "id": "trk-wb-l04-1",
+            "label": "Track 4-1 · Pronunciation (phát âm)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-04/04-1.mp3",
+            "durationSec": 185.4,
+            "bookRef": "Workbook Bài 4, phần 一、语音, ký hiệu track 4-1 in ở trang in 013",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-wb-l04-2",
+            "label": "Track 4-2 · Listen, Read, and Practice (nghe – đọc – luyện)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-04/04-2.mp3",
+            "durationSec": 251.7,
+            "bookRef": "Workbook Bài 4, phần 二、听读练, ký hiệu track 4-2 in ở trang in 015",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb-l04-1",
+            "label": "Hội thoại 1 · Cô ấy có bao nhiêu học sinh?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-1.mp3",
+            "durationSec": 10.042,
+            "bookRef": "Textbook · track 4-1",
+            "segments": [
+              {
+                "sentenceId": "l04-s1",
+                "start": 0.37,
+                "end": 1.85,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s2",
+                "start": 2.59,
+                "end": 3.9,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s3",
+                "start": 4.77,
+                "end": 6.55,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s4",
+                "start": 7.31,
+                "end": 9.55,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l04-3",
+            "label": "Hội thoại 2 · Nhà bạn có mấy người?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-3.mp3",
+            "durationSec": 13.717,
+            "bookRef": "Textbook · track 4-3",
+            "segments": [
+              {
+                "sentenceId": "l04-s5",
+                "start": 0.3,
+                "end": 3.05,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s6",
+                "start": 3.52,
+                "end": 5.3,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s7",
+                "start": 5.38,
+                "end": 7.55,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s8",
+                "start": 7.95,
+                "end": 13.4,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l04-5",
+            "label": "Hội thoại 3 · Hỏi tuổi các con",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-5.mp3",
+            "durationSec": 16.766,
+            "bookRef": "Textbook · track 4-5",
+            "segments": [
+              {
+                "sentenceId": "l04-s9",
+                "start": 0.37,
+                "end": 1.95,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s10",
+                "start": 3.07,
+                "end": 8.8,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s11",
+                "start": 8.8,
+                "end": 10.5,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s12",
+                "start": 10.95,
+                "end": 12.5,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s13",
+                "start": 12.95,
+                "end": 14.3,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l04-s14",
+                "start": 14.95,
+                "end": 16.35,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l04-2",
+            "label": "Từ mới · Hội thoại 1",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-2.mp3",
+            "durationSec": 8.322,
+            "bookRef": "Textbook · track 4-2 · 生词 Hội thoại 1",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l04-4",
+            "label": "Từ mới · Hội thoại 2",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-4.mp3",
+            "durationSec": 27.009,
+            "bookRef": "Textbook · track 4-4 · 生词 Hội thoại 2",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l04-6",
+            "label": "Từ mới · Hội thoại 3",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-04/04-6.mp3",
+            "durationSec": 20.676,
+            "bookRef": "Textbook · track 4-6 · 生词 Hội thoại 3",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 40,
+                "printedPage": 25,
+                "section": "课文 3 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          }
+        ],
+        "passages": [
+          {
+            "id": "l04-dialogue-1",
+            "title": "Cô ấy có bao nhiêu học sinh?",
+            "context": "Ở nhà, Lưu Minh và Vương Nhất Tuyết đang trò chuyện.",
+            "audioTrackId": "trk-tb-l04-1",
+            "sentenceIds": [
+              "l04-s1",
+              "l04-s2",
+              "l04-s3",
+              "l04-s4"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 34,
+                "printedPage": 19,
+                "section": "课文 1"
+              }
+            ]
+          },
+          {
+            "id": "l04-dialogue-2",
+            "title": "Nhà bạn có mấy người?",
+            "context": "Ở công ty, Vương Nhất Tuyết và Dương Đồng Lạc trò chuyện trong lúc nghỉ.",
+            "audioTrackId": "trk-tb-l04-3",
+            "sentenceIds": [
+              "l04-s5",
+              "l04-s6",
+              "l04-s7",
+              "l04-s8"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2"
+              }
+            ]
+          },
+          {
+            "id": "l04-dialogue-3",
+            "title": "Hỏi tuổi các con",
+            "context": "Trên phố, Vương Nhất Tuyết dẫn con trai đi và tình cờ gặp Dương Đồng Lạc.",
+            "audioTrackId": "trk-tb-l04-5",
+            "sentenceIds": [
+              "l04-s9",
+              "l04-s10",
+              "l04-s11",
+              "l04-s12",
+              "l04-s13",
+              "l04-s14"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3"
+              }
+            ]
+          }
+        ]
+      },
+      "exerciseSet": {
+        "id": "set-tb-l04-text-v1",
+        "titleVi": "Câu hỏi hiểu hội thoại trong sách",
+        "noteVi": "Bốn câu hỏi in trong Textbook sau Hội thoại 2 (trang 021) và Hội thoại 3 (trang 024). Đáp án lấy từ chính lời thoại in trong sách.",
+        "items": [
+          {
+            "id": "wb4-text-1",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): Dương Đồng Lạc có một người …",
+            "promptZh": "杨同乐有一个（ ）。",
+            "promptPinyin": "Yáng Tónglè yǒu yí gè ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "妹妹",
+                "pinyin": "mèimei",
+                "vi": "em gái"
+              },
+              {
+                "id": "2",
+                "zh": "姐姐",
+                "pinyin": "jiějie",
+                "vi": "chị gái"
+              },
+              {
+                "id": "3",
+                "zh": "哥哥",
+                "pinyin": "gēge",
+                "vi": "anh trai"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+            "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc nói nhà mình có bốn người: bố, mẹ, em gái （妹妹） và tôi — vậy anh ấy có một em gái. Anh ấy cũng nói rõ 我没有哥哥 (không có anh trai).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 36,
+                "printedPage": 21,
+                "section": "课文 2 · câu hỏi hiểu hội thoại"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2 · lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l04-you"
+            ]
+          },
+          {
+            "id": "wb4-text-2",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): nhà Dương Đồng Lạc có … người",
+            "promptZh": "杨同乐家有（ ）口人。",
+            "promptPinyin": "Yáng Tónglè jiā yǒu ( ) kǒu rén.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "两",
+                "pinyin": "liǎng",
+                "vi": "hai"
+              },
+              {
+                "id": "2",
+                "zh": "四",
+                "pinyin": "sì",
+                "vi": "bốn"
+              },
+              {
+                "id": "3",
+                "zh": "五",
+                "pinyin": "wǔ",
+                "vi": "năm"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+            "explanationVi": "Dương Đồng Lạc nói: 我家有四口人 (nhà tôi có bốn người) — bố, mẹ, em gái và anh ấy.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 36,
+                "printedPage": 21,
+                "section": "课文 2 · câu hỏi hiểu hội thoại"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 37,
+                "printedPage": 22,
+                "section": "课文 2 · lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l04-measure",
+              "kp-hsk1-l04-you"
+            ]
+          },
+          {
+            "id": "wb4-text-3",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): Vương Nhất Tuyết có … người con",
+            "promptZh": "王一雪有（ ）孩子。",
+            "promptPinyin": "Wáng Yīxuě yǒu ( ) háizi.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "一个",
+                "pinyin": "yí gè",
+                "vi": "một"
+              },
+              {
+                "id": "2",
+                "zh": "两个",
+                "pinyin": "liǎng gè",
+                "vi": "hai"
+              },
+              {
+                "id": "3",
+                "zh": "三个",
+                "pinyin": "sān gè",
+                "vi": "ba"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+            "explanationVi": "Vương Nhất Tuyết nói: 我有两个孩子，一个儿子，一个女儿 (tôi có hai người con, một con trai, một con gái) — cũng là tên của bài học này.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3 · câu hỏi và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l04-measure"
+            ]
+          },
+          {
+            "id": "wb4-text-4",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): con gái của Vương Nhất Tuyết năm nay … tuổi",
+            "promptZh": "王一雪女儿今年（ ）岁。",
+            "promptPinyin": "Wáng Yīxuě nǚ'ér jīnnián ( ) suì.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "五",
+                "pinyin": "wǔ",
+                "vi": "năm"
+              },
+              {
+                "id": "2",
+                "zh": "十二",
+                "pinyin": "shí'èr",
+                "vi": "mười hai"
+              },
+              {
+                "id": "3",
+                "zh": "二十",
+                "pinyin": "èrshí",
+                "vi": "hai mươi"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+            "explanationVi": "Khi được hỏi 您女儿多大？, Vương Nhất Tuyết đáp: 她今年十二 (cháu năm nay mười hai). Số 五 (năm) là tuổi của con trai.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 24,
+                "section": "课文 3 · câu hỏi và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l04-numbers"
+            ]
+          }
+        ]
+      },
+      "selfCheckTasks": [
+        {
+          "id": "st-l04-01",
+          "titleVi": "Nghe và chọn âm tiết (bài 1, trang in 015)",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 4-2, chọn trong mỗi cặp âm tiết bạn nghe được và gõ lại cả âm tiết đó. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
+          "audioTrackId": "trk-wb-l04-2",
+          "answerStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 22,
+              "printedPage": 15,
+              "section": "听读练 · bài 1"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": 10,
+              "section": "听读练 — lời đọc"
+            }
+          ],
+          "prompts": [
+            "pā / bā",
+            "zì / cì",
+            "náng / láng",
+            "jǔ / qǔ",
+            "mén / méng",
+            "rù / lù",
+            "kè / rè",
+            "qīn / qǐng"
+          ],
+          "version": 1,
+          "gradingMode": "syllable",
+          "scriptSyllables": [
+            "pā",
+            "zì",
+            "láng",
+            "jǔ",
+            "mén",
+            "rù",
+            "kè",
+            "qǐng"
+          ],
+          "answers": [
+            "pā",
+            "zì",
+            "láng",
+            "jǔ",
+            "mén",
+            "rù",
+            "kè",
+            "qǐng"
+          ],
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (8 cặp âm tiết) lấy từ bản in Workbook trang in 015; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 010); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 4-2 (chỉ là bản nháp hỗ trợ). Đây là đối chiếu biên tập, không phải đáp án chính thức của nhà xuất bản và chưa nghe kiểm chứng bởi người.",
+          "guideVi": "Nghe track Workbook 4-2 (đoạn của bài này), với mỗi cặp hãy gõ cả âm tiết bạn nghe được — kèm dấu thanh hoặc số thanh (ví dụ pā hoặc pa1). Cặp âm tiết in trong sách hiện ở mỗi ô.",
+          "audioSegment": {
+            "start": 11.0,
+            "end": 57.5
+          },
+          "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người."
+        }
+      ],
+      "selfCheckIntroVi": "Workbook trang 015, bài 1. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
+      "selfCheckListenVi": "▶ Nghe track Workbook 4-2",
+      "apply": {
+        "titleVi": "Đóng vai và nói về gia đình thật của mình",
+        "instructionVi": "Chọn hội thoại 2. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình, nói nhà mình có mấy người, gồm những ai （我家有…口人）. Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
+        "audioTrackId": "trk-tb-l04-3",
+        "noteVi": "Nhiệm vụ đóng vai và nói theo tình huống thật lấy từ Textbook trang in 022. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+        "sourceRefs": [
+          {
+            "sourceId": "src-hsk1-textbook-pdf",
+            "pdfPage": 37,
+            "printedPage": 22,
+            "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+          }
+        ]
+      },
+      "foundationWords": [
+        {
+          "id": "l04fw-1",
+          "zh": "你好",
+          "pinyin": "nǐ hǎo",
+          "vi": "xin chào",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 126.2,
+            "end": 127.3,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-2",
+          "zh": "哪里",
+          "pinyin": "nǎlǐ",
+          "vi": "ở đâu",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 129.7,
+            "end": 131.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-3",
+          "zh": "小语",
+          "pinyin": "Xiǎoyǔ",
+          "vi": "Tiểu Ngữ (tên nhân vật của bộ sách)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 131.0,
+            "end": 134.3,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-4",
+          "zh": "水果",
+          "pinyin": "shuǐguǒ",
+          "vi": "hoa quả",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 136.1,
+            "end": 138.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-5",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 153.0,
+            "end": 155.4,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-6",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 156.9,
+            "end": 158.3,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-7",
+          "zh": "椅子",
+          "pinyin": "yǐzi",
+          "vi": "cái ghế",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 161.4,
+            "end": 163.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-8",
+          "zh": "饺子",
+          "pinyin": "jiǎozi",
+          "vi": "sủi cảo",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 21,
+              "printedPage": 14,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 165.4,
+            "end": 167.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-9",
+          "zh": "谢谢",
+          "pinyin": "xièxie",
+          "vi": "cảm ơn",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 22,
+              "printedPage": 15,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 169.2,
+            "end": 170.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-10",
+          "zh": "衣服",
+          "pinyin": "yīfu",
+          "vi": "quần áo",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 22,
+              "printedPage": 15,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 173.4,
+            "end": 174.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-11",
+          "zh": "漂亮",
+          "pinyin": "piàoliang",
+          "vi": "xinh đẹp",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 22,
+              "printedPage": 15,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 177.2,
+            "end": 178.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l04fw-12",
+          "zh": "早上",
+          "pinyin": "zǎoshang",
+          "vi": "buổi sáng",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 22,
+              "printedPage": 15,
+              "section": "小语讲堂 · 语音 · thẻ từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l04-1",
+            "start": 180.8,
+            "end": 182.6,
+            "status": "asr-draft"
+          }
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-ux2",
+  "contentVersion": "20261101-ux3",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -68,6 +68,15 @@
       "rightsStatus": "unknown",
       "rightsEvidence": "Bản đăng lại bởi người dùng Scribd (bản 1044886104 là cùng một tài liệu, không tính là nguồn độc lập); chưa xác nhận kênh chính thức của NXB.",
       "verification": "Đã đọc trang 1 của tài liệu ngày 2026-11-01: phần đáp án KHÔNG in đáp án nghe–viết (đáp án nằm ở tài liệu lời đọc); đáp án chọn hình Bài 1 là ①③② và Bài 2 là ③①④② — khớp với đối chiếu trực quan đã có trong app."
+    },
+    {
+      "id": "src-hanviet-thivien",
+      "kind": "Từ điển Hán–Việt/Hán–Nôm tham chiếu (chỉ dùng cho trường hanViet)",
+      "title": "Từ điển Hán Nôm — Thi Viện (hvdic.thivien.net), nền dữ liệu Thiều Chửu / Trần Văn Chánh / Nguyễn Quốc Hùng",
+      "url": "https://hvdic.thivien.net/",
+      "retrievedAt": "2026-11-01",
+      "rightsStatus": "unknown",
+      "verification": "Tra cứu từng chữ ngày 2026-11-01 cho 27 mục từ Bài 1–2; các chữ đa âm đã chọn theo ngữ cảnh từ (什 trong 什么 đọc thậm, 么 đọc ma; 兴 trong 高兴 đọc hứng; 很 đọc ngận; 叫 đọc khiếu; 您 đọc nâm; 没 đọc một; 你 ghi nhĩ — từ điển cũng liệt kê nễ). Chỉ dùng làm nguồn cho âm Hán–Việt, không thay nguồn bài học Baulchino."
     }
   ],
   "books": [
@@ -623,7 +632,9 @@
           "start": 0.0,
           "end": 0.88,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "NHĨ HẢO",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-2",
@@ -638,7 +649,10 @@
             "section": "生词 · Từ mới"
           }
         ],
-        "audio": null
+        "audio": null,
+        "hanViet": "ĐẠI GIA",
+        "hanVietStatus": "verified-editorial",
+        "hanVietNoteVi": "Âm Hán–Việt “đại gia” khác nghĩa “người giàu” trong tiếng Việt hiện nay; ở đây 大家 nghĩa là mọi người."
       },
       {
         "id": "tbw-3",
@@ -658,7 +672,9 @@
           "start": 3.55,
           "end": 4.38,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "HẢO",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-4",
@@ -678,7 +694,9 @@
           "start": 4.55,
           "end": 6.28,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "HỌC SINH",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-5",
@@ -698,7 +716,9 @@
           "start": 7.85,
           "end": 8.58,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "MÔN",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-6",
@@ -718,7 +738,9 @@
           "start": 10.25,
           "end": 11.48,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "LÃO SƯ",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-7",
@@ -738,7 +760,9 @@
           "start": 13.05,
           "end": 13.98,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "NÂM",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-8",
@@ -758,7 +782,9 @@
           "start": 16.05,
           "end": 16.98,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "NHĨ MÔN",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-9",
@@ -778,7 +804,9 @@
           "start": 0.0,
           "end": 0.88,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "TẠ TẠ",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-10",
@@ -798,7 +826,9 @@
           "start": 2.55,
           "end": 5.88,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "BẤT KHÁCH KHÍ",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-11",
@@ -818,7 +848,9 @@
           "start": 5.75,
           "end": 8.48,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "ĐỒNG HỌC",
+        "hanVietStatus": "verified-editorial"
       },
       {
         "id": "tbw-12",
@@ -838,7 +870,9 @@
           "start": 8.95,
           "end": 9.98,
           "status": "asr-draft"
-        }
+        },
+        "hanViet": "TÁI KIẾN",
+        "hanVietStatus": "verified-editorial"
       }
     ],
     "knowledgePoints": [
@@ -1787,7 +1821,9 @@
                 "start": 350.97,
                 "end": 355.22,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐ hǎo!",
+              "vi": "A: Xin chào! B: Xin chào!"
             },
             {
               "id": "2",
@@ -1797,7 +1833,9 @@
                 "start": 359.97,
                 "end": 363.88,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐmen hǎo!",
+              "vi": "A: Xin chào! B: Chào các bạn!"
             },
             {
               "id": "3",
@@ -1807,7 +1845,9 @@
                 "start": 367.95,
                 "end": 371.3,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Xièxie! B: Bú kèqi!",
+              "vi": "A: Cảm ơn! B: Không có gì!"
             }
           ],
           "answer": "1",
@@ -1847,7 +1887,9 @@
                 "start": 350.97,
                 "end": 355.22,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐ hǎo!",
+              "vi": "A: Xin chào! B: Xin chào!"
             },
             {
               "id": "2",
@@ -1857,7 +1899,9 @@
                 "start": 359.97,
                 "end": 363.88,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐmen hǎo!",
+              "vi": "A: Xin chào! B: Chào các bạn!"
             },
             {
               "id": "3",
@@ -1867,7 +1911,9 @@
                 "start": 367.95,
                 "end": 371.3,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Xièxie! B: Bú kèqi!",
+              "vi": "A: Cảm ơn! B: Không có gì!"
             }
           ],
           "answer": "3",
@@ -1907,7 +1953,9 @@
                 "start": 350.97,
                 "end": 355.22,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐ hǎo!",
+              "vi": "A: Xin chào! B: Xin chào!"
             },
             {
               "id": "2",
@@ -1917,7 +1965,9 @@
                 "start": 359.97,
                 "end": 363.88,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Nǐ hǎo! B: Nǐmen hǎo!",
+              "vi": "A: Xin chào! B: Chào các bạn!"
             },
             {
               "id": "3",
@@ -1927,7 +1977,9 @@
                 "start": 367.95,
                 "end": 371.3,
                 "status": "asr-draft"
-              }
+              },
+              "pinyin": "A: Xièxie! B: Bú kèqi!",
+              "vi": "A: Cảm ơn! B: Không có gì!"
             }
           ],
           "answer": "2",
@@ -2464,7 +2516,9 @@
             "start": 0.0,
             "end": 2.68,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "THỈNH VẤN",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-2",
@@ -2484,7 +2538,10 @@
             "start": 2.95,
             "end": 3.78,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "NHĨ",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Từ điển Hán Nôm còn ghi âm “nễ”; app thống nhất dùng “nhĩ” như cách dạy phổ biến hiện nay."
         },
         {
           "id": "l02w-3",
@@ -2504,7 +2561,9 @@
             "start": 5.45,
             "end": 6.28,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "KHIẾU",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-4",
@@ -2524,7 +2583,10 @@
             "start": 7.75,
             "end": 8.78,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "THẬM MA",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "什 ở đây đọc “thậm” (thậm ma), không đọc “thập”."
         },
         {
           "id": "l02w-5",
@@ -2544,7 +2606,9 @@
             "start": 10.05,
             "end": 12.58,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "DANH TỰ",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-6",
@@ -2564,7 +2628,9 @@
             "start": 12.45,
             "end": 13.58,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "NGÃ",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-7",
@@ -2584,7 +2650,9 @@
             "start": 0.0,
             "end": 0.78,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "BẤT",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-8",
@@ -2604,7 +2672,9 @@
             "start": 1.95,
             "end": 3.08,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "THỊ",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-9",
@@ -2624,7 +2694,9 @@
             "start": 3.95,
             "end": 5.78,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "ĐỐI BẤT KHỞI",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-10",
@@ -2644,7 +2716,9 @@
             "start": 7.35,
             "end": 10.38,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "MỘT QUAN HỆ",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-11",
@@ -2664,7 +2738,9 @@
             "start": 10.25,
             "end": 11.58,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "MỘT SỰ",
+          "hanVietStatus": "verified-editorial"
         },
         {
           "id": "l02w-12",
@@ -2684,7 +2760,10 @@
             "start": 0.15,
             "end": 1.18,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "NGẬN",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Âm Hán–Việt là “ngận”, không phải “hẩn”."
         },
         {
           "id": "l02w-13",
@@ -2704,7 +2783,10 @@
             "start": 1.25,
             "end": 5.18,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "CAO HỨNG",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "兴 ở đây đọc “hứng” (gāoxìng), không đọc “hưng”."
         },
         {
           "id": "l02w-14",
@@ -2724,7 +2806,10 @@
             "start": 5.35,
             "end": 6.48,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "NHẬN THỨC",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "“Nhận thức” trong tiếng Việt thường là hiểu biết; ở đây 认识 nghĩa là quen biết nhau."
         },
         {
           "id": "l02w-15",
@@ -2744,7 +2829,9 @@
             "start": 7.95,
             "end": 8.78,
             "status": "asr-draft"
-          }
+          },
+          "hanViet": "DÃ",
+          "hanVietStatus": "verified-editorial"
         }
       ],
       "knowledgePoints": [
@@ -3597,7 +3684,9 @@
                   "start": 215.95,
                   "end": 220.72,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Lǎoshī, zàijiàn! B: Zàijiàn!",
+                "vi": "A: Tạm biệt thầy/cô! B: Tạm biệt!"
               },
               {
                 "id": "2",
@@ -3607,7 +3696,9 @@
                   "start": 224.11,
                   "end": 227.46,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Duìbuqǐ. B: Méi guānxi.",
+                "vi": "A: Xin lỗi. B: Không sao đâu."
               },
               {
                 "id": "3",
@@ -3617,7 +3708,9 @@
                   "start": 231.69,
                   "end": 237.4,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Hěn gāoxìng rènshi nǐ. B: Rènshi nǐ wǒ yě hěn gāoxìng.",
+                "vi": "A: Rất vui được gặp bạn. B: Được gặp bạn, tôi cũng rất vui."
               },
               {
                 "id": "4",
@@ -3627,7 +3720,9 @@
                   "start": 242.97,
                   "end": 249.8,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Dàjiā hǎo, wǒ jiào Bái Jiāyuè. B: Bái Jiāyuè, nǐ hǎo.",
+                "vi": "A: Chào mọi người, tôi tên là Bạch Gia Nguyệt. B: Bạch Gia Nguyệt, chào bạn."
               }
             ],
             "answer": "3",
@@ -3667,7 +3762,9 @@
                   "start": 215.95,
                   "end": 220.72,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Lǎoshī, zàijiàn! B: Zàijiàn!",
+                "vi": "A: Tạm biệt thầy/cô! B: Tạm biệt!"
               },
               {
                 "id": "2",
@@ -3677,7 +3774,9 @@
                   "start": 224.11,
                   "end": 227.46,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Duìbuqǐ. B: Méi guānxi.",
+                "vi": "A: Xin lỗi. B: Không sao đâu."
               },
               {
                 "id": "3",
@@ -3687,7 +3786,9 @@
                   "start": 231.69,
                   "end": 237.4,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Hěn gāoxìng rènshi nǐ. B: Rènshi nǐ wǒ yě hěn gāoxìng.",
+                "vi": "A: Rất vui được gặp bạn. B: Được gặp bạn, tôi cũng rất vui."
               },
               {
                 "id": "4",
@@ -3697,7 +3798,9 @@
                   "start": 242.97,
                   "end": 249.8,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Dàjiā hǎo, wǒ jiào Bái Jiāyuè. B: Bái Jiāyuè, nǐ hǎo.",
+                "vi": "A: Chào mọi người, tôi tên là Bạch Gia Nguyệt. B: Bạch Gia Nguyệt, chào bạn."
               }
             ],
             "answer": "1",
@@ -3737,7 +3840,9 @@
                   "start": 215.95,
                   "end": 220.72,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Lǎoshī, zàijiàn! B: Zàijiàn!",
+                "vi": "A: Tạm biệt thầy/cô! B: Tạm biệt!"
               },
               {
                 "id": "2",
@@ -3747,7 +3852,9 @@
                   "start": 224.11,
                   "end": 227.46,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Duìbuqǐ. B: Méi guānxi.",
+                "vi": "A: Xin lỗi. B: Không sao đâu."
               },
               {
                 "id": "3",
@@ -3757,7 +3864,9 @@
                   "start": 231.69,
                   "end": 237.4,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Hěn gāoxìng rènshi nǐ. B: Rènshi nǐ wǒ yě hěn gāoxìng.",
+                "vi": "A: Rất vui được gặp bạn. B: Được gặp bạn, tôi cũng rất vui."
               },
               {
                 "id": "4",
@@ -3767,7 +3876,9 @@
                   "start": 242.97,
                   "end": 249.8,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Dàjiā hǎo, wǒ jiào Bái Jiāyuè. B: Bái Jiāyuè, nǐ hǎo.",
+                "vi": "A: Chào mọi người, tôi tên là Bạch Gia Nguyệt. B: Bạch Gia Nguyệt, chào bạn."
               }
             ],
             "answer": "4",
@@ -3807,7 +3918,9 @@
                   "start": 215.95,
                   "end": 220.72,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Lǎoshī, zàijiàn! B: Zàijiàn!",
+                "vi": "A: Tạm biệt thầy/cô! B: Tạm biệt!"
               },
               {
                 "id": "2",
@@ -3817,7 +3930,9 @@
                   "start": 224.11,
                   "end": 227.46,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Duìbuqǐ. B: Méi guānxi.",
+                "vi": "A: Xin lỗi. B: Không sao đâu."
               },
               {
                 "id": "3",
@@ -3827,7 +3942,9 @@
                   "start": 231.69,
                   "end": 237.4,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Hěn gāoxìng rènshi nǐ. B: Rènshi nǐ wǒ yě hěn gāoxìng.",
+                "vi": "A: Rất vui được gặp bạn. B: Được gặp bạn, tôi cũng rất vui."
               },
               {
                 "id": "4",
@@ -3837,7 +3954,9 @@
                   "start": 242.97,
                   "end": 249.8,
                   "status": "asr-draft"
-                }
+                },
+                "pinyin": "A: Dàjiā hǎo, wǒ jiào Bái Jiāyuè. B: Bái Jiāyuè, nǐ hǎo.",
+                "vi": "A: Chào mọi người, tôi tên là Bạch Gia Nguyệt. B: Bạch Gia Nguyệt, chào bạn."
               }
             ],
             "answer": "2",

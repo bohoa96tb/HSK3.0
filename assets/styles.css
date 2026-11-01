@@ -361,3 +361,42 @@ h3{font-size:1rem}
 .dict-actions{position:sticky;top:64px;z-index:10;display:flex;flex-wrap:wrap;gap:8px;background:#fff;padding:8px 0;border-bottom:1px solid var(--line)}
 .answer-grid input.cell-edited{border-color:#d97706;background:#fffbeb}
 .cell-note.warn{color:#b45309}
+
+/* ===== ux3: compact support chips, word cards, exercises support, mini player ===== */
+.support-bar{gap:6px;padding:6px 0}
+.support-btn{min-height:44px;min-width:44px;padding:0 12px;font-size:.82rem;border-radius:999px}
+.support-font{gap:4px}
+.support-font .font-btn{padding:0 10px}
+#main.off-vi-prep .tog-vi-prep{display:none}
+#main.off-hv-prep .tog-hv-prep{display:none}
+#main.off-pinyin-ex .tog-pinyin-ex{display:none}
+#main.off-vi-ex .tog-vi-ex{display:none}
+.support-note{font-size:.85rem;background:var(--warn-bg);border-radius:10px;padding:8px 12px}
+.word-card{padding:10px;text-align:left}
+.word-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.word-card .zh{font-size:1.6rem;line-height:1.25;margin:0}
+.word-card .pinyin{margin-top:2px}
+.word-card .hanviet{font-size:.78rem;font-weight:700;letter-spacing:.05em;color:var(--brand);margin-top:2px}
+.word-card .hanviet-missing{color:var(--muted);font-weight:400}
+.word-card .hv-note{font-size:.75rem;color:var(--muted);margin:4px 0 0}
+.word-card .vi{font-size:.86rem;color:#3d4f42;margin-top:2px}
+html[data-font-scale="1.3"] .word-grid{grid-template-columns:1fr}
+@media (min-width:768px){html[data-font-scale="1.3"] .word-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.no-audio{font-size:.72rem}
+.speak-btn{display:inline-flex;align-items:center;justify-content:center;color:var(--brand)}
+.option-body{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;flex:1}
+.option-body .pinyin{flex-basis:100%;order:3}
+.option-body .option-vi{flex-basis:100%;order:4;color:var(--muted);font-size:.9rem}
+.option-body .speak-btn{margin-left:auto}
+.cell-script{display:block;font-size:.82rem;color:var(--muted);margin-top:2px}
+/* Fixed chrome: measured insets (set from JS as --mini-h/--mini-bottom/--chrome-bottom) */
+#main{padding-bottom:calc(150px + var(--chrome-bottom,0px))}
+.studying #main{padding-bottom:calc(150px + var(--chrome-bottom,0px))}
+#miniplayer{bottom:var(--mini-bottom,0px);flex-wrap:nowrap;min-height:48px}
+#miniplayer .mini-label{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:none;font-size:.8rem}
+#miniplayer.mini-collapsed{min-height:40px;padding-top:4px;padding-bottom:4px}
+#mini-close,#mini-collapse{flex:none}
+@media (max-width:767px){#miniplayer .muted.small{display:none}#miniplayer.mini-collapsed .muted.small{display:none}}
+.studying #miniplayer{bottom:var(--mini-bottom,0px)}
+@media (min-width:1024px){#miniplayer{bottom:var(--mini-bottom,0px)}.studying #miniplayer{bottom:var(--mini-bottom,0px)}}
+.speak-btn{width:44px;height:44px;min-width:44px;min-height:44px}

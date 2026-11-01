@@ -53,9 +53,9 @@ test("backup validation rejects wrong schema and migrates valid data", () => {
 test("attempt summary separates first attempt, retries and hint use", () => {
   const attempts = [
     { exerciseId: "e1", correct: false, hintUsed: false, at: "2026-10-31T01:00:00Z" },
-    { exerciseId: "e1", correct: true, hintUsed: true, at: "2026-10-31T01:05:00Z" },
+    { exerciseId: "e1", correct: true, hintUsed: true, supportUsed: true, at: "2026-10-31T01:05:00Z" },
     { exerciseId: "e2", correct: true, hintUsed: false, at: "2026-10-31T01:02:00Z" },
   ];
   const sum = summarizeAttempts(attempts, ["e1", "e2"]);
-  assert.deepEqual(sum, { answered: 2, firstTotal: 2, firstCorrect: 1, retried: 1, hintUsedCount: 1 });
+  assert.deepEqual(sum, { answered: 2, firstTotal: 2, firstCorrect: 1, retried: 1, hintUsedCount: 1, supportUsedCount: 1 });
 });

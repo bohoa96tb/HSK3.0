@@ -7,8 +7,8 @@ const content = JSON.parse(readFileSync(new URL('../data/content.json', import.m
 const byId = {};
 for (const c of [content.pilot, ...content.additionalLessons]) for (const t of c.selfCheckTasks) byId[t.id] = t;
 
-test('all six dictation tasks carry cross-checked answers consistent with the listening script', () => {
-  const ids = ['st-01', 'st-02', 'st-03', 'st-l02-01', 'st-l02-02', 'st-l02-03'];
+test('all nine dictation tasks carry cross-checked answers consistent with the listening script', () => {
+  const ids = ['st-01', 'st-02', 'st-03', 'st-l02-01', 'st-l02-02', 'st-l02-03', 'st-l03-01', 'st-l03-02', 'st-l03-03'];
   let cells = 0;
   for (const id of ids) {
     const t = byId[id];
@@ -20,7 +20,7 @@ test('all six dictation tasks carry cross-checked answers consistent with the li
     const r = gradeDictation(t, t.scriptSyllables);
     assert.equal(r.correct, t.prompts.length, `${id}: the read syllables themselves must grade fully correct`);
   }
-  assert.equal(cells, 78);
+  assert.equal(cells, 120);
   // The disputed cell: print and script both say ěn / hěn, not ēn.
   assert.equal(byId['st-01'].prompts[9], '__ ěn');
   assert.equal(byId['st-01'].answers[9], 'h');

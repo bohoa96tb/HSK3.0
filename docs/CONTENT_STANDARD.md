@@ -217,3 +217,16 @@ Khi hai nguồn của chính bộ sách mâu thuẫn nhau ở đúng đặc đi�
 
 ### Bài luyện phân biệt không phải bài chọn đáp án (Bài 6–7)
 Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê cả hai dạng, dùng `kind=listening-comparison`, hướng dẫn đọc cả cặp, ghi bằng chứng mục tiêu ở `practiceEvidence`, không thêm answers/gradingMode. Nháp là ghi chú cá nhân, không chấm đúng/sai. Giữ khác với trạng thái thiếu đáp án của một bài thực sự cần chọn đáp án. Bài dựa trên hình phải hiển thị hình có nguồn; không thay bằng mô tả suy đoán đáp án. Các mốc nghe dùng duy nhất audioSegment, validator phải kiểm cho cả bài không chấm và chặn trường segment cũ.
+
+## Bổ sung 01/11/2026 — Chuẩn minh họa vẽ mới và kiểm mốc đoạn audio (D19, Hoa chỉ đạo và nghiệm thu)
+
+Áp dụng cho mọi bài tập có hình từ Bài 8 trở đi (Bài 3 và Bài 7 dùng ảnh trích sách theo ngoại lệ trước đó, không tự động thay đổi):
+
+1. **Vẽ mới, không dùng ảnh sách khi phát hành.** Hình phát hành là tranh minh họa phẳng vẽ mới từ mô tả cảnh bằng lời (không truy vết/không sao chép ảnh sách), mô phỏng đúng nội dung cảnh mà câu hỏi kiểm tra.
+2. **Đủ ý nghĩa.** Hình phải thể hiện đủ ý nghĩa của câu hỏi (chủ thể + hành động/bối cảnh quyết định đáp án), không chỉ minh họa một từ khóa.
+3. **Một đáp án đúng rõ ràng.** Mỗi câu chỉ có một đáp án đúng phân biệt được bằng hình; hình nào gây nhầm với lựa chọn khác phải vẽ lại trước khi phát hành.
+4. **Truy vết và quyền của hình.** Mỗi hình ghi nguồn gốc/quy trình tạo và trạng thái quyền sử dụng (manifest của vòng thử nghiệm + mục tương ứng ở SOURCE_AUDIT). Hình vẽ mới là tài sản biên tập của dự án.
+5. **Ba lớp quyền tách riêng.** Vẽ lại hình không giải quyết quyền đối với (a) câu hỏi/nội dung sách, (b) audio gốc, (c) toàn văn sách. Ba lớp này giữ `rightsStatus=unknown` và xác minh riêng; audio vẫn chỉ phát trực tuyến từ nguồn, không lưu file vào repo.
+6. **Tài nguyên web riêng, đã tối ưu.** Ảnh phát hành lưu thành file WebP riêng dưới `assets/lesson-NN/`, tối ưu cho web; tuyệt đối không nhúng toàn bộ hình vào một file HTML lớn (file gộp chỉ dùng cho nghiệm thu nội bộ).
+7. **Hiển thị không lộ đáp án.** Với lựa chọn là hình, nhãn chữ của hình chỉ hiện sau khi đã kiểm tra (như quy tắc hỗ trợ Mục 5: không lộ đáp án trước khi chấm).
+8. **Kiểm mốc đoạn audio.** Mọi đoạn loa theo đơn vị phải kiểm điểm bắt đầu/kết thúc bằng ASR mức từ và/hoặc phân tích khoảng lặng (từ đọc hai lần lấy lần đọc đầu), siết mốc khi lệch; trước phát hành phải thử phát các đoạn trên trình duyệt Chromium/Chrome thông thường. Chưa nghe bằng tai người và chưa thử trên điện thoại Android thật thì giữ `asr-draft` và ghi rõ giới hạn trong báo cáo — không tuyên bố đã kiểm nghe.

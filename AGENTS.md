@@ -134,3 +134,7 @@ chưa chứng minh được điều đó.
 - Test so dữ liệu với chính dữ liệu không được gọi là kiểm chứng độc lập; test ánh xạ audio không được gọi là đã nghe xác minh; đoạn chưa kiểm nghe giữ `asr-draft`.
 - Khép vòng QA **trong nhánh** trước phát hành: báo lỗi → sửa → QA kiểm lại bản cuối → hồi quy → cập nhật tài liệu → merge. Gom sửa lỗi + tài liệu vào PR bài học khi có thể.
 - Báo cáo mục kiểm thử tách rõ: test tự động / đối chiếu trực quan bản in / đối chiếu ASR / kiểm nghe thực tế / kiểm giao diện (trình duyệt, iframe, thiết bị thật).
+
+## 10. Chuẩn minh họa và đoạn audio (từ Bài 8, theo D19)
+
+Bài tập có hình dùng tranh minh họa phẳng vẽ mới (không dùng ảnh sách khi phát hành), hình phải đủ ý nghĩa và chỉ có một đáp án đúng rõ ràng, lưu truy vết + trạng thái quyền từng hình, phát hành dạng file WebP riêng đã tối ưu, nhãn chữ của lựa chọn hình chỉ hiện sau khi kiểm tra. Quyền của hình vẽ mới tách riêng khỏi quyền câu hỏi/nội dung sách và audio gốc (vẫn `unknown`). Mốc đoạn audio phải kiểm bằng ASR mức từ/khoảng lặng và thử phát trên trình duyệt thông thường trước phát hành; chưa nghe bằng tai và chưa thử thiết bị thật thì giữ `asr-draft` và ghi rõ. Chi tiết: CONTENT_STANDARD mục D19.

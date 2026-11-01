@@ -14,8 +14,8 @@ Số track theo bài lấy từ danh mục trang audio Baulchino ngày 2026-10-3
 bài 1–3 và 7–15 mỗi bài 2 track, bài 4–6 mỗi bài 3 track). Đây là số đếm ở
 mức danh mục, chưa kiểm tra phát từng track.
 
-Trạng thái xuất bản app: Bài 1–7 đã xuất bản đầy đủ (Bài 7 ngày 2026-11-01,
-chuẩn ux3 + D13/D15/D17). Bài 8–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
+Trạng thái xuất bản app: Bài 1–8 đã xuất bản đầy đủ (Bài 8 ngày 2026-11-01,
+chuẩn ux3 + D13/D15/D17/D19 — bài đầu tiên dùng minh họa vẽ mới D19). Bài 9–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
 
 ## 1. Bảng 15 bài HSK1
 
@@ -28,7 +28,7 @@ chuẩn ux3 + D13/D15/D17). Bài 8–15 mới ở mức mục lục — chưa đ
 | 5 | 今天我休息 | I'm off today | Hôm nay tôi nghỉ | 022 | 6 | 3 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 027–034 và Workbook 022–024 (xem mục 7) |
 | 6 | 你的手机号是多少？ | What's your cell phone number? | Số điện thoại của bạn là bao nhiêu? | 031 | 6 | 3 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 035–042 và Workbook 031–032 (xem mục 8) |
 | 7 | 我晚上六点半下班 | I'll finish work at 6:30 in the evening | Tôi tan làm lúc sáu giờ rưỡi tối | 039 | 6 | 2 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 045–052 và Workbook 039–041 (xem mục 9) |
-| 8 | 我爸爸也在医院工作 | My father also works at a hospital | Bố tôi cũng làm việc ở bệnh viện | 048 | 6 | 2 | Chỉ mục lục |
+| 8 | 我爸爸也在医院工作 | My father also works at a hospital | Bố tôi cũng làm việc ở bệnh viện | 048 | 6 | 2 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 054–060 và Workbook 048–050 (xem mục 10) |
 | 9 | 我明天上午在学校学习 | I'll be studying at school tomorrow morning | Sáng mai tôi học ở trường | 057 | 6 | 2 | Chỉ mục lục |
 | 10 | 这儿的苹果真便宜！ | The apples here are really affordable! | Táo ở đây thật rẻ! | 066 | 6 | 2 | Chỉ mục lục |
 | 11 | 我读大学呢 | I'm studying at university | Tôi đang học đại học | 075 | 6 | 2 | Chỉ mục lục |
@@ -199,3 +199,7 @@ Audio Bài 3 đối ứng theo ký hiệu in trong sách, thời lượng đo b�
 
 ### Rà soát Bài 6–7 (01/11/2026)
 Ba bài phân biệt đã đủ bằng chứng về mục tiêu luyện cả hai dạng; không thêm câu chấm. Bài tự nói Bài 6 tr.041–042 và Bài 7 tr.052 đã có đủ8 hình tương ứng8 khung câu, giữ tự luyện mở. Bài6 nguồn lời đọc tr.016, Bài7 tr.019. Chưa bổ sung phần 模拟测练 ngoài phạm vi D15.
+
+## 10. Bài 8 — 我爸爸也在医院工作 (đã xuất bản 01/11/2026)
+
+Textbook trang in 054–060 (PDF 69–75): mục tiêu mô tả vị trí/nơi chốn, giới từ “在”, động từ năng nguyện “能”; khởi động nối từ–hình 6 hình; 3 hội thoại, 23 từ mới + 1 tên riêng （胡医生）; 3 điểm giảng đường （方位词 / 介词“在” / 能）; câu hỏi nghe hiểu in trước Hội thoại 2–3; bài tập tổng hợp 059–060 (ngân hàng A 哪儿 / B 在 / C 桌子 / D 书店 / E 能； câu 3 có hai chỗ trống, tách thành hai câu trong app; dùng hình để nói 4 hình — cặp hình–khung câu đối chiếu lại: 1 bác sĩ “医生______。”, 2 hiệu sách “我们在______见吧。”, 3 siêu thị “你______去______吗？”, 4 mèo trên bàn “桌子上______。”). Workbook phần bài học trang in 048–050: phân biệt âm tiết (1) 8 cặp — tài liệu lời đọc đăng lại (tr. 022) chỉ in âm tiết được đọc nên có đáp án biên tập (nián, rěn, tiē, chǎn, lüè, hún, bīng, kǒng); phân biệt âm tiết (2) chọn từ không điệp âm — đáp án đăng lại B/C/B/A khớp phân tích dạng từ, chấm ở trạng thái verified-editorial; bài chữ Hán là kiến thức nền. Phần Mô phỏng kiểm tra từ trang in 051 loại khỏi bài (D15). Hình: minh họa phẳng vẽ mới theo D19 (6 hình khởi động + 4 hình nói + 1 hình ngữ cảnh), file WebP riêng trong `assets/lesson-08/`.

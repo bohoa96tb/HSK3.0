@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lessons67-practice1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lessons67-practice1";
-import * as player from "./player.js?v=20261101-lessons67-practice1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson8-1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson8-1";
+import * as player from "./player.js?v=20261101-lesson8-1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -481,9 +481,9 @@ function sectionExercisesHtml(content) {
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
   <h3>${esc(item.promptVi)}</h3>${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
   <form id="ex-form">
-  ${item.options.map((o) => `<label class="option ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
+  ${item.options.map((o, oi) => `<label class="option ${o.image ? "option-has-pic" : ""} ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
-    <span class="option-body">${o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
+    <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${speakBtnHtml(o.audio, o.zh)}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
     <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
     ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>

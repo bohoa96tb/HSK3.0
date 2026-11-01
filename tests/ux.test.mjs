@@ -16,7 +16,7 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   assert.deepEqual([foundOk, foundAll], [53, 58]); // 雨/五/一/椅子 (L2) and 嘴 (L3) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [41, 65]); // Lesson 4-5 options are single words/short phrases with no honest per-option segment
+  assert.deepEqual([optOk, optAll], [76, 90]); // 2026-11-01 fix round: 15 Lesson 4-5 text options + 20 comprehensive-bank options gained honest token-level segments; the rest still have none
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

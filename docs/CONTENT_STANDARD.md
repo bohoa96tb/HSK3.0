@@ -191,3 +191,13 @@ Quy tắc chấm nghe–viết: thanh mẫu chỉ chấm phụ âm đầu (nhậ
 - **Âm Hán–Việt là trường riêng** trên từng mục từ của Mục 2: `hanViet` (viết hoa), `hanVietStatus` (`verified-editorial` | `missing`), `hanVietNoteVi` khi âm dễ gây hiểu nhầm nghĩa. Nguồn riêng: Từ điển Hán Nôm Thi Viện (hvdic.thivien.net — nền Thiều Chửu/Trần Văn Chánh/Nguyễn Quốc Hùng), ghi trong `sources` là `src-hanviet-thivien`; Baulchino vẫn là nguồn nội dung bài học duy nhất. Hán–Việt **không** thay nghĩa hiện đại, không thay Pinyin, và **không** tạo cho câu hội thoại.
 - Không ghép tự động âm đầu tiên của từng chữ: chữ đa âm phải chọn theo đúng từ/ngữ cảnh và ghi căn cứ khi khác cách đọc phổ biến (đã áp dụng: 什么 = THẬM MA — 什 đọc thậm; 高兴 = CAO HỨNG — 兴 đọc hứng; 很 = NGẬN; 叫 = KHIẾU; 您 = NÂM; 没 = MỘT; 们 = MÔN; 你 thống nhất NHĨ, từ điển còn ghi nễ). Từ chưa xác minh được thì để `hanViet: null, hanVietStatus: missing` và UI hiện rõ "chưa xác minh" — validator chặn trạng thái verified mà thiếu âm. Độ phủ Bài 1–2: 27/27 mục từ đã rà.
 - **Dữ liệu hỗ trợ Mục 5**: mọi lựa chọn tiếng Trung của bài chọn hội thoại phải có `pinyin` và `vi` (đối chiếu Pinyin/nghĩa từ chính các câu đã kiểm chứng bản in trong phần Nghe & đọc của cùng bài), validator bắt buộc đủ cho cả 25/25 lựa chọn. Hỗ trợ chỉ là lớp hiển thị; đáp án, `answerStatus` và điểm lần đầu không đổi vì hỗ trợ.
+
+## Bổ sung 01/11/2026 — Quy tắc source-conflict: xung đột nguồn chưa giải quyết thì tạm ngừng chấm (D16)
+
+Khi hai nguồn của chính bộ sách mâu thuẫn nhau ở đúng đặc điểm đang được kiểm tra (ví dụ: đề in một đáp án, lời đọc/bản thu là một đáp án khác ở đúng thanh điệu đang chấm), KHÔNG được chọn một phía để chấm tiếp và chỉ ghi chú thêm. Xử lý bắt buộc:
+
+1. Mục/ô liên quan chuyển sang trạng thái `source-conflict`: dữ liệu ghi `conflictCells` (vị trí ô) + `conflictNoteVi` (giải thích ngắn cho người học). Ô vẫn hiển thị để luyện nghe/gõ thử.
+2. Ô source-conflict KHÔNG được chấm đúng/sai, KHÔNG tính vào mẫu số hay tử số điểm, KHÔNG vào hàng đợi ôn tập. Không "chấp nhận cả hai đáp án" để che xung đột khi đặc điểm tranh chấp chính là thứ đang kiểm tra.
+3. Nếu ô đã từng được chấm trước khi phát hiện xung đột: giữ nguyên lịch sử thô (số lần thử, bản nháp của người học) nhưng loại kết quả của ô khỏi thống kê hiện hành (điểm lần đầu, kết quả gần nhất, hàng đợi ôn tập) bằng migration chạy theo dữ liệu, có kiểm thử hồi quy.
+4. Chỉ khôi phục chấm khi xung đột được giải quyết bằng bằng chứng mới đủ mạnh (ví dụ bản in đính chính, đáp án chính thức của NXB, hoặc kiểm nghe độc lập đáng tin) và ghi lại quyết định đó.
+5. Ghi chú công khai trong `answerEvidence`/tài liệu nguồn vẫn giữ nguyên như các điểm chưa chắc khác (D14) — điểm khác là trạng thái chấm: ghi chú (D14) vẫn chấm; source-conflict (D16) thì ngừng chấm.

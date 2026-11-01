@@ -196,3 +196,10 @@ Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở ind
 - Câu chấm điểm của Bài 4 lấy từ chính Textbook: hai câu hỏi hiểu hội thoại in sẵn sau Hội thoại 2 và Hội thoại 3 (chọn A/B/C), đáp án suy ra trực tiếp từ lời thoại đã in trong cùng cuốn sách (`verified-from-print`). Bài 4 không có bài "nhìn hình chọn hội thoại" trong 听读练.
 - Phần 模拟测练 ở cuối Workbook Bài 4 (tr. in 016–018, track 4-3) là bài kiểm tra mô phỏng tích lũy nhiều bài, không phải nội dung riêng của Bài 4 — không đưa vào bài này; ghi rõ trong CURRICULUM_MAP/SOURCE_AUDIT để xét làm tính năng riêng sau nếu cần.
 
+
+## D16 — 01/11/2026: Xung đột nguồn chưa giải quyết → tạm ngừng chấm (source-conflict)
+
+- Khi nguồn mâu thuẫn ở đúng đặc điểm đang kiểm tra, ô/mục đó chuyển sang `source-conflict`: ghi `conflictCells` + `conflictNoteVi` trong dữ liệu; không chấm đúng/sai, không tính vào mẫu số điểm, không vào hàng đợi ôn tập; vẫn hiển thị để luyện tập. Không chấp nhận cả hai đáp án để che xung đột.
+- Kết quả cũ của ô bị xung đột: giữ lịch sử thô (số lần thử, nháp), loại khỏi thống kê hiện hành bằng migration theo dữ liệu chạy lúc khởi động app, có test hồi quy (tests/conflict.test.mjs).
+- Trường hợp đầu tiên: ô 5 bài chọn âm tiết Bài 5 (đề in jiǎ/xiǎ; lời đọc + bản thu jiā; kiểm cao độ bằng máy cho thấy thanh phẳng cao, không phải thanh 3; tài liệu đáp án đăng lại không in đáp án bài này) — trước đây chấm theo jiā kèm ghi chú (D14), nay ngừng chấm theo D16 cho tới khi có bằng chứng giải quyết xung đột.
+- Quy tắc đầy đủ ở docs/CONTENT_STANDARD.md mục "Bổ sung 01/11/2026 — Quy tắc source-conflict".

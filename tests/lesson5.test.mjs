@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 
 test('lesson 5 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l5, 'additionalLessons must contain hsk1-l05');
-  assert.equal(content.contentVersion, '20261101-lesson5-1');
+  assert.equal(content.contentVersion, '20261101-lesson5-2');
   assert.equal(l5.prepWords.length, 22);
   for (const w of l5.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
@@ -62,8 +62,8 @@ test('lesson 5 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 5 text exercises: printed answers grade, stems render, review links fit', async () => {
-  assert.equal(l5.exerciseSet.items.length, 4);
-  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['1', '3', '2', '3']);
+  assert.equal(l5.exerciseSet.items.length, 9);
+  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['1', '3', '2', '3', '3', '4', '1', '5', '2']);
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
   for (const item of l5.exerciseSet.items) {
@@ -76,7 +76,7 @@ test('lesson 5 text exercises: printed answers grade, stems render, review links
   }
   await route('lesson/hsk1-l05/exercises');
   assert.ok($('.exercise-stem')?.textContent.includes('杨同乐') && $('.exercise-stem')?.textContent.includes('做饭'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/4'));
+  assert.ok(document.body.textContent.includes('Câu 1/9'));
 });
 
 test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', () => {
@@ -84,7 +84,19 @@ test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', ()
   assert.equal(task.answerStatus, 'verified-editorial');
   assert.equal(task.gradingMode, 'syllable');
   assert.equal(task.prompts.length, 8);
+  assert.deepEqual(task.conflictCells, [4]);
+  assert.ok(task.conflictNoteVi.includes('jiǎ/xiǎ') && task.conflictNoteVi.includes('jiā'));
   task.scriptSyllables.forEach((syl, i) => {
+    if (task.conflictCells.includes(i)) {
+      // source-conflict cell: NO input is graded — not the script syllable,
+      // not the printed pair member, not a tone number (D16).
+      for (const inp of [syl, 'jiǎ', 'xiǎ', 'jia1', 'jia3', '']) {
+        const r = gradeDictationCell(task, i, inp);
+        assert.equal(r.graded, false, `conflict cell input ${inp}`);
+        assert.equal(r.reason, 'source-conflict');
+      }
+      return;
+    }
     assert.equal(gradeDictationCell(task, i, syl).correct, true, `cell ${i + 1} exact`);
     const numbered = syl.normalize('NFD').replace(/[̀-ͯ]/g, '');
     const tone = { ā: 1, á: 2, ǎ: 3, à: 4, ē: 1, é: 2, ě: 3, è: 4, ī: 1, í: 2, ǐ: 3, ì: 4, ō: 1, ó: 2, ǒ: 3, ò: 4, ū: 1, ú: 2, ǔ: 3, ù: 4 }[[...syl].find((ch) => 'āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ'.includes(ch))] || 0;

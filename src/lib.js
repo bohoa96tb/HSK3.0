@@ -86,7 +86,19 @@ function canonFinal(base, initial) {
 // Grade one dictation cell. task.answers[i] is the graded token for the
 // task's mode: an initial ("h"), a final with tone mark ("ěn"), or a tone
 // number (3). task.scriptSyllables[i] is the full syllable that was read.
+// A cell whose sources conflict (e.g. the printed pair and the recording
+// disagree on the very feature being tested) is suspended from grading:
+// it stays available for listening practice but never counts as right or
+// wrong, never enters the score denominator and never joins the review
+// queue. See docs/CONTENT_STANDARD.md (source-conflict rule, D16).
+export function isConflictCell(task, index) {
+  return Array.isArray(task?.conflictCells) && task.conflictCells.includes(index);
+}
+
 export function gradeDictationCell(task, index, input) {
+  if (isConflictCell(task, index)) {
+    return { graded: false, reason: "source-conflict", conflict: true };
+  }
   if (!task || task.answerStatus !== "verified-editorial" || !Array.isArray(task.answers)) {
     return { graded: false, reason: "unverified-answer" };
   }

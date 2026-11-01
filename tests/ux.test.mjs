@@ -95,11 +95,12 @@ test('speaker plays only its own segment and switching speakers replaces playbac
 
 test('speaker inside an exercise option does not select the option', async () => {
   await route('lesson/hsk1-l01/exercises');
-  const speak = document.querySelector('.option [data-speak]');
+  // Options use device speech synthesis (D20), not a cut book segment.
+  const speak = document.querySelector('.option [data-tts]');
   assert.ok(speak);
+  const srcsBefore = audios.map((a) => a.src || '');
   speak.click(); await tick();
-  const a = audios[0];
-  assert.match(a.src, /workbook.*01-2\.mp3|hsk-1-workbook\/lesson-01\/01-2\.mp3$/);
+  assert.deepEqual(audios.map((a) => a.src || ''), srcsBefore, 'option speaker must not start book audio');
   assert.equal(document.querySelector('input[name="opt"]:checked'), null);
   const sessions = state().exerciseSessions || {};
   assert.ok(!Object.values(sessions).some((ss) => Object.keys(ss.answers || {}).length));

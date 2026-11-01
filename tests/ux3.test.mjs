@@ -68,7 +68,7 @@ test('prep bar: Pinyin / Nghĩa / Hán–Việt / A− / A+ each toggle only the
   assert.equal($('#main').classList.contains('off-hv-prep'), true);
   const card = $('#l02w-13');
   assert.equal(card.querySelector('.hanviet').textContent, 'HV: CAO HỨNG');
-  assert.ok(card.querySelector('.word-top [data-speak]') || card.querySelector('.word-top .no-audio'), 'speaker sits next to the hanzi');
+  assert.ok(card.querySelector('.word-top [data-tts]'), 'TTS speaker sits next to the hanzi');
   hvBtn.click(); await tick();
   assert.equal($('#l02w-13'), card); // same DOM node — nothing was re-rendered
   assert.equal($('#main').classList.contains('off-hv-prep'), false);
@@ -106,7 +106,7 @@ test('exercises: pinyin/meaning apply uniformly to all options and support use i
   assert.equal($$('#exercise-card .tog-pinyin-ex').length, 4); // every option, not only the correct one
   assert.equal($$('#exercise-card .tog-vi-ex').length, 4);
   // Speaker inside an option still does not select it.
-  const speak = $('#exercise-card .option [data-speak]');
+  const speak = $('#exercise-card .option [data-tts]');
   speak.click(); await tick();
   assert.equal(document.querySelector('input[name="opt"]:checked'), null);
   // Turning pinyin ON records support for the current, unchecked question.

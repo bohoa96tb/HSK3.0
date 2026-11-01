@@ -14,8 +14,8 @@ Số track theo bài lấy từ danh mục trang audio Baulchino ngày 2026-10-3
 bài 1–3 và 7–15 mỗi bài 2 track, bài 4–6 mỗi bài 3 track). Đây là số đếm ở
 mức danh mục, chưa kiểm tra phát từng track.
 
-Trạng thái xuất bản app: Bài 1–4 đã xuất bản đầy đủ (Bài 4 ngày 2026-11-01,
-chuẩn ux3 + D13/D15). Bài 5–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
+Trạng thái xuất bản app: Bài 1–5 đã xuất bản đầy đủ (Bài 5 ngày 2026-11-01,
+chuẩn ux3 + D13/D15). Bài 6–15 mới ở mức mục lục — chưa đọc nội dung, chưa xuất bản.
 
 ## 1. Bảng 15 bài HSK1
 
@@ -25,7 +25,7 @@ chuẩn ux3 + D13/D15). Bài 5–15 mới ở mức mục lục — chưa đọc
 | 2 | 我叫李文 | My name is Li Wen | Tôi tên là Lý Văn | 005 | 7 | 2 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 005–009 và Workbook 005–008 (xem mục 4) |
 | 3 | 我是中国人 | I'm Chinese | Tôi là người Trung Quốc | 009 | 7 | 2 | Chỉ mục lục |
 | 4 | 我有两个孩子 | I have two children | Tôi có hai người con | 013 | 6 | 3 | Chỉ mục lục |
-| 5 | 今天我休息 | I'm off today | Hôm nay tôi nghỉ | 022 | 6 | 3 | Chỉ mục lục |
+| 5 | 今天我休息 | I'm off today | Hôm nay tôi nghỉ | 022 | 6 | 3 | **Đã xuất bản** — đã đọc nội dung Textbook trang in 027–034 và Workbook 022–024 (xem mục 7) |
 | 6 | 你的手机号是多少？ | What's your cell phone number? | Số điện thoại của bạn là bao nhiêu? | 031 | 6 | 3 | Chỉ mục lục |
 | 7 | 我晚上六点半下班 | I'll finish work at 6:30 in the evening | Tôi tan làm lúc sáu giờ rưỡi tối | 039 | 6 | 2 | Chỉ mục lục |
 | 8 | 我爸爸也在医院工作 | My father also works at a hospital | Bố tôi cũng làm việc ở bệnh viện | 048 | 6 | 2 | Chỉ mục lục |
@@ -172,3 +172,11 @@ Audio Bài 3 đối ứng theo ký hiệu in trong sách, thời lượng đo b�
 - Hội thoại 3 (track 4-5, trên phố): câu hỏi in tr.024 — 王一雪 có hai con; con gái 十二 tuổi; mẹo Tiểu Ngữ: dưới 10 tuổi hỏi 几岁， từ 10 tuổi hỏi 多大. Từ mới 4-6 (8 từ). Bài tập tổng hợp tr.025 là hoạt động lớp, không đáp án in — không chuyển thành câu chấm điểm.
 - **Workbook tr. in 013–018 (PDF 20–25)**: phát âm (track 4-1): biến điệu thanh 3 (bảng đổi 214→35 + bộ từ kèm hình A: 你好、哪里、小语、水果） và thanh nhẹ (tương phản 东西/买卖/孙子 + bộ từ kèm hình B: 妈妈、爸爸、椅子、饺子； tiếp 谢谢、衣服、漂亮、早上 ở đầu tr.015) → 12 từ nền trong app. 听读练 (track 4-2, tr.015): nhiệm vụ 1 chọn âm tiết 8 cặp in sẵn → chuyển thành bài gõ âm tiết tự chấm theo D15; nhiệm vụ 2–4 là luyện đọc theo bản in, không chấm điểm. **模拟测练 (tr.016–018, nghe câu 1–10 + đọc 11–20) KHÔNG đưa vào bài theo D15** — phần thi thử gộp Bài 1–4, để dành tính năng riêng nếu làm sau.
 - **App**: 21 từ mới, 6 điểm kiến thức, 14 câu/3 đoạn, 4 câu hỏi hiểu hội thoại (verified-from-print, đáp án 1/2/2/2), 1 bài chọn âm tiết 8 ô (verified-editorial), ảnh ngữ cảnh phòng khách (trang PDF 34). Loa theo đơn vị: đủ 14/14 câu, 21/21 từ mới, 12/12 từ nền; lựa chọn của 4 câu hỏi không có loa riêng (từ đơn lẻ, hai lựa chọn không xuất hiện trong hội thoại nên không có đoạn trung thực).
+
+## 7. Map chi tiết — Bài 5 今天我休息 (đã đối chiếu trực quan 2026-11-01)
+
+- **Textbook tr. in 027–034 (PDF 42–49)**: mục tiêu — nói ngày tháng/thứ theo thứ tự tiếng Trung, động từ năng nguyện 会， câu vị ngữ danh từ. Khởi động: ghép từ với hình （2025年5月、星期一、电脑、做饭、休息、饺子）. Hội thoại 1 (track 5-1, ở nhà): 今天几号？…星期日。今天我休息。Từ mới 5-2 （今天、号、月、日、星期、星期日、星期天、休息）; 小语讲堂 1 时间的表达（1）(thứ tự 年→月→日/号→星期， bảng tháng và thứ, tr.029); 小语讲堂 2 名词谓语句 (định nghĩa + luyện đọc 今天5月1号 / 我妹妹12岁， tr.029–030).
+- Hội thoại 2 (track 5-3, ở công ty lúc nghỉ): câu hỏi nghe hiểu in tr.030 （杨同乐（ ）做饭 → 会； （ ）也做饭 → 星期日） — 你会做饭吗？/ 我会做面条儿、饺子，也会做一些菜。星期天我也做饭。Từ mới 5-4 （会、做饭、做、面条儿、饺子、一些、菜）; 小语讲堂 3 能愿动词“会” (tr.031, luyện đọc 你会做饭吗？/ 我会做面条儿。/ 我不会做菜。).
+- Hội thoại 3 (track 5-5, ở công ty sau giờ làm): câu hỏi nghe hiểu in tr.031 （杨同乐也（ ）→ 下班； 有一个新（ ）→ 电脑） — 同乐，下班吗？…是我的新电脑。…我也很喜欢它。Từ mới 5-6 （下班、新、电脑、真、好看、喜欢、它）; hai câu hỏi mở cuối hội thoại (tr.032) là câu hỏi thảo luận, không chuyển thành câu chấm điểm. Bài tập tổng hợp tr.033 (chọn từ điền trống: 菜/喜欢/6月22号/新/真 + mô tả hình) ghi nhận nhưng chưa chuyển vào app kỳ này.
+- **Workbook tr. in 022–024 (PDF 29–31)**: phát âm (track 5-1): biến điệu của 不 (trước thanh 4 → thanh 2; bảng 不是/不会/不大/不对） và biến điệu của 一 (trước thanh 1/2/3 → thanh 4; trước thanh 4 → thanh 2; bảng 一些/一年/一口/一个/一日/一岁） → 10 từ nền trong app là chính các từ ví dụ của hai bảng này. 听读练 (track 5-2, tr.023): nhiệm vụ 1 chọn âm tiết 8 cặp in sẵn → chuyển thành bài gõ âm tiết tự chấm theo D15 (đáp án theo lời đọc đăng lại tr. in 013; ô 5 jiā lệch cặp in — xem SOURCE_AUDIT); nhiệm vụ 2–3 luyện đọc biến điệu theo bản in, không chấm điểm. **模拟测练 (tr.025–030, nghe 1–10 + đọc 11–20) KHÔNG đưa vào bài theo D15.**
+- **App**: 22 từ mới, 5 điểm kiến thức, 14 câu/3 đoạn, 4 câu hỏi nghe hiểu hội thoại (verified-from-print, đáp án 1/3/2/3), 1 bài chọn âm tiết 8 ô (verified-editorial), ảnh ngữ cảnh văn phòng (Textbook tr. in 032). Loa theo đơn vị: đủ 14/14 câu, 22/22 từ mới, 10/10 từ nền; lựa chọn của 4 câu hỏi không có loa riêng (như Bài 4).

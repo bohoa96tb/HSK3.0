@@ -311,3 +311,5 @@ Bằng chứng tách theo năm loại theo D17:
 - **Kiểm giao diện:** nghiệm thu live trên URL thật đạt 8/8 bước (lộ trình hiện 7 bài; 27 thẻ từ + Hán–Việt đúng; loa câu Hội thoại 3 phát đúng đoạn; nút Ôn lại của câu 4 mở đúng điểm Cách nói giờ (2) và quay lại đúng câu; hai bài phát âm không có chấm tự động; tiến độ giữ sau reload; hồi quy Bài 6 chấm âm tiết và ô source-conflict Bài 5 còn nguyên). Kiểm responsive bằng iframe tests/responsive.html: 3 tuyến × 360/390/768/1440 đạt 12/12, cộng tuyến Từ cần biết ở 390 với cỡ chữ lớn nhất đạt. Chưa kiểm trên thiết bị Android thật.
 
 Giới hạn đã biết: chưa Android thật; chưa CI GitHub Actions (403 — handoff ở docs/ci/); quyền nguồn unknown.
+
+**Bổ sung sau báo cáo QA vòng 2 đầy đủ (contentVersion 20261101-lesson7-2):** báo cáo đầy đủ của vòng 2 (về sau bản tóm tắt) kèm hai ghi chú không chặn merge: (a) đoạn của 吧 và 后 phủ cả hai lần đọc của chính từ thay vì chỉ lần đầu; (b) đoạn ví dụ của điểm 呢 cắt cụt ~0,17s cuối của trợ từ 呢. Đã xử lý cả hai: 吧 → 20.58–20.90, 后 → 26.00–27.20 (chỉ lần đọc đầu), ví dụ 呢 → kéo dài tới 16.15 để trọn trợ từ. Kết luận ĐẠT của vòng 2 không đổi.

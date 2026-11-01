@@ -8,7 +8,7 @@ const l7 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l07');
 const item = (id) => l7.exerciseSet.items.find((x) => x.id === id);
 
 test('lesson 7 content shape matches the printed book', () => {
-  assert.equal(content.contentVersion, '20261101-lesson7-1');
+  assert.equal(content.contentVersion, '20261101-lesson7-2');
   assert.equal(l7.prepWords.length, 27);
   assert.equal(l7.knowledgePoints.length, 6);
   assert.equal(l7.reader.sentences.length, 14);

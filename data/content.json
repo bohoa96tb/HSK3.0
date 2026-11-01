@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson7-1",
+  "contentVersion": "20261101-lesson7-2",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -13865,7 +13865,7 @@
           "audio": {
             "trackId": "trk-tb-l07-2",
             "start": 20.58,
-            "end": 21.7,
+            "end": 20.9,
             "status": "asr-draft"
           }
         },
@@ -14263,7 +14263,7 @@
           "audio": {
             "trackId": "trk-tb-l07-6",
             "start": 26.0,
-            "end": 28.05,
+            "end": 27.2,
             "status": "asr-draft"
           }
         }
@@ -14429,7 +14429,7 @@
               "audio": {
                 "trackId": "trk-tb-l07-3",
                 "start": 12.74,
-                "end": 15.95,
+                "end": 16.15,
                 "status": "asr-draft"
               }
             },

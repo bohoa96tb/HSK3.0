@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 
 test('lesson 6 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l6, 'additionalLessons must contain hsk1-l06');
-  assert.equal(content.contentVersion, '20261101-lesson6-2');
+  assert.equal(content.contentVersion, '20261101-lesson6-3');
   assert.equal(l6.prepWords.length, 22);
   for (const w of l6.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
@@ -91,4 +91,11 @@ test('lesson 6 choose-a-disyllable task: syllable grading grades exactly', () =>
   assert.equal(t2.answerStatus, 'unverified');
   assert.equal(t2.answers, undefined);
   assert.equal(gradeDictationCell(t2, 0, 'nàr').graded, false);
+});
+
+test('lesson 6 erhua table pinyin follows the printed Workbook table', () => {
+  // Printed Workbook p.031: 盖儿 gàir, 个儿 gèr (no i in 个儿).
+  const fw = Object.fromEntries(l6.foundationWords.map((w) => [w.zh, w.pinyin]));
+  assert.equal(fw['盖儿'], 'gàir');
+  assert.equal(fw['个儿'], 'gèr');
 });

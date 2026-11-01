@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson3-1",
+  "contentVersion": "20261101-lesson3-2",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -6290,7 +6290,7 @@
             "óng",
             "éi"
           ],
-          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề lấy từ bản in Workbook; âm tiết đọc lấy từ tài liệu lời đọc (听力材料, bản đăng lại Scribd, trang in 008); thứ tự âm tiết khớp bản nháp ASR chạy local trên track Workbook của Baulchino. Tài liệu đáp án đăng lại không in đáp án nghe–viết. Đây không phải đáp án chính thức của NXB đã chứng minh được.",
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề lấy từ bản in Workbook; âm tiết đọc lấy từ tài liệu lời đọc (听力材料, bản đăng lại Scribd, trang in 008); thứ tự âm tiết khớp bản nháp ASR chạy local trên track Workbook của Baulchino. Tài liệu đáp án đăng lại không in đáp án nghe–viết. Đây không phải đáp án chính thức của NXB đã chứng minh được. Lưu ý rà soát 2026-11-01: ô 1 — lời đọc in zū (thanh 1) trong khi hai lượt ASR (base và small) đều nghe ra chữ mang thanh 3 (zǔ); hai đáp án ū và ǔ KHÔNG tương đương vì bài này chấm vận mẫu kèm dấu thanh. Đáp án giữ theo lời đọc — tài liệu chép lại chính track này — và đây là ô còn độ không chắc cao nhất của bộ bài; chưa nghe kiểm chứng bởi người. Ô 15 — lời đọc in shéi nên đáp án vận mẫu là éi; chữ 谁 có hai âm chuẩn (shéi/shuí, chính sách cũng ghi âm shuí), ASR chỉ nhận ra chữ chứ không phân biệt được hai âm này; app chấm theo lời đọc, người học viết uí sẽ bị tính sai ô này.",
           "guideVi": "Nghe đoạn đọc rồi chỉ nhập vận mẫu nghe được, kèm dấu thanh (ví dụ: uān, uí). Vận mẫu uei/uen viết rút thành ui/un như quy tắc của bài. Cũng có thể nhập cả âm tiết — nếu nhập cả âm tiết, hệ thống tách thanh mẫu và chỉ chấm vận mẫu kèm dấu thanh.",
           "audioSegment": {
             "start": 66.0,

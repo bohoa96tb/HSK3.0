@@ -128,9 +128,31 @@ export function gradeDictationCell(task, index, input) {
     return { graded: true, correct };
   }
   if (task.gradingMode === "syllable") {
-    // The learner types the whole syllable they heard, tone mark or tone
-    // number; it must reproduce the read syllable exactly (base + tone).
-    return { graded: true, correct: given.base === syllable.base && given.tone === syllable.tone && given.tone !== 0 };
+    // The learner types the whole syllable (or disyllable, Lesson 6) they
+    // heard, tone marks or tone numbers; it must reproduce the read form
+    // exactly: same letters and the same sequence of tones. Comparing
+    // tone-event sequences (not a single collapsed tone) is what keeps
+    // dōngxi apart from dōngxī — the pairs differ on the second syllable.
+    const baseOf = (s) => String(s).toLowerCase().replace(/v/g, "ü").replace(/u:/g, "ü")
+      .normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[0-9\s]/g, "");
+    const toneEvents = (s) => {
+      const events = [];
+      for (const ch of String(s).toLowerCase()) {
+        const d = ch.normalize("NFD");
+        if (d.length > 1 && /[aeiouü]/.test(d[0])) {
+          const mark = d.codePointAt(1);
+          const tone = { 0x300: 4, 0x301: 2, 0x304: 1, 0x30c: 3, 0x311: 3 }[mark];
+          if (tone) events.push(tone);
+        } else if (/[1-4]/.test(ch)) events.push(Number(ch));
+      }
+      return events;
+    };
+    const expectedStr = task.scriptSyllables?.[index] || "";
+    const expEvents = toneEvents(expectedStr);
+    const correct = baseOf(raw) === baseOf(expectedStr)
+      && expEvents.length > 0
+      && JSON.stringify(toneEvents(raw)) === JSON.stringify(expEvents);
+    return { graded: true, correct };
   }
   if (task.gradingMode === "tone") {
     let tone = given.tone;

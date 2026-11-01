@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson5-2",
+  "contentVersion": "20261101-lesson6-1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -29,7 +29,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24), Bài 3 (trang in 010–015, PDF 25–30), Bài 4 (trang in 018–025, PDF 33–40) và Bài 5 (trang in 027–034, PDF 42–49): đối chiếu mục tiêu, 3 hội thoại, 22 từ mới, 3 điểm Tiểu Ngữ giảng đường (thời gian (1) / câu vị ngữ danh từ / động từ năng nguyện 会） và câu hỏi nghe hiểu in trước Hội thoại 2–3. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
+      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24), Bài 3 (trang in 010–015, PDF 25–30), Bài 4 (trang in 018–025, PDF 33–40), Bài 5 (trang in 027–034, PDF 42–49) và Bài 6 (trang in 035–042, PDF 50–57): đối chiếu mục tiêu, 3 hội thoại, 22 từ mới + 1 tên riêng, 3 điểm Tiểu Ngữ giảng đường （想 / câu liên động (1) / từ nghi vấn 怎么） và câu hỏi nghe hiểu in trước Hội thoại 2–3, bài tập tổng hợp trang in 041. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
     },
     {
       "id": "src-hsk1-workbook-pdf",
@@ -38,7 +38,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1-workbook.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2, trang in 009–012 (PDF 16–19) cho Bài 3, trang in 013–018 (PDF 20–25) cho Bài 4 và trang in 022–024 (PDF 29–31) cho Bài 5: biến điệu của 不 và 一， bài nghe chọn âm tiết (8 cặp) và hai bài đọc theo biến điệu; phần Mô phỏng kiểm tra của Bài 4 (tr. in 016–018) và Bài 5 (tr. in 025–030) là bài tích lũy nhiều bài, không thuộc nội dung từng bài trong app (D15). Đáp án nghe đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
+      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2, trang in 009–012 (PDF 16–19) cho Bài 3, trang in 013–018 (PDF 20–25) cho Bài 4, trang in 022–024 (PDF 29–31) cho Bài 5 và trang in 031–032 (PDF 38–39) cho Bài 6: âm nhi hóa (bảng 6 cặp + 8 từ kèm hình), dấu cách âm, bài nghe chọn âm tiết đôi (6 cặp) và bài phân biệt dạng nhi hóa; phần Mô phỏng kiểm tra của Bài 4 (tr. in 016–018), Bài 5 (tr. in 025–030) và Bài 6 (từ tr. in 033) là bài tích lũy nhiều bài, không thuộc nội dung từng bài trong app (D15). Đáp án nghe đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
     },
     {
       "id": "src-hsk1-writing-pdf",
@@ -373,28 +373,48 @@
     },
     {
       "id": "hsk1-l06",
-      "bookId": "book-hsk1-workbook",
+      "bookId": "book-hsk1-textbook",
       "level": "HSK 1",
       "sourceUnit": "Lesson 06",
       "lessonNumber": 6,
       "titleZh": "你的手机号是多少？",
       "titleEn": "What's your cell phone number?",
       "titleVi": "Số điện thoại của bạn là bao nhiêu?",
-      "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+      "titleProvenance": "Đối chiếu tên Bài 6 ở Textbook trang in 035 và Workbook trang in 031 — cả hai đều là 你的手机号是多少？ / What's your cell phone number?",
       "sourceRefs": [
+        {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 50,
+          "printedPage": 35,
+          "section": "Bài 6 · mục tiêu và khởi động"
+        },
         {
           "sourceId": "src-hsk1-workbook-pdf",
           "pdfPage": 38,
           "printedPage": 31,
-          "section": "目录 Contents (mục lục)"
+          "section": "Bài 6 · 语音"
         }
       ],
       "textbookAudioTrackCount": 6,
       "workbookAudioTrackCount": 3,
-      "publicationStatus": "catalogue-only",
-      "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-      "grammarIds": [],
-      "sectionIds": []
+      "publicationStatus": "pilot-ready",
+      "publicationNote": "Hỏi và đọc số điện thoại, động từ năng nguyện 想， câu liên động (1) và từ nghi vấn 怎么； kèm âm nhi hóa, dấu cách âm và bài tập sách.",
+      "grammarIds": [
+        "kp-hsk1-l06-xiang",
+        "kp-hsk1-l06-serial",
+        "kp-hsk1-l06-zenme",
+        "kp-hsk1-l06-erhua",
+        "kp-hsk1-l06-dividing-mark"
+      ],
+      "sectionIds": [
+        "intro",
+        "prep",
+        "knowledge",
+        "reader",
+        "exercises",
+        "apply",
+        "summary"
+      ]
     },
     {
       "id": "hsk1-l07",
@@ -11097,6 +11117,2459 @@
             "trackId": "trk-wb-l05-1",
             "start": 132.8,
             "end": 134.6,
+            "status": "asr-draft"
+          }
+        }
+      ]
+    },
+    {
+      "lessonId": "hsk1-l06",
+      "intro": {
+        "goalVi": "Hỏi và đọc số điện thoại từng chữ số, nói mong muốn và kế hoạch bằng 想 + hai cụm động từ nối tiếp, và hỏi cách thức bằng 怎么.",
+        "estimatedMinutes": 25,
+        "sections": [
+          {
+            "id": "intro",
+            "titleVi": "Bắt đầu"
+          },
+          {
+            "id": "prep",
+            "titleVi": "Từ cần biết"
+          },
+          {
+            "id": "knowledge",
+            "titleVi": "Hiểu cách dùng"
+          },
+          {
+            "id": "reader",
+            "titleVi": "Nghe & đọc"
+          },
+          {
+            "id": "exercises",
+            "titleVi": "Luyện tập"
+          },
+          {
+            "id": "apply",
+            "titleVi": "Tự nói"
+          },
+          {
+            "id": "summary",
+            "titleVi": "Tổng kết"
+          }
+        ],
+        "leadVi": "Từ ngày tháng ở Bài 5, sang số điện thoại và kế hoạch đi lại: bạn muốn đi đâu, mua gì, đi bằng cách nào.",
+        "outcomesVi": [
+          "Hỏi và đọc số điện thoại từng chữ số (số 1 đọc là yāo): 你的手机号是多少？— 我的手机号是…",
+          "Nói mong muốn, dự định bằng 想： 我想去超市买东西。",
+          "Nối hai hành động bằng câu liên động: nói mục đích （去超市买牛奶） và cách thức （坐出租车去）。",
+          "Hỏi cách thức bằng 怎么： 我们怎么去？— 坐出租车去。"
+        ],
+        "contextImage": {
+          "src": "assets/lesson-06/classroom.webp",
+          "alt": "Lý Văn và Bạch Gia Nguyệt ngồi đối diện, mỗi người cầm một chiếc điện thoại — hình trích từ Textbook Bài 6",
+          "caption": "Ở trường · Textbook, trang 036",
+          "width": 607,
+          "height": 333
+        },
+        "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (âm nhi hóa và dấu cách âm) là kiến thức bổ trợ, bạn có thể mở khi cần.",
+        "foundationSummaryVi": "Ôn phát âm nền tảng: âm nhi hóa （儿化） và quy tắc viết dấu cách âm",
+        "courseTagsVi": "Số điện thoại · 想 · Câu liên động (1) · 怎么",
+        "priorLessonNoteVi": "Bài này dùng lại ngày tháng và câu chữ 会/想 trong đời sống hằng ngày: hỏi số điện thoại, nói kế hoạch ngày mai và cách đi lại.",
+        "priorLessonId": "hsk1-l05"
+      },
+      "prepWords": [
+        {
+          "id": "l06w-1",
+          "zh": "手机",
+          "pinyin": "shǒujī",
+          "vi": "điện thoại di động",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 51,
+              "printedPage": 36,
+              "section": "生词 · Từ mới 6-2"
+            }
+          ],
+          "hanViet": "THỦ CƠ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-2",
+            "start": 0.0,
+            "end": 1.12,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-2",
+          "zh": "电话",
+          "pinyin": "diànhuà",
+          "vi": "điện thoại; cuộc gọi điện thoại",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 51,
+              "printedPage": 36,
+              "section": "生词 · Từ mới 6-2"
+            }
+          ],
+          "hanViet": "ĐIỆN THOẠI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-2",
+            "start": 2.56,
+            "end": 5.44,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-3",
+          "zh": "号",
+          "pinyin": "hào",
+          "vi": "số",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 51,
+              "printedPage": 36,
+              "section": "生词 · Từ mới 6-2"
+            }
+          ],
+          "hanViet": "HÀO",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Cùng chữ 号 với Bài 5: ở Bài 5 nó chỉ ngày trong tháng (9月8号）, ở bài này chỉ số nói chung (số điện thoại). Âm Hán–Việt đều là \"hào\"; từ điển còn ghi âm \"hiệu\".",
+          "audio": {
+            "trackId": "trk-tb-l06-2",
+            "start": 5.66,
+            "end": 6.46,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-4",
+          "zh": "明天",
+          "pinyin": "míngtiān",
+          "vi": "ngày mai",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "MINH THIÊN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 0.0,
+            "end": 1.09,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-5",
+          "zh": "去",
+          "pinyin": "qù",
+          "vi": "đi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "KHỨ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 3.71,
+            "end": 4.71,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-6",
+          "zh": "哪儿",
+          "pinyin": "nǎr",
+          "vi": "ở đâu",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "NA NHI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 4.79,
+            "end": 5.65,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-7",
+          "zh": "想",
+          "pinyin": "xiǎng",
+          "vi": "muốn; định (làm gì)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "TƯỞNG",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 5.87,
+            "end": 8.21,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-8",
+          "zh": "超市",
+          "pinyin": "chāoshì",
+          "vi": "siêu thị",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "SIÊU THỊ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 8.45,
+            "end": 12.79,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-9",
+          "zh": "买",
+          "pinyin": "mǎi",
+          "vi": "mua",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "MÃI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 12.77,
+            "end": 15.11,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-10",
+          "zh": "东西",
+          "pinyin": "dōngxi",
+          "vi": "đồ vật, thứ (đồ)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "ĐÔNG TÂY",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 15.29,
+            "end": 18.05,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-11",
+          "zh": "些",
+          "pinyin": "xiē",
+          "vi": "một ít, một vài",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "TA",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chính là chữ 些 trong 一些 ở Bài 5; đứng một mình nó đọc xiē. Âm Hán–Việt là \"ta\" (âm cổ, ít gặp).",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 17.97,
+            "end": 20.37,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-12",
+          "zh": "牛奶",
+          "pinyin": "niúnǎi",
+          "vi": "sữa bò",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "生词 · Từ mới 6-4"
+            }
+          ],
+          "hanViet": "NGƯU NÃI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-4",
+            "start": 20.27,
+            "end": 21.81,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-13",
+          "zh": "吃",
+          "pinyin": "chī",
+          "vi": "ăn",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "CẬT",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Âm Hán–Việt của 吃 là \"cật\" — âm ít gặp trong tiếng Việt hiện nay (còn thấy trong một số từ cũ); đừng suy nghĩa từ âm này.",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 1.15,
+            "end": 2.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-14",
+          "zh": "晚饭",
+          "pinyin": "wǎnfàn",
+          "vi": "bữa tối, cơm tối",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "VÃN PHẠN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 3.85,
+            "end": 5.49,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-15",
+          "zh": "那边",
+          "pinyin": "nàbiān",
+          "vi": "bên kia, đằng kia",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "NA BIÊN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 6.77,
+            "end": 8.73,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-16",
+          "zh": "包子",
+          "pinyin": "bāozi",
+          "vi": "bánh bao",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "BAO TỬ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 9.89,
+            "end": 11.23,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-17",
+          "zh": "非常",
+          "pinyin": "fēicháng",
+          "vi": "vô cùng, rất",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "PHI THƯỜNG",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 12.57,
+            "end": 14.19,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-18",
+          "zh": "好吃",
+          "pinyin": "hǎochī",
+          "vi": "ngon (miệng)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "HẢO CẬT",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Âm Hán–Việt của 吃 là \"cật\" — âm ít gặp trong tiếng Việt hiện nay (còn thấy trong một số từ cũ); đừng suy nghĩa từ âm này.",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 15.61,
+            "end": 17.43,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-19",
+          "zh": "米饭",
+          "pinyin": "mǐfàn",
+          "vi": "cơm (đã nấu chín)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "MỄ PHẠN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 18.83,
+            "end": 20.63,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-20",
+          "zh": "怎么",
+          "pinyin": "zěnme",
+          "vi": "thế nào; bằng cách nào",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "CHẨM MA",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chữ 怎 âm Hán–Việt là \"chẩm\" — âm ít gặp; trong 怎么 nó đọc \"zěn\".",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 21.59,
+            "end": 23.19,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-21",
+          "zh": "坐",
+          "pinyin": "zuò",
+          "vi": "ngồi; đi bằng (phương tiện)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "TỌA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 24.29,
+            "end": 25.77,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06w-22",
+          "zh": "出租车",
+          "pinyin": "chūzūchē",
+          "vi": "taxi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "生词 · Từ mới 6-6"
+            }
+          ],
+          "hanViet": "XUẤT TÔ XA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l06-6",
+            "start": 27.29,
+            "end": 29.09,
+            "status": "asr-draft"
+          }
+        }
+      ],
+      "knowledgePoints": [
+        {
+          "id": "kp-hsk1-l06-xiang",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Động từ năng nguyện 想： muốn, định làm gì",
+          "explanationVi": "Sách nêu: 想 là động từ năng nguyện, dùng trước động từ, biểu thị mong muốn hoặc dự định của chủ thể. Phủ định là 不想. Ví dụ của sách: 我想去超市 (tôi muốn đi siêu thị), 我哥哥不想休息 (anh tôi không muốn nghỉ).",
+          "pattern": "Chủ ngữ + 想/不想 + động từ (+ tân ngữ)",
+          "examples": [
+            {
+              "zh": "我想去超市。",
+              "pinyin": "Wǒ xiǎng qù chāoshì.",
+              "noteVi": "Tôi muốn đi siêu thị — câu luyện đọc của sách",
+              "audio": {
+                "trackId": "trk-tb-l06-3",
+                "start": 4.32,
+                "end": 5.28,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "我哥哥不想休息。",
+              "pinyin": "Wǒ gēge bù xiǎng xiūxi.",
+              "noteVi": "Anh tôi không muốn nghỉ ngơi — câu luyện đọc của sách"
+            },
+            {
+              "zh": "我想买些牛奶。",
+              "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+              "noteVi": "Tôi muốn mua một ít sữa — trong Hội thoại 2",
+              "audio": {
+                "trackId": "trk-tb-l06-3",
+                "start": 10.64,
+                "end": 12.7,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "想 đứng ngay trước động từ chính; phủ định 不想 (không đặt 不 sau 想）.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 53,
+              "printedPage": 38,
+              "section": "小语讲堂 1 · 能愿动词“想”"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 52,
+              "printedPage": 37,
+              "section": "课文 2"
+            }
+          ],
+          "sentenceIds": [
+            "l06-s6",
+            "l06-s8"
+          ],
+          "exerciseIds": [
+            "wb6-text-1"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l06-serial",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Câu liên động (1): hai cụm động từ nối tiếp — mục đích và cách thức",
+          "explanationVi": "Sách nêu: vị ngữ của câu liên động gồm hai hoặc nhiều cụm động từ. Bài này học hai ý nghĩa thường gặp: (1) chỉ mục đích của hành động — cụm sau nói rõ làm việc trước để làm gì: 我想去超市买东西 (đi siêu thị [để] mua đồ); (2) chỉ cách thức của hành động — cụm trước nói cách làm: 我们坐出租车去西安饭店 (đi taxi đến nhà hàng).",
+          "pattern": "Chủ ngữ + cụm động từ 1 + cụm động từ 2 (mục đích: đi/đến + việc muốn làm · cách thức: 坐 + phương tiện + 去/来…)",
+          "examples": [
+            {
+              "zh": "我想去超市买东西。",
+              "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+              "noteVi": "Tôi muốn đi siêu thị mua đồ — câu luyện đọc của sách (mục đích)",
+              "audio": {
+                "trackId": "trk-tb-l06-3",
+                "start": 4.32,
+                "end": 6.16,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "我们去西安饭店吃晚饭。",
+              "pinyin": "Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn.",
+              "noteVi": "Chúng tôi đến nhà hàng Tây An ăn tối — câu luyện đọc của sách (mục đích)"
+            },
+            {
+              "zh": "我们坐出租车去西安饭店。",
+              "pinyin": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+              "noteVi": "Chúng tôi đi taxi đến nhà hàng Tây An — câu luyện đọc của sách (cách thức)"
+            },
+            {
+              "zh": "她坐出租车去超市。",
+              "pinyin": "Tā zuò chūzūchē qù chāoshì.",
+              "noteVi": "Cô ấy đi taxi đến siêu thị — câu luyện đọc của sách (cách thức)"
+            }
+          ],
+          "positionVi": "Hai cụm động từ nối liền nhau, không có từ nối ở giữa; thứ tự đúng theo trình tự hành động.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 55,
+              "printedPage": 40,
+              "section": "小语讲堂 2 · 连动句（1）"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 54,
+              "printedPage": 39,
+              "section": "课文 3"
+            }
+          ],
+          "sentenceIds": [
+            "l06-s6",
+            "l06-s14"
+          ],
+          "exerciseIds": [
+            "wb6-text-2"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l06-zenme",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Từ nghi vấn 怎么： hỏi cách thức làm việc gì",
+          "explanationVi": "Sách nêu: 怎么 là từ nghi vấn, dùng trước động từ, hỏi cách thức hoặc phương thức của hành động: 我们怎么去？ (chúng ta đi bằng cách nào?), 她怎么去超市？ (cô ấy đến siêu thị bằng cách nào?). Trả lời bằng chính cách thức, thường là câu liên động cách thức: 坐出租车去.",
+          "pattern": "Chủ ngữ + 怎么 + động từ (+ tân ngữ)?",
+          "examples": [
+            {
+              "zh": "我们怎么去？",
+              "pinyin": "Wǒmen zěnme qù?",
+              "noteVi": "Chúng ta đi bằng cách nào? — câu luyện đọc của sách và trong Hội thoại 3",
+              "audio": {
+                "trackId": "trk-tb-l06-5",
+                "start": 15.97,
+                "end": 17.81,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "她怎么去超市？",
+              "pinyin": "Tā zěnme qù chāoshì?",
+              "noteVi": "Cô ấy đến siêu thị bằng cách nào? — câu luyện đọc của sách"
+            },
+            {
+              "zh": "坐出租车去。",
+              "pinyin": "Zuò chūzūchē qù.",
+              "noteVi": "Đi bằng taxi — câu trả lời trong Hội thoại 3",
+              "audio": {
+                "trackId": "trk-tb-l06-5",
+                "start": 17.99,
+                "end": 19.71,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "怎么 đứng trước động từ, sau chủ ngữ; không đứng cuối câu như \"thế nào\" trong một số câu tiếng Việt.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 56,
+              "printedPage": 41,
+              "section": "小语讲堂 3 · 疑问代词“怎么”"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 54,
+              "printedPage": 39,
+              "section": "课文 3"
+            }
+          ],
+          "sentenceIds": [
+            "l06-s13",
+            "l06-s14"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l06-erhua",
+          "kind": "foundation-pronunciation",
+          "kindLabel": "Phát âm nền tảng",
+          "title": "Âm nhi hóa （儿化）: thêm đuôi –r vào cuối một số từ",
+          "explanationVi": "Workbook Bài 6: một số từ thêm đuôi “儿” (ér) ở cuối, biểu thị sắc thái nhỏ bé, thân thương, đôi khi đổi nghĩa hoặc từ loại. Có từ gắn 儿 trực tiếp và cộng “r” vào sau Pinyin gốc: 这儿 zhèr, 那儿 nàr, 面条儿 miàntiáor. Có từ sách không viết 儿 nhưng theo thói quen khẩu ngữ vẫn đọc nhi hóa: 茶馆 cháguǎnr, 饭馆 fànguǎnr, 名牌 míngpáir, 照片 zhàopiānr.",
+          "pattern": "Từ gốc + “r” ở cuối Pinyin (zhè → zhèr, nǎ → nǎr)",
+          "examples": [
+            {
+              "zh": "这儿",
+              "pinyin": "zhèr",
+              "noteVi": "ở đây — bảng nhi hóa trang in 031",
+              "audio": {
+                "trackId": "trk-wb-l06-1",
+                "start": 58.55,
+                "end": 59.45,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "哪儿",
+              "pinyin": "nǎr",
+              "noteVi": "ở đâu — bảng nhi hóa trang in 031",
+              "audio": {
+                "trackId": "trk-wb-l06-1",
+                "start": 64.65,
+                "end": 65.75,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "画儿",
+              "pinyin": "huàr",
+              "noteVi": "bức tranh — bảng nhi hóa trang in 031",
+              "audio": {
+                "trackId": "trk-wb-l06-1",
+                "start": 70.45,
+                "end": 71.25,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "面条儿",
+              "pinyin": "miàntiáor",
+              "noteVi": "mì sợi — ví dụ trong bài giảng trang in 031",
+              "audio": {
+                "trackId": "trk-wb-l06-1",
+                "start": 100.15,
+                "end": 102.05,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "Bảng nhi hóa và dãy từ kèm hình in ở Workbook trang in 031–032; nghe và đọc theo track Workbook 6-1.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 儿化"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l06-dividing-mark",
+          "kind": "foundation-writing",
+          "kindLabel": "Quy tắc viết nền tảng",
+          "title": "Dấu cách âm ( ’ ): ngăn hai âm tiết dính nhau",
+          "explanationVi": "Workbook Bài 6: khi một âm tiết bắt đầu bằng a, o hoặc e đứng ngay sau âm tiết khác, dễ gây lẫn ranh giới âm tiết, nên đặt dấu cách âm (隔音符号 ’) giữa hai âm tiết. Ví dụ của sách: shí'èr （十二）, Xī'ān （西安）, Tiān'ān Mén （天安门）.",
+          "pattern": "…âm tiết trước + ’ + âm tiết bắt đầu bằng a/o/e (Xī'ān)",
+          "examples": [
+            {
+              "zh": "十二",
+              "pinyin": "shí'èr",
+              "noteVi": "mười hai — ví dụ của sách"
+            },
+            {
+              "zh": "西安",
+              "pinyin": "Xī'ān",
+              "noteVi": "Tây An — ví dụ của sách (tên nhà hàng ở Hội thoại 3)"
+            },
+            {
+              "zh": "天安门",
+              "pinyin": "Tiān'ān Mén",
+              "noteVi": "Thiên An Môn — ví dụ của sách"
+            }
+          ],
+          "positionVi": "Quy tắc in ở Workbook trang in 032, mục 拼写规则——隔音符号.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 2 拼写规则——隔音符号"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        }
+      ],
+      "reader": {
+        "passageId": "psg-tb-l06",
+        "titleVi": "Hội thoại Textbook Bài 6",
+        "headingVi": "Số điện thoại, mong muốn và cách đi lại",
+        "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+        "sentences": [
+          {
+            "id": "l06-s1",
+            "speaker": "Lý Văn",
+            "zh": "家月，你的手机号是多少？",
+            "pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
+            "vi": "Gia Nguyệt, số điện thoại di động của bạn là bao nhiêu?",
+            "passageId": "l06-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-1",
+              "start": 0.25,
+              "end": 3.49,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s2",
+            "speaker": "Bạch Gia Nguyệt",
+            "zh": "我的手机号是+33 601493190。",
+            "pinyin": "Wǒ de shǒujīhào shì sān sān liù líng yāo sì jiǔ sān yāo jiǔ líng.",
+            "vi": "Số điện thoại của tôi là +33 601493190.",
+            "passageId": "l06-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-1",
+              "start": 4.71,
+              "end": 10.69,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s3",
+            "speaker": "Lý Văn",
+            "zh": "我的手机号是+86 13552721160。",
+            "pinyin": "Wǒ de shǒujīhào shì bā liù yāo sān wǔ wǔ èr qī èr yāo yāo liù líng.",
+            "vi": "Số điện thoại của tôi là +86 13552721160.",
+            "passageId": "l06-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-1",
+              "start": 12.01,
+              "end": 19.23,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s4",
+            "speaker": "Bạch Gia Nguyệt",
+            "zh": "好的。",
+            "pinyin": "Hǎo de.",
+            "vi": "Được rồi.",
+            "passageId": "l06-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-1",
+              "start": 19.65,
+              "end": 20.29,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s5",
+            "speaker": "Trần Thiên Trung",
+            "zh": "家月，明天你去哪儿？",
+            "pinyin": "Jiāyuè, míngtiān nǐ qù nǎr?",
+            "vi": "Gia Nguyệt, ngày mai bạn đi đâu?",
+            "passageId": "l06-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-3",
+              "start": 0.13,
+              "end": 3.31,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s6",
+            "speaker": "Bạch Gia Nguyệt",
+            "zh": "我想去超市买东西。",
+            "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+            "vi": "Tôi muốn đi siêu thị mua đồ.",
+            "passageId": "l06-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-3",
+              "start": 4.32,
+              "end": 6.16,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s7",
+            "speaker": "Trần Thiên Trung",
+            "zh": "你去超市买什么？",
+            "pinyin": "Nǐ qù chāoshì mǎi shénme?",
+            "vi": "Bạn đi siêu thị mua gì?",
+            "passageId": "l06-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-3",
+              "start": 6.6,
+              "end": 9.28,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s8",
+            "speaker": "Bạch Gia Nguyệt",
+            "zh": "我想买些牛奶。",
+            "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+            "vi": "Tôi muốn mua một ít sữa.",
+            "passageId": "l06-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-3",
+              "start": 10.64,
+              "end": 12.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s9",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "星期天我们去哪儿吃晚饭？",
+            "pinyin": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
+            "vi": "Chủ nhật chúng ta đi đâu ăn tối?",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 0.32,
+              "end": 2.92,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s10",
+            "speaker": "Lưu Minh",
+            "zh": "我还想去西安饭店。",
+            "pinyin": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
+            "vi": "Tôi vẫn muốn đến nhà hàng Tây An.",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 3.34,
+              "end": 5.72,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s11",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "那边的包子非常好吃，我想吃包子。",
+            "pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
+            "vi": "Bánh bao ở đó rất ngon, tôi muốn ăn bánh bao.",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 5.68,
+              "end": 10.46,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s12",
+            "speaker": "Lưu Tiểu Minh",
+            "zh": "妈妈，我想吃米饭，不想吃包子。",
+            "pinyin": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+            "vi": "Mẹ, con muốn ăn cơm, không muốn ăn bánh bao.",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 10.39,
+              "end": 14.77,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s13",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "好的。我们怎么去？",
+            "pinyin": "Hǎo de. Wǒmen zěnme qù?",
+            "vi": "Được. Chúng ta đi bằng cách nào?",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 14.87,
+              "end": 17.81,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l06-s14",
+            "speaker": "Lưu Minh",
+            "zh": "坐出租车去。",
+            "pinyin": "Zuò chūzūchē qù.",
+            "vi": "Đi bằng taxi.",
+            "passageId": "l06-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l06-5",
+              "start": 17.99,
+              "end": 19.71,
+              "status": "asr-draft"
+            }
+          }
+        ],
+        "vocab": [],
+        "audioTracks": [
+          {
+            "id": "trk-wb-l06-1",
+            "label": "Track 6-1 · Pronunciation (phát âm)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-06/06-1.mp3",
+            "durationSec": 127.219,
+            "bookRef": "Workbook Bài 6, phần 一、语音, ký hiệu track 6-1 in ở trang in 031",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-wb-l06-2",
+            "label": "Track 6-2 · Listen, Read, and Practice (nghe – đọc – luyện)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-06/06-2.mp3",
+            "durationSec": 112.963,
+            "bookRef": "Workbook Bài 6, phần 二、听读练, ký hiệu track 6-2 in ở trang in 032",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb-l06-1",
+            "label": "Hội thoại 1 · Số điện thoại của bạn là bao nhiêu?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-1.mp3",
+            "durationSec": 21.197,
+            "bookRef": "Textbook · track 6-1",
+            "segments": [
+              {
+                "sentenceId": "l06-s1",
+                "start": 0.25,
+                "end": 3.49,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s2",
+                "start": 4.71,
+                "end": 10.69,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s3",
+                "start": 12.01,
+                "end": 19.23,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s4",
+                "start": 19.65,
+                "end": 20.29,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l06-3",
+            "label": "Hội thoại 2 · Ngày mai bạn đi đâu?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-3.mp3",
+            "durationSec": 13.43,
+            "bookRef": "Textbook · track 6-3",
+            "segments": [
+              {
+                "sentenceId": "l06-s5",
+                "start": 0.13,
+                "end": 3.31,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s6",
+                "start": 4.32,
+                "end": 6.16,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s7",
+                "start": 6.6,
+                "end": 9.28,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s8",
+                "start": 10.64,
+                "end": 12.7,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l06-5",
+            "label": "Hội thoại 3 · Chủ nhật đi đâu ăn tối?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-5.mp3",
+            "durationSec": 20.728,
+            "bookRef": "Textbook · track 6-5",
+            "segments": [
+              {
+                "sentenceId": "l06-s9",
+                "start": 0.32,
+                "end": 2.92,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s10",
+                "start": 3.34,
+                "end": 5.72,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s11",
+                "start": 5.68,
+                "end": 10.46,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s12",
+                "start": 10.39,
+                "end": 14.77,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s13",
+                "start": 14.87,
+                "end": 17.81,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l06-s14",
+                "start": 17.99,
+                "end": 19.71,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l06-2",
+            "label": "Từ mới · Hội thoại 1",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-2.mp3",
+            "durationSec": 8.14,
+            "bookRef": "Textbook · track 6-2 · 生词 Hội thoại 1",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l06-4",
+            "label": "Từ mới · Hội thoại 2",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-4.mp3",
+            "durationSec": 23.803,
+            "bookRef": "Textbook · track 6-4 · 生词 Hội thoại 2",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 53,
+                "printedPage": 38,
+                "section": "课文 2 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l06-6",
+            "label": "Từ mới · Hội thoại 3",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-06/06-6.mp3",
+            "durationSec": 33.629,
+            "bookRef": "Textbook · track 6-6 · 生词 Hội thoại 3",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 55,
+                "printedPage": 40,
+                "section": "课文 3 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          }
+        ],
+        "passages": [
+          {
+            "id": "l06-dialogue-1",
+            "title": "Số điện thoại của bạn là bao nhiêu?",
+            "context": "Ở trường, Lý Văn hỏi số điện thoại của Bạch Gia Nguyệt.",
+            "audioTrackId": "trk-tb-l06-1",
+            "sentenceIds": [
+              "l06-s1",
+              "l06-s2",
+              "l06-s3",
+              "l06-s4"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 36,
+                "section": "课文 1"
+              }
+            ]
+          },
+          {
+            "id": "l06-dialogue-2",
+            "title": "Ngày mai bạn đi đâu?",
+            "context": "Ở lớp học, sau giờ học, Bạch Gia Nguyệt và Trần Thiên Trung đang trò chuyện.",
+            "audioTrackId": "trk-tb-l06-3",
+            "sentenceIds": [
+              "l06-s5",
+              "l06-s6",
+              "l06-s7",
+              "l06-s8"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2"
+              }
+            ]
+          },
+          {
+            "id": "l06-dialogue-3",
+            "title": "Chủ nhật đi đâu ăn tối?",
+            "context": "Ở nhà, cả nhà Vương Nhất Tuyết đang bàn kế hoạch bữa tối cuối tuần.",
+            "audioTrackId": "trk-tb-l06-5",
+            "sentenceIds": [
+              "l06-s9",
+              "l06-s10",
+              "l06-s11",
+              "l06-s12",
+              "l06-s13",
+              "l06-s14"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3"
+              }
+            ]
+          }
+        ]
+      },
+      "exerciseSet": {
+        "id": "set-tb-l06-text-v1",
+        "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
+        "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 037) và Hội thoại 3 (trang 038), đáp án lấy từ chính lời thoại in trong sách; cộng năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 041, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của trang 041–042 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
+        "items": [
+          {
+            "id": "wb6-text-1",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt … muốn đi siêu thị",
+            "promptZh": "白家月（ ）想去超市。",
+            "promptPinyin": "Bái Jiāyuè ( ) xiǎng qù chāoshì.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "现在",
+                "pinyin": "xiànzài",
+                "vi": "bây giờ"
+              },
+              {
+                "id": "2",
+                "zh": "今天",
+                "pinyin": "jīntiān",
+                "vi": "hôm nay"
+              },
+              {
+                "id": "3",
+                "zh": "明天",
+                "pinyin": "míngtiān",
+                "vi": "ngày mai",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 1.41,
+                  "end": 1.93,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Trần Thiên Trung hỏi: 家月，明天你去哪儿？ (ngày mai bạn đi đâu?) — chuyện này nói về ngày mai.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l06-xiang"
+            ]
+          },
+          {
+            "id": "wb6-text-2",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt muốn mua …",
+            "promptZh": "白家月想买（ ）。",
+            "promptPinyin": "Bái Jiāyuè xiǎng mǎi ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "菜",
+                "pinyin": "cài",
+                "vi": "món ăn"
+              },
+              {
+                "id": "2",
+                "zh": "牛奶",
+                "pinyin": "niúnǎi",
+                "vi": "sữa bò",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 11.98,
+                  "end": 12.7,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "面条儿和牛奶",
+                "pinyin": "miàntiáor hé niúnǎi",
+                "vi": "mì sợi và sữa bò"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Bạch Gia Nguyệt đáp: 我想买些牛奶 (tôi muốn mua một ít sữa).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 37,
+                "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l06-serial"
+            ]
+          },
+          {
+            "id": "wb6-text-3",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Cả nhà Vương Nhất Tuyết muốn đến nhà hàng Tây An …",
+            "promptZh": "王一雪一家人想去西安饭店（ ）。",
+            "promptPinyin": "Wáng Yīxuě yì jiā rén xiǎng qù Xī'ān Fàndiàn ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "吃早饭",
+                "pinyin": "chī zǎofàn",
+                "vi": "ăn sáng"
+              },
+              {
+                "id": "2",
+                "zh": "吃午饭",
+                "pinyin": "chī wǔfàn",
+                "vi": "ăn trưa"
+              },
+              {
+                "id": "3",
+                "zh": "吃晚饭",
+                "pinyin": "chī wǎnfàn",
+                "vi": "ăn tối",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 2.12,
+                  "end": 2.92,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Vương Nhất Tuyết mở đầu: 星期天我们去哪儿吃晚饭？ (chủ nhật chúng ta đi đâu ăn tối?).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 53,
+                "printedPage": 38,
+                "section": "课文 3 · câu hỏi nghe hiểu"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3 · lời thoại"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-text-4",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Lưu Tiểu Minh không muốn ăn …",
+            "promptZh": "刘小明不想吃（ ）。",
+            "promptPinyin": "Liú Xiǎomíng bù xiǎng chī ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "包子",
+                "pinyin": "bāozi",
+                "vi": "bánh bao",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 7.08,
+                  "end": 7.64,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "面条儿",
+                "pinyin": "miàntiáor",
+                "vi": "mì sợi"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Lưu Tiểu Minh nói: 我想吃米饭，不想吃包子 (con muốn ăn cơm, không muốn ăn bánh bao).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 53,
+                "printedPage": 38,
+                "section": "课文 3 · câu hỏi nghe hiểu"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 54,
+                "printedPage": 39,
+                "section": "课文 3 · lời thoại"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-comp-1",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 041) — chọn từ điền vào câu 1, chỗ trống 1: Tôi muốn … siêu thị",
+            "promptZh": "我想（ ）超市买牛奶。",
+            "promptPinyin": "Wǒ xiǎng ( ) chāoshì mǎi niúnǎi.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "多少",
+                "pinyin": "duōshao",
+                "vi": "bao nhiêu",
+                "audio": {
+                  "trackId": "trk-tb-l06-1",
+                  "start": 2.89,
+                  "end": 3.49,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "买",
+                "pinyin": "mǎi",
+                "vi": "mua",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 5.18,
+                  "end": 5.58,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "4",
+                "zh": "坐",
+                "pinyin": "zuò",
+                "vi": "đi bằng (phương tiện)",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 17.99,
+                  "end": 18.65,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "去",
+                "pinyin": "qù",
+                "vi": "đi",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 2.15,
+                  "end": 2.45,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "5",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 041. Đáp án suy ra duy nhất từ bản in: ngân hàng từ in sẵn + hội thoại và điểm kiến thức của chính bài (ngân hàng: A 多少， B 买， C 米饭， D 坐， E 去）.",
+            "explanationVi": "“我想去超市买牛奶。” — tôi muốn đi siêu thị mua sữa. Mẫu liên động chỉ mục đích của Hội thoại 2.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 56,
+                "printedPage": 41,
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-comp-2",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 041) — chọn từ điền vào câu 1, chỗ trống 2: … mua sữa",
+            "promptZh": "我想去超市（ ）牛奶。",
+            "promptPinyin": "Wǒ xiǎng qù chāoshì ( ) niúnǎi.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "多少",
+                "pinyin": "duōshao",
+                "vi": "bao nhiêu",
+                "audio": {
+                  "trackId": "trk-tb-l06-1",
+                  "start": 2.89,
+                  "end": 3.49,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "买",
+                "pinyin": "mǎi",
+                "vi": "mua",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 5.18,
+                  "end": 5.58,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "4",
+                "zh": "坐",
+                "pinyin": "zuò",
+                "vi": "đi bằng (phương tiện)",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 17.99,
+                  "end": 18.65,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "去",
+                "pinyin": "qù",
+                "vi": "đi",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 2.15,
+                  "end": 2.45,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 041. Đáp án suy ra duy nhất từ bản in: ngân hàng từ in sẵn + hội thoại và điểm kiến thức của chính bài (ngân hàng: A 多少， B 买， C 米饭， D 坐， E 去）.",
+            "explanationVi": "“我想去超市买牛奶。” — 去超市买牛奶 (đi siêu thị [để] mua sữa) là câu liên động chỉ mục đích.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 56,
+                "printedPage": 41,
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-comp-3",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 041) — chọn từ điền vào câu 2: Chúng tôi … taxi đến nhà hàng Tây An ăn tối",
+            "promptZh": "我们（ ）出租车去西安饭店吃晚饭。",
+            "promptPinyin": "Wǒmen ( ) chūzūchē qù Xī'ān Fàndiàn chī wǎnfàn.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "多少",
+                "pinyin": "duōshao",
+                "vi": "bao nhiêu",
+                "audio": {
+                  "trackId": "trk-tb-l06-1",
+                  "start": 2.89,
+                  "end": 3.49,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "买",
+                "pinyin": "mǎi",
+                "vi": "mua",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 5.18,
+                  "end": 5.58,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "4",
+                "zh": "坐",
+                "pinyin": "zuò",
+                "vi": "đi bằng (phương tiện)",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 17.99,
+                  "end": 18.65,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "去",
+                "pinyin": "qù",
+                "vi": "đi",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 2.15,
+                  "end": 2.45,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "4",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 041. Đáp án suy ra duy nhất từ bản in: ngân hàng từ in sẵn + hội thoại và điểm kiến thức của chính bài (ngân hàng: A 多少， B 买， C 米饭， D 坐， E 去）.",
+            "explanationVi": "“我们坐出租车去西安饭店吃晚饭。” — 坐 + phương tiện là liên động chỉ cách thức, nguyên mẫu ở Hội thoại 3.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 56,
+                "printedPage": 41,
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-comp-4",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 041) — chọn từ điền vào câu 3: Mẹ hỏi ăn gì, con đáp: Tôi muốn ăn …",
+            "promptZh": "妈妈：你想吃什么？孩子：我想吃（ ）。",
+            "promptPinyin": "Māma: Nǐ xiǎng chī shénme? Háizi: Wǒ xiǎng chī ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "多少",
+                "pinyin": "duōshao",
+                "vi": "bao nhiêu",
+                "audio": {
+                  "trackId": "trk-tb-l06-1",
+                  "start": 2.89,
+                  "end": 3.49,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "买",
+                "pinyin": "mǎi",
+                "vi": "mua",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 5.18,
+                  "end": 5.58,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "4",
+                "zh": "坐",
+                "pinyin": "zuò",
+                "vi": "đi bằng (phương tiện)",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 17.99,
+                  "end": 18.65,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "去",
+                "pinyin": "qù",
+                "vi": "đi",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 2.15,
+                  "end": 2.45,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 041. Đáp án suy ra duy nhất từ bản in: ngân hàng từ in sẵn + hội thoại và điểm kiến thức của chính bài (ngân hàng: A 多少， B 买， C 米饭， D 坐， E 去）.",
+            "explanationVi": "“我想吃米饭。” — tôi muốn ăn cơm. Trong ngân hàng từ chỉ 米饭 là món ăn đứng sau 吃 trong ngữ cảnh này.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 56,
+                "printedPage": 41,
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb6-comp-5",
+            "type": "multiple-choice",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 041) — chọn từ điền vào câu 4: Số điện thoại của bạn là …?",
+            "promptZh": "老师：你的手机号是（ ）？学生：我的手机号是13126975002。",
+            "promptPinyin": "Lǎoshī: Nǐ de shǒujīhào shì ( )? Xuésheng: Wǒ de shǒujīhào shì yāo sān yāo èr liù jiǔ qī wǔ líng líng èr.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "多少",
+                "pinyin": "duōshao",
+                "vi": "bao nhiêu",
+                "audio": {
+                  "trackId": "trk-tb-l06-1",
+                  "start": 2.89,
+                  "end": 3.49,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "2",
+                "zh": "买",
+                "pinyin": "mǎi",
+                "vi": "mua",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 5.18,
+                  "end": 5.58,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "3",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 12.75,
+                  "end": 13.31,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "4",
+                "zh": "坐",
+                "pinyin": "zuò",
+                "vi": "đi bằng (phương tiện)",
+                "audio": {
+                  "trackId": "trk-tb-l06-5",
+                  "start": 17.99,
+                  "end": 18.65,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "5",
+                "zh": "去",
+                "pinyin": "qù",
+                "vi": "đi",
+                "audio": {
+                  "trackId": "trk-tb-l06-3",
+                  "start": 2.15,
+                  "end": 2.45,
+                  "status": "asr-draft"
+                }
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 041. Đáp án suy ra duy nhất từ bản in: ngân hàng từ in sẵn + hội thoại và điểm kiến thức của chính bài (ngân hàng: A 多少， B 买， C 米饭， D 坐， E 去）.",
+            "explanationVi": "“你的手机号是多少？” — số điện thoại của bạn là bao nhiêu? Đúng mẫu câu của Hội thoại 1.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 56,
+                "printedPage": 41,
+                "section": "综合练习 · 选词填空"
+              }
+            ],
+            "grammarIds": []
+          }
+        ]
+      },
+      "selfCheckTasks": [
+        {
+          "id": "st-l06-01",
+          "titleVi": "Nghe và chọn âm tiết đôi được đọc (bài 1, trang in 032)",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 6-2. Ở mỗi cặp, chỉ một âm tiết đôi được đọc — gõ lại đúng âm tiết đôi bạn nghe được (dấu thanh hoặc số thanh đều được). 6 ô đều có đáp án đã đối chiếu và chấm tự động.",
+          "audioTrackId": "trk-wb-l06-2",
+          "answerStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "听读练 · bài 1"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": "014",
+              "section": "听读练 bài 1 — lời đọc"
+            }
+          ],
+          "prompts": [
+            "nà piān / nàbiān",
+            "dōngxi / dōngxī",
+            "chāoshì / cháoshī",
+            "wǎnfàn / wǎnfēng",
+            "shǒují / shǒujī",
+            "diànhuà / biànhuà"
+          ],
+          "guideVi": "Gõ cả âm tiết đôi, có dấu thanh (nàbiān) hoặc số thanh (na4bian1) đều được. Bấm Kiểm tra để chấm; ô sai sẽ vào Ôn tập. “Xem lời đọc” cho biết cả dãy đã đọc, nhưng xem trước sẽ được ghi nhận.",
+          "gradingMode": "syllable",
+          "answers": [
+            "nàbiān",
+            "dōngxi",
+            "chāoshì",
+            "wǎnfàn",
+            "shǒujī",
+            "diànhuà"
+          ],
+          "scriptSyllables": [
+            "nàbiān",
+            "dōngxi",
+            "chāoshì",
+            "wǎnfàn",
+            "shǒujī",
+            "diànhuà"
+          ],
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (6 cặp âm tiết đôi) lấy từ bản in Workbook trang in 032; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 014); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 6-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) không in đáp án cho bài này (chỉ liệt kê số thứ tự trống). Đây không phải đáp án chính thức của nhà xuất bản.",
+          "audioSegment": {
+            "start": 12.6,
+            "end": 47.8
+          }
+        },
+        {
+          "id": "st-l06-02",
+          "titleVi": "Phân biệt dạng nhi hóa và không nhi hóa (bài 2, trang in 032)",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 6-2: ở mỗi cặp, sách đọc một dạng (nhi hóa hoặc không nhi hóa) — gõ lại dạng bạn nghe được vào ô. Sách dùng bài này để nghe phân biệt rồi đọc theo; tài liệu lời đọc không liệt kê đáp án cho bài này nên app không chấm, bạn tự đối chiếu bằng tai nghe và dãy luyện đọc ở mục Kiến thức.",
+          "audioTrackId": "trk-wb-l06-2",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "听读练 · bài 2"
+            }
+          ],
+          "prompts": [
+            "nà / nàr",
+            "cí / cír",
+            "huàr / huà",
+            "yíkuàir / yí kuài",
+            "jiāyóu / jiāyóur",
+            "chàng gēr / chàng gē"
+          ]
+        },
+        {
+          "id": "st-l06-03",
+          "kind": "speaking",
+          "titleVi": "Dùng hình để nói (Textbook trang 041–042) — tự luyện, không chấm tự động",
+          "instructionVi": "Nhìn 4 hình ở Textbook trang 041–042 và hoàn thành 4 khung câu của sách: (1) 她的______是多少？(hình tay cầm điện thoại) (2) 我想______超市______牛奶。(hình siêu thị) (3) 王一雪想______去超市。(hình taxi) (4) 这些包子非常______。(hình bánh bao)",
+          "prompts": [
+            "她的______是多少？",
+            "我想______超市______牛奶。",
+            "王一雪想______去超市。",
+            "这些包子非常______。"
+          ],
+          "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu với từ mới và hội thoại của bài. App không chấm bài này: sách không in đáp án và phần điền phụ thuộc vào hình.",
+          "answerStatus": "unverified",
+          "audioTrackId": "trk-tb-l06-5",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 56,
+              "printedPage": 41,
+              "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 57,
+              "printedPage": 42,
+              "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+            }
+          ]
+        }
+      ],
+      "selfCheckIntroVi": "Workbook trang 032. Bài 1 (chọn âm tiết đôi) có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); bài 2 (phân biệt nhi hóa) và bài dùng hình để nói không chấm tự động. Mỗi ô được lưu tự động. Chưa phải đáp án chính thức của NXB.",
+      "selfCheckListenVi": "▶ Nghe track Workbook 6-2",
+      "apply": {
+        "titleVi": "Đóng vai và hỏi số điện thoại thật của nhau",
+        "instructionVi": "Chọn hội thoại 1. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: hỏi và đọc số điện thoại thật của mình, đọc từng chữ số một (số 1 đọc là yāo). Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
+        "audioTrackId": "trk-tb-l06-1",
+        "noteVi": "Nhiệm vụ đóng vai và hỏi số điện thoại theo tình huống thật lấy từ Textbook trang in 036. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+        "sourceRefs": [
+          {
+            "sourceId": "src-hsk1-textbook-pdf",
+            "pdfPage": 51,
+            "printedPage": 36,
+            "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+          }
+        ]
+      },
+      "foundationWords": [
+        {
+          "id": "l06fw-1",
+          "zh": "这儿",
+          "pinyin": "zhèr",
+          "vi": "ở đây",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 58.55,
+            "end": 59.45,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-2",
+          "zh": "哪儿",
+          "pinyin": "nǎr",
+          "vi": "ở đâu",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 64.65,
+            "end": 65.75,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-3",
+          "zh": "画儿",
+          "pinyin": "huàr",
+          "vi": "bức tranh",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 70.45,
+            "end": 71.25,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-4",
+          "zh": "盖儿",
+          "pinyin": "gàir",
+          "vi": "cái nắp",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ]
+        },
+        {
+          "id": "l06fw-5",
+          "zh": "个儿",
+          "pinyin": "gèr",
+          "vi": "vóc dáng; dạng nhi hóa của 个",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ]
+        },
+        {
+          "id": "l06fw-6",
+          "zh": "眼儿",
+          "pinyin": "yǎnr",
+          "vi": "lỗ nhỏ; dạng nhi hóa của 眼",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "小语讲堂 · 语音 1 · bảng 儿化"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 87.55,
+            "end": 88.45,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-7",
+          "zh": "面条儿",
+          "pinyin": "miàntiáor",
+          "vi": "mì sợi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 100.15,
+            "end": 102.05,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-8",
+          "zh": "好玩儿",
+          "pinyin": "hǎowánr",
+          "vi": "thú vị, hay",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 102.13,
+            "end": 105.81,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-9",
+          "zh": "一点儿",
+          "pinyin": "yìdiǎnr",
+          "vi": "một chút",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 108.01,
+            "end": 109.51,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-10",
+          "zh": "饭馆儿",
+          "pinyin": "fànguǎnr",
+          "vi": "quán ăn, nhà hàng",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 111.13,
+            "end": 113.19,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-11",
+          "zh": "那儿",
+          "pinyin": "nàr",
+          "vi": "ở kia",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 114.85,
+            "end": 115.75,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-12",
+          "zh": "玩儿",
+          "pinyin": "wánr",
+          "vi": "chơi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 120.75,
+            "end": 121.75,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l06fw-13",
+          "zh": "歌儿",
+          "pinyin": "gēr",
+          "vi": "bài hát",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 39,
+              "printedPage": 32,
+              "section": "小语讲堂 · 语音 1 · từ kèm hình"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l06-1",
+            "start": 123.85,
+            "end": 124.85,
             "status": "asr-draft"
           }
         }

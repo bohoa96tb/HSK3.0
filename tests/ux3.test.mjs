@@ -6,9 +6,9 @@ const content = JSON.parse(readFileSync(new URL('../data/content.json', import.m
 const lessons = [content.pilot, ...content.additionalLessons];
 
 // ---- Data: Han-Viet coverage + context-correct readings --------------------
-test('han-viet: all 66 prep words carry a verified, context-checked reading', () => {
+test('han-viet: all 88 prep words carry a verified, context-checked reading', () => {
   const words = lessons.flatMap((c) => c.prepWords);
-  assert.equal(words.length, 66);
+  assert.equal(words.length, 88);
   for (const w of words) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
@@ -29,7 +29,7 @@ test('han-viet: all 66 prep words carry a verified, context-checked reading', ()
 
 test('exercise support data: every Chinese option has pinyin and Vietnamese meaning', () => {
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
-  assert.equal(options.length, 53);
+  assert.equal(options.length, 65);
   for (const o of options) { assert.ok(o.pinyin, o.zh); assert.ok(o.vi, o.zh); }
 });
 

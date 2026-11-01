@@ -9,14 +9,14 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   const count = (arr) => arr.reduce((a, x) => [a[0] + (x.audio ? 1 : 0), a[1] + 1], [0, 0]);
   const sentences = lessons.flatMap((c) => c.reader.sentences);
   const segOf = (c, sen) => c.reader.audioTracks.find((t) => t.id === c.reader.passages.find((g) => g.id === sen.passageId)?.audioTrackId)?.segments?.find((x) => x.sentenceId === sen.id);
-  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 49); // all dialogue turns
+  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 63); // all dialogue turns
   const [prepOk, prepAll] = count(lessons.flatMap((c) => c.prepWords));
-  assert.deepEqual([prepOk, prepAll], [64, 66]); // 大家 (L1) and 吗 (L3) have no confident segment
+  assert.deepEqual([prepOk, prepAll], [86, 88]); // 大家 (L1) and 吗 (L3) have no confident segment
   const [foundOk, foundAll] = count(lessons.flatMap((c) => c.foundationWords));
-  assert.deepEqual([foundOk, foundAll], [43, 48]); // 雨/五/一/椅子 (L2) and 嘴 (L3) tokens not reliably identifiable
+  assert.deepEqual([foundOk, foundAll], [53, 58]); // 雨/五/一/椅子 (L2) and 嘴 (L3) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [41, 53]); // Lesson 4 options are single words with no honest per-option segment
+  assert.deepEqual([optOk, optAll], [41, 65]); // Lesson 4-5 options are single words/short phrases with no honest per-option segment
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

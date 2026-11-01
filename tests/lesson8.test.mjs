@@ -9,7 +9,7 @@ const item = (id) => l8.exerciseSet.items.find((x) => x.id === id);
 
 test('lesson 8 content shape matches the printed book', () => {
   assert.equal(l8.prepWords.length, 24); // 23 new words + 1 proper noun
-  assert.equal(l8.knowledgePoints.length, 4);
+  assert.equal(l8.knowledgePoints.length, 7); // 3 grammar + 2 Xiaoyu tips + reduplication + hanzi writing (coverage round D22)
   assert.equal(l8.reader.sentences.length, 14);
   assert.equal(l8.reader.audioTracks.length, 8); // 7 lesson tracks + WB 8-2 mock track (supplementary set)
   assert.equal(l8.exerciseSet.items.length, 19);
@@ -55,9 +55,9 @@ test('lesson 8 review links follow the blank-tested feature only (D17)', () => {
   for (const id of ['wb8-warm-1','wb8-warm-2','wb8-warm-3','wb8-warm-4','wb8-warm-5','wb8-warm-6']) assert.deepEqual(g(id), []);
   for (const id of ['wb8-redup-1','wb8-redup-2','wb8-redup-3','wb8-redup-4']) assert.deepEqual(g(id), ['kp-hsk1-l08-reduplication']);
   const allk = Object.fromEntries(content.additionalLessons.flatMap((x) => x.knowledgePoints).map((k) => [k.id, k]));
-  assert.deepEqual(allk['kp-hsk1-l08-positional'].exerciseIds, ['wb8-text-1', 'wb8-comp-4']);
-  assert.deepEqual(allk['kp-hsk1-l08-zai'].exerciseIds, ['wb8-comp-1']);
-  assert.deepEqual(allk['kp-hsk1-l08-neng'].exerciseIds, ['wb8-text-2', 'wb8-comp-2']);
+  assert.deepEqual(allk['kp-hsk1-l08-positional'].exerciseIds, ['wb8-text-1', 'wb8-comp-4', 'l08m-01', 'l08m-02', 'l08m-06', 'l08m-08']);
+  assert.deepEqual(allk['kp-hsk1-l08-zai'].exerciseIds, ['wb8-comp-1', 'l08m-04', 'l08m-09', 'l08m-11', 'l08m-16', 'l08m-19']);
+  assert.deepEqual(allk['kp-hsk1-l08-neng'].exerciseIds, ['wb8-text-2', 'wb8-comp-2', 'l08m-05', 'l08m-18']);
   assert.deepEqual(allk['kp-hsk1-l08-reduplication'].exerciseIds, ['wb8-redup-1', 'wb8-redup-2', 'wb8-redup-3', 'wb8-redup-4']);
 });
 

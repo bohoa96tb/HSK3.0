@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-mock8-1",
+  "contentVersion": "20261101-lesson8-coverage1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -491,10 +491,13 @@
       "publicationStatus": "pilot-ready",
       "publicationNote": "Mô tả vị trí bằng phương vị từ, giới từ “在” và động từ năng nguyện “能”; kèm nối từ–hình bằng minh họa vẽ mới, hai bài phát âm Workbook và bài tập sách.",
       "grammarIds": [
+        "kp-hsk1-l08-tip-measure",
         "kp-hsk1-l08-positional",
         "kp-hsk1-l08-zai",
         "kp-hsk1-l08-neng",
-        "kp-hsk1-l08-reduplication"
+        "kp-hsk1-l08-tip-xiao",
+        "kp-hsk1-l08-reduplication",
+        "kp-hsk1-l08-hanzi-writing"
       ],
       "sectionIds": [
         "intro",
@@ -16064,7 +16067,7 @@
           "height": 401
         },
         "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Bài khởi động nối từ–hình và bài dùng hình để nói dùng tranh minh họa vẽ mới theo chuẩn của dự án, không dùng ảnh trong sách.",
-        "foundationSummaryVi": "Ôn phát âm nền tảng: phân biệt âm tiết gần giống và nhận biết từ điệp âm / dạng trùng điệp",
+        "foundationSummaryVi": "Ôn nền tảng: phân biệt âm tiết gần giống và nhận biết từ điệp âm / dạng trùng điệp (phát âm) · viết chữ Hán （一）: cấu tạo chữ, hai nét 横/竖 và quy tắc thứ tự nét ngang trước dọc sau (Workbook trang 049–050)",
         "courseTagsVi": "Phương vị từ · Giới từ “在” · “能” · Vị trí và nơi chốn",
         "priorLessonNoteVi": "Bài này dùng lại cách nói giờ ở Bài 7 （下午两点） để hẹn gặp: hẹn ở đâu và mấy giờ đến được.",
         "priorLessonId": "hsk1-l07"
@@ -16605,6 +16608,40 @@
       ],
       "knowledgePoints": [
         {
+          "id": "kp-hsk1-l08-tip-measure",
+          "kind": "grammar",
+          "kindLabel": "Mẹo dùng tiếng · 小语助力",
+          "title": "Đại từ chỉ định + lượng từ: 这只 / 那只",
+          "explanationVi": "Ô trợ giúp của sách （小语助力） lưu ý: lượng từ có thể kết hợp trực tiếp với đại từ chỉ định 这/那 rồi đặt trước danh từ — 这只小猫 là \"con mèo này\". Bài này em gặp lượng từ 只 dành cho động vật （一只小猫 ở Hội thoại 1); đối chiếu lượng từ 个 — lượng từ phổ biến nhất, đã gặp ở các bài trước và ngay trong bài này （两个医生）: mỗi danh từ đi với lượng từ quen thuộc của nó.",
+          "pattern": "这 / 那 + lượng từ + danh từ",
+          "examples": [
+            {
+              "zh": "这只小猫真漂亮！",
+              "pinyin": "Zhè zhī xiǎomāo zhēn piàoliang!",
+              "noteVi": "Con mèo này thật đẹp! — câu cuối Hội thoại 1, chính là chỗ sách đặt ô trợ giúp"
+            },
+            {
+              "zh": "一只小猫",
+              "pinyin": "yì zhī xiǎomāo",
+              "noteVi": "Một con mèo — số từ + lượng từ + danh từ, mẫu đã học; thay số bằng 这/那 là chỉ định được ngay"
+            }
+          ],
+          "positionVi": "Cụm 这/那 + lượng từ đứng ngay trước danh từ, cùng vị trí với cụm số từ + lượng từ.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 70,
+              "printedPage": "055",
+              "section": "小语助力 · 量词可以和指示代词直接组合"
+            }
+          ],
+          "sentenceIds": [
+            "l08-s4",
+            "l08-s1"
+          ],
+          "exerciseIds": []
+        },
+        {
           "id": "kp-hsk1-l08-positional",
           "kind": "grammar",
           "kindLabel": "Ngữ pháp cơ bản",
@@ -16650,7 +16687,11 @@
           ],
           "exerciseIds": [
             "wb8-text-1",
-            "wb8-comp-4"
+            "wb8-comp-4",
+            "l08m-01",
+            "l08m-02",
+            "l08m-06",
+            "l08m-08"
           ]
         },
         {
@@ -16691,7 +16732,12 @@
             "l08-s12"
           ],
           "exerciseIds": [
-            "wb8-comp-1"
+            "wb8-comp-1",
+            "l08m-04",
+            "l08m-09",
+            "l08m-11",
+            "l08m-16",
+            "l08m-19"
           ]
         },
         {
@@ -16733,8 +16779,43 @@
           ],
           "exerciseIds": [
             "wb8-text-2",
-            "wb8-comp-2"
+            "wb8-comp-2",
+            "l08m-05",
+            "l08m-18"
           ]
+        },
+        {
+          "id": "kp-hsk1-l08-tip-xiao",
+          "kind": "grammar",
+          "kindLabel": "Mẹo dùng tiếng · 小语助力",
+          "title": "Gọi thân mật: “小 + họ” — 小胡",
+          "explanationVi": "Ô trợ giúp của sách （小语助力） lưu ý: “小 + họ” là cách gọi thân mật dành cho người nhỏ tuổi hơn mình. Ở Hội thoại 3, Lưu Minh gọi đồng nghiệp là 小胡 (Tiểu Hồ) vì bác sĩ họ 胡； khi cần trang trọng, sách dùng họ + chức danh: 胡医生 (bác sĩ Hồ) — chính là từ chuyên danh của bài này.",
+          "pattern": "小 + họ (thân mật, với người trẻ hơn)",
+          "examples": [
+            {
+              "zh": "小胡，还没吃饭呢？",
+              "pinyin": "Xiǎo Hú, hái méi chī fàn ne?",
+              "noteVi": "Tiểu Hồ, vẫn chưa ăn cơm à? — câu mở đầu Hội thoại 3"
+            },
+            {
+              "zh": "胡医生",
+              "pinyin": "Hú yīshēng",
+              "noteVi": "Bác sĩ Hồ — cách gọi trang trọng bằng họ + chức danh, đối lập với cách gọi thân mật 小胡"
+            }
+          ],
+          "positionVi": "Chỉ gọi “小 + họ” với người nhỏ tuổi hơn và khi quan hệ đủ thân quen; hoàn cảnh trang trọng hoặc người lớn tuổi hơn thì dùng họ + chức danh.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 74,
+              "printedPage": "059",
+              "section": "小语助力 · “小+姓氏”是亲切称呼"
+            }
+          ],
+          "sentenceIds": [
+            "l08-s9"
+          ],
+          "exerciseIds": []
         },
         {
           "id": "kp-hsk1-l08-reduplication",
@@ -16776,6 +16857,48 @@
             "wb8-redup-3",
             "wb8-redup-4"
           ]
+        },
+        {
+          "id": "kp-hsk1-l08-hanzi-writing",
+          "kind": "foundation-characters",
+          "kindLabel": "Chữ Hán nền tảng · 汉字书写",
+          "title": "Viết chữ Hán （一）: nét, bộ phận, thứ tự nét",
+          "explanationVi": "Phần 汉字 của Workbook mở mạch học viết chữ Hán. Sách giới thiệu: mỗi chữ Hán gồm hình, âm và nghĩa. Cấu tạo có ba tầng — nét （笔画） là đơn vị nhỏ nhất, các nét thường dùng là 横 (ngang)、竖 (dọc)、撇 (phảy trái)、捺 (mác)、点 (chấm)、提 (hất)、折 (gấp)、钩 (móc); nét hợp thành bộ phận （部件）; bộ phận hợp thành chữ hoàn chỉnh: chữ độc thể chỉ có một bộ phận, chữ hợp thể có từ hai bộ phận trở lên. Viết chữ phải theo thứ tự nét （笔顺）; quy tắc đầu tiên sách dạy ở bài này là 先横后竖 — nét ngang trước, nét dọc sau. Bài này luyện viết hai nét 横 (từ trái sang phải) và 竖 (từ trên xuống dưới).",
+          "pattern": "Nét → bộ phận → chữ · 先横后竖: ngang trước, dọc sau",
+          "examples": [
+            {
+              "zh": "十",
+              "pinyin": "shí",
+              "noteVi": "Mười — chữ mẫu cho quy tắc 先横后竖: viết nét 横 trước, nét 竖 sau; chữ này em đã gặp trong số đếm và cách nói giờ"
+            },
+            {
+              "zh": "二十",
+              "pinyin": "èrshí",
+              "noteVi": "Hai mươi — một trong hai từ sách cho chép mẫu （抄写字词）; số đếm đã học từ Bài 2"
+            },
+            {
+              "zh": "工作",
+              "pinyin": "gōngzuò",
+              "noteVi": "Làm việc, công việc — từ chép mẫu còn lại, cũng là từ mới trọng tâm của bài （我爸爸也在医院工作）"
+            }
+          ],
+          "positionVi": "Mạch viết chữ Hán chạy tiếp ở các bài sau （汉字书写 hai, ba…) với thêm quy tắc thứ tự nét mới; mỗi bài chỉ thêm một ít. Ứng dụng không có ô viết tay — hãy chép vào vở theo đúng thứ tự nét như phần 描写/抄写 của sách, mỗi chữ vài lần.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 56,
+              "printedPage": "049",
+              "section": "二、汉字 · 汉字书写（一）· 汉字结构简介"
+            },
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 57,
+              "printedPage": "050",
+              "section": "二、汉字 · 学练笔画 / 学练笔顺 / 抄写字词"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
         }
       ],
       "reader": {
@@ -18900,21 +19023,53 @@
               ]
             }
           ]
+        },
+        {
+          "id": "st-l08-03",
+          "kind": "speaking",
+          "titleVi": "Trả lời câu hỏi theo Hội thoại 3 (Textbook trang 059) — tự luyện, không chấm tự động",
+          "instructionVi": "Sách đặt hai câu hỏi mở ngay sau Hội thoại 3. Hãy trả lời bằng câu đầy đủ (nói thành tiếng và gõ vào ô nháp), rồi đối chiếu với chính Hội thoại 3 ở Mục 4 — đáp án nằm trong lời thoại của bác sĩ Hồ: bố của bác sĩ cũng làm việc ở bệnh viện và cũng rất bận. Câu hỏi dùng 哪儿 và 忙吗 chính là hai cách dùng trọng tâm của bài.",
+          "prompts": [
+            "胡医生的爸爸在哪儿工作？",
+            "胡医生的爸爸工作忙吗？"
+          ],
+          "draftPromptVi": "Câu trả lời của bạn",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 74,
+              "printedPage": "059",
+              "section": "根据课文内容回答问题"
+            }
+          ]
         }
       ],
-      "selfCheckIntroVi": "Workbook trang 048, bài phân biệt âm tiết (1) có đáp án đã đối chiếu; kèm bài dùng hình để nói của Textbook trang 060 (tự luyện). Mỗi ô được lưu tự động.",
+      "selfCheckIntroVi": "Workbook trang 048, bài phân biệt âm tiết (1) có đáp án đã đối chiếu; kèm bài dùng hình để nói của Textbook trang 060 và hai câu hỏi mở theo Hội thoại 3 ở Textbook trang 059 (tự luyện). Mỗi ô được lưu tự động.",
       "selfCheckListenVi": "▶ Nghe track Workbook 8-1",
       "apply": {
-        "titleVi": "Đóng vai và hẹn gặp theo tình huống thật",
-        "instructionVi": "Chọn hội thoại 2. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình mà đối thoại — hẹn gặp nhau ở đâu （在…见） và hỏi mấy giờ đến được （能到吗？). Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
+        "titleVi": "Đóng vai và hoạt động cặp theo tình huống thật",
+        "instructionVi": "Ba hoạt động cặp của sách, theo thứ tự trong bài. (1) Sau Hội thoại 1 (trang 055): hai người một nhóm, chọn một đồ vật, hỏi và đáp vị trí của nó — “……在哪儿？” / “在……上/下/里/外”. (2) Hội thoại 2 (trang 057): đọc lần lượt hai vai, rồi dựa vào tình huống thật của mình mà đối thoại — hẹn gặp nhau ở đâu （在…见） và hỏi mấy giờ đến được （能到吗？). (3) Hoạt động lớp cuối bài (trang 060): dùng các từ 哪儿、东西、呢、下、小猫、吃、在 tự dựng một hội thoại, theo mẫu của sách: “A：你的手机在哪儿？B：我的手机在桌子上。你的手机呢？A：我的手机在家里。” Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
         "audioTrackId": "trk-tb-l08-3",
-        "noteVi": "Nhiệm vụ đóng vai và đối thoại theo tình huống thật lấy từ Textbook trang in 057. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+        "noteVi": "Ba nhiệm vụ hoạt động cặp lấy từ Textbook trang in 055, 057 và 060. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
         "sourceRefs": [
           {
             "sourceId": "src-hsk1-textbook-pdf",
+            "pdfPage": 70,
+            "printedPage": "055",
+            "section": "两人一组，选择一个物品，问答物品的方位"
+          },
+          {
+            "sourceId": "src-hsk1-textbook-pdf",
             "pdfPage": 72,
-            "printedPage": 57,
+            "printedPage": "057",
             "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+          },
+          {
+            "sourceId": "src-hsk1-textbook-pdf",
+            "pdfPage": 75,
+            "printedPage": "060",
+            "section": "课堂活动 · 双人活动"
           }
         ]
       },
@@ -18965,7 +19120,9 @@
             "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
             "explanationVi": "Em nghe: “书店里” (shūdiàn li — trong hiệu sách), nên chọn hình hiệu sách.",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-positional"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19016,7 +19173,9 @@
             "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
             "explanationVi": "Em nghe: “桌子下的小猫” (zhuōzi xià de xiǎomāo — mèo con ở dưới bàn), nên chọn hình mèo dưới gầm bàn.",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-positional"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19112,7 +19271,9 @@
             "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
             "explanationVi": "Em nghe câu hỏi: “小猫在哪儿？” (xiǎomāo zài nǎr? — mèo con ở đâu?). Câu trả lời chỉ nơi chốn là “房间外” (ngoài phòng).",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-zai"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19157,7 +19318,9 @@
             "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
             "explanationVi": "Em nghe: “上午九点，你能到学校吗？” (Shàngwǔ jiǔ diǎn, nǐ néng dào xuéxiào ma? — Chín giờ sáng, bạn đến trường được không?). Câu trả lời khớp là “我能到” (tôi đến được).",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-neng"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19216,7 +19379,9 @@
             "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
             "explanationVi": "Em nghe: “爸爸在哪儿？— 他在房间里呢。” (Bàba zài nǎr? — Tā zài fángjiān li ne. — Bố ở đâu? — Bố ở trong phòng). Hình khớp là người đàn ông trong phòng.",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-positional"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19334,7 +19499,9 @@
             "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
             "explanationVi": "Em nghe: “学校外有一个小超市。” (Xuéxiào wài yǒu yí ge xiǎo chāoshì. — Ngoài trường có một siêu thị nhỏ). Hình khớp là siêu thị.",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-positional"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19379,7 +19546,9 @@
             "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
             "explanationVi": "Em nghe: “我今天上午有课，下午在学校书店里见吧。” và câu hỏi “说话人想在哪儿见？” (Người nói muốn gặp ở đâu?) — ở hiệu sách của trường.",
             "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-zai"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19479,7 +19648,9 @@
             "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
             "explanationVi": "Câu nói điện thoại ở trên bàn （你的手机在桌子上呢）, khớp hình điện thoại trên bàn.",
             "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-zai"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19742,7 +19913,9 @@
             "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
             "explanationVi": "“你爸爸在哪儿工作？” (Bố bạn làm việc ở đâu?) — trả lời nơi làm việc: “医院” (bệnh viện).",
             "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-zai"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19830,7 +20003,9 @@
             "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
             "explanationVi": "“我7:00（ ）到” cần “能” （能到 = đến được): “tôi 7 giờ đến được”.",
             "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-neng"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",
@@ -19871,7 +20046,9 @@
             "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
             "explanationVi": "Văn bản in: “哥哥在家里休息” (anh trai nghỉ ở nhà) — chọn “在家里”.",
             "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
-            "grammarIds": [],
+            "grammarIds": [
+              "kp-hsk1-l08-zai"
+            ],
             "sourceRefs": [
               {
                 "sourceId": "src-hsk1-workbook-pdf",

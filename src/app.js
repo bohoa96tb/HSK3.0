@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-mock8-1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-mock8-1";
-import * as player from "./player.js?v=20261101-mock8-1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson8-coverage1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson8-coverage1";
+import * as player from "./player.js?v=20261101-lesson8-coverage1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -352,7 +352,7 @@ function sectionPrepHtml(content) {
 
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
- const foundation=kp.kind==='foundation-pronunciation';
+ const foundation=['foundation-pronunciation','foundation-characters'].includes(kp.kind);
  return `<article class="card grammar-card" id="${esc(kp.id)}" data-anchor><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
  ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
  ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=contentFor(kpLesson).reader.sentences.find(x=>x.id===id);return sen?`<a class="btn ghost small" href="#/lesson/${kpLesson}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`:'';}).join('')}</div>`:''}
@@ -360,8 +360,8 @@ function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
 }
 
 function sectionKnowledgeHtml(content) {
- const main=content.knowledgePoints.filter(x=>x.kind!=='foundation-pronunciation');
- const foundation=content.knowledgePoints.filter(x=>x.kind==='foundation-pronunciation');
+ const main=content.knowledgePoints.filter(x=>!['foundation-pronunciation','foundation-characters'].includes(x.kind));
+ const foundation=content.knowledgePoints.filter(x=>['foundation-pronunciation','foundation-characters'].includes(x.kind));
  const countWord={1:'Một',2:'Hai',3:'Ba',4:'Bốn',5:'Năm',6:'Sáu',7:'Bảy',8:'Tám'}[main.length]||String(main.length);
  return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
 }

@@ -1,11 +1,11 @@
 # CHECKPOINT — HSK3.0
 
 - milestone: Bài 1–7 đã phát hành theo chuẩn ux3 (Bài 7: PR #34, gồm quy trình QA D17 khép trong nhánh); quy tắc tiếp tục theo D13 — mỗi lượt "Tiếp tục" hoàn thành trọn một bài, không chờ nghiệm thu từng bài
-- status: lessons6-7_source_review_local_qa_passed_pending_live
+- status: lessons6-7_source_review_released_live_passed
 - currentLessonId: hsk1-l07
 - lastCompletedTask: Bài 7 我晚上六点半下班 (PR #34 merge 9273e1eb, contentVersion 20261101-lesson7-2): 27 từ mới + Hán–Việt 27/27 (tổng 137/137), 6 điểm kiến thức (Cách nói giờ (2) / “吧” (1) / vị trí trạng ngữ / “呢” (2) + nền thanh mẫu đưa hơi và vận mẫu mũi), 14 câu/3 hội thoại print-verified, 7 track, 9 câu chấm tự động verified-from-print (4 nghe hiểu 2/1/3/3 + 5 tổng hợp tr.052 đáp án 3/2/5/4/1), 2 bài phân biệt phát âm (12 + 16 cặp) giữ unverified theo bằng chứng (lời đọc đăng lại tr. in 019 in cả hai dạng mỗi cặp; tài liệu đáp án không có mục này — xem SOURCE_AUDIT), 1 bài dùng hình để nói tự luyện; bài này không có từ nền dạng chữ. Loa asr-draft: câu 14/14, từ mới 27/27, lựa chọn 26/37. QA độc lập 2 vòng theo D17 khép trong nhánh: vòng 1 đạt nội dung, bắt 7 đoạn loa từ mới tràn từ kề (đã căn lại theo phân tích khoảng lặng) + 3 liên kết ôn tập sai/thiếu (đã sửa theo quy tắc ô trống kiểm tra gì trỏ điểm đó); vòng 2 kiểm lại đạt. Nghiệm thu live 8/8 + responsive iframe 12/12 + cỡ chữ tối đa đạt. Quy trình D17 đã ghi vào CONTENT_STANDARD/DECISIONS/AGENTS.md/QA_REPORT.
-- nextTask: nghiệm thu live lượt sửa Bài6–7; sau khi khép lượt này mới trở lại Bài8 theo D13.
-- checksRun: npm run check — validator đạt (7 bài; Hán–Việt 137/137), 59/59 test đạt; git diff --check sạch. CI GitHub Actions vẫn chưa tạo được qua connector (403); bản bàn giao docs/ci/ci.yml — cần Hoa tạo .github/workflows/ci.yml qua web GitHub hoặc cấp quyền workflow.
+- nextTask: Bài 8 khi người dùng gửi “Tiếp tục”; xác minh tên và trang từ mục lục/sách thật trước khi làm theo D13/D17/D18.
+- checksRun: npm run check — validator đạt (7 bài; Hán–Việt 137/137), 63/63 test đạt; git diff --check sạch. CI GitHub Actions vẫn chưa tạo được qua connector (403); bản bàn giao docs/ci/ci.yml — cần Hoa tạo .github/workflows/ci.yml qua web GitHub hoặc cấp quyền workflow.
 - blockers: quyền tái xuất bản vẫn unknown; mọi đoạn loa vẫn asr-draft, chưa nghe kiểm chứng bởi người; đơn vị chưa có loa riêng: 大家 (Bài 1), 雨/五/一/椅子 (Bài 2), 吗/嘴 (Bài 3), 盖儿/个儿 (Bài 6) cùng các lựa chọn/ví dụ đã ghi ở từng lượt; ô 5 Bài 5 ở trạng thái source-conflict (D16) chờ bằng chứng giải quyết xung đột; trang Tiến độ chỉ dẫn tới điểm nghe–viết ở Tổng kết/Luyện tập chứ không in điểm trực tiếp; chưa thử Android thật.
 - evidence: docs/SOURCE_AUDIT.md (mục Bài 5 + bổ sung rà soát, mục Bài 6), docs/QA_REPORT.md (mục Bài 5, lượt rà soát Bài 5, mục Bài 6), docs/DECISIONS.md D13–D16, docs/CONTENT_STANDARD.md (quy tắc source-conflict), docs/UI_SPEC.md mục 11
 - baselineCommit: 905da09bd38609f03598aeeea1d0665952aeeaf1 (PR #37; contentVersion live 20261101-lesson7-2, đã đối chiếu khớp byte)
@@ -24,3 +24,10 @@
 - Đoạn audio vẫn nháp, chưa kiểm nghe bởi người; loa thiếu, Android thật, CI/quyền nguồn vẫn còn.
 
 - checks bổ sung: validator đạt,63/63 test đạt,diff-check sạch; đã nhận/đọc đầy đủ QA độc lập nguồn+code và bổ sung caption trước merge. Chưa ghi live đạt trước khi kiểm.
+
+### Khép nghiệm thu live lượt hoàn thiện Bài6–7
+- Phát hành PR #39, merge 8d652c31e579cec9c3547061343dfad5795d947f; contentVersion 20261101-lessons67-practice1. Pages run 41285859946 thành công. index.html, src/app.js và data/content.json trên URL thật đối chiếu byte khớp bản merge.
+- Bắt đầu Bài6/Bài7 hiện caption Textbook trang036/046. Căn nguyên là thiếu figcaption ở renderer, không chỉ lỗi tìm chuỗi dấu phẩy của lần QA cũ.
+- Live: Bài6 nghe–so sánh phát từ khoảng0:47 (quan sát bộ đếm0:53 đang chạy), Bài7 bài1 từ khoảng1:07; không coi đây là kiểm nghe ngữ nghĩa. Không có nút chấm trong ba bài so sánh. Ghi chú thử Bài6 và Bài7 còn nguyên sau reload.
+- Tám ảnh của hai bài dùng hình để nói đều tải thật; caption/khung câu và ô nháp hiển thị đúng. Iframe hai tuyến exercises ×360/390/768/1440: không tràn ngang; kiểm ảnh và bố cục trực quan390px/desktop. Không thay thế Android thật.
+- Đã khép phạm vi sửa nguồn, hướng dẫn, ảnh và renderer. Không mở Bài8 trong lượt này. Những hạn chế audio/thiết bị/quyền/CI ở trên vẫn giữ nguyên.

@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-lesson8-coverage1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-lesson8-coverage1";
-import * as player from "./player.js?v=20261101-lesson8-coverage1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261102-lesson8-path1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-path1";
+import * as player from "./player.js?v=20261102-lesson8-path1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -225,11 +225,22 @@ function viewLessonIntro(lesson, content) {
   bindSection("intro", content);
 }
 
+function learningPathHtml(lesson, content) {
+  const path = content.learningPath;
+  if (!Array.isArray(path) || !path.length) return "";
+  const st = lessonState(lesson.id);
+  const resume = st.lastSectionId && !st.completedSections.includes(st.lastSectionId) ? st.lastSectionId : (content.intro.sections.find((x) => !st.completedSections.includes(x.id))?.id || "summary");
+  return `<section class="card"><h2>Lộ trình học bài này</h2>
+  <p class="muted">Học theo tình huống, từng bước nhỏ. Bạn có thể dừng bất cứ lúc nào và học tiếp sau — không cần làm hết phần luyện thêm mới được đi tiếp.</p>
+  <ol class="learn-path">${path.map((step) => `<li><a href="#/lesson/${lesson.id}/${step.sectionId}${step.dialogueId && step.sectionId === "reader" ? `?passage=${step.dialogueId}` : ""}"><strong>${step.step}. ${esc(step.titleVi)}</strong><span>${esc(step.descVi)}</span></a></li>`).join("")}</ol>
+  <p class="row-actions"><a class="btn primary big" href="#/lesson/${lesson.id}/${resume}">${st.completedSections.length || st.lastSectionId ? "Tiếp tục học" : "Bắt đầu học"} →</a></p>
+  ${st.lastSectionId ? `<p class="muted small">Bạn đang học dở — lần trước bạn ở mục: ${esc(content.intro.sections.find((x) => x.id === st.lastSectionId)?.titleVi || st.lastSectionId)}.</p>` : ""}</section>`;
+}
 function sectionIntroHtml(lesson, content) {
  const intro = content.intro; const img = intro.contextImage;
  return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
- <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Học trong khoảng ${intro.estimatedMinutes} phút hoặc chia thành các phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
- <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>`;
+ <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Thời gian dự kiến khoảng ${intro.estimatedMinutes} phút nếu học liền một mạch (ước lượng của dự án, chưa đo trên người học thật). Bạn có thể chia thành nhiều phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
+ <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>${learningPathHtml(lesson, content)}`;
 }
 
 // ---------- Lesson sections ----------
@@ -291,11 +302,14 @@ function recordExerciseSupport() {
   const { seg } = parseRoute();
   if (seg[0] !== "lesson" || seg[2] !== "exercises") return;
   const content = contentFor(seg[1]); if (!content) return;
-  for (const set of [content.exerciseSet, content.suppExerciseSet].filter(Boolean)) {
-    const ses = ensureSession(content, set);
-    const item = set.items[ses.index];
-    if (item && !ses.checked[item.id]) updateSession(content, (ss) => { (ss.supportUsed ||= {})[item.id] = true; }, set);
-  }
+  // D23 QA TB-1: the support bar is rendered only on the main exercise card,
+  // so support use is recorded only for the main set's current question.
+  // Recording it for the supplementary (mock) set — which has no support
+  // bar of its own — would falsely mark mock attempts as support-assisted.
+  const set = content.exerciseSet;
+  const ses = ensureSession(content, set);
+  const item = set.items[ses.index];
+  if (item && !ses.checked[item.id]) updateSession(content, (ss) => { (ss.supportUsed ||= {})[item.id] = true; }, set);
 }
 function bindSupportBar() {
   $$("[data-support]").forEach((b) => { b.onclick = () => {
@@ -344,27 +358,73 @@ function sentenceAudio(content, sen) {
   return segm ? { trackId: track.id, start: segm.start, end: segm.end, status: segm.status } : null;
 }
 
+function wordCardHtml(w) {
+  return `<article class="word-card" id="${w.id}" data-anchor><div class="word-top"><span class="zh" lang="zh-CN">${esc(w.zh)}</span>${ttsBtnHtml(w.zh)}</div><div class="pinyin tog-pinyin-prep" lang="zh-Latn">${esc(w.pinyin)}</div>${w.hanViet ? `<div class="hanviet tog-hv-prep">HV: ${esc(w.hanViet)}</div>` : `<div class="hanviet tog-hv-prep hanviet-missing">HV: chưa xác minh</div>`}<div class="vi tog-vi-prep">${esc(w.vi)}</div>${w.isProperName ? `<p class="hv-note">Tên riêng (người)</p>` : ""}${w.hanVietNoteVi ? `<p class="hv-note tog-hv-prep">${esc(w.hanVietNoteVi)}</p>` : ""}</article>`;
+}
 function sectionPrepHtml(content) {
  const firstRefs=[]; const seenPages=new Set();
  for(const w of content.prepWords){const r=w.sourceRefs[0]; if(r && !seenPages.has(r.pdfPage)){seenPages.add(r.pdfPage); firstRefs.push(r);} }
- return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.</p>${supportBarHtml('prep')}<div class="word-grid">${content.prepWords.map(w=>`<article class="word-card" id="${w.id}" data-anchor><div class="word-top"><span class="zh" lang="zh-CN">${esc(w.zh)}</span>${ttsBtnHtml(w.zh)}</div><div class="pinyin tog-pinyin-prep" lang="zh-Latn">${esc(w.pinyin)}</div>${w.hanViet ? `<div class="hanviet tog-hv-prep">HV: ${esc(w.hanViet)}</div>` : `<div class="hanviet tog-hv-prep hanviet-missing">HV: chưa xác minh</div>`}<div class="vi tog-vi-prep">${esc(w.vi)}</div>${w.hanVietNoteVi ? `<p class="hv-note tog-hv-prep">${esc(w.hanVietNoteVi)}</p>` : ""}</article>`).join('')}</div><details class="study-tip"><summary>Ghi chú về loa và Hán–Việt</summary><p>Loa trên thẻ dùng giọng đọc tiếng Trung có sẵn của trình duyệt/thiết bị để đọc từng từ — không phải audio của sách. Audio gốc của sách được dùng cho hội thoại và các bài nghe ở những mục sau. Âm Hán–Việt chỉ là cách đọc Hán–Việt của chữ, không thay cho nghĩa hiện đại hay phát âm tiếng Trung.</p></details>${refsHtml(firstRefs)}</section>`;
+ const groups = Array.isArray(content.prepGroups) && content.prepGroups.length ? content.prepGroups : null;
+ const summaryLine = content.prepSummaryVi || `${content.prepWords.length} mục từ xuất hiện trong Bài ${lessonById(content.lessonId).lessonNumber}. Đọc một lượt, rồi gặp lại chúng trong hội thoại.`;
+ const body = groups ? groups.map((g, gi) => {
+   const words = content.prepWords.filter((w) => w.dialogueGroup === gi + 1);
+   const track = content.reader.audioTracks.find((t) => t.id === g.trackId);
+   return `<h3 class="vocab-group-title">${esc(g.titleVi)} <span class="tag">${words.length} từ${gi === 2 ? " + 1 tên riêng" : ""}</span></h3>
+   ${track ? `<p class="row-actions"><button class="btn" type="button" data-play-vocab-track="${esc(track.id)}">▶ Nghe cả nhóm từ — audio gốc của sách (${esc(g.trackLabelVi)})</button> <a class="btn ghost" href="#/lesson/${content.lessonId}/reader?passage=${esc(g.dialogueId)}">Tới hội thoại này →</a></p>` : ""}
+   <div class="word-grid">${words.map(wordCardHtml).join('')}</div>`;
+ }).join('') : `<div class="word-grid">${content.prepWords.map(wordCardHtml).join('')}</div>`;
+ return `<section class="card"><p class="kicker">TRƯỚC KHI NGHE</p><h2>Từ cần biết</h2><p class="muted">${esc(summaryLine)}</p>${supportBarHtml('prep')}${body}<details class="study-tip"><summary>Ghi chú về loa và Hán–Việt</summary><p>Loa nhỏ trên từng thẻ dùng giọng đọc tiếng Trung có sẵn của trình duyệt/thiết bị để đọc từng từ — đó là giọng máy, không phải audio của sách. Nút “Nghe cả nhóm từ” phát audio gốc của sách theo từng hội thoại (giọng người thật, phát trực tuyến từ nguồn). App không cắt audio gốc thành từng từ vì mỗi từ trong track được đọc hai lượt; cắt đoạn dễ lọt lượt đọc sau và nghe không tự nhiên. Âm Hán–Việt chỉ là cách đọc Hán–Việt của chữ, không thay cho nghĩa hiện đại hay phát âm tiếng Trung.</p></details>${refsHtml(firstRefs)}</section>`;
+}
+function bindPrep(content) {
+  bindSupportBar();
+  $$("[data-play-vocab-track]").forEach((b) => b.onclick = () => {
+    const track = content.reader.audioTracks.find((t) => t.id === b.dataset.playVocabTrack);
+    if (track) player.playTrack(track, { rate: settings().playbackRate });
+  });
+  sectionUnsubscribe = player.subscribe(() => { renderMini(); });
 }
 
 function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=['foundation-pronunciation','foundation-characters'].includes(kp.kind);
- return `<article class="card grammar-card" id="${esc(kp.id)}" data-anchor><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2><p class="lead-small">${esc(kp.explanationVi)}</p><p class="pattern">${esc(kp.pattern)}</p>
- ${kp.examples.map(e=>`<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`).join('')}
+ const exampleHtml = (e) => `<div class="example"><span class="zh-sentence" lang="zh-CN">${esc(e.zh)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p></div>`;
+ const visibleExamples = kp.useWhenVi ? kp.examples.slice(0, 2) : kp.examples;
+ const extraExamples = kp.useWhenVi ? kp.examples.slice(2) : [];
+ const qc = kp.quickCheck;
+ return `<article class="card grammar-card" id="${esc(kp.id)}" data-anchor><p class="kicker">${esc(kp.kindLabel)}</p><h2>${esc(kp.title)}</h2>
+ ${kp.useWhenVi ? `<p class="lead-small"><strong>Khi nào dùng?</strong> ${esc(kp.useWhenVi)}</p>` : `<p class="lead-small">${esc(kp.explanationVi)}</p>`}
+ <p class="pattern">${esc(kp.pattern)}</p>
+ ${kp.useWhenVi ? `<details class="study-tip"><summary>Giải thích thêm</summary><p>${esc(kp.explanationVi)}</p>${kp.positionVi ? `<p>${esc(kp.positionVi)}</p>` : ""}</details>` : ""}
+ ${visibleExamples.map(exampleHtml).join('')}
+ ${extraExamples.length ? `<details class="study-tip"><summary>Xem thêm ví dụ của sách</summary>${extraExamples.map(exampleHtml).join('')}</details>` : ""}
+ ${qc ? `<div class="quick-check" data-quick-check="${esc(kp.id)}"><h3>Thử ngay</h3><p>${esc(qc.questionVi)}</p><p class="zh-inline" lang="zh-CN">${esc(qc.stemZh)}</p><div class="row-actions">${qc.options.map((o) => `<button class="btn" type="button" data-quick-opt="${esc(o.zh)}" data-quick-answer="${esc(qc.answer)}"><span lang="zh-CN">${esc(o.zh)}</span>${o.vi ? ` · ${esc(o.vi)}` : ""}</button>`).join("")}</div><p class="quick-feedback" role="status" aria-live="polite" hidden></p><p class="quick-explain" hidden>${esc(qc.explanationVi)}</p></div>` : ""}
  ${kp.sentenceIds?.length?`<div class="row-actions">${kp.sentenceIds.map(id=>{const sen=contentFor(kpLesson).reader.sentences.find(x=>x.id===id);return sen?`<a class="btn ghost small" href="#/lesson/${kpLesson}/reader?sentence=${id}">Ngữ cảnh: ${esc(sen.zh)}</a>`:'';}).join('')}</div>`:''}
  ${refsHtml(kp.sourceRefs)}${linkBack?`<a class="btn primary" href="${esc(linkBack)}">← Quay lại câu đang làm</a>`:''}</article>`;
 }
+function bindQuickChecks() {
+  $$("[data-quick-check]").forEach((box) => {
+    const feedback = box.querySelector(".quick-feedback");
+    const explain = box.querySelector(".quick-explain");
+    box.querySelectorAll("[data-quick-opt]").forEach((b, i) => b.onclick = () => {
+      const correct = String(i + 1) === b.dataset.quickAnswer;
+      feedback.hidden = false;
+      feedback.textContent = correct ? "Đúng rồi." : "Chưa đúng — thử đọc lại giải thích rồi chọn lại.";
+      feedback.className = `quick-feedback ${correct ? "ok" : "bad"}`;
+      if (explain) explain.hidden = !correct;
+    });
+  });
+}
 
 function sectionKnowledgeHtml(content) {
- const main=content.knowledgePoints.filter(x=>!['foundation-pronunciation','foundation-characters'].includes(x.kind));
- const foundation=content.knowledgePoints.filter(x=>['foundation-pronunciation','foundation-characters'].includes(x.kind));
+ const isFoundation = (x) => ['foundation-pronunciation','foundation-characters'].includes(x.kind);
+ const isTip = (x) => String(x.kindLabel || "").startsWith("Mẹo");
+ const main=content.knowledgePoints.filter(x=>!isFoundation(x) && !isTip(x));
+ const tips=content.knowledgePoints.filter(x=>!isFoundation(x) && isTip(x));
+ const foundation=content.knowledgePoints.filter(isFoundation);
  const countWord={1:'Một',2:'Hai',3:'Ba',4:'Bốn',5:'Năm',6:'Sáu',7:'Bảy',8:'Tám'}[main.length]||String(main.length);
- return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
+ return `<div class="section-heading"><div><p class="kicker">HIỂU ĐỂ TỰ DÙNG</p><h2>${countWord} điều cần nhớ</h2></div></div>${supportBarHtml('sentences')}${main.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}${tips.length?`<details class="tips-block"><summary>Mẹo nhỏ trong bài — xem khi gặp câu liên quan (không phải điểm chính)</summary>${tips.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}${foundation.length?`<details class="foundation"><summary>${esc(content.intro.foundationSummaryVi||'Ôn phát âm nền tảng')}</summary>${foundation.map(x=>knowledgeCardHtml(x,{lessonId:content.lessonId})).join('')}</details>`:''}`;
 }
+function bindKnowledge() { bindSupportBar(); bindQuickChecks(); }
 
 function trackRowHtml(track) {
   const st = player.getState();
@@ -390,6 +450,9 @@ function sectionReaderHtml(content) {
  return `<section class="card reader-card"><p class="kicker">NGHE TRONG NGỮ CẢNH</p><h2>${esc(r.headingVi||r.titleVi)}</h2>
  <nav class="passage-tabs" aria-label="Chọn hội thoại">${r.passages.map((g,i)=>`<a class="${g.id===group.id?'selected':''}" href="#/lesson/${content.lessonId}/reader?passage=${g.id}" ${g.id===group.id?'aria-current="true"':''}>${i+1}. ${esc(g.title)}</a>`).join('')}</nav>
  <h3>${esc(group.title)}</h3><p class="muted">${esc(group.context)}</p><div id="tracks">${trackRowHtml(track)}</div>
+ ${(() => { const gidx = r.passages.findIndex((g) => g.id === group.id);
+   const relKps = content.knowledgePoints.filter((k) => !String(k.kindLabel || "").startsWith("Mẹo") && (k.sentenceIds || []).some((id) => group.sentenceIds.includes(id)));
+   return `<div class="row-actions reader-links"><a class="btn ghost small" href="#/lesson/${content.lessonId}/prep">Xem từ của bài này</a>${relKps.map((k) => `<a class="btn ghost small" href="#/grammar/${esc(k.id)}?return=reader&passage=${esc(group.id)}">Điểm chính: ${esc(k.title)}</a>`).join("")}${group.checkItemId ? `<a class="btn small" href="#/lesson/${content.lessonId}/exercises?item=${esc(group.checkItemId)}">${esc(group.checkLabelVi || "Câu hỏi ngắn sau khi nghe")} →</a>` : ""}</div>`; })()}
  ${supportBarHtml('sentences')}<details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
  ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details><p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
@@ -471,6 +534,11 @@ function recordAttempt(item, optionId, correct, hintUsed, lessonId, supportUsed)
     }
   });
 }
+function isPronunciationItem(item) {
+  // Pronunciation items: Pinyin IS the content being tested, so it stays
+  // visible before grading and the item is labelled as a pronunciation drill.
+  return /redup|pronunciation/i.test(item.id) || /phân biệt âm|chọn âm tiết/i.test(item.promptVi || "");
+}
 function exerciseCardHtml(content, set, prefix) {
   let ses = ensureSession(content, set);
   const item = set.items[ses.index];
@@ -492,11 +560,12 @@ function exerciseCardHtml(content, set, prefix) {
   <details class="set-note"><summary>Ghi chú về bộ câu hỏi</summary><p class="muted">${esc(set.noteVi)}</p></details>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
-  <h3>${esc(item.promptVi)}</h3>${seg ? `<p><button class="btn" type="button" data-play-task="${esc(seg.trackId)}" data-seg-start="${seg.start}" data-seg-end="${seg.end}">▶ Nghe đoạn của câu này (${fmtClock(seg.start)}–${fmtClock(seg.end)})</button></p>` : ""}${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
+  ${isPronunciationItem(item) ? `<p class="tag">Bài luyện âm — Pinyin chính là nội dung cần phân biệt nên được hiện sẵn.</p>` : (checked ? "" : `<p class="muted small">Pinyin và nghĩa của câu và các lựa chọn sẽ hiện sau khi bạn kiểm tra, để bạn tự làm trước.</p>`)}
+  <h3>${esc(item.promptVi)}</h3>${seg ? `<p><button class="btn" type="button" data-play-task="${esc(seg.trackId)}" data-seg-start="${seg.start}" data-seg-end="${seg.end}">▶ Nghe đoạn của câu này (${fmtClock(seg.start)}–${fmtClock(seg.end)})</button></p>` : ""}${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${checked && item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
   <form id="${prefix}ex-form">
   ${item.options.map((o, oi) => `<label class="option ${o.image ? "option-has-pic" : ""} ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
-    <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${HAS_HAN.test(o.zh) ? ttsBtnHtml(o.zh) : ""}` : esc(o.labelVi || "")}</span></label>`).join("")}
+    <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? (isPronunciationItem(item) ? `<span class="zh-inline" lang="zh-Latn">${esc(o.zh)}</span>${checked ? `<span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>` : ""}` : `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span>${checked ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>` : ""}${HAS_HAN.test(o.zh) ? ttsBtnHtml(o.zh) : ""}`) : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
     <button class="btn ghost" type="button" id="${prefix}hint-btn">Gợi ý</button>
     ${ses.index > 0 ? `<button class="btn ghost" type="button" id="${prefix}prev-q">← Câu trước</button>` : ""}</div>
@@ -525,9 +594,15 @@ function sectionExercisesHtml(content) {
       }
     }
   }
-  return `${exerciseCardHtml(content, content.exerciseSet, "")}
+  const scrollBtn = (target, label) => `<button class="btn" type="button" data-scroll-to="${target}">${label}</button>`;
+  return `<section class="card exercise-zones"><h2>Luyện tập gồm 3 phần</h2>
+  <p><strong>A. Luyện sau bài</strong> — ${content.exerciseSet.items.length} câu chính của bài: nghe hiểu, chọn từ, vị trí và trật tự câu, dùng 在 và 能.</p>
+  <p><strong>B. Luyện thêm</strong> — phân biệt âm, nói theo hình và câu hỏi tự trả lời. Phần này tự đối chiếu, không bắt buộc.</p>
+  ${content.suppExerciseSet ? `<p><strong>C. Đề mô phỏng</strong> — ${content.suppExerciseSet.items.length} câu, điểm ghi riêng, không gộp vào điểm bài chính và không tự bắt đầu.</p>` : ""}
+  <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}</div></section>
+  ${exerciseCardHtml(content, content.exerciseSet, "")}
   ${content.suppExerciseSet ? exerciseCardHtml(content, content.suppExerciseSet, "supp-") : ""}
-  <section class="card dictation-block"><h2>Luyện tập bổ trợ theo sách</h2>${dictationHtml(content)}</section>`;
+  <section class="card dictation-block" id="extra-practice"><h2>B. Luyện thêm theo sách</h2>${dictationHtml(content)}</section>`;
 }
 let lastDeepLinkItem = null; // ?item= deep link fires once per param change (edge-triggered)
 const dictRevealed = new Set(); // taskIds whose listening script is currently shown
@@ -603,11 +678,13 @@ function bindExerciseSet(content, set, prefix) {
 }
 function bindExercises(content) {
   bindSupportBar();
+  $$("[data-scroll-to]").forEach((b) => b.onclick = () => { document.getElementById(b.dataset.scrollTo)?.scrollIntoView({ block: "start" }); });
   { const st0 = settings();
-    for (const set of [content.exerciseSet, content.suppExerciseSet].filter(Boolean)) {
-      const ses0 = ensureSession(content, set); const it0 = set.items[ses0.index];
-      if (it0 && !ses0.checked[it0.id] && (st0.showPinyinExercises || st0.showViExercises)) updateSession(content, (ss) => { (ss.supportUsed ||= {})[it0.id] = true; }, set);
-    } }
+    // D23 QA TB-1: opening the page with support already on records support
+    // only for the main set (see recordExerciseSupport).
+    const set0 = content.exerciseSet;
+    const ses0 = ensureSession(content, set0); const it0 = set0.items[ses0.index];
+    if (it0 && !ses0.checked[it0.id] && (st0.showPinyinExercises || st0.showViExercises)) updateSession(content, (ss) => { (ss.supportUsed ||= {})[it0.id] = true; }, set0); }
   $$("[data-dict-task]").forEach((d) => d.addEventListener("toggle", () => { if (d.open) dictOpenTasks.add(d.dataset.dictTask); else dictOpenTasks.delete(d.dataset.dictTask); }));
   $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
   bindExerciseSet(content, content.exerciseSet, "");
@@ -682,6 +759,21 @@ function sectionApplyHtml(content) {
   const a = content.apply;
   const track = content.reader.audioTracks.find((t) => t.id === a.audioTrackId);
   const samples = (a.samplePassageIds || []).flatMap((pid) => { const g = content.reader.passages.find((x) => x.id === pid); return g ? g.sentenceIds.map((id) => content.reader.sentences.find((x) => x.id === id)) : []; }).filter(Boolean);
+  const done = loadProgress().speakingDone || {};
+  if (Array.isArray(a.tasks) && a.tasks.length) {
+    return `<section class="card" data-anchor><h2>Tự nói: ${esc(a.titleVi)}</h2>
+    <p class="muted">Mỗi nhiệm vụ rất ngắn. Bạn có thể tự luyện một mình hoặc luyện cùng một người khác. App không chấm phát âm và không chấm nói — nút “Đã luyện” chỉ ghi lại bạn đã tập, không có nghĩa là đã nắm vững. Ba nhiệm vụ này là cách tổ chức lại các hoạt động của sách theo tình huống; mỗi nhiệm vụ ghi rõ câu mẫu lấy từ đâu.</p>
+    ${supportBarHtml('sentences')}
+    ${a.tasks.map((t) => `<article class="speak-task" id="${esc(t.id)}" data-anchor><h3>${esc(t.titleVi)}</h3>
+      <p>${esc(t.situationVi)}</p>
+      <div class="example"><span class="zh-sentence" lang="zh-CN">${esc(t.sampleZh)}</span> ${ttsBtnHtml(t.sampleZh)}${t.samplePinyin ? `<span class="pinyin tog-pinyin-sent" lang="zh-Latn">${esc(t.samplePinyin)}</span>` : ""}<p class="muted tog-vi-sent">${esc(t.sampleVi)}</p></div>
+      <p class="small">${esc(t.swapVi)}</p>
+      <p class="small muted">${esc(t.sourceNoteVi || "")}</p>
+      <button class="btn ${done[t.id] ? "primary" : ""}" type="button" data-speak-done="${esc(t.id)}" aria-pressed="${!!done[t.id]}">${done[t.id] ? "✓ Đã luyện nhiệm vụ này" : "Đánh dấu đã luyện"}</button>
+    </article>`).join("")}
+    <details class="study-tip"><summary>Hướng dẫn đầy đủ của sách (3 hoạt động cặp)</summary><p>${esc(a.instructionVi)}</p><p>${esc(a.noteVi||'')}</p></details>
+    ${refsHtml(a.sourceRefs)}</section>`;
+  }
   return `<section class="card" data-anchor><h2>Vận dụng: ${esc(a.titleVi)}</h2><p>${esc(a.instructionVi)}</p>
   ${trackRowHtml(track)}${supportBarHtml('sentences')}
   ${samples.length ? `<h3>Câu mẫu để đóng vai</h3>${samples.map((sen) => `<div class="sentence" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN">${esc(sen.zh)}</div><div class="vi tog-vi-sent">${esc(sen.vi)}</div></div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`).join("")}` : ""}
@@ -696,11 +788,17 @@ function sectionSummaryHtml(lesson, content) {
   const suppSum = content.suppExerciseSet ? summarizeAttempts(p.attempts, content.suppExerciseSet.items.map((i) => i.id)) : null;
   const wrongIds = [...new Set(p.attempts.filter((a) => !a.correct && allItems.some(i=>i.id===a.exerciseId)).map((a) => a.exerciseId))];
   const st = lessonState(lesson.id);
+  const nextSection = content.intro.sections.find((x) => !st.completedSections.includes(x.id));
+  const attempted = sum.firstTotal > 0 || (suppSum ? suppSum.firstTotal > 0 : false);
+  const mainNotAttempted = sum.firstTotal === 0 && suppSum && suppSum.firstTotal > 0;
   return `<section class="card"><h2>Tổng kết bài</h2>
+  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><br><span class="zh-sentence" lang="zh-CN">${esc(pt.exampleZh)}</span><p class="muted">${esc(pt.exampleVi)}</p></div>`).join("")}` : ""}
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
-  <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0}. Điểm làm lại, gợi ý và hỗ trợ được ghi riêng, không gộp vào điểm lần đầu và không diễn giải lại lịch sử cũ.</p>
-  ${suppSum ? `<p>Đề mô phỏng của sách: điểm lần đầu <strong>${suppSum.firstCorrect}/${suppSum.firstTotal}</strong>; số câu đã làm lại: ${suppSum.retried}; số câu đã dùng gợi ý: ${suppSum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${suppSum.supportUsedCount || 0}. Điểm của đề mô phỏng ghi riêng, không gộp vào điểm bài tập của bài.</p>` : ""}
-  ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = allItems.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
+  ${nextSection ? `<p class="row-actions"><a class="btn primary" href="#/lesson/${lesson.id}/${nextSection.id}">Tiếp tục: ${esc(nextSection.titleVi)} →</a></p>` : ""}
+  <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>.</p>
+  ${suppSum ? `<p>Đề mô phỏng của sách: điểm lần đầu <strong>${suppSum.firstCorrect}/${suppSum.firstTotal}</strong>. Điểm của đề mô phỏng ghi riêng, không gộp vào điểm bài tập của bài.</p>` : ""}
+  <details class="study-tip"><summary>Xem chi tiết</summary><p>Số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0}. Điểm làm lại, gợi ý và hỗ trợ được ghi riêng, không gộp vào điểm lần đầu và không diễn giải lại lịch sử cũ.${suppSum ? ` Đề mô phỏng — làm lại: ${suppSum.retried} câu; gợi ý: ${suppSum.hintUsedCount} câu; hỗ trợ: ${suppSum.supportUsedCount || 0} câu.` : ""}</p></details>
+  ${!attempted ? `<p class="muted">Bạn chưa làm bài tập.</p>` : mainNotAttempted ? `<p class="muted">Bạn chưa làm bài tập chính của bài — bạn mới làm đề mô phỏng.</p>${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = allItems.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : ""}` : wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = allItems.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
   <h3>Học lại từng mục</h3>
   ${content.intro.sections.map((x) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${x.id}">${esc(x.titleVi)}</a><span class="tag">${st.completedSections.includes(x.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
   ${(() => { const lines = content.selfCheckTasks.filter((t) => t.answerStatus === "verified-editorial").map((t) => { const e = p.dictation?.[t.id]; if (!e || !Object.keys(e.first || {}).length) return ""; const vals = Object.values(e.first); const wrongIdx = Object.entries(e.first).filter(([, v]) => !v).map(([k]) => Number(k)); return `<p>Nghe–viết “${esc(t.titleVi)}”: điểm lần đầu <strong>${vals.filter(Boolean).length}/${vals.length}</strong> ô${e.peeked ? " (đã xem lời đọc trước)" : ""}.${wrongIdx.length ? ` Ô sai: ${wrongIdx.map((i) => `<a href="#/lesson/${lesson.id}/exercises?task=${t.id}">${i + 1} (${esc(t.scriptSyllables?.[i] || "")})</a>`).join(", ")} — đã đưa vào Ôn tập.` : ""}</p>`; }).join(""); return lines ? `<h3>Nghe–viết đã chấm</h3>${lines}` : ""; })()}
@@ -717,10 +815,10 @@ function viewGrammar(id, queryOverride) {
     const kp = allKnowledge().find((k) => k.id === id);
     if (!kp) { main.innerHTML = `<section class="card"><h1>Không tìm thấy điểm kiến thức</h1><a class="btn" href="#/grammar">Về tra cứu</a></section>`; return; }
     const kpLesson = kpLessonId(kp.id); const kpLessonObj = lessonById(kpLesson);
-    const ret = query.return && ['exercises','summary','reader','knowledge'].includes(query.return) ? `#/lesson/${kpLesson}/${query.return}${query.sentence?'?sentence='+encodeURIComponent(query.sentence):''}` : null;
+    const ret = query.return && ['exercises','summary','reader','knowledge'].includes(query.return) ? `#/lesson/${kpLesson}/${query.return}${query.sentence?'?sentence='+encodeURIComponent(query.sentence):query.passage?'?passage='+encodeURIComponent(query.passage):''}` : null;
     main.innerHTML = `${supportBarHtml('sentences')}${knowledgeCardHtml(kp, { linkBack: ret, lessonId: kpLesson })}
     <section class="card"><h2>Bài có dùng điểm này</h2><p class="row-line"><a href="#/lesson/${kpLesson}">HSK 1 · Bài ${kpLessonObj.lessonNumber}: ${esc(kpLessonObj.titleZh)}</a><span class="tag">Textbook + Workbook</span></p></section>`;
-    bindSupportBar();
+    bindSupportBar(); bindQuickChecks();
     return;
   }
   const q = queryOverride ?? query.q ?? "";
@@ -879,10 +977,16 @@ function viewSources(id) {
 // ---------- Section binding, mini player, boot ----------
 function bindSection(sectionId, content) {
   content = content || contentFor(continueLesson().id) || CONTENT.pilot;
-  if (sectionId === "prep" || sectionId === "knowledge" || sectionId === "apply") bindSupportBar();
+  if (sectionId === "knowledge") bindKnowledge();
+  else if (sectionId === "prep") bindPrep(content);
+  else if (sectionId === "apply") bindSupportBar();
   if (sectionId === "reader") bindReader(content);
   if (sectionId === "exercises") bindExercises(content);
   if (sectionId === "apply") {
+    $$("[data-speak-done]").forEach((b) => b.onclick = () => {
+      update((pp) => { pp.speakingDone ||= {}; if (pp.speakingDone[b.dataset.speakDone]) delete pp.speakingDone[b.dataset.speakDone]; else pp.speakingDone[b.dataset.speakDone] = new Date().toISOString(); });
+      render();
+    });
     $$("[data-play]").forEach((b) => b.onclick = () => {
       const track = content.reader.audioTracks.find((t) => t.id === b.dataset.play);
       if (track) player.playTrack(track, { rate: settings().playbackRate });

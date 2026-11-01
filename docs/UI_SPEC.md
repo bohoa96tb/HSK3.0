@@ -36,3 +36,14 @@ Dữ liệu/ảnh động không làm đổi đáp án theo ngẫu nhiên. Kết
 Bài listening-comparison hiện cặp đầy đủ, hướng dẫn nghe–so sánh–đọc theo, ô ghi chú rõ nhãn, tự đánh giá riêng và không nút chấm. Bài speaking có promptImages hiển thị ảnh trước từng khung câu; hai cột ở mọi bề rộng (kể cả điện thoại, cập nhật D20). Không có nút phát track không liên quan. Mốc nghe nháp có nhãn tham khảo.
 
 Bổ sung (D21): bài học có thể có bộ bài bổ trợ riêng (`suppExerciseSet`, ví dụ đề mô phỏng của sách) hiển thị thành thẻ riêng ngay dưới thẻ luyện tập chính trong Mục 5, dùng cùng cơ chế làm bài nhưng session và điểm lần đầu tách theo từng bộ; câu nghe trong bộ bổ trợ có nút “Nghe đoạn của câu này” phát đúng đoạn audio của câu.
+
+## 12. Chuẩn thí điểm Bài 8 (D23, 02/11/2026)
+
+- Mục Bắt đầu có "Lộ trình học bài này" theo tình huống (khi dữ liệu có `learningPath`), nút Bắt đầu/Tiếp tục rõ và dòng cho biết đang học dở ở mục nào; thời gian ghi là ước lượng chưa đo thật.
+- Mục Từ cần biết: nếu có `prepGroups`, hiển thị theo nhóm hội thoại với số từ từng nhóm, nút phát track từ mới gốc của nhóm và liên kết tới hội thoại; thẻ từ giữ dạng gọn một hàng chữ Hán + loa giọng máy (ghi rõ giọng máy trong ghi chú thu gọn).
+- Mục Hiểu cách dùng: điểm chính (không gồm mẹo/nền) có nhãn "Khi nào dùng?", mẫu, tối đa 2 ví dụ hiện sẵn, ví dụ còn lại trong "Xem thêm", và khối "Thử ngay" tự kiểm tra tại chỗ (không ghi điểm). Mẹo ở khối thu gọn riêng.
+- Mục Nghe & đọc: dưới mỗi hội thoại có liên kết xem từ, điểm chính liên quan và câu hỏi ngắn sau khi nghe của chính hội thoại đó.
+- Mục Luyện tập: đầu mục có thẻ 3 khu A/B/C với nút cuộn tới từng khu; bộ mô phỏng giữ thẻ riêng như D21. Quy tắc render Pinyin/nghĩa trước/sau khi chấm theo CONTENT_STANDARD D23.
+- Mục Tự nói: nhiệm vụ tách riêng từng khối (tình huống, mẫu + loa, từ thay, nút đã luyện có `aria-pressed`); ghi rõ app không chấm nói.
+- Mục Tổng kết: khối 3 điều chính (khi có `summaryPoints`), trạng thái chưa làm bài tập trung thực, nút tiếp tục mục chưa xong, chi tiết gợi ý/hỗ trợ trong phần thu gọn.
+- Kiểm tra bề rộng bắt buộc giữ nguyên 360/390/768/1440; vùng chạm ≥44px cho nút mới; trạng thái đúng/sai của "Thử ngay" có chữ, không chỉ màu.

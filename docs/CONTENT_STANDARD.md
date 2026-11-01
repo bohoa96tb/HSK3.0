@@ -235,3 +235,14 @@ Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê 
 6. **Tài nguyên web riêng, đã tối ưu.** Ảnh phát hành lưu thành file WebP riêng dưới `assets/lesson-NN/`, tối ưu cho web; tuyệt đối không nhúng toàn bộ hình vào một file HTML lớn (file gộp chỉ dùng cho nghiệm thu nội bộ).
 7. **Hiển thị không lộ đáp án.** Với lựa chọn là hình, nhãn chữ của hình chỉ hiện sau khi đã kiểm tra (như quy tắc hỗ trợ Mục 5: không lộ đáp án trước khi chấm).
 8. **Kiểm mốc đoạn audio.** Mọi đoạn loa theo đơn vị phải kiểm điểm bắt đầu/kết thúc bằng ASR mức từ và/hoặc phân tích khoảng lặng (từ đọc hai lần lấy lần đọc đầu), siết mốc khi lệch; trước phát hành phải thử phát các đoạn trên trình duyệt Chromium/Chrome thông thường. Chưa nghe bằng tai người và chưa thử trên điện thoại Android thật thì giữ `asr-draft` và ghi rõ giới hạn trong báo cáo — không tuyên bố đã kiểm nghe.
+
+## Bổ sung D23 (02/11/2026) — Tổ chức bài học thí điểm, Pinyin trong bài tập, trạng thái học
+
+Áp dụng đã triển khai cho Bài 8; bài khác chỉ áp dụng khi làm thật từng bài:
+1. **Lộ trình theo tình huống:** mỗi bài có thể có `learningPath` (các bước theo tình huống, trỏ về 7 mục/route cũ). Không đổi route/ID vì lộ trình; liên kết sâu cũ phải tiếp tục chạy. Không bắt buộc làm hết luyện thêm/đề mô phỏng mới được đi tiếp.
+2. **Từ mới theo hội thoại:** nhóm từ theo đúng hội thoại/trang/track nguồn của sách, ghi rõ cách đếm (ví dụ "23 từ mới + 1 tên riêng"); mỗi nhóm có nút nghe cả nhóm bằng track gốc; loa từng từ là giọng máy của thiết bị và phải ghi rõ, không giới thiệu là giọng gốc; không cắt track từ mới thành đoạn từng từ.
+3. **Ba điểm chính:** phần Hiểu cách dùng trình bày tối đa các điểm chính của bài bằng lời đơn giản (Khi nào dùng → Mẫu → Ví dụ → Thử ngay → Xem thêm). Mẹo dùng tiếng đặt ở khối riêng cạnh ngữ cảnh, không tính là điểm chính. Kiến thức nền (phát âm, viết chữ) ở khối nền/luyện thêm.
+4. **Pinyin trong bài tập (thay quy tắc hiển thị của ux3):** bài tập thường không render Pinyin/nghĩa của đề và lựa chọn trước khi chấm; sau khi chấm hiện theo công tắc. Bài luyện âm là ngoại lệ duy nhất và phải ghi nhãn rõ; phần nghĩa/giải thích làm lộ phân loại đáp án vẫn ẩn trước khi chấm. Bật hỗ trợ khi chưa chấm vẫn ghi `supportUsed`.
+5. **Ba khu bài tập:** A Luyện sau bài (chính) / B Luyện thêm (tự đối chiếu, ghi rõ có chấm tự động hay không) / C Đề mô phỏng (điểm và session riêng, không tự khởi động, không bắt buộc).
+6. **Trạng thái học:** "Đã xem" = đã mở/tự đánh dấu mục; "Đã luyện" = đã hoàn thành hoạt động tương ứng (với tự nói là tự đánh dấu đã luyện); "Cần ôn" = có câu/ô sai trong hàng đợi ôn. Không dùng "đã nắm vững" cho thao tác bấm nút hoặc mở trang. Khi chưa làm bài tập, tổng kết hiện "Bạn chưa làm bài tập".
+7. **Tương thích dữ liệu cũ:** nâng cấp hiển thị không đổi ID, đáp án, session, điểm lần đầu hay hàng đợi ôn; trường progress mới phải là khóa cộng thêm tùy chọn, dữ liệu cũ thiếu trường đó phải chạy bình thường.

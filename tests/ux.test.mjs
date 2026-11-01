@@ -9,14 +9,14 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   const count = (arr) => arr.reduce((a, x) => [a[0] + (x.audio ? 1 : 0), a[1] + 1], [0, 0]);
   const sentences = lessons.flatMap((c) => c.reader.sentences);
   const segOf = (c, sen) => c.reader.audioTracks.find((t) => t.id === c.reader.passages.find((g) => g.id === sen.passageId)?.audioTrackId)?.segments?.find((x) => x.sentenceId === sen.id);
-  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 63); // all dialogue turns
+  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 77); // all dialogue turns
   const [prepOk, prepAll] = count(lessons.flatMap((c) => c.prepWords));
-  assert.deepEqual([prepOk, prepAll], [86, 88]); // 大家 (L1) and 吗 (L3) have no confident segment
+  assert.deepEqual([prepOk, prepAll], [108, 110]); // 大家 (L1) and 吗 (L3) have no confident segment
   const [foundOk, foundAll] = count(lessons.flatMap((c) => c.foundationWords));
-  assert.deepEqual([foundOk, foundAll], [53, 58]); // 雨/五/一/椅子 (L2) and 嘴 (L3) tokens not reliably identifiable
+  assert.deepEqual([foundOk, foundAll], [64, 71]); // 雨/五/一/椅子 (L2), 嘴 (L3) and 盖儿/个儿 (L6) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [76, 90]); // 2026-11-01 fix round: 15 Lesson 4-5 text options + 20 comprehensive-bank options gained honest token-level segments; the rest still have none
+  assert.deepEqual([optOk, optAll], [106, 127]); // token-level option segments where the exact option is read in the lesson's dialogue tracks; the rest still have none
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

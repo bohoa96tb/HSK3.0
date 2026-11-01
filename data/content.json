@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson4-1",
+  "contentVersion": "20261101-lesson5-1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -29,7 +29,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24), Bài 3 (trang in 010–015, PDF 25–30) và Bài 4 (trang in 018–025, PDF 33–40): đối chiếu mục tiêu, 3 hội thoại, 21 từ mới, 4 điểm Tiểu Ngữ giảng đường （有/ số từ / 呢 / lượng từ) và câu hỏi hiểu hội thoại in sau Hội thoại 2–3. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
+      "verification": "Đã tải PDF 144 trang và đọc trực quan Bài 1 (trang in 001–004, PDF 16–19), Bài 2 (trang in 005–009, PDF 20–24), Bài 3 (trang in 010–015, PDF 25–30), Bài 4 (trang in 018–025, PDF 33–40) và Bài 5 (trang in 027–034, PDF 42–49): đối chiếu mục tiêu, 3 hội thoại, 22 từ mới, 3 điểm Tiểu Ngữ giảng đường (thời gian (1) / câu vị ngữ danh từ / động từ năng nguyện 会） và câu hỏi nghe hiểu in trước Hội thoại 2–3. Audio đối ứng theo ký hiệu in trong sách; chưa nghe xác minh từng câu."
     },
     {
       "id": "src-hsk1-workbook-pdf",
@@ -38,7 +38,7 @@
       "url": "https://cdn.baulchino.com/new-hsk-books/hsk-course-1-workbook.pdf",
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
-      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2, trang in 009–012 (PDF 16–19) cho Bài 3 và trang in 013–018 (PDF 20–25) cho Bài 4: biến điệu thanh 3, thanh nhẹ, 12 từ kèm hình, bài nghe chọn âm tiết (8 cặp) và các bài đọc theo; phần Mô phỏng kiểm tra (tr. in 016–018) là bài tích lũy nhiều bài, không thuộc nội dung Bài 4 trong app (D15). Đáp án nghe đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
+      "verification": "Đã đối chiếu trang in 001–004 (PDF 8–11) cho Bài 1, trang in 005–008 (PDF 12–15) cho Bài 2, trang in 009–012 (PDF 16–19) cho Bài 3, trang in 013–018 (PDF 20–25) cho Bài 4 và trang in 022–024 (PDF 29–31) cho Bài 5: biến điệu của 不 và 一， bài nghe chọn âm tiết (8 cặp) và hai bài đọc theo biến điệu; phần Mô phỏng kiểm tra của Bài 4 (tr. in 016–018) và Bài 5 (tr. in 025–030) là bài tích lũy nhiều bài, không thuộc nội dung từng bài trong app (D15). Đáp án nghe đối chiếu tài liệu lời đọc đăng lại + ASR (xem nguồn lời đọc); sách in không in đáp án."
     },
     {
       "id": "src-hsk1-writing-pdf",
@@ -57,7 +57,7 @@
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
       "rightsEvidence": "Bản đăng lại bởi người dùng Scribd; không có tuyên bố giấy phép và chưa xác nhận đây là kênh của NXB FLTRP.",
-      "verification": "Đã đọc trực quan các phần Bài 1 (trang in 002), Bài 2 (005–006), Bài 3 (008) và Bài 4 (010) trong bản hiển thị của tài liệu: dãy âm tiết đọc cho các bài nghe–viết Bài 1–3 và 8 âm tiết được đọc của bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng)."
+      "verification": "Đã đọc trực quan các phần Bài 1 (trang in 002), Bài 2 (005–006), Bài 3 (008), Bài 4 (010) và Bài 5 (013) trong bản hiển thị của tài liệu: dãy âm tiết đọc cho các bài nghe–viết Bài 1–3, 8 âm tiết được đọc của bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng) và 8 âm tiết của Bài 5 (gē, qiǎng, sóng, nìng, jiā, cuàn, tōu, shí)."
     },
     {
       "id": "src-wb-answer-key",
@@ -67,7 +67,7 @@
       "retrievedAt": "2026-11-01",
       "rightsStatus": "unknown",
       "rightsEvidence": "Bản đăng lại bởi người dùng Scribd (bản 1044886104 là cùng một tài liệu, không tính là nguồn độc lập); chưa xác nhận kênh chính thức của NXB.",
-      "verification": "Đã đối chiếu đáp án chọn hình Bài 1 (①③②), Bài 2 (③①④②), Bài 3 (③④①②) và đáp án bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng — khớp hoàn toàn tài liệu lời đọc) trong bản hiển thị của tài liệu. Tài liệu này không in đáp án nghe–viết của Bài 1–3."
+      "verification": "Đã đối chiếu đáp án chọn hình Bài 1 (①③②), Bài 2 (③①④②), Bài 3 (③④①②) và đáp án bài chọn âm tiết Bài 4 (pā, zì, láng, jǔ, mén, rù, kè, qǐng — khớp hoàn toàn tài liệu lời đọc) trong bản hiển thị của tài liệu. Tài liệu này không in đáp án nghe–viết của Bài 1–3; với Bài 5, mục 听读练 bài 1 chỉ liệt kê số thứ tự trống, không in đáp án âm tiết (đáp án Bài 5 lấy theo tài liệu lời đọc, trang in 013). Đáp án 模拟测练 Bài 5 có in đầy đủ (nghe 1–10: C A B A B C B D B B; đọc 11–20: D C B C B D A B C B) — chỉ ghi nhận cho hồ sơ, phần này không vào app theo D15."
     },
     {
       "id": "src-hanviet-thivien",
@@ -328,28 +328,48 @@
     },
     {
       "id": "hsk1-l05",
-      "bookId": "book-hsk1-workbook",
+      "bookId": "book-hsk1-textbook",
       "level": "HSK 1",
       "sourceUnit": "Lesson 05",
       "lessonNumber": 5,
       "titleZh": "今天我休息",
       "titleEn": "I'm off today",
       "titleVi": "Hôm nay tôi nghỉ",
-      "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+      "titleProvenance": "Đối chiếu tên Bài 5 ở Textbook trang in 027 và Workbook trang in 022 — cả hai đều là 今天我休息 / I'm off today.",
       "sourceRefs": [
+        {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 42,
+          "printedPage": 27,
+          "section": "Bài 5 · mục tiêu và khởi động"
+        },
         {
           "sourceId": "src-hsk1-workbook-pdf",
           "pdfPage": 29,
           "printedPage": 22,
-          "section": "目录 Contents (mục lục)"
+          "section": "Bài 5 · 语音"
         }
       ],
       "textbookAudioTrackCount": 6,
       "workbookAudioTrackCount": 3,
-      "publicationStatus": "catalogue-only",
-      "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-      "grammarIds": [],
-      "sectionIds": []
+      "publicationStatus": "pilot-ready",
+      "publicationNote": "Nói ngày tháng và thứ, câu vị ngữ danh từ, động từ năng nguyện 会； kèm biến điệu của 不/一 và bài tập sách.",
+      "grammarIds": [
+        "kp-hsk1-l05-time",
+        "kp-hsk1-l05-nominal-predicate",
+        "kp-hsk1-l05-hui",
+        "kp-hsk1-l05-bu-sandhi",
+        "kp-hsk1-l05-yi-sandhi"
+      ],
+      "sectionIds": [
+        "intro",
+        "prep",
+        "knowledge",
+        "reader",
+        "exercises",
+        "apply",
+        "summary"
+      ]
     },
     {
       "id": "hsk1-l06",
@@ -8642,6 +8662,1930 @@
             "trackId": "trk-wb-l04-1",
             "start": 180.8,
             "end": 182.6,
+            "status": "asr-draft"
+          }
+        }
+      ]
+    },
+    {
+      "lessonId": "hsk1-l05",
+      "intro": {
+        "goalVi": "Nói ngày tháng và thứ theo thứ tự tiếng Trung, nói \"biết làm\" việc gì bằng 会， và dùng câu vị ngữ danh từ cho ngày tháng, tuổi.",
+        "estimatedMinutes": 25,
+        "sections": [
+          {
+            "id": "intro",
+            "titleVi": "Bắt đầu"
+          },
+          {
+            "id": "prep",
+            "titleVi": "Từ cần biết"
+          },
+          {
+            "id": "knowledge",
+            "titleVi": "Hiểu cách dùng"
+          },
+          {
+            "id": "reader",
+            "titleVi": "Nghe & đọc"
+          },
+          {
+            "id": "exercises",
+            "titleVi": "Luyện tập"
+          },
+          {
+            "id": "apply",
+            "titleVi": "Tự nói"
+          },
+          {
+            "id": "summary",
+            "titleVi": "Tổng kết"
+          }
+        ],
+        "leadVi": "Từ gia đình ở Bài 4, sang lịch và ngày nghỉ: hôm nay ngày mấy, thứ mấy, ai biết nấu ăn.",
+        "outcomesVi": [
+          "Nói ngày tháng theo thứ tự năm → tháng → ngày → thứ: 今天9月8号，星期日。",
+          "Hỏi và đáp ngày/thứ: 今天几号？— 今天9月8号。星期几？— 星期日。",
+          "Nói khả năng học được bằng 会： 我会做饭。/ 我不会做菜。",
+          "Nói về ngày nghỉ và đồ vật mới: 今天我休息。/ 这是我的新电脑。"
+        ],
+        "contextImage": {
+          "src": "assets/lesson-05/classroom.webp",
+          "alt": "Dương Đồng Lạc ngồi trước máy tính mới, Vương Nhất Tuyết đứng cạnh — hình trích từ Textbook Bài 5",
+          "caption": "Ở công ty · Textbook, trang 032",
+          "width": 685,
+          "height": 738
+        },
+        "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (biến điệu của 不 và 一） là kiến thức bổ trợ, bạn có thể mở khi cần.",
+        "foundationSummaryVi": "Ôn phát âm nền tảng: biến điệu của 不 và biến điệu của 一",
+        "courseTagsVi": "Ngày tháng & thứ · Câu vị ngữ danh từ · 会",
+        "priorLessonNoteVi": "Bài này dùng lại 几/几岁 và câu chữ 有 ở Bài 4, mở rộng sang ngày tháng và khả năng biết làm việc gì.",
+        "priorLessonId": "hsk1-l04"
+      },
+      "prepWords": [
+        {
+          "id": "l05w-1",
+          "zh": "今天",
+          "pinyin": "jīntiān",
+          "vi": "hôm nay",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "KIM THIÊN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 0.0,
+            "end": 1.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-2",
+          "zh": "号",
+          "pinyin": "hào",
+          "vi": "ngày (trong tháng)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "HÀO",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Từ điển còn ghi âm \"hiệu\" cho chữ này (như trong \"số hiệu\"); trong bài nó đọc \"hào\" với nghĩa ngày trong tháng nên âm Hán–Việt lấy là \"hào\".",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 2.9,
+            "end": 3.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-3",
+          "zh": "月",
+          "pinyin": "yuè",
+          "vi": "tháng",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "NGUYỆT",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 5.2,
+            "end": 6.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-4",
+          "zh": "日",
+          "pinyin": "rì",
+          "vi": "ngày",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "NHẬT",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 8.0,
+            "end": 9.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-5",
+          "zh": "星期",
+          "pinyin": "xīngqī",
+          "vi": "tuần; thứ (trong tuần)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "TINH KỲ",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chữ 期 có nhiều âm Hán–Việt ứng viên (cơ, ki, kỳ); trong 星期 nó đọc \"qī\" nên lấy âm \"kỳ\".",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 9.7,
+            "end": 11.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-6",
+          "zh": "星期日",
+          "pinyin": "Xīngqīrì",
+          "vi": "chủ nhật",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "TINH KỲ NHẬT",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 12.6,
+            "end": 14.7,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-7",
+          "zh": "星期天",
+          "pinyin": "Xīngqītiān",
+          "vi": "chủ nhật",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "TINH KỲ THIÊN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 16.5,
+            "end": 18.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-8",
+          "zh": "休息",
+          "pinyin": "xiūxi",
+          "vi": "nghỉ ngơi; nghỉ",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "生词 · Từ mới 5-2"
+            }
+          ],
+          "hanViet": "HƯU TỨC",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-2",
+            "start": 20.4,
+            "end": 21.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-9",
+          "zh": "会",
+          "pinyin": "huì",
+          "vi": "biết (làm việc gì, do học mà biết)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "HỘI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 0.0,
+            "end": 0.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-10",
+          "zh": "做饭",
+          "pinyin": "zuò fàn",
+          "vi": "nấu ăn, nấu cơm",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "TỐ PHẠN",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Âm Hán–Việt của 做 là \"tố\" — âm này ít gặp trong tiếng Việt hiện nay, đừng nhầm với nghĩa \"làm\" của chính từ.",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 2.4,
+            "end": 5.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-11",
+          "zh": "做",
+          "pinyin": "zuò",
+          "vi": "làm",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "TỐ",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Âm Hán–Việt của 做 là \"tố\" — âm này ít gặp trong tiếng Việt hiện nay, đừng nhầm với nghĩa \"làm\" của chính từ.",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 5.8,
+            "end": 6.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-12",
+          "zh": "面条儿",
+          "pinyin": "miàntiáor",
+          "vi": "mì sợi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "DIỆN ĐIỀU NHI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 7.8,
+            "end": 10.9,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-13",
+          "zh": "饺子",
+          "pinyin": "jiǎozi",
+          "vi": "sủi cảo",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "GIẢO TỬ",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 11.4,
+            "end": 13.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-14",
+          "zh": "一些",
+          "pinyin": "yìxiē",
+          "vi": "một ít, một vài",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "NHẤT TA",
+          "hanVietStatus": "verified-editorial",
+          "hanVietNoteVi": "Chữ 些 âm Hán–Việt là \"ta\" (một chút, một ít) — âm cổ, ít gặp ngoài văn viết xưa.",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 13.8,
+            "end": 15.0,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-15",
+          "zh": "菜",
+          "pinyin": "cài",
+          "vi": "món ăn",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "生词 · Từ mới 5-4"
+            }
+          ],
+          "hanViet": "THÁI",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-4",
+            "start": 15.0,
+            "end": 17.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-16",
+          "zh": "下班",
+          "pinyin": "xiàbān",
+          "vi": "tan làm",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "HẠ BAN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 0.0,
+            "end": 1.1,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-17",
+          "zh": "新",
+          "pinyin": "xīn",
+          "vi": "mới",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "TÂN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 3.0,
+            "end": 3.7,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-18",
+          "zh": "电脑",
+          "pinyin": "diànnǎo",
+          "vi": "máy tính",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "ĐIỆN NÃO",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 5.0,
+            "end": 8.1,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-19",
+          "zh": "真",
+          "pinyin": "zhēn",
+          "vi": "thật; rất",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "CHÂN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 8.1,
+            "end": 8.7,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-20",
+          "zh": "好看",
+          "pinyin": "hǎokàn",
+          "vi": "đẹp, dễ nhìn",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "HẢO KHÁN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 10.2,
+            "end": 11.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-21",
+          "zh": "喜欢",
+          "pinyin": "xǐhuan",
+          "vi": "thích",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "HỶ HOAN",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 13.2,
+            "end": 14.2,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05w-22",
+          "zh": "它",
+          "pinyin": "tā",
+          "vi": "nó (chỉ vật)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 32,
+              "section": "生词 · Từ mới 5-6"
+            }
+          ],
+          "hanViet": "THA",
+          "hanVietStatus": "verified-editorial",
+          "audio": {
+            "trackId": "trk-tb-l05-6",
+            "start": 15.9,
+            "end": 16.6,
+            "status": "asr-draft"
+          }
+        }
+      ],
+      "knowledgePoints": [
+        {
+          "id": "kp-hsk1-l05-time",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Thời gian (1): thứ tự năm → tháng → ngày → thứ",
+          "explanationVi": "Sách nêu: thứ tự nói ngày tháng và thứ trong tiếng Trung là: năm → tháng → ngày （日/号） → thứ. Ngày nói bằng số + 月 + số + 号 (hoặc 日）: 9月8号. Thứ nói bằng 星期 + số （星期一…星期六）, riêng chủ nhật là 星期日 hoặc 星期天. Hỏi ngày bằng 几号， hỏi thứ bằng 星期几.",
+          "pattern": "Năm + tháng （月） + ngày （号/日） + thứ （星期…)",
+          "examples": [
+            {
+              "zh": "1992年5月16日/号，星期六",
+              "pinyin": "yī jiǔ jiǔ èr nián wǔ yuè shíliù rì/hào, Xīngqīliù",
+              "noteVi": "thứ bảy, ngày 16 tháng 5 năm 1992 — câu luyện đọc của sách"
+            },
+            {
+              "zh": "2024年10月22日/号，星期二",
+              "pinyin": "èr líng èr sì nián shí yuè èrshí'èr rì/hào, Xīngqī'èr",
+              "noteVi": "thứ ba, ngày 22 tháng 10 năm 2024 — câu luyện đọc của sách"
+            },
+            {
+              "zh": "今天9月8号。",
+              "pinyin": "Jīntiān jiǔ yuè bā hào.",
+              "noteVi": "Hôm nay là ngày 8 tháng 9 — trong Hội thoại 1"
+            },
+            {
+              "zh": "明天是2024年8月18号，星期天。",
+              "pinyin": "Míngtiān shì èr líng èr sì nián bā yuè shíbā hào, Xīngqītiān.",
+              "noteVi": "Ngày mai là chủ nhật, ngày 18 tháng 8 năm 2024 — ví dụ của sách"
+            }
+          ],
+          "positionVi": "Luôn đi từ lớn xuống nhỏ (năm trước, thứ sau cùng) — ngược với thứ tự ngày/tháng/năm của tiếng Việt.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 44,
+              "printedPage": 29,
+              "section": "小语讲堂 1 · 时间的表达（1）"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 43,
+              "printedPage": 28,
+              "section": "课文 1"
+            }
+          ],
+          "sentenceIds": [
+            "l05-s1",
+            "l05-s2",
+            "l05-s3",
+            "l05-s4"
+          ],
+          "exerciseIds": [
+            "wb5-text-2"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l05-nominal-predicate",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Câu vị ngữ danh từ: nói ngày tháng, tuổi không cần 是",
+          "explanationVi": "Sách nêu: trong câu vị ngữ danh từ, phần vị ngữ chỉ gồm danh từ hoặc cụm danh từ; loại câu này thường dùng để nói thời gian, ngày tháng, tuổi… Vì vậy nói 今天9月8号 (hôm nay [là] ngày 8 tháng 9) và 我妹妹12岁 (em gái tôi 12 tuổi) mà không cần động từ 是. Sách vẫn có câu dùng 是 khi nêu cả ngày lẫn thứ: 明天是2024年8月18号，星期天.",
+          "pattern": "Chủ ngữ + danh từ/cụm danh từ (ngày tháng, tuổi) — thường không dùng 是",
+          "examples": [
+            {
+              "zh": "今天5月1号。",
+              "pinyin": "Jīntiān wǔ yuè yī hào.",
+              "noteVi": "Hôm nay là ngày 1 tháng 5 — câu luyện đọc của sách"
+            },
+            {
+              "zh": "我妹妹12岁。",
+              "pinyin": "Wǒ mèimei shí'èr suì.",
+              "noteVi": "Em gái tôi 12 tuổi — câu luyện đọc của sách"
+            },
+            {
+              "zh": "今天9月8号。",
+              "pinyin": "Jīntiān jiǔ yuè bā hào.",
+              "noteVi": "Hôm nay là ngày 8 tháng 9 — trong Hội thoại 1"
+            }
+          ],
+          "positionVi": "Vị ngữ danh từ đứng ngay sau chủ ngữ/ngữ cảnh thời gian; đừng tự thêm 是 vào mọi câu ngày tháng.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 44,
+              "printedPage": 29,
+              "section": "小语讲堂 2 · 名词谓语句"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 45,
+              "printedPage": 30,
+              "section": "小语讲堂 2 · câu luyện đọc"
+            }
+          ],
+          "sentenceIds": [
+            "l05-s2"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l05-hui",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp cơ bản",
+          "title": "Động từ năng nguyện 会： biết làm việc gì (do học mà biết)",
+          "explanationVi": "Sách nêu: 会 đặt trước động từ, chỉ việc biết làm một việc hoặc có khả năng làm việc đó nhờ học mà có. Phủ định là 不会： 我不会做菜 (tôi không biết làm món ăn). Hỏi bằng câu hỏi 吗 （你会做饭吗？) hoặc hỏi nội dung bằng 做什么.",
+          "pattern": "Chủ ngữ + 会/不会 + động từ (+ tân ngữ)",
+          "examples": [
+            {
+              "zh": "你会做饭吗？",
+              "pinyin": "Nǐ huì zuò fàn ma?",
+              "noteVi": "Bạn biết nấu ăn không? — trong Hội thoại 2"
+            },
+            {
+              "zh": "我会做面条儿。",
+              "pinyin": "Wǒ huì zuò miàntiáor.",
+              "noteVi": "Tôi biết làm mì sợi — câu luyện đọc của sách"
+            },
+            {
+              "zh": "我不会做菜。",
+              "pinyin": "Wǒ bú huì zuò cài.",
+              "noteVi": "Tôi không biết làm món ăn — câu luyện đọc của sách (chú ý 不 đọc thành bú trước thanh 4)"
+            }
+          ],
+          "positionVi": "会 đứng ngay trước động từ chính; phủ định 不会 liền trước động từ, không đặt 不 sau 会.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 31,
+              "section": "小语讲堂 3 · 能愿动词“会”"
+            },
+            {
+              "sourceId": "src-hsk1-textbook-pdf",
+              "pdfPage": 45,
+              "printedPage": 30,
+              "section": "课文 2"
+            }
+          ],
+          "sentenceIds": [
+            "l05-s5",
+            "l05-s6",
+            "l05-s7",
+            "l05-s8"
+          ],
+          "exerciseIds": [
+            "wb5-text-1"
+          ]
+        },
+        {
+          "id": "kp-hsk1-l05-bu-sandhi",
+          "kind": "foundation-pronunciation",
+          "kindLabel": "Phát âm nền tảng",
+          "title": "Biến điệu của 不： trước thanh 4 đọc thành thanh 2",
+          "explanationVi": "Workbook Bài 5: 不 (bù) dùng một mình hoặc đứng trước âm tiết thanh 1, 2, 3 thì giữ nguyên thanh 4; đứng trước âm tiết thanh 4 thì đọc thành thanh 2 (bú), Pinyin trong sách vẫn ghi bù ở dạng gốc. Ví dụ của sách: 不是 bú shì, 不会 bú huì, 不大 bú dà, 不对 bú duì.",
+          "pattern": "不 bù + thanh 4 → đọc bú + thanh 4 (trước thanh 1/2/3 giữ bù)",
+          "examples": [
+            {
+              "zh": "不是",
+              "pinyin": "bù → bú shì",
+              "noteVi": "không phải — bảng biến điệu trang in 022",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 59.3,
+                "end": 60.6,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "不会",
+              "pinyin": "bù → bú huì",
+              "noteVi": "không biết — bảng biến điệu trang in 022",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 63.1,
+                "end": 64.5,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "不大",
+              "pinyin": "bù → bú dà",
+              "noteVi": "không lớn — bảng biến điệu trang in 022",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 66.0,
+                "end": 67.5,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "不对",
+              "pinyin": "bù → bú duì",
+              "noteVi": "không đúng — bảng biến điệu trang in 022",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 69.1,
+                "end": 70.5,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "Bảng biến điệu và dãy luyện đọc in ở Workbook trang in 022–024; nghe và đọc theo track Workbook 5-1 và 5-2.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 1 “不”的变调"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk1-l05-yi-sandhi",
+          "kind": "foundation-pronunciation",
+          "kindLabel": "Phát âm nền tảng",
+          "title": "Biến điệu của 一： trước thanh 1/2/3 đọc thanh 4, trước thanh 4 đọc thanh 2",
+          "explanationVi": "Workbook Bài 5: 一 (yī) dùng một mình hoặc làm số thứ tự thì không đổi thanh. Hai trường hợp đổi: (1) đứng trước âm tiết thanh 1, 2 hoặc 3 thì đọc thành thanh 4 (yì): 一些 yìxiē, 一年 yìnián, 一口 yìkǒu; (2) đứng trước âm tiết thanh 4 thì đọc thành thanh 2 (yí): 一个 yígè, 一日 yírì, 一岁 yísuì.",
+          "pattern": "一 yī + thanh 1/2/3 → yì · 一 yī + thanh 4 → yí · đứng một mình/số thứ tự: giữ yī",
+          "examples": [
+            {
+              "zh": "一些",
+              "pinyin": "yī → yì xiē",
+              "noteVi": "một ít — bảng biến điệu trang in 023",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 96.8,
+                "end": 98.8,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "一年",
+              "pinyin": "yī → yì nián",
+              "noteVi": "một năm — bảng biến điệu trang in 023",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 100.4,
+                "end": 102.5,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "一个",
+              "pinyin": "yī → yí gè",
+              "noteVi": "một cái — bảng biến điệu trang in 023",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 125.1,
+                "end": 127.8,
+                "status": "asr-draft"
+              }
+            },
+            {
+              "zh": "一岁",
+              "pinyin": "yī → yí suì",
+              "noteVi": "một tuổi — bảng biến điệu trang in 023",
+              "audio": {
+                "trackId": "trk-wb-l05-1",
+                "start": 132.8,
+                "end": 134.6,
+                "status": "asr-draft"
+              }
+            }
+          ],
+          "positionVi": "Bảng biến điệu in ở Workbook trang in 022–023; dãy luyện đọc ở trang in 024; nghe và đọc theo track Workbook 5-1 và 5-2.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 2 “一”的变调"
+            },
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 2 · hai trường hợp biến điệu"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        }
+      ],
+      "reader": {
+        "passageId": "psg-tb-l05",
+        "titleVi": "Hội thoại Textbook Bài 5",
+        "headingVi": "Ngày tháng, ngày nghỉ và khả năng",
+        "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+        "sentences": [
+          {
+            "id": "l05-s1",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "今天几号？",
+            "pinyin": "Jīntiān jǐ hào?",
+            "vi": "Hôm nay là ngày mấy?",
+            "passageId": "l05-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-1",
+              "start": 0.0,
+              "end": 1.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s2",
+            "speaker": "Lưu Minh",
+            "zh": "今天9月8号。",
+            "pinyin": "Jīntiān jiǔ yuè bā hào.",
+            "vi": "Hôm nay là ngày 8 tháng 9.",
+            "passageId": "l05-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-1",
+              "start": 1.9,
+              "end": 4.5,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s3",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "星期几？",
+            "pinyin": "Xīngqī jǐ?",
+            "vi": "Thứ mấy?",
+            "passageId": "l05-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-1",
+              "start": 4.5,
+              "end": 5.4,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s4",
+            "speaker": "Lưu Minh",
+            "zh": "星期日。今天我休息。",
+            "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+            "vi": "Chủ nhật. Hôm nay tôi nghỉ.",
+            "passageId": "l05-dialogue-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-1",
+              "start": 5.9,
+              "end": 9.4,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s5",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "你会做饭吗？",
+            "pinyin": "Nǐ huì zuò fàn ma?",
+            "vi": "Bạn biết nấu ăn không?",
+            "passageId": "l05-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-3",
+              "start": 0.0,
+              "end": 1.62,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s6",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "我会做。",
+            "pinyin": "Wǒ huì zuò.",
+            "vi": "Tôi biết nấu.",
+            "passageId": "l05-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-3",
+              "start": 1.62,
+              "end": 3.36,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s7",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "你会做什么？",
+            "pinyin": "Nǐ huì zuò shénme?",
+            "vi": "Bạn biết làm món gì?",
+            "passageId": "l05-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-3",
+              "start": 3.99,
+              "end": 5.14,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s8",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "我会做面条儿、饺子，也会做一些菜。星期天我也做饭。",
+            "pinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài. Xīngqītiān wǒ yě zuò fàn.",
+            "vi": "Tôi biết làm mì sợi, sủi cảo, cũng biết làm một vài món ăn. Chủ nhật tôi cũng nấu ăn.",
+            "passageId": "l05-dialogue-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-3",
+              "start": 5.76,
+              "end": 12.18,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s9",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "同乐，下班吗？",
+            "pinyin": "Tónglè, xiàbān ma?",
+            "vi": "Đồng Lạc, tan làm rồi à?",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 0.4,
+              "end": 2.26,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s10",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "下班。",
+            "pinyin": "Xiàbān.",
+            "vi": "Tan làm rồi.",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 2.26,
+              "end": 3.24,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s11",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "这是你的新电脑吗？",
+            "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
+            "vi": "Đây là máy tính mới của bạn à?",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 3.94,
+              "end": 5.9,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s12",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "是的，是我的新电脑。",
+            "pinyin": "Shì de, shì wǒ de xīn diànnǎo.",
+            "vi": "Đúng vậy, là máy tính mới của tôi.",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 5.9,
+              "end": 8.78,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s13",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "真好看！",
+            "pinyin": "Zhēn hǎokàn!",
+            "vi": "Đẹp thật!",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 8.78,
+              "end": 10.02,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "l05-s14",
+            "speaker": "Dương Đồng Lạc",
+            "zh": "我也很喜欢它。",
+            "pinyin": "Wǒ yě hěn xǐhuan tā.",
+            "vi": "Tôi cũng rất thích nó.",
+            "passageId": "l05-dialogue-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb-l05-5",
+              "start": 10.02,
+              "end": 11.74,
+              "status": "asr-draft"
+            }
+          }
+        ],
+        "vocab": [],
+        "audioTracks": [
+          {
+            "id": "trk-wb-l05-1",
+            "label": "Track 5-1 · Pronunciation (phát âm)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-05/05-1.mp3",
+            "durationSec": 136.7,
+            "bookRef": "Workbook Bài 5, phần 一、语音, ký hiệu track 5-1 in ở trang in 022",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-wb-l05-2",
+            "label": "Track 5-2 · Listen, Read, and Practice (nghe – đọc – luyện)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-05/05-2.mp3",
+            "durationSec": 182.5,
+            "bookRef": "Workbook Bài 5, phần 二、听读练, ký hiệu track 5-2 in ở trang in 023",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-01 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb-l05-1",
+            "label": "Hội thoại 1 · Hôm nay ngày mấy?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-1.mp3",
+            "durationSec": 9.729,
+            "bookRef": "Textbook · track 5-1",
+            "segments": [
+              {
+                "sentenceId": "l05-s1",
+                "start": 0.0,
+                "end": 1.7,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s2",
+                "start": 1.9,
+                "end": 4.5,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s3",
+                "start": 4.5,
+                "end": 5.4,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s4",
+                "start": 5.9,
+                "end": 9.4,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l05-3",
+            "label": "Hội thoại 2 · Bạn biết nấu ăn không?",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-3.mp3",
+            "durationSec": 13.143,
+            "bookRef": "Textbook · track 5-3",
+            "segments": [
+              {
+                "sentenceId": "l05-s5",
+                "start": 0.0,
+                "end": 1.62,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s6",
+                "start": 1.62,
+                "end": 3.36,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s7",
+                "start": 3.99,
+                "end": 5.14,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s8",
+                "start": 5.76,
+                "end": 12.18,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l05-5",
+            "label": "Hội thoại 3 · Máy tính mới",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-5.mp3",
+            "durationSec": 12.7,
+            "bookRef": "Textbook · track 5-5",
+            "segments": [
+              {
+                "sentenceId": "l05-s9",
+                "start": 0.4,
+                "end": 2.26,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s10",
+                "start": 2.26,
+                "end": 3.24,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s11",
+                "start": 3.94,
+                "end": 5.9,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s12",
+                "start": 5.9,
+                "end": 8.78,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s13",
+                "start": 8.78,
+                "end": 10.02,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "l05-s14",
+                "start": 10.02,
+                "end": 11.74,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l05-2",
+            "label": "Từ mới · Hội thoại 1",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-2.mp3",
+            "durationSec": 23.464,
+            "bookRef": "Textbook · track 5-2 · 生词 Hội thoại 1",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l05-4",
+            "label": "Từ mới · Hội thoại 2",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-4.mp3",
+            "durationSec": 19.398,
+            "bookRef": "Textbook · track 5-4 · 生词 Hội thoại 2",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 31,
+                "section": "课文 2 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-tb-l05-6",
+            "label": "Từ mới · Hội thoại 3",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-05/05-6.mp3",
+            "durationSec": 18.408,
+            "bookRef": "Textbook · track 5-6 · 生词 Hội thoại 3",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3 · 生词"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          }
+        ],
+        "passages": [
+          {
+            "id": "l05-dialogue-1",
+            "title": "Hôm nay ngày mấy?",
+            "context": "Ở nhà, Lưu Minh và Vương Nhất Tuyết đang trò chuyện.",
+            "audioTrackId": "trk-tb-l05-1",
+            "sentenceIds": [
+              "l05-s1",
+              "l05-s2",
+              "l05-s3",
+              "l05-s4"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 43,
+                "printedPage": 28,
+                "section": "课文 1"
+              }
+            ]
+          },
+          {
+            "id": "l05-dialogue-2",
+            "title": "Bạn biết nấu ăn không?",
+            "context": "Ở công ty, Vương Nhất Tuyết và Dương Đồng Lạc trò chuyện trong lúc nghỉ.",
+            "audioTrackId": "trk-tb-l05-3",
+            "sentenceIds": [
+              "l05-s5",
+              "l05-s6",
+              "l05-s7",
+              "l05-s8"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2"
+              }
+            ]
+          },
+          {
+            "id": "l05-dialogue-3",
+            "title": "Máy tính mới",
+            "context": "Ở công ty, Vương Nhất Tuyết và Dương Đồng Lạc trò chuyện sau giờ làm.",
+            "audioTrackId": "trk-tb-l05-5",
+            "sentenceIds": [
+              "l05-s9",
+              "l05-s10",
+              "l05-s11",
+              "l05-s12",
+              "l05-s13",
+              "l05-s14"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3"
+              }
+            ]
+          }
+        ]
+      },
+      "exerciseSet": {
+        "id": "set-tb-l05-text-v1",
+        "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
+        "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 030) và Hội thoại 3 (trang 031). Đáp án lấy từ chính lời thoại in trong sách.",
+        "items": [
+          {
+            "id": "wb5-text-1",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … nấu ăn",
+            "promptZh": "杨同乐（ ）做饭。",
+            "promptPinyin": "Yáng Tónglè ( ) zuò fàn.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "会",
+                "pinyin": "huì",
+                "vi": "biết (làm)"
+              },
+              {
+                "id": "2",
+                "zh": "不",
+                "pinyin": "bù",
+                "vi": "không"
+              },
+              {
+                "id": "3",
+                "zh": "不会",
+                "pinyin": "bú huì",
+                "vi": "không biết (làm)"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc đáp 我会做 (tôi biết nấu) — vậy chỗ trống là 会.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l05-hui"
+            ]
+          },
+          {
+            "id": "wb5-text-2",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … cũng nấu ăn",
+            "promptZh": "杨同乐（ ）也做饭。",
+            "promptPinyin": "Yáng Tónglè ( ) yě zuò fàn.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "星期三",
+                "pinyin": "Xīngqīsān",
+                "vi": "thứ tư"
+              },
+              {
+                "id": "2",
+                "zh": "星期六",
+                "pinyin": "Xīngqīliù",
+                "vi": "thứ bảy"
+              },
+              {
+                "id": "3",
+                "zh": "星期日",
+                "pinyin": "Xīngqīrì",
+                "vi": "chủ nhật"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Dương Đồng Lạc nói: 星期天我也做饭 (chủ nhật tôi cũng nấu ăn). 星期天 và 星期日 đều là chủ nhật.",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 30,
+                "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+              }
+            ],
+            "grammarIds": [
+              "kp-hsk1-l05-time"
+            ]
+          },
+          {
+            "id": "wb5-text-3",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc cũng …",
+            "promptZh": "杨同乐也（ ）。",
+            "promptPinyin": "Yáng Tónglè yě ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "上班",
+                "pinyin": "shàngbān",
+                "vi": "đi làm"
+              },
+              {
+                "id": "2",
+                "zh": "下班",
+                "pinyin": "xiàbān",
+                "vi": "tan làm"
+              },
+              {
+                "id": "3",
+                "zh": "休息",
+                "pinyin": "xiūxi",
+                "vi": "nghỉ ngơi"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Hội thoại 3 mở đầu: Vương Nhất Tuyết hỏi 同乐，下班吗？ và Dương Đồng Lạc đáp 下班 (tan làm rồi).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 31,
+                "section": "课文 3 · câu hỏi nghe hiểu"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3 · lời thoại"
+              }
+            ],
+            "grammarIds": []
+          },
+          {
+            "id": "wb5-text-4",
+            "type": "multiple-choice",
+            "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc có một … mới",
+            "promptZh": "杨同乐有一个新（ ）。",
+            "promptPinyin": "Yáng Tónglè yǒu yí gè xīn ( ).",
+            "options": [
+              {
+                "id": "1",
+                "zh": "名字",
+                "pinyin": "míngzi",
+                "vi": "tên"
+              },
+              {
+                "id": "2",
+                "zh": "工作",
+                "pinyin": "gōngzuò",
+                "vi": "công việc"
+              },
+              {
+                "id": "3",
+                "zh": "电脑",
+                "pinyin": "diànnǎo",
+                "vi": "máy tính"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+            "explanationVi": "Trong Hội thoại 3, Dương Đồng Lạc xác nhận: 是的，是我的新电脑 (đúng vậy, là máy tính mới của tôi).",
+            "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 31,
+                "section": "课文 3 · câu hỏi nghe hiểu"
+              },
+              {
+                "sourceId": "src-hsk1-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 32,
+                "section": "课文 3 · lời thoại"
+              }
+            ],
+            "grammarIds": []
+          }
+        ]
+      },
+      "selfCheckTasks": [
+        {
+          "id": "st-l05-01",
+          "titleVi": "Nghe và chọn âm tiết (bài 1, trang in 023)",
+          "instructionVi": "Nghe đoạn của bài này trong track Workbook 5-2, chọn trong mỗi cặp âm tiết bạn nghe được và gõ lại cả âm tiết đó. Đáp án được lưu tự động; bấm Kiểm tra để chấm tự động theo đáp án đã đối chiếu.",
+          "audioTrackId": "trk-wb-l05-2",
+          "answerStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "听读练 · bài 1"
+            },
+            {
+              "sourceId": "src-wb-listening-script",
+              "printedPage": "013",
+              "section": "听读练 — lời đọc"
+            }
+          ],
+          "prompts": [
+            "gē / kē",
+            "jiǎng / qiǎng",
+            "cóng / sóng",
+            "nìng / lìng",
+            "jiǎ / xiǎ",
+            "zuàn / cuàn",
+            "tōu / gōu",
+            "zhí / shí"
+          ],
+          "version": 1,
+          "gradingMode": "syllable",
+          "scriptSyllables": [
+            "gē",
+            "qiǎng",
+            "sóng",
+            "nìng",
+            "jiā",
+            "cuàn",
+            "tōu",
+            "shí"
+          ],
+          "answers": [
+            "gē",
+            "qiǎng",
+            "sóng",
+            "nìng",
+            "jiā",
+            "cuàn",
+            "tōu",
+            "shí"
+          ],
+          "answerEvidence": "Đáp án biên tập đã đối chiếu: đề (8 cặp âm tiết) lấy từ bản in Workbook trang in 023; âm tiết được đọc lấy từ tài liệu lời đọc （听力材料， bản đăng lại Scribd, trang in 013); thứ tự âm tiết khớp bản nháp ASR local trên track Workbook 5-2 (chỉ là bản nháp hỗ trợ). Tài liệu đáp án đăng lại (Scribd 1077395370) liệt kê bài này nhưng không in đáp án âm tiết. Đây là đối chiếu biên tập, không phải đáp án chính thức của nhà xuất bản và chưa nghe kiểm chứng bởi người. ĐIỂM CHƯA CHẮC CÔNG KHAI (theo D14): ở ô 5, cặp in trong sách là jiǎ/xiǎ nhưng tài liệu lời đọc ghi âm tiết được đọc là jiā (thanh 1) và bản nháp ASR cũng nghe ra jiā — đáp án giữ jiā theo lời đọc; người học gõ jiǎ theo cặp in sẽ bị tính sai ô này. Đây là mâu thuẫn trong chính tài liệu nguồn, ghi rõ để người học biết.",
+          "guideVi": "Nghe track Workbook 5-2 (đoạn của bài này), với mỗi cặp hãy gõ cả âm tiết bạn nghe được — kèm dấu thanh hoặc số thanh (ví dụ gē hoặc ge1). Cặp âm tiết in trong sách hiện ở mỗi ô.",
+          "audioSegment": {
+            "start": 13.5,
+            "end": 58.4
+          },
+          "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người."
+        }
+      ],
+      "selfCheckIntroVi": "Workbook trang 023, bài 1. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
+      "selfCheckListenVi": "▶ Nghe track Workbook 5-2",
+      "apply": {
+        "titleVi": "Đóng vai và hỏi ngày tháng theo tình huống thật",
+        "instructionVi": "Chọn hội thoại 1. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình, hỏi và đáp hôm nay là ngày mấy, thứ mấy （今天几号？— 今天…号。星期几？). Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
+        "audioTrackId": "trk-tb-l05-1",
+        "noteVi": "Nhiệm vụ đóng vai và nói theo tình huống thật lấy từ Textbook trang in 028. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+        "sourceRefs": [
+          {
+            "sourceId": "src-hsk1-textbook-pdf",
+            "pdfPage": 43,
+            "printedPage": 28,
+            "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+          }
+        ]
+      },
+      "foundationWords": [
+        {
+          "id": "l05fw-1",
+          "zh": "不是",
+          "pinyin": "búshì",
+          "vi": "không phải",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 59.3,
+            "end": 60.6,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-2",
+          "zh": "不会",
+          "pinyin": "búhuì",
+          "vi": "không biết (làm)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 63.1,
+            "end": 64.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-3",
+          "zh": "不大",
+          "pinyin": "búdà",
+          "vi": "không lớn",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 66.0,
+            "end": 67.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-4",
+          "zh": "不对",
+          "pinyin": "búduì",
+          "vi": "không đúng",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 29,
+              "printedPage": 22,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 69.1,
+            "end": 70.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-5",
+          "zh": "一些",
+          "pinyin": "yìxiē",
+          "vi": "một ít",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 96.8,
+            "end": 98.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-6",
+          "zh": "一年",
+          "pinyin": "yìnián",
+          "vi": "một năm",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 100.4,
+            "end": 102.5,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-7",
+          "zh": "一口",
+          "pinyin": "yìkǒu",
+          "vi": "một miếng; một người (thành viên nhà)",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 104.1,
+            "end": 105.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-8",
+          "zh": "一个",
+          "pinyin": "yígè",
+          "vi": "một cái, một người",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 125.1,
+            "end": 127.8,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-9",
+          "zh": "一日",
+          "pinyin": "yírì",
+          "vi": "một ngày",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 129.3,
+            "end": 131.3,
+            "status": "asr-draft"
+          }
+        },
+        {
+          "id": "l05fw-10",
+          "zh": "一岁",
+          "pinyin": "yísuì",
+          "vi": "một tuổi",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk1-workbook-pdf",
+              "pdfPage": 30,
+              "printedPage": 23,
+              "section": "小语讲堂 · 语音 · từ ví dụ trong bảng biến điệu"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-wb-l05-1",
+            "start": 132.8,
+            "end": 134.6,
             "status": "asr-draft"
           }
         }

@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-lesson6-1",
+  "contentVersion": "20261101-lesson6-2",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -10273,13 +10273,7 @@
                 "id": "1",
                 "zh": "星期三",
                 "pinyin": "Xīngqīsān",
-                "vi": "thứ tư",
-                "audio": {
-                  "trackId": "trk-tb-l05-1",
-                  "start": 5.75,
-                  "end": 7.25,
-                  "status": "asr-draft"
-                }
+                "vi": "thứ tư"
               },
               {
                 "id": "2",
@@ -10291,7 +10285,13 @@
                 "id": "3",
                 "zh": "星期日",
                 "pinyin": "Xīngqīrì",
-                "vi": "chủ nhật"
+                "vi": "chủ nhật",
+                "audio": {
+                  "trackId": "trk-tb-l05-1",
+                  "start": 5.75,
+                  "end": 7.25,
+                  "status": "asr-draft"
+                }
               }
             ],
             "answer": "3",
@@ -10663,7 +10663,7 @@
             "id": "wb5-comp-4",
             "type": "multiple-choice",
             "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 4, chỗ trống 1: Máy tính của bạn … đẹp",
-            "promptZh": "你的电脑（ ）好看。",
+            "promptZh": "你的电脑（ ）好看！",
             "promptPinyin": "Nǐ de diànnǎo ( ) hǎokàn.",
             "options": [
               {
@@ -10739,9 +10739,9 @@
           {
             "id": "wb5-comp-5",
             "type": "multiple-choice",
-            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 4, chỗ trống 2: Tôi cũng rất … nó",
-            "promptZh": "我也很（ ）它。",
-            "promptPinyin": "Wǒ yě hěn ( ) tā.",
+            "promptVi": "Bài tập tổng hợp (Textbook trang 033) — chọn từ điền vào câu 4, chỗ trống 2: Tôi cũng rất …",
+            "promptZh": "我也很（ ）。",
+            "promptPinyin": "Wǒ yě hěn ( ).",
             "options": [
               {
                 "id": "1",
@@ -10799,8 +10799,8 @@
               }
             ],
             "answerStatus": "verified-from-print",
-            "explanationVi": "“我也很喜欢它。” — tôi cũng rất thích nó: nguyên văn câu cuối Hội thoại 3 của bài.",
-            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033; câu đầy đủ “我也很喜欢它” là nguyên văn hội thoại 3 của bài (bản in trang 032).",
+            "explanationVi": "“我也很喜欢。” — tôi cũng rất thích. Sau phó từ 很 cần một động từ; trong ngân hàng từ chỉ 喜欢 đứng được ở đây. (Câu tương ứng trong Hội thoại 3 là “我也很喜欢它”.)",
+            "answerEvidence": "Ngân hàng từ và câu in ở Textbook trang in 033 — thân câu in là “我也很______。”, không có 它 sau chỗ trống (đã đính chính sau QA độc lập vòng 2; bản trước ghi thêm 它 lấy từ hội thoại). Đáp án: sau 很 cần động từ, trong ngân hàng từ chỉ “喜欢” hợp lệ; câu song song trong hội thoại 3 của bài là “我也很喜欢它”.",
             "grammarIds": [],
             "sourceRefs": [
               {

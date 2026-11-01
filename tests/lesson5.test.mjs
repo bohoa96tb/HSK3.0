@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 
 test('lesson 5 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l5, 'additionalLessons must contain hsk1-l05');
-  assert.equal(content.contentVersion, '20261101-lesson6-1');
+  assert.equal(content.contentVersion, '20261101-lesson6-2');
   assert.equal(l5.prepWords.length, 22);
   for (const w of l5.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
@@ -105,4 +105,29 @@ test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', ()
     const other = task.prompts[i].split('/').map((x) => x.trim()).find((x) => x !== syl);
     assert.equal(gradeDictationCell(task, i, other).correct, false, `cell ${i + 1} pair-mate rejected`);
   });
+});
+
+test('lesson 5 QA round 2 regressions: option segment labels and printed stems', () => {
+  // The 星期日 segment must sit on the 星期日 option, never on 星期三.
+  const q2 = l5.exerciseSet.items.find((i) => i.id === 'wb5-text-2');
+  assert.equal(q2.options.find((o) => o.id === '1').audio, undefined);
+  assert.deepEqual(q2.options.find((o) => o.id === '3').audio, { trackId: 'trk-tb-l05-1', start: 5.75, end: 7.25, status: 'asr-draft' });
+  // General guard: every Lesson 4-5 text option segment must read exactly
+  // the option's own text somewhere in its track's dialogue.
+  for (const cc of content.additionalLessons.filter((x) => ['hsk1-l04', 'hsk1-l05'].includes(x.lessonId))) {
+    const trackText = {};
+    for (const s of cc.reader.sentences) {
+      const trk = cc.reader.passages.find((g) => g.id === s.passageId)?.audioTrackId;
+      trackText[trk] = (trackText[trk] || '') + s.zh;
+    }
+    for (const item of cc.exerciseSet.items) for (const o of item.options) {
+      if (o.audio) assert.ok((trackText[o.audio.trackId] || '').includes(o.zh), `${item.id}/${o.id} ${o.zh} must be read in ${o.audio.trackId}`);
+    }
+  }
+  // Printed stems of the comprehensive items, page 033 verbatim.
+  const comp5 = l5.exerciseSet.items.find((i) => i.id === 'wb5-comp-5');
+  assert.equal(comp5.promptZh, '我也很（ ）。');
+  assert.ok(!comp5.promptZh.includes('它'));
+  const comp4 = l5.exerciseSet.items.find((i) => i.id === 'wb5-comp-4');
+  assert.equal(comp4.promptZh, '你的电脑（ ）好看！');
 });

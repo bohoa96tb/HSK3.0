@@ -35,7 +35,15 @@ export function matchesQuery(haystacks, query) {
 }
 
 export function gradeChoice(item, optionId) {
-  if (!item || !["verified-from-print", "verified-from-visual"].includes(item.answerStatus)) {
+  // verified-editorial grades too: the validator requires documented
+  // answerEvidence for that status (D19). Without it here, editorial
+  // items (Lesson 8 reduplication + the mock set) silently never graded.
+  if (!item || !["verified-from-print", "verified-from-visual", "verified-editorial"].includes(item.answerStatus)) {
+    return { graded: false, reason: "unverified-answer" };
+  }
+  // Self-check tasks share the verified-editorial status but are not
+  // choice items: they carry prompts, not options — never grade them here.
+  if (!Array.isArray(item.options) && Array.isArray(item.prompts)) {
     return { graded: false, reason: "unverified-answer" };
   }
   return { graded: true, correct: optionId === item.answer };

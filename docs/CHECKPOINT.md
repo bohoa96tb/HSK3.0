@@ -39,3 +39,10 @@
 - Loa asr-draft: câu 14/14, từ 24/24 (căn khoảng lặng lần đọc đầu), lựa chọn có loa lũy kế 173/249. Validator mở trạng thái verified-editorial cho trắc nghiệm khi có answerEvidence (D19).
 - QA D17 khép trong nhánh: vòng 1 — 0 nghiêm trọng, 1 trung bình (ví dụ KP 能 thiếu 午： in 吃午饭， app ghi 吃饭 → sửa + cha phóng to bản in gốc xác nhận), 3 nhẹ (diễn đạt KP phương vị; 2 alt hình mô tả chi tiết không có trong tranh → sửa); vòng 2 đạt 5/5, quét sạch dư vết. 71/71 test (thêm test hồi quy cho các điểm sửa).
 - Live: content.json trên URL thật có contentVersion 20261101-lesson8-1 và đủ 19 câu Bài 8; ảnh WebP trả 200 đúng kích thước; iframe responsive tuyến Từ cần biết + Bài tập Bài 8 ở 360/390/768/1440 không tràn ngang (chạy trên bản local trùng byte với bản merge; harness đã thêm tuyến Bài 8). Vẫn tồn: chưa nghe kiểm chứng bởi người, chưa Android thật, CI chưa tạo được qua connector (403), quyền nguồn unknown.
+
+## Vòng bổ sung Bài 8 — đề mô phỏng + track WB 08-2 (D21, 2026-11-01)
+
+- Hoa yêu cầu kiểm tra audio Bài 8 ở nguồn: CDN Baulchino chỉ có TB 08-1..6 + WB 08-1, 08-2; app trước vòng này thiếu WB 08-2 (track đề mô phỏng 模拟测练， WB in 051–056, 487,09s — bị loại theo D15).
+- Đã bổ sung thành bộ bài bổ trợ riêng `set-wb-l08-mock-v1` (20 câu, verified-editorial + answerEvidence; 10 câu nghe có đoạn trên track 8-2; 17 hình vẽ WebP mới phát hành), session/điểm tách riêng, không gộp vào 19 câu chính.
+- Phát hiện và sửa lỗi tiềm ẩn: gradeChoice không chấm verified-editorial (4 câu trùng điệp Bài 8 cũng bị ảnh hưởng từ khi phát hành) — đã sửa + test hồi quy.
+- contentVersion: 20261101-mock8-1. Kiểm thử local: validator + 85/85 test. Trạng thái: chờ QA D17 + merge + kiểm live.

@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-device-feedback1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-device-feedback1";
-import * as player from "./player.js?v=20261101-device-feedback1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS } from "./lib.js?v=20261101-mock8-1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261101-mock8-1";
+import * as player from "./player.js?v=20261101-mock8-1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -92,6 +92,7 @@ function restoreScrollAnchor(saved) {
   else if (Math.abs(window.scrollY - saved.y) > 1) window.scrollTo(0, saved.y);
 }
 function render() {
+  if (!parseRoute().query.item) lastDeepLinkItem = null;
   const savedAnchor = captureScrollAnchor();
   renderInner();
   applyDisplaySettings();
@@ -290,10 +291,11 @@ function recordExerciseSupport() {
   const { seg } = parseRoute();
   if (seg[0] !== "lesson" || seg[2] !== "exercises") return;
   const content = contentFor(seg[1]); if (!content) return;
-  const ses = ensureSession(content);
-  const item = content.exerciseSet.items[ses.index];
-  if (!item || ses.checked[item.id]) return;
-  updateSession(content, (ss) => { (ss.supportUsed ||= {})[item.id] = true; });
+  for (const set of [content.exerciseSet, content.suppExerciseSet].filter(Boolean)) {
+    const ses = ensureSession(content, set);
+    const item = set.items[ses.index];
+    if (item && !ses.checked[item.id]) updateSession(content, (ss) => { (ss.supportUsed ||= {})[item.id] = true; }, set);
+  }
 }
 function bindSupportBar() {
   $$("[data-support]").forEach((b) => { b.onclick = () => {
@@ -437,8 +439,8 @@ function bindReader(content) {
 }
 
 // ---------- Exercises ----------
-function ensureSession(content) {
-  const setId = content.exerciseSet.id;
+function ensureSession(content, set = content.exerciseSet) {
+  const setId = set.id;
   const p = loadProgress();
   if (!p.exerciseSessions?.[setId]) {
     update((pp) => {
@@ -449,8 +451,8 @@ function ensureSession(content) {
   }
   return loadProgress().exerciseSessions[setId];
 }
-function updateSession(content, mut) {
-  const setId = content.exerciseSet.id;
+function updateSession(content, mut, set = content.exerciseSet) {
+  const setId = set.id;
   update((pp) => {
     pp.exerciseSessions ||= {};
     if (!pp.exerciseSessions[setId]) pp.exerciseSessions[setId] = { setId, index: 0, answers: {}, checked: {}, hintUsed: {}, supportUsed: {} };
@@ -469,50 +471,65 @@ function recordAttempt(item, optionId, correct, hintUsed, lessonId, supportUsed)
     }
   });
 }
-function sectionExercisesHtml(content) {
-  const set = content.exerciseSet;
-  let ses = ensureSession(content);
-  const requested=parseRoute().query.item;
-  const requestedIndex=set.items.findIndex(i=>i.id===requested);
-  if(requestedIndex>=0 && ses.reviewTarget!==requested){updateSession(content,(ss)=>{ss.index=requestedIndex;ss.reviewTarget=requested;delete ss.checked[requested];});ses=ensureSession(content);}
+function exerciseCardHtml(content, set, prefix) {
+  let ses = ensureSession(content, set);
   const item = set.items[ses.index];
   const attempts = loadProgress().attempts;
   const sum = summarizeAttempts(attempts, set.items.map((i) => i.id));
+  const isMain = prefix === "";
   if (!item) {
-    return `<section class="card"><h2>Đã làm hết câu hỏi chấm tự động</h2>
+    return `<section class="card" ${isMain ? 'id="exercise-card"' : 'id="supp-exercise-card"'} data-anchor><h2>${isMain ? "Đã làm hết câu hỏi chấm tự động" : "Đã làm hết đề mô phỏng"}</h2>
     <p>Điểm lần đầu: <strong>${sum.firstCorrect}/${sum.firstTotal}</strong> · Đã làm lại: ${sum.retried} câu · Đã dùng gợi ý: ${sum.hintUsedCount} câu · Đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0} câu.</p>
-    <div class="row-actions"><button class="btn" type="button" id="back-last">← Xem lại câu cuối</button>
-    <button class="btn" id="restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button></div>
-    ${dictationHtml(content)}</section>`;
+    <div class="row-actions"><button class="btn" type="button" id="${prefix}back-last">← Xem lại câu cuối</button>
+    <button class="btn" id="${prefix}restart-set">Làm lại từ đầu (điểm lần đầu đã ghi sẽ không đổi)</button></div></section>`;
   }
   const checked = ses.checked[item.id];
   const chosen = ses.answers[item.id];
   const result = checked ? gradeChoice(item, chosen) : null;
   const supportOn = !!(ses.supportUsed?.[item.id]);
-  return `<section class="card" id="exercise-card" data-anchor><h2>Luyện tập</h2>${supportBarHtml('exercises')}
+  const seg = item.audioSegment;
+  return `<section class="card" ${isMain ? 'id="exercise-card"' : 'id="supp-exercise-card"'} data-anchor><h2>${isMain ? "Luyện tập" : esc(set.titleVi || "Bài tập bổ trợ")}</h2>${isMain ? supportBarHtml('exercises') : ""}
   <details class="set-note"><summary>Ghi chú về bộ câu hỏi</summary><p class="muted">${esc(set.noteVi)}</p></details>${supportOn && !checked ? `<p class="support-note">Bạn đang dùng Pinyin/Nghĩa hỗ trợ cho câu này — kết quả sẽ được ghi là “có hỗ trợ”, tách riêng với kết quả tự làm.</p>` : ""}
   <div class="progress-bar" aria-hidden="true"><div style="width:${Math.round((ses.index / set.items.length) * 100)}%"></div></div>
   <p class="muted">Câu ${ses.index + 1}/${set.items.length} · Điểm lần đầu hiện tại: ${sum.firstCorrect}/${sum.firstTotal || 0}</p>
-  <h3>${esc(item.promptVi)}</h3>${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
-  <form id="ex-form">
+  <h3>${esc(item.promptVi)}</h3>${seg ? `<p><button class="btn" type="button" data-play-task="${esc(seg.trackId)}" data-seg-start="${seg.start}" data-seg-end="${seg.end}">▶ Nghe đoạn của câu này (${fmtClock(seg.start)}–${fmtClock(seg.end)})</button></p>` : ""}${item.promptZh ? `<p class="exercise-stem"><span class="zh-inline" lang="zh-CN">${esc(item.promptZh)}</span>${item.promptPinyin ? `<span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(item.promptPinyin)}</span>` : ""}</p>` : ""}${item.image ? `<figure class="exercise-figure"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="480" height="200"><figcaption>${esc(item.imageCaption||'Hình gốc trong sách bài tập')}</figcaption></figure>` : ""}
+  <form id="${prefix}ex-form">
   ${item.options.map((o, oi) => `<label class="option ${o.image ? "option-has-pic" : ""} ${checked && chosen === o.id ? (result.correct ? "right" : "wrong") : ""} ${checked && item.answer === o.id ? "right-outline" : ""}">
     <input type="radio" name="opt" value="${esc(o.id)}" ${chosen === o.id ? "checked" : ""} ${checked ? "disabled" : ""}>
     <span class="option-body">${o.image ? `<span class="option-pic"><img src="${esc(o.image)}" alt="${esc(o.imageAlt || "")}" loading="lazy"><span class="option-letter">${"ABCDEF"[oi] || ""}</span>${checked ? `<span class="option-pic-cap"><span class="zh-inline" lang="zh-CN">${esc(o.zh || "")}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span></span>` : ""}</span>` : o.zh ? `<span class="zh-inline" lang="zh-CN">${esc(o.zh)}</span><span class="pinyin tog-pinyin-ex" lang="zh-Latn">${esc(o.pinyin || "")}</span><span class="option-vi tog-vi-ex">${esc(o.vi || "")}</span>${HAS_HAN.test(o.zh) ? ttsBtnHtml(o.zh) : ""}` : esc(o.labelVi || "")}</span></label>`).join("")}
   ${!checked ? `<div class="row-actions"><button class="btn primary" type="submit">Kiểm tra</button>
-    <button class="btn ghost" type="button" id="hint-btn">Gợi ý</button>
-    ${ses.index > 0 ? `<button class="btn ghost" type="button" id="prev-q">← Câu trước</button>` : ""}</div>
+    <button class="btn ghost" type="button" id="${prefix}hint-btn">Gợi ý</button>
+    ${ses.index > 0 ? `<button class="btn ghost" type="button" id="${prefix}prev-q">← Câu trước</button>` : ""}</div>
     ${ses.hintUsed[item.id] ? `<p class="hint">Gợi ý: ${esc(item.hintVi)} <span class="muted">(đã ghi nhận dùng gợi ý)</span></p>` : ""}`
   : `<div class="feedback ${result.correct ? "ok" : "bad"}" role="status">
       <p><strong>${result.correct ? "Đúng." : "Chưa đúng."}</strong> ${esc(item.explanationVi)}</p>
       ${item.grammarIds.length ? `<a class="btn" href="#/grammar/${esc(item.grammarIds[0])}?return=exercises">Ôn lại cách dùng</a>` : ""}
-      ${ses.index > 0 ? `<button class="btn" type="button" id="prev-q">← Câu trước</button>` : ""}
-      ${ses.index + 1 < set.items.length ? `<button class="btn primary" type="button" id="next-q">Câu tiếp theo</button>` : `<button class="btn primary" type="button" id="finish-q">Xem tổng kết bài tập</button>`}
+      ${ses.index > 0 ? `<button class="btn" type="button" id="${prefix}prev-q">← Câu trước</button>` : ""}
+      ${ses.index + 1 < set.items.length ? `<button class="btn primary" type="button" id="${prefix}next-q">Câu tiếp theo</button>` : `<button class="btn primary" type="button" id="${prefix}finish-q">Xem tổng kết bộ này</button>`}
     </div>`}
   </form>
   ${refsHtml(item.sourceRefs)}
-  </section>
+  </section>`;
+}
+function sectionExercisesHtml(content) {
+  // A ?item= deep link may target the main set or the supplementary set.
+  const requested = parseRoute().query.item;
+  if (requested && requested !== lastDeepLinkItem) {
+    lastDeepLinkItem = requested;
+    for (const set of [content.exerciseSet, content.suppExerciseSet].filter(Boolean)) {
+      const idx = set.items.findIndex((i) => i.id === requested);
+      if (idx >= 0) {
+        const ses = ensureSession(content, set);
+        if (ses.reviewTarget !== requested) { updateSession(content, (ss) => { ss.index = idx; ss.reviewTarget = requested; delete ss.checked[requested]; }, set); }
+        break;
+      }
+    }
+  }
+  return `${exerciseCardHtml(content, content.exerciseSet, "")}
+  ${content.suppExerciseSet ? exerciseCardHtml(content, content.suppExerciseSet, "supp-") : ""}
   <section class="card dictation-block"><h2>Luyện tập bổ trợ theo sách</h2>${dictationHtml(content)}</section>`;
 }
+let lastDeepLinkItem = null; // ?item= deep link fires once per param change (edge-triggered)
 const dictRevealed = new Set(); // taskIds whose listening script is currently shown
 const dictOpenTasks = new Set(); // dictation tasks currently expanded (first task open by default)
 function fmtClock(sec) { return `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`; }
@@ -554,41 +571,47 @@ function dictationHtml(content) {
   ${refsHtml(t.sourceRefs)}</details>`; }).join("")}`;
 }
 
-function bindExercises(content) {
-  bindSupportBar();
-  { const st0 = settings(); const ses0 = ensureSession(content); const it0 = content.exerciseSet.items[ses0.index];
-    if (it0 && !ses0.checked[it0.id] && (st0.showPinyinExercises || st0.showViExercises)) updateSession(content, (ss) => { (ss.supportUsed ||= {})[it0.id] = true; }); }
-  $$("[data-dict-task]").forEach((d) => d.addEventListener("toggle", () => { if (d.open) dictOpenTasks.add(d.dataset.dictTask); else dictOpenTasks.delete(d.dataset.dictTask); }));
-  $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
-  const set = content.exerciseSet;
-  const ses = ensureSession(content);
+function bindExerciseSet(content, set, prefix) {
+  const ses = ensureSession(content, set);
   const item = set.items[ses.index];
-  const form = $("#ex-form");
+  const form = document.getElementById(`${prefix}ex-form`);
   if (form && item) {
-    form.onchange = () => {const value=new FormData(form).get('opt'); if(value)updateSession(content,(ss)=>{ss.answers[item.id]=String(value);});};
+    form.onchange = () => { const value = new FormData(form).get('opt'); if (value) updateSession(content, (ss) => { ss.answers[item.id] = String(value); }, set); };
     form.onsubmit = (e) => {
       e.preventDefault();
       const chosen = new FormData(form).get("opt");
       if (!chosen) return;
       const res = gradeChoice(item, String(chosen));
       if (!res.graded) return;
-      const curSes = ensureSession(content);
+      const curSes = ensureSession(content, set);
       const hintUsed = !!curSes.hintUsed[item.id];
       const supportUsed = !!(curSes.supportUsed?.[item.id]);
-      updateSession(content,(ss)=>{ ss.answers[item.id] = String(chosen); ss.checked[item.id] = true; });
+      updateSession(content, (ss) => { ss.answers[item.id] = String(chosen); ss.checked[item.id] = true; if (ss.reviewTarget === item.id) delete ss.reviewTarget; }, set);
       recordAttempt(item, String(chosen), res.correct, hintUsed, content.lessonId, supportUsed);
       render();
     };
-    const hint = $("#hint-btn");
-    if (hint) hint.onclick = () => { updateSession(content,(ss)=>{ ss.hintUsed[item.id] = true; }); render(); };
-    const next = $("#next-q"); if (next) next.onclick = () => { updateSession(content,(ss)=>{ ss.index += 1; }); render(); };
-    const fin = $("#finish-q"); if (fin) fin.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length; }); render(); };
-    const prev = $("#prev-q"); if (prev) prev.onclick = () => { updateSession(content,(ss)=>{ ss.index -= 1; }); render(); };
+    const hint = document.getElementById(`${prefix}hint-btn`);
+    if (hint) hint.onclick = () => { updateSession(content, (ss) => { ss.hintUsed[item.id] = true; }, set); render(); };
+    const next = document.getElementById(`${prefix}next-q`); if (next) next.onclick = () => { updateSession(content, (ss) => { ss.index += 1; }, set); render(); };
+    const fin = document.getElementById(`${prefix}finish-q`); if (fin) fin.onclick = () => { updateSession(content, (ss) => { ss.index = set.items.length; }, set); render(); };
+    const prev = document.getElementById(`${prefix}prev-q`); if (prev) prev.onclick = () => { updateSession(content, (ss) => { ss.index -= 1; }, set); render(); };
   }
-  const backLast = $("#back-last");
-  if (backLast) backLast.onclick = () => { updateSession(content,(ss)=>{ ss.index = set.items.length - 1; }); render(); };
-  const restart = $("#restart-set");
-  if (restart) restart.onclick = () => { updateSession(content,(ss)=>{ ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; ss.supportUsed = {}; }); render(); };
+  const backLast = document.getElementById(`${prefix}back-last`);
+  if (backLast) backLast.onclick = () => { updateSession(content, (ss) => { ss.index = set.items.length - 1; }, set); render(); };
+  const restart = document.getElementById(`${prefix}restart-set`);
+  if (restart) restart.onclick = () => { updateSession(content, (ss) => { ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; ss.supportUsed = {}; delete ss.reviewTarget; }, set); render(); };
+}
+function bindExercises(content) {
+  bindSupportBar();
+  { const st0 = settings();
+    for (const set of [content.exerciseSet, content.suppExerciseSet].filter(Boolean)) {
+      const ses0 = ensureSession(content, set); const it0 = set.items[ses0.index];
+      if (it0 && !ses0.checked[it0.id] && (st0.showPinyinExercises || st0.showViExercises)) updateSession(content, (ss) => { (ss.supportUsed ||= {})[it0.id] = true; }, set);
+    } }
+  $$("[data-dict-task]").forEach((d) => d.addEventListener("toggle", () => { if (d.open) dictOpenTasks.add(d.dataset.dictTask); else dictOpenTasks.delete(d.dataset.dictTask); }));
+  $$("[data-draft]").forEach(el=>el.oninput=()=>update(p=>{(p.drafts ||= {})[el.dataset.draft]=el.value;}));
+  bindExerciseSet(content, content.exerciseSet, "");
+  if (content.suppExerciseSet) bindExerciseSet(content, content.suppExerciseSet, "supp-");
   $$("[data-play-task]").forEach((b) => b.onclick = () => {
     const track = content.reader.audioTracks.find((t) => t.id === b.dataset.playTask);
     if (!track) return;
@@ -669,12 +692,15 @@ function sectionSummaryHtml(lesson, content) {
   const set = content.exerciseSet;
   const p = loadProgress();
   const sum = summarizeAttempts(p.attempts, set.items.map((i) => i.id));
-  const wrongIds = [...new Set(p.attempts.filter((a) => !a.correct && set.items.some(i=>i.id===a.exerciseId)).map((a) => a.exerciseId))];
+  const allItems = [...set.items, ...(content.suppExerciseSet?.items || [])];
+  const suppSum = content.suppExerciseSet ? summarizeAttempts(p.attempts, content.suppExerciseSet.items.map((i) => i.id)) : null;
+  const wrongIds = [...new Set(p.attempts.filter((a) => !a.correct && allItems.some(i=>i.id===a.exerciseId)).map((a) => a.exerciseId))];
   const st = lessonState(lesson.id);
   return `<section class="card"><h2>Tổng kết bài</h2>
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; số câu đã làm lại: ${sum.retried}; số câu đã dùng gợi ý: ${sum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${sum.supportUsedCount || 0}. Điểm làm lại, gợi ý và hỗ trợ được ghi riêng, không gộp vào điểm lần đầu và không diễn giải lại lịch sử cũ.</p>
-  ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = set.items.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
+  ${suppSum ? `<p>Đề mô phỏng của sách: điểm lần đầu <strong>${suppSum.firstCorrect}/${suppSum.firstTotal}</strong>; số câu đã làm lại: ${suppSum.retried}; số câu đã dùng gợi ý: ${suppSum.hintUsedCount}; số câu đã dùng Pinyin/Nghĩa hỗ trợ: ${suppSum.supportUsedCount || 0}. Điểm của đề mô phỏng ghi riêng, không gộp vào điểm bài tập của bài.</p>` : ""}
+  ${wrongIds.length ? `<h3>Câu từng làm sai — ôn lại cách dùng</h3>${wrongIds.map((id) => { const it = allItems.find((i) => i.id === id); return `<p class="row-line"><span>${esc(it.promptVi)}</span>${it.grammarIds.length ? `<a class="btn small" href="#/grammar/${esc(it.grammarIds[0])}?return=summary">Ôn lại</a>` : ""}</p>`; }).join("")}` : `<p class="muted">Chưa có câu nào làm sai.</p>`}
   <h3>Học lại từng mục</h3>
   ${content.intro.sections.map((x) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${x.id}">${esc(x.titleVi)}</a><span class="tag">${st.completedSections.includes(x.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
   ${(() => { const lines = content.selfCheckTasks.filter((t) => t.answerStatus === "verified-editorial").map((t) => { const e = p.dictation?.[t.id]; if (!e || !Object.keys(e.first || {}).length) return ""; const vals = Object.values(e.first); const wrongIdx = Object.entries(e.first).filter(([, v]) => !v).map(([k]) => Number(k)); return `<p>Nghe–viết “${esc(t.titleVi)}”: điểm lần đầu <strong>${vals.filter(Boolean).length}/${vals.length}</strong> ô${e.peeked ? " (đã xem lời đọc trước)" : ""}.${wrongIdx.length ? ` Ô sai: ${wrongIdx.map((i) => `<a href="#/lesson/${lesson.id}/exercises?task=${t.id}">${i + 1} (${esc(t.scriptSyllables?.[i] || "")})</a>`).join(", ")} — đã đưa vào Ôn tập.` : ""}</p>`; }).join(""); return lines ? `<h3>Nghe–viết đã chấm</h3>${lines}` : ""; })()}
@@ -721,7 +747,7 @@ function describeReviewItem(item) {
     }
   }
   for (const c of allContents()) {
-    const ex = c.exerciseSet.items.find((i) => i.id === item.sourceItemId);
+    const ex = c.exerciseSet.items.find((i) => i.id === item.sourceItemId) || c.suppExerciseSet?.items.find((i) => i.id === item.sourceItemId);
     if (ex) return { title: ex.promptVi, href: `#/lesson/${c.lessonId}/exercises?item=${ex.id}`, grammarId: ex.grammarIds[0] };
     const task = c.selfCheckTasks.find((t) => t.id === item.sourceItemId);
     if (task) return { title: task.titleVi, href: `#/lesson/${c.lessonId}/exercises`, grammarId: null };
@@ -766,6 +792,7 @@ function viewProgress() {
     return `<section class="card"><h2>${esc(lesson.level)} · Bài ${lesson.lessonNumber}: ${esc(lesson.titleZh)}</h2>
   <p>Mục đã hoàn thành: <strong>${st.completedSections.length}/${c.intro.sections.length}</strong> — đây là mức “đã học/đã xem”.</p>
   <p>Bài tập chấm tự động: đã trả lời ${sum.answered}/${set.items.length} câu; điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>; làm lại ${sum.retried} câu; dùng gợi ý ${sum.hintUsedCount} câu; dùng Pinyin/Nghĩa hỗ trợ ${sum.supportUsedCount || 0} câu.</p>
+  ${c.suppExerciseSet ? (() => { const ss = summarizeAttempts(p.attempts, c.suppExerciseSet.items.map((i) => i.id)); return `<p>Đề mô phỏng của sách: đã trả lời ${ss.answered}/${c.suppExerciseSet.items.length} câu; điểm lần đầu <strong>${ss.firstCorrect}/${ss.firstTotal}</strong>.</p>`; })() : ""}
   <p>Bài nghe–viết: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá mức nhớ; điểm chấm tự động (đáp án đã đối chiếu) xem ở mục Tổng kết của bài và ngay trong phần Luyện tập.</p>
   <p class="row-actions"><a class="btn" href="#/lesson/${lesson.id}">Mở Bài ${lesson.lessonNumber}</a></p></section>`; }).join("")}
   <section class="card"><h2>Tổng quan</h2>

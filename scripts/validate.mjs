@@ -97,7 +97,7 @@ for (const c of contents) {
   // Exercise options (ux3): every Chinese option needs pinyin + Vietnamese
   // meaning so support toggles work uniformly on all options, not only the
   // correct one.
-  for (const it of c.exerciseSet?.items || []) for (const o of it.options || []) {
+  for (const it of [...(c.exerciseSet?.items || []), ...(c.suppExerciseSet?.items || [])]) for (const o of it.options || []) {
     if (o.zh && (!o.pinyin || !o.vi)) err(`exercise ${it.id} option ${o.id}: zh options require pinyin and vi`);
   }
   for (const t of c.reader?.audioTracks || []) {
@@ -122,14 +122,15 @@ for (const c of contents) {
   for (const w of c.prepWords || []) checkAudioRef(w.audio, `prep word ${w.id}`);
   for (const w of c.foundationWords || []) checkAudioRef(w.audio, `foundation word ${w.zh}`);
   for (const kp of c.knowledgePoints || []) for (const e of kp.examples || []) checkAudioRef(e.audio, `example ${kp.id}`);
-  for (const it of c.exerciseSet?.items || []) for (const o of it.options || []) checkAudioRef(o.audio, `option ${it.id}/${o.id}`);
+  for (const it of [...(c.exerciseSet?.items || []), ...(c.suppExerciseSet?.items || [])]) for (const o of it.options || []) checkAudioRef(o.audio, `option ${it.id}/${o.id}`);
+  for (const it of [...(c.exerciseSet?.items || []), ...(c.suppExerciseSet?.items || [])]) if (it.audioSegment) checkAudioRef(it.audioSegment, `item ${it.id} audioSegment`);
   for (const pid of c.apply?.samplePassageIds || []) if (!(c.reader.passages || []).some((g) => g.id === pid)) err(`apply samplePassageIds: unknown passage ${pid}`);
   for (const g of c.reader.passages || []) {
     if (!trackIds.has(g.audioTrackId)) err(`passage ${g.id}: missing track`);
     for (const id of g.sentenceIds) if (!localSentences.has(id)) err(`passage ${g.id}: missing sentence ${id}`);
     checkRefs(g.sourceRefs, `passage ${g.id}`);
   }
-  for (const item of c.exerciseSet?.items || []) {
+  for (const item of [...(c.exerciseSet?.items || []), ...(c.suppExerciseSet?.items || [])]) {
     if (!item.id || exIds.has(item.id)) err(`exercise id missing/duplicate: ${item.id}`);
     exIds.add(item.id);
     if (item.answerStatus === "verified-from-visual" && (!item.answerEvidence || !item.image)) err(`exercise ${item.id}: visual answer needs evidence and image`);
@@ -144,7 +145,7 @@ for (const c of contents) {
   }
   for (const kp of c.knowledgePoints || []) {
     for (const eid of kp.exerciseIds || []) {
-      if (!contents.some((x) => (x.exerciseSet.items || []).some((i) => i.id === eid))) err(`knowledge ${kp.id}: unknown exerciseId ${eid}`);
+      if (!contents.some((x) => [...(x.exerciseSet.items || []), ...(x.suppExerciseSet?.items || [])].some((i) => i.id === eid))) err(`knowledge ${kp.id}: unknown exerciseId ${eid}`);
     }
   }
   const localTracks = new Set((c.reader?.audioTracks || []).map((t) => t.id));
@@ -202,7 +203,7 @@ for (const c of contents) {
   }
   if (c.apply?.audioTrackId && !localTracks.has(c.apply.audioTrackId)) err(`${tag}: apply audioTrackId unknown`);
   if (c.apply) checkRefs(c.apply.sourceRefs, `${tag} apply`);
-  summary.push(`${c.lessonId}: ${c.knowledgePoints.length} knowledge points, ${c.reader.sentences.length} sentences, ${c.exerciseSet.items.length} auto-graded exercises, ${c.selfCheckTasks.length} self-check tasks, ${c.reader.audioTracks.length} audio tracks`);
+  summary.push(`${c.lessonId}: ${c.knowledgePoints.length} knowledge points, ${c.reader.sentences.length} sentences, ${c.exerciseSet.items.length + (c.suppExerciseSet?.items.length || 0)} auto-graded exercises, ${c.selfCheckTasks.length} self-check tasks, ${c.reader.audioTracks.length} audio tracks`);
 }
 // No copied book/media assets may live in the repository data.
 const raw = JSON.stringify(data);

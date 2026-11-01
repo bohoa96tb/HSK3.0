@@ -11,7 +11,7 @@ test('lesson 8 content shape matches the printed book', () => {
   assert.equal(l8.prepWords.length, 24); // 23 new words + 1 proper noun
   assert.equal(l8.knowledgePoints.length, 4);
   assert.equal(l8.reader.sentences.length, 14);
-  assert.equal(l8.reader.audioTracks.length, 7);
+  assert.equal(l8.reader.audioTracks.length, 8); // 7 lesson tracks + WB 8-2 mock track (supplementary set)
   assert.equal(l8.exerciseSet.items.length, 19);
   assert.equal(l8.foundationWords.length, 0);
   assert.ok(l8.prepWords.every((w) => w.hanViet && w.hanVietStatus === 'verified-editorial'));

@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261101-device-feedback1",
+  "contentVersion": "20261101-mock8-1",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -17326,6 +17326,15 @@
               }
             ],
             "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+          },
+          {
+            "id": "trk-wb-l08-2",
+            "label": "Track 8-2 · Đề mô phỏng （模拟测练） — phần nghe",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-08/08-2.mp3",
+            "durationSec": 487.09,
+            "bookRef": "Workbook Bài 8, phần 模拟测练 ký hiệu track 8-2 ở trang in 051",
+            "segments": [],
+            "segmentsStatus": "unverified"
           }
         ],
         "passages": [
@@ -18909,7 +18918,1012 @@
           }
         ]
       },
-      "foundationWords": []
+      "foundationWords": [],
+      "suppExerciseSet": {
+        "id": "set-wb-l08-mock-v1",
+        "titleVi": "Đề mô phỏng của sách （模拟测练） — luyện thêm",
+        "noteVi": "Đây là đề mô phỏng （模拟测练） in ở Workbook trang 051–056, dùng audio 8-2 của sách. Đề này ôn tổng hợp các bài 1–8 theo dạng đề thi, KHÔNG tính vào điểm lần đầu của 19 câu chính ở trên; mỗi bộ có điểm lần đầu riêng. Đáp án đã đối chiếu (tài liệu đáp án đăng lại + lời đọc trên audio + bản in) ở mức verified-editorial, chưa phải đáp án chính thức của NXB. Hình là tranh minh họa vẽ mới thay ảnh chụp trong sách.",
+        "items": [
+          {
+            "id": "l08m-01",
+            "type": "multiple-choice",
+            "promptVi": "Nghe cụm từ và chọn hình đúng (đề mô phỏng, Nghe Phần I, câu 1). Bấm Nghe để nghe đoạn của câu này (đọc hai lần như trong phòng thi).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 43.2,
+              "end": 48.9,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-q1-a.webp",
+                "imageAlt": "Ba học sinh đang ngồi học ở bàn",
+                "zh": "学生在教室里学习",
+                "pinyin": "xuésheng zài jiàoshì li xuéxí",
+                "vi": "học sinh đang học trong lớp"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-q1-b.webp",
+                "imageAlt": "Sạp rau củ ở chợ",
+                "zh": "菜市场",
+                "pinyin": "cài shìchǎng",
+                "vi": "chợ rau"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-q1-c.webp",
+                "imageAlt": "Các kệ sách trong hiệu sách",
+                "zh": "书店里",
+                "pinyin": "shūdiàn li",
+                "vi": "trong hiệu sách"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “书店里” (shūdiàn li — trong hiệu sách), nên chọn hình hiệu sách.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 58,
+                "printedPage": "051",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-02",
+            "type": "multiple-choice",
+            "promptVi": "Nghe cụm từ và chọn hình đúng (đề mô phỏng, Nghe Phần I, câu 2). Bấm Nghe để nghe đoạn của câu này (đọc hai lần như trong phòng thi).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 60.0,
+              "end": 67.8,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-q2-a.webp",
+                "imageAlt": "Chó và mèo ngồi trong bếp",
+                "zh": "狗和猫在厨房",
+                "pinyin": "gǒu hé māo zài chúfáng",
+                "vi": "chó và mèo trong bếp"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-q2-b.webp",
+                "imageAlt": "Mèo cam nằm dưới gầm bàn",
+                "zh": "桌子下的小猫",
+                "pinyin": "zhuōzi xià de xiǎomāo",
+                "vi": "mèo con dưới bàn"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-q2-c.webp",
+                "imageAlt": "Hai con mèo ngồi bên cửa sổ",
+                "zh": "猫在窗户旁边",
+                "pinyin": "māo zài chuānghu pángbiān",
+                "vi": "mèo bên cửa sổ"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “桌子下的小猫” (zhuōzi xià de xiǎomāo — mèo con ở dưới bàn), nên chọn hình mèo dưới gầm bàn.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 58,
+                "printedPage": "051",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-03",
+            "type": "multiple-choice",
+            "promptVi": "Nghe cụm từ và chọn hình đúng (đề mô phỏng, Nghe Phần I, câu 3). Bấm Nghe để nghe đoạn của câu này (đọc hai lần như trong phòng thi).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 79.7,
+              "end": 86.0,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-q3-a.webp",
+                "imageAlt": "Người phụ nữ làm việc bên máy tính và giấy tờ",
+                "zh": "工作很忙",
+                "pinyin": "gōngzuò hěn máng",
+                "vi": "công việc rất bận"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-q3-b.webp",
+                "imageAlt": "Hai cha con đá bóng ngoài sân",
+                "zh": "踢足球",
+                "pinyin": "tī zúqiú",
+                "vi": "đá bóng"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-q3-c.webp",
+                "imageAlt": "Người đàn ông đang ngủ trên giường",
+                "zh": "睡觉",
+                "pinyin": "shuìjiào",
+                "vi": "ngủ"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “工作很忙” (gōngzuò hěn máng — công việc rất bận), nên chọn hình người đang làm việc.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 58,
+                "printedPage": "051",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-04",
+            "type": "multiple-choice",
+            "promptVi": "Nghe câu hỏi và chọn câu trả lời đúng (đề mô phỏng, Nghe Phần II, câu 4).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 141.5,
+              "end": 148.5,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "zh": "去学校",
+                "pinyin": "qù xuéxiào",
+                "vi": "đi đến trường"
+              },
+              {
+                "id": "2",
+                "zh": "房间外",
+                "pinyin": "fángjiān wài",
+                "vi": "ngoài phòng"
+              },
+              {
+                "id": "3",
+                "zh": "在吃东西",
+                "pinyin": "zài chī dōngxi",
+                "vi": "đang ăn"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
+            "explanationVi": "Em nghe câu hỏi: “小猫在哪儿？” (xiǎomāo zài nǎr? — mèo con ở đâu?). Câu trả lời chỉ nơi chốn là “房间外” (ngoài phòng).",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 59,
+                "printedPage": "052",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-05",
+            "type": "multiple-choice",
+            "promptVi": "Nghe câu hỏi và chọn câu trả lời đúng (đề mô phỏng, Nghe Phần II, câu 5).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 165.3,
+              "end": 175.6,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "zh": "我能到",
+                "pinyin": "wǒ néng dào",
+                "vi": "tôi đến được"
+              },
+              {
+                "id": "2",
+                "zh": "我吃午饭",
+                "pinyin": "wǒ chī wǔfàn",
+                "vi": "tôi ăn trưa"
+              },
+              {
+                "id": "3",
+                "zh": "我不能工作",
+                "pinyin": "wǒ bùnéng gōngzuò",
+                "vi": "tôi không thể làm việc"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
+            "explanationVi": "Em nghe: “上午九点，你能到学校吗？” (Shàngwǔ jiǔ diǎn, nǐ néng dào xuéxiào ma? — Chín giờ sáng, bạn đến trường được không?). Câu trả lời khớp là “我能到” (tôi đến được).",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 59,
+                "printedPage": "052",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-06",
+            "type": "multiple-choice",
+            "promptVi": "Nghe hội thoại và chọn hình phù hợp nhất (đề mô phỏng, Nghe Phần III, câu 6). Bốn hình dùng chung cho cả ba câu 6–8.",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 243.0,
+              "end": 254.5,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-p3-a.webp",
+                "imageAlt": "Hai người đàn ông bắt tay",
+                "zh": "两个人握手",
+                "pinyin": "liǎng ge rén wòshǒu",
+                "vi": "hai người bắt tay"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-p3-b.webp",
+                "imageAlt": "Lối đi giữa các kệ hàng trong siêu thị",
+                "zh": "超市",
+                "pinyin": "chāoshì",
+                "vi": "siêu thị"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-p3-c.webp",
+                "imageAlt": "Học sinh ăn cơm ở căng-tin",
+                "zh": "学生在食堂吃饭",
+                "pinyin": "xuésheng zài shítáng chī fàn",
+                "vi": "học sinh ăn ở căng-tin"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-p3-d.webp",
+                "imageAlt": "Người đàn ông làm việc một mình trong phòng",
+                "zh": "一个人在房间里工作",
+                "pinyin": "yí ge rén zài fángjiān li gōngzuò",
+                "vi": "một người làm việc trong phòng"
+              }
+            ],
+            "answer": "4",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “爸爸在哪儿？— 他在房间里呢。” (Bàba zài nǎr? — Tā zài fángjiān li ne. — Bố ở đâu? — Bố ở trong phòng). Hình khớp là người đàn ông trong phòng.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 59,
+                "printedPage": "052",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-07",
+            "type": "multiple-choice",
+            "promptVi": "Nghe hội thoại và chọn hình phù hợp nhất (đề mô phỏng, Nghe Phần III, câu 7). Bốn hình dùng chung cho cả ba câu 6–8.",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 272.0,
+              "end": 289.5,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-p3-a.webp",
+                "imageAlt": "Hai người đàn ông bắt tay",
+                "zh": "两个人握手",
+                "pinyin": "liǎng ge rén wòshǒu",
+                "vi": "hai người bắt tay"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-p3-b.webp",
+                "imageAlt": "Lối đi giữa các kệ hàng trong siêu thị",
+                "zh": "超市",
+                "pinyin": "chāoshì",
+                "vi": "siêu thị"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-p3-c.webp",
+                "imageAlt": "Học sinh ăn cơm ở căng-tin",
+                "zh": "学生在食堂吃饭",
+                "pinyin": "xuésheng zài shítáng chī fàn",
+                "vi": "học sinh ăn ở căng-tin"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-p3-d.webp",
+                "imageAlt": "Người đàn ông làm việc một mình trong phòng",
+                "zh": "一个人在房间里工作",
+                "pinyin": "yí ge rén zài fángjiān li gōngzuò",
+                "vi": "một người làm việc trong phòng"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “我在学校吃午饭。你呢？— 我也在学校吃午饭。” (Tôi ăn trưa ở trường. Còn bạn? — Tôi cũng ăn trưa ở trường). Hình khớp là học sinh ăn ở căng-tin.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 59,
+                "printedPage": "052",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-08",
+            "type": "multiple-choice",
+            "promptVi": "Nghe hội thoại và chọn hình phù hợp nhất (đề mô phỏng, Nghe Phần III, câu 8). Bốn hình dùng chung cho cả ba câu 6–8.",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 305.8,
+              "end": 323.0,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-p3-a.webp",
+                "imageAlt": "Hai người đàn ông bắt tay",
+                "zh": "两个人握手",
+                "pinyin": "liǎng ge rén wòshǒu",
+                "vi": "hai người bắt tay"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-p3-b.webp",
+                "imageAlt": "Lối đi giữa các kệ hàng trong siêu thị",
+                "zh": "超市",
+                "pinyin": "chāoshì",
+                "vi": "siêu thị"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-p3-c.webp",
+                "imageAlt": "Học sinh ăn cơm ở căng-tin",
+                "zh": "学生在食堂吃饭",
+                "pinyin": "xuésheng zài shítáng chī fàn",
+                "vi": "học sinh ăn ở căng-tin"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-p3-d.webp",
+                "imageAlt": "Người đàn ông làm việc một mình trong phòng",
+                "zh": "一个人在房间里工作",
+                "pinyin": "yí ge rén zài fángjiān li gōngzuò",
+                "vi": "một người làm việc trong phòng"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Em nghe: “学校外有一个小超市。” (Xuéxiào wài yǒu yí ge xiǎo chāoshì. — Ngoài trường có một siêu thị nhỏ). Hình khớp là siêu thị.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 59,
+                "printedPage": "052",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-09",
+            "type": "multiple-choice",
+            "promptVi": "Nghe câu và câu hỏi, rồi chọn đáp án đúng (đề mô phỏng, Nghe Phần IV, câu 9).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 400.8,
+              "end": 427.0,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "zh": "超市",
+                "pinyin": "chāoshì",
+                "vi": "siêu thị"
+              },
+              {
+                "id": "2",
+                "zh": "饭店",
+                "pinyin": "fàndiàn",
+                "vi": "nhà hàng"
+              },
+              {
+                "id": "3",
+                "zh": "学校书店",
+                "pinyin": "xuéxiào shūdiàn",
+                "vi": "hiệu sách của trường"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
+            "explanationVi": "Em nghe: “我今天上午有课，下午在学校书店里见吧。” và câu hỏi “说话人想在哪儿见？” (Người nói muốn gặp ở đâu?) — ở hiệu sách của trường.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 60,
+                "printedPage": "053",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-10",
+            "type": "multiple-choice",
+            "promptVi": "Nghe câu và câu hỏi, rồi chọn đáp án đúng (đề mô phỏng, Nghe Phần IV, câu 10).",
+            "audioSegment": {
+              "trackId": "trk-wb-l08-2",
+              "start": 443.9,
+              "end": 468.3,
+              "status": "asr-draft"
+            },
+            "options": [
+              {
+                "id": "1",
+                "zh": "去学校",
+                "pinyin": "qù xuéxiào",
+                "vi": "đi đến trường"
+              },
+              {
+                "id": "2",
+                "zh": "看电影",
+                "pinyin": "kàn diànyǐng",
+                "vi": "xem phim"
+              },
+              {
+                "id": "3",
+                "zh": "去上班",
+                "pinyin": "qù shàngbān",
+                "vi": "đi làm"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy từ lời đọc trên track WB 8-2 (ASR mức từ, mỗi câu đọc hai lần giống hệt) + đối chiếu duy nhất với lựa chọn in trong sách; tài liệu đáp án đăng lại không tách riêng mục này trong phần đã đối chiếu ở thử nghiệm.",
+            "explanationVi": "Em nghe: “明天不上课，我们能去电影院看电影吗？” và câu hỏi “说话人想要做什么？” (Người nói muốn làm gì?) — đi xem phim.",
+            "hintVi": "Nghe kỹ và đối chiếu từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 60,
+                "printedPage": "053",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-11",
+            "type": "multiple-choice",
+            "promptVi": "Chọn hình phù hợp nhất với câu (đề mô phỏng, Đọc Phần I, câu 11). Bốn hình dùng chung cho cả ba câu 11–13.",
+            "promptZh": "你的手机在桌子上呢。",
+            "promptPinyin": "Nǐ de shǒujī zài zhuōzi shang ne.",
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-rd-a.webp",
+                "imageAlt": "Cô gái ngồi đọc sách",
+                "zh": "看书",
+                "pinyin": "kàn shū",
+                "vi": "đọc sách"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-rd-b.webp",
+                "imageAlt": "Điện thoại đặt trên mặt bàn",
+                "zh": "桌子上的手机",
+                "pinyin": "zhuōzi shang de shǒujī",
+                "vi": "điện thoại trên bàn"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-rd-c.webp",
+                "imageAlt": "Bác sĩ và bệnh nhân trong phòng bệnh",
+                "zh": "医院里有病人",
+                "pinyin": "yīyuàn li yǒu bìngrén",
+                "vi": "trong bệnh viện có bệnh nhân"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-rd-d.webp",
+                "imageAlt": "Người phụ nữ đang ăn cơm",
+                "zh": "吃饭",
+                "pinyin": "chī fàn",
+                "vi": "ăn cơm"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Câu nói điện thoại ở trên bàn （你的手机在桌子上呢）, khớp hình điện thoại trên bàn.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-12",
+            "type": "multiple-choice",
+            "promptVi": "Chọn hình phù hợp nhất với câu (đề mô phỏng, Đọc Phần I, câu 12). Bốn hình dùng chung cho cả ba câu 11–13.",
+            "promptZh": "我在学校吃午饭。",
+            "promptPinyin": "Wǒ zài xuéxiào chī wǔfàn.",
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-rd-a.webp",
+                "imageAlt": "Cô gái ngồi đọc sách",
+                "zh": "看书",
+                "pinyin": "kàn shū",
+                "vi": "đọc sách"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-rd-b.webp",
+                "imageAlt": "Điện thoại đặt trên mặt bàn",
+                "zh": "桌子上的手机",
+                "pinyin": "zhuōzi shang de shǒujī",
+                "vi": "điện thoại trên bàn"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-rd-c.webp",
+                "imageAlt": "Bác sĩ và bệnh nhân trong phòng bệnh",
+                "zh": "医院里有病人",
+                "pinyin": "yīyuàn li yǒu bìngrén",
+                "vi": "trong bệnh viện có bệnh nhân"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-rd-d.webp",
+                "imageAlt": "Người phụ nữ đang ăn cơm",
+                "zh": "吃饭",
+                "pinyin": "chī fàn",
+                "vi": "ăn cơm"
+              }
+            ],
+            "answer": "4",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Câu nói ăn trưa ở trường （我在学校吃午饭）, khớp hình người đang ăn cơm.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-13",
+            "type": "multiple-choice",
+            "promptVi": "Chọn hình phù hợp nhất với câu (đề mô phỏng, Đọc Phần I, câu 13). Bốn hình dùng chung cho cả ba câu 11–13.",
+            "promptZh": "这个医院里病人多，医生工作很忙。",
+            "promptPinyin": "Zhège yīyuàn li bìngrén duō, yīshēng gōngzuò hěn máng.",
+            "options": [
+              {
+                "id": "1",
+                "image": "assets/lesson-08/mock-rd-a.webp",
+                "imageAlt": "Cô gái ngồi đọc sách",
+                "zh": "看书",
+                "pinyin": "kàn shū",
+                "vi": "đọc sách"
+              },
+              {
+                "id": "2",
+                "image": "assets/lesson-08/mock-rd-b.webp",
+                "imageAlt": "Điện thoại đặt trên mặt bàn",
+                "zh": "桌子上的手机",
+                "pinyin": "zhuōzi shang de shǒujī",
+                "vi": "điện thoại trên bàn"
+              },
+              {
+                "id": "3",
+                "image": "assets/lesson-08/mock-rd-c.webp",
+                "imageAlt": "Bác sĩ và bệnh nhân trong phòng bệnh",
+                "zh": "医院里有病人",
+                "pinyin": "yīyuàn li yǒu bìngrén",
+                "vi": "trong bệnh viện có bệnh nhân"
+              },
+              {
+                "id": "4",
+                "image": "assets/lesson-08/mock-rd-d.webp",
+                "imageAlt": "Người phụ nữ đang ăn cơm",
+                "zh": "吃饭",
+                "pinyin": "chī fàn",
+                "vi": "ăn cơm"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án đối chiếu tài liệu đáp án đăng lại (Scribd 1077395370, không chính thức) — khớp với suy luận từ bản in/ASR ở thử nghiệm Bài 8.",
+            "explanationVi": "Câu nói bệnh viện nhiều bệnh nhân, bác sĩ rất bận （这个医院里病人多，医生工作很忙）, khớp hình bệnh viện.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-14",
+            "type": "multiple-choice",
+            "promptVi": "Chọn câu trả lời ghép đúng (đề mô phỏng, Đọc Phần II, câu 14).",
+            "promptZh": "桌子上有什么？",
+            "promptPinyin": "Zhuōzi shang yǒu shénme?",
+            "options": [
+              {
+                "id": "1",
+                "zh": "医院。",
+                "pinyin": "Yīyuàn.",
+                "vi": "Bệnh viện."
+              },
+              {
+                "id": "2",
+                "zh": "我老师。",
+                "pinyin": "Wǒ lǎoshī.",
+                "vi": "Cô giáo của tôi."
+              },
+              {
+                "id": "3",
+                "zh": "饺子和面条儿。",
+                "pinyin": "Jiǎozi hé miàntiáor.",
+                "vi": "Sủi cảo và mì."
+              },
+              {
+                "id": "4",
+                "zh": "好的，谢谢！",
+                "pinyin": "Hǎo de, xièxie!",
+                "vi": "Được, cảm ơn!"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "“桌子上有什么？” (Trên bàn có gì?) — chỉ “饺子和面条儿” (sủi cảo và mì) là đồ vật đặt trên bàn được.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 62,
+                "printedPage": "055",
+                "section": "模拟测练"
+              },
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练·阅读第二部分选项库"
+              }
+            ]
+          },
+          {
+            "id": "l08m-15",
+            "type": "multiple-choice",
+            "promptVi": "Chọn câu trả lời ghép đúng (đề mô phỏng, Đọc Phần II, câu 15).",
+            "promptZh": "她是谁？",
+            "promptPinyin": "Tā shì shéi?",
+            "options": [
+              {
+                "id": "1",
+                "zh": "医院。",
+                "pinyin": "Yīyuàn.",
+                "vi": "Bệnh viện."
+              },
+              {
+                "id": "2",
+                "zh": "我老师。",
+                "pinyin": "Wǒ lǎoshī.",
+                "vi": "Cô giáo của tôi."
+              },
+              {
+                "id": "3",
+                "zh": "饺子和面条儿。",
+                "pinyin": "Jiǎozi hé miàntiáor.",
+                "vi": "Sủi cảo và mì."
+              },
+              {
+                "id": "4",
+                "zh": "好的，谢谢！",
+                "pinyin": "Hǎo de, xièxie!",
+                "vi": "Được, cảm ơn!"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "“她是谁？” (Cô ấy là ai?) — trả lời “我老师” (cô giáo của tôi) là khớp.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 62,
+                "printedPage": "055",
+                "section": "模拟测练"
+              },
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练·阅读第二部分选项库"
+              }
+            ]
+          },
+          {
+            "id": "l08m-16",
+            "type": "multiple-choice",
+            "promptVi": "Chọn câu trả lời ghép đúng (đề mô phỏng, Đọc Phần II, câu 16).",
+            "promptZh": "你爸爸在哪儿工作？",
+            "promptPinyin": "Nǐ bàba zài nǎr gōngzuò?",
+            "options": [
+              {
+                "id": "1",
+                "zh": "医院。",
+                "pinyin": "Yīyuàn.",
+                "vi": "Bệnh viện."
+              },
+              {
+                "id": "2",
+                "zh": "我老师。",
+                "pinyin": "Wǒ lǎoshī.",
+                "vi": "Cô giáo của tôi."
+              },
+              {
+                "id": "3",
+                "zh": "饺子和面条儿。",
+                "pinyin": "Jiǎozi hé miàntiáor.",
+                "vi": "Sủi cảo và mì."
+              },
+              {
+                "id": "4",
+                "zh": "好的，谢谢！",
+                "pinyin": "Hǎo de, xièxie!",
+                "vi": "Được, cảm ơn!"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "“你爸爸在哪儿工作？” (Bố bạn làm việc ở đâu?) — trả lời nơi làm việc: “医院” (bệnh viện).",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 62,
+                "printedPage": "055",
+                "section": "模拟测练"
+              },
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 61,
+                "printedPage": "054",
+                "section": "模拟测练·阅读第二部分选项库"
+              }
+            ]
+          },
+          {
+            "id": "l08m-17",
+            "type": "multiple-choice",
+            "promptVi": "Chọn từ đúng điền vào chỗ trống (đề mô phỏng, Đọc Phần III, câu 17).",
+            "promptZh": "我的房间里（ ）一只小猫。",
+            "promptPinyin": "Wǒ de fángjiān li ( ) yì zhī xiǎomāo.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "能",
+                "pinyin": "néng",
+                "vi": "có thể"
+              },
+              {
+                "id": "2",
+                "zh": "有",
+                "pinyin": "yǒu",
+                "vi": "có"
+              },
+              {
+                "id": "3",
+                "zh": "名字",
+                "pinyin": "míngzi",
+                "vi": "tên"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "“我的房间里（ ）一只小猫” cần động từ chỉ tồn tại “有” (có): trong phòng tôi có một con mèo con.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 62,
+                "printedPage": "055",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-18",
+            "type": "multiple-choice",
+            "promptVi": "Chọn từ đúng điền vào chỗ trống (đề mô phỏng, Đọc Phần III, câu 18).",
+            "promptZh": "男：我们下午在书店见吧。女：好的，我7:00（ ）到。",
+            "promptPinyin": "Nán: Wǒmen xiàwǔ zài shūdiàn jiàn ba. Nǚ: Hǎo de, wǒ 7:00 ( ) dào.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "能",
+                "pinyin": "néng",
+                "vi": "có thể"
+              },
+              {
+                "id": "2",
+                "zh": "有",
+                "pinyin": "yǒu",
+                "vi": "có"
+              },
+              {
+                "id": "3",
+                "zh": "名字",
+                "pinyin": "míngzi",
+                "vi": "tên"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "“我7:00（ ）到” cần “能” （能到 = đến được): “tôi 7 giờ đến được”.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 62,
+                "printedPage": "055",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-19",
+            "type": "multiple-choice",
+            "promptVi": "Đọc và chọn đáp án đúng (đề mô phỏng, Đọc Phần IV, câu 19).",
+            "promptZh": "昨天爸爸在医院工作，哥哥在家里休息，没去书店。★说话人的哥哥昨天：",
+            "promptPinyin": "Zuótiān bàba zài yīyuàn gōngzuò, gēge zài jiā li xiūxi, méi qù shūdiàn. Shuōhuàrén de gēge zuótiān:",
+            "options": [
+              {
+                "id": "1",
+                "zh": "在家里",
+                "pinyin": "zài jiā li",
+                "vi": "ở nhà"
+              },
+              {
+                "id": "2",
+                "zh": "在书店",
+                "pinyin": "zài shūdiàn",
+                "vi": "ở hiệu sách"
+              },
+              {
+                "id": "3",
+                "zh": "在医院工作",
+                "pinyin": "zài yīyuàn gōngzuò",
+                "vi": "làm việc ở bệnh viện"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "Văn bản in: “哥哥在家里休息” (anh trai nghỉ ở nhà) — chọn “在家里”.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 63,
+                "printedPage": "056",
+                "section": "模拟测练"
+              }
+            ]
+          },
+          {
+            "id": "l08m-20",
+            "type": "multiple-choice",
+            "promptVi": "Đọc và chọn đáp án đúng (đề mô phỏng, Đọc Phần IV, câu 20).",
+            "promptZh": "我喜欢吃米饭，我女朋友不喜欢。★说话人的女朋友不喜欢吃：",
+            "promptPinyin": "Wǒ xǐhuan chī mǐfàn, wǒ nǚpéngyou bù xǐhuan. Shuōhuàrén de nǚpéngyou bù xǐhuan chī:",
+            "options": [
+              {
+                "id": "1",
+                "zh": "米饭",
+                "pinyin": "mǐfàn",
+                "vi": "cơm"
+              },
+              {
+                "id": "2",
+                "zh": "包子",
+                "pinyin": "bāozi",
+                "vi": "bánh bao"
+              },
+              {
+                "id": "3",
+                "zh": "面条儿",
+                "pinyin": "miàntiáor",
+                "vi": "mì"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Đáp án suy ra duy nhất từ chính văn bản/lựa chọn in trong sách (trang in 055–056), không cần nguồn ngoài.",
+            "explanationVi": "Văn bản in: “我喜欢吃米饭，我女朋友不喜欢” (tôi thích ăn cơm, bạn gái tôi không thích) — cô ấy không thích ăn cơm （米饭）.",
+            "hintVi": "Đọc kỹ câu và từng lựa chọn; chỉ một lựa chọn khớp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk1-workbook-pdf",
+                "pdfPage": 63,
+                "printedPage": "056",
+                "section": "模拟测练"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

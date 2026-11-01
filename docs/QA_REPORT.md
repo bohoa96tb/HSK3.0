@@ -276,7 +276,7 @@ Textbook tr. in 035–042, Workbook tr. in 031–032 đọc trực quan; lời �
 
 ### QA độc lập (đối chiếu dữ liệu với ảnh trang in)
 
-ĐẠT cả 6 mảng: từ mới 22/22 khớp bản in; 14 câu hội thoại khớp từng chữ (gồm pinyin đọc số điện thoại); đáp án 9/9 duy nhất hợp lý và liên kết ôn tập hợp lý; chấm âm tiết đôi kiểm bằng node — đáp án đúng qua (dấu + số), thành viên còn lại của cặp bị loại, kể cả dōngxi/dōngxī và shǒujī/shǒují; st-l06-02 unverified không answers; 5 điểm kiến thức nhất quán với bản in. Không lỗi.
+ĐẠT nội dung ở cả 6 mảng: từ mới 22/22 khớp bản in; 14 câu hội thoại khớp từng chữ (gồm pinyin đọc số điện thoại); đáp án 9/9 duy nhất hợp lý. Báo cáo đầy đủ của vòng này (về sau bản tóm tắt) trừ điểm riêng phần LIÊN KẾT ÔN TẬP: wb6-text-1 trỏ kp-xiang là lệch (ô trống kiểm tra từ thời gian 明天， 想 đã cho sẵn), wb6-text-2 trỏ kp-serial chưa sát (đáp án nằm ở mẫu 想+động từ), wb6-text-4 và các câu tổng hợp thiếu liên kết. Đã sửa ở contentVersion 20261101-lesson6-4 theo đúng tiền lệ Bài 5 (ô trống kiểm tra cái gì thì trỏ điểm kiến thức đó): text-1 → KP thời gian Bài 5, text-2/text-4/comp-4 → KP 想, text-3/comp-1/2/3 → KP liên động, comp-5 để trống （多少 không thuộc điểm kiến thức nào); exerciseIds hai chiều đã đồng bộ; có test hồi quy. chấm âm tiết đôi kiểm bằng node — đáp án đúng qua (dấu + số), thành viên còn lại của cặp bị loại, kể cả dōngxi/dōngxī và shǒujī/shǒují; st-l06-02 unverified không answers; 5 điểm kiến thức nhất quán với bản in. Không lỗi.
 
 ### Nghiệm thu live
 

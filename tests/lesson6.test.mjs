@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 
 test('lesson 6 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l6, 'additionalLessons must contain hsk1-l06');
-  assert.equal(content.contentVersion, '20261101-lesson6-3');
+  assert.equal(content.contentVersion, '20261101-lesson6-4');
   assert.equal(l6.prepWords.length, 22);
   for (const w of l6.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
@@ -98,4 +98,18 @@ test('lesson 6 erhua table pinyin follows the printed Workbook table', () => {
   const fw = Object.fromEntries(l6.foundationWords.map((w) => [w.zh, w.pinyin]));
   assert.equal(fw['盖儿'], 'gàir');
   assert.equal(fw['个儿'], 'gèr');
+});
+
+test('lesson 6 review links follow the blank-tested feature (QA round 2)', () => {
+  const g = (id) => l6.exerciseSet.items.find((x) => x.id === id).grammarIds;
+  assert.deepEqual(g('wb6-text-4'), ['kp-hsk1-l06-xiang']); // 不想吃 is the 想 KP's core
+  assert.deepEqual(g('wb6-text-3'), ['kp-hsk1-l06-serial']);
+  for (const id of ['wb6-comp-1', 'wb6-comp-2', 'wb6-comp-3']) assert.deepEqual(g(id), ['kp-hsk1-l06-serial']);
+  assert.deepEqual(g('wb6-comp-4'), ['kp-hsk1-l06-xiang']);
+  assert.deepEqual(g('wb6-comp-5'), []);
+  const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url), 'utf8'));
+  const allk = Object.fromEntries(content.additionalLessons.flatMap((x) => x.knowledgePoints).map((k) => [k.id, k]));
+  assert.deepEqual(allk['kp-hsk1-l06-xiang'].exerciseIds, ['wb6-text-2', 'wb6-text-4', 'wb6-comp-4']);
+  assert.deepEqual(allk['kp-hsk1-l06-serial'].exerciseIds, ['wb6-text-3', 'wb6-comp-1', 'wb6-comp-2', 'wb6-comp-3']);
+  assert.ok(allk['kp-hsk1-l05-time'].exerciseIds.includes('wb6-text-1'));
 });

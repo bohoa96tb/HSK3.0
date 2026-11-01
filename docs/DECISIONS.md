@@ -203,3 +203,7 @@ Phiên bản tài nguyên đổi sang `?v=20261101-lesson2` đồng bộ ở ind
 - Kết quả cũ của ô bị xung đột: giữ lịch sử thô (số lần thử, nháp), loại khỏi thống kê hiện hành bằng migration theo dữ liệu chạy lúc khởi động app, có test hồi quy (tests/conflict.test.mjs).
 - Trường hợp đầu tiên: ô 5 bài chọn âm tiết Bài 5 (đề in jiǎ/xiǎ; lời đọc + bản thu jiā; kiểm cao độ bằng máy cho thấy thanh phẳng cao, không phải thanh 3; tài liệu đáp án đăng lại không in đáp án bài này) — trước đây chấm theo jiā kèm ghi chú (D14), nay ngừng chấm theo D16 cho tới khi có bằng chứng giải quyết xung đột.
 - Quy tắc đầy đủ ở docs/CONTENT_STANDARD.md mục "Bổ sung 01/11/2026 — Quy tắc source-conflict".
+
+## D17 — Quy trình QA bắt buộc: báo cáo đầy đủ, kiểm ngữ nghĩa, khép trong nhánh (01/11/2026, Hoa chỉ đạo)
+
+Từ Bài 7: (1) chỉ kết luận đạt/merge sau khi đọc toàn bộ báo cáo QA độc lập đầy đủ — không dùng bản tóm tắt; (2) QA kiểm ngữ nghĩa từng mảng (thân câu/dấu câu/hình khớp bản in; đáp án khớp yêu cầu thật của đề; pinyin/nghĩa khớp; liên kết ôn tập theo đúng kiến thức được kiểm tra, thiếu thì để trống rõ ràng, không gán gần đúng; ánh xạ loa khớp nhãn); test tự-so-dữ-liệu không tính là kiểm chứng độc lập, test ánh xạ audio không tính là kiểm nghe, đoạn chưa kiểm nghe giữ `asr-draft`; (3) vòng QA khép trong nhánh trước phát hành (báo lỗi → sửa → kiểm lại bản cuối → hồi quy → tài liệu → merge), gom vào PR bài học khi có thể; lỗi sau phát hành sửa ngay và báo đúng; (4) báo cáo kiểm thử tách năm loại bằng chứng. Chi tiết ở CONTENT_STANDARD mục D17.

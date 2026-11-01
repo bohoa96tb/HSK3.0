@@ -201,3 +201,16 @@ Khi hai nguồn của chính bộ sách mâu thuẫn nhau ở đúng đặc đi�
 3. Nếu ô đã từng được chấm trước khi phát hiện xung đột: giữ nguyên lịch sử thô (số lần thử, bản nháp của người học) nhưng loại kết quả của ô khỏi thống kê hiện hành (điểm lần đầu, kết quả gần nhất, hàng đợi ôn tập) bằng migration chạy theo dữ liệu, có kiểm thử hồi quy.
 4. Chỉ khôi phục chấm khi xung đột được giải quyết bằng bằng chứng mới đủ mạnh (ví dụ bản in đính chính, đáp án chính thức của NXB, hoặc kiểm nghe độc lập đáng tin) và ghi lại quyết định đó.
 5. Ghi chú công khai trong `answerEvidence`/tài liệu nguồn vẫn giữ nguyên như các điểm chưa chắc khác (D14) — điểm khác là trạng thái chấm: ghi chú (D14) vẫn chấm; source-conflict (D16) thì ngừng chấm.
+
+## Bổ sung 01/11/2026 — Quy trình QA bắt buộc trước phát hành (D17, chỉ đạo của Hoa)
+
+1. **Chỉ kết luận đạt và merge sau khi đã nhận, đọc toàn bộ báo cáo QA độc lập đầy đủ.** Bản tóm tắt, trạng thái "đang kiểm" hoặc kết quả từng phần không phải căn cứ kết luận. Khi báo cáo chưa về đủ, các phần việc độc lập vẫn tiếp tục và trạng thái QA ghi là "đang diễn ra".
+2. **Kiểm ngữ nghĩa từng mảng, không chỉ đếm số lượng:**
+   - Thân câu, lựa chọn, dấu câu và hình phải khớp bản in.
+   - Đáp án phải khớp yêu cầu thật sự của đề (đề kiểm tra cái gì thì đáp án và liên kết ôn tập theo cái đó).
+   - Pinyin và nghĩa tiếng Việt khớp nội dung đã đối chiếu.
+   - Liên kết ôn tập trỏ đúng kiến thức câu hỏi thực sự kiểm tra; kiến thức không có trong app thì để thiếu rõ ràng (mảng rỗng), KHÔNG gán gần đúng.
+   - Ánh xạ loa phải khớp đúng nội dung được gắn nhãn (đoạn đọc đúng từ/câu của nhãn đó).
+3. **Phân biệt loại bằng chứng:** test so dữ liệu với chính dữ liệu không phải kiểm chứng độc lập; test ánh xạ audio không phải kiểm nghe. Đoạn loa chưa được nghe kiểm chứng bởi người giữ trạng thái `asr-draft` và phải báo cáo là chưa kiểm nghe.
+4. **Khép QA trong nhánh trước phát hành:** QA báo lỗi → sửa trong nhánh → QA kiểm lại bản cuối → chạy hồi quy toàn bộ → cập nhật tài liệu → mới merge. Gom sửa lỗi và tài liệu liên quan vào PR của bài học khi có thể; tránh phát hành sớm rồi nối nhiều PR đính chính. Nếu vẫn phát hiện lỗi sau phát hành: sửa ngay, báo đúng, không giữ kết luận cũ.
+5. **Báo cáo kiểm thử phải tách rõ năm loại:** test tự động; đối chiếu trực quan bản in; đối chiếu ASR; kiểm nghe thực tế; kiểm giao diện (trình duyệt/iframe/thiết bị thật).

@@ -126,3 +126,11 @@ trên bản triển khai thật. Nếu chưa thể công bố học liệu đầ
 bản phát hành mới là khung / liên kết nguồn, chưa đạt pilot học liệu hoàn chỉnh.
 Không gọi sản phẩm là "đầy đủ HSK 3.0" khi ma trận nguồn và ánh xạ đề cương
 chưa chứng minh được điều đó.
+
+## 9. Quy trình QA bắt buộc (từ Bài 7, theo D17)
+
+- Chỉ kết luận đạt và merge sau khi đã nhận và đọc **toàn bộ báo cáo QA độc lập đầy đủ**; bản tóm tắt hoặc trạng thái đang kiểm không đủ căn cứ.
+- QA phải kiểm **ngữ nghĩa**: thân câu/lựa chọn/dấu câu/hình khớp bản in; đáp án khớp yêu cầu thật của đề; pinyin/nghĩa khớp; liên kết ôn tập theo đúng kiến thức câu hỏi kiểm tra (không có thì để thiếu rõ ràng, không gán gần đúng); ánh xạ loa khớp đúng nội dung nhãn.
+- Test so dữ liệu với chính dữ liệu không được gọi là kiểm chứng độc lập; test ánh xạ audio không được gọi là đã nghe xác minh; đoạn chưa kiểm nghe giữ `asr-draft`.
+- Khép vòng QA **trong nhánh** trước phát hành: báo lỗi → sửa → QA kiểm lại bản cuối → hồi quy → cập nhật tài liệu → merge. Gom sửa lỗi + tài liệu vào PR bài học khi có thể.
+- Báo cáo mục kiểm thử tách rõ: test tự động / đối chiếu trực quan bản in / đối chiếu ASR / kiểm nghe thực tế / kiểm giao diện (trình duyệt, iframe, thiết bị thật).

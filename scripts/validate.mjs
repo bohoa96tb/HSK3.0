@@ -120,11 +120,38 @@ for (const c of contents) {
     }
   }
   const localTracks = new Set((c.reader?.audioTracks || []).map((t) => t.id));
+  const localTrackById = new Map((c.reader?.audioTracks || []).map((t) => [t.id, t]));
+  const TONE_OF = { ā: 1, á: 2, ǎ: 3, à: 4, ē: 1, é: 2, ě: 3, è: 4, ī: 1, í: 2, ǐ: 3, ì: 4, ō: 1, ó: 2, ǒ: 3, ò: 4, ū: 1, ú: 2, ǔ: 3, ù: 4, ǖ: 1, ǘ: 2, ǚ: 3, ǜ: 4 };
+  const stripMarks = (x) => String(x).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ü/g, "u");
   for (const t of c.selfCheckTasks || []) {
-    if (t.answerStatus !== "unverified") err(`self-check ${t.id}: answerStatus must be "unverified"`);
     if (t.audioTrackId && !localTracks.has(t.audioTrackId)) err(`self-check ${t.id}: unknown audioTrackId`);
     if (!Array.isArray(t.prompts) || !t.prompts.length) err(`self-check ${t.id}: prompts missing`);
     checkRefs(t.sourceRefs, `self-check ${t.id}`);
+    if (t.answerStatus === "unverified") {
+      if (t.answers != null || t.gradingMode != null) err(`self-check ${t.id}: unverified tasks must not carry answers/gradingMode`);
+    } else if (t.answerStatus === "verified-editorial") {
+      if (!["initial", "final", "tone"].includes(t.gradingMode)) err(`self-check ${t.id}: gradingMode must be initial/final/tone`);
+      if (!t.answerEvidence) err(`self-check ${t.id}: verified-editorial needs answerEvidence`);
+      if (!Array.isArray(t.answers) || t.answers.length !== t.prompts.length) err(`self-check ${t.id}: answers must cover every prompt`);
+      if (!Array.isArray(t.scriptSyllables) || t.scriptSyllables.length !== t.prompts.length) err(`self-check ${t.id}: scriptSyllables must cover every prompt`);
+      if (Array.isArray(t.answers) && Array.isArray(t.scriptSyllables)) {
+        t.answers.forEach((a, i) => {
+          const syl = t.scriptSyllables[i];
+          const base = stripMarks(syl);
+          const tone = [...String(syl)].map((ch) => TONE_OF[ch]).find(Boolean) || 0;
+          if (t.gradingMode === "initial" && !base.startsWith(String(a))) err(`self-check ${t.id} cell ${i + 1}: initial answer "${a}" does not match script syllable "${syl}"`);
+          if (t.gradingMode === "final" && !base.endsWith(stripMarks(a))) err(`self-check ${t.id} cell ${i + 1}: final answer "${a}" does not match script syllable "${syl}"`);
+          if (t.gradingMode === "tone" && a !== tone) err(`self-check ${t.id} cell ${i + 1}: tone answer ${a} does not match script syllable "${syl}" (tone ${tone})`);
+        });
+      }
+      if (t.audioSegment) {
+        const track = localTrackById.get(t.audioTrackId);
+        const { start, end } = t.audioSegment;
+        if (!(start >= 0 && end > start && track && end <= track.durationSec)) err(`self-check ${t.id}: audioSegment out of track range`);
+      }
+    } else {
+      err(`self-check ${t.id}: unknown answerStatus "${t.answerStatus}"`);
+    }
   }
   if (c.apply?.audioTrackId && !localTracks.has(c.apply.audioTrackId)) err(`${tag}: apply audioTrackId unknown`);
   if (c.apply) checkRefs(c.apply.sourceRefs, `${tag} apply`);

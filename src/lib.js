@@ -41,6 +41,110 @@ export function gradeChoice(item, optionId) {
   return { graded: true, correct: optionId === item.answer };
 }
 
+// --- Dictation (nghe–viết) grading -------------------------------------------
+// Answers are graded only when the task carries cross-checked editorial
+// answers (answerStatus "verified-editorial"); unverified tasks never grade.
+const TONE_MARKS = {
+  ā: ["a", 1], á: ["a", 2], ǎ: ["a", 3], à: ["a", 4],
+  ē: ["e", 1], é: ["e", 2], ě: ["e", 3], è: ["e", 4],
+  ī: ["i", 1], í: ["i", 2], ǐ: ["i", 3], ì: ["i", 4],
+  ō: ["o", 1], ó: ["o", 2], ǒ: ["o", 3], ò: ["o", 4],
+  ū: ["u", 1], ú: ["u", 2], ǔ: ["u", 3], ù: ["u", 4],
+  ǖ: ["ü", 1], ǘ: ["ü", 2], ǚ: ["ü", 3], ǜ: ["ü", 4],
+};
+const INITIALS = ["zh", "ch", "sh", "b", "p", "m", "f", "d", "t", "n", "l", "g", "k", "h", "j", "q", "x", "r", "z", "c", "s", "y", "w"];
+
+// Parse a pinyin answer into {base, tone}: tone marks or a trailing tone
+// number (1-5) are recognised; "v" and "u:" mean ü; case/space-insensitive.
+export function parsePinyin(value) {
+  let s = String(value ?? "").normalize("NFC").trim().toLowerCase().replace(/\s+/g, "");
+  if (!s) return { base: "", tone: 0 };
+  let tone = 0;
+  const num = s.match(/([0-5])$/);
+  if (num) { tone = Number(num[1]) % 5; s = s.slice(0, -1); }
+  s = s.replace(/u:/g, "ü").replace(/v/g, "ü");
+  let base = "";
+  for (const ch of s) {
+    const marked = TONE_MARKS[ch];
+    if (marked) { base += marked[0]; if (!tone) tone = marked[1]; }
+    else base += ch;
+  }
+  return { base: base.replace(/[^a-zü]/g, ""), tone };
+}
+
+export function splitInitial(base) {
+  for (const ini of INITIALS) if (base.startsWith(ini)) return [ini, base.slice(ini.length)];
+  return ["", base];
+}
+
+// After j/q/x the letter u is written for ü (spelling rule of the lessons),
+// so u and ü are interchangeable only there; everywhere else they differ.
+function canonFinal(base, initial) {
+  return ["j", "q", "x"].includes(initial) ? base.replace(/ü/g, "u") : base;
+}
+
+// Grade one dictation cell. task.answers[i] is the graded token for the
+// task's mode: an initial ("h"), a final with tone mark ("ěn"), or a tone
+// number (3). task.scriptSyllables[i] is the full syllable that was read.
+export function gradeDictationCell(task, index, input) {
+  if (!task || task.answerStatus !== "verified-editorial" || !Array.isArray(task.answers)) {
+    return { graded: false, reason: "unverified-answer" };
+  }
+  const raw = String(input ?? "").trim();
+  if (!raw) return { graded: false, reason: "empty" };
+  const expected = task.answers[index];
+  const syllable = parsePinyin(task.scriptSyllables?.[index] || "");
+  const given = parsePinyin(raw);
+  if (task.gradingMode === "initial") {
+    if (given.base === expected && given.tone === 0) return { graded: true, correct: true };
+    // A full syllable is accepted only if it reproduces the read syllable
+    // exactly — then its initial is what is being graded.
+    const correct = given.base === syllable.base && given.tone === syllable.tone && splitInitial(given.base)[0] === expected;
+    return { graded: true, correct };
+  }
+  if (task.gradingMode === "final") {
+    const promptInitial = splitInitial(parsePinyin(task.prompts[index]).base || syllable.base)[0] || splitInitial(syllable.base)[0];
+    const expFinal = parsePinyin(expected);
+    // Input may be the final alone or the whole syllable.
+    let candBase = given.base, candTone = given.tone;
+    const [ini, rest] = splitInitial(given.base);
+    if (ini && rest && given.base !== expFinal.base) { candBase = rest; }
+    else if (!ini && given.base === syllable.base) { candBase = splitInitial(given.base)[1]; }
+    const correct =
+      canonFinal(candBase, promptInitial) === canonFinal(expFinal.base, promptInitial) &&
+      candTone === expFinal.tone && candTone !== 0;
+    return { graded: true, correct };
+  }
+  if (task.gradingMode === "tone") {
+    let tone = given.tone;
+    if (/^[0-5]$/.test(raw)) tone = Number(raw) % 5;
+    if (!tone) return { graded: true, correct: false };
+    // Letters, when given, must be the prompt syllable itself.
+    const promptBase = parsePinyin(task.prompts[index]).base;
+    const lettersOk = !/[a-zü]/.test(given.base) || given.base === promptBase || given.base === syllable.base;
+    return { graded: true, correct: tone === expected && lettersOk };
+  }
+  return { graded: false, reason: "unknown-mode" };
+}
+
+export function gradeDictation(task, inputs) {
+  const cells = (task?.prompts || []).map((_, i) => gradeDictationCell(task, i, inputs?.[i]));
+  const gradedCells = cells.filter((c) => c.graded);
+  return {
+    graded: gradedCells.length > 0,
+    cells,
+    correct: gradedCells.filter((c) => c.correct).length,
+    total: gradedCells.length,
+  };
+}
+
+// Display form of the expected answer for feedback after checking.
+export function dictationExpected(task, index) {
+  if (!task) return "";
+  if (task.gradingMode === "tone") return `${task.prompts[index]}${task.answers[index]}`;
+  return String(task.answers[index]);
+}
+
 // Review scheduling: wrong answer restarts at step 0 (1 day). A correct
 // self-rating advances one step; "slow" keeps the step, "forgot" restarts.
 export function nextReviewState(prev, rating, nowMs) {
@@ -81,6 +185,7 @@ export function emptyProgress() {
     exerciseSession: null, // latest session mirror: {setId, index, answers:{}, checked:{}, hintUsed:{}}
     exerciseSessions: {}, // setId -> session, so each lesson keeps its own exercise state
     drafts: {}, // self-check taskId:index -> learner's own written answer (never auto-graded)
+    dictation: {}, // taskId -> {first:{idx:bool}, tries:{idx:n}, peeked:bool, updatedAt} — first-attempt results are never overwritten
     audioState: {}, // trackId -> {position, trackUrl}
     sessions: [], // {date, minutes} active-study estimates recorded on section completion
   };
@@ -94,7 +199,7 @@ export function validateProgress(data) {
   if (data.schemaVersion !== PROGRESS_SCHEMA_VERSION) {
     errors.push(`schemaVersion phải là ${PROGRESS_SCHEMA_VERSION} (đang là ${JSON.stringify(data.schemaVersion)}).`);
   }
-  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState", "exerciseSessions", "drafts"]) {
+  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState", "exerciseSessions", "drafts", "dictation"]) {
     if (data[key] !== undefined && (typeof data[key] !== "object" || data[key] === null || Array.isArray(data[key]))) {
       errors.push(`Trường "${key}" phải là một đối tượng.`);
     }
@@ -119,6 +224,7 @@ export function migrateProgress(data) {
     exerciseSession: data.exerciseSession ?? null,
     exerciseSessions: data.exerciseSessions || (data.exerciseSession?.setId ? { [data.exerciseSession.setId]: data.exerciseSession } : {}),
     drafts: data.drafts || {},
+    dictation: data.dictation || {},
     audioState: data.audioState || {},
     sessions: data.sessions || [],
   };

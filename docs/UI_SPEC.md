@@ -54,3 +54,8 @@ Bổ sung (D21): bài học có thể có bộ bài bổ trợ riêng (`suppExer
 - Nội dung bảng tra: chữ Hán, Pinyin, Hán–Việt (hoặc "Chưa có dữ liệu đã kiểm chứng"), nghĩa theo ngữ cảnh, nút "Nghe phát âm (giọng máy)", từ thành phần (nếu tách nhỏ được), dòng trạng thái nguồn dữ liệu.
 - Tra cụm: nút "Tra cụm" dưới câu; chế độ chọn theo ô từ (đầu → cuối) + thanh thao tác riêng; không dùng chọn văn bản gốc của trình duyệt.
 - `details.info-fold` là mẫu thống nhất cho chữ giải thích dài: summary tối thiểu 44px, nhãn theo người học (Cách làm bài, Cách tính lịch ôn, Thông tin thêm, Nguồn).
+
+## 14. Bố cục gọn cho thẻ kiến thức và ví dụ (D25)
+
+- Khối `.example`: dòng 1 = câu chữ Hán + loa; dòng 2 `.ex-meta` = Pinyin (muted) + nghĩa + nút Tra cụm thu gọn (38px), tất cả trên một hàng bọc dòng. Nghĩa ví dụ mang class `tog-vi-sent` để theo công tắc Nghĩa như câu hội thoại.
+- Mật độ chuẩn: padding thẻ 14px (mobile), ví dụ 9/11px, tiêu đề thẻ ngữ pháp 1.12rem, chữ Hán ví dụ 1.18rem × thang người dùng. Không giảm vùng chạm của loa (44px) và nút hỗ trợ (40px).

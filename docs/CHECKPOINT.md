@@ -88,3 +88,13 @@
 - QA code độc lập ĐẠT 5/5 (script jsdom riêng); lưu ý 1 lần test mới chập chờn vì chờ ngắn sau cú bấm → đã đổi sang chờ có thăm dò, chạy lại file test 5 lần đều 14/14, toàn bộ 117/117.
 - Phát hành: PR #54 merge 28a0e0fa; contentVersion 20261102-lesson8-continue1; byte remote 8/8 + live 3/3 khớp. Nghiệm thu live: bấm nút 2 lần từ trang Bắt đầu đều chuyển sang Từ cần biết (Mục 2/7), không kẹt.
 - nextTask: Bài 9 khi Hoa nói "Tiếp tục" (áp dụng D17/D19/D20/D22/D23/D24/D25/D26).
+
+## Vòng đưa chuẩn Bài 8 vào hệ thống + chuẩn hoá Bài 1 — D27 (2026-11-02)
+
+- Chỉ đạo của Hoa: Bài 8 là chuẩn cho toàn dự án (không cần duyệt lại mẫu). Thứ tự mới: (GĐ1) lưu chuẩn vào hệ thống → (GĐ2) chuẩn hoá Bài 1→Bài 8 theo thứ tự → (GĐ3) sau khi bài cũ đạt chuẩn mới làm bài mới. Quyết định D27 trong DECISIONS.
+- Giai đoạn 1: docs/LESSON_STANDARD.md (chuẩn đầy đủ + điều kiện hoàn thành + cơ chế phát hành/tiếp tục), liên kết từ AGENTS.md mục 11 và CONTENT_STANDARD; scripts/audit-standard.mjs in bảng phù hợp cơ giới từng bài (lộ trình, nhóm từ, Thử ngay, tổng kết, độ phủ tra từ, 3 khu bài tập).
+- Bài 1 nâng cấp theo chuẩn: thêm tên riêng 王老师 (thiếu hẳn) → 12 từ + 1 tên riêng; prepGroups 3 nhóm + prepSummaryVi; learningPath 6 bước; useWhenVi + quickCheck cho 3 điểm chính; summaryPoints; tra từ mở cho Bài 1 (baseLexicon gồm từ vựng pilot; extras 小语; phủ 20/20); bổ sung bài đọc vè 跟读绕口令 còn thiếu (KP nền tảng + nút nghe track gốc 1-7, thời lượng đo từ file thật) và 4 nhóm thanh điệu còn thiếu (đủ 8/8); apply chuyển sang 2 nhiệm vụ đóng vai (câu mẫu toàn bộ Hội thoại 2/3, có tra từ). Sửa dùng chung: nhãn đếm nhóm từ tính từ dữ liệu (Bài 8 nhóm 3 sửa thành "6 từ + 1 tên riêng"), bỏ câu cứng "Ba nhiệm vụ" của khối Tự nói, nút nghe track ở cấp điểm kiến thức.
+- QA D17 hai vòng khép trong nhánh: nội dung v1 — 2 TB (gắn sai 您 vào Hội thoại 1; thiếu đọc vè) + 1 Nhẹ (thiếu 4 nhóm thanh) → sửa hết → v2 ĐẠT 4/4; code v1 — Tự nói Bài 1 lệch cấu trúc tra từ + công thức độ phủ của audit hẹp hơn phạm vi công bố → sửa hết → v2 ĐẠT 4/4 (12/12). Test 127/127, validator OK.
+- Phát hành: PR #56 merge 52ef95a7; contentVersion 20261102-lesson1-standard1; byte remote 16/16 + live khớp; nghiệm thu live bổ sung ở QA_REPORT.
+- Trạng thái chuẩn hoá từng bài: Bài 1 = ĐẠT CHUẨN D27; Bài 2–7 = CHƯA chuẩn hoá; Bài 8 = bài chuẩn mẫu (đạt, chỉ kiểm hồi quy khi có thay đổi dùng chung).
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 2 《你是哪国人》 theo LESSON_STANDARD (kiểm kê PDF TB in 005–008 + WB in 005–008 gồm ô trợ giúp/câu hỏi mở/hoạt động/汉字； QA D17; PR riêng). Lần lượt Bài 3→7; khi Bài 1–8 đều đạt chuẩn mới làm Bài 9.

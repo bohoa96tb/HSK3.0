@@ -448,7 +448,8 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 
 - Bộ hình Bài 6 cũ (người que và khối trừu tượng ở vòng chuẩn hoá) được vẽ lại toàn bộ theo mức hoàn thiện mới: 11 file. Cảnh dùng minh họa sinh mới đúng phong cách dự án: hai học viên cầm điện thoại ở bàn (theo tr.036), gia đình ăn tối, hai tay cầm điện thoại (tr.041), siêu thị có xe đẩy, taxi cam có hộp đèn nóc (tr.042), đĩa bánh bao, điện thoại màn hình hồng, sữa rót vào ly, bát cơm. Hình siêu thị dùng chung cho speaking-2 và warm-market, hình taxi dùng chung cho speaking-3 và warm-taxi (cùng khái niệm, thuộc hai bộ câu hỏi khác nhau).
 - QA hình độc lập: 11/11 ĐẠT — mọi hình đúng một khái niệm, bộ khởi động 6 hình phân biệt rõ, không còn yếu tố sơ sài. contentVersion `20261102-lesson6-images2`.
-- (Nghiệm thu live bổ sung ở PR sổ sách.) Với vòng này, cả ba bài từng bị chê sơ sài (5, 6, 7) đều đã ở mức hình mới; Bài 1, 2, 3, 4 và 8 đã kiểm kê là đạt mức ngay từ đầu.
+- Phát hành lần 1 (PR #78, `20261102-lesson6-images2`): nghiệm thu live khớp byte 11/11 nhưng kiểm trực quan phát hiện hình ngữ cảnh chưa đúng bố cục ảnh gốc — hai học viên cùng hướng về phía người xem thay vì ngồi đối diện nhau như tr.036 (trong ảnh gốc, Bạch Gia Nguyệt tóc sáng áo tím nhạt ngồi bên trái, Lý Văn áo khoác denim ngồi bên phải, đối diện qua bàn tròn nhỏ có lọ hoa). Đã sinh lại riêng hình này đúng bố cục đối diện nhìn nghiêng và phát hành bản sửa `20261102-lesson6-images3`.
+- Với vòng này, cả ba bài từng bị chê sơ sài (5, 6, 7) đều đã ở mức hình mới; Bài 1, 2, 3, 4 và 8 đã kiểm kê là đạt mức ngay từ đầu.
 
 ### Vẽ lại hình Bài 5 đẹp hơn — yêu cầu của Hoa (2026-11-02)
 

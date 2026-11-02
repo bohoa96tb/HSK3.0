@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson2-standard1",
+ "contentVersion": "20261102-lesson3-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -270,7 +270,8 @@
     "kp-hsk1-l03-de",
     "kp-hsk1-l03-ma",
     "kp-hsk1-l03-initials-finals-3",
-    "kp-hsk1-l03-spelling"
+    "kp-hsk1-l03-spelling",
+    "kp-hsk1-l03-twister"
    ],
    "sectionIds": [
     "intro",
@@ -5294,7 +5295,8 @@
       "start": 0.0,
       "end": 0.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l03w-2",
@@ -5317,7 +5319,68 @@
       "start": 0.67,
       "end": 3.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l03w-p1",
+     "zh": "中国",
+     "pinyin": "Zhōngguó",
+     "vi": "Trung Quốc (nước)",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "hanViet": "TRUNG QUỐC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 26,
+       "printedPage": 11,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "audio": null,
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l03w-p2",
+     "zh": "法国",
+     "pinyin": "Fǎguó",
+     "vi": "Pháp (nước)",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "hanViet": "PHÁP QUỐC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 26,
+       "printedPage": 11,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "audio": null,
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l03w-p3",
+     "zh": "中文",
+     "pinyin": "Zhōngwén",
+     "vi": "tiếng Trung (ngôn ngữ)",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "hanViet": "TRUNG VĂN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 26,
+       "printedPage": 11,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "audio": null,
+     "dialogueGroup": 1
     },
     {
      "id": "l03w-3",
@@ -5339,7 +5402,8 @@
       "start": 0.0,
       "end": 0.68,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-4",
@@ -5362,7 +5426,8 @@
       "start": 1.95,
       "end": 4.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-5",
@@ -5384,7 +5449,8 @@
       "start": 7.71,
       "end": 10.64,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-6",
@@ -5406,7 +5472,8 @@
       "start": 10.51,
       "end": 11.78,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-7",
@@ -5428,7 +5495,8 @@
       "start": 13.55,
       "end": 14.16,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-8",
@@ -5450,7 +5518,28 @@
       "start": 15.63,
       "end": 16.46,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l03w-p4",
+     "zh": "泰国",
+     "pinyin": "Tàiguó",
+     "vi": "Thái Lan (nước)",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "hanViet": "THÁI QUỐC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 28,
+       "printedPage": 13,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "audio": null,
+     "dialogueGroup": 2
     },
     {
      "id": "l03w-9",
@@ -5472,7 +5561,8 @@
       "start": 0.22,
       "end": 1.05,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-10",
@@ -5495,7 +5585,8 @@
       "start": 2.86,
       "end": 5.79,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-11",
@@ -5517,7 +5608,8 @@
       "start": 6.22,
       "end": 7.57,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-12",
@@ -5540,7 +5632,8 @@
       "start": 10.22,
       "end": 11.75,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-13",
@@ -5562,7 +5655,8 @@
       "start": 11.62,
       "end": 13.17,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-14",
@@ -5579,7 +5673,8 @@
      ],
      "hanViet": "MA",
      "hanVietStatus": "verified-editorial",
-     "audio": null
+     "audio": null,
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-15",
@@ -5601,7 +5696,8 @@
       "start": 15.88,
       "end": 17.41,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-16",
@@ -5623,7 +5719,8 @@
       "start": 18.88,
       "end": 19.71,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-17",
@@ -5645,7 +5742,8 @@
       "start": 21.22,
       "end": 22.13,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l03w-18",
@@ -5667,7 +5765,8 @@
       "start": 22.0,
       "end": 24.29,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -5703,7 +5802,7 @@
        "audio": null
       }
      ],
-     "positionVi": "是 đứng giữa chủ ngữ và danh từ; 不 chỉ đứng trước 是, không đứng sau.",
+     "positionVi": "Phủ định: 不 đứng ngay trước 是 → 不是。",
      "sourceRefs": [
       {
        "sourceId": "src-hsk1-textbook-pdf",
@@ -5722,7 +5821,24 @@
       "l03-s1",
       "l03-s2"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi nói ai/cái gì là ai hoặc thuộc nhóm nào （我是中国人。).",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Cô ấy là giáo viên tiếng Trung” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "她__中文老师。",
+      "options": [
+       {
+        "zh": "是",
+        "vi": "là"
+       },
+       {
+        "zh": "的",
+        "vi": "của"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Câu chữ 是： 她是中文老师。 — Cô ấy là giáo viên tiếng Trung."
+     }
     },
     {
      "id": "kp-hsk1-l03-de",
@@ -5755,9 +5871,21 @@
        "pinyin": "wǒ māma",
        "noteVi": "mẹ tôi — đã lược 的 (câu luyện đọc của sách; 妈妈 māma: mẹ)",
        "audio": null
+      },
+      {
+       "zh": "我学生",
+       "pinyin": "Wǒ xuésheng",
+       "noteVi": "học sinh của tôi — đã lược 的 (câu luyện đọc của sách)",
+       "audio": null
+      },
+      {
+       "zh": "你同学",
+       "pinyin": "Nǐ tóngxué",
+       "noteVi": "bạn học của bạn — đã lược 的 (câu luyện đọc của sách)",
+       "audio": null
       }
      ],
-     "positionVi": "的 luôn đứng giữa hai phần, không đứng cuối cụm. Chỉ lược 的 trong trường hợp người thân/người quen sau đại từ nhân xưng như sách nêu.",
+     "positionVi": "的 đứng giữa phần bổ nghĩa và danh từ được bổ nghĩa; không đứng ở đầu hay cuối cụm.",
      "sourceRefs": [
       {
        "sourceId": "src-hsk1-textbook-pdf",
@@ -5777,7 +5905,24 @@
       "l03-s5",
       "l03-s6"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi nói “của ai / của cái gì” — 的 đặt giữa phần sở hữu và danh từ chính.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “giáo viên tiếng Trung của Bạch Gia Nguyệt” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "白家月__中文老师",
+      "options": [
+       {
+        "zh": "的",
+        "vi": "của"
+       },
+       {
+        "zh": "是",
+        "vi": "là"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "白家月的中文老师 — 的 đứng giữa phần bổ nghĩa và danh từ trung tâm."
+     }
     },
     {
      "id": "kp-hsk1-l03-ma",
@@ -5811,7 +5956,7 @@
        "audio": null
       }
      ],
-     "positionVi": "吗 chỉ đứng ở cuối câu hỏi; câu đã có từ để hỏi như 谁/哪/什么 thì không thêm 吗.",
+     "positionVi": "吗 luôn đứng ở cuối câu hỏi.",
      "sourceRefs": [
       {
        "sourceId": "src-hsk1-textbook-pdf",
@@ -5830,7 +5975,24 @@
       "l03-s10",
       "l03-s12"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi muốn hỏi một câu chỉ cần trả lời “đúng/không” — thêm 吗 vào cuối câu trần thuật.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: biến câu “Bạn cũng rất bận” thành câu hỏi đúng/sai.",
+      "stemZh": "你也很忙__？",
+      "options": [
+       {
+        "zh": "吗",
+        "vi": "trợ từ hỏi cuối câu"
+       },
+       {
+        "zh": "的",
+        "vi": "trợ từ sở hữu"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Thêm 吗 ở cuối câu: 你也很忙吗？ — Bạn cũng rất bận à?"
+     }
     },
     {
      "id": "kp-hsk1-l03-initials-finals-3",
@@ -5937,6 +6099,38 @@
      ],
      "sentenceIds": [],
      "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk1-l03-twister",
+     "kind": "foundation-pronunciation",
+     "kindLabel": "Nền tảng · Phát âm",
+     "title": "Đọc vè luyện âm （跟读绕口令）",
+     "pattern": "Đọc chậm từng câu, rồi đọc liền cả bài như sách",
+     "explanationVi": "Bài đọc vè ở cuối bài (Textbook tr.016, track 3-7) luyện phân biệt các âm gần nhau: sì （四） với shí （十）, shísì （十四） với sìshí （四十）. Nghe track gốc của sách rồi đọc theo; loa nhỏ ở từng câu là giọng máy của thiết bị.",
+     "audioTrackId": "trk-tb-l03-7",
+     "audioTrackLabelVi": "Track 3-7",
+     "examples": [
+      {
+       "zh": "四是四，十是十。",
+       "pinyin": "Sì shì sì, shí shì shí.",
+       "noteVi": "Bốn là bốn, mười là mười.",
+       "audio": null
+      },
+      {
+       "zh": "十四是十四，四十是四十。",
+       "pinyin": "Shísì shì shísì, sìshí shì sìshí.",
+       "noteVi": "Mười bốn là mười bốn, bốn mươi là bốn mươi.",
+       "audio": null
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 31,
+       "printedPage": 16,
+       "section": "跟读绕口令 · Đọc vè"
+      }
+     ]
     }
    ],
    "reader": {
@@ -6440,6 +6634,26 @@
        }
       ],
       "durationEvidence": "Đo bằng ffprobe; tải thành công từ URL nguồn ngày 01/11/2026."
+     },
+     {
+      "id": "trk-tb-l03-7",
+      "label": "Đọc vè luyện âm · 绕口令",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-03/03-7.mp3",
+      "durationSec": 23.647,
+      "bookRef": "Textbook · track 3-7",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 16,
+        "section": "跟读绕口令 · Đọc vè"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn. Chưa nghe kiểm chứng."
      }
     ],
     "passages": [
@@ -6815,6 +7029,272 @@
       "grammarIds": [
        "kp-hsk1-l03-shi"
       ]
+     },
+     {
+      "id": "tb3-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.015), câu 1: chọn từ trong khung （哪/吗/谁/中国人/想） điền vào chỗ trống.",
+      "promptZh": "你工作忙____？",
+      "promptPinyin": "Nǐ gōngzuò máng ____?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哪",
+        "pinyin": "nǎ",
+        "vi": "nào (hỏi lựa chọn)"
+       },
+       {
+        "id": "2",
+        "zh": "吗",
+        "pinyin": "ma",
+        "vi": "(trợ từ hỏi cuối câu)"
+       },
+       {
+        "id": "3",
+        "zh": "谁",
+        "pinyin": "shéi",
+        "vi": "ai"
+       },
+       {
+        "id": "4",
+        "zh": "中国人",
+        "pinyin": "Zhōngguó rén",
+        "vi": "người Trung Quốc"
+       },
+       {
+        "id": "5",
+        "zh": "想",
+        "pinyin": "xiǎng",
+        "vi": "nhớ / muốn"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bài 选词填空 ở Textbook tr.015 không in đáp án; đáp án ở đây suy ra trực tiếp từ mẫu câu và hội thoại của chính bài này (đã đối chiếu bản in), ghi trạng thái verified-editorial.",
+      "explanationVi": "Câu hỏi đúng/sai cần 吗 ở cuối câu: 你工作忙吗？ — Công việc của bạn có bận không?",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 15,
+        "section": "综合练习 · 选词填空 · Điền từ vào chỗ trống"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l03-ma"
+      ]
+     },
+     {
+      "id": "tb3-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.015), câu 2: chọn từ trong khung điền vào chỗ trống.",
+      "promptZh": "我很____你们。",
+      "promptPinyin": "Wǒ hěn ____ nǐmen.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哪",
+        "pinyin": "nǎ",
+        "vi": "nào (hỏi lựa chọn)"
+       },
+       {
+        "id": "2",
+        "zh": "吗",
+        "pinyin": "ma",
+        "vi": "(trợ từ hỏi cuối câu)"
+       },
+       {
+        "id": "3",
+        "zh": "谁",
+        "pinyin": "shéi",
+        "vi": "ai"
+       },
+       {
+        "id": "4",
+        "zh": "中国人",
+        "pinyin": "Zhōngguó rén",
+        "vi": "người Trung Quốc"
+       },
+       {
+        "id": "5",
+        "zh": "想",
+        "pinyin": "xiǎng",
+        "vi": "nhớ / muốn"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bài 选词填空 ở Textbook tr.015 không in đáp án; đáp án ở đây suy ra trực tiếp từ mẫu câu và hội thoại của chính bài này (đã đối chiếu bản in), ghi trạng thái verified-editorial.",
+      "explanationVi": "想 là “nhớ”: 我很想你们。 — Tôi rất nhớ các bạn. (đúng mẫu Hội thoại 3: 我们很想你。)",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 15,
+        "section": "综合练习 · 选词填空 · Điền từ vào chỗ trống"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "tb3-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.015), câu 3 (lượt hỏi): chọn từ trong khung điền vào chỗ trống.",
+      "promptZh": "白家月：你是____国人？",
+      "promptPinyin": "Bái Jiāyuè: Nǐ shì ____ guó rén?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哪",
+        "pinyin": "nǎ",
+        "vi": "nào (hỏi lựa chọn)"
+       },
+       {
+        "id": "2",
+        "zh": "吗",
+        "pinyin": "ma",
+        "vi": "(trợ từ hỏi cuối câu)"
+       },
+       {
+        "id": "3",
+        "zh": "谁",
+        "pinyin": "shéi",
+        "vi": "ai"
+       },
+       {
+        "id": "4",
+        "zh": "中国人",
+        "pinyin": "Zhōngguó rén",
+        "vi": "người Trung Quốc"
+       },
+       {
+        "id": "5",
+        "zh": "想",
+        "pinyin": "xiǎng",
+        "vi": "nhớ / muốn"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bài 选词填空 ở Textbook tr.015 không in đáp án; đáp án ở đây suy ra trực tiếp từ mẫu câu và hội thoại của chính bài này (đã đối chiếu bản in), ghi trạng thái verified-editorial.",
+      "explanationVi": "Hỏi quốc tịch dùng 哪： 你是哪国人？ — Bạn là người nước nào?",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 15,
+        "section": "综合练习 · 选词填空 · Điền từ vào chỗ trống"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l03-shi"
+      ]
+     },
+     {
+      "id": "tb3-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.015), câu 3 (lượt đáp): chọn từ trong khung điền vào chỗ trống.",
+      "promptZh": "李文：我是____。",
+      "promptPinyin": "Lǐ Wén: Wǒ shì ____.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哪",
+        "pinyin": "nǎ",
+        "vi": "nào (hỏi lựa chọn)"
+       },
+       {
+        "id": "2",
+        "zh": "吗",
+        "pinyin": "ma",
+        "vi": "(trợ từ hỏi cuối câu)"
+       },
+       {
+        "id": "3",
+        "zh": "谁",
+        "pinyin": "shéi",
+        "vi": "ai"
+       },
+       {
+        "id": "4",
+        "zh": "中国人",
+        "pinyin": "Zhōngguó rén",
+        "vi": "người Trung Quốc"
+       },
+       {
+        "id": "5",
+        "zh": "想",
+        "pinyin": "xiǎng",
+        "vi": "nhớ / muốn"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bài 选词填空 ở Textbook tr.015 không in đáp án; đáp án ở đây suy ra trực tiếp từ mẫu câu và hội thoại của chính bài này (đã đối chiếu bản in), ghi trạng thái verified-editorial.",
+      "explanationVi": "李文 đáp bằng quốc tịch của mình: 我是中国人。 — Tôi là người Trung Quốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 15,
+        "section": "综合练习 · 选词填空 · Điền từ vào chỗ trống"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l03-shi"
+      ]
+     },
+     {
+      "id": "tb3-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.015), câu 4 (lượt hỏi): chọn từ trong khung điền vào chỗ trống.",
+      "promptZh": "白家月：她是____？",
+      "promptPinyin": "Bái Jiāyuè: Tā shì ____?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哪",
+        "pinyin": "nǎ",
+        "vi": "nào (hỏi lựa chọn)"
+       },
+       {
+        "id": "2",
+        "zh": "吗",
+        "pinyin": "ma",
+        "vi": "(trợ từ hỏi cuối câu)"
+       },
+       {
+        "id": "3",
+        "zh": "谁",
+        "pinyin": "shéi",
+        "vi": "ai"
+       },
+       {
+        "id": "4",
+        "zh": "中国人",
+        "pinyin": "Zhōngguó rén",
+        "vi": "người Trung Quốc"
+       },
+       {
+        "id": "5",
+        "zh": "想",
+        "pinyin": "xiǎng",
+        "vi": "nhớ / muốn"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bài 选词填空 ở Textbook tr.015 không in đáp án; đáp án ở đây suy ra trực tiếp từ mẫu câu và hội thoại của chính bài này (đã đối chiếu bản in), ghi trạng thái verified-editorial.",
+      "explanationVi": "Hỏi “đó là ai” dùng 谁： 她是谁？ — Cô ấy là ai? (Lượt đáp: 她是陈天中的女朋友。)",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 15,
+        "section": "综合练习 · 选词填空 · Điền từ vào chỗ trống"
+       }
+      ],
+      "grammarIds": []
      }
     ]
    },
@@ -7049,6 +7529,54 @@
       "end": 232.0
      },
      "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người."
+    },
+    {
+     "id": "st-l03-04",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 015) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ mới của dự án, vẽ theo cảnh trong sách), hoàn thành khung câu bằng từ và điểm ngữ pháp của bài rồi nói thành tiếng. Khung 1: 他____陈天中，是泰国人。他____也____泰国人。Khung 2: 王一飞是____中文老师，她____很____。Gợi ý kiểm tra: khung 1 dùng 是 và 的女朋友； khung 2 có thể lược 的 sau 我 và dùng 工作/忙 — đối chiếu điểm 的 và Hội thoại 3. App lưu nháp, không chấm tự động.",
+     "prompts": [
+      "他____陈天中，是泰国人。他____也____泰国人。",
+      "王一飞是____中文老师，她____很____。"
+     ],
+     "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 30,
+       "printedPage": 15,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片 · Nói theo hình"
+      }
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-03/describe-1.webp",
+       "alt": "Tranh vẽ mới: một bạn nam đứng ngoài trời giữa cây xanh, cầm găng tay — cảnh miêu tả Trần Thiên Trung",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.015 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 30,
+         "printedPage": 15,
+         "section": "综合练习 · hình 1"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-03/describe-2.webp",
+       "alt": "Tranh vẽ mới: cô giáo ngồi ở bàn làm việc có máy tính và sách — cảnh miêu tả Vương Nhất Phi",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.015 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 30,
+         "printedPage": 15,
+         "section": "综合练习 · hình 2"
+        }
+       ]
+      }
+     ]
     }
    ],
    "selfCheckIntroVi": "Workbook trang 011–012, bài 1–3. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
@@ -7068,6 +7596,28 @@
     ],
     "samplePassageIds": [
      "l03-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l03-1",
+      "titleVi": "Đóng vai: nói quốc tịch",
+      "situationVi": "Hai bạn học trò chuyện trong trường: mỗi người nói mình là người nước nào, và nhắc tới giáo viên tiếng Trung.",
+      "sampleZh": "我是中国人。 — 我是法国人。我的中文老师也是中国人。",
+      "samplePinyin": "Wǒ shì Zhōngguó rén. — Wǒ shì Fǎguó rén. Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
+      "sampleVi": "Tôi là người Trung Quốc. — Tôi là người Pháp. Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.",
+      "swapVi": "Luyện theo cặp theo tình huống thật của mình: nói quốc tịch thật của bạn và giới thiệu một người thật quanh mình, như sách yêu cầu ở tr.011.",
+      "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 1 （课文 1, Textbook tr.010); hoạt động đóng vai ở tr.011 và luyện theo cặp theo tình huống thật cũng ở tr.011."
+     },
+     {
+      "id": "speak-l03-2",
+      "titleVi": "Đóng vai: gọi video cho chị",
+      "situationVi": "Vương Nhất Tuyết gọi video cho em trai Nhất Phi, hai chị em hỏi thăm công việc của nhau.",
+      "sampleZh": "喂，一飞！ — 姐姐！ — 你工作还忙吗？ — 对，还很忙。你也很忙吗？ — 我不太忙。我们很想你。 — 我也想你们。",
+      "samplePinyin": "Wèi, Yīfēi! — Jiějie! — Nǐ gōngzuò hái máng ma? — Duì, hái hěn máng. Nǐ yě hěn máng ma? — Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ. — Wǒ yě xiǎng nǐmen.",
+      "sampleVi": "A lô, Nhất Phi! — Chị! — Công việc của em còn bận không? — Vâng, còn rất bận. Chị cũng bận lắm à? — Chị không bận lắm. Mọi người rất nhớ em. — Em cũng nhớ mọi người.",
+      "swapVi": "Luyện một mình cả hai vai, hoặc theo cặp qua điện thoại thật; thay bằng công việc/học tập của chính bạn.",
+      "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 3 （课文 3, Textbook tr.014); hoạt động đóng vai cũng ở tr.014."
+     }
     ]
    },
    "foundationWords": [
@@ -7306,7 +7856,113 @@
      ],
      "audio": null
     }
-   ]
+   ],
+   "prepGroups": [
+    {
+     "id": "l03-vocab-1",
+     "dialogueId": "l03-dialogue-1",
+     "titleVi": "Hội thoại 1 · Bạn là người nước nào?",
+     "trackId": "trk-tb-l03-2",
+     "trackLabelVi": "Track 3-2"
+    },
+    {
+     "id": "l03-vocab-2",
+     "dialogueId": "l03-dialogue-2",
+     "titleVi": "Hội thoại 2 · Đây là ai?",
+     "trackId": "trk-tb-l03-4",
+     "trackLabelVi": "Track 3-4"
+    },
+    {
+     "id": "l03-vocab-3",
+     "dialogueId": "l03-dialogue-3",
+     "titleVi": "Hội thoại 3 · Gọi video cho chị",
+     "trackId": "trk-tb-l03-6",
+     "trackLabelVi": "Track 3-6"
+    }
+   ],
+   "prepSummaryVi": "18 từ mới + 4 tên riêng, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Bạn là người nước nào?",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → nói quốc tịch bằng câu chữ 是。",
+     "sectionId": "prep",
+     "dialogueId": "l03-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Đây là ai?",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → hỏi “đây là ai?” và nói “của tôi” bằng 的。",
+     "sectionId": "reader",
+     "dialogueId": "l03-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Công việc có bận không?",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → hỏi đúng/sai bằng 吗。",
+     "sectionId": "reader",
+     "dialogueId": "l03-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Chọn lời thoại theo hình, nghe – viết và bài điền từ tổng hợp của sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Ba điều cần nhớ và tự nói quốc tịch thật của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu chữ 是",
+     "bodyVi": "X 是 Y: nói ai/cái gì là ai, thuộc nhóm nào; phủ định bằng 不是。",
+     "exampleZh": "我是中国人。",
+     "examplePinyin": "Wǒ shì Zhōngguó rén.",
+     "exampleVi": "Tôi là người Trung Quốc."
+    },
+    {
+     "titleVi": "Trợ từ 的",
+     "bodyVi": "A 的 B nghĩa là “B của A”; sau đại từ nhân xưng, trước danh từ chỉ người thân/người quen có thể lược 的 （我老师 = 我的老师）.",
+     "exampleZh": "这是我女朋友。",
+     "examplePinyin": "Zhè shì wǒ nǚpéngyou.",
+     "exampleVi": "Đây là bạn gái của tôi."
+    },
+    {
+     "titleVi": "Câu hỏi 吗",
+     "bodyVi": "Thêm 吗 vào cuối câu trần thuật là thành câu hỏi đúng/sai.",
+     "exampleZh": "你工作还忙吗？",
+     "examplePinyin": "Nǐ gōngzuò hái máng ma?",
+     "exampleVi": "Công việc của bạn còn bận không?"
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu để xem Pinyin, Hán–Việt và nghĩa. Tên nước và tên ngôn ngữ của bài nằm trong danh sách từ; tên gọi thân mật do dự án bổ sung đã kiểm duyệt.",
+    "extras": [
+     {
+      "zh": "一飞",
+      "pinyin": "Yīfēi",
+      "hanViet": "NHẤT PHI",
+      "vi": "Tên gọi của Vương Nhất Phi — chị gái gọi em trai là “一飞” trong Hội thoại 3"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — nhân vật trong Hội thoại 1 và 2 của bài này"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l04",

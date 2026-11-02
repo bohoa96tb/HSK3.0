@@ -11,12 +11,12 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   const segOf = (c, sen) => c.reader.audioTracks.find((t) => t.id === c.reader.passages.find((g) => g.id === sen.passageId)?.audioTrackId)?.segments?.find((x) => x.sentenceId === sen.id);
   assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 105); // all dialogue turns (91 through Lesson 7 + 14 in Lesson 8)
   const [prepOk, prepAll] = count(lessons.flatMap((c) => c.prepWords));
-  assert.deepEqual([prepOk, prepAll], [159, 162]); // 大家 (L1), 吗 (L3) and 王老师 (L1 proper noun, added in D27) have no confident segment; all 24 Lesson 8 words have one
+  assert.deepEqual([prepOk, prepAll], [159, 166]); // 5 words have no confident segment: 大家 (L1), 吗 (L3), 王老师 (L1) and Lesson 3's four proper nouns (added in D27, audio null)
   const [foundOk, foundAll] = count(lessons.flatMap((c) => c.foundationWords));
   assert.deepEqual([foundOk, foundAll], [64, 71]); // 雨/五/一/椅子 (L2), 嘴 (L3) and 盖儿/个儿 (L6) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [173, 249]); // token-level option segments where the exact option is read in the lesson's own tracks; Lesson 8 adds 85 options (41 with audio: 4 dialogue-phrase options, 25 shared bank instances, 12 reduplication-task readings)
+  assert.deepEqual([optOk, optAll], [173, 274]); // token-level option segments where the exact option is read in the lesson's own tracks; Lesson 8 adds 85 options (41 with audio); Lesson 3's fill-in set adds 25 word-bank options without audio (D27)
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

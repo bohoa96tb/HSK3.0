@@ -57,7 +57,7 @@ test('lesson 6 standardization: erhua KP carries the full printed table', () => 
 });
 
 test('lesson 6 standardization: new print-based items and speaking guidance', () => {
-  const items = Object.fromEntries(l6.exerciseSet.items.map((i) => [i.id, i]));
+  const items = Object.fromEntries([...l6.exerciseSet.items, ...l6.reader.passages.flatMap((g) => g.checkItems || [])].map((i) => [i.id, i])); // D28
   assert.equal(items['wb6-text-5'].answer, '1');
   assert.equal(items['wb6-text-6'].answer, '1');
   for (const [id, card] of [['wb6-warm-1', 'phone'], ['wb6-warm-2', 'dinner'], ['wb6-warm-3', 'market'], ['wb6-warm-4', 'milk'], ['wb6-warm-5', 'taxi'], ['wb6-warm-6', 'rice']])

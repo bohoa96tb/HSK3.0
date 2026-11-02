@@ -509,3 +509,9 @@ details.study-tip{padding:10px 12px;margin:8px 0}
   .card{padding:14px;margin-bottom:10px}
   h2{font-size:1.12rem}
 }
+
+/* D28: dialogue check questions answered in place, under their dialogue */
+.reader-checks { margin-top: 1rem; border-top: 2px solid var(--line, #e5ded2); padding-top: 0.75rem; }
+.reader-checks h3 { margin: 0.25rem 0 0.35rem; }
+.reader-check-item { border-top: 1px dashed var(--line, #e5ded2); padding: 0.75rem 0 0.25rem; }
+.reader-check-item h4 { margin: 0 0 0.4rem; font-size: 1rem; }

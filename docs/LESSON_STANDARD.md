@@ -48,7 +48,7 @@
   (phát âm/chữ Hán) tách khối nền tảng. Giải thích dài vào mục thu gọn.
 - **Hội thoại**: đủ câu, đúng vai/thứ tự; nghe cả track + nghe từng câu khi có
   mốc đáng tin (chưa nghe kiểm chứng thì giữ `asr-draft`, không bịa mốc);
-  mỗi hội thoại có liên kết kiểm tra ngắn khi bài tập tương ứng tồn tại.
+  câu hỏi mà sách in tại hội thoại thì nằm ngay dưới hội thoại đó và làm tại chỗ (D28, `checkItems`), không nằm trong bộ Luyện tập; hội thoại không có câu hỏi riêng thì có thể có liên kết kiểm tra ngắn khi bài tập liên quan tồn tại trong bộ chính.
 - **Bài tập**: khu A bài chính (chấm tự động chỉ khi đáp án đã kiểm chứng),
   khu B luyện thêm/tự luyện (tự đối chiếu khi không chấm được), khu C đề mô
   phỏng nếu bài có (điểm/session riêng, theo D15 chỉ lấy từ khối mô phỏng của

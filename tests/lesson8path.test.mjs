@@ -33,7 +33,8 @@ test('pilot data: learning path, 3 main points with try-it, per-dialogue checks,
     assert.ok(kp.quickCheck.options.some((o) => o.zh), kp.id);
     assert.ok(['1', '2'].includes(kp.quickCheck.answer), kp.id);
   }
-  assert.deepEqual(l8.reader.passages.map((g) => g.checkItemId), ['wb8-comp-4', 'wb8-text-1', 'wb8-text-3']);
+  assert.equal(l8.reader.passages[0].checkItemId, 'wb8-comp-4'); // the Dialogue 1 related item stays in the set, linked
+  assert.deepEqual(l8.reader.passages.map((g) => (g.checkItems || []).map((i) => i.id)), [[], ['wb8-text-1', 'wb8-text-2'], ['wb8-text-3', 'wb8-text-4']]); // D28: Dialogues 2/3 carry their questions in place
   assert.equal(l8.apply.tasks.length, 3);
   assert.equal(l8.summaryPoints.length, 3);
 });
@@ -102,26 +103,31 @@ test('knowledge shows exactly the 3 main points, tips apart, with a working try-
   assert.equal(qc.querySelector('.quick-explain').hidden, false);
 });
 
-test('reader links each dialogue to its short check question', async () => {
+test('reader carries the check questions of each dialogue in place (D28)', async () => {
   await route('lesson/hsk1-l08/reader?passage=l08-dialogue-2');
-  const link = $$('#main a').find((a) => (a.getAttribute('href') || '').includes('item=wb8-text-1'));
-  assert.ok(link, 'dialogue 2 has a short-check link');
-  assert.ok($$('.reader-links a').length >= 2);
+  assert.ok($('#dialogue-checks'), 'check block under dialogue 2');
+  assert.ok($('#rc-form-wb8-text-1') && $('#rc-form-wb8-text-2'), 'both dialogue 2 questions are inline');
+  assert.ok(!$$('#main a').some((a) => (a.getAttribute('href') || '').includes('item=wb8-text-1')), 'no jump link to the exercise set for these questions');
+  await route('lesson/hsk1-l08/reader?passage=l08-dialogue-1');
+  const link = $$('#main a').find((a) => (a.getAttribute('href') || '').includes('item=wb8-comp-4'));
+  assert.ok(link, 'dialogue 1 keeps its related-question link (that item stays in the set)');
 });
 
 test('exercises: three zones; no pinyin/meaning in the DOM before grading (except pronunciation drill)', async () => {
   await route('lesson/hsk1-l08/exercises');
   assert.match($('.exercise-zones').textContent, /Luyện sau bài/);
   assert.match($('.exercise-zones').textContent, /Đề mô phỏng/);
+  await route('lesson/hsk1-l08/exercises?item=wb8-comp-1'); // pin the pager to a known item
   const card = $('#exercise-card');
-  // First core item is a listening-comprehension question: nothing to leak.
+  // A fill-in item (D28 moved the listening questions to their dialogues):
+  // still nothing to leak before grading.
   assert.equal(card.querySelectorAll('.tog-pinyin-ex').length, 0);
   assert.equal(card.querySelectorAll('.tog-vi-ex').length, 0);
-  card.querySelector('input[name="opt"][value="3"]').click();
+  card.querySelector('input[name="opt"][value="2"]').click();
   card.querySelector('button[type="submit"]').click(); await tick();
   const after = $('#exercise-card');
   assert.ok(after.querySelectorAll('.tog-pinyin-ex').length > 0, 'support appears after grading');
-  assert.match(after.textContent, /书店前/); // explanation cites the dialogue sentence as evidence
+  assert.match(after.textContent, /在医院工作/); // explanation cites the dialogue sentence as evidence
   // Pronunciation drill: pinyin is the content, labelled as such.
   await route('lesson/hsk1-l08/exercises?item=wb8-redup-1');
   const redup = $('#exercise-card');

@@ -5,6 +5,7 @@ import { JSDOM } from 'jsdom';
 import { gradeChoice, gradeDictationCell } from '../src/lib.js';
 const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url)));
 const l6 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l06');
+const allItems6 = [...l6.exerciseSet.items, ...l6.reader.passages.flatMap((g) => g.checkItems || [])]; // D28: set items + the dialogues' own questions
 const dom = new JSDOM(readFileSync(new URL('../index.html', import.meta.url), 'utf8'), { url: 'https://example.test/HSK3.0/' });
 for (const k of ['window', 'document', 'location', 'localStorage', 'FormData']) globalThis[k] = dom.window[k];
 Object.defineProperty(globalThis, 'navigator', { value: dom.window.navigator, configurable: true });
@@ -57,11 +58,12 @@ test('lesson 6 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 6 exercises: printed answers grade, stems render, comprehensive bank included', async () => {
-  assert.equal(l6.exerciseSet.items.length, 17);
-  assert.deepEqual(l6.exerciseSet.items.map((i) => i.answer), ['3', '2', '3', '2', '5', '2', '4', '3', '1', '1', '1', 'phone', 'dinner', 'market', 'milk', 'taxi', 'rice']);
+  assert.equal(l6.exerciseSet.items.length, 11); // D28: 6 dialogue questions moved to their dialogues
+  assert.equal(allItems6.length, 17);
+  assert.deepEqual(l6.exerciseSet.items.map((i) => i.answer), ['5', '2', '4', '3', '1', 'phone', 'dinner', 'market', 'milk', 'taxi', 'rice']); // set only (comp + warm-up)
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
-  for (const item of l6.exerciseSet.items) {
+  for (const item of allItems6) {
     assert.equal(item.answerStatus, 'verified-from-print');
     assert.ok(item.promptZh && item.promptPinyin, item.id);
     assert.equal(gradeChoice(item, item.answer).correct, true);
@@ -70,8 +72,9 @@ test('lesson 6 exercises: printed answers grade, stems render, comprehensive ban
     for (const g of item.grammarIds) assert.ok(kpIds.has(g), item.id + ' -> ' + g);
   }
   await route('lesson/hsk1-l06/exercises');
-  assert.ok($('.exercise-stem')?.textContent.includes('白家月'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/17'));
+  assert.ok(document.body.textContent.includes('Câu 1/11'), 'the set pager counts only set items (D28)');
+  await route('lesson/hsk1-l06/reader?passage=l06-dialogue-2');
+  assert.ok($('#check-wb6-text-1 .exercise-stem')?.textContent.includes('白家月'), 'the printed question stem renders under its dialogue');
 });
 
 test('lesson 6 choose-a-disyllable task: syllable grading grades exactly', () => {
@@ -101,7 +104,7 @@ test('lesson 6 erhua table pinyin follows the printed Workbook table', () => {
 });
 
 test('lesson 6 review links follow the blank-tested feature (QA round 2)', () => {
-  const g = (id) => l6.exerciseSet.items.find((x) => x.id === id).grammarIds;
+  const g = (id) => allItems6.find((x) => x.id === id).grammarIds;
   assert.deepEqual(g('wb6-text-4'), ['kp-hsk1-l06-xiang']); // 不想吃 is the 想 KP's core
   assert.deepEqual(g('wb6-text-3'), ['kp-hsk1-l06-serial']);
   for (const id of ['wb6-comp-1', 'wb6-comp-2', 'wb6-comp-3']) assert.deepEqual(g(id), ['kp-hsk1-l06-serial']);

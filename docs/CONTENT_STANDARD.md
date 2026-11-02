@@ -95,6 +95,11 @@ chi tiết ở mục 7 của `docs/MASTER_PLAN.md`.
 
 ## 6. Bài tập, đáp án và cách ghi điểm
 
+### 6.0. Vị trí của câu hỏi (D28)
+
+- Câu hỏi sách in tại một hội thoại (nghe hiểu trước Hội thoại 2/3, câu hỏi in dưới hội thoại) đặt tại chính hội thoại đó trong dữ liệu (`reader.passages[].checkItems`) và hiển thị dưới hội thoại ở mục Nghe & đọc để làm tại chỗ; KHÔNG đặt trong `exerciseSet`. Câu hỏi tổng hợp/khởi động/phân biệt âm vẫn ở bộ Luyện tập.
+- Điểm của câu tại hội thoại tính chung vào điểm bài tập của bài (attempts/session theo mã câu hỏi); chi tiết quyết định ở `docs/DECISIONS.md` mục D28.
+
 ### 6.1. Đáp án và chế độ chấm
 
 - Mỗi bài tập ghi `answerStatus`:

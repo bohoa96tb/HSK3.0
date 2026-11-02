@@ -5,6 +5,7 @@ import { JSDOM } from 'jsdom';
 import { gradeChoice, gradeDictationCell } from '../src/lib.js';
 const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url)));
 const l5 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l05');
+const allItems5 = [...l5.exerciseSet.items, ...l5.reader.passages.flatMap((g) => g.checkItems || [])]; // D28: set items + the dialogues' own questions
 const dom = new JSDOM(readFileSync(new URL('../index.html', import.meta.url), 'utf8'), { url: 'https://example.test/HSK3.0/' });
 for (const k of ['window', 'document', 'location', 'localStorage', 'FormData']) globalThis[k] = dom.window[k];
 Object.defineProperty(globalThis, 'navigator', { value: dom.window.navigator, configurable: true });
@@ -62,11 +63,12 @@ test('lesson 5 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 5 text exercises: printed answers grade, stems render, review links fit', async () => {
-  assert.equal(l5.exerciseSet.items.length, 17);
-  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['1', '3', '2', '3', '3', '4', '1', '5', '2', '1', '1', 'calendar', 'blocks', 'computer', 'cooking', 'resting', 'dumplings']);
+  assert.equal(l5.exerciseSet.items.length, 11); // D28: 6 dialogue questions moved to their dialogues
+  assert.equal(allItems5.length, 17);
+  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['3', '4', '1', '5', '2', 'calendar', 'blocks', 'computer', 'cooking', 'resting', 'dumplings']); // set only (comp + warm-up); dialogue answers pinned via allItems5 in the text test
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
-  for (const item of l5.exerciseSet.items) {
+  for (const item of allItems5) {
     assert.equal(item.answerStatus, 'verified-from-print');
     assert.ok(item.promptZh && item.promptPinyin, item.id);
     assert.equal(gradeChoice(item, item.answer).correct, true);
@@ -75,8 +77,9 @@ test('lesson 5 text exercises: printed answers grade, stems render, review links
     for (const g of item.grammarIds) assert.ok(kpIds.has(g), item.id + ' -> ' + g);
   }
   await route('lesson/hsk1-l05/exercises');
-  assert.ok($('.exercise-stem')?.textContent.includes('杨同乐') && $('.exercise-stem')?.textContent.includes('做饭'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/17'));
+  assert.ok(document.body.textContent.includes('Câu 1/11'), 'the set pager counts only set items (D28)');
+  await route('lesson/hsk1-l05/reader?passage=l05-dialogue-2');
+  assert.ok($('#check-wb5-text-1 .exercise-stem')?.textContent.includes('杨同乐') && $('#check-wb5-text-1 .exercise-stem')?.textContent.includes('做饭'), 'the printed question stem renders under its dialogue');
 });
 
 test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', () => {
@@ -109,7 +112,7 @@ test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', ()
 
 test('lesson 5 QA round 2 regressions: option segment labels and printed stems', () => {
   // The 星期日 segment must sit on the 星期日 option, never on 星期三.
-  const q2 = l5.exerciseSet.items.find((i) => i.id === 'wb5-text-2');
+  const q2 = allItems5.find((i) => i.id === 'wb5-text-2');
   assert.equal(q2.options.find((o) => o.id === '1').audio, undefined);
   assert.deepEqual(q2.options.find((o) => o.id === '3').audio, { trackId: 'trk-tb-l05-1', start: 5.75, end: 7.25, status: 'asr-draft' });
   // General guard: every Lesson 4-5 text option segment must read exactly
@@ -120,7 +123,7 @@ test('lesson 5 QA round 2 regressions: option segment labels and printed stems',
       const trk = cc.reader.passages.find((g) => g.id === s.passageId)?.audioTrackId;
       trackText[trk] = (trackText[trk] || '') + s.zh;
     }
-    for (const item of cc.exerciseSet.items) for (const o of item.options) {
+    for (const item of [...cc.exerciseSet.items, ...cc.reader.passages.flatMap((g) => g.checkItems || [])]) for (const o of item.options) {
       if (o.audio) assert.ok((trackText[o.audio.trackId] || '').includes(o.zh), `${item.id}/${o.id} ${o.zh} must be read in ${o.audio.trackId}`);
     }
   }

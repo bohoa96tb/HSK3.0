@@ -51,7 +51,7 @@ test('lesson 7 standardization: path, quick checks for all four main points, sum
 });
 
 test('lesson 7 standardization: new print-based items and speaking guidance', () => {
-  const items = Object.fromEntries(l7.exerciseSet.items.map((i) => [i.id, i]));
+  const items = Object.fromEntries([...l7.exerciseSet.items, ...l7.reader.passages.flatMap((g) => g.checkItems || [])].map((i) => [i.id, i])); // D28
   assert.equal(items['wb7-text-5'].answer, '1');
   assert.equal(items['wb7-text-6'].answer, '2');
   for (const [id, clk] of [['wb7-warm-1', 'c0815'], ['wb7-warm-2', 'c1520'], ['wb7-warm-3', 'c1010'], ['wb7-warm-4', 'c1345'], ['wb7-warm-5', 'c1230'], ['wb7-warm-6', 'c1800']])

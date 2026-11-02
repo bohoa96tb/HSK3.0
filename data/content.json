@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-listenbtn1",
+ "contentVersion": "20261103-dialoguechecks1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -9235,7 +9235,7 @@
     "passageId": "psg-tb-l04",
     "titleVi": "Hội thoại Textbook Bài 4",
     "headingVi": "Gia đình và số lượng",
-    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy. Câu hỏi của từng hội thoại nằm ngay dưới hội thoại đó.",
     "sentences": [
      {
       "id": "l04-s1",
@@ -9831,6 +9831,137 @@
         "printedPage": 22,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb4-text-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): Dương Đồng Lạc có một người …",
+        "promptZh": "杨同乐有一个（ ）。",
+        "promptPinyin": "Yáng Tónglè yǒu yí gè ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "妹妹",
+          "pinyin": "mèimei",
+          "vi": "em gái",
+          "audio": {
+           "trackId": "trk-tb-l04-3",
+           "start": 12.05,
+           "end": 12.55,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "姐姐",
+          "pinyin": "jiějie",
+          "vi": "chị gái"
+         },
+         {
+          "id": "3",
+          "zh": "哥哥",
+          "pinyin": "gēge",
+          "vi": "anh trai",
+          "audio": {
+           "trackId": "trk-tb-l04-3",
+           "start": 1.45,
+           "end": 1.95,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+        "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc nói nhà mình có bốn người: bố, mẹ, em gái （妹妹） và tôi — vậy anh ấy có một em gái. Anh ấy cũng nói rõ 我没有哥哥 (không có anh trai).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 36,
+          "printedPage": 21,
+          "section": "课文 2 · câu hỏi hiểu hội thoại"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 37,
+          "printedPage": 22,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-you"
+        ]
+       },
+       {
+        "id": "wb4-text-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): nhà Dương Đồng Lạc có … người",
+        "promptZh": "杨同乐家有（ ）口人。",
+        "promptPinyin": "Yáng Tónglè jiā yǒu ( ) kǒu rén.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "两",
+          "pinyin": "liǎng",
+          "vi": "hai",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 4.25,
+           "end": 4.75,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "四",
+          "pinyin": "sì",
+          "vi": "bốn",
+          "audio": {
+           "trackId": "trk-tb-l04-3",
+           "start": 8.95,
+           "end": 9.25,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "五",
+          "pinyin": "wǔ",
+          "vi": "năm",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 11.65,
+           "end": 12.15,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+        "explanationVi": "Dương Đồng Lạc nói: 我家有四口人 (nhà tôi có bốn người) — bố, mẹ, em gái và anh ấy.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 36,
+          "printedPage": 21,
+          "section": "课文 2 · câu hỏi hiểu hội thoại"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 37,
+          "printedPage": 22,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-measure",
+         "kp-hsk1-l04-you"
+        ]
+       }
       ]
      },
      {
@@ -9853,6 +9984,207 @@
         "printedPage": 24,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb4-text-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): Vương Nhất Tuyết có … người con",
+        "promptZh": "王一雪有（ ）孩子。",
+        "promptPinyin": "Wáng Yīxuě yǒu ( ) háizi.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "一个",
+          "pinyin": "yí gè",
+          "vi": "một",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 5.85,
+           "end": 6.55,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "两个",
+          "pinyin": "liǎng gè",
+          "vi": "hai",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 4.25,
+           "end": 4.95,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "三个",
+          "pinyin": "sān gè",
+          "vi": "ba"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+        "explanationVi": "Vương Nhất Tuyết nói: 我有两个孩子，一个儿子，一个女儿 (tôi có hai người con, một con trai, một con gái) — cũng là tên của bài học này.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 39,
+          "printedPage": 24,
+          "section": "课文 3 · câu hỏi và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-measure"
+        ]
+       },
+       {
+        "id": "wb4-text-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): con gái của Vương Nhất Tuyết năm nay … tuổi",
+        "promptZh": "王一雪女儿今年（ ）岁。",
+        "promptPinyin": "Wáng Yīxuě nǚ'ér jīnnián ( ) suì.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "五",
+          "pinyin": "wǔ",
+          "vi": "năm",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 11.65,
+           "end": 12.15,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "十二",
+          "pinyin": "shí'èr",
+          "vi": "mười hai",
+          "audio": {
+           "trackId": "trk-tb-l04-5",
+           "start": 15.55,
+           "end": 16.25,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "二十",
+          "pinyin": "èrshí",
+          "vi": "hai mươi",
+          "audio": {
+           "trackId": "trk-tb-l04-1",
+           "start": 8.15,
+           "end": 8.75,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
+        "explanationVi": "Khi được hỏi 您女儿多大？, Vương Nhất Tuyết đáp: 她今年十二 (cháu năm nay mười hai). Số 五 (năm) là tuổi của con trai.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 39,
+          "printedPage": 24,
+          "section": "课文 3 · câu hỏi và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-numbers"
+        ]
+       },
+       {
+        "id": "wb4-text-5",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): Vương Nhất Tuyết có mấy con trai, mấy con gái?",
+        "promptZh": "王一雪有几个儿子？几个女儿？",
+        "promptPinyin": "Wáng Yīxuě yǒu jǐ gè érzi? Jǐ gè nǚ’ér?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "一个儿子，一个女儿",
+          "pinyin": "yí gè érzi, yí gè nǚ’ér",
+          "vi": "một con trai, một con gái"
+         },
+         {
+          "id": "2",
+          "zh": "两个儿子，一个女儿",
+          "pinyin": "liǎng gè érzi, yí gè nǚ’ér",
+          "vi": "hai con trai, một con gái"
+         },
+         {
+          "id": "3",
+          "zh": "一个儿子，两个女儿",
+          "pinyin": "yí gè érzi, liǎng gè nǚ’ér",
+          "vi": "một con trai, hai con gái"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 我有两个孩子，一个儿子，一个女儿。",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 40,
+          "printedPage": 25,
+          "section": "课文 3 · 根据课文内容回答问题 (1)"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-you",
+         "kp-hsk1-l04-measure"
+        ]
+       },
+       {
+        "id": "wb4-text-6",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): con trai của Vương Nhất Tuyết năm nay mấy tuổi?",
+        "promptZh": "王一雪儿子今年几岁？",
+        "promptPinyin": "Wáng Yīxuě érzi jīnnián jǐ suì?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "五岁",
+          "pinyin": "wǔ suì",
+          "vi": "năm tuổi"
+         },
+         {
+          "id": "2",
+          "zh": "十二岁",
+          "pinyin": "shí’èr suì",
+          "vi": "mười hai tuổi"
+         },
+         {
+          "id": "3",
+          "zh": "二十岁",
+          "pinyin": "èrshí suì",
+          "vi": "hai mươi tuổi"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 他今年五岁。",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 40,
+          "printedPage": 25,
+          "section": "课文 3 · 根据课文内容回答问题 (2)"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l04-numbers"
+        ]
+       }
       ]
      }
     ]
@@ -9860,336 +10192,8 @@
    "exerciseSet": {
     "id": "set-tb-l04-text-v1",
     "titleVi": "Câu hỏi hiểu hội thoại trong sách",
-    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.018); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.021, 024 và phần đọc hiểu tr.025) — đáp án lấy từ chính lời thoại in; 5 câu điền từ tổng hợp (tr.025) — sách không in đáp án, đáp án do dự án biên tập theo nội dung bài và ghi rõ trạng thái.",
+    "noteVi": "Gồm hai nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.018); 5 câu điền từ tổng hợp (tr.025) — sách không in đáp án, đáp án do dự án biên tập theo nội dung bài và ghi rõ trạng thái. Sáu câu hỏi của Hội thoại 2 và 3 (tr.021, 024 và phần đọc hiểu tr.025) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
-     {
-      "id": "wb4-text-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): Dương Đồng Lạc có một người …",
-      "promptZh": "杨同乐有一个（ ）。",
-      "promptPinyin": "Yáng Tónglè yǒu yí gè ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "妹妹",
-        "pinyin": "mèimei",
-        "vi": "em gái",
-        "audio": {
-         "trackId": "trk-tb-l04-3",
-         "start": 12.05,
-         "end": 12.55,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "姐姐",
-        "pinyin": "jiějie",
-        "vi": "chị gái"
-       },
-       {
-        "id": "3",
-        "zh": "哥哥",
-        "pinyin": "gēge",
-        "vi": "anh trai",
-        "audio": {
-         "trackId": "trk-tb-l04-3",
-         "start": 1.45,
-         "end": 1.95,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
-      "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc nói nhà mình có bốn người: bố, mẹ, em gái （妹妹） và tôi — vậy anh ấy có một em gái. Anh ấy cũng nói rõ 我没有哥哥 (không có anh trai).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 36,
-        "printedPage": 21,
-        "section": "课文 2 · câu hỏi hiểu hội thoại"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 37,
-        "printedPage": 22,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-you"
-      ]
-     },
-     {
-      "id": "wb4-text-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi hiểu Hội thoại 2 (Textbook trang 021): nhà Dương Đồng Lạc có … người",
-      "promptZh": "杨同乐家有（ ）口人。",
-      "promptPinyin": "Yáng Tónglè jiā yǒu ( ) kǒu rén.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "两",
-        "pinyin": "liǎng",
-        "vi": "hai",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 4.25,
-         "end": 4.75,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "四",
-        "pinyin": "sì",
-        "vi": "bốn",
-        "audio": {
-         "trackId": "trk-tb-l04-3",
-         "start": 8.95,
-         "end": 9.25,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "五",
-        "pinyin": "wǔ",
-        "vi": "năm",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 11.65,
-         "end": 12.15,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
-      "explanationVi": "Dương Đồng Lạc nói: 我家有四口人 (nhà tôi có bốn người) — bố, mẹ, em gái và anh ấy.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 36,
-        "printedPage": 21,
-        "section": "课文 2 · câu hỏi hiểu hội thoại"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 37,
-        "printedPage": 22,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-measure",
-       "kp-hsk1-l04-you"
-      ]
-     },
-     {
-      "id": "wb4-text-3",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): Vương Nhất Tuyết có … người con",
-      "promptZh": "王一雪有（ ）孩子。",
-      "promptPinyin": "Wáng Yīxuě yǒu ( ) háizi.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "一个",
-        "pinyin": "yí gè",
-        "vi": "một",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 5.85,
-         "end": 6.55,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "两个",
-        "pinyin": "liǎng gè",
-        "vi": "hai",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 4.25,
-         "end": 4.95,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "三个",
-        "pinyin": "sān gè",
-        "vi": "ba"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
-      "explanationVi": "Vương Nhất Tuyết nói: 我有两个孩子，一个儿子，一个女儿 (tôi có hai người con, một con trai, một con gái) — cũng là tên của bài học này.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 39,
-        "printedPage": 24,
-        "section": "课文 3 · câu hỏi và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-measure"
-      ]
-     },
-     {
-      "id": "wb4-text-4",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi hiểu Hội thoại 3 (Textbook trang 024): con gái của Vương Nhất Tuyết năm nay … tuổi",
-      "promptZh": "王一雪女儿今年（ ）岁。",
-      "promptPinyin": "Wáng Yīxuě nǚ'ér jīnnián ( ) suì.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "五",
-        "pinyin": "wǔ",
-        "vi": "năm",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 11.65,
-         "end": 12.15,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "十二",
-        "pinyin": "shí'èr",
-        "vi": "mười hai",
-        "audio": {
-         "trackId": "trk-tb-l04-5",
-         "start": 15.55,
-         "end": 16.25,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "二十",
-        "pinyin": "èrshí",
-        "vi": "hai mươi",
-        "audio": {
-         "trackId": "trk-tb-l04-1",
-         "start": 8.15,
-         "end": 8.75,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 022, Hội thoại 3 trang in 024), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách.",
-      "explanationVi": "Khi được hỏi 您女儿多大？, Vương Nhất Tuyết đáp: 她今年十二 (cháu năm nay mười hai). Số 五 (năm) là tuổi của con trai.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 39,
-        "printedPage": 24,
-        "section": "课文 3 · câu hỏi và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-numbers"
-      ]
-     },
-     {
-      "id": "wb4-text-5",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): Vương Nhất Tuyết có mấy con trai, mấy con gái?",
-      "promptZh": "王一雪有几个儿子？几个女儿？",
-      "promptPinyin": "Wáng Yīxuě yǒu jǐ gè érzi? Jǐ gè nǚ’ér?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "一个儿子，一个女儿",
-        "pinyin": "yí gè érzi, yí gè nǚ’ér",
-        "vi": "một con trai, một con gái"
-       },
-       {
-        "id": "2",
-        "zh": "两个儿子，一个女儿",
-        "pinyin": "liǎng gè érzi, yí gè nǚ’ér",
-        "vi": "hai con trai, một con gái"
-       },
-       {
-        "id": "3",
-        "zh": "一个儿子，两个女儿",
-        "pinyin": "yí gè érzi, liǎng gè nǚ’ér",
-        "vi": "một con trai, hai con gái"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 我有两个孩子，一个儿子，一个女儿。",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 40,
-        "printedPage": 25,
-        "section": "课文 3 · 根据课文内容回答问题 (1)"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-you",
-       "kp-hsk1-l04-measure"
-      ]
-     },
-     {
-      "id": "wb4-text-6",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): con trai của Vương Nhất Tuyết năm nay mấy tuổi?",
-      "promptZh": "王一雪儿子今年几岁？",
-      "promptPinyin": "Wáng Yīxuě érzi jīnnián jǐ suì?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "五岁",
-        "pinyin": "wǔ suì",
-        "vi": "năm tuổi"
-       },
-       {
-        "id": "2",
-        "zh": "十二岁",
-        "pinyin": "shí’èr suì",
-        "vi": "mười hai tuổi"
-       },
-       {
-        "id": "3",
-        "zh": "二十岁",
-        "pinyin": "èrshí suì",
-        "vi": "hai mươi tuổi"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 他今年五岁。",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 40,
-        "printedPage": 25,
-        "section": "课文 3 · 根据课文内容回答问题 (2)"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l04-numbers"
-      ]
-     },
      {
       "id": "tb4-fill-1",
       "type": "multiple-choice",
@@ -11359,7 +11363,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "descVi": "Khởi động nối từ – hình, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách; câu hỏi của từng hội thoại nằm ngay tại hội thoại.",
      "sectionId": "exercises"
     },
     {
@@ -12561,7 +12565,7 @@
     "passageId": "psg-tb-l05",
     "titleVi": "Hội thoại Textbook Bài 5",
     "headingVi": "Ngày tháng, ngày nghỉ và khả năng",
-    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy. Câu hỏi của từng hội thoại nằm ngay dưới hội thoại đó.",
     "sentences": [
      {
       "id": "l05-s1",
@@ -13157,6 +13161,118 @@
         "printedPage": 30,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb5-text-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … nấu ăn",
+        "promptZh": "杨同乐（ ）做饭。",
+        "promptPinyin": "Yáng Tónglè ( ) zuò fàn.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "会",
+          "pinyin": "huì",
+          "vi": "biết (làm)",
+          "audio": {
+           "trackId": "trk-tb-l05-3",
+           "start": 2.65,
+           "end": 2.97,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "不",
+          "pinyin": "bù",
+          "vi": "không"
+         },
+         {
+          "id": "3",
+          "zh": "不会",
+          "pinyin": "bú huì",
+          "vi": "không biết (làm)"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc đáp 我会做 (tôi biết nấu) — vậy chỗ trống là 会.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 45,
+          "printedPage": 30,
+          "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l05-hui"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l05-3",
+         "start": 1.62,
+         "end": 3.36,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb5-text-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … cũng nấu ăn",
+        "promptZh": "杨同乐（ ）也做饭。",
+        "promptPinyin": "Yáng Tónglè ( ) yě zuò fàn.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "星期三",
+          "pinyin": "Xīngqīsān",
+          "vi": "thứ tư"
+         },
+         {
+          "id": "2",
+          "zh": "星期六",
+          "pinyin": "Xīngqīliù",
+          "vi": "thứ bảy"
+         },
+         {
+          "id": "3",
+          "zh": "星期日",
+          "pinyin": "Xīngqīrì",
+          "vi": "chủ nhật",
+          "audio": {
+           "trackId": "trk-tb-l05-1",
+           "start": 5.75,
+           "end": 7.25,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Dương Đồng Lạc nói: 星期天我也做饭 (chủ nhật tôi cũng nấu ăn). 星期天 và 星期日 đều là chủ nhật.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 45,
+          "printedPage": 30,
+          "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l05-time"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l05-3",
+         "start": 5.76,
+         "end": 12.18,
+         "status": "asr-draft"
+        }
+       }
       ]
      },
      {
@@ -13179,6 +13295,210 @@
         "printedPage": 32,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb5-text-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc cũng …",
+        "promptZh": "杨同乐也（ ）。",
+        "promptPinyin": "Yáng Tónglè yě ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上班",
+          "pinyin": "shàngbān",
+          "vi": "đi làm"
+         },
+         {
+          "id": "2",
+          "zh": "下班",
+          "pinyin": "xiàbān",
+          "vi": "tan làm",
+          "audio": {
+           "trackId": "trk-tb-l05-5",
+           "start": 2.25,
+           "end": 3.25,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "休息",
+          "pinyin": "xiūxi",
+          "vi": "nghỉ ngơi",
+          "audio": {
+           "trackId": "trk-tb-l05-1",
+           "start": 8.75,
+           "end": 9.45,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Hội thoại 3 mở đầu: Vương Nhất Tuyết hỏi 同乐，下班吗？ và Dương Đồng Lạc đáp 下班 (tan làm rồi).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 46,
+          "printedPage": 31,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 47,
+          "printedPage": 32,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
+         "trackId": "trk-tb-l05-5",
+         "start": 0.4,
+         "end": 3.24,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb5-text-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc có một … mới",
+        "promptZh": "杨同乐有一个新（ ）。",
+        "promptPinyin": "Yáng Tónglè yǒu yí gè xīn ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "名字",
+          "pinyin": "míngzi",
+          "vi": "tên"
+         },
+         {
+          "id": "2",
+          "zh": "工作",
+          "pinyin": "gōngzuò",
+          "vi": "công việc"
+         },
+         {
+          "id": "3",
+          "zh": "电脑",
+          "pinyin": "diànnǎo",
+          "vi": "máy tính",
+          "audio": {
+           "trackId": "trk-tb-l05-5",
+           "start": 5.05,
+           "end": 5.65,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Trong Hội thoại 3, Dương Đồng Lạc xác nhận: 是的，是我的新电脑 (đúng vậy, là máy tính mới của tôi).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 46,
+          "printedPage": 31,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 47,
+          "printedPage": 32,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
+         "trackId": "trk-tb-l05-5",
+         "start": 3.94,
+         "end": 5.9,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb5-text-5",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): máy tính mới của Dương Đồng Lạc thế nào?",
+        "promptZh": "杨同乐的新电脑怎么样？",
+        "promptPinyin": "Yáng Tónglè de xīn diànnǎo zěnmeyàng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "真好看",
+          "pinyin": "zhēn hǎokàn",
+          "vi": "thật đẹp"
+         },
+         {
+          "id": "2",
+          "zh": "不好看",
+          "pinyin": "bù hǎokàn",
+          "vi": "không đẹp"
+         },
+         {
+          "id": "3",
+          "zh": "很旧",
+          "pinyin": "hěn jiù",
+          "vi": "rất cũ"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Vương Nhất Tuyết: 真好看！",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 47,
+          "printedPage": "032",
+          "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       },
+       {
+        "id": "wb5-text-6",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): Dương Đồng Lạc có thích máy tính mới của mình không?",
+        "promptZh": "杨同乐喜欢他的新电脑吗？",
+        "promptPinyin": "Yáng Tónglè xǐhuan tā de xīn diànnǎo ma?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "喜欢",
+          "pinyin": "xǐhuan",
+          "vi": "có thích"
+         },
+         {
+          "id": "2",
+          "zh": "不喜欢",
+          "pinyin": "bù xǐhuan",
+          "vi": "không thích"
+         },
+         {
+          "id": "3",
+          "zh": "没说",
+          "pinyin": "méi shuō",
+          "vi": "hội thoại không nói"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Dương Đồng Lạc: 我也很喜欢它。",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 47,
+          "printedPage": "032",
+          "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       }
       ]
      }
     ]
@@ -13186,242 +13506,8 @@
    "exerciseSet": {
     "id": "set-tb-l05-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.027); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.030, 031 và phần đọc hiểu tr.032), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.033, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.033 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "noteVi": "Gồm hai nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.027); 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.033, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.033 là bài tự luyện riêng ở khối B, không chấm tự động. Sáu câu hỏi của Hội thoại 2 và 3 (tr.030, 031 và phần đọc hiểu tr.032) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
-     {
-      "id": "wb5-text-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … nấu ăn",
-      "promptZh": "杨同乐（ ）做饭。",
-      "promptPinyin": "Yáng Tónglè ( ) zuò fàn.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "会",
-        "pinyin": "huì",
-        "vi": "biết (làm)",
-        "audio": {
-         "trackId": "trk-tb-l05-3",
-         "start": 2.65,
-         "end": 2.97,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "不",
-        "pinyin": "bù",
-        "vi": "không"
-       },
-       {
-        "id": "3",
-        "zh": "不会",
-        "pinyin": "bú huì",
-        "vi": "không biết (làm)"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Trong Hội thoại 2, Dương Đồng Lạc đáp 我会做 (tôi biết nấu) — vậy chỗ trống là 会.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 45,
-        "printedPage": 30,
-        "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l05-hui"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l05-3",
-       "start": 1.62,
-       "end": 3.36,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb5-text-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 030): Dương Đồng Lạc … cũng nấu ăn",
-      "promptZh": "杨同乐（ ）也做饭。",
-      "promptPinyin": "Yáng Tónglè ( ) yě zuò fàn.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "星期三",
-        "pinyin": "Xīngqīsān",
-        "vi": "thứ tư"
-       },
-       {
-        "id": "2",
-        "zh": "星期六",
-        "pinyin": "Xīngqīliù",
-        "vi": "thứ bảy"
-       },
-       {
-        "id": "3",
-        "zh": "星期日",
-        "pinyin": "Xīngqīrì",
-        "vi": "chủ nhật",
-        "audio": {
-         "trackId": "trk-tb-l05-1",
-         "start": 5.75,
-         "end": 7.25,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Dương Đồng Lạc nói: 星期天我也做饭 (chủ nhật tôi cũng nấu ăn). 星期天 và 星期日 đều là chủ nhật.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 45,
-        "printedPage": 30,
-        "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l05-time"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l05-3",
-       "start": 5.76,
-       "end": 12.18,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb5-text-3",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc cũng …",
-      "promptZh": "杨同乐也（ ）。",
-      "promptPinyin": "Yáng Tónglè yě ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "上班",
-        "pinyin": "shàngbān",
-        "vi": "đi làm"
-       },
-       {
-        "id": "2",
-        "zh": "下班",
-        "pinyin": "xiàbān",
-        "vi": "tan làm",
-        "audio": {
-         "trackId": "trk-tb-l05-5",
-         "start": 2.25,
-         "end": 3.25,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "休息",
-        "pinyin": "xiūxi",
-        "vi": "nghỉ ngơi",
-        "audio": {
-         "trackId": "trk-tb-l05-1",
-         "start": 8.75,
-         "end": 9.45,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Hội thoại 3 mở đầu: Vương Nhất Tuyết hỏi 同乐，下班吗？ và Dương Đồng Lạc đáp 下班 (tan làm rồi).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 46,
-        "printedPage": 31,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 47,
-        "printedPage": 32,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l05-5",
-       "start": 0.4,
-       "end": 3.24,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb5-text-4",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 031): Dương Đồng Lạc có một … mới",
-      "promptZh": "杨同乐有一个新（ ）。",
-      "promptPinyin": "Yáng Tónglè yǒu yí gè xīn ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "名字",
-        "pinyin": "míngzi",
-        "vi": "tên"
-       },
-       {
-        "id": "2",
-        "zh": "工作",
-        "pinyin": "gōngzuò",
-        "vi": "công việc"
-       },
-       {
-        "id": "3",
-        "zh": "电脑",
-        "pinyin": "diànnǎo",
-        "vi": "máy tính",
-        "audio": {
-         "trackId": "trk-tb-l05-5",
-         "start": 5.05,
-         "end": 5.65,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 030, Hội thoại 3 trang in 032), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Trong Hội thoại 3, Dương Đồng Lạc xác nhận: 是的，是我的新电脑 (đúng vậy, là máy tính mới của tôi).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 46,
-        "printedPage": 31,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 47,
-        "printedPage": 32,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l05-5",
-       "start": 3.94,
-       "end": 5.9,
-       "status": "asr-draft"
-      }
-     },
      {
       "id": "wb5-comp-1",
       "type": "multiple-choice",
@@ -13811,84 +13897,6 @@
       ],
       "answer": "2",
       "hintVi": "Nguyên văn câu cuối Hội thoại 3."
-     },
-     {
-      "id": "wb5-text-5",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): máy tính mới của Dương Đồng Lạc thế nào?",
-      "promptZh": "杨同乐的新电脑怎么样？",
-      "promptPinyin": "Yáng Tónglè de xīn diànnǎo zěnmeyàng?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "真好看",
-        "pinyin": "zhēn hǎokàn",
-        "vi": "thật đẹp"
-       },
-       {
-        "id": "2",
-        "zh": "不好看",
-        "pinyin": "bù hǎokàn",
-        "vi": "không đẹp"
-       },
-       {
-        "id": "3",
-        "zh": "很旧",
-        "pinyin": "hěn jiù",
-        "vi": "rất cũ"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Vương Nhất Tuyết: 真好看！",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 47,
-        "printedPage": "032",
-        "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
-     },
-     {
-      "id": "wb5-text-6",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): Dương Đồng Lạc có thích máy tính mới của mình không?",
-      "promptZh": "杨同乐喜欢他的新电脑吗？",
-      "promptPinyin": "Yáng Tónglè xǐhuan tā de xīn diànnǎo ma?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "喜欢",
-        "pinyin": "xǐhuan",
-        "vi": "có thích"
-       },
-       {
-        "id": "2",
-        "zh": "不喜欢",
-        "pinyin": "bù xǐhuan",
-        "vi": "không thích"
-       },
-       {
-        "id": "3",
-        "zh": "没说",
-        "pinyin": "méi shuō",
-        "vi": "hội thoại không nói"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Dương Đồng Lạc: 我也很喜欢它。",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 47,
-        "printedPage": "032",
-        "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
      },
      {
       "id": "wb5-warm-1",
@@ -14824,7 +14832,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "descVi": "Khởi động nối từ – hình, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách; câu hỏi của từng hội thoại nằm ngay tại hội thoại.",
      "sectionId": "exercises"
     },
     {
@@ -15913,7 +15921,7 @@
     "passageId": "psg-tb-l06",
     "titleVi": "Hội thoại Textbook Bài 6",
     "headingVi": "Số điện thoại, mong muốn và cách đi lại",
-    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy. Câu hỏi của từng hội thoại nằm ngay dưới hội thoại đó.",
     "sentences": [
      {
       "id": "l06-s1",
@@ -16509,6 +16517,118 @@
         "printedPage": 37,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb6-text-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt … muốn đi siêu thị",
+        "promptZh": "白家月（ ）想去超市。",
+        "promptPinyin": "Bái Jiāyuè ( ) xiǎng qù chāoshì.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "现在",
+          "pinyin": "xiànzài",
+          "vi": "bây giờ"
+         },
+         {
+          "id": "2",
+          "zh": "今天",
+          "pinyin": "jīntiān",
+          "vi": "hôm nay"
+         },
+         {
+          "id": "3",
+          "zh": "明天",
+          "pinyin": "míngtiān",
+          "vi": "ngày mai",
+          "audio": {
+           "trackId": "trk-tb-l06-3",
+           "start": 1.41,
+           "end": 1.93,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Trần Thiên Trung hỏi: 家月，明天你去哪儿？ (ngày mai bạn đi đâu?) — chuyện này nói về ngày mai.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 52,
+          "printedPage": 37,
+          "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l05-time"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l06-3",
+         "start": 0.13,
+         "end": 6.16,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb6-text-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt muốn mua …",
+        "promptZh": "白家月想买（ ）。",
+        "promptPinyin": "Bái Jiāyuè xiǎng mǎi ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "菜",
+          "pinyin": "cài",
+          "vi": "món ăn"
+         },
+         {
+          "id": "2",
+          "zh": "牛奶",
+          "pinyin": "niúnǎi",
+          "vi": "sữa bò",
+          "audio": {
+           "trackId": "trk-tb-l06-3",
+           "start": 11.98,
+           "end": 12.7,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "面条儿和牛奶",
+          "pinyin": "miàntiáor hé niúnǎi",
+          "vi": "mì sợi và sữa bò"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Bạch Gia Nguyệt đáp: 我想买些牛奶 (tôi muốn mua một ít sữa).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 52,
+          "printedPage": 37,
+          "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l06-xiang"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l06-3",
+         "start": 10.64,
+         "end": 12.7,
+         "status": "asr-draft"
+        }
+       }
       ]
      },
      {
@@ -16531,6 +16651,217 @@
         "printedPage": 39,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb6-text-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Cả nhà Vương Nhất Tuyết muốn đến nhà hàng Tây An …",
+        "promptZh": "王一雪一家人想去西安饭店（ ）。",
+        "promptPinyin": "Wáng Yīxuě yì jiā rén xiǎng qù Xī'ān Fàndiàn ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "吃早饭",
+          "pinyin": "chī zǎofàn",
+          "vi": "ăn sáng"
+         },
+         {
+          "id": "2",
+          "zh": "吃午饭",
+          "pinyin": "chī wǔfàn",
+          "vi": "ăn trưa"
+         },
+         {
+          "id": "3",
+          "zh": "吃晚饭",
+          "pinyin": "chī wǎnfàn",
+          "vi": "ăn tối",
+          "audio": {
+           "trackId": "trk-tb-l06-5",
+           "start": 2.12,
+           "end": 2.92,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Vương Nhất Tuyết mở đầu: 星期天我们去哪儿吃晚饭？ (chủ nhật chúng ta đi đâu ăn tối?).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 53,
+          "printedPage": 38,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 54,
+          "printedPage": 39,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l06-serial"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l06-5",
+         "start": 0.32,
+         "end": 5.72,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb6-text-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Lưu Tiểu Minh không muốn ăn …",
+        "promptZh": "刘小明不想吃（ ）。",
+        "promptPinyin": "Liú Xiǎomíng bù xiǎng chī ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "米饭",
+          "pinyin": "mǐfàn",
+          "vi": "cơm",
+          "audio": {
+           "trackId": "trk-tb-l06-5",
+           "start": 12.75,
+           "end": 13.31,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "包子",
+          "pinyin": "bāozi",
+          "vi": "bánh bao",
+          "audio": {
+           "trackId": "trk-tb-l06-5",
+           "start": 7.08,
+           "end": 7.64,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "面条儿",
+          "pinyin": "miàntiáor",
+          "vi": "mì sợi"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Lưu Tiểu Minh nói: 我想吃米饭，不想吃包子 (con muốn ăn cơm, không muốn ăn bánh bao).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 53,
+          "printedPage": 38,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 54,
+          "printedPage": 39,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l06-xiang"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l06-5",
+         "start": 10.39,
+         "end": 14.77,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb6-text-5",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): bánh bao của Nhà hàng Tây An có ngon không?",
+        "promptZh": "西安饭店的包子好吃吗？",
+        "promptPinyin": "Xī'ān Fàndiàn de bāozi hǎochī ma?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "好吃",
+          "pinyin": "hǎochī",
+          "vi": "ngon"
+         },
+         {
+          "id": "2",
+          "zh": "不好吃",
+          "pinyin": "bù hǎochī",
+          "vi": "không ngon"
+         },
+         {
+          "id": "3",
+          "zh": "没说",
+          "pinyin": "méi shuō",
+          "vi": "hội thoại không nói"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Tiểu Tuyết: 那边的包子非常好吃。",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 54,
+          "printedPage": "039",
+          "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       },
+       {
+        "id": "wb6-text-6",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): họ đi Nhà hàng Tây An bằng cách nào?",
+        "promptZh": "他们怎么去西安饭店？",
+        "promptPinyin": "Tāmen zěnme qù Xī'ān Fàndiàn?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "坐出租车去",
+          "pinyin": "zuò chūzūchē qù",
+          "vi": "đi taxi"
+         },
+         {
+          "id": "2",
+          "zh": "走路去",
+          "pinyin": "zǒulù qù",
+          "vi": "đi bộ"
+         },
+         {
+          "id": "3",
+          "zh": "坐公共汽车去",
+          "pinyin": "zuò gōnggòng qìchē qù",
+          "vi": "đi xe buýt"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Minh: 坐出租车去。",
+        "grammarIds": [
+         "kp-hsk1-l06-zenme",
+         "kp-hsk1-l06-serial"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 54,
+          "printedPage": "039",
+          "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       }
       ]
      }
     ]
@@ -16538,246 +16869,8 @@
    "exerciseSet": {
     "id": "set-tb-l06-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.035); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.037, 038 và phần đọc hiểu tr.039), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.041, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.041–042 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "noteVi": "Gồm hai nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.035); 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.041, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.041–042 là bài tự luyện riêng ở khối B, không chấm tự động. Sáu câu hỏi của Hội thoại 2 và 3 (tr.037, 038 và phần đọc hiểu tr.039) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
-     {
-      "id": "wb6-text-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt … muốn đi siêu thị",
-      "promptZh": "白家月（ ）想去超市。",
-      "promptPinyin": "Bái Jiāyuè ( ) xiǎng qù chāoshì.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "现在",
-        "pinyin": "xiànzài",
-        "vi": "bây giờ"
-       },
-       {
-        "id": "2",
-        "zh": "今天",
-        "pinyin": "jīntiān",
-        "vi": "hôm nay"
-       },
-       {
-        "id": "3",
-        "zh": "明天",
-        "pinyin": "míngtiān",
-        "vi": "ngày mai",
-        "audio": {
-         "trackId": "trk-tb-l06-3",
-         "start": 1.41,
-         "end": 1.93,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Trần Thiên Trung hỏi: 家月，明天你去哪儿？ (ngày mai bạn đi đâu?) — chuyện này nói về ngày mai.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 52,
-        "printedPage": 37,
-        "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l05-time"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l06-3",
-       "start": 0.13,
-       "end": 6.16,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb6-text-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 037): Bạch Gia Nguyệt muốn mua …",
-      "promptZh": "白家月想买（ ）。",
-      "promptPinyin": "Bái Jiāyuè xiǎng mǎi ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "菜",
-        "pinyin": "cài",
-        "vi": "món ăn"
-       },
-       {
-        "id": "2",
-        "zh": "牛奶",
-        "pinyin": "niúnǎi",
-        "vi": "sữa bò",
-        "audio": {
-         "trackId": "trk-tb-l06-3",
-         "start": 11.98,
-         "end": 12.7,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "面条儿和牛奶",
-        "pinyin": "miàntiáor hé niúnǎi",
-        "vi": "mì sợi và sữa bò"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Bạch Gia Nguyệt đáp: 我想买些牛奶 (tôi muốn mua một ít sữa).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 52,
-        "printedPage": 37,
-        "section": "课文 2 · câu hỏi nghe hiểu và lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l06-xiang"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l06-3",
-       "start": 10.64,
-       "end": 12.7,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb6-text-3",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Cả nhà Vương Nhất Tuyết muốn đến nhà hàng Tây An …",
-      "promptZh": "王一雪一家人想去西安饭店（ ）。",
-      "promptPinyin": "Wáng Yīxuě yì jiā rén xiǎng qù Xī'ān Fàndiàn ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "吃早饭",
-        "pinyin": "chī zǎofàn",
-        "vi": "ăn sáng"
-       },
-       {
-        "id": "2",
-        "zh": "吃午饭",
-        "pinyin": "chī wǔfàn",
-        "vi": "ăn trưa"
-       },
-       {
-        "id": "3",
-        "zh": "吃晚饭",
-        "pinyin": "chī wǎnfàn",
-        "vi": "ăn tối",
-        "audio": {
-         "trackId": "trk-tb-l06-5",
-         "start": 2.12,
-         "end": 2.92,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Vương Nhất Tuyết mở đầu: 星期天我们去哪儿吃晚饭？ (chủ nhật chúng ta đi đâu ăn tối?).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 53,
-        "printedPage": 38,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 54,
-        "printedPage": 39,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l06-serial"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l06-5",
-       "start": 0.32,
-       "end": 5.72,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb6-text-4",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 038): Lưu Tiểu Minh không muốn ăn …",
-      "promptZh": "刘小明不想吃（ ）。",
-      "promptPinyin": "Liú Xiǎomíng bù xiǎng chī ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "米饭",
-        "pinyin": "mǐfàn",
-        "vi": "cơm",
-        "audio": {
-         "trackId": "trk-tb-l06-5",
-         "start": 12.75,
-         "end": 13.31,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "包子",
-        "pinyin": "bāozi",
-        "vi": "bánh bao",
-        "audio": {
-         "trackId": "trk-tb-l06-5",
-         "start": 7.08,
-         "end": 7.64,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "面条儿",
-        "pinyin": "miàntiáor",
-        "vi": "mì sợi"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 037, Hội thoại 3 trang in 039), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Lưu Tiểu Minh nói: 我想吃米饭，不想吃包子 (con muốn ăn cơm, không muốn ăn bánh bao).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 53,
-        "printedPage": 38,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 54,
-        "printedPage": 39,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l06-xiang"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l06-5",
-       "start": 10.39,
-       "end": 14.77,
-       "status": "asr-draft"
-      }
-     },
      {
       "id": "wb6-comp-1",
       "type": "multiple-choice",
@@ -17200,87 +17293,6 @@
        }
       ],
       "grammarIds": []
-     },
-     {
-      "id": "wb6-text-5",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): bánh bao của Nhà hàng Tây An có ngon không?",
-      "promptZh": "西安饭店的包子好吃吗？",
-      "promptPinyin": "Xī'ān Fàndiàn de bāozi hǎochī ma?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "好吃",
-        "pinyin": "hǎochī",
-        "vi": "ngon"
-       },
-       {
-        "id": "2",
-        "zh": "不好吃",
-        "pinyin": "bù hǎochī",
-        "vi": "không ngon"
-       },
-       {
-        "id": "3",
-        "zh": "没说",
-        "pinyin": "méi shuō",
-        "vi": "hội thoại không nói"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Tiểu Tuyết: 那边的包子非常好吃。",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 54,
-        "printedPage": "039",
-        "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
-     },
-     {
-      "id": "wb6-text-6",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): họ đi Nhà hàng Tây An bằng cách nào?",
-      "promptZh": "他们怎么去西安饭店？",
-      "promptPinyin": "Tāmen zěnme qù Xī'ān Fàndiàn?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "坐出租车去",
-        "pinyin": "zuò chūzūchē qù",
-        "vi": "đi taxi"
-       },
-       {
-        "id": "2",
-        "zh": "走路去",
-        "pinyin": "zǒulù qù",
-        "vi": "đi bộ"
-       },
-       {
-        "id": "3",
-        "zh": "坐公共汽车去",
-        "pinyin": "zuò gōnggòng qìchē qù",
-        "vi": "đi xe buýt"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Minh: 坐出租车去。",
-      "grammarIds": [
-       "kp-hsk1-l06-zenme",
-       "kp-hsk1-l06-serial"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 54,
-        "printedPage": "039",
-        "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
      },
      {
       "id": "wb6-warm-1",
@@ -18238,7 +18250,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "descVi": "Khởi động nối từ – hình, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách; câu hỏi của từng hội thoại nằm ngay tại hội thoại.",
      "sectionId": "exercises"
     },
     {
@@ -19405,7 +19417,7 @@
     "passageId": "psg-tb-l07",
     "titleVi": "Hội thoại Textbook Bài 7",
     "headingVi": "Giờ giấc, hẹn gặp và lịch làm việc",
-    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy. Câu hỏi của từng hội thoại nằm ngay dưới hội thoại đó.",
     "sentences": [
      {
       "id": "l07-s1",
@@ -19990,6 +20002,126 @@
         "printedPage": 49,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb7-text-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 048): Lý Văn buổi chiều muốn đi …",
+        "promptZh": "李文下午想去（ ）。",
+        "promptPinyin": "Lǐ Wén xiàwǔ xiǎng qù ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "超市",
+          "pinyin": "chāoshì",
+          "vi": "siêu thị"
+         },
+         {
+          "id": "2",
+          "zh": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "vi": "xem phim",
+          "audio": {
+           "trackId": "trk-tb-l07-3",
+           "start": 3.0,
+           "end": 3.9,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "西安饭店",
+          "pinyin": "Xī'ān Fàndiàn",
+          "vi": "nhà hàng Tây An"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Lý Văn nói: 下午我想去电影院看电影 (buổi chiều tôi muốn đến rạp xem phim).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 63,
+          "printedPage": 48,
+          "section": "课文 2 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 64,
+          "printedPage": 49,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
+         "trackId": "trk-tb-l07-3",
+         "start": 0.42,
+         "end": 5.1,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb7-text-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 048): Bạch Gia Nguyệt chiều mai còn …",
+        "promptZh": "白家月明天下午还（ ）。",
+        "promptPinyin": "Bái Jiāyuè míngtiān xiàwǔ hái ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上课",
+          "pinyin": "shàngkè",
+          "vi": "có tiết học",
+          "audio": {
+           "trackId": "trk-tb-l07-3",
+           "start": 15.25,
+           "end": 15.9,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "有事",
+          "pinyin": "yǒu shì",
+          "vi": "có việc"
+         },
+         {
+          "id": "3",
+          "zh": "去超市",
+          "pinyin": "qù chāoshì",
+          "vi": "đi siêu thị"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Bạch Gia Nguyệt nói: 我明天下午两点还上课呢 (chiều mai 2 giờ tôi vẫn có tiết học). “Có việc” là chuyện của buổi chiều hôm nay.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 63,
+          "printedPage": 48,
+          "section": "课文 2 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 64,
+          "printedPage": 49,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
+         "trackId": "trk-tb-l07-3",
+         "start": 12.74,
+         "end": 17.85,
+         "status": "asr-draft"
+        }
+       }
       ]
      },
      {
@@ -20012,6 +20144,220 @@
         "printedPage": 51,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "wb7-text-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 050): Lưu Minh … đấy",
+        "promptZh": "刘明（ ）呢。",
+        "promptPinyin": "Liú Míng ( ) ne.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上班",
+          "pinyin": "shàngbān",
+          "vi": "đang đi làm",
+          "audio": {
+           "trackId": "trk-tb-l07-5",
+           "start": 9.3,
+           "end": 9.96,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "买菜",
+          "pinyin": "mǎi cài",
+          "vi": "đang mua rau"
+         },
+         {
+          "id": "3",
+          "zh": "在家里",
+          "pinyin": "zài jiā li",
+          "vi": "đang ở nhà",
+          "audio": {
+           "trackId": "trk-tb-l07-5",
+           "start": 2.95,
+           "end": 3.92,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Lưu Minh đáp: 我在家里呢 (tôi đang ở nhà).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 65,
+          "printedPage": 50,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": 51,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l07-ne"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l07-5",
+         "start": 2.38,
+         "end": 4.64,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb7-text-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 050): Vương Nhất Tuyết … tan làm",
+        "promptZh": "王一雪（ ）下班。",
+        "promptPinyin": "Wáng Yīxuě ( ) xiàbān.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "五点",
+          "pinyin": "wǔ diǎn",
+          "vi": "5 giờ"
+         },
+         {
+          "id": "2",
+          "zh": "六点",
+          "pinyin": "liù diǎn",
+          "vi": "6 giờ",
+          "audio": {
+           "trackId": "trk-tb-l07-5",
+           "start": 5.55,
+           "end": 6.2,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "六点半",
+          "pinyin": "liù diǎn bàn",
+          "vi": "6 giờ rưỡi",
+          "audio": {
+           "trackId": "trk-tb-l07-5",
+           "start": 5.55,
+           "end": 6.4,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Vương Nhất Tuyết nói: 我晚上六点半下班 (tối nay tôi tan làm lúc 6 giờ rưỡi) — cũng là nhan đề của bài.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 65,
+          "printedPage": 50,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": 51,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l07-time2"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l07-5",
+         "start": 4.76,
+         "end": 6.88,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb7-text-5",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): tối nay Lưu Minh còn đi làm gì?",
+        "promptZh": "刘明晚上还去做什么？",
+        "promptPinyin": "Liú Míng wǎnshang hái qù zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "去医院上班",
+          "pinyin": "qù yīyuàn shàngbān",
+          "vi": "đi làm ở bệnh viện"
+         },
+         {
+          "id": "2",
+          "zh": "去店里买菜",
+          "pinyin": "qù diàn li mǎi cài",
+          "vi": "đi cửa hàng mua rau"
+         },
+         {
+          "id": "3",
+          "zh": "在家休息",
+          "pinyin": "zài jiā xiūxi",
+          "vi": "nghỉ ở nhà"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.051. Đáp án lấy từ lời thoại in của Lưu Minh: 我八点去医院上班。",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": "051",
+          "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       },
+       {
+        "id": "wb7-text-6",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): mười phút nữa Lưu Minh đi làm gì?",
+        "promptZh": "刘明十分钟后去做什么？",
+        "promptPinyin": "Liú Míng shí fēnzhōng hòu qù zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "去医院上班",
+          "pinyin": "qù yīyuàn shàngbān",
+          "vi": "đi làm ở bệnh viện"
+         },
+         {
+          "id": "2",
+          "zh": "去店里买些菜",
+          "pinyin": "qù diàn li mǎi xiē cài",
+          "vi": "đi cửa hàng mua ít rau"
+         },
+         {
+          "id": "3",
+          "zh": "去电影院看电影",
+          "pinyin": "qù diànyǐngyuàn kàn diànyǐng",
+          "vi": "đi rạp xem phim"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi in ở Textbook tr.051. Vương Nhất Tuyết dặn 你去店里买些菜吧， Lưu Minh đáp 好，我十分钟后去。",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": "051",
+          "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+         }
+        ]
+       }
       ]
      }
     ]
@@ -20019,260 +20365,8 @@
    "exerciseSet": {
     "id": "set-tb-l07-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối giờ – đồng hồ (Textbook tr.045); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.048, 050 và phần đọc hiểu tr.051), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.052, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.052 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "noteVi": "Gồm hai nhóm theo sách: 6 câu khởi động nối giờ – đồng hồ (Textbook tr.045); 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.052, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.052 là bài tự luyện riêng ở khối B, không chấm tự động. Sáu câu hỏi của Hội thoại 2 và 3 (tr.048, 050 và phần đọc hiểu tr.051) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
-     {
-      "id": "wb7-text-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 048): Lý Văn buổi chiều muốn đi …",
-      "promptZh": "李文下午想去（ ）。",
-      "promptPinyin": "Lǐ Wén xiàwǔ xiǎng qù ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "超市",
-        "pinyin": "chāoshì",
-        "vi": "siêu thị"
-       },
-       {
-        "id": "2",
-        "zh": "看电影",
-        "pinyin": "kàn diànyǐng",
-        "vi": "xem phim",
-        "audio": {
-         "trackId": "trk-tb-l07-3",
-         "start": 3.0,
-         "end": 3.9,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "西安饭店",
-        "pinyin": "Xī'ān Fàndiàn",
-        "vi": "nhà hàng Tây An"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Lý Văn nói: 下午我想去电影院看电影 (buổi chiều tôi muốn đến rạp xem phim).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 63,
-        "printedPage": 48,
-        "section": "课文 2 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 64,
-        "printedPage": 49,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l07-3",
-       "start": 0.42,
-       "end": 5.1,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb7-text-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 048): Bạch Gia Nguyệt chiều mai còn …",
-      "promptZh": "白家月明天下午还（ ）。",
-      "promptPinyin": "Bái Jiāyuè míngtiān xiàwǔ hái ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "上课",
-        "pinyin": "shàngkè",
-        "vi": "có tiết học",
-        "audio": {
-         "trackId": "trk-tb-l07-3",
-         "start": 15.25,
-         "end": 15.9,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "有事",
-        "pinyin": "yǒu shì",
-        "vi": "có việc"
-       },
-       {
-        "id": "3",
-        "zh": "去超市",
-        "pinyin": "qù chāoshì",
-        "vi": "đi siêu thị"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Bạch Gia Nguyệt nói: 我明天下午两点还上课呢 (chiều mai 2 giờ tôi vẫn có tiết học). “Có việc” là chuyện của buổi chiều hôm nay.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 63,
-        "printedPage": 48,
-        "section": "课文 2 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 64,
-        "printedPage": 49,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l07-3",
-       "start": 12.74,
-       "end": 17.85,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb7-text-3",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 050): Lưu Minh … đấy",
-      "promptZh": "刘明（ ）呢。",
-      "promptPinyin": "Liú Míng ( ) ne.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "上班",
-        "pinyin": "shàngbān",
-        "vi": "đang đi làm",
-        "audio": {
-         "trackId": "trk-tb-l07-5",
-         "start": 9.3,
-         "end": 9.96,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "买菜",
-        "pinyin": "mǎi cài",
-        "vi": "đang mua rau"
-       },
-       {
-        "id": "3",
-        "zh": "在家里",
-        "pinyin": "zài jiā li",
-        "vi": "đang ở nhà",
-        "audio": {
-         "trackId": "trk-tb-l07-5",
-         "start": 2.95,
-         "end": 3.92,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Lưu Minh đáp: 我在家里呢 (tôi đang ở nhà).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 65,
-        "printedPage": 50,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 66,
-        "printedPage": 51,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l07-ne"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l07-5",
-       "start": 2.38,
-       "end": 4.64,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb7-text-4",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 050): Vương Nhất Tuyết … tan làm",
-      "promptZh": "王一雪（ ）下班。",
-      "promptPinyin": "Wáng Yīxuě ( ) xiàbān.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "五点",
-        "pinyin": "wǔ diǎn",
-        "vi": "5 giờ"
-       },
-       {
-        "id": "2",
-        "zh": "六点",
-        "pinyin": "liù diǎn",
-        "vi": "6 giờ",
-        "audio": {
-         "trackId": "trk-tb-l07-5",
-         "start": 5.55,
-         "end": 6.2,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "3",
-        "zh": "六点半",
-        "pinyin": "liù diǎn bàn",
-        "vi": "6 giờ rưỡi",
-        "audio": {
-         "trackId": "trk-tb-l07-5",
-         "start": 5.55,
-         "end": 6.4,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 049, Hội thoại 3 trang in 051), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Vương Nhất Tuyết nói: 我晚上六点半下班 (tối nay tôi tan làm lúc 6 giờ rưỡi) — cũng là nhan đề của bài.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 65,
-        "printedPage": 50,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 66,
-        "printedPage": 51,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l07-time2"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l07-5",
-       "start": 4.76,
-       "end": 6.88,
-       "status": "asr-draft"
-      }
-     },
      {
       "id": "wb7-comp-1",
       "type": "multiple-choice",
@@ -20661,84 +20755,6 @@
        }
       ],
       "grammarIds": []
-     },
-     {
-      "id": "wb7-text-5",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): tối nay Lưu Minh còn đi làm gì?",
-      "promptZh": "刘明晚上还去做什么？",
-      "promptPinyin": "Liú Míng wǎnshang hái qù zuò shénme?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "去医院上班",
-        "pinyin": "qù yīyuàn shàngbān",
-        "vi": "đi làm ở bệnh viện"
-       },
-       {
-        "id": "2",
-        "zh": "去店里买菜",
-        "pinyin": "qù diàn li mǎi cài",
-        "vi": "đi cửa hàng mua rau"
-       },
-       {
-        "id": "3",
-        "zh": "在家休息",
-        "pinyin": "zài jiā xiūxi",
-        "vi": "nghỉ ở nhà"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.051. Đáp án lấy từ lời thoại in của Lưu Minh: 我八点去医院上班。",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 66,
-        "printedPage": "051",
-        "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
-     },
-     {
-      "id": "wb7-text-6",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): mười phút nữa Lưu Minh đi làm gì?",
-      "promptZh": "刘明十分钟后去做什么？",
-      "promptPinyin": "Liú Míng shí fēnzhōng hòu qù zuò shénme?",
-      "options": [
-       {
-        "id": "1",
-        "zh": "去医院上班",
-        "pinyin": "qù yīyuàn shàngbān",
-        "vi": "đi làm ở bệnh viện"
-       },
-       {
-        "id": "2",
-        "zh": "去店里买些菜",
-        "pinyin": "qù diàn li mǎi xiē cài",
-        "vi": "đi cửa hàng mua ít rau"
-       },
-       {
-        "id": "3",
-        "zh": "去电影院看电影",
-        "pinyin": "qù diànyǐngyuàn kàn diànyǐng",
-        "vi": "đi rạp xem phim"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Câu hỏi in ở Textbook tr.051. Vương Nhất Tuyết dặn 你去店里买些菜吧， Lưu Minh đáp 好，我十分钟后去。",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 66,
-        "printedPage": "051",
-        "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
-       }
-      ]
      },
      {
       "id": "wb7-warm-1",
@@ -21444,7 +21460,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Khởi động nối giờ với đồng hồ, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "descVi": "Khởi động nối giờ với đồng hồ, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách; câu hỏi của từng hội thoại nằm ngay tại hội thoại.",
      "sectionId": "exercises"
     },
     {
@@ -22574,7 +22590,7 @@
     "passageId": "psg-tb-l08",
     "titleVi": "Hội thoại Textbook Bài 8",
     "headingVi": "Vị trí, hẹn gặp và bệnh viện",
-    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy.",
+    "noteVi": "Chọn một tình huống. Nghe trước, mở lời thoại rồi đọc theo. Lời thoại đã đối chiếu bản in; mốc từng câu ở trạng thái căn bằng máy. Câu hỏi của từng hội thoại nằm ngay dưới hội thoại đó.",
     "sentences": [
      {
       "id": "l08-s1",
@@ -23171,8 +23187,130 @@
         "section": "课文 2"
        }
       ],
-      "checkItemId": "wb8-text-1",
-      "checkLabelVi": "Câu hỏi ngắn sau khi nghe"
+      "checkItems": [
+       {
+        "id": "wb8-text-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 056): Bạch Gia Nguyệt và Lý Văn gặp nhau ở …",
+        "promptZh": "白家月和李文在（ ）见。",
+        "promptPinyin": "Bái Jiāyuè hé Lǐ Wén zài ( ) jiàn.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "家里",
+          "pinyin": "jiā li",
+          "vi": "ở nhà"
+         },
+         {
+          "id": "2",
+          "zh": "书店里",
+          "pinyin": "shūdiàn li",
+          "vi": "trong hiệu sách"
+         },
+         {
+          "id": "3",
+          "zh": "书店前",
+          "pinyin": "shūdiàn qián",
+          "vi": "trước hiệu sách",
+          "audio": {
+           "trackId": "trk-tb-l08-3",
+           "start": 3.0,
+           "end": 5.6,
+           "status": "asr-draft"
+          }
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Lý Văn đáp: 在学校书店前见吧 (gặp ở trước hiệu sách của trường nhé) — vị trí là TRƯỚC hiệu sách, không phải trong hiệu sách.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 71,
+          "printedPage": 56,
+          "section": "课文 2 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 72,
+          "printedPage": 57,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l08-positional"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l08-3",
+         "start": 3.0,
+         "end": 5.6,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "wb8-text-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 056): Lý Văn buổi chiều … đến được",
+        "promptZh": "李文下午（ ）能到。",
+        "promptPinyin": "Lǐ Wén xiàwǔ ( ) néng dào.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "两点",
+          "pinyin": "liǎng diǎn",
+          "vi": "2 giờ",
+          "audio": {
+           "trackId": "trk-tb-l08-3",
+           "start": 6.1,
+           "end": 9.4,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "2",
+          "zh": "两点半",
+          "pinyin": "liǎng diǎn bàn",
+          "vi": "2 giờ rưỡi"
+         },
+         {
+          "id": "3",
+          "zh": "三点后",
+          "pinyin": "sān diǎn hòu",
+          "vi": "sau 3 giờ"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Bạch Gia Nguyệt hỏi: 下午两点你能到吗？ và Lý Văn đáp 我能到 — 2 giờ chiều Lý Văn đến được.",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 71,
+          "printedPage": 56,
+          "section": "课文 2 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 72,
+          "printedPage": 57,
+          "section": "课文 2 · lời thoại"
+         }
+        ],
+        "grammarIds": [
+         "kp-hsk1-l08-neng"
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l08-3",
+         "start": 6.1,
+         "end": 9.4,
+         "status": "asr-draft"
+        }
+       }
+      ]
      },
      {
       "id": "l08-dialogue-3",
@@ -23195,157 +23333,60 @@
         "section": "课文 3"
        }
       ],
-      "checkItemId": "wb8-text-3",
-      "checkLabelVi": "Câu hỏi ngắn sau khi nghe"
-     }
-    ]
-   },
-   "exerciseSet": {
-    "id": "set-tb-l08-text-v1",
-    "titleVi": "Câu hỏi nghe hiểu, bài tập tổng hợp, nối hình và phân biệt âm tiết",
-    "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 056) và Hội thoại 3 (trang 058), đáp án lấy từ chính lời thoại in trong sách; năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 059–060, ngân hàng từ in sẵn); sáu câu nối từ–hình của phần khởi động (trang 054, hình là tranh minh họa vẽ lại); và bốn câu chọn từ không phải dạng điệp âm của Workbook (trang 048, đáp án đối chiếu tài liệu đáp án đăng lại). Phần dùng hình để nói của trang 060 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
-    "items": [
-     {
-      "id": "wb8-text-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 056): Bạch Gia Nguyệt và Lý Văn gặp nhau ở …",
-      "promptZh": "白家月和李文在（ ）见。",
-      "promptPinyin": "Bái Jiāyuè hé Lǐ Wén zài ( ) jiàn.",
-      "options": [
+      "checkItems": [
        {
-        "id": "1",
-        "zh": "家里",
-        "pinyin": "jiā li",
-        "vi": "ở nhà"
-       },
-       {
-        "id": "2",
-        "zh": "书店里",
-        "pinyin": "shūdiàn li",
-        "vi": "trong hiệu sách"
-       },
-       {
-        "id": "3",
-        "zh": "书店前",
-        "pinyin": "shūdiàn qián",
-        "vi": "trước hiệu sách",
-        "audio": {
-         "trackId": "trk-tb-l08-3",
-         "start": 3.0,
-         "end": 5.6,
-         "status": "asr-draft"
-        }
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Lý Văn đáp: 在学校书店前见吧 (gặp ở trước hiệu sách của trường nhé) — vị trí là TRƯỚC hiệu sách, không phải trong hiệu sách.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 71,
-        "printedPage": 56,
-        "section": "课文 2 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 72,
-        "printedPage": 57,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l08-positional"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l08-3",
-       "start": 3.0,
-       "end": 5.6,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb8-text-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 056): Lý Văn buổi chiều … đến được",
-      "promptZh": "李文下午（ ）能到。",
-      "promptPinyin": "Lǐ Wén xiàwǔ ( ) néng dào.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "两点",
-        "pinyin": "liǎng diǎn",
-        "vi": "2 giờ",
-        "audio": {
-         "trackId": "trk-tb-l08-3",
-         "start": 6.1,
-         "end": 9.4,
-         "status": "asr-draft"
-        }
-       },
-       {
-        "id": "2",
-        "zh": "两点半",
-        "pinyin": "liǎng diǎn bàn",
-        "vi": "2 giờ rưỡi"
-       },
-       {
-        "id": "3",
-        "zh": "三点后",
-        "pinyin": "sān diǎn hòu",
-        "vi": "sau 3 giờ"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Bạch Gia Nguyệt hỏi: 下午两点你能到吗？ và Lý Văn đáp 我能到 — 2 giờ chiều Lý Văn đến được.",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 71,
-        "printedPage": 56,
-        "section": "课文 2 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 72,
-        "printedPage": 57,
-        "section": "课文 2 · lời thoại"
-       }
-      ],
-      "grammarIds": [
-       "kp-hsk1-l08-neng"
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l08-3",
-       "start": 6.1,
-       "end": 9.4,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb8-text-3",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 058): Ở bệnh viện lớn …",
-      "promptZh": "大医院里（ ）。",
-      "promptPinyin": "Dà yīyuàn li ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "人很少",
-        "pinyin": "rén hěn shǎo",
-        "vi": "rất ít người"
-       },
-       {
-        "id": "2",
-        "zh": "病人多",
-        "pinyin": "bìngrén duō",
-        "vi": "đông bệnh nhân",
-        "audio": {
+        "id": "wb8-text-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 058): Ở bệnh viện lớn …",
+        "promptZh": "大医院里（ ）。",
+        "promptPinyin": "Dà yīyuàn li ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "人很少",
+          "pinyin": "rén hěn shǎo",
+          "vi": "rất ít người"
+         },
+         {
+          "id": "2",
+          "zh": "病人多",
+          "pinyin": "bìngrén duō",
+          "vi": "đông bệnh nhân",
+          "audio": {
+           "trackId": "trk-tb-l08-5",
+           "start": 5.8,
+           "end": 9.4,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "医生不忙",
+          "pinyin": "yīshēng bù máng",
+          "vi": "bác sĩ không bận"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Lưu Minh nói: 大医院病人多，医生非常忙 (bệnh viện lớn đông bệnh nhân, bác sĩ rất bận).",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 73,
+          "printedPage": 58,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 74,
+          "printedPage": 59,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
          "trackId": "trk-tb-l08-5",
          "start": 5.8,
          "end": 9.4,
@@ -23353,98 +23394,73 @@
         }
        },
        {
-        "id": "3",
-        "zh": "医生不忙",
-        "pinyin": "yīshēng bù máng",
-        "vi": "bác sĩ không bận"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Lưu Minh nói: 大医院病人多，医生非常忙 (bệnh viện lớn đông bệnh nhân, bác sĩ rất bận).",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 73,
-        "printedPage": 58,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 74,
-        "printedPage": 59,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l08-5",
-       "start": 5.8,
-       "end": 9.4,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "wb8-text-4",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 058): Nhà bác sĩ Hồ có … bác sĩ",
-      "promptZh": "胡医生家有（ ）医生。",
-      "promptPinyin": "Hú yīshēng jiā yǒu ( ) yīshēng.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "一个",
-        "pinyin": "yí ge",
-        "vi": "một"
-       },
-       {
-        "id": "2",
-        "zh": "两个",
-        "pinyin": "liǎng ge",
-        "vi": "hai",
-        "audio": {
+        "id": "wb8-text-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 058): Nhà bác sĩ Hồ có … bác sĩ",
+        "promptZh": "胡医生家有（ ）医生。",
+        "promptPinyin": "Hú yīshēng jiā yǒu ( ) yīshēng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "一个",
+          "pinyin": "yí ge",
+          "vi": "một"
+         },
+         {
+          "id": "2",
+          "zh": "两个",
+          "pinyin": "liǎng ge",
+          "vi": "hai",
+          "audio": {
+           "trackId": "trk-tb-l08-5",
+           "start": 16.1,
+           "end": 18.4,
+           "status": "asr-draft"
+          }
+         },
+         {
+          "id": "3",
+          "zh": "三个",
+          "pinyin": "sān ge",
+          "vi": "ba"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
+        "explanationVi": "Bác sĩ Hồ là bác sĩ, bố của cô ấy cũng làm việc ở bệnh viện: 你家有两个医生？— 对。",
+        "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 73,
+          "printedPage": 58,
+          "section": "课文 3 · câu hỏi nghe hiểu"
+         },
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 74,
+          "printedPage": 59,
+          "section": "课文 3 · lời thoại"
+         }
+        ],
+        "grammarIds": [],
+        "audioSegment": {
          "trackId": "trk-tb-l08-5",
          "start": 16.1,
          "end": 18.4,
          "status": "asr-draft"
         }
-       },
-       {
-        "id": "3",
-        "zh": "三个",
-        "pinyin": "sān ge",
-        "vi": "ba"
        }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in trong Textbook (Hội thoại 2 trang in 057, Hội thoại 3 trang in 059), đọc trực quan ngày 2026-11-01; câu hỏi và lựa chọn in nguyên trong sách ở phần nghe hiểu trước mỗi hội thoại.",
-      "explanationVi": "Bác sĩ Hồ là bác sĩ, bố của cô ấy cũng làm việc ở bệnh viện: 你家有两个医生？— 对。",
-      "hintVi": "Đọc lại lời thoại tương ứng ở mục Nghe & đọc.",
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 73,
-        "printedPage": 58,
-        "section": "课文 3 · câu hỏi nghe hiểu"
-       },
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 74,
-        "printedPage": 59,
-        "section": "课文 3 · lời thoại"
-       }
-      ],
-      "grammarIds": [],
-      "audioSegment": {
-       "trackId": "trk-tb-l08-5",
-       "start": 16.1,
-       "end": 18.4,
-       "status": "asr-draft"
-      }
-     },
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l08-text-v1",
+    "titleVi": "Câu hỏi nghe hiểu, bài tập tổng hợp, nối hình và phân biệt âm tiết",
+    "noteVi": "Năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 059–060, ngân hàng từ in sẵn); sáu câu nối từ–hình của phần khởi động (trang 054, hình là tranh minh họa vẽ lại); và bốn câu chọn từ không phải dạng điệp âm của Workbook (trang 048, đáp án đối chiếu tài liệu đáp án đăng lại). Phần dùng hình để nói của trang 060 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động. Bốn câu hỏi nghe hiểu của Hội thoại 2 và 3 (Textbook tr.056, 058) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
+    "items": [
      {
       "id": "wb8-comp-1",
       "type": "multiple-choice",
@@ -25863,7 +25879,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tổng hợp",
-     "descVi": "Bài chính, luyện thêm và đề mô phỏng (điểm riêng).",
+     "descVi": "Bài chính, luyện thêm và đề mô phỏng (điểm riêng); câu hỏi nghe hiểu nằm ngay tại hội thoại 2 và 3.",
      "sectionId": "exercises"
     },
     {
@@ -26845,7 +26861,7 @@
     "passageId": "l09-reader",
     "titleVi": "Ba hội thoại của Bài 9",
     "headingVi": "Nghe & đọc",
-    "noteVi": "Hội thoại 2 và 3 trong sách được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và bốn câu hỏi chọn đáp án của sách nằm ở khối Luyện tập.",
+    "noteVi": "Hội thoại 2 và 3 trong sách được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và bốn câu hỏi chọn đáp án của sách nằm ngay dưới từng hội thoại trong mục này.",
     "sentences": [
      {
       "id": "l09-s1",
@@ -27438,6 +27454,102 @@
         "printedPage": 64,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "tb9-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 063, track 9-3): trên ghế có gì?",
+        "promptZh": "椅子上有（ ）。",
+        "promptPinyin": "Yǐzi shang yǒu ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "一本书",
+          "pinyin": "yì běn shū",
+          "vi": "một cuốn sách"
+         },
+         {
+          "id": "2",
+          "zh": "一只猫",
+          "pinyin": "yì zhī māo",
+          "vi": "một con mèo"
+         },
+         {
+          "id": "3",
+          "zh": "一个手机",
+          "pinyin": "yí gè shǒujī",
+          "vi": "một chiếc điện thoại"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.064: “椅子上有一本中文书” — trên ghế có một cuốn sách.",
+        "grammarIds": [
+         "kp-hsk1-l09-existential-1"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 78,
+          "printedPage": 63,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l09-3",
+         "start": 0.3,
+         "end": 4.54,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb9-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 064, track 9-3): đây là cuốn sách tiếng Trung thứ mấy của Trần Thiên Trung?",
+        "promptZh": "这是陈天中的（ ）中文书。",
+        "promptPinyin": "Zhè shì Chén Tiānzhōng de ( ) Zhōngwén shū.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "第一本",
+          "pinyin": "dì-yī běn",
+          "vi": "cuốn thứ nhất"
+         },
+         {
+          "id": "2",
+          "zh": "第二本",
+          "pinyin": "dì-èr běn",
+          "vi": "cuốn thứ hai"
+         },
+         {
+          "id": "3",
+          "zh": "第三本",
+          "pinyin": "dì-sān běn",
+          "vi": "cuốn thứ ba"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.064: “这是我的第二本中文书” — cuốn thứ hai.",
+        "grammarIds": [
+         "kp-hsk1-l09-ordinal-di"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 79,
+          "printedPage": 64,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l09-3",
+         "start": 6.84,
+         "end": 11.88,
+         "status": "asr-draft"
+        }
+       }
       ]
      },
      {
@@ -27460,6 +27572,98 @@
         "printedPage": 66,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "tb9-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 065, track 9-5): Dương Đồng Lạc hát thế nào?",
+        "promptZh": "杨同乐唱歌（ ）。",
+        "promptPinyin": "Yáng Tónglè chàng gē ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "不太好",
+          "pinyin": "bú tài hǎo",
+          "vi": "không tốt lắm"
+         },
+         {
+          "id": "2",
+          "zh": "不好听",
+          "pinyin": "bù hǎotīng",
+          "vi": "không hay"
+         },
+         {
+          "id": "3",
+          "zh": "很好听",
+          "pinyin": "hěn hǎotīng",
+          "vi": "rất hay"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.066: Vương Nhất Tuyết nói “你唱歌很好听” — hát rất hay.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 80,
+          "printedPage": 65,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l09-5",
+         "start": 11.62,
+         "end": 13.1,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb9-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 065, track 9-5): nhà Vương Nhất Tuyết có một con gì?",
+        "promptZh": "王一雪家有一只（ ）。",
+        "promptPinyin": "Wáng Yīxuě jiā yǒu yì zhī ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "小猫",
+          "pinyin": "xiǎo māo",
+          "vi": "mèo con"
+         },
+         {
+          "id": "2",
+          "zh": "小狗",
+          "pinyin": "xiǎo gǒu",
+          "vi": "chó con"
+         },
+         {
+          "id": "3",
+          "zh": "大狗",
+          "pinyin": "dà gǒu",
+          "vi": "chó lớn"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.066: “和孩子们、小狗玩” và Dương Đồng Lạc đáp “我也有一只小狗” — nhà cô có một chú chó con.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 80,
+          "printedPage": 65,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l09-5",
+         "start": 25.3,
+         "end": 26.78,
+         "status": "asr-draft"
+        }
+       }
       ]
      }
     ]
@@ -27467,7 +27671,7 @@
    "exerciseSet": {
     "id": "set-tb-l09-text-v1",
     "titleVi": "Bài tập chính của Bài 9",
-    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.061); 4 câu hỏi nghe hiểu Hội thoại 2 và 3 (tr.063–065, đáp án lấy từ lời thoại in ở tr.064/066); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.067, ngân hàng từ in sẵn; câu (1) của sách có hai chỗ trống nên tách thành hai câu); 4 câu phân biệt thanh điệu của Workbook tr.057 (đáp án theo dấu thanh in sẵn). Phần dùng hình để nói ở tr.067 và bài đánh dấu thanh điệu ở Workbook là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.061); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.067, ngân hàng từ in sẵn; câu (1) của sách có hai chỗ trống nên tách thành hai câu); 4 câu phân biệt thanh điệu của Workbook tr.057 (đáp án theo dấu thanh in sẵn). Phần dùng hình để nói ở tr.067 và bài đánh dấu thanh điệu ở Workbook là bài tự luyện riêng ở khối B, không chấm tự động. Bốn câu hỏi nghe hiểu của Hội thoại 2 và 3 (tr.063–065) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
      {
       "id": "wb9-warm-1",
@@ -27882,190 +28086,6 @@
         "section": "热身 Warm-Up"
        }
       ]
-     },
-     {
-      "id": "tb9-text2-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 063, track 9-3): trên ghế có gì?",
-      "promptZh": "椅子上有（ ）。",
-      "promptPinyin": "Yǐzi shang yǒu ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "一本书",
-        "pinyin": "yì běn shū",
-        "vi": "một cuốn sách"
-       },
-       {
-        "id": "2",
-        "zh": "一只猫",
-        "pinyin": "yì zhī māo",
-        "vi": "một con mèo"
-       },
-       {
-        "id": "3",
-        "zh": "一个手机",
-        "pinyin": "yí gè shǒujī",
-        "vi": "một chiếc điện thoại"
-       }
-      ],
-      "answer": "1",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.064: “椅子上有一本中文书” — trên ghế có một cuốn sách.",
-      "grammarIds": [
-       "kp-hsk1-l09-existential-1"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 78,
-        "printedPage": 63,
-        "section": "课文 2 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l09-3",
-       "start": 0.3,
-       "end": 4.54,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb9-text2-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 064, track 9-3): đây là cuốn sách tiếng Trung thứ mấy của Trần Thiên Trung?",
-      "promptZh": "这是陈天中的（ ）中文书。",
-      "promptPinyin": "Zhè shì Chén Tiānzhōng de ( ) Zhōngwén shū.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "第一本",
-        "pinyin": "dì-yī běn",
-        "vi": "cuốn thứ nhất"
-       },
-       {
-        "id": "2",
-        "zh": "第二本",
-        "pinyin": "dì-èr běn",
-        "vi": "cuốn thứ hai"
-       },
-       {
-        "id": "3",
-        "zh": "第三本",
-        "pinyin": "dì-sān běn",
-        "vi": "cuốn thứ ba"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.064: “这是我的第二本中文书” — cuốn thứ hai.",
-      "grammarIds": [
-       "kp-hsk1-l09-ordinal-di"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 79,
-        "printedPage": 64,
-        "section": "课文 2 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l09-3",
-       "start": 6.84,
-       "end": 11.88,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb9-text3-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 065, track 9-5): Dương Đồng Lạc hát thế nào?",
-      "promptZh": "杨同乐唱歌（ ）。",
-      "promptPinyin": "Yáng Tónglè chàng gē ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "不太好",
-        "pinyin": "bú tài hǎo",
-        "vi": "không tốt lắm"
-       },
-       {
-        "id": "2",
-        "zh": "不好听",
-        "pinyin": "bù hǎotīng",
-        "vi": "không hay"
-       },
-       {
-        "id": "3",
-        "zh": "很好听",
-        "pinyin": "hěn hǎotīng",
-        "vi": "rất hay"
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.066: Vương Nhất Tuyết nói “你唱歌很好听” — hát rất hay.",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 80,
-        "printedPage": 65,
-        "section": "课文 3 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l09-5",
-       "start": 11.62,
-       "end": 13.1,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb9-text3-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 065, track 9-5): nhà Vương Nhất Tuyết có một con gì?",
-      "promptZh": "王一雪家有一只（ ）。",
-      "promptPinyin": "Wáng Yīxuě jiā yǒu yì zhī ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "小猫",
-        "pinyin": "xiǎo māo",
-        "vi": "mèo con"
-       },
-       {
-        "id": "2",
-        "zh": "小狗",
-        "pinyin": "xiǎo gǒu",
-        "vi": "chó con"
-       },
-       {
-        "id": "3",
-        "zh": "大狗",
-        "pinyin": "dà gǒu",
-        "vi": "chó lớn"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.066: “和孩子们、小狗玩” và Dương Đồng Lạc đáp “我也有一只小狗” — nhà cô có một chú chó con.",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 80,
-        "printedPage": 65,
-        "section": "课文 3 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l09-5",
-       "start": 25.3,
-       "end": 26.78,
-       "status": "asr-draft"
-      }
      },
      {
       "id": "tb9-fill-1a",
@@ -28739,7 +28759,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Làm 19 câu chính, rồi luyện thêm với bài đánh dấu thanh điệu, bài nói theo hình và bài trả lời câu hỏi.",
+     "descVi": "Làm 15 câu chính, rồi luyện thêm với bài đánh dấu thanh điệu, bài nói theo hình và bài trả lời câu hỏi; câu hỏi nghe hiểu nằm ngay tại hội thoại 2 và 3.",
      "sectionId": "exercises"
     },
     {
@@ -29856,7 +29876,7 @@
     "passageId": "l10-reader",
     "titleVi": "Ba hội thoại của Bài 10",
     "headingVi": "Nghe & đọc",
-    "noteVi": "Hội thoại 2 và 3 trong sách được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và bốn câu hỏi chọn đáp án của sách nằm ở khối Luyện tập.",
+    "noteVi": "Hội thoại 2 và 3 trong sách được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và bốn câu hỏi chọn đáp án của sách nằm ngay dưới từng hội thoại trong mục này.",
     "sentences": [
      {
       "id": "l10-s1",
@@ -30509,6 +30529,102 @@
         "printedPage": 73,
         "section": "课文 2"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "tb10-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 072, track 10-3): hoa quả ở đây thế nào?",
+        "promptZh": "这儿的水果（ ）。",
+        "promptPinyin": "Zhèr de shuǐguǒ ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "很少",
+          "pinyin": "hěn shǎo",
+          "vi": "rất ít"
+         },
+         {
+          "id": "2",
+          "zh": "真不少",
+          "pinyin": "zhēn bù shǎo",
+          "vi": "thật nhiều"
+         },
+         {
+          "id": "3",
+          "zh": "真不多",
+          "pinyin": "zhēn bù duō",
+          "vi": "thật không nhiều"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.073: “这儿的水果真不少！” — 不少 tức là rất nhiều.",
+        "grammarIds": [
+         "kp-hsk1-l10-adj-predicate"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 87,
+          "printedPage": 72,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l10-3",
+         "start": 0.78,
+         "end": 2.94,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb10-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 072, track 10-3): táo bao nhiêu tiền một cân?",
+        "promptZh": "苹果（ ）一斤。",
+        "promptPinyin": "Píngguǒ ( ) yì jīn.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "三块",
+          "pinyin": "sān kuài",
+          "vi": "ba tệ"
+         },
+         {
+          "id": "2",
+          "zh": "三块五",
+          "pinyin": "sān kuài wǔ",
+          "vi": "ba tệ rưỡi"
+         },
+         {
+          "id": "3",
+          "zh": "七块二",
+          "pinyin": "qī kuài èr",
+          "vi": "bảy tệ hai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.073: “苹果三块五一斤” — ba tệ rưỡi một cân （七块二 là tổng tiền của phần táo, không phải giá một cân).",
+        "grammarIds": [
+         "kp-hsk1-l10-money"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 87,
+          "printedPage": 72,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l10-3",
+         "start": 12.06,
+         "end": 16.88,
+         "status": "asr-draft"
+        }
+       }
       ]
      },
      {
@@ -30531,6 +30647,100 @@
         "printedPage": 75,
         "section": "课文 3"
        }
+      ],
+      "checkItems": [
+       {
+        "id": "tb10-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 074, track 10-5): chiếc áo này bao nhiêu tiền?",
+        "promptZh": "这件衣服（ ）。",
+        "promptPinyin": "Zhè jiàn yīfu ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "二十元",
+          "pinyin": "èrshí yuán",
+          "vi": "hai mươi tệ"
+         },
+         {
+          "id": "2",
+          "zh": "一百元",
+          "pinyin": "yìbǎi yuán",
+          "vi": "một trăm tệ"
+         },
+         {
+          "id": "3",
+          "zh": "一百一十元",
+          "pinyin": "yìbǎi yìshí yuán",
+          "vi": "một trăm mười tệ"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.075: “这件一百元” — một trăm tệ.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 89,
+          "printedPage": 74,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l10-5",
+         "start": 0.85,
+         "end": 5.69,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb10-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 074, track 10-5): theo Lưu Minh, chiếc áo này có đắt không?",
+        "promptZh": "这件衣服（ ）。",
+        "promptPinyin": "Zhè jiàn yīfu ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "太贵",
+          "pinyin": "tài guì",
+          "vi": "quá đắt"
+         },
+         {
+          "id": "2",
+          "zh": "很贵",
+          "pinyin": "hěn guì",
+          "vi": "rất đắt"
+         },
+         {
+          "id": "3",
+          "zh": "不贵",
+          "pinyin": "bú guì",
+          "vi": "không đắt"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.075: Lưu Minh nói “好看，也不贵” — đẹp mà không đắt.",
+        "grammarIds": [
+         "kp-hsk1-l10-adj-predicate"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 89,
+          "printedPage": 74,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l10-5",
+         "start": 6.92,
+         "end": 9.3,
+         "status": "asr-draft"
+        }
+       }
       ]
      }
     ]
@@ -30538,7 +30748,7 @@
    "exerciseSet": {
     "id": "set-tb-l10-text-v1",
     "titleVi": "Bài tập chính của Bài 10",
-    "noteVi": "Gồm năm nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.070); 4 câu hỏi nghe hiểu Hội thoại 2 và 3 (tr.072, 074, đáp án lấy từ lời thoại in ở tr.073/075); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.076, ngân hàng từ in sẵn; câu (2) của sách có hai chỗ trống nên tách thành hai câu); 5 câu phân biệt thanh điệu của Workbook tr.066 (đáp án theo dấu thanh in sẵn). Phần dùng hình để nói ở tr.077 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.070); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.076, ngân hàng từ in sẵn; câu (2) của sách có hai chỗ trống nên tách thành hai câu); 5 câu phân biệt thanh điệu của Workbook tr.066 (đáp án theo dấu thanh in sẵn). Phần dùng hình để nói ở tr.077 là bài tự luyện riêng ở khối B, không chấm tự động. Bốn câu hỏi nghe hiểu của Hội thoại 2 và 3 (tr.072, 074) nằm ngay tại từng hội thoại ở mục Nghe & đọc, không nằm trong bộ này.",
     "items": [
      {
       "id": "wb10-warm-1",
@@ -30953,192 +31163,6 @@
         "section": "热身 Warm-Up"
        }
       ]
-     },
-     {
-      "id": "tb10-text2-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 072, track 10-3): hoa quả ở đây thế nào?",
-      "promptZh": "这儿的水果（ ）。",
-      "promptPinyin": "Zhèr de shuǐguǒ ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "很少",
-        "pinyin": "hěn shǎo",
-        "vi": "rất ít"
-       },
-       {
-        "id": "2",
-        "zh": "真不少",
-        "pinyin": "zhēn bù shǎo",
-        "vi": "thật nhiều"
-       },
-       {
-        "id": "3",
-        "zh": "真不多",
-        "pinyin": "zhēn bù duō",
-        "vi": "thật không nhiều"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.073: “这儿的水果真不少！” — 不少 tức là rất nhiều.",
-      "grammarIds": [
-       "kp-hsk1-l10-adj-predicate"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 87,
-        "printedPage": 72,
-        "section": "课文 2 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l10-3",
-       "start": 0.78,
-       "end": 2.94,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb10-text2-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 072, track 10-3): táo bao nhiêu tiền một cân?",
-      "promptZh": "苹果（ ）一斤。",
-      "promptPinyin": "Píngguǒ ( ) yì jīn.",
-      "options": [
-       {
-        "id": "1",
-        "zh": "三块",
-        "pinyin": "sān kuài",
-        "vi": "ba tệ"
-       },
-       {
-        "id": "2",
-        "zh": "三块五",
-        "pinyin": "sān kuài wǔ",
-        "vi": "ba tệ rưỡi"
-       },
-       {
-        "id": "3",
-        "zh": "七块二",
-        "pinyin": "qī kuài èr",
-        "vi": "bảy tệ hai"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.073: “苹果三块五一斤” — ba tệ rưỡi một cân （七块二 là tổng tiền của phần táo, không phải giá một cân).",
-      "grammarIds": [
-       "kp-hsk1-l10-money"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 87,
-        "printedPage": 72,
-        "section": "课文 2 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l10-3",
-       "start": 12.06,
-       "end": 16.88,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb10-text3-1",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 074, track 10-5): chiếc áo này bao nhiêu tiền?",
-      "promptZh": "这件衣服（ ）。",
-      "promptPinyin": "Zhè jiàn yīfu ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "二十元",
-        "pinyin": "èrshí yuán",
-        "vi": "hai mươi tệ"
-       },
-       {
-        "id": "2",
-        "zh": "一百元",
-        "pinyin": "yìbǎi yuán",
-        "vi": "một trăm tệ"
-       },
-       {
-        "id": "3",
-        "zh": "一百一十元",
-        "pinyin": "yìbǎi yìshí yuán",
-        "vi": "một trăm mười tệ"
-       }
-      ],
-      "answer": "2",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.075: “这件一百元” — một trăm tệ.",
-      "grammarIds": [],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 89,
-        "printedPage": 74,
-        "section": "课文 3 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l10-5",
-       "start": 0.85,
-       "end": 5.69,
-       "status": "asr-draft"
-      }
-     },
-     {
-      "id": "tb10-text3-2",
-      "type": "multiple-choice",
-      "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 074, track 10-5): theo Lưu Minh, chiếc áo này có đắt không?",
-      "promptZh": "这件衣服（ ）。",
-      "promptPinyin": "Zhè jiàn yīfu ( ).",
-      "options": [
-       {
-        "id": "1",
-        "zh": "太贵",
-        "pinyin": "tài guì",
-        "vi": "quá đắt"
-       },
-       {
-        "id": "2",
-        "zh": "很贵",
-        "pinyin": "hěn guì",
-        "vi": "rất đắt"
-       },
-       {
-        "id": "3",
-        "zh": "不贵",
-        "pinyin": "bú guì",
-        "vi": "không đắt"
-       }
-      ],
-      "answer": "3",
-      "answerStatus": "verified-from-print",
-      "answerEvidence": "Lời thoại in ở Textbook tr.075: Lưu Minh nói “好看，也不贵” — đẹp mà không đắt.",
-      "grammarIds": [
-       "kp-hsk1-l10-adj-predicate"
-      ],
-      "sourceRefs": [
-       {
-        "sourceId": "src-hsk1-textbook-pdf",
-        "pdfPage": 89,
-        "printedPage": 74,
-        "section": "课文 3 · 听两遍对话，选择正确答案"
-       }
-      ],
-      "audioSegment": {
-       "trackId": "trk-tb-l10-5",
-       "start": 6.92,
-       "end": 9.3,
-       "status": "asr-draft"
-      }
      },
      {
       "id": "tb10-fill-1",
@@ -31841,7 +31865,7 @@
     {
      "step": 5,
      "titleVi": "Luyện tập",
-     "descVi": "Làm 20 câu chính, rồi luyện thêm với bài đánh dấu thanh điệu, bài nói theo hình và bài trả lời câu hỏi.",
+     "descVi": "Làm 16 câu chính, rồi luyện thêm với bài đánh dấu thanh điệu, bài nói theo hình và bài trả lời câu hỏi; câu hỏi nghe hiểu nằm ngay tại hội thoại 2 và 3.",
      "sectionId": "exercises"
     },
     {

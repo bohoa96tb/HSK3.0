@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-lookup1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-lookup1";
-import * as player from "./player.js?v=20261102-lesson8-lookup1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-exui1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-exui1";
+import * as player from "./player.js?v=20261102-lesson8-exui1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -389,7 +389,7 @@ function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  const kpLesson = lessonId || kpLessonId(kp.id);
  const foundation=['foundation-pronunciation','foundation-characters'].includes(kp.kind);
  const kpContent = contentFor(kpLesson);
- const exampleHtml = (e) => `<div class="example"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(e.zh, kpContent)}</span> ${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}<span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><p class="muted">${esc(e.noteVi)}</p>${phraseBtnHtml(kpContent)}</div>`;
+ const exampleHtml = (e) => `<div class="example"><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(e.zh, kpContent)}</span>${HAS_HAN.test(e.zh) ? ttsBtnHtml(e.zh) : ""}</div><div class="ex-meta"><span class="pinyin ${foundation ? "" : "tog-pinyin-sent"}">${esc(e.pinyin)}</span><span class="ex-note ${foundation ? "" : "tog-vi-sent"}">${esc(e.noteVi)}</span>${phraseBtnHtml(kpContent)}</div></div>`;
  const visibleExamples = kp.useWhenVi ? kp.examples.slice(0, 2) : kp.examples;
  const extraExamples = kp.useWhenVi ? kp.examples.slice(2) : [];
  const qc = kp.quickCheck;
@@ -559,7 +559,7 @@ document.addEventListener("click", (e) => {
   const phraseBtn = e.target.closest("[data-phrase-btn]");
   if (phraseBtn) {
     clearPhraseSelection(); closeLookup();
-    const wrap = phraseBtn.closest("section, article, div")?.querySelector("[data-tok-wrap]");
+    const wrap = (phraseBtn.closest(".example") || phraseBtn.closest("section, article, div"))?.querySelector("[data-tok-wrap]");
     if (!wrap) return;
     const bar = document.createElement("div");
     bar.className = "phrase-bar";
@@ -956,7 +956,7 @@ function sectionApplyHtml(content) {
     ${supportBarHtml('sentences')}
     ${a.tasks.map((t) => `<article class="speak-task" id="${esc(t.id)}" data-anchor><h3>${esc(t.titleVi)}</h3>
       <p>${esc(t.situationVi)}</p>
-      <div class="example"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(t.sampleZh, content)}</span> ${ttsBtnHtml(t.sampleZh)}${t.samplePinyin ? `<span class="pinyin tog-pinyin-sent" lang="zh-Latn">${esc(t.samplePinyin)}</span>` : ""}<p class="muted tog-vi-sent">${esc(t.sampleVi)}</p>${phraseBtnHtml(content)}</div>
+      <div class="example"><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(t.sampleZh, content)}</span>${ttsBtnHtml(t.sampleZh)}</div><div class="ex-meta">${t.samplePinyin ? `<span class="pinyin tog-pinyin-sent" lang="zh-Latn">${esc(t.samplePinyin)}</span>` : ""}<span class="ex-note tog-vi-sent">${esc(t.sampleVi)}</span>${phraseBtnHtml(content)}</div></div>
       <p class="small">${esc(t.swapVi)}</p>
       <p class="small muted">${esc(t.sourceNoteVi || "")}</p>
       <button class="btn ${done[t.id] ? "primary" : ""}" type="button" data-speak-done="${esc(t.id)}" aria-pressed="${!!done[t.id]}">${done[t.id] ? "✓ Đã luyện nhiệm vụ này" : "Đánh dấu đã luyện"}</button>
@@ -982,7 +982,7 @@ function sectionSummaryHtml(lesson, content) {
   const attempted = sum.firstTotal > 0 || (suppSum ? suppSum.firstTotal > 0 : false);
   const mainNotAttempted = sum.firstTotal === 0 && suppSum && suppSum.firstTotal > 0;
   return `<section class="card"><h2>Tổng kết bài</h2>
-  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><br><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span><p class="muted">${esc(pt.exampleVi)}</p>${phraseBtnHtml(content)}</div>`).join("")}` : ""}
+  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span></div><div class="ex-meta"><span class="ex-note">${esc(pt.exampleVi)}</span>${phraseBtnHtml(content)}</div></div>`).join("")}` : ""}
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   ${nextSection ? `<p class="row-actions"><a class="btn primary" href="#/lesson/${lesson.id}/${nextSection.id}">Tiếp tục: ${esc(nextSection.titleVi)} →</a></p>` : ""}
   <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>.</p>

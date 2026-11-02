@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson8-lookup1",
+ "contentVersion": "20261102-lesson8-exui1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -16636,23 +16636,23 @@
      "kind": "grammar",
      "kindLabel": "Ngữ pháp cơ bản",
      "title": "Nói vị trí: trên, dưới, trong, ngoài, trước, sau",
-     "explanationVi": "Dùng để nói một vật hay một người đang ở phía nào của một nơi. Từ chỉ phía luôn đứng sau nơi chốn: 桌子下 là “dưới bàn”, 书店前 là “trước hiệu sách”, 房间外 là “ngoài phòng”.",
-     "pattern": "Nơi chốn + 上 / 下 / 里 / 外 / 前 / 后",
+     "explanationVi": "Dùng để nói một vật hay một người đang ở phía nào của một nơi. Từ chỉ phía luôn đứng sau nơi chốn: 桌子下 là “dưới bàn”, 书店前 là “trước hiệu sách”, 房间外 là “ngoài phòng”. Sách liệt kê các từ chỉ phía của bài: 上、下、里、外（外边）、前、后。",
+     "pattern": "Nơi chốn + 上 / 下 / 里 / 外（外边） / 前 / 后",
      "examples": [
       {
        "zh": "房间里有一只小猫。",
        "pinyin": "Fángjiān li yǒu yì zhī xiǎo māo.",
-       "noteVi": "Trong phòng có một con mèo nhỏ — câu luyện đọc của sách"
+       "noteVi": "Trong phòng có một con mèo nhỏ."
       },
       {
        "zh": "我们去书店外吧。",
        "pinyin": "Wǒmen qù shūdiàn wài ba.",
-       "noteVi": "Chúng ta ra ngoài hiệu sách nhé — câu luyện đọc của sách"
+       "noteVi": "Chúng ta ra ngoài hiệu sách nhé."
       },
       {
        "zh": "小雪的手机在桌子上呢。",
        "pinyin": "Xiǎoxuě de shǒujī zài zhuōzi shang ne.",
-       "noteVi": "Điện thoại của Tiểu Tuyết ở trên bàn đấy — câu luyện đọc của sách"
+       "noteVi": "Điện thoại của Tiểu Tuyết ở trên bàn đấy."
       }
      ],
      "positionVi": "Phương vị từ luôn đứng sau danh từ mà nó bổ sung vị trí, không đứng trước như giới từ tiếng Việt.",
@@ -16712,17 +16712,17 @@
       {
        "zh": "我在学校吃午饭。",
        "pinyin": "Wǒ zài xuéxiào chī wǔfàn.",
-       "noteVi": "Tôi ăn cơm trưa ở trường — ví dụ của sách, cũng là câu trong Hội thoại 2"
+       "noteVi": "Tôi ăn cơm trưa ở trường."
       },
       {
        "zh": "他爸爸在医院工作。",
        "pinyin": "Tā bàba zài yīyuàn gōngzuò.",
-       "noteVi": "Bố anh ấy làm việc ở bệnh viện — ví dụ của sách"
+       "noteVi": "Bố anh ấy làm việc ở bệnh viện."
       },
       {
        "zh": "你在哪儿买菜？",
        "pinyin": "Nǐ zài nǎr mǎi cài?",
-       "noteVi": "Bạn mua rau ở đâu? — ví dụ của sách"
+       "noteVi": "Bạn mua rau ở đâu?"
       }
      ],
      "positionVi": "Cụm “在 + địa điểm” đứng trước động từ; khác tiếng Việt, không đặt cuối câu kiểu “làm việc ở bệnh viện” — nhưng ý nghĩa tương ứng chính là “ở đâu làm gì”.",
@@ -16775,17 +16775,17 @@
       {
        "zh": "下午两点你能到吗？",
        "pinyin": "Xiàwǔ liǎng diǎn nǐ néng dào ma?",
-       "noteVi": "Chiều 2 giờ bạn đến được không? — ví dụ của sách, cũng là câu trong Hội thoại 2"
+       "noteVi": "Chiều 2 giờ bạn đến được không?"
       },
       {
        "zh": "爸爸能去。",
        "pinyin": "Bàba néng qù.",
-       "noteVi": "Bố có thể đi — ví dụ của sách"
+       "noteVi": "Bố có thể đi."
       },
       {
        "zh": "我不能去学校吃午饭。",
        "pinyin": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
-       "noteVi": "Tôi không thể đến trường ăn cơm trưa — ví dụ của sách (dạng phủ định)"
+       "noteVi": "Tôi không thể đến trường ăn cơm trưa (dạng phủ định)."
       }
      ],
      "positionVi": "能 đứng trước động từ chính; phủ định 不能 đứng ngay trước động từ.",
@@ -16836,7 +16836,7 @@
       {
        "zh": "这只小猫真漂亮！",
        "pinyin": "Zhè zhī xiǎomāo zhēn piàoliang!",
-       "noteVi": "Con mèo này thật đẹp! — câu cuối Hội thoại 1, chính là chỗ sách đặt ô trợ giúp"
+       "noteVi": "Con mèo này thật đẹp!"
       },
       {
        "zh": "一只小猫",
@@ -16870,7 +16870,7 @@
       {
        "zh": "小胡，还没吃饭呢？",
        "pinyin": "Xiǎo Hú, hái méi chī fàn ne?",
-       "noteVi": "Tiểu Hồ, vẫn chưa ăn cơm à? — câu mở đầu Hội thoại 3"
+       "noteVi": "Tiểu Hồ, vẫn chưa ăn cơm à?"
       },
       {
        "zh": "胡医生",
@@ -19158,11 +19158,11 @@
       "id": "speak-l08-1",
       "titleVi": "Nhiệm vụ 1 · Hỏi đồ vật ở đâu",
       "situationVi": "Hai người cùng luyện, hoặc bạn tự hỏi và tự trả lời. Chọn một đồ vật rồi hỏi nó ở đâu.",
-      "sampleZh": "你的手机在哪儿？ — 我的手机在桌子上。",
-      "sampleVi": "Điện thoại của bạn ở đâu? — Điện thoại của tôi ở trên bàn.",
+      "sampleZh": "你的手机在哪儿？ — 我的手机在桌子上。你的手机呢？ — 我的手机在家里。",
+      "sampleVi": "Điện thoại của bạn ở đâu? — Điện thoại của tôi ở trên bàn. Điện thoại của bạn thì sao? — Điện thoại của tôi ở nhà.",
       "swapVi": "Tự thay: 手机 (điện thoại) → 书 (sách), 小猫 (mèo con); 桌子上 (trên bàn) → 桌子下 (dưới bàn), 房间里 (trong phòng), 房间外 (ngoài phòng).",
-      "sourceNoteVi": "Hoạt động cặp sau Hội thoại 1 (Textbook trang 055); câu mẫu lấy từ ví dụ của Hoạt động lớp, trang 060.",
-      "samplePinyin": "Nǐ de shǒujī zài nǎr? — Wǒ de shǒujī zài zhuōzi shang."
+      "sourceNoteVi": "Hoạt động cặp sau Hội thoại 1 (Textbook trang 055); câu mẫu là ví dụ đầy đủ của Hoạt động lớp, Textbook trang 060.",
+      "samplePinyin": "Nǐ de shǒujī zài nǎr? — Wǒ de shǒujī zài zhuōzi shang. Nǐ de shǒujī ne? — Wǒ de shǒujī zài jiā li."
      },
      {
       "id": "speak-l08-2",

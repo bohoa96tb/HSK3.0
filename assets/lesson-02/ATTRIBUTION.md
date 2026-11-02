@@ -1,8 +1,8 @@
-# Hình trích minh họa Bài 2
+# Hình minh họa Bài 02 — tranh vẽ mới của dự án
 
-Trích theo yêu cầu trực tiếp của người dùng ngày 01/11/2026, cùng quy tắc với Bài 1. Không phải hình có giấy phép mở; quyền thuộc chủ sở hữu sách. Không phân phối sách/PDF/MP3.
+Cập nhật 2026-11-02 theo chỉ đạo của Hoa: toàn bộ hình của bài được VẼ LẠI theo phong cách tranh minh họa phẳng — chuẩn dự án đã nghiệm thu ở Bài 8 (D19) — mô phỏng đúng nội dung cảnh của bài tập và ảnh ngữ cảnh trong sách. Không còn dùng ảnh trích từ sách ở bài này.
 
-- classroom.webp: hình lớp học (cô Vương Nhất Phi làm quen với học sinh), New HSK Course 1 Textbook, trang in 005 / PDF 20. https://cdn.baulchino.com/new-hsk-books/hsk-course-1.pdf#page=20
-- workbook-scene-1.webp, workbook-scene-2.webp, workbook-scene-3.webp, workbook-scene-4.webp: bốn hình của bài 4 (Nhìn hình, chọn hội thoại đúng), Workbook trang in 008 / PDF 15, theo thứ tự trái sang phải. https://cdn.baulchino.com/new-hsk-books/hsk-course-1-workbook.pdf#page=15
-
-Chỉ cắt vùng hình cần cho ngữ cảnh và câu hỏi; không sửa nội dung, không thay ảnh bằng hình mạng có thể làm lệch đáp án. Kích thước nén WebP để giảm tải trên điện thoại. Hình không mang ý nghĩa chứng nhận hay liên kết chính thức với nhà xuất bản.
+- Quá trình: tạo tờ lưới tranh phẳng 2×2 cho từng nhóm cảnh (2026-11-02), cắt thành hình lẻ, đối chiếu trực quan từng hình với câu hỏi/đáp án của bài trước khi thay.
+- classroom.webp: tranh vẽ mới theo cảnh ngữ cảnh của Textbook (xem chú thích trong ứng dụng).
+- workbook-scene-*.webp: tranh vẽ mới theo đúng cảnh từng hình của bài chọn hội thoại theo hình trong Workbook; mỗi hình chỉ khớp một hội thoại đúng.
+- Quyền: tranh là tài sản vẽ mới của dự án. Câu hỏi, nội dung sách và audio vẫn là các lớp quyền riêng, trạng thái unknown như đã ghi ở docs/SOURCE_AUDIT.md — vẽ lại hình không thay đổi các lớp quyền đó.

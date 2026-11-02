@@ -444,6 +444,12 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **QA độc lập:** nội dung ĐẠT toàn bộ 10 mục (kiểm từng chữ số của hai số điện thoại và cách đọc yāo; bảng ví dụ bữa sáng tr.042 đối chiếu từng ô), code ĐẠT 5/5 (test 154/154, audit tra từ 30/30, DOM đúng "gồm 2 phần", không lộ pinyin/đáp án trước khi chấm, nhóm 3 hiển thị "10 từ + 1 tên riêng"). QA hình ảnh: 11/11 dùng được (8 đạt hẳn; 3 lệch nhỏ không đổi đáp án: bình sữa trừu tượng, mặt cơm tách khỏi bát, hai nhân vật ngữ cảnh đứng thay vì ngồi). Không có lỗi phải sửa — vòng này đạt ngay một vòng QA.
 - **Nghiệm thu live ĐẠT** (sau PR #70 merge e79e182f): contentVersion live 20261102-lesson6-standard1; Bài 6 trên live có đủ 17 câu chính, 23 mục từ (22 + tên riêng), 2 nhiệm vụ Tự nói, lookup; sha256 của cả 11 file hình trên GitHub Pages khớp byte với bản local. Kiểm trực quan trang live bổ sung ở PR sổ sách.
 
+### Vẽ lại hình Bài 6 đẹp hơn (2026-11-02)
+
+- Bộ hình Bài 6 cũ (người que và khối trừu tượng ở vòng chuẩn hoá) được vẽ lại toàn bộ theo mức hoàn thiện mới: 11 file. Cảnh dùng minh họa sinh mới đúng phong cách dự án: hai học viên cầm điện thoại ở bàn (theo tr.036), gia đình ăn tối, hai tay cầm điện thoại (tr.041), siêu thị có xe đẩy, taxi cam có hộp đèn nóc (tr.042), đĩa bánh bao, điện thoại màn hình hồng, sữa rót vào ly, bát cơm. Hình siêu thị dùng chung cho speaking-2 và warm-market, hình taxi dùng chung cho speaking-3 và warm-taxi (cùng khái niệm, thuộc hai bộ câu hỏi khác nhau).
+- QA hình độc lập: 11/11 ĐẠT — mọi hình đúng một khái niệm, bộ khởi động 6 hình phân biệt rõ, không còn yếu tố sơ sài. contentVersion `20261102-lesson6-images2`.
+- (Nghiệm thu live bổ sung ở PR sổ sách.) Với vòng này, cả ba bài từng bị chê sơ sài (5, 6, 7) đều đã ở mức hình mới; Bài 1, 2, 3, 4 và 8 đã kiểm kê là đạt mức ngay từ đầu.
+
 ### Vẽ lại hình Bài 5 đẹp hơn — yêu cầu của Hoa (2026-11-02)
 
 - Hoa yêu cầu áp dụng mức hoàn thiện của bộ hình Bài 7 images2 cho các bài còn lại. Kiểm kê toàn bộ cho thấy: hình Bài 1, 2, 3, 4 và 8 vốn đã ở mức minh họa chi tiết (nhân vật có khuôn mặt, bối cảnh đầy đủ) — đạt mức mới, không cần vẽ lại; chỉ Bài 5 và Bài 6 còn ở mức hình người que/khối trừu tượng. Bài 6 đã chuẩn bị xong kế hoạch + prompt, làm ở lượt kế tiếp.

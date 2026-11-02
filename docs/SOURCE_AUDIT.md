@@ -66,6 +66,21 @@ thể (đã đọc trang nào / kiểm HEAD ra sao / số byte / thời lượng
 `rightsStatus` riêng. Chỉ đổi `rightsStatus` khi có bằng chứng tương ứng.
 - Không nâng trạng thái kiểm chứng dựa trên suy đoán hoặc trí nhớ.
 
+## Hình Bài 7 (vẽ mới, 2026-11-02)
+
+11 tranh phẳng do dự án tự vẽ bằng chương trình (Pillow): 6 đồng hồ khởi
+động tr.045 (kim đặt bằng phép tính góc theo giờ đã đọc trên bản phóng to:
+10:10, 12:30, 13:45, 15:20, 18:00, 8:15), hình ngữ cảnh tr.046 (hai nhân
+vật nói chuyện điện thoại) và 4 đồng hồ của bài "dùng hình để nói" tr.052
+(7:20 cầm tay, 10:10 treo tường, 9:00 buổi tối, 2:00 treo tường). Năm file
+classroom + speaking-1..4 trước đây là ẢNH TRÍCH TRỰC TIẾP từ sách — đã
+thay toàn bộ bằng tranh vẽ mới, giữ nguyên tên file. Chi tiết:
+`assets/lesson-07/PRACTICE_ATTRIBUTION.md` (đã viết lại). Quyền đối với nội
+dung sách/câu hỏi/audio không đổi (chưa xác minh). Bài đọc giới thiệu chữ
+Hán ở Workbook tr.040–041 và video bonus 学汉字 (Textbook tr.053) không
+tích hợp trong app ở vòng này; bài "hoàn thành đối thoại" trong phần Tiểu
+Ngữ tr.050 không chuyển thành câu chấm tự động vì đáp án không duy nhất.
+
 ## Hình Bài 6 (vẽ mới, 2026-11-02)
 
 11 tranh phẳng do dự án tự vẽ bằng chương trình (Pillow), mô phỏng bố cục ảnh

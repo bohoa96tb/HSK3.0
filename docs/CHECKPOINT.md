@@ -71,3 +71,12 @@
 - QA D17 hai vòng cả nội dung và code (chi tiết QA_REPORT mục D24): nội dung v1 1 TB （这只 → GIÁ CHÍCH) + 3 nhẹ → v2 còn 1 nhẹ biến điệu 一 → đã sửa; code v1 59/59 + sửa quan sát nhẹ thành phần → v2 16/16 đạt. Test 110/110.
 - Nghiệm thu live tương tác 5/5 đạt (tra 医院 yīyuàn/Y VIỆN; cụm 在医院工作 nghĩa cả cụm; 只 zhī lượng từ + ghi chú zhǐ; Luyện tập chỉ còn mục thu gọn đóng mặc định, bài tập không có nút tra; Bài 1 không có tra từ). Chưa kiểm nghe (giọng tra là giọng máy), chưa Android thật cho vòng này.
 - nextTask: Bài 9 khi Hoa nói "Tiếp tục" — áp dụng D17/D19/D20/D22/D23/D24 (kiểm kê độ phủ gồm tra từ + ẩn chữ dài ngay từ đầu nếu Hoa muốn mở rộng thí điểm).
+
+## Vòng rà soát ví dụ + giao diện gọn Bài 8 — D25 (2026-11-02)
+
+- Phát hành: nhánh feat/lesson-8-examples-ui → PR #52, merge 18dadbac; contentVersion 20261102-lesson8-exui1. Đối chiếu byte remote 10/10 + live 4/4 file runtime khớp local.
+- Kiểm kê ví dụ (tự đọc trực quan TB in 054–060 + WB in 048–050): 13 mục ví dụ giảng dạy/mẫu — 11 đã có đúng, bổ sung 2 chỗ thiếu một phần: 外边 vào danh sách từ chỉ phía (KP vị trí); mẫu hội thoại Hoạt động lớp (TB 060) thành câu mẫu đầy đủ 4 lượt của nhiệm vụ nói 1. Cắt hậu tố nguồn lặp khỏi noteVi của 11 ví dụ. Bài tập/câu hỏi đối chiếu khớp, không đổi.
+- Giao diện: khối ví dụ 2 dòng (.ex-row/.ex-meta) ở thành phần dùng chung (knowledge/apply/summary), nghĩa ví dụ theo công tắc Nghĩa; mật độ CSS gọn (zh-sentence 1.32rem, ví dụ 1.18rem, thẻ 14px mobile...); thang cỡ chữ người dùng giữ nguyên.
+- QA D17: nội dung ĐẠT (0 lỗi; 1 nhẹ ở văn bản kiểm kê đã sửa); code v1 bắt 1 TB (Tra cụm chết trên bề mặt .example do handler tìm wrap trong .ex-meta) → sửa + test hồi quy; v2 ĐẠT 35/35. Test 116/116.
+- Nghiệm thu live 5/5 đạt （外边 trong công thức; bản dịch không còn hậu tố; "Xem thêm" có câu thứ ba; tra 小猫 + tra cụm 在学校吃午饭 từ khối ví dụ mới; apply hiện mẫu đầy đủ; Bài 1 knowledge bố cục gọn bình thường). Giới hạn đo lường: trình duyệt kiểm tra không đặt được viewport 390px tùy ý/không đọc offsetHeight; một lượt chụp qua trang responsive cho mô tả không khớp dữ liệu thật nên bị loại — so sánh trước/sau dựa trên thông số CSS + quan sát trực tiếp bản live, không có số px tuyệt đối. Chưa Android thật.
+- nextTask: Bài 9 khi Hoa nói "Tiếp tục" (áp dụng D17/D19/D20/D22/D23/D24/D25).

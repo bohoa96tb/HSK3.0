@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-lesson10-standard1",
+ "contentVersion": "20261103-listenbtn1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -13235,7 +13235,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l05-hui"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l05-3",
+       "start": 1.62,
+       "end": 3.36,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb5-text-2",
@@ -13284,7 +13290,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l05-time"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l05-3",
+       "start": 5.76,
+       "end": 12.18,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb5-text-3",
@@ -13343,7 +13355,13 @@
         "section": "课文 3 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l05-5",
+       "start": 0.4,
+       "end": 3.24,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb5-text-4",
@@ -13396,7 +13414,13 @@
         "section": "课文 3 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l05-5",
+       "start": 3.94,
+       "end": 5.9,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb5-comp-1",
@@ -16563,7 +16587,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l05-time"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l06-3",
+       "start": 0.13,
+       "end": 6.16,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb6-text-2",
@@ -16612,7 +16642,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l06-xiang"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l06-3",
+       "start": 10.64,
+       "end": 12.7,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb6-text-3",
@@ -16667,7 +16703,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l06-serial"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l06-5",
+       "start": 0.32,
+       "end": 5.72,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb6-text-4",
@@ -16728,7 +16770,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l06-xiang"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l06-5",
+       "start": 10.39,
+       "end": 14.77,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb6-comp-1",
@@ -20024,7 +20072,13 @@
         "section": "课文 2 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l07-3",
+       "start": 0.42,
+       "end": 5.1,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb7-text-2",
@@ -20077,7 +20131,13 @@
         "section": "课文 2 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l07-3",
+       "start": 12.74,
+       "end": 17.85,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb7-text-3",
@@ -20138,7 +20198,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l07-ne"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l07-5",
+       "start": 2.38,
+       "end": 4.64,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb7-text-4",
@@ -20199,7 +20265,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l07-time2"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l07-5",
+       "start": 4.76,
+       "end": 6.88,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb7-comp-1",
@@ -23186,7 +23258,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l08-positional"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l08-3",
+       "start": 3.0,
+       "end": 5.6,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb8-text-2",
@@ -23241,7 +23319,13 @@
       ],
       "grammarIds": [
        "kp-hsk1-l08-neng"
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l08-3",
+       "start": 6.1,
+       "end": 9.4,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb8-text-3",
@@ -23294,7 +23378,13 @@
         "section": "课文 3 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l08-5",
+       "start": 5.8,
+       "end": 9.4,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb8-text-4",
@@ -23347,7 +23437,13 @@
         "section": "课文 3 · lời thoại"
        }
       ],
-      "grammarIds": []
+      "grammarIds": [],
+      "audioSegment": {
+       "trackId": "trk-tb-l08-5",
+       "start": 16.1,
+       "end": 18.4,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "wb8-comp-1",
@@ -27826,7 +27922,13 @@
         "printedPage": 63,
         "section": "课文 2 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l09-3",
+       "start": 0.3,
+       "end": 4.54,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb9-text2-2",
@@ -27867,7 +27969,13 @@
         "printedPage": 64,
         "section": "课文 2 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l09-3",
+       "start": 6.84,
+       "end": 11.88,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb9-text3-1",
@@ -27906,7 +28014,13 @@
         "printedPage": 65,
         "section": "课文 3 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l09-5",
+       "start": 11.62,
+       "end": 13.1,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb9-text3-2",
@@ -27945,7 +28059,13 @@
         "printedPage": 65,
         "section": "课文 3 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l09-5",
+       "start": 25.3,
+       "end": 26.78,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb9-fill-1a",
@@ -30873,7 +30993,13 @@
         "printedPage": 72,
         "section": "课文 2 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l10-3",
+       "start": 0.78,
+       "end": 2.94,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb10-text2-2",
@@ -30914,7 +31040,13 @@
         "printedPage": 72,
         "section": "课文 2 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l10-3",
+       "start": 12.06,
+       "end": 16.88,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb10-text3-1",
@@ -30953,7 +31085,13 @@
         "printedPage": 74,
         "section": "课文 3 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l10-5",
+       "start": 0.85,
+       "end": 5.69,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb10-text3-2",
@@ -30994,7 +31132,13 @@
         "printedPage": 74,
         "section": "课文 3 · 听两遍对话，选择正确答案"
        }
-      ]
+      ],
+      "audioSegment": {
+       "trackId": "trk-tb-l10-5",
+       "start": 6.92,
+       "end": 9.3,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "tb10-fill-1",

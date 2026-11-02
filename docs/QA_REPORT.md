@@ -409,6 +409,13 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - QA vòng 2 kiểm lại: wb10-tone-2 ĐẠT, courseTagsVi ĐẠT; mục dấu câu còn sót 2 dấu phẩy toàn giác → đã sửa nốt và quét lại toàn bài (hai vị trí còn lại là dấu câu trong nguyên văn tiếng Trung của khung câu tự luyện — đúng bản in). QA vòng 3 kiểm lại điểm dấu câu: ĐẠT (U+FF0C = 0 trong chuỗi đích).
 - Phát hành: PR #85 (merge a5a8a960); nghiệm thu live 5/5 ĐẠT (mở đầu + lộ trình 6 bước; 3 nhóm từ 7/6/10; nút Tiếp tục Từ cần biết → Hiểu cách dùng → Nghe & đọc, kiểm 2 lần; chấm thử câu wb10-tone-2 trên bản live — chọn chá được chấm Đúng kèm giải thích khớp; tra từ 苹果/水果 hiện đủ pinyin + Hán–Việt + nghĩa); byte dữ liệu trên Pages khớp bản local, hình khớp 11/11; live `20261103-lesson10-standard1`.
 
+## Sửa lỗi nút nghe cho câu nghe hiểu — Bài 5–10 (2026-11-03)
+
+- Người dùng báo trên iOS: câu 7/20 Bài 10 ("Câu hỏi nghe hiểu Hội thoại 2... 这儿的水果（）。") không thấy nút phát audio. Tái hiện từ dữ liệu: cả 24 câu dạng "Câu hỏi nghe hiểu" của Bài 5–10 đều thiếu `audioSegment` — renderer chỉ hiện nút "▶ Nghe đoạn của câu này" khi có trường này. Đây là thiếu sót biên soạn lặp lại từ Bài 5 (các vòng chuẩn hoá D27 và xây Bài 9–10 đều mang theo), không phải lỗi riêng Bài 10.
+- Sửa: gắn cho mỗi câu đoạn hội thoại chứa thông tin đáp án trên đúng track của bài (mốc lấy từ đoạn câu đã căn ASR ở mục Nghe & đọc, giữ trạng thái asr-draft). Kiểm chứng độc lập: 24/24 ánh xạ ĐẠT (đoạn chứa đúng câu mang đáp án; 3 ghi chú biên về chạm biên 0.04–0.07 giây ở Bài 6, vô hại). Thêm test hồi quy `tests/listenseg.test.mjs`: mọi câu "Câu hỏi nghe hiểu" phải có audioSegment hợp lệ trong thời lượng track — test toàn bộ 170/170.
+- Phát hành: PR #87 (merge 663f9cb7), live `20261103-listenbtn1`; nghiệm thu live tại đúng câu người dùng báo: nút hiện dưới tiêu đề câu, bấm phát đúng đoạn Hội thoại 2 (trình phát mini chạy và dừng ở cuối đoạn).
+- Ngoài phạm vi sửa này: các câu phân biệt thanh điệu/phát âm ở Bài 8–10 không gắn đoạn theo từng nhóm vì ASR của track Workbook phát âm không đủ tin cậy để cắt đoạn (âm tiết bị nhận dạng nhiễu nặng); các câu này có đáp án suy ra từ dấu thanh in sẵn như đã ghi ở SOURCE_AUDIT, và track phát âm đầy đủ vẫn nghe được ở bài tự luyện tương ứng.
+
 ## Kiểm hồi quy Bài 8 — chốt chặng chuẩn hoá D27 (2026-11-02)
 
 - Audit chuẩn (`scripts/audit-standard.mjs`) trên dữ liệu hiện tại: cả 8 bài đều đạt mọi cột. Riêng Bài 8 (bài mẫu chuẩn): lộ trình 6 bước; từ vựng 3 nhóm hội thoại với 23 từ + 1 tên riêng; 3/3 điểm chính có mục "Khi nào dùng" và câu "Thử ngay"; tổng kết 3 điểm; tra từ phủ 33/33 bề mặt đích; bài chính 19 câu; 3 bài tự luyện; bộ đề mô phỏng 20 câu tách riêng.

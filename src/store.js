@@ -1,7 +1,7 @@
 // Progress + settings persistence for the pilot.
 // Pilot decision D02 (docs/DECISIONS.md): localStorage with schemaVersion and
 // JSON export/import; IndexedDB is deferred until after the pilot.
-import { emptyProgress, migrateProgress, validateProgress } from "./lib.js?v=20261102-lesson8-exui1";
+import { emptyProgress, migrateProgress, validateProgress } from "./lib.js?v=20261102-lesson8-continue1";
 
 const KEY = "hsk30.progress.v1";
 const BACKUP_KEY = "hsk30.progress.backup-before-import";

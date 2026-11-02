@@ -122,6 +122,15 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Chuẩn hoá Bài 4 — D27 (2026-11-02)
+
+- Bài 4 《我有两个孩子》 ĐẠT CHUẨN D27: PR #65 merge 9d77dd42; contentVersion 20261102-lesson4-standard1; test 142/142; QA 2 vòng đạt (nội dung 13/13, hình 11/11, vòng 2 sau sửa 5/5); nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ.
+- Đối chiếu TB tr.018–026 + WB tr.013–015 (khối WB tr.016–021 là đề mô phỏng, D15 không đưa vào). Tên bài đúng theo giáo trình là 《我有两个孩子》 — checkpoint cũ ghi 《你今年多大》 là sai (tên của giáo trình khác), đã sửa từ vòng này.
+- Bổ sung: dialogueGroup 3/10/8; prepGroups (track 4-2/4-4/4-6); learningPath; useWhen + quickCheck 4 điểm chính; 52 ví dụ đọc số nguyên bản của sách vào KP Số; cụm luyện đọc KP Lượng từ; 2 câu đọc hiểu tr.025; 5 câu điền từ tổng hợp; 6 câu khởi động + 6 tranh mới; 3 bài tự luyện WB tr.015 còn thiếu; bài dùng hình để nói với 4 tranh mới (gia đình gốc 6 người — đếm trực tiếp); apply 2 nhiệm vụ; summaryPoints 4; tra từ phủ 84/84 (extras tên nhân vật + chữ số). Hình ngữ cảnh thay tranh vẽ mới theo ảnh tr.019.
+- Sửa lỗi DÙNG CHUNG (QA vòng 1 bắt): đầu trang Luyện tập in cứng văn bản Bài 8 cho mọi bài ("gồm 3 phần… dùng 在 và 能") → renderer nay lấy số phần + noteVi theo từng bài; hồi quy Bài 8/Bài 5 đạt.
+- Trạng thái chuẩn hoá: Bài 1, 2, 3, 4 ĐẠT; Bài 5–7 chưa; Bài 8 chuẩn mẫu.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 5 《今天我休息》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 5 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Lần lượt Bài 6→7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
+
 ## Hiệu chỉnh hình Bài 1–3 theo ảnh gốc PDF (2026-11-02, PR #63)
 
 - Hoa yêu cầu xem ảnh trong PDF gốc và mô phỏng lại cho đúng: đã đối chiếu WB tr.004/008/012 + TB tr.002/005/010, vẽ lại 13/14 hình theo đúng bố cục ảnh gốc (giữ hình ngữ cảnh Bài 3), alt viết lại theo cảnh thật. PR #63 merge fabf4cbf; contentVersion 20261102-img-faithful-l123; QA trung thực độc lập ĐẠT 14/14 (6 lệch nhỏ đã ghi ở QA_REPORT, không đổi đáp án); nghiệm thu live: sha256 13/13 file trên Pages khớp bản local.

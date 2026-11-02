@@ -77,7 +77,7 @@ test('summary is honest before any exercise is attempted', async () => {
   const text = $('#main').textContent;
   assert.match(text, /Bạn chưa làm bài tập/);
   assert.ok(!/Chưa có câu nào làm sai/.test(text), 'must not claim "no wrong answers" when nothing was attempted');
-  assert.match(text, /Ba điều chính đã học/);
+  assert.match(text, /Những điều chính đã học/);
 });
 
 test('prep renders 3 dialogue groups with original-track buttons', async () => {

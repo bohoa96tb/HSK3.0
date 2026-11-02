@@ -10,7 +10,7 @@ const l8 = content.additionalLessons.find((l) => l.lessonId === 'hsk1-l08');
 const supp = l8.suppExerciseSet;
 
 test('mock set: 20 items, separate from the core 19, answers as cross-checked', () => {
-  assert.equal(l8.exerciseSet.items.length, 19);
+  assert.equal(l8.exerciseSet.items.length, 15); // D28: core set 15 + 4 dialogue questions at their dialogues = 19 graded
   assert.equal(supp.id, 'set-wb-l08-mock-v1');
   assert.equal(supp.items.length, 20);
   const answers = Object.fromEntries(supp.items.map((i) => [i.id, i.answer]));

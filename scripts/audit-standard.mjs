@@ -48,7 +48,7 @@ for (const c of lessons) {
     `${ready}/${main.length}`,
     c.summaryPoints ? `có (${c.summaryPoints.length})` : 'THIẾU',
     c.lookup ? `có (${coverage(c)})` : 'THIẾU',
-    `${c.exerciseSet?.items?.length || 0} câu`,
+    `${c.exerciseSet?.items?.length || 0} câu + ${(c.reader?.passages || []).reduce((n, g) => n + (g.checkItems?.length || 0), 0)} tại hội thoại`,
     `${(c.selfCheckTasks || []).length} bài`,
     c.suppExerciseSet ? `có (${c.suppExerciseSet.items.length})` : '—',
   ].join(' | '));

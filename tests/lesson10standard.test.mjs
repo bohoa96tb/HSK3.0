@@ -54,9 +54,10 @@ test('lesson 10 build: path, three grammar points with quick checks, summary, ap
   assert.equal(l10.apply.tasks.length, 2);
 });
 
-test('lesson 10 build: 20 main items with print-based answers', () => {
-  const items = Object.fromEntries(l10.exerciseSet.items.map((i) => [i.id, i]));
-  assert.equal(l10.exerciseSet.items.length, 20);
+test('lesson 10 build: 16 set items + 4 dialogue questions with print-based answers (D28)', () => {
+  const items = Object.fromEntries([...l10.exerciseSet.items, ...l10.reader.passages.flatMap((g) => g.checkItems || [])].map((i) => [i.id, i])); // D28: include the dialogues' questions
+  assert.equal(l10.exerciseSet.items.length, 16); // D28: 4 listening questions live at Dialogues 2/3
+  assert.equal(l10.reader.passages.flatMap((g) => g.checkItems || []).length, 4);
   const expect = {
     'wb10-warm-1': '1', 'wb10-warm-2': '2', 'wb10-warm-3': '3', 'wb10-warm-4': '4', 'wb10-warm-5': '5', 'wb10-warm-6': '6',
     'tb10-text2-1': '2', 'tb10-text2-2': '2', 'tb10-text3-1': '2', 'tb10-text3-2': '3',
@@ -64,7 +65,7 @@ test('lesson 10 build: 20 main items with print-based answers', () => {
     'wb10-tone-1': '3', 'wb10-tone-2': '2', 'wb10-tone-3': '2', 'wb10-tone-4': '1', 'wb10-tone-5': '3',
   };
   for (const [id, ans] of Object.entries(expect)) assert.equal(items[id].answer, ans, id);
-  for (const it of l10.exerciseSet.items) assert.ok(it.options.some((o) => o.id === it.answer), it.id);
+  for (const it of Object.values(items)) assert.ok(it.options.some((o) => o.id === it.answer), it.id);
   const t2 = l10.selfCheckTasks.find((x) => x.id === 'st-l10-02');
   assert.equal(t2.promptImages.length, 4);
   assert.ok(t2.promptImages.every((im) => /Tranh vẽ lại/.test(im.captionVi)));

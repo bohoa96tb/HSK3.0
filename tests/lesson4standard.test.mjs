@@ -6,6 +6,7 @@ import { JSDOM } from 'jsdom';
 
 const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url), 'utf8'));
 const l4 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l04');
+const allItems4 = [...l4.exerciseSet.items, ...l4.reader.passages.flatMap((g) => g.checkItems || [])]; // D28: set items + the dialogues' own questions
 const { segmentZh } = await import('../src/lib.js');
 
 test('lesson 4 standard: data carries path, groups, quick checks, summary, lookup, book exercises', () => {
@@ -24,8 +25,8 @@ test('lesson 4 standard: data carries path, groups, quick checks, summary, looku
   const fills = l4.exerciseSet.items.filter((i) => i.id.startsWith('tb4-fill'));
   assert.deepEqual(fills.map((i) => i.answer), ['2', '4', '1', '3', '5']); // 二十/口/呢/没/大 from the book's word bank
   for (const i of fills) assert.equal(i.answerStatus, 'verified-editorial');
-  const t5 = l4.exerciseSet.items.find((i) => i.id === 'wb4-text-5');
-  const t6 = l4.exerciseSet.items.find((i) => i.id === 'wb4-text-6');
+  const t5 = allItems4.find((i) => i.id === 'wb4-text-5');
+  const t6 = allItems4.find((i) => i.id === 'wb4-text-6');
   assert.equal(t5.answer, '1'); assert.equal(t6.answer, '1'); // 一个儿子一个女儿 / 五岁, from the printed dialogue
   const warm = l4.exerciseSet.items.filter((i) => i.id.startsWith('wb4-warm'));
   assert.equal(warm.length, 6);
@@ -100,7 +101,10 @@ test('lesson 4 reader lookup resolves 一飞; exercises carry no lookup tokens; 
   assert.ok($('#lookup-pop').hidden === false && $('#lookup-pop').textContent.includes('NHẤT PHI'));
   await route('lesson/hsk1-l04/exercises');
   assert.equal($$('#main [data-tok]').length, 0);
-  assert.ok(document.body.textContent.includes('杨同乐有一个'));
+  assert.ok(!document.body.textContent.includes('杨同乐有一个'), 'dialogue questions no longer live in the exercise set (D28)');
+  await route('lesson/hsk1-l04/reader?passage=l04-dialogue-2');
+  assert.ok(document.body.textContent.includes('杨同乐有一个'), 'the question now sits under its own dialogue');
+  assert.ok($('#rc-form-wb4-text-1'), 'inline check form rendered at the dialogue');
   await route('lesson/hsk1-l04/apply');
   assert.equal($$('.speak-task').length, 2);
   assert.ok(document.body.textContent.includes('你家有几口人'));

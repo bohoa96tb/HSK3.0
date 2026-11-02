@@ -5,14 +5,15 @@ import { gradeDictationCell } from '../src/lib.js';
 
 const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url), 'utf8'));
 const l8 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l08');
-const item = (id) => l8.exerciseSet.items.find((x) => x.id === id);
+const item = (id) => [...l8.exerciseSet.items, ...l8.reader.passages.flatMap((g) => g.checkItems || [])].find((x) => x.id === id); // D28: include dialogue questions
 
 test('lesson 8 content shape matches the printed book', () => {
   assert.equal(l8.prepWords.length, 24); // 23 new words + 1 proper noun
   assert.equal(l8.knowledgePoints.length, 7); // 3 grammar + 2 Xiaoyu tips + reduplication + hanzi writing (coverage round D22)
   assert.equal(l8.reader.sentences.length, 14);
   assert.equal(l8.reader.audioTracks.length, 8); // 7 lesson tracks + WB 8-2 mock track (supplementary set)
-  assert.equal(l8.exerciseSet.items.length, 19);
+  assert.equal(l8.exerciseSet.items.length, 15); // D28: the 4 listening questions live at Dialogues 2/3
+  assert.equal(l8.reader.passages.flatMap((g) => g.checkItems || []).length, 4);
   assert.equal(l8.foundationWords.length, 0);
   assert.ok(l8.prepWords.every((w) => w.hanViet && w.hanVietStatus === 'verified-editorial'));
   assert.ok(l8.prepWords.every((w) => w.audio && w.audio.status === 'asr-draft'));
@@ -28,7 +29,7 @@ test('lesson 8 content shape matches the printed book', () => {
 });
 
 test('lesson 8 printed answers and statuses', () => {
-  const answers = Object.fromEntries(l8.exerciseSet.items.map((i) => [i.id, i.answer]));
+  const answers = Object.fromEntries([...l8.exerciseSet.items, ...l8.reader.passages.flatMap((g) => g.checkItems || [])].map((i) => [i.id, i.answer]));
   assert.deepEqual(answers, {
     'wb8-text-1': '3', 'wb8-text-2': '1', 'wb8-text-3': '2', 'wb8-text-4': '2',
     'wb8-comp-1': '2', 'wb8-comp-2': '5', 'wb8-comp-3': '1', 'wb8-comp-4': '3', 'wb8-comp-5': '4',

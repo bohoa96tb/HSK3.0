@@ -16,7 +16,7 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   assert.deepEqual([foundOk, foundAll], [64, 71]); // 雨/五/一/椅子 (L2), 嘴 (L3) and 盖儿/个儿 (L6) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [173, 628]); // token-level option segments where the exact option is read in the lesson's own tracks; Lesson 8 adds 85 options (41 with audio); Lesson 3's fill-in set adds 25 word-bank options without audio (D27); Lesson 4 adds 55 options without audio (25 fill-in bank + 24 warm-up cards + 6 reading-question options, D27); Lesson 9 adds 85 options without audio (36 warm-up cards + 12 listening-choice + 25 word-bank + 12 tone-distinction); Lesson 10 adds 88 options without audio (36 warm-up cards + 12 listening-choice + 25 word-bank + 15 tone-distinction)
+  assert.deepEqual([optOk, optAll], [143, 520]); // exercise-set options only; since D28 the dialogues' own questions (36 items, 108 options) live at their dialogues and are counted there. Set options per lesson: L4 49, L5-L7 61 each, L8 73 (37 with audio), L9 73, L10 76
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

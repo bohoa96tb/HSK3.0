@@ -59,7 +59,7 @@ test('lesson 5 standardization: time KP carries the full printed month and weekd
 });
 
 test('lesson 5 standardization: new print-based items and self-check tasks', () => {
-  const items = Object.fromEntries(l5.exerciseSet.items.map((i) => [i.id, i]));
+  const items = Object.fromEntries([...l5.exerciseSet.items, ...l5.reader.passages.flatMap((g) => g.checkItems || [])].map((i) => [i.id, i])); // D28: include the dialogues' questions
   assert.equal(items['wb5-text-5'].answer, '1');
   assert.equal(items['wb5-text-6'].answer, '1');
   for (const [id, card] of [['wb5-warm-1', 'calendar'], ['wb5-warm-2', 'blocks'], ['wb5-warm-3', 'computer'], ['wb5-warm-4', 'cooking'], ['wb5-warm-5', 'resting'], ['wb5-warm-6', 'dumplings']])

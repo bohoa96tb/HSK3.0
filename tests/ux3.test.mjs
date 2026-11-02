@@ -29,7 +29,7 @@ test('han-viet: all prep words carry a verified, context-checked reading', () =>
 
 test('exercise support data: every Chinese option has pinyin and Vietnamese meaning', () => {
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
-  assert.equal(options.length, 628); // 540 before + 88 options of Lesson 10 (36 warm-up + 12 listening-choice + 25 word-bank + 15 tone-distinction)
+  assert.equal(options.length, 520); // exercise-set options only; since D28 the dialogues' own questions (108 options) live at their dialogues
   for (const o of options) { assert.ok(o.pinyin, o.zh); assert.ok(o.vi, o.zh); }
 });
 

@@ -444,6 +444,13 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **QA độc lập:** nội dung ĐẠT toàn bộ 10 mục (kiểm từng chữ số của hai số điện thoại và cách đọc yāo; bảng ví dụ bữa sáng tr.042 đối chiếu từng ô), code ĐẠT 5/5 (test 154/154, audit tra từ 30/30, DOM đúng "gồm 2 phần", không lộ pinyin/đáp án trước khi chấm, nhóm 3 hiển thị "10 từ + 1 tên riêng"). QA hình ảnh: 11/11 dùng được (8 đạt hẳn; 3 lệch nhỏ không đổi đáp án: bình sữa trừu tượng, mặt cơm tách khỏi bát, hai nhân vật ngữ cảnh đứng thay vì ngồi). Không có lỗi phải sửa — vòng này đạt ngay một vòng QA.
 - **Nghiệm thu live ĐẠT** (sau PR #70 merge e79e182f): contentVersion live 20261102-lesson6-standard1; Bài 6 trên live có đủ 17 câu chính, 23 mục từ (22 + tên riêng), 2 nhiệm vụ Tự nói, lookup; sha256 của cả 11 file hình trên GitHub Pages khớp byte với bản local. Kiểm trực quan trang live bổ sung ở PR sổ sách.
 
+### Vẽ lại hình Bài 5 đẹp hơn — yêu cầu của Hoa (2026-11-02)
+
+- Hoa yêu cầu áp dụng mức hoàn thiện của bộ hình Bài 7 images2 cho các bài còn lại. Kiểm kê toàn bộ cho thấy: hình Bài 1, 2, 3, 4 và 8 vốn đã ở mức minh họa chi tiết (nhân vật có khuôn mặt, bối cảnh đầy đủ) — đạt mức mới, không cần vẽ lại; chỉ Bài 5 và Bài 6 còn ở mức hình người que/khối trừu tượng. Bài 6 đã chuẩn bị xong kế hoạch + prompt, làm ở lượt kế tiếp.
+- Bài 5: vẽ lại cả 11 hình. Cảnh có người/vật dùng hình minh họa sinh mới đúng phong cách chung của dự án (văn phòng tr.032; nấu ăn thái cà chua tr.033; hai món ăn; xào chảo; nghỉ ngơi; máy tính; sủi cảo). Ba hình dữ liệu chính xác (lịch tháng 9/2025 khoanh ngày 7, lịch tháng 5/2025 khoanh ngày 1 và bản không khoanh, khối gỗ 星期一） vẽ bằng chương trình với lưới ngày tính từ lịch thật.
+- QA hình độc lập: 11/11 ĐẠT — hai tờ lịch kiểm từng vị trí bằng lịch thật (1/9 ở cột thứ Hai, 7/9 khoanh ở cột Chủ nhật; 1/5 khoanh ở cột thứ Năm, đủ 31 ngày); sáu hình khởi động phân biệt rõ từng khái niệm, không gây nhầm đáp án. contentVersion `20261102-lesson5-images2`.
+- (Nghiệm thu live bổ sung ở PR sổ sách.)
+
 ### Bài 5 《今天我休息》 — chuẩn hoá theo D27 (2026-11-02)
 
 - **Đối chiếu nguồn:** Textbook tr.027–034 (mục tiêu, khởi động nối từ – hình, 3 hội thoại, 3 điểm Tiểu Ngữ, bài tổng hợp, hoạt động lớp trò chơi nhóm) + Workbook tr.022–024 (biến điệu của 不 và 一, nghe – đọc). Khối Workbook tr.025–030 là đề mô phỏng — theo D15 không đưa vào bài.

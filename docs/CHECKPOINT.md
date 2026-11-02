@@ -122,6 +122,16 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Chuẩn hoá Bài 6 — D27 (2026-11-02)
+
+- Bài 6 《你的手机号是多少？》 ĐẠT CHUẨN D27: PR #70 merge e79e182f; contentVersion 20261102-lesson6-standard1; test 154/154; QA nội dung 10/10 + code 5/5 + hình 11/11, đạt ngay một vòng QA; nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ + phiên bản đúng.
+- Đối chiếu TB tr.035–042 + WB tr.031–032. Khối tổng kết Bài 4–6 (TB tr.043–044) là bảng tự đánh giá liên bài — không thuộc nội dung riêng của Bài 6, không đưa vào app.
+- Bổ sung: dialogueGroup 3/9/10 + tên riêng 西安饭店 (tr.040, dữ liệu cũ thiếu hẳn); prepGroups (track 6-2/6-4/6-6); learningPath; useWhen + quickCheck 3 điểm chính; KP nhi hóa đủ 7 từ bảng in; 2 câu đọc hiểu tr.039; 6 câu khởi động; apply thêm nhiệm vụ hoạt động lớp tr.042; summaryPoints 4 (gồm cách đọc số điện thoại, 1 đọc yāo); tra từ phủ 30/30.
+- Hình: 11 tranh vẽ mới theo ảnh gốc; 5 file cũ là ẢNH TRÍCH SÁCH (classroom, speaking-1..4) đã thay toàn bộ bằng tranh vẽ, giữ nguyên tên file.
+- Sự cố quy trình: lần đẩy đầu tiên của vòng này hết hạn chờ duyệt phía người dùng nên không thành; đã kiểm trạng thái remote trước khi đẩy lại (không tạo nhánh trùng).
+- Trạng thái chuẩn hoá: Bài 1, 2, 3, 4, 5, 6 ĐẠT; Bài 7 chưa; Bài 8 chuẩn mẫu.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 7 《我晚上六点半下班》 theo LESSON_STANDARD (TB tr.045–052 + tr.053 hoạt động lớp; WB tr.039–041 — phạm vi đã đính chính ở vòng xây Bài 7 trước đây). Sau Bài 7: kiểm hồi quy Bài 8, rồi mới làm Bài 9.
+
 ## Chuẩn hoá Bài 5 — D27 (2026-11-02)
 
 - Bài 5 《今天我休息》 ĐẠT CHUẨN D27: PR #67 merge 168b33ba (+ PR #68 sửa trường contentVersion trong data bị sót do thứ tự ghi file); contentVersion 20261102-lesson5-standard1; test 148/148; QA 2 vòng đạt; nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ + phiên bản đúng.

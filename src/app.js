@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson9-standard1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson9-standard1";
-import * as player from "./player.js?v=20261102-lesson9-standard1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261103-summaryheading1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261103-summaryheading1";
+import * as player from "./player.js?v=20261103-summaryheading1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -1002,7 +1002,7 @@ function sectionSummaryHtml(lesson, content) {
   const attempted = sum.firstTotal > 0 || (suppSum ? suppSum.firstTotal > 0 : false);
   const mainNotAttempted = sum.firstTotal === 0 && suppSum && suppSum.firstTotal > 0;
   return `<section class="card"><h2>Tổng kết bài</h2>
-  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Ba điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span></div><div class="ex-meta"><span class="ex-note">${esc(pt.exampleVi)}</span>${phraseBtnHtml(content)}</div></div>`).join("")}` : ""}
+  ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Những điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span></div><div class="ex-meta"><span class="ex-note">${esc(pt.exampleVi)}</span>${phraseBtnHtml(content)}</div></div>`).join("")}` : ""}
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   ${nextSection ? `<p class="row-actions"><a class="btn primary" href="#/lesson/${lesson.id}/${nextSection.id}">Tiếp tục: ${esc(nextSection.titleVi)} →</a></p>` : ""}
   <p>Bài tập chấm tự động: điểm lần đầu <strong>${sum.firstCorrect}/${sum.firstTotal}</strong>.</p>

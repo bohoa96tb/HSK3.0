@@ -279,3 +279,10 @@ Sau khi nghiệm thu Bài 8 trên điện thoại Android thật, Hoa phản h�
 - Báo cáo thiết bị thật: ở mục Bắt đầu của Bài 8, nút "Tiếp tục học" trong khối Lộ trình không phản ứng khi chạm. Nguyên nhân đã tái hiện: khối lộ trình được render ngay trong trang mục `intro`, mà đích của nút được tính là chính mục đang mở (`lastSectionId = intro` do lần mở trang ghi lại) → liên kết trỏ về đúng route hiện tại, chạm vào không đổi hash nên không có phản ứng nào.
 - Quy tắc: nút Tiếp tục/Bắt đầu nằm **bên trong** một trang mục thì đích phải là mục chưa hoàn thành tiếp theo (hoặc mục cuối nếu đã xong hết), không bao giờ là chính route đang hiển thị. Ở trang tổng quan bài (không mở mục nào), giữ nguyên nghĩa "học tiếp ở mục dở dang gần nhất".
 - Sửa ở `learningPathHtml` (nhận thêm mục đang chứa nó; kiểm tra `lastSectionId` hợp lệ thuộc danh sách mục). Test hồi quy riêng chạy qua thao tác thật trên giao diện (bấm nút, đánh dấu đã học) thay vì ghi thẳng localStorage — vì kho tiến độ có bộ nhớ đệm, ghi ngoài không có tác dụng.
+
+## D27 — Bài 8 là chuẩn toàn dự án; thứ tự: chuẩn hoá Bài 1→8, rồi mới làm bài mới (Hoa chỉ đạo 02/11/2026)
+
+- Người dùng xác nhận nội dung và giao diện Bài 8 hiện tại (contentVersion 20261102-lesson8-continue1) là CHUẨN cho toàn bộ dự án; áp dụng đúng chuẩn không cần duyệt lại mẫu.
+- Chuẩn được lưu tại `docs/LESSON_STANDARD.md` (liên kết từ AGENTS.md và CONTENT_STANDARD.md); kiểm tra cơ giới bằng `scripts/audit-standard.mjs` (báo cáo độ phù hợp từng bài, không thay QA nội dung).
+- Thứ tự công việc từ nay: (GĐ1) lưu chuẩn + công cụ; (GĐ2) rà soát/nâng cấp từng bài đã làm theo thứ tự Bài 1 → Bài 8 (Bài 8 chỉ kiểm hồi quy); (GĐ3) sau khi bài cũ đạt chuẩn mới biên soạn bài mới theo thứ tự giáo trình (Bài 9 → …). "Tiếp tục" đi theo nextTask trong checkpoint, không quay lại thứ tự cũ (Bài 9 ngay) nữa.
+- Chuẩn là chất lượng/cách tổ chức, không phải khuôn số lượng: mỗi bài giữ nội dung và mục tiêu riêng của giáo trình; không ép số từ/ví dụ/câu hỏi bằng Bài 8, không bỏ nội dung sách chỉ vì Bài 8 không có dạng đó, không xóa nội dung/kết quả/chức năng đang có khi chưa có lý do rõ ràng.

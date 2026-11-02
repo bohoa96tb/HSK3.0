@@ -11,7 +11,7 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   const segOf = (c, sen) => c.reader.audioTracks.find((t) => t.id === c.reader.passages.find((g) => g.id === sen.passageId)?.audioTrackId)?.segments?.find((x) => x.sentenceId === sen.id);
   assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 105); // all dialogue turns (91 through Lesson 7 + 14 in Lesson 8)
   const [prepOk, prepAll] = count(lessons.flatMap((c) => c.prepWords));
-  assert.deepEqual([prepOk, prepAll], [159, 161]); // 大家 (L1) and 吗 (L3) have no confident segment; all 24 Lesson 8 words have one
+  assert.deepEqual([prepOk, prepAll], [159, 162]); // 大家 (L1), 吗 (L3) and 王老师 (L1 proper noun, added in D27) have no confident segment; all 24 Lesson 8 words have one
   const [foundOk, foundAll] = count(lessons.flatMap((c) => c.foundationWords));
   assert.deepEqual([foundOk, foundAll], [64, 71]); // 雨/五/一/椅子 (L2), 嘴 (L3) and 盖儿/个儿 (L6) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));

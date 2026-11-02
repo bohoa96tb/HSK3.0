@@ -11556,10 +11556,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-05/classroom.webp",
-     "alt": "Dương Đồng Lạc ngồi trước máy tính mới, Vương Nhất Tuyết đứng cạnh — hình trích từ Textbook Bài 5",
-     "caption": "Ở công ty · Textbook, trang 032",
-     "width": 685,
-     "height": 738
+     "alt": "Tranh vẽ: Dương Đồng Lạc ngồi trước máy tính để bàn ở văn phòng, Vương Nhất Tuyết đứng cạnh cầm áo khoác — mô phỏng theo ảnh Textbook Bài 5",
+     "caption": "Ở công ty · tranh vẽ mới theo cảnh Textbook tr.032",
+     "width": 760,
+     "height": 640
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (biến điệu của 不 và 一） là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: biến điệu của 不 và biến điệu của 一",
@@ -11588,7 +11588,8 @@
       "start": 0.0,
       "end": 1.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-2",
@@ -11611,7 +11612,8 @@
       "start": 2.9,
       "end": 3.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-3",
@@ -11633,7 +11635,8 @@
       "start": 5.2,
       "end": 6.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-4",
@@ -11655,7 +11658,8 @@
       "start": 8.0,
       "end": 9.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-5",
@@ -11678,7 +11682,8 @@
       "start": 9.7,
       "end": 11.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-6",
@@ -11700,7 +11705,8 @@
       "start": 12.6,
       "end": 14.7,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-7",
@@ -11722,7 +11728,8 @@
       "start": 16.5,
       "end": 18.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-8",
@@ -11744,7 +11751,8 @@
       "start": 20.4,
       "end": 21.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l05w-9",
@@ -11766,7 +11774,8 @@
       "start": 0.0,
       "end": 0.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-10",
@@ -11789,7 +11798,8 @@
       "start": 2.4,
       "end": 5.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-11",
@@ -11812,7 +11822,8 @@
       "start": 5.8,
       "end": 6.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-12",
@@ -11834,7 +11845,8 @@
       "start": 7.8,
       "end": 10.9,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-13",
@@ -11856,7 +11868,8 @@
       "start": 11.4,
       "end": 13.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-14",
@@ -11879,7 +11892,8 @@
       "start": 13.8,
       "end": 15.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-15",
@@ -11901,7 +11915,8 @@
       "start": 15.0,
       "end": 17.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l05w-16",
@@ -11923,7 +11938,8 @@
       "start": 0.0,
       "end": 1.1,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-17",
@@ -11945,7 +11961,8 @@
       "start": 3.0,
       "end": 3.7,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-18",
@@ -11967,7 +11984,8 @@
       "start": 5.0,
       "end": 8.1,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-19",
@@ -11989,7 +12007,8 @@
       "start": 8.1,
       "end": 8.7,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-20",
@@ -12011,7 +12030,8 @@
       "start": 10.2,
       "end": 11.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-21",
@@ -12033,7 +12053,8 @@
       "start": 13.2,
       "end": 14.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l05w-22",
@@ -12055,7 +12076,8 @@
       "start": 15.9,
       "end": 16.6,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -12086,6 +12108,106 @@
        "zh": "明天是2024年8月18号，星期天。",
        "pinyin": "Míngtiān shì èr líng èr sì nián bā yuè shíbā hào, Xīngqītiān.",
        "noteVi": "Ngày mai là chủ nhật, ngày 18 tháng 8 năm 2024 — ví dụ của sách"
+      },
+      {
+       "zh": "今天是2025年5月22号。",
+       "pinyin": "Jīntiān shì èr líng èr wǔ nián wǔ yuè èrshí’èr hào.",
+       "noteVi": "Câu luyện đọc của sách (tr.029)."
+      },
+      {
+       "zh": "一月",
+       "pinyin": "Yīyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): January."
+      },
+      {
+       "zh": "二月",
+       "pinyin": "Èryuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): February."
+      },
+      {
+       "zh": "三月",
+       "pinyin": "Sānyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): March."
+      },
+      {
+       "zh": "四月",
+       "pinyin": "Sìyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): April."
+      },
+      {
+       "zh": "五月",
+       "pinyin": "Wǔyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): May."
+      },
+      {
+       "zh": "六月",
+       "pinyin": "Liùyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): June."
+      },
+      {
+       "zh": "七月",
+       "pinyin": "Qīyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): July."
+      },
+      {
+       "zh": "八月",
+       "pinyin": "Bāyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): August."
+      },
+      {
+       "zh": "九月",
+       "pinyin": "Jiǔyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): September."
+      },
+      {
+       "zh": "十月",
+       "pinyin": "Shíyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): October."
+      },
+      {
+       "zh": "十一月",
+       "pinyin": "Shíyīyuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): November."
+      },
+      {
+       "zh": "十二月",
+       "pinyin": "Shí’èryuè",
+       "noteVi": "Tháng trong bảng của sách (tr.029): December."
+      },
+      {
+       "zh": "星期一",
+       "pinyin": "Xīngqīyī",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Monday."
+      },
+      {
+       "zh": "星期二",
+       "pinyin": "Xīngqī’èr",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Tuesday."
+      },
+      {
+       "zh": "星期三",
+       "pinyin": "Xīngqīsān",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Wednesday."
+      },
+      {
+       "zh": "星期四",
+       "pinyin": "Xīngqīsì",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Thursday."
+      },
+      {
+       "zh": "星期五",
+       "pinyin": "Xīngqīwǔ",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Friday."
+      },
+      {
+       "zh": "星期六",
+       "pinyin": "Xīngqīliù",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Saturday."
+      },
+      {
+       "zh": "星期日",
+       "pinyin": "Xīngqīrì",
+       "noteVi": "Thứ trong bảng của sách (tr.029): Sunday."
       }
      ],
      "positionVi": "Luôn đi từ lớn xuống nhỏ (năm trước, thứ sau cùng) — ngược với thứ tự ngày/tháng/năm của tiếng Việt.",
@@ -12113,7 +12235,24 @@
       "wb5-text-2",
       "wb5-comp-1",
       "wb6-text-1"
-     ]
+     ],
+     "useWhenVi": "Khi nói hoặc hỏi ngày tháng và thứ theo đúng thứ tự tiếng Trung: năm → tháng → ngày → thứ.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Hôm nay là ngày 22 tháng 5 năm 2025” — chọn câu đúng thứ tự tiếng Trung.",
+      "stemZh": "今天是____。",
+      "options": [
+       {
+        "zh": "22号5月2025年",
+        "vi": "ngày → tháng → năm (thứ tự tiếng Việt)"
+       },
+       {
+        "zh": "2025年5月22号",
+        "vi": "năm → tháng → ngày"
+       }
+      ],
+      "answer": "2",
+      "explanationVi": "Thứ tự tiếng Trung là năm → tháng → ngày: 今天是2025年5月22号。"
+     }
     },
     {
      "id": "kp-hsk1-l05-nominal-predicate",
@@ -12159,7 +12298,24 @@
      ],
      "exerciseIds": [
       "wb5-comp-1"
-     ]
+     ],
+     "useWhenVi": "Khi nói ngày tháng, thời gian hoặc tuổi bằng một cụm danh từ — không cần động từ 是.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Em gái tôi 12 tuổi” theo mẫu câu vị ngữ danh từ của sách.",
+      "stemZh": "____",
+      "options": [
+       {
+        "zh": "我妹妹12岁。",
+        "vi": "Em gái tôi 12 tuổi."
+       },
+       {
+        "zh": "我妹妹的12岁。",
+        "vi": "câu sai — thừa 的"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Câu vị ngữ danh từ: chủ ngữ + cụm danh từ tuổi — 我妹妹12岁。"
+     }
     },
     {
      "id": "kp-hsk1-l05-hui",
@@ -12209,7 +12365,24 @@
      "exerciseIds": [
       "wb5-text-1",
       "wb5-comp-3"
-     ]
+     ],
+     "useWhenVi": "Khi nói ai đó biết làm một việc nhờ học mà biết, hoặc có khả năng làm việc đó.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Tôi biết nấu ăn” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "我__做饭。",
+      "options": [
+       {
+        "zh": "会",
+        "vi": "biết (do học mà biết)"
+       },
+       {
+        "zh": "是",
+        "vi": "là"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Động từ năng nguyện 会： 我会做饭。"
+     }
     },
     {
      "id": "kp-hsk1-l05-bu-sandhi",
@@ -12327,6 +12500,16 @@
         "end": 134.6,
         "status": "asr-draft"
        }
+      },
+      {
+       "zh": "一口",
+       "pinyin": "yì kǒu",
+       "noteVi": "Ví dụ biến điệu của 一 trong Workbook tr.023: 口 đọc thanh 3 nên 一 đọc thành thanh 4 (yì)."
+      },
+      {
+       "zh": "一日",
+       "pinyin": "yí rì",
+       "noteVi": "Ví dụ biến điệu của 一 trong Workbook tr.023: 日 đọc thanh 4 nên 一 đọc thành thanh 2 (yí)."
       }
      ],
      "positionVi": "Bảng biến điệu in ở Workbook trang in 022–023; dãy luyện đọc ở trang in 024; nghe và đọc theo track Workbook 5-1 và 5-2.",
@@ -12977,7 +13160,7 @@
    "exerciseSet": {
     "id": "set-tb-l05-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 030) và Hội thoại 3 (trang 031), đáp án lấy từ chính lời thoại in trong sách; cộng năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 033, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của trang 033 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
+    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.027); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.030, 031 và phần đọc hiểu tr.032), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.033, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.033 là bài tự luyện riêng ở khối B, không chấm tự động.",
     "items": [
      {
       "id": "wb5-text-1",
@@ -13578,6 +13761,504 @@
       ],
       "answer": "2",
       "hintVi": "Nguyên văn câu cuối Hội thoại 3."
+     },
+     {
+      "id": "wb5-text-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): máy tính mới của Dương Đồng Lạc thế nào?",
+      "promptZh": "杨同乐的新电脑怎么样？",
+      "promptPinyin": "Yáng Tónglè de xīn diànnǎo zěnmeyàng?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "真好看",
+        "pinyin": "zhēn hǎokàn",
+        "vi": "thật đẹp"
+       },
+       {
+        "id": "2",
+        "zh": "不好看",
+        "pinyin": "bù hǎokàn",
+        "vi": "không đẹp"
+       },
+       {
+        "id": "3",
+        "zh": "很旧",
+        "pinyin": "hěn jiù",
+        "vi": "rất cũ"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Vương Nhất Tuyết: 真好看！",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 47,
+        "printedPage": "032",
+        "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb5-text-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 032): Dương Đồng Lạc có thích máy tính mới của mình không?",
+      "promptZh": "杨同乐喜欢他的新电脑吗？",
+      "promptPinyin": "Yáng Tónglè xǐhuan tā de xīn diànnǎo ma?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "喜欢",
+        "pinyin": "xǐhuan",
+        "vi": "có thích"
+       },
+       {
+        "id": "2",
+        "zh": "不喜欢",
+        "pinyin": "bù xǐhuan",
+        "vi": "không thích"
+       },
+       {
+        "id": "3",
+        "zh": "没说",
+        "pinyin": "méi shuō",
+        "vi": "hội thoại không nói"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.032. Đáp án lấy từ lời thoại in của Dương Đồng Lạc: 我也很喜欢它。",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 47,
+        "printedPage": "032",
+        "section": "Textbook Bài 5 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb5-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "2025年5月",
+      "promptPinyin": "èr líng èr wǔ nián wǔ yuè",
+      "options": [
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       },
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       },
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       },
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       },
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       },
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       }
+      ],
+      "answer": "calendar",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ A — 2025年5月). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb5-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "星期一",
+      "promptPinyin": "Xīngqīyī",
+      "options": [
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       },
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       },
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       },
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       },
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       },
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       }
+      ],
+      "answer": "blocks",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ B — 星期一). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb5-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "电脑",
+      "promptPinyin": "diànnǎo",
+      "options": [
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       },
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       },
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       },
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       },
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       },
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       }
+      ],
+      "answer": "computer",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ C — 电脑). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb5-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "做饭",
+      "promptPinyin": "zuò fàn",
+      "options": [
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       },
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       },
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       },
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       },
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       },
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       }
+      ],
+      "answer": "cooking",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ D — 做饭). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb5-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "休息",
+      "promptPinyin": "xiūxi",
+      "options": [
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       },
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       },
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       },
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       },
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       },
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       }
+      ],
+      "answer": "resting",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ E — 休息). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb5-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 027): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "饺子",
+      "promptPinyin": "jiǎozi",
+      "options": [
+       {
+        "id": "dumplings",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo",
+        "image": "assets/lesson-05/warm-dumplings.webp",
+        "imageAlt": "Hình vẽ một đĩa sủi cảo với bát nước chấm"
+       },
+       {
+        "id": "calendar",
+        "zh": "2025年5月",
+        "pinyin": "èr líng èr wǔ nián wǔ yuè",
+        "vi": "tháng 5 năm 2025",
+        "image": "assets/lesson-05/warm-calendar.webp",
+        "imageAlt": "Hình vẽ một trang lịch tháng 5 năm 2025"
+       },
+       {
+        "id": "blocks",
+        "zh": "星期一",
+        "pinyin": "Xīngqīyī",
+        "vi": "thứ Hai",
+        "image": "assets/lesson-05/warm-blocks.webp",
+        "imageAlt": "Hình vẽ các khối gỗ xếp chữ 星期一"
+       },
+       {
+        "id": "computer",
+        "zh": "电脑",
+        "pinyin": "diànnǎo",
+        "vi": "máy tính",
+        "image": "assets/lesson-05/warm-computer.webp",
+        "imageAlt": "Hình vẽ một máy tính để bàn trên bàn làm việc"
+       },
+       {
+        "id": "cooking",
+        "zh": "做饭",
+        "pinyin": "zuò fàn",
+        "vi": "nấu ăn",
+        "image": "assets/lesson-05/warm-cooking.webp",
+        "imageAlt": "Hình vẽ hai người đang cùng nấu ăn trong bếp"
+       },
+       {
+        "id": "resting",
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "image": "assets/lesson-05/warm-resting.webp",
+        "imageAlt": "Hình vẽ một cô gái ngồi ghế vươn vai nghỉ ngơi cạnh cửa sổ"
+       }
+      ],
+      "answer": "dumplings",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.027 (thẻ chữ F — 饺子). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": "027",
+        "section": "Textbook Bài 5 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
      }
     ]
    },
@@ -13649,14 +14330,14 @@
      "id": "st-l05-02",
      "kind": "speaking",
      "titleVi": "Dùng hình để nói (Textbook trang 033) — tự luyện, không chấm tự động",
-     "instructionVi": "Nhìn 4 hình ở Textbook trang 033 và hoàn thành 4 khung câu của sách: (1) 今天______。(lịch tháng 9 năm 2025, khoanh ngày 7) (2) 杨同乐会______。(hình một người đang nấu ăn) (3) 我______两个菜。(hình hai đĩa món ăn) (4) 今天是______年______月1号，______。(lịch tháng 5 năm 2025, khoanh ngày 1)",
+     "instructionVi": "Nhìn 4 hình (tranh vẽ lại theo ảnh ở Textbook trang 033) và hoàn thành 4 khung câu của sách: (1) 今天______。(lịch tháng 9 năm 2025, ngày 7 ở cột Chủ nhật) (2) 杨同乐会______。(hình một người đang nấu ăn) (3) 我______两个菜。(hình hai đĩa món ăn) (4) 今天是______年______月1号，______。(lịch tháng 5 năm 2025, ngày 1 ở cột thứ Năm).",
      "prompts": [
       "今天______。",
       "杨同乐会______。",
       "我______两个菜。",
       "今天是______年______月1号，______。"
      ],
-     "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu với từ mới và hội thoại của bài. App không chấm bài này: sách không in đáp án và phần điền phụ thuộc vào hình.",
+     "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu: (1) 今天9月7号，星期日。(2) 杨同乐会做饭。(3) 我会做两个菜。(4) 今天是2025年5月1号，星期四。App không chấm bài này: sách không in đáp án, phần điền phụ thuộc vào hình.",
      "answerStatus": "unverified",
      "audioTrackId": "trk-tb-l05-5",
      "sourceRefs": [
@@ -13666,22 +14347,173 @@
        "printedPage": "033",
        "section": "综合练习 · 看图说话"
       }
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-05/describe-1.webp",
+       "alt": "Hình vẽ một trang lịch tháng 9 năm 2025, ngày 7 được khoanh tròn ở cột Chủ nhật",
+       "captionVi": "Hình 1 — lịch tháng 9 năm 2025, khoanh ngày 7 (cột Chủ nhật). Tranh vẽ lại theo ảnh Textbook tr.033.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 48,
+         "printedPage": "033",
+         "section": "综合练习 · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-05/describe-2.webp",
+       "alt": "Hình vẽ một chàng trai đang cắt cà chua nấu ăn trong bếp",
+       "captionVi": "Hình 2 — Dương Đồng Lạc đang nấu ăn trong bếp. Tranh vẽ lại theo ảnh Textbook tr.033.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 48,
+         "printedPage": "033",
+         "section": "综合练习 · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-05/describe-3.webp",
+       "alt": "Hình vẽ hai đĩa món ăn: rau xào và thịt kho",
+       "captionVi": "Hình 3 — hai đĩa món ăn. Tranh vẽ lại theo ảnh Textbook tr.033.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 48,
+         "printedPage": "033",
+         "section": "综合练习 · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-05/describe-4.webp",
+       "alt": "Hình vẽ một trang lịch tháng 5 năm 2025, ngày 1 được khoanh tròn ở cột thứ Năm",
+       "captionVi": "Hình 4 — lịch tháng 5 năm 2025, khoanh ngày 1 (cột thứ Năm). Tranh vẽ lại theo ảnh Textbook tr.033.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 48,
+         "printedPage": "033",
+         "section": "综合练习 · 看图说话"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "st-l05-03",
+     "kind": "listening-comparison",
+     "titleVi": "Nghe, đọc theo biến điệu của 不 (Workbook trang 024, bài 2)",
+     "instructionVi": "Nghe track Workbook 5-2, đọc theo từng mục và tự ghi vào ô: mục nào bạn nghe 不 đọc thành bú, mục nào giữ bù? Danh sách in đầy đủ bên dưới thuộc về dạng bài luyện phát âm nên hiển thị sẵn, không phải đáp án của bài chấm điểm.",
+     "audioTrackId": "trk-wb-l05-2",
+     "answerStatus": "unverified",
+     "practiceEvidence": "Danh sách mục và cách đọc lấy nguyên văn từ bản in Workbook tr.024; app không chấm tự động bài tự luyện này và chưa có kiểm nghe độc lập cho từng mục.",
+     "guideVi": "Sách in cách đọc: trước thanh 4, 不 đọc bú; trước thanh 1, 2, 3 giữ bù.",
+     "prompts": [
+      "(1) búyào",
+      "(2) bú kèqi",
+      "(3) bù hē",
+      "(4) bù lái",
+      "(5) bù lěng",
+      "(6) bù zhīdào",
+      "(7) bù xuéxí",
+      "(8) bù hǎotīng"
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 31,
+       "printedPage": "024",
+       "section": "Workbook Bài 5 · 听读练 bài 2 — nghe và đọc theo biến điệu của 不"
+      }
+     ]
+    },
+    {
+     "id": "st-l05-04",
+     "kind": "listening-comparison",
+     "titleVi": "Nghe, đọc theo biến điệu của 一 (Workbook trang 024, bài 3)",
+     "instructionVi": "Nghe track Workbook 5-2, đọc theo từng mục và tự ghi vào ô: mục nào bạn nghe 一 đọc thành yì, mục nào đọc yí? Danh sách in đầy đủ bên dưới thuộc về dạng bài luyện phát âm nên hiển thị sẵn, không phải đáp án của bài chấm điểm.",
+     "audioTrackId": "trk-wb-l05-2",
+     "answerStatus": "unverified",
+     "practiceEvidence": "Danh sách mục và cách đọc lấy nguyên văn từ bản in Workbook tr.024; app không chấm tự động bài tự luyện này và chưa có kiểm nghe độc lập cho từng mục.",
+     "guideVi": "Sách in cách đọc: trước thanh 1, 2, 3 thì 一 đọc yì; trước thanh 4 đọc yí.",
+     "prompts": [
+      "(1) yìtiān",
+      "(2) yì yuán",
+      "(3) yìdiǎnr",
+      "(4) yíbàn",
+      "(5) yì chē",
+      "(6) yì rén",
+      "(7) yì wǎn",
+      "(8) yíxià"
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 31,
+       "printedPage": "024",
+       "section": "Workbook Bài 5 · 听读练 bài 3 — nghe và đọc theo biến điệu của 一"
+      }
      ]
     }
    ],
-   "selfCheckIntroVi": "Workbook trang 023, bài 1. Mỗi ô được lưu tự động. 7/8 ô có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); ô 5 tạm không chấm vì nguồn mâu thuẫn (ghi chú ngay tại ô). Chưa phải đáp án chính thức của NXB.",
+   "selfCheckIntroVi": "Workbook trang 023, bài 1: mỗi ô được lưu tự động; 7/8 ô có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu), ô 5 tạm không chấm vì nguồn mâu thuẫn (ghi chú ngay tại ô). Ba bài còn lại: hai bài nghe – đọc theo biến điệu của 不 và 一 (Workbook tr.024) và bài dùng hình để nói của Textbook tr.033 — tự đối chiếu, không chấm tự động. Các đáp án đối chiếu chưa phải đáp án chính thức của NXB.",
    "selfCheckListenVi": "▶ Nghe track Workbook 5-2",
    "apply": {
     "titleVi": "Đóng vai và hỏi ngày tháng theo tình huống thật",
     "instructionVi": "Chọn hội thoại 1. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình, hỏi và đáp hôm nay là ngày mấy, thứ mấy （今天几号？— 今天…号。星期几？). Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
     "audioTrackId": "trk-tb-l05-1",
-    "noteVi": "Nhiệm vụ đóng vai và nói theo tình huống thật lấy từ Textbook trang in 028. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "noteVi": "Hai nhiệm vụ nói đều lấy từ sách: đóng vai + hỏi ngày tháng theo tình huống thật (tr.028) và trò chơi nhóm hỏi — đáp bằng 会 (hoạt động lớp, tr.034). Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
     "sourceRefs": [
      {
       "sourceId": "src-hsk1-textbook-pdf",
       "pdfPage": 43,
       "printedPage": 28,
       "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+     }
+    ],
+    "samplePassageIds": [
+     "l05-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l05-1",
+      "titleVi": "Đóng vai Hội thoại 1 và hỏi ngày tháng theo tình huống thật của bạn",
+      "situationVi": "Hai người ở nhà hỏi nhau hôm nay ngày mấy, thứ mấy (Textbook tr.028: đóng vai, sau đó hai người một nhóm hỏi – đáp theo tình huống thật).",
+      "sampleZh": "今天几号？— 今天9月8号。— 星期几？— 星期日。今天我休息。",
+      "samplePinyin": "Jīntiān jǐ hào? — Jīntiān jiǔ yuè bā hào. — Xīngqī jǐ? — Xīngqīrì. Jīntiān wǒ xiūxi.",
+      "sampleVi": "Hôm nay ngày mấy? — Hôm nay ngày 8 tháng 9. — Thứ mấy? — Chủ nhật. Hôm nay tôi nghỉ.",
+      "swapVi": "Đổi ngày tháng và thứ sang ngày thật hôm nay của bạn rồi hỏi – đáp lại cả đoạn.",
+      "sourceNoteVi": "Mẫu là nguyên văn Hội thoại 1 (Textbook tr.028).",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 43,
+        "printedPage": "028",
+        "section": "Textbook Bài 5 · Hội thoại 1 + hoạt động đóng vai/theo tình huống thật"
+       }
+      ]
+     },
+     {
+      "id": "speak-l05-2",
+      "titleVi": "Trò chơi nhóm: hỏi nhau biết làm việc gì không (hoạt động lớp, Textbook tr.034)",
+      "situationVi": "Một người cầm thẻ từ hỏi cả nhóm biết làm việc trên thẻ không; mọi người thi nhau trả lời, ai trả lời ít nhất sẽ là người hỏi ở vòng sau (Textbook tr.034).",
+      "sampleZh": "你们会做饭吗？— 我会。— 你们会做这个菜吗？— 我不会做。",
+      "samplePinyin": "Nǐmen huì zuò fàn ma? — Wǒ huì. — Nǐmen huì zuò zhège cài ma? — Wǒ bú huì zuò.",
+      "sampleVi": "Các bạn biết nấu ăn không? — Tôi biết. — Các bạn biết làm món này không? — Tôi không biết làm.",
+      "swapVi": "Đổi thẻ từ sang việc khác bạn nghĩ ra (ví dụ một món ăn khác) rồi tiếp tục hỏi – đáp theo mẫu.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ in ở Textbook tr.034.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 49,
+        "printedPage": "034",
+        "section": "Textbook Bài 5 · 课堂活动 · 小组游戏 + 小语的例子"
+       }
+      ]
      }
     ]
    },
@@ -13886,7 +14718,210 @@
       "status": "asr-draft"
      }
     }
-   ]
+   ],
+   "prepGroups": [
+    {
+     "id": "l05-vocab-1",
+     "dialogueId": "l05-dialogue-1",
+     "titleVi": "Hội thoại 1 · Hôm nay ngày mấy?",
+     "trackId": "trk-tb-l05-2",
+     "trackLabelVi": "Track 5-2"
+    },
+    {
+     "id": "l05-vocab-2",
+     "dialogueId": "l05-dialogue-2",
+     "titleVi": "Hội thoại 2 · Bạn biết nấu ăn không?",
+     "trackId": "trk-tb-l05-4",
+     "trackLabelVi": "Track 5-4"
+    },
+    {
+     "id": "l05-vocab-3",
+     "dialogueId": "l05-dialogue-3",
+     "titleVi": "Hội thoại 3 · Máy tính mới",
+     "trackId": "trk-tb-l05-6",
+     "trackLabelVi": "Track 5-6"
+    }
+   ],
+   "prepSummaryVi": "22 từ mới, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Hôm nay ngày mấy?",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → nói ngày tháng và thứ theo thứ tự năm → tháng → ngày → thứ.",
+     "sectionId": "prep",
+     "dialogueId": "l05-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Bạn biết nấu ăn không?",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → nói biết làm việc gì bằng 会.",
+     "sectionId": "reader",
+     "dialogueId": "l05-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Máy tính mới",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → nhận xét đồ vật bằng 真 + tính từ và nói thích bằng 喜欢.",
+     "sectionId": "reader",
+     "dialogueId": "l05-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Bốn điều cần nhớ và tự nói ngày tháng, việc biết làm của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Nói ngày tháng theo thứ tự lớn → nhỏ",
+     "bodyVi": "Năm → tháng → ngày （号/日） → thứ. Hỏi hôm nay ngày mấy: 今天几号？",
+     "exampleZh": "今天9月8号。",
+     "examplePinyin": "Jīntiān jiǔ yuè bā hào.",
+     "exampleVi": "Hôm nay là ngày 8 tháng 9."
+    },
+    {
+     "titleVi": "Câu vị ngữ danh từ: không cần 是",
+     "bodyVi": "Ngày tháng và tuổi nói thẳng bằng cụm danh từ sau chủ ngữ.",
+     "exampleZh": "我妹妹12岁。",
+     "examplePinyin": "Wǒ mèimei shí’èr suì.",
+     "exampleVi": "Em gái tôi 12 tuổi."
+    },
+    {
+     "titleVi": "会： biết làm việc gì",
+     "bodyVi": "会 + động từ chỉ việc biết làm nhờ học; phủ định 不会。",
+     "exampleZh": "我会做面条儿、饺子，也会做一些菜。",
+     "examplePinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+     "exampleVi": "Tôi biết làm mì, sủi cảo, cũng biết làm một số món ăn."
+    },
+    {
+     "titleVi": "Hai cách nói tương đương của sách",
+     "bodyVi": "Ngày nói bằng 号 cũng viết được bằng 日： 9月8号 = 9月8日； Chủ nhật nói 星期日 cũng nói được 星期天。",
+     "exampleZh": "星期日。今天我休息。",
+     "examplePinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+     "exampleVi": "Chủ nhật. Hôm nay tôi nghỉ."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả chữ số và tên nhân vật của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "杨同乐",
+      "pinyin": "Yáng Tónglè",
+      "hanViet": "DƯƠNG ĐỒNG LẠC",
+      "vi": "Dương Đồng Lạc — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "同乐",
+      "pinyin": "Tónglè",
+      "hanViet": "ĐỒNG LẠC",
+      "vi": "Đồng Lạc — cách gọi ngắn tên Dương Đồng Lạc trong hội thoại"
+     },
+     {
+      "zh": "你们",
+      "pinyin": "nǐmen",
+      "hanViet": null,
+      "vi": "các bạn (số nhiều của 你）"
+     },
+     {
+      "zh": "明天",
+      "pinyin": "míngtiān",
+      "hanViet": "MINH THIÊN",
+      "vi": "ngày mai"
+     },
+     {
+      "zh": "年",
+      "pinyin": "nián",
+      "hanViet": "NIÊN",
+      "vi": "năm (trong cách nói ngày tháng)"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "số 1"
+     },
+     {
+      "zh": "二",
+      "pinyin": "èr",
+      "hanViet": "NHỊ",
+      "vi": "số 2"
+     },
+     {
+      "zh": "三",
+      "pinyin": "sān",
+      "hanViet": "TAM",
+      "vi": "số 3"
+     },
+     {
+      "zh": "四",
+      "pinyin": "sì",
+      "hanViet": "TỨ",
+      "vi": "số 4"
+     },
+     {
+      "zh": "五",
+      "pinyin": "wǔ",
+      "hanViet": "NGŨ",
+      "vi": "số 5"
+     },
+     {
+      "zh": "六",
+      "pinyin": "liù",
+      "hanViet": "LỤC",
+      "vi": "số 6"
+     },
+     {
+      "zh": "七",
+      "pinyin": "qī",
+      "hanViet": "THẤT",
+      "vi": "số 7"
+     },
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "hanViet": "BÁT",
+      "vi": "số 8"
+     },
+     {
+      "zh": "九",
+      "pinyin": "jiǔ",
+      "hanViet": "CỬU",
+      "vi": "số 9"
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": "THẬP",
+      "vi": "số 10"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l06",

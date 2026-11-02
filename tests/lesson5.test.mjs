@@ -62,8 +62,8 @@ test('lesson 5 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 5 text exercises: printed answers grade, stems render, review links fit', async () => {
-  assert.equal(l5.exerciseSet.items.length, 9);
-  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['1', '3', '2', '3', '3', '4', '1', '5', '2']);
+  assert.equal(l5.exerciseSet.items.length, 17);
+  assert.deepEqual(l5.exerciseSet.items.map((i) => i.answer), ['1', '3', '2', '3', '3', '4', '1', '5', '2', '1', '1', 'calendar', 'blocks', 'computer', 'cooking', 'resting', 'dumplings']);
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
   for (const item of l5.exerciseSet.items) {
@@ -76,7 +76,7 @@ test('lesson 5 text exercises: printed answers grade, stems render, review links
   }
   await route('lesson/hsk1-l05/exercises');
   assert.ok($('.exercise-stem')?.textContent.includes('杨同乐') && $('.exercise-stem')?.textContent.includes('做饭'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/9'));
+  assert.ok(document.body.textContent.includes('Câu 1/17'));
 });
 
 test('lesson 5 choose-a-syllable task: syllable grading mode grades exactly', () => {

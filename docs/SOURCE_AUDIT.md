@@ -66,6 +66,19 @@ thể (đã đọc trang nào / kiểm HEAD ra sao / số byte / thời lượng
 `rightsStatus` riêng. Chỉ đổi `rightsStatus` khi có bằng chứng tương ứng.
 - Không nâng trạng thái kiểm chứng dựa trên suy đoán hoặc trí nhớ.
 
+## Hình Bài 5 (vẽ mới, 2026-11-02)
+
+11 tranh phẳng do dự án tự vẽ bằng chương trình (Pillow), mô phỏng bố cục ảnh
+in của Textbook Bài 5: 6 hình khởi động tr.027 (lịch tháng 5/2025, khối gỗ
+星期一， máy tính để bàn, hai người nấu ăn, cô gái nghỉ ngơi, đĩa sủi cảo),
+hình ngữ cảnh tr.032 (văn phòng, máy tính mới) và 4 hình "dùng hình để nói"
+tr.033 (lịch tháng 9 ngày 7 Chủ nhật, người nấu ăn, hai đĩa món, lịch tháng 5
+ngày 1 thứ Năm). Chi tiết từng file: `assets/lesson-05/ATTRIBUTION.md`. Các
+ngày trên lịch dựng đúng lịch thật (1/5/2025 là thứ Năm; 7/9/2025 là Chủ
+nhật). Tranh thay toàn bộ ảnh trích sách của Bài 5 (assets/lesson-05/
+classroom.webp trước đây là ảnh cắt từ sách — đã ghi đè bằng tranh vẽ mới).
+Quyền đối với nội dung sách/câu hỏi/audio không đổi (chưa xác minh).
+
 ## Kiểm tra lại 31/10–01/11/2026 — thay thế kết luận chưa đọc Textbook
 
 - Tải trực tiếp Textbook (66.692.625 byte, 144 trang) và Workbook (73.963.050 byte, 139 trang); bản scan không có text layer. Render PyMuPDF và đọc trực quan, không dựa vào OCR.

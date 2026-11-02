@@ -1,6 +1,6 @@
 # Hình minh họa Bài 03 — tranh vẽ mới của dự án
 
-Cập nhật 2026-11-02 theo chỉ đạo của Hoa: toàn bộ hình của bài được VẼ LẠI theo phong cách tranh minh họa phẳng — chuẩn dự án đã nghiệm thu ở Bài 8 (D19) — mô phỏng đúng nội dung cảnh của bài tập và ảnh ngữ cảnh trong sách. Không còn dùng ảnh trích từ sách ở bài này.
+Cập nhật 2026-11-02 theo chỉ đạo của Hoa: toàn bộ hình của bài được VẼ LẠI theo phong cách tranh minh họa phẳng — chuẩn dự án đã nghiệm thu ở Bài 8 (D19) — mô phỏng theo ĐÚNG bố cục và nội dung của từng ảnh gốc trong PDF sách (đã mở xem ảnh gốc để đối chiếu, vòng hiệu chỉnh 2026-11-02). Không còn dùng ảnh trích từ sách ở bài này.
 
 - Quá trình: tạo tờ lưới tranh phẳng 2×2 cho từng nhóm cảnh (2026-11-02), cắt thành hình lẻ, đối chiếu trực quan từng hình với câu hỏi/đáp án của bài trước khi thay.
 - classroom.webp: tranh vẽ mới theo cảnh ngữ cảnh của Textbook (xem chú thích trong ứng dụng).

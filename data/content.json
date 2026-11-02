@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-img-redraw-l123",
+ "contentVersion": "20261102-img-faithful-l123",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -731,7 +731,7 @@
    ],
    "contextImage": {
     "src": "assets/lesson-01/classroom.webp",
-    "alt": "Cô giáo đứng trước lớp, học sinh ngồi ở bàn vẫy tay chào cô",
+    "alt": "Ba học sinh ngồi ở bàn học trong lớp cùng vẫy tay chào",
     "caption": "Chào cả lớp · tranh vẽ mới theo cảnh Textbook tr.002",
     "width": 760,
     "height": 760
@@ -2083,7 +2083,7 @@
      "type": "multiple-choice",
      "promptVi": "Hình 1: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-1.webp",
-     "imageAlt": "Tranh minh họa phẳng vẽ mới: hai bạn học vẫy tay chào nhau",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một người đàn ông vẫy tay chào cô nhân viên đứng sau quầy lễ tân",
      "options": [
       {
        "id": "1",
@@ -2149,7 +2149,7 @@
      "type": "multiple-choice",
      "promptVi": "Hình 2: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-2.webp",
-     "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn trao sách cho bạn khác, bạn nhận sách cảm ơn",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một người bị ngã ngồi trên nền tuyết đang được bạn nắm tay đỡ dậy",
      "options": [
       {
        "id": "1",
@@ -2215,7 +2215,7 @@
      "type": "multiple-choice",
      "promptVi": "Hình 3: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-3.webp",
-     "imageAlt": "Tranh minh họa phẳng vẽ mới: cô giáo vẫy tay chào một nhóm học sinh, các bạn vẫy tay đáp lại",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một thầy giáo cầm cuốn sách đỏ đứng nói chuyện với hai học sinh, bạn nữ giơ tay chào",
      "options": [
       {
        "id": "1",
@@ -2875,7 +2875,7 @@
     ],
     "contextImage": {
      "src": "assets/lesson-02/classroom.webp",
-     "alt": "Cô giáo vẫy tay chào học sinh trong lớp học",
+     "alt": "Cô giáo mặc váy dài trắng đứng trong lớp, giơ tay giới thiệu với ba học sinh ngồi ở bàn",
      "caption": "Làm quen trong lớp học · tranh vẽ mới theo cảnh Textbook tr.005",
      "width": 760,
      "height": 760
@@ -4220,7 +4220,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 1: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-1.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: hai người bắt tay nhau khi lần đầu gặp mặt",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: hai người đàn ông mặc vest bắt tay nhau, một người lớn tuổi đeo kính",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -4298,7 +4298,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 2: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-2.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một học sinh vẫy tay tạm biệt cô giáo ở cổng trường",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: hai nữ sinh mặc đồng phục đi trên sân trường về phía cô giáo đang đợi",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -4376,7 +4376,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 3: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-3.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nữ đứng trước lớp tự giới thiệu",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một cô gái tóc vàng mặc áo len sọc đen trắng đứng ngoài trời, mỉm cười như đang giới thiệu bản thân",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -4454,7 +4454,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 4: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-4.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nam cúi đầu xin lỗi, bạn nữ giơ tay ra hiệu không sao",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một cô gái tóc xoăn ngồi buồn, bạn nam ngồi cạnh đặt tay an ủi",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -6738,7 +6738,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 1: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-1.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: cô giáo đứng trước bảng đen trong lớp học",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: cô giáo mặc áo trắng đứng trước bảng xanh, tay cầm que chỉ bảng",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -6813,7 +6813,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 2: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-2.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một người đàn ông mặc vest nói chuyện điện thoại ở văn phòng",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một người đàn ông mặc vest đang nghe điện thoại",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -6887,7 +6887,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 3: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-3.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một đôi nam nữ ngồi cạnh nhau trên ghế máy bay trò chuyện",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: hai cô gái ngồi trong khoang máy bay quay sang trò chuyện với nhau",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
@@ -6961,7 +6961,7 @@
       "type": "multiple-choice",
       "promptVi": "Hình 4: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-4.webp",
-      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nam giới thiệu bạn gái của mình với một bạn nữ khác",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới mô phỏng ảnh gốc: một bạn nam mặc áo kẻ đứng cạnh bạn gái áo xanh nhạt, bạn gái đang bắt tay chào một phụ nữ mặc vest",
       "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {

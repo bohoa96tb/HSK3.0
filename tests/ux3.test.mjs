@@ -8,7 +8,7 @@ const lessons = [content.pilot, ...content.additionalLessons];
 // ---- Data: Han-Viet coverage + context-correct readings --------------------
 test('han-viet: all prep words carry a verified, context-checked reading', () => {
   const words = lessons.flatMap((c) => c.prepWords);
-  assert.equal(words.length, 167); // 162 before + Lesson 3's four proper nouns the book lists per dialogue (D27)
+  assert.equal(words.length, 190); // 167 before + 23 Lesson 9 words (D27 standard build)
   for (const w of words) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
@@ -29,7 +29,7 @@ test('han-viet: all prep words carry a verified, context-checked reading', () =>
 
 test('exercise support data: every Chinese option has pinyin and Vietnamese meaning', () => {
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
-  assert.equal(options.length, 455); // 249 before + 25 word-bank options of Lesson 3's fill-in set + 55 options of Lesson 4 (D27)
+  assert.equal(options.length, 540); // 455 before + 85 options of Lesson 9 (36 warm-up + 12 listening-choice + 25 word-bank + 12 tone-distinction)
   for (const o of options) { assert.ok(o.pinyin, o.zh); assert.ok(o.vi, o.zh); }
 });
 

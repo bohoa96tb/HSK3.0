@@ -80,3 +80,11 @@
 - QA D17: nội dung ĐẠT (0 lỗi; 1 nhẹ ở văn bản kiểm kê đã sửa); code v1 bắt 1 TB (Tra cụm chết trên bề mặt .example do handler tìm wrap trong .ex-meta) → sửa + test hồi quy; v2 ĐẠT 35/35. Test 116/116.
 - Nghiệm thu live 5/5 đạt （外边 trong công thức; bản dịch không còn hậu tố; "Xem thêm" có câu thứ ba; tra 小猫 + tra cụm 在学校吃午饭 từ khối ví dụ mới; apply hiện mẫu đầy đủ; Bài 1 knowledge bố cục gọn bình thường). Giới hạn đo lường: trình duyệt kiểm tra không đặt được viewport 390px tùy ý/không đọc offsetHeight; một lượt chụp qua trang responsive cho mô tả không khớp dữ liệu thật nên bị loại — so sánh trước/sau dựa trên thông số CSS + quan sát trực tiếp bản live, không có số px tuyệt đối. Chưa Android thật.
 - nextTask: Bài 9 khi Hoa nói "Tiếp tục" (áp dụng D17/D19/D20/D22/D23/D24/D25).
+
+## Vòng sửa lỗi nút Tiếp tục ở mục Bắt đầu — D26 (2026-11-02)
+
+- Báo cáo thiết bị thật của Hoa (Android, kèm ảnh): nút "Tiếp tục học" trong khối Lộ trình ở mục Bắt đầu Bài 8 không phản ứng. Đã tái hiện đúng trạng thái: đích của nút là chính route intro đang mở (mở trang ghi lastSectionId=intro, công thức đích cũ lấy đúng mục đó) → liên kết cùng hash, không đổi trang.
+- Sửa (quy tắc D26): khối Lộ trình nhận biết mục đang chứa nó; trong trang mục, đích là mục chưa hoàn thành tiếp theo (xong hết → mục cuối), không bao giờ tự liên kết; trang tổng quan giữ nghĩa resume theo lastSectionId. Test hồi quy thao tác qua giao diện thật (kho tiến độ có cache nên không ghi thẳng localStorage được).
+- QA code độc lập ĐẠT 5/5 (script jsdom riêng); lưu ý 1 lần test mới chập chờn vì chờ ngắn sau cú bấm → đã đổi sang chờ có thăm dò, chạy lại file test 5 lần đều 14/14, toàn bộ 117/117.
+- Phát hành: PR #54 merge 28a0e0fa; contentVersion 20261102-lesson8-continue1; byte remote 8/8 + live 3/3 khớp. Nghiệm thu live: bấm nút 2 lần từ trang Bắt đầu đều chuyển sang Từ cần biết (Mục 2/7), không kẹt.
+- nextTask: Bài 9 khi Hoa nói "Tiếp tục" (áp dụng D17/D19/D20/D22/D23/D24/D25/D26).

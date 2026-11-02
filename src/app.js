@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-exui1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-exui1";
-import * as player from "./player.js?v=20261102-lesson8-exui1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-continue1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-continue1";
+import * as player from "./player.js?v=20261102-lesson8-continue1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -194,7 +194,7 @@ function viewLesson(lessonId, sectionId, query) {
   const prev = sections[idx - 1]; const next = sections[idx + 1];
   update(p => {const l=(p.lessons[lesson.id] ||= {completedSections:[]}); l.lastSectionId=sectionId;});
   let body = "";
-  if (sectionId === "intro") body = sectionIntroHtml(lesson, content);
+  if (sectionId === "intro") body = sectionIntroHtml(lesson, content, sectionId);
   if (sectionId === "prep") body = sectionPrepHtml(content);
   if (sectionId === "knowledge") body = sectionKnowledgeHtml(content);
   if (sectionId === "reader") body = sectionReaderHtml(content);
@@ -226,22 +226,33 @@ function viewLessonIntro(lesson, content) {
   bindSection("intro", content);
 }
 
-function learningPathHtml(lesson, content) {
+function learningPathHtml(lesson, content, currentSectionId = null) {
   const path = content.learningPath;
   if (!Array.isArray(path) || !path.length) return "";
   const st = lessonState(lesson.id);
-  const resume = st.lastSectionId && !st.completedSections.includes(st.lastSectionId) ? st.lastSectionId : (content.intro.sections.find((x) => !st.completedSections.includes(x.id))?.id || "summary");
+  const sections = content.intro.sections;
+  const validLast = st.lastSectionId && sections.some((x) => x.id === st.lastSectionId) ? st.lastSectionId : null;
+  let resume;
+  if (validLast && validLast !== currentSectionId && !st.completedSections.includes(validLast)) resume = validLast;
+  else {
+    // When this block is rendered inside a section page (the Bắt đầu page
+    // itself), that section is already on screen: the button must move
+    // onward to the next unfinished section, never link back to the same
+    // route (a same-hash link looks completely unresponsive when tapped).
+    const pool = currentSectionId ? sections.filter((x) => x.id !== currentSectionId) : sections;
+    resume = pool.find((x) => !st.completedSections.includes(x.id))?.id || pool[pool.length - 1]?.id || "summary";
+  }
   return `<section class="card"><h2>Lộ trình học bài này</h2>
   <p class="muted">Học theo tình huống, từng bước nhỏ. Bạn có thể dừng bất cứ lúc nào và học tiếp sau — không cần làm hết phần luyện thêm mới được đi tiếp.</p>
   <ol class="learn-path">${path.map((step) => `<li><a href="#/lesson/${lesson.id}/${step.sectionId}${step.dialogueId && step.sectionId === "reader" ? `?passage=${step.dialogueId}` : ""}"><strong>${step.step}. ${esc(step.titleVi)}</strong><span>${esc(step.descVi)}</span></a></li>`).join("")}</ol>
   <p class="row-actions"><a class="btn primary big" href="#/lesson/${lesson.id}/${resume}">${st.completedSections.length || st.lastSectionId ? "Tiếp tục học" : "Bắt đầu học"} →</a></p>
   ${st.lastSectionId ? `<p class="muted small">Bạn đang học dở — lần trước bạn ở mục: ${esc(content.intro.sections.find((x) => x.id === st.lastSectionId)?.titleVi || st.lastSectionId)}.</p>` : ""}</section>`;
 }
-function sectionIntroHtml(lesson, content) {
+function sectionIntroHtml(lesson, content, currentSectionId = null) {
  const intro = content.intro; const img = intro.contextImage;
  return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
  <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Thời gian dự kiến khoảng ${intro.estimatedMinutes} phút nếu học liền một mạch (ước lượng của dự án, chưa đo trên người học thật). Bạn có thể chia thành nhiều phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
- <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>${learningPathHtml(lesson, content)}`;
+ <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>${learningPathHtml(lesson, content, currentSectionId)}`;
 }
 
 // ---------- Lesson sections ----------

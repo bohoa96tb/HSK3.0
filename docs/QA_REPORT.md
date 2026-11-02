@@ -393,3 +393,11 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **Nghiệm thu live (PR #52 merge 18dadbac, contentVersion 20261102-lesson8-exui1; byte live 4/4 khớp):** tương tác 5/5 đạt — công thức có 外边； ví dụ đầu bản dịch "Trong phòng có một con mèo nhỏ." không còn hậu tố nguồn; "Xem thêm ví dụ của sách" có 小雪的手机在桌子上呢。; bấm 小猫 hiện TIỂU MIÊU; tra cụm 在→午饭 ngay trong ví dụ hiện nghĩa cả cụm; apply nhiệm vụ 1 hiện mẫu 4 lượt đầy đủ; Bài 1 knowledge bố cục gọn bình thường. Không phát audio trong lượt này.
 - **Kiểm nghe thực tế:** không — vòng này không đổi audio; nút nghe ví dụ dùng cơ chế cũ (audio sách/TTS theo D20).
 - **Kiểm giao diện:** jsdom + đọc cascade CSS; trang responsive của dự án dùng để đối chiếu trực quan khung 390px. Trình duyệt kiểm tra không đặt được viewport 390px tùy ý và không đọc được offsetHeight nên không có số đo px tuyệt đối; một lượt chụp qua trang responsive cho kết quả không nhất quán với dữ liệu thật (mô tả trang không tồn tại trong dự án) nên bị loại, không dùng làm bằng chứng. Chưa Android thật.
+
+## Vòng sửa lỗi nút Tiếp tục ở mục Bắt đầu — D26 (02/11/2026)
+
+- **Báo cáo thiết bị thật (Hoa, Android):** tại mục Bắt đầu của Bài 8, nút "Tiếp tục học" trong khối Lộ trình không phản ứng khi chạm (kèm ảnh chụp: dòng "lần trước bạn ở mục: Bắt đầu").
+- **Tái hiện + nguyên nhân:** script jsdom với đúng trạng thái đó cho thấy đích của nút là `#/lesson/hsk1-l08/intro` — chính trang đang mở (mục đang xem được ghi vào `lastSectionId` ngay khi mở trang, và công thức tính đích cũ lấy mục dở dang đó). Bấm vào liên kết cùng hash không đổi route nên không có phản ứng. Không phải lỗi vùng chạm hay lớp phủ.
+- **Bản sửa:** khối Lộ trình nhận biết mục đang chứa nó; khi nằm trong trang mục, đích là mục chưa hoàn thành tiếp theo (đã xong hết thì mục cuối), không bao giờ là route hiện tại. Trang tổng quan bài giữ nguyên nghĩa học tiếp theo mục dở dang. Ghi quyết định D26.
+- **Kiểm thử:** test hồi quy mới thao tác qua giao diện thật (bấm nút → sang Từ cần biết; đánh dấu đã học 2 mục → đích thành Hiểu cách dùng; trang tổng quan vẫn resume về Nghe & đọc). npm run check 117/117. (QA độc lập và nghiệm thu live bổ sung ở PR sổ sách.)
+- **Kiểm nghe/đối chiếu bản in:** không áp dụng — vòng này chỉ sửa điều hướng, không đổi nội dung/audio.

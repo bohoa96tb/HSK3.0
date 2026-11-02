@@ -176,3 +176,30 @@ test('QA regression: speaking samples follow the Pinyin/Nghĩa toggles', async (
   assert.ok($$('.speak-task .tog-pinyin-sent').length >= 3);
   assert.ok($$('.speak-task .tog-vi-sent').length >= 3);
 });
+
+test('regression (device report 02/11): path CTA inside the Bắt đầu page moves onward, never self-links', async () => {
+  const pathCta = () => [...document.querySelectorAll('section.card')].find((x) => x.textContent.includes('Lộ trình học bài này'))?.querySelector('a.btn.primary.big');
+  // Hoa's state: she is on the Bắt đầu page, whose visit sets lastSectionId
+  // to 'intro'. The button used to link to #/lesson/hsk1-l08/intro — the very
+  // page already open — so tapping it did nothing at all.
+  await route('lesson/hsk1-l08/intro');
+  assert.equal(pathCta().getAttribute('href'), '#/lesson/hsk1-l08/prep');
+  pathCta().click();
+  // Poll briefly: a single short tick raced the hashchange render once in QA.
+  for (let i = 0; i < 50 && $$('.vocab-group-title').length !== 3; i++) await tick();
+  assert.equal(location.hash, '#/lesson/hsk1-l08/prep');
+  assert.equal($$('.vocab-group-title').length, 3);
+  // Mark Bắt đầu and Từ cần biết done, then revisit Bắt đầu: the button goes
+  // to the first unfinished later section.
+  await route('lesson/hsk1-l08/intro');
+  $('#done-btn').click(); await tick();
+  await route('lesson/hsk1-l08/prep');
+  $('#done-btn').click(); await tick();
+  await route('lesson/hsk1-l08/intro');
+  assert.equal(pathCta().getAttribute('href'), '#/lesson/hsk1-l08/knowledge');
+  // On the lesson landing (no section open) the same button keeps its resume
+  // meaning: the last visited unfinished section wins.
+  await route('lesson/hsk1-l08/reader');
+  await route('lesson/hsk1-l08');
+  assert.equal(pathCta().getAttribute('href'), '#/lesson/hsk1-l08/reader');
+});

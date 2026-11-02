@@ -122,6 +122,15 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Chuẩn hoá Bài 5 — D27 (2026-11-02)
+
+- Bài 5 《今天我休息》 ĐẠT CHUẨN D27: PR #67 merge 168b33ba (+ PR #68 sửa trường contentVersion trong data bị sót do thứ tự ghi file); contentVersion 20261102-lesson5-standard1; test 148/148; QA 2 vòng đạt; nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ + phiên bản đúng.
+- Đối chiếu TB tr.027–034 + WB tr.022–024 (khối WB tr.025–030 là đề mô phỏng, D15 không đưa vào).
+- Bổ sung: dialogueGroup 8/7/7; prepGroups (track 5-2/5-4/5-6); learningPath; useWhen + quickCheck 3 điểm chính; bảng tháng 1–12 + bảng thứ nguyên bản vào KP Thời gian; 2 câu đọc hiểu tr.032; 6 câu khởi động + 6 tranh mới; 2 bài tự luyện biến điệu WB tr.024; bài dùng hình để nói 4 tranh mới + đáp án gợi ý kiểm chứng bằng lịch thật; apply thêm trò chơi nhóm tr.034; summaryPoints 4; tra từ phủ 50/50.
+- QA bắt và đã sửa 2 lỗi thật trước phát hành: ví dụ 一口 ghi sai thanh (yí → yì kǒu, 口 là thanh 3) và hình lịch tháng 9 lệch một cột (ngày 7 phải ở cột Chủ nhật). Bài học: khi tự dựng lịch/ví dụ biến điệu phải kiểm chứng bằng lịch thật và quy tắc thanh của chính âm tiết đi kèm.
+- Trạng thái chuẩn hoá: Bài 1, 2, 3, 4, 5 ĐẠT; Bài 6–7 chưa; Bài 8 chuẩn mẫu.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 6 《你的手机号是多少？》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 6 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Sau đó Bài 7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
+
 ## Chuẩn hoá Bài 4 — D27 (2026-11-02)
 
 - Bài 4 《我有两个孩子》 ĐẠT CHUẨN D27: PR #65 merge 9d77dd42; contentVersion 20261102-lesson4-standard1; test 142/142; QA 2 vòng đạt (nội dung 13/13, hình 11/11, vòng 2 sau sửa 5/5); nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ.

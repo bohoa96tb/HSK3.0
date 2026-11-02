@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson3-standard1",
+ "contentVersion": "20261102-img-redraw-l123",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -731,10 +731,10 @@
    ],
    "contextImage": {
     "src": "assets/lesson-01/classroom.webp",
-    "alt": "Học sinh trong lớp chào cô giáo",
-    "caption": "Chào cả lớp · Textbook, trang 002",
-    "width": 436,
-    "height": 239
+    "alt": "Cô giáo đứng trước lớp, học sinh ngồi ở bàn vẫy tay chào cô",
+    "caption": "Chào cả lớp · tranh vẽ mới theo cảnh Textbook tr.002",
+    "width": 760,
+    "height": 760
    },
    "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện bằng hình. Phần phát âm là kiến thức bổ trợ, bạn có thể mở khi cần.",
    "foundationSummaryVi": "Ôn phát âm nền tảng: âm tiết, thanh điệu và vần",
@@ -2083,7 +2083,7 @@
      "type": "multiple-choice",
      "promptVi": "Hình 1: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-1.webp",
-     "imageAlt": "Hình 1 của bài 5, sách bài tập trang 004",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới: hai bạn học vẫy tay chào nhau",
      "options": [
       {
        "id": "1",
@@ -2142,14 +2142,14 @@
      "grammarIds": [
       "kp-hsk1-l01-nin"
      ],
-     "imageCaption": "Hình gốc · Workbook trang 004, bài 5"
+     "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.004, bài chọn hội thoại theo hình (không dùng ảnh sách)"
     },
     {
      "id": "wb-picture-2",
      "type": "multiple-choice",
      "promptVi": "Hình 2: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-2.webp",
-     "imageAlt": "Hình 2 của bài 5, sách bài tập trang 004",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn trao sách cho bạn khác, bạn nhận sách cảm ơn",
      "options": [
       {
        "id": "1",
@@ -2208,14 +2208,14 @@
      "grammarIds": [
       "kp-hsk1-l01-polite"
      ],
-     "imageCaption": "Hình gốc · Workbook trang 004, bài 5"
+     "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.004, bài chọn hội thoại theo hình (không dùng ảnh sách)"
     },
     {
      "id": "wb-picture-3",
      "type": "multiple-choice",
      "promptVi": "Hình 3: hội thoại nào phù hợp?",
      "image": "assets/lesson-01/workbook-scene-3.webp",
-     "imageAlt": "Hình 3 của bài 5, sách bài tập trang 004",
+     "imageAlt": "Tranh minh họa phẳng vẽ mới: cô giáo vẫy tay chào một nhóm học sinh, các bạn vẫy tay đáp lại",
      "options": [
       {
        "id": "1",
@@ -2274,7 +2274,7 @@
      "grammarIds": [
       "kp-hsk1-l01-men"
      ],
-     "imageCaption": "Hình gốc · Workbook trang 004, bài 5"
+     "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.004, bài chọn hội thoại theo hình (không dùng ảnh sách)"
     }
    ]
   },
@@ -2875,10 +2875,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-02/classroom.webp",
-     "alt": "Cô giáo làm quen với các học sinh trong lớp — hình trích từ Textbook Bài 2",
-     "caption": "Làm quen trong lớp học · Textbook, trang 005",
-     "width": 1000,
-     "height": 514
+     "alt": "Cô giáo vẫy tay chào học sinh trong lớp học",
+     "caption": "Làm quen trong lớp học · tranh vẽ mới theo cảnh Textbook tr.005",
+     "width": 760,
+     "height": 760
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện bằng hình. Phần phát âm j, q, x là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: j, q, x và quy tắc viết Pinyin",
@@ -4220,8 +4220,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 1: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-1.webp",
-      "imageAlt": "Hình 1 của bài 4, sách bài tập trang 008",
-      "imageCaption": "Hình gốc · Workbook trang 008, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: hai người bắt tay nhau khi lần đầu gặp mặt",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -4298,8 +4298,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 2: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-2.webp",
-      "imageAlt": "Hình 2 của bài 4, sách bài tập trang 008",
-      "imageCaption": "Hình gốc · Workbook trang 008, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một học sinh vẫy tay tạm biệt cô giáo ở cổng trường",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -4376,8 +4376,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 3: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-3.webp",
-      "imageAlt": "Hình 3 của bài 4, sách bài tập trang 008",
-      "imageCaption": "Hình gốc · Workbook trang 008, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nữ đứng trước lớp tự giới thiệu",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -4454,8 +4454,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 4: hội thoại nào phù hợp?",
       "image": "assets/lesson-02/workbook-scene-4.webp",
-      "imageAlt": "Hình 4 của bài 4, sách bài tập trang 008",
-      "imageCaption": "Hình gốc · Workbook trang 008, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nam cúi đầu xin lỗi, bạn nữ giơ tay ra hiệu không sao",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.008, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -5263,10 +5263,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-03/classroom.webp",
-     "alt": "Lý Văn và Bạch Gia Nguyệt trò chuyện ở bàn cà phê trong trường — hình trích từ Textbook Bài 3",
-     "caption": "Làm quen trong trường · Textbook, trang 010",
-     "width": 420,
-     "height": 505
+     "alt": "Một bạn nam và một bạn nữ trò chuyện ở bàn cà phê trong trường",
+     "caption": "Làm quen trong trường · tranh vẽ mới theo cảnh Textbook tr.010",
+     "width": 760,
+     "height": 760
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện bằng hình. Phần phát âm zh/ch/sh/r/z/c/s là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: zh, ch, sh, r, z, c, s và quy tắc viết w, ui, un",
@@ -6738,8 +6738,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 1: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-1.webp",
-      "imageAlt": "Hình 1 của bài 4, sách bài tập trang 012",
-      "imageCaption": "Hình gốc · Workbook trang 012, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: cô giáo đứng trước bảng đen trong lớp học",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -6813,8 +6813,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 2: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-2.webp",
-      "imageAlt": "Hình 2 của bài 4, sách bài tập trang 012",
-      "imageCaption": "Hình gốc · Workbook trang 012, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một người đàn ông mặc vest nói chuyện điện thoại ở văn phòng",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -6887,8 +6887,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 3: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-3.webp",
-      "imageAlt": "Hình 3 của bài 4, sách bài tập trang 012",
-      "imageCaption": "Hình gốc · Workbook trang 012, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một đôi nam nữ ngồi cạnh nhau trên ghế máy bay trò chuyện",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",
@@ -6961,8 +6961,8 @@
       "type": "multiple-choice",
       "promptVi": "Hình 4: hội thoại nào phù hợp?",
       "image": "assets/lesson-03/workbook-scene-4.webp",
-      "imageAlt": "Hình 4 của bài 4, sách bài tập trang 012",
-      "imageCaption": "Hình gốc · Workbook trang 012, bài 4",
+      "imageAlt": "Tranh minh họa phẳng vẽ mới: một bạn nam giới thiệu bạn gái của mình với một bạn nữ khác",
+      "imageCaption": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Workbook tr.012, bài chọn hội thoại theo hình (không dùng ảnh sách)",
       "options": [
        {
         "id": "1",

@@ -119,7 +119,7 @@ test('lookup on Lesson 1 reading surfaces: every reader token resolves; exercise
 
 test('summary shows the 3 main points', async () => {
   await route('lesson/hsk1-l01/summary');
-  assert.match($('#main').textContent, /Ba điều chính đã học/);
+  assert.match($('#main').textContent, /Những điều chính đã học/);
   assert.match($('#main').textContent, /Chào lịch sự bằng 您/);
 });
 

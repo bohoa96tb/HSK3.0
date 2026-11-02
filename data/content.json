@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson8-continue1",
+ "contentVersion": "20261102-lesson1-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -176,7 +176,8 @@
     "kp-hsk1-l01-polite",
     "kp-hsk1-l01-syllable",
     "kp-hsk1-l01-tones",
-    "kp-hsk1-l01-initials-finals"
+    "kp-hsk1-l01-initials-finals",
+    "kp-hsk1-l01-twister"
    ],
    "sectionIds": [
     "intro",
@@ -758,7 +759,27 @@
      "status": "asr-draft"
     },
     "hanViet": "NHĨ HẢO",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 1
+   },
+   {
+    "id": "tbw-13",
+    "zh": "王老师",
+    "pinyin": "Wáng lǎoshī",
+    "vi": "cô Vương (tên riêng: cô giáo Vương)",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 16,
+      "printedPage": 1,
+      "section": "专有名词 · Tên riêng"
+     }
+    ],
+    "audio": null,
+    "hanViet": "VƯƠNG LÃO SƯ",
+    "hanVietStatus": "verified-editorial",
+    "isProperName": true,
+    "dialogueGroup": 1
    },
    {
     "id": "tbw-2",
@@ -776,7 +797,8 @@
     "audio": null,
     "hanViet": "ĐẠI GIA",
     "hanVietStatus": "verified-editorial",
-    "hanVietNoteVi": "Âm Hán–Việt “đại gia” khác nghĩa “người giàu” trong tiếng Việt hiện nay; ở đây 大家 nghĩa là mọi người."
+    "hanVietNoteVi": "Âm Hán–Việt “đại gia” khác nghĩa “người giàu” trong tiếng Việt hiện nay; ở đây 大家 nghĩa là mọi người.",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-3",
@@ -798,7 +820,8 @@
      "status": "asr-draft"
     },
     "hanViet": "HẢO",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-4",
@@ -820,7 +843,8 @@
      "status": "asr-draft"
     },
     "hanViet": "HỌC SINH",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-5",
@@ -842,7 +866,8 @@
      "status": "asr-draft"
     },
     "hanViet": "MÔN",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-6",
@@ -864,7 +889,8 @@
      "status": "asr-draft"
     },
     "hanViet": "LÃO SƯ",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-7",
@@ -886,7 +912,8 @@
      "status": "asr-draft"
     },
     "hanViet": "NÂM",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-8",
@@ -908,7 +935,8 @@
      "status": "asr-draft"
     },
     "hanViet": "NHĨ MÔN",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 2
    },
    {
     "id": "tbw-9",
@@ -930,7 +958,8 @@
      "status": "asr-draft"
     },
     "hanViet": "TẠ TẠ",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 3
    },
    {
     "id": "tbw-10",
@@ -952,7 +981,8 @@
      "status": "asr-draft"
     },
     "hanViet": "BẤT KHÁCH KHÍ",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 3
    },
    {
     "id": "tbw-11",
@@ -974,7 +1004,8 @@
      "status": "asr-draft"
     },
     "hanViet": "ĐỒNG HỌC",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 3
    },
    {
     "id": "tbw-12",
@@ -996,7 +1027,8 @@
      "status": "asr-draft"
     },
     "hanViet": "TÁI KIẾN",
-    "hanVietStatus": "verified-editorial"
+    "hanVietStatus": "verified-editorial",
+    "dialogueGroup": 3
    }
   ],
   "knowledgePoints": [
@@ -1032,7 +1064,24 @@
     "sentenceIds": [
      "tb-s4"
     ],
-    "exerciseIds": []
+    "exerciseIds": [],
+    "useWhenVi": "Khi chào hoặc nói chuyện với người lớn tuổi, thầy cô và người mình kính trọng, dùng 您 thay cho 你 để tỏ lịch sự.",
+    "quickCheck": {
+     "questionVi": "Thử ngay: chào cô giáo, câu nào lịch sự hơn?",
+     "stemZh": "老师，__好！",
+     "options": [
+      {
+       "zh": "您",
+       "vi": "kính trọng"
+      },
+      {
+       "zh": "你",
+       "vi": "thân mật"
+      }
+     ],
+     "answer": "1",
+     "explanationVi": "Với thầy cô, dùng 您：老师，您好！— Chúng em chào cô ạ."
+    }
    },
    {
     "id": "kp-hsk1-l01-men",
@@ -1065,7 +1114,7 @@
       }
      }
     ],
-    "positionVi": "Quan sát phần được dùng trong các câu dưới đây.",
+    "positionVi": "们 đứng ngay sau từ chỉ người （你们 các bạn, 同学们 các bạn học sinh), không đứng một mình.",
     "sourceRefs": [
      {
       "sourceId": "src-hsk1-textbook-pdf",
@@ -1078,7 +1127,24 @@
      "tb-s5",
      "tb-s9"
     ],
-    "exerciseIds": []
+    "exerciseIds": [],
+    "useWhenVi": "Khi nói về nhiều người, thêm 们 ngay sau đại từ hoặc danh từ chỉ người.",
+    "quickCheck": {
+     "questionVi": "Thử ngay: “các bạn” nói thế nào?",
+     "stemZh": "__好！",
+     "options": [
+      {
+       "zh": "你们",
+       "vi": "các bạn"
+      },
+      {
+       "zh": "你",
+       "vi": "bạn (một người)"
+      }
+     ],
+     "answer": "1",
+     "explanationVi": "你们 = 你 + 们： thêm 们 để chỉ nhiều người — 你们好！"
+    }
    },
    {
     "id": "kp-hsk1-l01-polite",
@@ -1125,7 +1191,24 @@
      "tb-s8",
      "tb-s10"
     ],
-    "exerciseIds": []
+    "exerciseIds": [],
+    "useWhenVi": "Khi được giúp đỡ, nói 谢谢 để cảm ơn; người được cảm ơn đáp 不客气. Khi chia tay, nói 再见.",
+    "quickCheck": {
+     "questionVi": "Thử ngay: bạn nói 谢谢！thì đáp lại thế nào?",
+     "stemZh": "谢谢！— __",
+     "options": [
+      {
+       "zh": "不客气！",
+       "vi": "Không có gì!"
+      },
+      {
+       "zh": "再见！",
+       "vi": "Tạm biệt!"
+      }
+     ],
+     "answer": "1",
+     "explanationVi": "Đúng cặp câu trong Hội thoại 3: 谢谢！— 不客气！"
+    }
    },
    {
     "id": "kp-hsk1-l01-syllable",
@@ -1221,6 +1304,30 @@
       "pinyin": "tāo táo tǎo tào",
       "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
       "audio": null
+     },
+     {
+      "zh": "—",
+      "pinyin": "lōu lóu lǒu lòu",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+      "audio": null
+     },
+     {
+      "zh": "—",
+      "pinyin": "hān hán hǎn hàn",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+      "audio": null
+     },
+     {
+      "zh": "—",
+      "pinyin": "pāng páng pǎng pàng",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+      "audio": null
+     },
+     {
+      "zh": "—",
+      "pinyin": "gēn gén gěn gèn",
+      "noteVi": "nhóm âm tiết luyện nghe–đọc ở 听读练 bài 1, trang in 004",
+      "audio": null
      }
     ],
     "positionVi": "Xem đường thanh ở trang in 003: thanh 1 ngang cao, thanh 2 đi lên, thanh 3 võng xuống rồi lên, thanh 4 đi xuống.",
@@ -1305,6 +1412,36 @@
     ],
     "sentenceIds": [],
     "exerciseIds": []
+   },
+   {
+    "id": "kp-hsk1-l01-twister",
+    "kind": "foundation-pronunciation",
+    "kindLabel": "Nền tảng · Phát âm",
+    "title": "Đọc vè luyện âm （跟读绕口令）",
+    "pattern": "Đọc chậm từng câu, rồi đọc liền cả bài như sách",
+    "explanationVi": "Bài đọc vè ở cuối bài (Textbook tr.004, track 1-7) luyện hai âm tiết dễ lẫn: mā/mǎ (mẹ/ngựa) và má (cây đay). Nghe track gốc của sách rồi đọc theo; loa nhỏ ở từng câu là giọng máy của thiết bị.",
+    "audioTrackId": "trk-tb-l01-7",
+    "audioTrackLabelVi": "Track 1-7",
+    "examples": [
+     {
+      "zh": "妈妈种麻，我放马。",
+      "pinyin": "Māma zhòng má, wǒ fàng mǎ.",
+      "noteVi": "Mẹ trồng cây đay, tôi thả ngựa."
+     },
+     {
+      "zh": "马吃麻，妈骂马。",
+      "pinyin": "Mǎ chī má, mā mà mǎ.",
+      "noteVi": "Ngựa ăn cây đay, mẹ mắng ngựa."
+     }
+    ],
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 19,
+      "printedPage": 4,
+      "section": "跟读绕口令 · Đọc vè"
+     }
+    ]
    }
   ],
   "reader": {
@@ -1861,6 +1998,15 @@
       }
      ],
      "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+    },
+    {
+     "id": "trk-tb-l01-7",
+     "label": "Đọc vè luyện âm · 绕口令",
+     "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-01/01-7.mp3",
+     "durationSec": 17.235,
+     "bookRef": "Textbook · track 1-7",
+     "segments": [],
+     "segmentsStatus": "unverified"
     }
    ],
    "passages": [
@@ -2385,6 +2531,28 @@
    "samplePassageIds": [
     "tb-dialogue-2",
     "tb-dialogue-3"
+   ],
+   "tasks": [
+    {
+     "id": "speak-l01-1",
+     "titleVi": "Đóng vai: chào cả lớp",
+     "situationVi": "Ngày đầu đến lớp: cô giáo chào cả lớp, học sinh chào cô bằng 您, Tiểu Ngữ chào mọi người.",
+     "sampleZh": "大家好！ — 老师，您好！ — 你们好！ — 你好，小语！",
+     "samplePinyin": "Dàjiā hǎo! — Lǎoshī, nín hǎo! — Nǐmen hǎo! — Nǐ hǎo, Xiǎoyǔ!",
+     "sampleVi": "Chào mọi người! — Chúng em chào cô ạ! — Chào các bạn! — Chào bạn, Tiểu Ngữ!",
+     "swapVi": "Luyện một mình: đọc cả bốn lượt. Luyện theo cặp: một người đóng vai cô giáo và Tiểu Ngữ, một người đóng vai học sinh, rồi đổi vai.",
+     "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 2 （课文 2, Textbook tr.002); hoạt động đóng vai và luyện theo cặp cũng ở tr.002."
+    },
+    {
+     "id": "speak-l01-2",
+     "titleVi": "Đóng vai: cảm ơn và tạm biệt",
+     "situationVi": "Cuối buổi học: học sinh cảm ơn Tiểu Ngữ, cô giáo chào tạm biệt cả lớp và học sinh đáp lại.",
+     "sampleZh": "谢谢！ — 不客气！ — 同学们，再见！ — 老师，再见！",
+     "samplePinyin": "Xièxie! — Bú kèqi! — Tóngxuémen, zàijiàn! — Lǎoshī, zàijiàn!",
+     "sampleVi": "Cảm ơn! — Không có gì! — Tạm biệt các em! — Tạm biệt cô ạ!",
+     "swapVi": "Luyện theo cặp và dùng tên thật của nhau, như yêu cầu của sách ở tr.003.",
+     "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 3 （课文 3, Textbook tr.003); hoạt động đóng vai và luyện theo cặp ở tr.003."
+    }
    ]
   },
   "foundationWords": [
@@ -2550,7 +2718,102 @@
    }
   ],
   "selfCheckIntroVi": "Workbook trang 004, bài 2–4. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
-  "selfCheckListenVi": "▶ Nghe track Workbook 1-2"
+  "selfCheckListenVi": "▶ Nghe track Workbook 1-2",
+  "prepSummaryVi": "12 từ mới + 1 tên riêng, chia theo 3 hội thoại.",
+  "prepGroups": [
+   {
+    "id": "l01-vocab-1",
+    "dialogueId": "tb-dialogue-1",
+    "titleVi": "Hội thoại 1 · Chào cô và Tiểu Ngữ",
+    "trackId": "trk-tb-l01-2",
+    "trackLabelVi": "Track 1-2"
+   },
+   {
+    "id": "l01-vocab-2",
+    "dialogueId": "tb-dialogue-2",
+    "titleVi": "Hội thoại 2 · Chào cả lớp",
+    "trackId": "trk-tb-l01-4",
+    "trackLabelVi": "Track 1-4"
+   },
+   {
+    "id": "l01-vocab-3",
+    "dialogueId": "tb-dialogue-3",
+    "titleVi": "Hội thoại 3 · Cảm ơn và tạm biệt",
+    "trackId": "trk-tb-l01-6",
+    "trackLabelVi": "Track 1-6"
+   }
+  ],
+  "learningPath": [
+   {
+    "step": 1,
+    "titleVi": "Bắt đầu",
+    "descVi": "Xem mục tiêu của bài.",
+    "sectionId": "intro"
+   },
+   {
+    "step": 2,
+    "titleVi": "Chào cô và Tiểu Ngữ",
+    "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → chào cô và Tiểu Ngữ.",
+    "sectionId": "prep",
+    "dialogueId": "tb-dialogue-1"
+   },
+   {
+    "step": 3,
+    "titleVi": "Chào cả lớp",
+    "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → nói về nhiều người bằng 们。",
+    "sectionId": "reader",
+    "dialogueId": "tb-dialogue-2"
+   },
+   {
+    "step": 4,
+    "titleVi": "Cảm ơn và tạm biệt",
+    "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → cảm ơn và chào tạm biệt.",
+    "sectionId": "reader",
+    "dialogueId": "tb-dialogue-3"
+   },
+   {
+    "step": 5,
+    "titleVi": "Luyện tổng hợp",
+    "descVi": "Bài chính, nghe–viết phát âm và chọn lời thoại đúng.",
+    "sectionId": "exercises"
+   },
+   {
+    "step": 6,
+    "titleVi": "Tổng kết",
+    "descVi": "Ba điều cần nhớ, kết quả và câu cần ôn.",
+    "sectionId": "summary"
+   }
+  ],
+  "summaryPoints": [
+   {
+    "titleVi": "Chào lịch sự bằng 您",
+    "exampleZh": "老师，您好！",
+    "exampleVi": "Chúng em chào cô ạ!"
+   },
+   {
+    "titleVi": "Nói về nhiều người bằng 们",
+    "exampleZh": "同学们，再见！",
+    "exampleVi": "Tạm biệt các em!"
+   },
+   {
+    "titleVi": "Cảm ơn và đáp lại",
+    "exampleZh": "谢谢！",
+    "exampleVi": "Cảm ơn! (đáp: 不客气！— Không có gì!)"
+   }
+  ],
+  "lookup": {
+   "introVi": "Chạm vào một từ trong lời thoại, ví dụ hoặc câu mẫu để tra nhanh. Muốn tra cả cụm, bấm “Tra cụm” ngay dưới câu rồi chạm từ đầu và từ cuối.",
+   "extras": [
+    {
+     "zh": "小语",
+     "pinyin": "Xiǎoyǔ",
+     "hanViet": "TIỂU NGỮ",
+     "vi": "Tiểu Ngữ — tên của trợ giảng AI trong sách",
+     "noteVi": "Tên riêng (người)."
+    }
+   ],
+   "phrases": []
+  }
  },
  "editorialAudit": {
   "date": "2026-10-31",

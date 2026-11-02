@@ -135,6 +135,10 @@ chưa chứng minh được điều đó.
 - Khép vòng QA **trong nhánh** trước phát hành: báo lỗi → sửa → QA kiểm lại bản cuối → hồi quy → cập nhật tài liệu → merge. Gom sửa lỗi + tài liệu vào PR bài học khi có thể.
 - Báo cáo mục kiểm thử tách rõ: test tự động / đối chiếu trực quan bản in / đối chiếu ASR / kiểm nghe thực tế / kiểm giao diện (trình duyệt, iframe, thiết bị thật).
 
+## 11. Chuẩn bài học theo Bài 8 (D27, từ 02/11/2026)
+
+Bài 8 (contentVersion `20261102-lesson8-continue1`) là chuẩn chất lượng/tổ chức cho mọi bài, người dùng đã duyệt — áp dụng không cần xin duyệt lại. Đọc `docs/LESSON_STANDARD.md` trước khi biên soạn/nâng cấp bất kỳ bài nào; chạy `node scripts/audit-standard.mjs` để xem độ phù hợp cơ giới của từng bài (báo cáo này không thay QA nội dung theo mục 9). Thứ tự công việc: chuẩn hoá Bài 1→8 trước, sau đó mới làm bài mới theo giáo trình; `nextTask` trong `docs/CHECKPOINT.md` là nguồn thứ tự duy nhất.
+
 ## 10. Chuẩn minh họa và đoạn audio (từ Bài 8, theo D19)
 
 Bài tập có hình dùng tranh minh họa phẳng vẽ mới (không dùng ảnh sách khi phát hành), hình phải đủ ý nghĩa và chỉ có một đáp án đúng rõ ràng, lưu truy vết + trạng thái quyền từng hình, phát hành dạng file WebP riêng đã tối ưu, nhãn chữ của lựa chọn hình chỉ hiện sau khi kiểm tra. Quyền của hình vẽ mới tách riêng khỏi quyền câu hỏi/nội dung sách và audio gốc (vẫn `unknown`). Mốc đoạn audio phải kiểm bằng ASR mức từ/khoảng lặng và thử phát trên trình duyệt thông thường trước phát hành; chưa nghe bằng tai và chưa thử thiết bị thật thì giữ `asr-draft` và ghi rõ. Chi tiết: CONTENT_STANDARD mục D19.

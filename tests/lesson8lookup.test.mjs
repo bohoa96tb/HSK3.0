@@ -138,11 +138,11 @@ test('lookup: phrase mode — curated phrase resolves whole, unknown span lists 
   pop.querySelector('[data-lk-close]').click();
 });
 
-test('lookup: never wired into exercises; other lessons stay untouched', async () => {
+test('lookup: never wired into exercises; lessons not yet standardized stay untouched', async () => {
   await route('lesson/hsk1-l08/exercises');
   assert.equal($$('#main [data-tok]').length, 0);
-  await route('lesson/hsk1-l01/reader');
-  assert.equal($$('#main [data-tok]').length, 0);
+  await route('lesson/hsk1-l02/reader');
+  assert.equal($$('#main [data-tok]').length, 0); // lessons not yet standardized keep plain text
   await route('lesson/hsk1-l08/apply');
   assert.ok($$('#main [data-tok]').length > 0, 'speaking samples are tokenized');
 });

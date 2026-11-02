@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson8-continue1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson8-continue1";
-import * as player from "./player.js?v=20261102-lesson8-continue1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson1-standard1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson1-standard1";
+import * as player from "./player.js?v=20261102-lesson1-standard1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -381,7 +381,8 @@ function sectionPrepHtml(content) {
  const body = groups ? groups.map((g, gi) => {
    const words = content.prepWords.filter((w) => w.dialogueGroup === gi + 1);
    const track = content.reader.audioTracks.find((t) => t.id === g.trackId);
-   return `<h3 class="vocab-group-title">${esc(g.titleVi)} <span class="tag">${words.length} từ${gi === 2 ? " + 1 tên riêng" : ""}</span></h3>
+   const properN = words.filter((w) => w.isProperName).length;
+   return `<h3 class="vocab-group-title">${esc(g.titleVi)} <span class="tag">${words.length - properN} từ${properN ? ` + ${properN} tên riêng` : ""}</span></h3>
    ${track ? `<p class="row-actions"><button class="btn" type="button" data-play-vocab-track="${esc(track.id)}">▶ Nghe cả nhóm từ — audio gốc của sách (${esc(g.trackLabelVi)})</button> <a class="btn ghost" href="#/lesson/${content.lessonId}/reader?passage=${esc(g.dialogueId)}">Tới hội thoại này →</a></p>` : ""}
    <div class="word-grid">${words.map(wordCardHtml).join('')}</div>`;
  }).join('') : `<div class="word-grid">${content.prepWords.map(wordCardHtml).join('')}</div>`;
@@ -408,6 +409,7 @@ function knowledgeCardHtml(kp,{linkBack=null,lessonId=null}={}) {
  ${kp.useWhenVi ? `<p class="lead-small"><strong>Khi nào dùng?</strong> ${esc(kp.useWhenVi)}</p>` : `<p class="lead-small">${esc(kp.explanationVi)}</p>`}
  <p class="pattern">${esc(kp.pattern)}</p>
  ${kp.useWhenVi ? `<details class="study-tip"><summary>Giải thích thêm</summary><p>${esc(kp.explanationVi)}</p>${kp.positionVi ? `<p>${esc(kp.positionVi)}</p>` : ""}</details>` : ""}
+ ${kp.audioTrackId ? `<p class="row-actions"><button class="btn" type="button" data-play-kp-track="${esc(kp.audioTrackId)}" data-kp-lesson="${esc(kpLesson)}">▶ Nghe bài đọc gốc của sách (${esc(kp.audioTrackLabelVi || "track của bài")})</button></p>` : ""}
  ${visibleExamples.map(exampleHtml).join('')}
  ${extraExamples.length ? `<details class="study-tip"><summary>Xem thêm ví dụ của sách</summary>${extraExamples.map(exampleHtml).join('')}</details>` : ""}
  ${qc ? `<div class="quick-check" data-quick-check="${esc(kp.id)}"><h3>Thử ngay</h3><p>${esc(qc.questionVi)}</p><p class="zh-inline" lang="zh-CN">${esc(qc.stemZh)}</p><div class="row-actions">${qc.options.map((o) => `<button class="btn" type="button" data-quick-opt="${esc(o.zh)}" data-quick-answer="${esc(qc.answer)}"><span lang="zh-CN">${esc(o.zh)}</span>${o.vi ? ` · ${esc(o.vi)}` : ""}</button>`).join("")}</div><p class="quick-feedback" role="status" aria-live="polite" hidden></p><p class="quick-explain" hidden>${esc(qc.explanationVi)}</p></div>` : ""}
@@ -439,9 +441,9 @@ let _baseLexicon = null;
 function baseLexicon() {
   if (_baseLexicon) return _baseLexicon;
   const map = new Map();
-  for (const c of CONTENT.additionalLessons || []) {
+  for (const c of [CONTENT.pilot, ...(CONTENT.additionalLessons || [])]) {
     for (const w of c.prepWords || []) {
-      if (!map.has(w.zh)) map.set(w.zh, { zh: w.zh, pinyin: w.pinyin, hanViet: w.hanViet || null, vi: w.vi, hanVietNoteVi: w.hanVietNoteVi || null, originVi: `Từ vựng đã đối chiếu của dự án · Bài ${c.lessonNumber || ""}`.trim() });
+      if (!map.has(w.zh)) map.set(w.zh, { zh: w.zh, pinyin: w.pinyin, hanViet: w.hanViet || null, vi: w.vi, hanVietNoteVi: w.hanVietNoteVi || null, originVi: `Từ vựng đã đối chiếu của dự án · Bài ${lessonById(c.lessonId)?.lessonNumber || c.lessonNumber || ""}`.trim() });
     }
   }
   _baseLexicon = map;
@@ -567,6 +569,13 @@ document.addEventListener("click", (e) => {
   if (closeBtn) { closeLookup(); return; }
   const speakBtn = e.target.closest("[data-lk-speak]");
   if (speakBtn) { lookupSpeak(speakBtn.dataset.lkSpeak, speakBtn.parentElement.querySelector("[data-lk-msg]")); return; }
+  const kpTrackBtn = e.target.closest("[data-play-kp-track]");
+  if (kpTrackBtn) {
+    const kc = contentFor(kpTrackBtn.dataset.kpLesson);
+    const track = kc?.reader.audioTracks.find((t) => t.id === kpTrackBtn.dataset.playKpTrack);
+    if (track) player.playTrack(track, { rate: settings().playbackRate });
+    return;
+  }
   const phraseBtn = e.target.closest("[data-phrase-btn]");
   if (phraseBtn) {
     clearPhraseSelection(); closeLookup();
@@ -963,7 +972,7 @@ function sectionApplyHtml(content) {
   const done = loadProgress().speakingDone || {};
   if (Array.isArray(a.tasks) && a.tasks.length) {
     return `<section class="card" data-anchor><h2>Tự nói: ${esc(a.titleVi)}</h2>
-    <p class="muted">Mỗi nhiệm vụ rất ngắn. Bạn có thể tự luyện một mình hoặc luyện cùng một người khác. App không chấm phát âm và không chấm nói — nút “Đã luyện” chỉ ghi lại bạn đã tập, không có nghĩa là đã nắm vững. Ba nhiệm vụ này là cách tổ chức lại các hoạt động của sách theo tình huống; mỗi nhiệm vụ ghi rõ câu mẫu lấy từ đâu.</p>
+    <p class="muted">Mỗi nhiệm vụ rất ngắn. Bạn có thể tự luyện một mình hoặc luyện cùng một người khác. App không chấm phát âm và không chấm nói — nút “Đã luyện” chỉ ghi lại bạn đã tập, không có nghĩa là đã nắm vững. Các nhiệm vụ này là cách tổ chức lại các hoạt động của sách theo tình huống; mỗi nhiệm vụ ghi rõ câu mẫu lấy từ đâu.</p>
     ${supportBarHtml('sentences')}
     ${a.tasks.map((t) => `<article class="speak-task" id="${esc(t.id)}" data-anchor><h3>${esc(t.titleVi)}</h3>
       <p>${esc(t.situationVi)}</p>

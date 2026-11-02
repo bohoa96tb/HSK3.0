@@ -251,3 +251,7 @@ Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê 
 
 - Chữ giải thích về hệ thống (chấm điểm, ghi nhận hỗ trợ, biên soạn/đối chiếu, kỹ thuật) không hiện mặc định trong luồng học; đặt trong `details.info-fold` nhãn người học hoặc rút thành một câu ngắn đúng điểm dùng (chuẩn D24, DECISIONS). Cảnh báo/ghi chú quyền nguồn giữ nguyên ý nghĩa.
 - Tra từ bằng chạm chỉ bật ở bài có khối `lookup` và chỉ trên bề mặt đọc (lời thoại, ví dụ kiến thức, câu mẫu tự nói, ví dụ tổng kết). Không bao giờ gắn vào bề mặt kiểm tra trước khi chấm. Mục từ điển chỉ lấy từ dữ liệu đã đối chiếu của dự án + mục bổ sung kiểm duyệt ghi trong `lookup.extras/phrases` (status verified-editorial); trường chưa có căn cứ (điển hình Hán–Việt của chữ ít gặp) để null và hiển thị "Chưa có dữ liệu đã kiểm chứng" — cấm điền đoán. Giấy phép nguồn ngoài chưa rõ thì không nhập (CVDICT là ví dụ đã loại).
+
+## Chuẩn bài học theo Bài 8 (D27)
+
+Chuẩn tổ chức bài học áp dụng toàn dự án (cấu trúc, lộ trình, từ mới, kiến thức, bài tập, tra từ, audio, điều kiện hoàn thành) nằm tại `docs/LESSON_STANDARD.md`. File này (CONTENT_STANDARD) giữ các quy tắc nội dung chi tiết theo mục; khi có mâu thuẫn về tổ chức bài, LESSON_STANDARD là chuẩn đã được người dùng duyệt theo Bài 8.

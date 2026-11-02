@@ -8,7 +8,7 @@ const lessons = [content.pilot, ...content.additionalLessons];
 // ---- Data: Han-Viet coverage + context-correct readings --------------------
 test('han-viet: all prep words carry a verified, context-checked reading', () => {
   const words = lessons.flatMap((c) => c.prepWords);
-  assert.equal(words.length, 161); // 137 through Lesson 7 + 24 in Lesson 8
+  assert.equal(words.length, 162); // 137 through Lesson 7 + 24 in Lesson 8 + the 王老师 proper noun restored to Lesson 1 in D27
   for (const w of words) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);

@@ -141,7 +141,7 @@ test('lookup: phrase mode — curated phrase resolves whole, unknown span lists 
 test('lookup: never wired into exercises; lessons not yet standardized stay untouched', async () => {
   await route('lesson/hsk1-l08/exercises');
   assert.equal($$('#main [data-tok]').length, 0);
-  await route('lesson/hsk1-l03/reader'); // Bài 2 đã chuẩn hoá ở D27; Bài 3 là bài chưa có tra từ
+  await route('lesson/hsk1-l04/reader'); // Bài 2 và 3 đã chuẩn hoá ở D27; Bài 4 là bài chưa có tra từ
   assert.equal($$('#main [data-tok]').length, 0); // lessons not yet standardized keep plain text
   await route('lesson/hsk1-l08/apply');
   assert.ok($$('#main [data-tok]').length > 0, 'speaking samples are tokenized');

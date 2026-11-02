@@ -25,20 +25,21 @@ const $ = (s) => document.querySelector(s);
 test('lesson 3 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l3, 'additionalLessons must contain hsk1-l03');
   assert.match(content.contentVersion, /^2026/);
-  assert.equal(l3.prepWords.length, 18);
+  assert.equal(l3.prepWords.length, 22); // D27: 18 regular + 4 proper nouns the book lists per dialogue （中国/法国/中文/泰国）
+  assert.equal(l3.prepWords.filter((w) => !w.isProperName).length, 18);
   for (const w of l3.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
   }
   assert.equal(l3.prepWords.find((w) => w.zh === '姐姐').hanViet, 'THƯ THƯ');
   assert.equal(l3.prepWords.find((w) => w.zh === '还').hanViet, 'HOÀN');
-  assert.equal(l3.knowledgePoints.length, 5);
+  assert.equal(l3.knowledgePoints.length, 6); // + tongue-twister foundation point (D27)
   assert.equal(l3.knowledgePoints.filter((k) => k.kind !== 'foundation-pronunciation').length, 3);
   assert.equal(l3.reader.sentences.length, 15);
   assert.equal(l3.reader.passages.length, 3);
-  assert.equal(l3.reader.audioTracks.length, 8);
+  assert.equal(l3.reader.audioTracks.length, 9); // + twister track 3-7 (D27)
   assert.deepEqual(l3.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb')).map((t) => t.durationSec),
-    [8.322, 10.016, 17.522, 13.847, 20.832, 26.071]);
+    [8.322, 10.016, 17.522, 13.847, 20.832, 26.071, 23.647]);
   for (const g of l3.reader.passages) {
     const t = l3.reader.audioTracks.find((x) => x.id === g.audioTrackId);
     assert.equal(t.segments.length, g.sentenceIds.length, g.id);
@@ -59,11 +60,12 @@ test('lesson 3 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 3 picture exercises: images exist, answers grade, review links fit the answers', () => {
-  assert.equal(l3.exerciseSet.items.length, 4);
-  assert.deepEqual(l3.exerciseSet.items.map((i) => i.answer), ['3', '4', '1', '2']);
+  assert.equal(l3.exerciseSet.items.filter((i) => i.image).length, 4);
+  assert.deepEqual(l3.exerciseSet.items.filter((i) => i.image).map((i) => i.answer), ['3', '4', '1', '2']);
+  assert.equal(l3.exerciseSet.items.filter((i) => i.id.startsWith('tb3-fill')).length, 5); // D27: the book's fill-in-the-blank set
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
-  for (const item of l3.exerciseSet.items) {
+  for (const item of l3.exerciseSet.items.filter((i) => i.image)) { // picture items only; the fill-in set is covered by lesson3standard tests
     assert.ok(existsSync(new URL('../' + item.image, import.meta.url)), item.image);
     assert.equal(gradeChoice(item, item.answer).correct, true);
     assert.equal(gradeChoice(item, item.answer === '1' ? '2' : '1').correct, false);
@@ -81,7 +83,7 @@ test('lesson 3 picture exercises: images exist, answers grade, review links fit 
 });
 
 test('lesson 3 dictation prompts match the printed workbook (12/15/15 cells)', () => {
-  assert.deepEqual(l3.selfCheckTasks.map((t) => t.prompts.length), [12, 15, 15]);
+  assert.deepEqual(l3.selfCheckTasks.filter((t) => t.kind !== 'speaking').map((t) => t.prompts.length), [12, 15, 15]);
   assert.deepEqual(l3.selfCheckTasks[2].prompts,
     ['che', 'ren', 'chang', 'zao', 'shou', 'zhen', 'sui', 'sheng', 'ri', 'zhong', 'shui', 'zuo', 'chuang', 'shu', 'si']);
   assert.equal(l3.selfCheckTasks[0].prompts[0], '__ ān');

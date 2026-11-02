@@ -144,8 +144,8 @@ test('regression: shared components keep working for Lessons 1 and 7', async () 
   assert.match($('#main').textContent, /Bốn điều cần nhớ/); // Lesson 7 has no tips: count unchanged
   await route('lesson/hsk1-l01/exercises');
   assert.equal($('#exercise-card').querySelectorAll('.tog-pinyin-ex').length, 0);
-  await route('lesson/hsk1-l03/intro');
-  assert.ok(!$('.learn-path'), 'lessons without a path keep the previous intro'); // Bài 2 gained its path in D27; Bài 3 is the unstandardized control
+  await route('lesson/hsk1-l04/intro');
+  assert.ok(!$('.learn-path'), 'lessons without a path keep the previous intro'); // Bài 2 và 3 gained their paths in D27; Bài 4 is the unstandardized control
 });
 
 test('QA regressions (D23 round): support records only the main set; mock-only summary is not contradictory', async () => {

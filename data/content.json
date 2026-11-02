@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson6-standard1",
+ "contentVersion": "20261102-lesson7-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -18363,10 +18363,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-07/classroom.webp",
-     "alt": "Bạch Gia Nguyệt và Annie đang nói chuyện điện thoại — hình trích từ Textbook Bài 7",
-     "caption": "Đang gọi điện · Textbook, trang 046",
-     "width": 1269,
-     "height": 488
+     "alt": "Tranh vẽ: Bạch Gia Nguyệt và Annie đang nói chuyện điện thoại, mỗi người cầm điện thoại áp vào tai — mô phỏng theo ảnh Textbook Bài 7",
+     "caption": "Đang gọi điện · tranh vẽ mới theo cảnh Textbook tr.046",
+     "width": 760,
+     "height": 520
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (thanh mẫu đưa hơi và vận mẫu mũi) là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: phân biệt thanh mẫu đưa hơi/không đưa hơi và vận mẫu mũi trước/sau",
@@ -18395,7 +18395,8 @@
       "start": 0.4,
       "end": 1.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-2",
@@ -18417,7 +18418,8 @@
       "start": 3.4,
       "end": 4.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-3",
@@ -18439,7 +18441,8 @@
       "start": 5.7,
       "end": 6.45,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-4",
@@ -18461,7 +18464,8 @@
       "start": 8.38,
       "end": 9.45,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-5",
@@ -18483,7 +18487,8 @@
       "start": 11.44,
       "end": 12.1,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-6",
@@ -18505,7 +18510,8 @@
       "start": 13.43,
       "end": 14.12,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-7",
@@ -18527,7 +18533,8 @@
       "start": 15.4,
       "end": 16.52,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-8",
@@ -18550,7 +18557,8 @@
       "start": 18.42,
       "end": 19.05,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-9",
@@ -18572,7 +18580,8 @@
       "start": 20.58,
       "end": 20.9,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l07w-10",
@@ -18594,7 +18603,8 @@
       "start": 0.36,
       "end": 1.58,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-11",
@@ -18616,7 +18626,8 @@
       "start": 3.87,
       "end": 4.54,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-12",
@@ -18638,7 +18649,8 @@
       "start": 6.22,
       "end": 7.31,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-13",
@@ -18660,7 +18672,8 @@
       "start": 9.19,
       "end": 9.88,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-14",
@@ -18682,7 +18695,8 @@
       "start": 11.56,
       "end": 12.72,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-15",
@@ -18704,7 +18718,8 @@
       "start": 14.8,
       "end": 15.1,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-16",
@@ -18726,7 +18741,8 @@
       "start": 17.0,
       "end": 17.51,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-17",
@@ -18748,7 +18764,8 @@
       "start": 19.14,
       "end": 20.25,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l07w-18",
@@ -18770,7 +18787,8 @@
       "start": 0.39,
       "end": 1.08,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-19",
@@ -18792,7 +18810,8 @@
       "start": 2.78,
       "end": 3.43,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-20",
@@ -18815,7 +18834,8 @@
       "start": 5.35,
       "end": 7.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-21",
@@ -18837,7 +18857,8 @@
       "start": 9.39,
       "end": 10.27,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-22",
@@ -18859,7 +18880,8 @@
       "start": 12.33,
       "end": 13.17,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-23",
@@ -18881,7 +18903,8 @@
       "start": 15.41,
       "end": 16.35,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-24",
@@ -18903,7 +18926,8 @@
       "start": 18.35,
       "end": 19.46,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-25",
@@ -18925,7 +18949,8 @@
       "start": 21.31,
       "end": 21.97,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-26",
@@ -18947,7 +18972,8 @@
       "start": 23.49,
       "end": 24.27,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l07w-27",
@@ -18970,7 +18996,8 @@
       "start": 26.0,
       "end": 27.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -19001,6 +19028,31 @@
        "zh": "晚上九点十分",
        "pinyin": "Wǎnshang jiǔ diǎn shí fēn",
        "noteVi": "9 giờ 10 tối — câu luyện đọc của sách (đúng mười phút không bỏ 分）"
+      },
+      {
+       "zh": "九点",
+       "pinyin": "jiǔ diǎn",
+       "noteVi": "Giờ đúng trong bảng luyện đọc của sách (Textbook tr.047): 9:00."
+      },
+      {
+       "zh": "二十点",
+       "pinyin": "èrshí diǎn",
+       "noteVi": "Giờ đúng trong bảng luyện đọc của sách (Textbook tr.047): 20:00."
+      },
+      {
+       "zh": "二十一点十分",
+       "pinyin": "èrshíyī diǎn shí fēn",
+       "noteVi": "Ví dụ trong bảng luyện đọc của sách (Textbook tr.047): 21:10 — đúng mười phút thì không được lược bỏ 分。"
+      },
+      {
+       "zh": "上午",
+       "pinyin": "shàngwǔ",
+       "noteVi": "Từ chỉ buổi trong phần luyện đọc của sách (Textbook tr.047)."
+      },
+      {
+       "zh": "中午十二点",
+       "pinyin": "zhōngwǔ shí’èr diǎn",
+       "noteVi": "Ví dụ luyện đọc của sách (Textbook tr.047): buổi trưa + giờ cụ thể."
       }
      ],
      "positionVi": "Từ chỉ buổi đứng trước điểm giờ; điểm giờ đứng trước động từ khi làm trạng ngữ (xem điểm về vị trí trạng ngữ).",
@@ -19020,7 +19072,24 @@
      "exerciseIds": [
       "wb7-text-4",
       "wb7-comp-2"
-     ]
+     ],
+     "useWhenVi": "Khi nói giờ cụ thể: giờ + 点 + phút + 分. Phút dưới 10 phải đọc 零 (22:05 = 二十二点零五）; đúng mười phút không được bỏ 分.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: 22:05 đọc thế nào mới đúng quy tắc của sách?",
+      "stemZh": "22:05",
+      "options": [
+       {
+        "zh": "二十二点零五",
+        "vi": "đúng — phút dưới 10 đọc thêm 零"
+       },
+       {
+        "zh": "二十二点五",
+        "vi": "sai — thiếu 零 trước phút"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Khi phút nhỏ hơn 10 phải đọc 零： 22:05 đọc là 二十二点零五。"
+     }
     },
     {
      "id": "kp-hsk1-l07-ba",
@@ -19067,7 +19136,24 @@
      ],
      "exerciseIds": [
       "wb7-comp-3"
-     ]
+     ],
+     "useWhenVi": "Khi đề nghị, rủ rê, thương lượng hoặc khuyên ai làm gì — đặt 吧 (đọc thanh nhẹ) ở cuối câu.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: rủ “Chiều nay hai giờ gặp nhé!” — chọn trợ từ đúng để điền vào cuối câu.",
+      "stemZh": "我们下午两点见__。",
+      "options": [
+       {
+        "zh": "吧",
+        "vi": "nhé (đề nghị, rủ rê)"
+       },
+       {
+        "zh": "吗",
+        "vi": "hỏi có/không — không dùng để rủ rê"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Câu đề nghị kết thúc bằng 吧： 我们下午两点见吧。"
+     }
     },
     {
      "id": "kp-hsk1-l07-adverbial",
@@ -19117,7 +19203,24 @@
      "sentenceIds": [
       "l07-s8"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi đặt phó từ hoặc từ chỉ thời gian làm trạng ngữ: chúng đứng trước động từ hoặc tính từ, không đứng sau.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: câu nào đặt trạng ngữ thời gian đúng vị trí?",
+      "stemZh": "____",
+      "options": [
+       {
+        "zh": "她上午十点半上课。",
+        "vi": "đúng — thời gian đứng trước động từ"
+       },
+       {
+        "zh": "她上课上午十点半。",
+        "vi": "sai — trạng ngữ không đứng sau động từ"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Trạng ngữ thời gian đứng trước động từ: 她上午十点半上课。"
+     }
     },
     {
      "id": "kp-hsk1-l07-ne",
@@ -19164,7 +19267,24 @@
      ],
      "exerciseIds": [
       "wb7-text-3"
-     ]
+     ],
+     "useWhenVi": "Khi khẳng định một sự việc là thật, đang diễn ra như vậy — đặt 呢 ở cuối câu trần thuật.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: khẳng định “Ngày mai tôi vẫn có tiết đấy” — chọn trợ từ đúng để điền vào cuối câu.",
+      "stemZh": "我明天下午两点还上课__。",
+      "options": [
+       {
+        "zh": "呢",
+        "vi": "đấy (khẳng định sự thật)"
+       },
+       {
+        "zh": "吗",
+        "vi": "hỏi có/không — đổi câu thành câu hỏi"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "呢 ở cuối câu khẳng định sự việc: 我明天下午两点还上课呢。"
+     }
     },
     {
      "id": "kp-hsk1-l07-aspirated",
@@ -19825,7 +19945,7 @@
    "exerciseSet": {
     "id": "set-tb-l07-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 048) và Hội thoại 3 (trang 050), đáp án lấy từ chính lời thoại in trong sách; cộng năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 052, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của trang 052 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
+    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối giờ – đồng hồ (Textbook tr.045); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.048, 050 và phần đọc hiểu tr.051), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.052, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.052 là bài tự luyện riêng ở khối B, không chấm tự động.",
     "items": [
      {
       "id": "wb7-text-1",
@@ -20443,6 +20563,504 @@
        }
       ],
       "grammarIds": []
+     },
+     {
+      "id": "wb7-text-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): tối nay Lưu Minh còn đi làm gì?",
+      "promptZh": "刘明晚上还去做什么？",
+      "promptPinyin": "Liú Míng wǎnshang hái qù zuò shénme?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "去医院上班",
+        "pinyin": "qù yīyuàn shàngbān",
+        "vi": "đi làm ở bệnh viện"
+       },
+       {
+        "id": "2",
+        "zh": "去店里买菜",
+        "pinyin": "qù diàn li mǎi cài",
+        "vi": "đi cửa hàng mua rau"
+       },
+       {
+        "id": "3",
+        "zh": "在家休息",
+        "pinyin": "zài jiā xiūxi",
+        "vi": "nghỉ ở nhà"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.051. Đáp án lấy từ lời thoại in của Lưu Minh: 我八点去医院上班。",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": "051",
+        "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb7-text-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 051): mười phút nữa Lưu Minh đi làm gì?",
+      "promptZh": "刘明十分钟后去做什么？",
+      "promptPinyin": "Liú Míng shí fēnzhōng hòu qù zuò shénme?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "去医院上班",
+        "pinyin": "qù yīyuàn shàngbān",
+        "vi": "đi làm ở bệnh viện"
+       },
+       {
+        "id": "2",
+        "zh": "去店里买些菜",
+        "pinyin": "qù diàn li mǎi xiē cài",
+        "vi": "đi cửa hàng mua ít rau"
+       },
+       {
+        "id": "3",
+        "zh": "去电影院看电影",
+        "pinyin": "qù diànyǐngyuàn kàn diànyǐng",
+        "vi": "đi rạp xem phim"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.051. Vương Nhất Tuyết dặn 你去店里买些菜吧， Lưu Minh đáp 好，我十分钟后去。",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": "051",
+        "section": "Textbook Bài 7 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb7-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "8:15",
+      "promptPinyin": "bā diǎn shíwǔ fēn",
+      "options": [
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       },
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       },
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       },
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       },
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       },
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       }
+      ],
+      "answer": "c0815",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ A — 8:15). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
+     },
+     {
+      "id": "wb7-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "15:20",
+      "promptPinyin": "shíwǔ diǎn èrshí fēn",
+      "options": [
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       },
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       },
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       },
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       },
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       },
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       }
+      ],
+      "answer": "c1520",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ B — 15:20). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
+     },
+     {
+      "id": "wb7-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "10:10",
+      "promptPinyin": "shí diǎn shí fēn",
+      "options": [
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       },
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       },
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       },
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       },
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       },
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       }
+      ],
+      "answer": "c1010",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ C — 10:10). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
+     },
+     {
+      "id": "wb7-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "13:45",
+      "promptPinyin": "shísān diǎn sìshíwǔ fēn",
+      "options": [
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       },
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       },
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       },
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       },
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       },
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       }
+      ],
+      "answer": "c1345",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ D — 13:45). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
+     },
+     {
+      "id": "wb7-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "12:30",
+      "promptPinyin": "shí’èr diǎn sānshí fēn",
+      "options": [
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       },
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       },
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       },
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       },
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       },
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       }
+      ],
+      "answer": "c1230",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ E — 12:30). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
+     },
+     {
+      "id": "wb7-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 045): giờ nào khớp với các đồng hồ lựa chọn? Nhìn kim đồng hồ và chọn đồng hồ đúng.",
+      "promptZh": "18:00",
+      "promptPinyin": "shíbā diǎn",
+      "options": [
+       {
+        "id": "c0815",
+        "zh": "8:15",
+        "pinyin": "bā diǎn shíwǔ fēn",
+        "vi": "đồng hồ chỉ 8:15",
+        "image": "assets/lesson-07/clock-0815.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 8 giờ 15 phút"
+       },
+       {
+        "id": "c1010",
+        "zh": "10:10",
+        "pinyin": "shí diǎn shí fēn",
+        "vi": "đồng hồ chỉ 10:10",
+        "image": "assets/lesson-07/clock-1010.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 10 giờ 10 phút"
+       },
+       {
+        "id": "c1230",
+        "zh": "12:30",
+        "pinyin": "shí’èr diǎn sānshí fēn",
+        "vi": "đồng hồ chỉ 12:30",
+        "image": "assets/lesson-07/clock-1230.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 12 giờ 30 phút"
+       },
+       {
+        "id": "c1345",
+        "zh": "13:45",
+        "pinyin": "shísān diǎn sìshíwǔ fēn",
+        "vi": "đồng hồ chỉ 13:45",
+        "image": "assets/lesson-07/clock-1345.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 1 giờ 45 phút chiều"
+       },
+       {
+        "id": "c1520",
+        "zh": "15:20",
+        "pinyin": "shíwǔ diǎn èrshí fēn",
+        "vi": "đồng hồ chỉ 15:20",
+        "image": "assets/lesson-07/clock-1520.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 3 giờ 20 phút chiều"
+       },
+       {
+        "id": "c1800",
+        "zh": "18:00",
+        "pinyin": "shíbā diǎn",
+        "vi": "đồng hồ chỉ 18:00",
+        "image": "assets/lesson-07/clock-1800.webp",
+        "imageAlt": "Hình vẽ đồng hồ chỉ 6 giờ chiều"
+       }
+      ],
+      "answer": "c1800",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.045 (giờ F — 18:00). Kim đồng hồ trong hình vẽ được đặt đúng giờ theo ảnh gốc đã phóng to kiểm chứng.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 60,
+        "printedPage": "045",
+        "section": "Textbook Bài 7 · khởi động (热身） nối giờ với đồng hồ"
+       }
+      ],
+      "explanationVi": "Đọc kim giờ (ngắn) và kim phút (dài) trên mặt đồng hồ."
      }
     ]
    },
@@ -20542,14 +21160,14 @@
      "id": "st-l07-03",
      "kind": "speaking",
      "titleVi": "Dùng hình để nói (Textbook trang 052) — tự luyện, không chấm tự động",
-     "instructionVi": "Nhìn từng hình trích từ sách, dùng từ và cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 052), đọc giờ trên đồng hồ và dùng từ, cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
      "prompts": [
       "现在是______点______分。",
       "我们上午______吧。",
       "我今天晚上______还______呢。",
       "妹妹______有课。"
      ],
-     "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
+     "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu (giờ đọc trực tiếp trên đồng hồ trong ảnh gốc của sách, đã phóng to kiểm chứng): (1) 现在是七点二十分。(2) 我们上午十点十分见吧。(3) 我今天晚上九点还有事呢。(4) 妹妹下午有课。(đồng hồ chỉ 2:00 chiều). App không chấm bài này: sách không in đáp án, phần điền phụ thuộc vào hình.",
      "answerStatus": "unverified",
      "sourceRefs": [
       {
@@ -20562,8 +21180,8 @@
      "promptImages": [
       {
        "src": "assets/lesson-07/speaking-1.webp",
-       "alt": "Hình 1 của bài dùng hình để nói — Bài 7",
-       "captionVi": "Textbook, trang 052 · hình 1",
+       "alt": "Hình vẽ một bàn tay đang cầm đồng hồ báo thức chỉ 7 giờ 20 phút",
+       "captionVi": "Hình 1 — tay cầm đồng hồ báo thức (7:20). Tranh vẽ lại theo ảnh Textbook tr.052.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -20575,8 +21193,8 @@
       },
       {
        "src": "assets/lesson-07/speaking-2.webp",
-       "alt": "Hình 2 của bài dùng hình để nói — Bài 7",
-       "captionVi": "Textbook, trang 052 · hình 2",
+       "alt": "Hình vẽ một đồng hồ treo tường chỉ 10 giờ 10 phút",
+       "captionVi": "Hình 2 — đồng hồ treo tường (10:10). Tranh vẽ lại theo ảnh Textbook tr.052.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -20588,8 +21206,8 @@
       },
       {
        "src": "assets/lesson-07/speaking-3.webp",
-       "alt": "Hình 3 của bài dùng hình để nói — Bài 7",
-       "captionVi": "Textbook, trang 052 · hình 3",
+       "alt": "Hình vẽ một đồng hồ báo thức đặt trong bóng tối, chỉ 9 giờ tối",
+       "captionVi": "Hình 3 — đồng hồ báo thức buổi tối (9:00). Tranh vẽ lại theo ảnh Textbook tr.052.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -20601,8 +21219,8 @@
       },
       {
        "src": "assets/lesson-07/speaking-4.webp",
-       "alt": "Hình 4 của bài dùng hình để nói — Bài 7",
-       "captionVi": "Textbook, trang 052 · hình 4",
+       "alt": "Hình vẽ một đồng hồ treo tường chỉ 2 giờ chiều",
+       "captionVi": "Hình 4 — đồng hồ treo tường (2:00). Tranh vẽ lại theo ảnh Textbook tr.052.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -20621,7 +21239,7 @@
     "titleVi": "Đóng vai và hẹn giờ gặp theo tình huống thật",
     "instructionVi": "Chọn hội thoại 1. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình mà đối thoại — hỏi giờ hiện tại, nói giờ có tiết học và hẹn giờ gặp nhau. Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
     "audioTrackId": "trk-tb-l07-1",
-    "noteVi": "Nhiệm vụ đóng vai và đối thoại theo tình huống thật lấy từ Textbook trang in 046. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "noteVi": "Hai nhiệm vụ nói đều lấy từ sách: đóng vai + hẹn giờ theo tình huống thật (tr.046) và hoạt động lớp điền bảng thời gian rồi chia sẻ (tr.053). Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
     "sourceRefs": [
      {
       "sourceId": "src-hsk1-textbook-pdf",
@@ -20629,9 +21247,271 @@
       "printedPage": 46,
       "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
      }
+    ],
+    "samplePassageIds": [
+     "l07-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l07-1",
+      "titleVi": "Đóng vai Hội thoại 1 và hẹn giờ gặp theo tình huống thật",
+      "situationVi": "Hai học viên gọi điện cho nhau: hỏi bây giờ mấy giờ, nói giờ có tiết và hẹn giờ gặp (Textbook tr.046: đóng vai, sau đó hai người một nhóm đối thoại theo tình huống thật).",
+      "sampleZh": "现在几点？— 早上八点四十。— 我上午十点十分有课。— 好的，我们下午两点见吧。",
+      "samplePinyin": "Xiànzài jǐ diǎn? — Zǎoshang bā diǎn sìshí. — Wǒ shàngwǔ shí diǎn shí fēn yǒu kè. — Hǎo de, wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+      "sampleVi": "Bây giờ mấy giờ? — Buổi sáng 8 giờ 40. — Buổi sáng 10 giờ 10 tôi có tiết. — Được, chiều nay 2 giờ gặp nhé.",
+      "swapVi": "Đổi các mốc giờ trong mẫu thành giờ thật của bạn (giờ hiện tại, giờ vào học, giờ hẹn gặp) rồi hỏi – đáp lại cả đoạn.",
+      "sourceNoteVi": "Mẫu là nguyên văn Hội thoại 1 (Textbook tr.046).",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 61,
+        "printedPage": "046",
+        "section": "Textbook Bài 7 · Hội thoại 1 + hoạt động đóng vai/theo tình huống thật"
+       }
+      ]
+     },
+     {
+      "id": "speak-l07-2",
+      "titleVi": "Điền bảng thời gian của nhóm và chia sẻ (hoạt động lớp, Textbook tr.053)",
+      "situationVi": "Ba người một nhóm: mỗi người điền giờ ăn trưa, giờ nghỉ và giờ tan học theo lịch thật của mình vào bảng, điền xong thì chia sẻ (Textbook tr.053).",
+      "sampleZh": "我十二点吃午饭，一点到两点休息，四点下课。",
+      "samplePinyin": "Wǒ shí’èr diǎn chī wǔfàn, yī diǎn dào liǎng diǎn xiūxi, sì diǎn xiàkè.",
+      "sampleVi": "Tôi 12 giờ ăn trưa, 1 đến 2 giờ nghỉ, 4 giờ tan học.",
+      "swapVi": "Đổi ba mốc giờ trong mẫu thành lịch thật của bạn rồi nói lại cả câu.",
+      "sourceNoteVi": "Mẫu dựng thành câu từ bảng ví dụ của Tiểu Ngữ in ở Textbook tr.053 (ăn trưa 12:00–13:00, nghỉ 13:00–14:00, tan học 16:00); câu mẫu do dự án viết từ bảng in, không phải nguyên văn lời thoại.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": "053",
+        "section": "Textbook Bài 7 · 课堂活动 · 填写表格 + 小语的例子"
+       }
+      ]
+     }
     ]
    },
-   "foundationWords": []
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l07-vocab-1",
+     "dialogueId": "l07-dialogue-1",
+     "titleVi": "Hội thoại 1 · Bây giờ mấy giờ?",
+     "trackId": "trk-tb-l07-2",
+     "trackLabelVi": "Track 7-2"
+    },
+    {
+     "id": "l07-vocab-2",
+     "dialogueId": "l07-dialogue-2",
+     "titleVi": "Hội thoại 2 · Chiều nay đi xem phim không?",
+     "trackId": "trk-tb-l07-4",
+     "trackLabelVi": "Track 7-4"
+    },
+    {
+     "id": "l07-vocab-3",
+     "dialogueId": "l07-dialogue-3",
+     "titleVi": "Hội thoại 3 · Tối nay mấy giờ tan làm?",
+     "trackId": "trk-tb-l07-6",
+     "trackLabelVi": "Track 7-6"
+    }
+   ],
+   "prepSummaryVi": "27 từ mới, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Bây giờ mấy giờ?",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → nói giờ cụ thể bằng 点 và 分, hẹn giờ gặp nhau.",
+     "sectionId": "prep",
+     "dialogueId": "l07-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Chiều nay đi xem phim không?",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → để thời gian làm trạng ngữ đứng trước động từ, rủ rê bằng 吧.",
+     "sectionId": "reader",
+     "dialogueId": "l07-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Tối nay mấy giờ tan làm?",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → khẳng định sự việc đang diễn ra bằng 呢 ở cuối câu.",
+     "sectionId": "reader",
+     "dialogueId": "l07-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Khởi động nối giờ với đồng hồ, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Bốn điều cần nhớ và tự nói lịch trình một ngày của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Nói giờ cụ thể bằng 点 và 分",
+     "bodyVi": "Giờ + 点 + phút; nửa giờ nói 半. Phút dưới 10 phải đọc 零 （二十二点零五）; đúng mười phút không bỏ 分 （二十一点十分）.",
+     "exampleZh": "我晚上六点半下班。",
+     "examplePinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+     "exampleVi": "Tôi tối nay 6 giờ rưỡi tan làm."
+    },
+    {
+     "titleVi": "Buổi trong ngày đứng trước giờ và động từ",
+     "bodyVi": "上午/中午/下午/晚上 đặt trước giờ cụ thể, và cả cụm thời gian đứng trước động từ làm trạng ngữ.",
+     "exampleZh": "她上午十点半上课。",
+     "examplePinyin": "Tā shàngwǔ shí diǎn bàn shàngkè.",
+     "exampleVi": "Buổi sáng 10 giờ rưỡi cô ấy có tiết."
+    },
+    {
+     "titleVi": "吧： đề nghị, rủ rê",
+     "bodyVi": "Đặt 吧 (thanh nhẹ) ở cuối câu để đề nghị hoặc thương lượng.",
+     "exampleZh": "我们下午两点见吧。",
+     "examplePinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+     "exampleVi": "Chiều nay hai giờ gặp nhau nhé."
+    },
+    {
+     "titleVi": "呢： khẳng định sự việc",
+     "bodyVi": "Đặt 呢 ở cuối câu trần thuật để khẳng định việc đó là thật, đang như vậy.",
+     "exampleZh": "我明天下午两点还上课呢。",
+     "examplePinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne.",
+     "exampleVi": "Chiều mai hai giờ tôi vẫn có tiết đấy."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả chữ số và tên nhân vật của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "家月",
+      "pinyin": "Jiāyuè",
+      "hanViet": "GIA NGUYỆT",
+      "vi": "Gia Nguyệt — cách gọi ngắn tên Bạch Gia Nguyệt trong hội thoại"
+     },
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "Annie — nhân vật trong hội thoại (tên riêng phiên âm)"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "中午",
+      "pinyin": "zhōngwǔ",
+      "hanViet": "TRUNG NGỌ",
+      "vi": "buổi trưa"
+     },
+     {
+      "zh": "零",
+      "pinyin": "líng",
+      "hanViet": "LINH",
+      "vi": "số 0 (đọc trong giờ khi phút dưới 10)"
+     },
+     {
+      "zh": "两",
+      "pinyin": "liǎng",
+      "hanViet": "LƯỠNG",
+      "vi": "hai (dùng trước lượng từ và trong giờ: 两点）"
+     },
+     {
+      "zh": "午饭",
+      "pinyin": "wǔfàn",
+      "hanViet": "NGỌ PHẠN",
+      "vi": "bữa trưa"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "số 1"
+     },
+     {
+      "zh": "二",
+      "pinyin": "èr",
+      "hanViet": "NHỊ",
+      "vi": "số 2"
+     },
+     {
+      "zh": "三",
+      "pinyin": "sān",
+      "hanViet": "TAM",
+      "vi": "số 3"
+     },
+     {
+      "zh": "四",
+      "pinyin": "sì",
+      "hanViet": "TỨ",
+      "vi": "số 4"
+     },
+     {
+      "zh": "五",
+      "pinyin": "wǔ",
+      "hanViet": "NGŨ",
+      "vi": "số 5"
+     },
+     {
+      "zh": "六",
+      "pinyin": "liù",
+      "hanViet": "LỤC",
+      "vi": "số 6"
+     },
+     {
+      "zh": "七",
+      "pinyin": "qī",
+      "hanViet": "THẤT",
+      "vi": "số 7"
+     },
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "hanViet": "BÁT",
+      "vi": "số 8"
+     },
+     {
+      "zh": "九",
+      "pinyin": "jiǔ",
+      "hanViet": "CỬU",
+      "vi": "số 9"
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": "THẬP",
+      "vi": "số 10"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l08",

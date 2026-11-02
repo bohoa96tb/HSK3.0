@@ -145,7 +145,7 @@ test('regression: shared components keep working for Lessons 1 and 7', async () 
   await route('lesson/hsk1-l01/exercises');
   assert.equal($('#exercise-card').querySelectorAll('.tog-pinyin-ex').length, 0);
   await route('lesson/hsk1-l07/intro');
-  assert.ok(!$('.learn-path'), 'lessons without a path keep the previous intro'); // Bài 1–4 gained their paths in D27; Bài 5 is the unstandardized control
+  assert.ok($('.learn-path'), 'lesson 7 intro renders its learning path after D27 standardization'); // đến vòng Bài 7, cả 8 bài đều đã có lộ trình
 });
 
 test('QA regressions (D23 round): support records only the main set; mock-only summary is not contradictory', async () => {

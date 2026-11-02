@@ -31,6 +31,8 @@ test('lesson 7 printed answers and review links', () => {
   assert.deepEqual(answers, {
     'wb7-text-1': '2', 'wb7-text-2': '1', 'wb7-text-3': '3', 'wb7-text-4': '3',
     'wb7-comp-1': '3', 'wb7-comp-2': '2', 'wb7-comp-3': '5', 'wb7-comp-4': '4', 'wb7-comp-5': '1',
+    'wb7-text-5': '1', 'wb7-text-6': '2',
+    'wb7-warm-1': 'c0815', 'wb7-warm-2': 'c1520', 'wb7-warm-3': 'c1010', 'wb7-warm-4': 'c1345', 'wb7-warm-5': 'c1230', 'wb7-warm-6': 'c1800',
   });
   assert.ok(l7.exerciseSet.items.every((i) => i.answerStatus === 'verified-from-print'));
   // Review links follow the blank-tested feature only (2026-11-01 rule);

@@ -430,7 +430,7 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **Lý do:** vòng vẽ lại đầu tiên dựng cảnh theo suy luận từ đáp án, chưa mở xem ảnh gốc. Hoa yêu cầu xem ảnh trong PDF gốc và mô phỏng lại cho đúng.
 - **Đã làm:** mở xem trực tiếp ảnh gốc ở Workbook tr.004/008/012 và Textbook tr.002/005/010; vẽ lại 13/14 hình theo đúng bố cục ảnh gốc (Bài 1: quầy lễ tân / người ngã trên băng–tuyết được đỡ dậy / thầy cầm sách đỏ trước hai học sinh / ba học sinh ngồi bàn vẫy chào; Bài 2: hai người đàn ông vest bắt tay / hai nữ sinh đồng phục đi về phía cô giáo / cô gái tóc vàng áo sọc đen–trắng / cô gái tóc xoăn được an ủi / cô giáo váy trắng trước ba học sinh; Bài 3: cô giáo áo trắng cầm thước trước bảng xanh / người vest nghe điện thoại / hai phụ nữ trò chuyện trong khoang máy bay / bạn gái bắt tay người phụ nữ mặc vest, bạn trai áo kẻ đứng cạnh). Hình ngữ cảnh Bài 3 (bàn cà phê) vốn đã khớp nên giữ nguyên. Alt viết lại theo cảnh thật; đáp án không đổi; test 137/137.
 - **QA trung thực độc lập: ĐẠT 14/14** (đối chiếu từng tranh với từng ảnh gốc, gồm cả cắt phóng to). 6 lệch nhỏ không chặn, không đổi đáp án: cảnh băng trong nhà thành tuyết ngoài trời + người giúp đổi giới tính (Bài 1 hình 2); cô lễ tân không vẫy đáp (Bài 1 hình 1); thiếu vẫy tay của học sinh (Bài 2 hình 2); cô giáo Bài 2 chỉ bảng thay vì dang tay; vài lệch màu bảng/độ tuổi; ghế máy bay đối diện trực tiếp thay vì qua lối đi (Bài 3 hình 3 — nhưng đúng cả hai nhân vật là nữ như ảnh gốc).
-- (Nghiệm thu live bổ sung ở PR sổ sách.)
+- **Nghiệm thu live ĐẠT** (sau PR #63 merge fabf4cbf): contentVersion live 20261102-img-faithful-l123; sha256 của cả 13 file hiệu chỉnh trên GitHub Pages khớp byte với bản local.
 
 ### Bài 3 《我是中国人》 — chuẩn hoá theo D27 (`20261102-lesson3-standard1`)
 

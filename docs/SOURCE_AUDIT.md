@@ -66,6 +66,20 @@ thể (đã đọc trang nào / kiểm HEAD ra sao / số byte / thời lượng
 `rightsStatus` riêng. Chỉ đổi `rightsStatus` khi có bằng chứng tương ứng.
 - Không nâng trạng thái kiểm chứng dựa trên suy đoán hoặc trí nhớ.
 
+## Hình Bài 6 (vẽ mới, 2026-11-02)
+
+11 tranh phẳng do dự án tự vẽ bằng chương trình (Pillow), mô phỏng bố cục ảnh
+in của Textbook Bài 6: 6 hình khởi động tr.035 (siêu thị, điện thoại, sữa,
+cơm, taxi, bữa tối gia đình), hình ngữ cảnh tr.036 (hai học viên cầm điện
+thoại ở bàn nhỏ) và 4 hình "dùng hình để nói" tr.041–042 (tay cầm điện thoại,
+xe đẩy siêu thị, taxi, đĩa bánh bao). Bốn file speaking-1..4.webp và
+classroom.webp trước đây là ẢNH TRÍCH TRỰC TIẾP từ sách — đã thay toàn bộ
+bằng tranh vẽ mới, giữ nguyên tên file. Chi tiết: `assets/lesson-06/
+PRACTICE_ATTRIBUTION.md` (đã viết lại). Quyền đối với nội dung sách/câu
+hỏi/audio không đổi (chưa xác minh). Khối tổng kết Bài 4–6 ở Textbook
+tr.043–044 là bảng tự đánh giá liên bài, không thuộc nội dung riêng của
+Bài 6 — không đưa vào app ở vòng này.
+
 ## Hình Bài 5 (vẽ mới, 2026-11-02)
 
 11 tranh phẳng do dự án tự vẽ bằng chương trình (Pillow), mô phỏng bố cục ảnh

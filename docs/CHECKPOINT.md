@@ -122,6 +122,13 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Áp dụng mức hình đẹp mới cho các bài còn lại (2026-11-02)
+
+- Hoa duyệt áp dụng mức hoàn thiện của bộ hình Bài 7 images2 cho Bài 1–6 và 8. Kiểm kê trực tiếp từng bộ hình hiện tại: Bài 1 (4 hình), Bài 2 (5), Bài 3 (7), Bài 4 (11) và Bài 8 (28) vốn đã là minh họa chi tiết có khuôn mặt/bối cảnh — ĐẠT mức mới, không vẽ lại (vẽ lại bằng công cụ hiện có chỉ làm giảm chất lượng). Chỉ Bài 5 và Bài 6 còn ở mức người que/khối trừu tượng.
+- Bài 5 ĐÃ VẼ LẠI + PHÁT HÀNH: 11/11 hình (cảnh: minh họa sinh mới theo ảnh gốc tr.032–033; lịch/khối gỗ: vẽ bằng chương trình, lưới ngày tính từ lịch thật). QA hình độc lập 11/11 ĐẠT (lịch kiểm từng vị trí bằng lịch thật). PR #76; contentVersion live `20261102-lesson5-images2`; sha256 live 11/11 khớp; kiểm trực quan live 2/2.
+- Bài 6: đã chuẩn bị xong kế hoạch + prompt sinh hình (`~/workspace/hsk3-work/img-l6/plan-v2.md` ở máy làm việc: 2 lưới 2×2 + 1 hình đơn; hình siêu thị và taxi dùng chung cho cặp file warm/speaking cùng khái niệm). Lượt tiếp theo: sinh hình → cắt → QA → phát hành `20261102-lesson6-images2`.
+- Sau Bài 6: quay lại nextTask chính — kiểm hồi quy Bài 8, rồi Bài 9.
+
 ## Vẽ lại hình Bài 7 đẹp hơn — yêu cầu của Hoa (2026-11-02)
 
 - Hoa nhận xét bộ hình Bài 7 bản standard1 "quá sơ sài", yêu cầu xem lại PDF gốc và mô phỏng đẹp hơn. Đã vẽ lại cả 11 hình với độ hoàn thiện cao hơn: đồng hồ đủ số 1–12 + vạch 60 phút + kim hình thoi + bóng đổ/bóng kính; hình ngữ cảnh có khuôn mặt đầy đủ, trang phục đúng nhân vật tr.046, nền hồng chia chéo đúng gốc (bản trước chia dọc); hình bài nói có đủ bối cảnh (tay ấn nóc đồng hồ báo thức, cảnh đêm trăng sao, kim giây đỏ như gốc). Giờ trên đồng hồ không đổi (đặt bằng phép tính góc) — đáp án giữ nguyên.

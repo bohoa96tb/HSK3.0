@@ -449,7 +449,7 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - Hoa yêu cầu áp dụng mức hoàn thiện của bộ hình Bài 7 images2 cho các bài còn lại. Kiểm kê toàn bộ cho thấy: hình Bài 1, 2, 3, 4 và 8 vốn đã ở mức minh họa chi tiết (nhân vật có khuôn mặt, bối cảnh đầy đủ) — đạt mức mới, không cần vẽ lại; chỉ Bài 5 và Bài 6 còn ở mức hình người que/khối trừu tượng. Bài 6 đã chuẩn bị xong kế hoạch + prompt, làm ở lượt kế tiếp.
 - Bài 5: vẽ lại cả 11 hình. Cảnh có người/vật dùng hình minh họa sinh mới đúng phong cách chung của dự án (văn phòng tr.032; nấu ăn thái cà chua tr.033; hai món ăn; xào chảo; nghỉ ngơi; máy tính; sủi cảo). Ba hình dữ liệu chính xác (lịch tháng 9/2025 khoanh ngày 7, lịch tháng 5/2025 khoanh ngày 1 và bản không khoanh, khối gỗ 星期一） vẽ bằng chương trình với lưới ngày tính từ lịch thật.
 - QA hình độc lập: 11/11 ĐẠT — hai tờ lịch kiểm từng vị trí bằng lịch thật (1/9 ở cột thứ Hai, 7/9 khoanh ở cột Chủ nhật; 1/5 khoanh ở cột thứ Năm, đủ 31 ngày); sáu hình khởi động phân biệt rõ từng khái niệm, không gây nhầm đáp án. contentVersion `20261102-lesson5-images2`.
-- (Nghiệm thu live bổ sung ở PR sổ sách.)
+- **Nghiệm thu live:** PR #76; contentVersion `20261102-lesson5-images2` đúng; sha256 11/11 file hình trên Pages khớp bản local; kiểm trực quan live 2/2 ĐẠT (hình ngữ cảnh văn phòng có khuôn mặt; lịch tháng 9 khoanh ngày 7 đúng cột Chủ nhật ở bài tự luyện).
 
 ### Bài 5 《今天我休息》 — chuẩn hoá theo D27 (2026-11-02)
 

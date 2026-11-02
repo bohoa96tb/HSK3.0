@@ -98,3 +98,12 @@
 - Phát hành: PR #56 merge 52ef95a7; contentVersion 20261102-lesson1-standard1; byte remote 16/16 + live khớp; nghiệm thu live bổ sung ở QA_REPORT.
 - Trạng thái chuẩn hoá từng bài: Bài 1 = ĐẠT CHUẨN D27; Bài 2–7 = CHƯA chuẩn hoá; Bài 8 = bài chuẩn mẫu (đạt, chỉ kiểm hồi quy khi có thay đổi dùng chung).
 - nextTask: "Tiếp tục" → chuẩn hoá Bài 2 《你是哪国人》 theo LESSON_STANDARD (kiểm kê PDF TB in 005–008 + WB in 005–008 gồm ô trợ giúp/câu hỏi mở/hoạt động/汉字； QA D17; PR riêng). Lần lượt Bài 3→7; khi Bài 1–8 đều đạt chuẩn mới làm Bài 9.
+
+## Chuẩn hoá Bài 2 — D27 (2026-11-02)
+
+- Bài 2 《我叫李文》 ĐẠT CHUẨN D27: PR #58 merge 2283255f; contentVersion 20261102-lesson2-standard1; byte remote khớp local; test 132/132.
+- Đối chiếu TB in 005–009 + WB in 005–008: nội dung cũ phần lớn đã đúng (15 từ, 10 câu, 5 điểm chính gồm cả 3 ô trợ giúp trong giải thích, 16 thẻ hình, đáp án hình 3/1/4/2, 3 bài nghe–viết). Sửa 3 điểm: bổ sung bài đọc vè + track 2-7 còn thiếu hẳn (22,969s); thêm câu luyện đọc 我是学生。vào KP trật tự từ; sửa liên kết ôn tập câu hình 1 (trật tự từ → KP 叫/giới thiệu).
+- Nâng cấp: learningPath 6 bước; prepGroups 6/5/4; quickCheck + useWhen cho 5 điểm chính; summaryPoints 3; apply.tasks 2 nhiệm vụ; tra từ mở cho Bài 2 (extras 4 tên người + 学生； phủ 27/27). Sách không có mục tên riêng riêng và không có câu hỏi đọc hiểu in sẵn ở Bài 2 — không bịa thêm.
+- QA độc lập MỘT vòng đạt ngay trên bản cuối: nội dung 8/8 (0 lỗi), code 7/7 (23/23). Bài học schema (đã ghi ở QA_REPORT): quickCheck answer là chỉ số dạng chuỗi; dialogueGroup từ 1; learningPath là mảng bước — Bài 3 trở đi đọc schema từ dữ liệu mẫu trước khi viết.
+- Trạng thái chuẩn hoá: Bài 1 ĐẠT, Bài 2 ĐẠT; Bài 3–7 chưa; Bài 8 chuẩn mẫu.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 3 《我是中国人》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 3 gồm ô trợ giúp/câu hỏi mở/hoạt động/汉字 nếu có; QA D17; PR riêng). Lần lượt Bài 4→7; Bài 9 sau khi Bài 1–8 đạt chuẩn.

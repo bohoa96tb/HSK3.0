@@ -122,6 +122,16 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Chuẩn hoá Bài 7 — D27 (2026-11-02)
+
+- Bài 7 《我晚上六点半下班》 ĐẠT CHUẨN D27: PR #72; contentVersion 20261102-lesson7-standard1; test 159/159; QA nội dung ĐẠT toàn bộ (10 mục + mục kiểm thêm), code ĐẠT 4/4, hình 11/11 — đạt ngay một vòng QA; nghiệm thu live: sha256 11/11 hình khớp + phiên bản đúng + kiểm trực quan 3/3.
+- Đối chiếu TB tr.045–053 + WB tr.039–041. Đề mô phỏng WB từ tr.042 loại theo D15; bài đọc 汉字简介 (WB tr.040–041) và video bonus 学汉字 (TB tr.053) không tích hợp — quyết định phạm vi, ghi ở SOURCE_AUDIT; bài hoàn thành đối thoại tr.050 không chuyển thành câu chấm vì đáp án không duy nhất.
+- Bổ sung: dialogueGroup 9/8/10 cho 27 từ; prepGroups (track 7-2/7-4/7-6); learningPath; useWhen + quickCheck cho cả 4 điểm chính; KP giờ đủ bộ luyện đọc tr.047; 2 câu đọc hiểu tr.051; 6 câu khởi động nối giờ – đồng hồ tr.045; bài nói theo hình có đáp án gợi ý (giờ đọc trực tiếp trên ảnh gốc phóng to 7:20/10:10/9:00 tối/2:00 chiều); apply thêm nhiệm vụ hoạt động lớp tr.053; summaryPoints 4; tra từ phủ 38/38.
+- Hình: 11 tranh vẽ mới; 6 đồng hồ khởi động kim đặt bằng phép tính góc theo giờ đọc trên bản phóng to; 5 file cũ là ẢNH TRÍCH SÁCH (classroom, speaking-1..4) đã thay toàn bộ bằng tranh vẽ, giữ nguyên tên file.
+- Test toàn cục đã cập nhật theo trạng thái mới: từ vòng này mọi bài 1–8 đều có tra từ và lộ trình (không còn bài "chưa chuẩn hoá" làm đối chứng) — các test đối chứng cũ đã viết lại trung thực.
+- Trạng thái chuẩn hoá: **Bài 1–7 ĐẠT; Bài 8 chuẩn mẫu. Chặng chuẩn hoá D27 hoàn tất phần bài cũ.**
+- nextTask: "Tiếp tục" → kiểm hồi quy Bài 8 (audit chuẩn + test toàn bộ + kiểm nhanh live các luồng chính của Bài 8 trên phiên bản hiện tại), chốt chặng D27; sau đó mới làm Bài 9 (xác minh tên/trang từ mục lục và sách thật trước khi làm).
+
 ## Chuẩn hoá Bài 6 — D27 (2026-11-02)
 
 - Bài 6 《你的手机号是多少？》 ĐẠT CHUẨN D27: PR #70 merge e79e182f; contentVersion 20261102-lesson6-standard1; test 154/154; QA nội dung 10/10 + code 5/5 + hình 11/11, đạt ngay một vòng QA; nghiệm thu live: byte 11/11 hình khớp + dữ liệu đủ + phiên bản đúng.

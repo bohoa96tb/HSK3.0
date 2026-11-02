@@ -61,12 +61,13 @@ test('lesson 4 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 4 text exercises: printed answers grade, stems render, review links fit', async () => {
-  assert.equal(l4.exerciseSet.items.length, 4);
-  assert.deepEqual(l4.exerciseSet.items.map((i) => i.answer), ['1', '2', '2', '2']);
+  assert.equal(l4.exerciseSet.items.length, 17); // D27: +2 reading questions, +5 fill-ins, +6 warm-up items
+  const printed4 = l4.exerciseSet.items.filter((i) => ['wb4-text-1', 'wb4-text-2', 'wb4-text-3', 'wb4-text-4'].includes(i.id));
+  assert.deepEqual(printed4.map((i) => i.answer), ['1', '2', '2', '2']);
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
   for (const item of l4.exerciseSet.items) {
-    assert.equal(item.answerStatus, 'verified-from-print');
+    if (printed4.includes(item)) assert.equal(item.answerStatus, 'verified-from-print');
     assert.ok(item.promptZh && item.promptPinyin, item.id);
     assert.equal(gradeChoice(item, item.answer).correct, true);
     assert.equal(gradeChoice(item, item.answer === '1' ? '2' : '1').correct, false);
@@ -75,7 +76,7 @@ test('lesson 4 text exercises: printed answers grade, stems render, review links
   }
   await route('lesson/hsk1-l04/exercises');
   assert.ok($('.exercise-stem')?.textContent.includes('杨同乐有一个'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/4'));
+  assert.ok(document.body.textContent.includes('Câu 1/17'));
 });
 
 test('lesson 4 choose-a-syllable task: syllable grading mode grades exactly', () => {

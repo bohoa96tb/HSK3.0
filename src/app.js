@@ -1,9 +1,9 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-img-faithful-l123";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-img-faithful-l123";
-import * as player from "./player.js?v=20261102-img-faithful-l123";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261102-lesson4-standard1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261102-lesson4-standard1";
+import * as player from "./player.js?v=20261102-lesson4-standard1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -805,9 +805,9 @@ function sectionExercisesHtml(content) {
     }
   }
   const scrollBtn = (target, label) => `<button class="btn" type="button" data-scroll-to="${target}">${label}</button>`;
-  return `<section class="card exercise-zones"><h2>Luyện tập gồm 3 phần</h2>
-  <p><strong>A. Luyện sau bài</strong> — ${content.exerciseSet.items.length} câu chính của bài: nghe hiểu, chọn từ, vị trí và trật tự câu, dùng 在 và 能.</p>
-  <p><strong>B. Luyện thêm</strong> — phân biệt âm, nói theo hình và câu hỏi tự trả lời. Phần này tự đối chiếu, không bắt buộc.</p>
+  return `<section class="card exercise-zones"><h2>Luyện tập gồm ${content.suppExerciseSet ? 3 : 2} phần</h2>
+  <p><strong>A. Luyện sau bài</strong> — ${content.exerciseSet.items.length} câu chính của bài. ${esc(content.exerciseSet.noteVi || "")}</p>
+  <p><strong>B. Luyện thêm</strong> — các bài tự luyện theo sách ở phần dưới: nghe – viết, luyện phát âm và tự nói. Phần này tự đối chiếu, không bắt buộc.</p>
   ${content.suppExerciseSet ? `<p><strong>C. Đề mô phỏng</strong> — ${content.suppExerciseSet.items.length} câu, điểm ghi riêng, không gộp vào điểm bài chính và không tự bắt đầu.</p>` : ""}
   <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}</div></section>
   ${exerciseCardHtml(content, content.exerciseSet, "")}

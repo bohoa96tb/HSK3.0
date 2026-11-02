@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-img-faithful-l123",
+ "contentVersion": "20261102-lesson4-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -8008,10 +8008,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-04/classroom.webp",
-     "alt": "Lưu Minh và Vương Nhất Tuyết trò chuyện ở phòng khách — hình trích từ Textbook Bài 4",
-     "caption": "Ở nhà · Textbook, trang 019",
-     "width": 685,
-     "height": 385
+     "alt": "Lưu Minh và Vương Nhất Tuyết ngồi trên ghế sofa ở phòng khách trò chuyện",
+     "caption": "Ở nhà · tranh vẽ mới theo cảnh Textbook tr.019",
+     "width": 760,
+     "height": 760
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (biến điệu thanh 3, thanh nhẹ) là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: biến điệu hai thanh 3 và thanh nhẹ",
@@ -8040,7 +8040,8 @@
       "start": 0.0,
       "end": 0.9,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l04w-2",
@@ -8062,7 +8063,8 @@
       "start": 2.4,
       "end": 3.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l04w-3",
@@ -8084,7 +8086,8 @@
       "start": 5.6,
       "end": 6.3,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l04w-4",
@@ -8106,7 +8109,8 @@
       "start": 0.0,
       "end": 2.4,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-5",
@@ -8128,7 +8132,8 @@
       "start": 2.8,
       "end": 3.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-6",
@@ -8151,7 +8156,8 @@
       "start": 5.3,
       "end": 8.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-7",
@@ -8173,7 +8179,8 @@
       "start": 8.5,
       "end": 9.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-8",
@@ -8196,13 +8203,14 @@
       "start": 11.0,
       "end": 11.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-9",
      "zh": "口",
      "pinyin": "kǒu",
-     "vi": "lượng từ đếm thành viên gia đình (…口人）",
+     "vi": "lượng từ đếm thành viên gia đình (…口人）; sách chú thích còn dùng cho một số vật như dao",
      "sourceRefs": [
       {
        "sourceId": "src-hsk1-textbook-pdf",
@@ -8218,7 +8226,8 @@
       "start": 13.0,
       "end": 14.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-10",
@@ -8240,7 +8249,8 @@
       "start": 16.0,
       "end": 16.7,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-11",
@@ -8262,7 +8272,8 @@
       "start": 18.0,
       "end": 21.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-12",
@@ -8284,7 +8295,8 @@
       "start": 22.3,
       "end": 23.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-13",
@@ -8306,7 +8318,8 @@
       "start": 23.8,
       "end": 24.8,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l04w-14",
@@ -8328,7 +8341,8 @@
       "start": 0.2,
       "end": 2.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-15",
@@ -8350,7 +8364,8 @@
       "start": 2.6,
       "end": 3.7,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-16",
@@ -8372,7 +8387,8 @@
       "start": 5.6,
       "end": 8.4,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-17",
@@ -8394,7 +8410,8 @@
       "start": 8.5,
       "end": 9.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-18",
@@ -8416,7 +8433,8 @@
       "start": 11.0,
       "end": 12.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-19",
@@ -8438,7 +8456,8 @@
       "start": 13.8,
       "end": 14.5,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-20",
@@ -8460,7 +8479,8 @@
       "start": 16.0,
       "end": 16.9,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l04w-21",
@@ -8483,7 +8503,8 @@
       "start": 18.5,
       "end": 19.2,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -8534,7 +8555,24 @@
      "exerciseIds": [
       "wb4-text-1",
       "wb4-text-2"
-     ]
+     ],
+     "useWhenVi": "Khi nói ai đó có người hoặc vật, và hỏi có bao nhiêu （多少/几 + lượng từ).",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Cô ấy có hai mươi học sinh” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "她__二十个学生。",
+      "options": [
+       {
+        "zh": "有",
+        "vi": "có"
+       },
+       {
+        "zh": "是",
+        "vi": "là"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Câu chữ 有： 她有二十个学生。 — Cô ấy có hai mươi học sinh."
+     }
     },
     {
      "id": "kp-hsk1-l04-numbers",
@@ -8563,6 +8601,246 @@
        "zh": "两本书",
        "pinyin": "liǎng běn shū",
        "noteVi": "hai quyển sách — ví dụ của sách"
+      },
+      {
+       "zh": "零",
+       "pinyin": "líng",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "一",
+       "pinyin": "yī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "二",
+       "pinyin": "èr",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "三",
+       "pinyin": "sān",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "四",
+       "pinyin": "sì",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "五",
+       "pinyin": "wǔ",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "六",
+       "pinyin": "liù",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "七",
+       "pinyin": "qī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "八",
+       "pinyin": "bā",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "九",
+       "pinyin": "jiǔ",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "十",
+       "pinyin": "shí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "十一",
+       "pinyin": "shíyī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "十九",
+       "pinyin": "shíjiǔ",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "二十",
+       "pinyin": "èrshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "二十二",
+       "pinyin": "èrshí'èr",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "二十八",
+       "pinyin": "èrshíbā",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "三十",
+       "pinyin": "sānshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "三十三",
+       "pinyin": "sānshísān",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "三十七",
+       "pinyin": "sānshíqī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "四十",
+       "pinyin": "sìshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "四十四",
+       "pinyin": "sìshísì",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "四十六",
+       "pinyin": "sìshíliù",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "五十",
+       "pinyin": "wǔshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "五十五",
+       "pinyin": "wǔshíwǔ",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "六十",
+       "pinyin": "liùshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "六十四",
+       "pinyin": "liùshísì",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "六十六",
+       "pinyin": "liùshíliù",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "七十",
+       "pinyin": "qīshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "七十三",
+       "pinyin": "qīshísān",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "七十七",
+       "pinyin": "qīshíqī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "八十",
+       "pinyin": "bāshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "八十二",
+       "pinyin": "bāshí'èr",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "八十八",
+       "pinyin": "bāshíbā",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "九十",
+       "pinyin": "jiǔshí",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "九十一",
+       "pinyin": "jiǔshíyī",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "九十九",
+       "pinyin": "jiǔshíjiǔ",
+       "noteVi": "Số trong bảng 0–99 của sách (tr.020) — đọc thành tiếng."
+      },
+      {
+       "zh": "一百",
+       "pinyin": "yìbǎi",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "二百零八",
+       "pinyin": "èrbǎi líng bā",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "九百九十九",
+       "pinyin": "jiǔbǎi jiǔshíjiǔ",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "一千",
+       "pinyin": "yìqiān",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "一千五百二十八",
+       "pinyin": "yìqiān wǔbǎi èrshíbā",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "九千九百九十九",
+       "pinyin": "jiǔqiān jiǔbǎi jiǔshíjiǔ",
+       "noteVi": "Số từ 100 đến 10.000 trong sách (tr.021) — đọc thành tiếng."
+      },
+      {
+       "zh": "十二",
+       "pinyin": "shí'èr",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
+      },
+      {
+       "zh": "二十二",
+       "pinyin": "èrshí'èr",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
+      },
+      {
+       "zh": "一百二十二",
+       "pinyin": "yìbǎi èrshí'èr",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
+      },
+      {
+       "zh": "两个人",
+       "pinyin": "liǎng gè rén",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
+      },
+      {
+       "zh": "两口人",
+       "pinyin": "liǎng kǒu rén",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
+      },
+      {
+       "zh": "两本书",
+       "pinyin": "liǎng běn shū",
+       "noteVi": "Cách đọc số 2 của sách (tr.021): 二 dùng trong số đếm/thứ tự, 两 dùng trước lượng từ."
       }
      ],
      "positionVi": "Ghép số theo hàng từ lớn xuống nhỏ; 零 (líng) lấp hàng trống ở giữa như trong 二百零八.",
@@ -8587,7 +8865,24 @@
      ],
      "exerciseIds": [
       "wb4-text-4"
-     ]
+     ],
+     "useWhenVi": "Khi đọc và viết số tiếng Trung từ 0 đến 10.000, và khi phân biệt 二 với 两 trước lượng từ.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: số 208 đọc thế nào?",
+      "stemZh": "208",
+      "options": [
+       {
+        "zh": "二百零八",
+        "vi": "208"
+       },
+       {
+        "zh": "二百八十",
+        "vi": "280"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "208 = 二百零八 (èrbǎi líng bā): hàng chục là 0 nên phải đọc 零."
+     }
     },
     {
      "id": "kp-hsk1-l04-ne",
@@ -8625,7 +8920,24 @@
      "sentenceIds": [
       "l04-s5"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi muốn hỏi lại đúng điều vừa được nói tới: “A……，B呢？” — còn B thì sao.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Tôi có hai anh trai, còn bạn thì sao?” — chọn cách hỏi lại đúng.",
+      "stemZh": "我有两个哥哥，____？",
+      "options": [
+       {
+        "zh": "你呢",
+        "vi": "còn bạn (thì sao)"
+       },
+       {
+        "zh": "你好",
+        "vi": "xin chào"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Hỏi lại bằng 呢： 我有两个哥哥，你呢？"
+     }
     },
     {
      "id": "kp-hsk1-l04-measure",
@@ -8649,6 +8961,26 @@
        "zh": "二十个学生",
        "pinyin": "èrshí gè xuésheng",
        "noteVi": "hai mươi học sinh — trong Hội thoại 1"
+      },
+      {
+       "zh": "四口",
+       "pinyin": "sì kǒu",
+       "noteVi": "Cụm luyện đọc của sách (tr.023)."
+      },
+      {
+       "zh": "四口人",
+       "pinyin": "sì kǒu rén",
+       "noteVi": "Cụm luyện đọc của sách (tr.023)."
+      },
+      {
+       "zh": "两个",
+       "pinyin": "liǎng gè",
+       "noteVi": "Cụm luyện đọc của sách (tr.023)."
+      },
+      {
+       "zh": "我有一个姐姐，你呢？",
+       "pinyin": "Wǒ yǒu yí gè jiějie, nǐ ne?",
+       "noteVi": "Câu trong bài Hoàn thành hội thoại của sách (tr.023), chỗ trống đã điền 一个."
       }
      ],
      "positionVi": "Không bỏ lượng từ giữa số và danh từ: nói 两个哥哥， không nói *二哥哥.",
@@ -8667,7 +8999,24 @@
      "exerciseIds": [
       "wb4-text-2",
       "wb4-text-3"
-     ]
+     ],
+     "useWhenVi": "Khi đếm người hoặc vật: số từ + lượng từ + danh từ; đếm người trong nhà dùng 口, đếm chung dùng 个.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Nhà tôi có bốn người” — đếm người trong nhà dùng lượng từ nào?",
+      "stemZh": "我家有四__人。",
+      "options": [
+       {
+        "zh": "口",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "zh": "个",
+        "vi": "lượng từ chung"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Đếm người nhà dùng 口： 我家有四口人。"
+     }
     },
     {
      "id": "kp-hsk1-l04-tone-sandhi",
@@ -8742,6 +9091,21 @@
         "end": 114.5,
         "status": "asr-draft"
        }
+      },
+      {
+       "zh": "小语",
+       "pinyin": "Xiǎoyǔ",
+       "noteVi": "Từ trong bảng/bài đọc theo của Workbook tr.013–014 — chú ý biến điệu thanh 3."
+      },
+      {
+       "zh": "很好",
+       "pinyin": "hěn hǎo",
+       "noteVi": "Từ trong bảng/bài đọc theo của Workbook tr.013–014 — chú ý biến điệu thanh 3."
+      },
+      {
+       "zh": "请你",
+       "pinyin": "qǐng nǐ",
+       "noteVi": "Từ trong bảng/bài đọc theo của Workbook tr.013–014 — chú ý biến điệu thanh 3."
       }
      ],
      "positionVi": "Bảng biến điệu và dãy âm tiết in ở Workbook trang in 013; nghe và đọc theo track Workbook 4-1.",
@@ -8801,6 +9165,31 @@
         "end": 163.5,
         "status": "asr-draft"
        }
+      },
+      {
+       "zh": "妈妈",
+       "pinyin": "māma",
+       "noteVi": "Từ đọc theo hình của Workbook tr.014–015 — âm cuối đọc thanh nhẹ."
+      },
+      {
+       "zh": "谢谢",
+       "pinyin": "xièxie",
+       "noteVi": "Từ đọc theo hình của Workbook tr.014–015 — âm cuối đọc thanh nhẹ."
+      },
+      {
+       "zh": "衣服",
+       "pinyin": "yīfu",
+       "noteVi": "Từ đọc theo hình của Workbook tr.014–015 — âm cuối đọc thanh nhẹ."
+      },
+      {
+       "zh": "漂亮",
+       "pinyin": "piàoliang",
+       "noteVi": "Từ đọc theo hình của Workbook tr.014–015 — âm cuối đọc thanh nhẹ."
+      },
+      {
+       "zh": "早上",
+       "pinyin": "zǎoshang",
+       "noteVi": "Từ đọc theo hình của Workbook tr.014–015 — âm cuối đọc thanh nhẹ."
       }
      ],
      "positionVi": "Phần giải thích và cặp đối chiếu in ở Workbook trang in 014; nghe và đọc theo track Workbook 4-1.",
@@ -9445,7 +9834,7 @@
    "exerciseSet": {
     "id": "set-tb-l04-text-v1",
     "titleVi": "Câu hỏi hiểu hội thoại trong sách",
-    "noteVi": "Bốn câu hỏi in trong Textbook sau Hội thoại 2 (trang 021) và Hội thoại 3 (trang 024). Đáp án lấy từ chính lời thoại in trong sách.",
+    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.018); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.021, 024 và phần đọc hiểu tr.025) — đáp án lấy từ chính lời thoại in; 5 câu điền từ tổng hợp (tr.025) — sách không in đáp án, đáp án do dự án biên tập theo nội dung bài và ghi rõ trạng thái.",
     "items": [
      {
       "id": "wb4-text-1",
@@ -9691,6 +10080,673 @@
       "grammarIds": [
        "kp-hsk1-l04-numbers"
       ]
+     },
+     {
+      "id": "wb4-text-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): Vương Nhất Tuyết có mấy con trai, mấy con gái?",
+      "promptZh": "王一雪有几个儿子？几个女儿？",
+      "promptPinyin": "Wáng Yīxuě yǒu jǐ gè érzi? Jǐ gè nǚ’ér?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一个儿子，一个女儿",
+        "pinyin": "yí gè érzi, yí gè nǚ’ér",
+        "vi": "một con trai, một con gái"
+       },
+       {
+        "id": "2",
+        "zh": "两个儿子，一个女儿",
+        "pinyin": "liǎng gè érzi, yí gè nǚ’ér",
+        "vi": "hai con trai, một con gái"
+       },
+       {
+        "id": "3",
+        "zh": "一个儿子，两个女儿",
+        "pinyin": "yí gè érzi, liǎng gè nǚ’ér",
+        "vi": "một con trai, hai con gái"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 我有两个孩子，一个儿子，一个女儿。",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "课文 3 · 根据课文内容回答问题 (1)"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-you",
+       "kp-hsk1-l04-measure"
+      ]
+     },
+     {
+      "id": "wb4-text-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi đọc hiểu Hội thoại 3 (Textbook trang 025): con trai của Vương Nhất Tuyết năm nay mấy tuổi?",
+      "promptZh": "王一雪儿子今年几岁？",
+      "promptPinyin": "Wáng Yīxuě érzi jīnnián jǐ suì?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "五岁",
+        "pinyin": "wǔ suì",
+        "vi": "năm tuổi"
+       },
+       {
+        "id": "2",
+        "zh": "十二岁",
+        "pinyin": "shí’èr suì",
+        "vi": "mười hai tuổi"
+       },
+       {
+        "id": "3",
+        "zh": "二十岁",
+        "pinyin": "èrshí suì",
+        "vi": "hai mươi tuổi"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Đáp án lấy trực tiếp từ lời thoại in tr.024: 他今年五岁。",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "课文 3 · 根据课文内容回答问题 (2)"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-numbers"
+      ]
+     },
+     {
+      "id": "tb4-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.025), câu 1: chọn từ trong khung （呢/二十/没/口/大） điền vào chỗ trống.",
+      "promptZh": "王一飞老师有____个学生。",
+      "promptPinyin": "Wáng Yīfēi lǎoshī yǒu ____ gè xuésheng.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "呢",
+        "pinyin": "ne",
+        "vi": "trợ từ hỏi lại (còn… thì sao)"
+       },
+       {
+        "id": "2",
+        "zh": "二十",
+        "pinyin": "èrshí",
+        "vi": "hai mươi"
+       },
+       {
+        "id": "3",
+        "zh": "没",
+        "pinyin": "méi",
+        "vi": "không — phủ định của 有"
+       },
+       {
+        "id": "4",
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "id": "5",
+        "zh": "大",
+        "pinyin": "dà",
+        "vi": "lớn — dùng khi hỏi tuổi"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sách không in đáp án; đáp án do dự án biên tập theo nội dung bài: 二十 — Hội thoại 1: cô Vương Nhất Phi có hai mươi học sinh （她有二十个学生）.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "综合练习 · 选词填空"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-you",
+       "kp-hsk1-l04-numbers"
+      ]
+     },
+     {
+      "id": "tb4-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.025), câu 2: chọn từ trong khung （呢/二十/没/口/大） điền vào chỗ trống.",
+      "promptZh": "杨同乐家有四____人。",
+      "promptPinyin": "Yáng Tónglè jiā yǒu sì ____ rén.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "呢",
+        "pinyin": "ne",
+        "vi": "trợ từ hỏi lại (còn… thì sao)"
+       },
+       {
+        "id": "2",
+        "zh": "二十",
+        "pinyin": "èrshí",
+        "vi": "hai mươi"
+       },
+       {
+        "id": "3",
+        "zh": "没",
+        "pinyin": "méi",
+        "vi": "không — phủ định của 有"
+       },
+       {
+        "id": "4",
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "id": "5",
+        "zh": "大",
+        "pinyin": "dà",
+        "vi": "lớn — dùng khi hỏi tuổi"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sách không in đáp án; đáp án do dự án biên tập theo nội dung bài: 口 — đếm người trong nhà dùng lượng từ 口 （我家有四口人）.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "综合练习 · 选词填空"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-measure"
+      ]
+     },
+     {
+      "id": "tb4-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.025), câu 3 (lượt hỏi): chọn từ trong khung （呢/二十/没/口/大） điền vào chỗ trống.",
+      "promptZh": "王一雪：我有两个孩子，你____？",
+      "promptPinyin": "Wáng Yīxuě: Wǒ yǒu liǎng gè háizi, nǐ ____?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "呢",
+        "pinyin": "ne",
+        "vi": "trợ từ hỏi lại (còn… thì sao)"
+       },
+       {
+        "id": "2",
+        "zh": "二十",
+        "pinyin": "èrshí",
+        "vi": "hai mươi"
+       },
+       {
+        "id": "3",
+        "zh": "没",
+        "pinyin": "méi",
+        "vi": "không — phủ định của 有"
+       },
+       {
+        "id": "4",
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "id": "5",
+        "zh": "大",
+        "pinyin": "dà",
+        "vi": "lớn — dùng khi hỏi tuổi"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sách không in đáp án; đáp án do dự án biên tập theo nội dung bài: 呢 — hỏi lại người đối diện: còn bạn thì sao?",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "综合练习 · 选词填空"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-ne"
+      ]
+     },
+     {
+      "id": "tb4-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.025), câu 3 (lượt đáp): chọn từ trong khung （呢/二十/没/口/大） điền vào chỗ trống.",
+      "promptZh": "杨同乐：我____孩子。",
+      "promptPinyin": "Yáng Tónglè: Wǒ ____ háizi.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "呢",
+        "pinyin": "ne",
+        "vi": "trợ từ hỏi lại (còn… thì sao)"
+       },
+       {
+        "id": "2",
+        "zh": "二十",
+        "pinyin": "èrshí",
+        "vi": "hai mươi"
+       },
+       {
+        "id": "3",
+        "zh": "没",
+        "pinyin": "méi",
+        "vi": "không — phủ định của 有"
+       },
+       {
+        "id": "4",
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "id": "5",
+        "zh": "大",
+        "pinyin": "dà",
+        "vi": "lớn — dùng khi hỏi tuổi"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sách không in đáp án; đáp án do dự án biên tập theo nội dung bài: 没 — phủ định của 有 là 没/没有；杨同乐 không có con (đối chiếu mạch bài tổng hợp).",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "综合练习 · 选词填空"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-you"
+      ]
+     },
+     {
+      "id": "tb4-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp của sách (Textbook tr.025), câu 4: chọn từ trong khung （呢/二十/没/口/大） điền vào chỗ trống.",
+      "promptZh": "杨同乐：您女儿今年多____？",
+      "promptPinyin": "Yáng Tónglè: Nín nǚ’ér jīnnián duō ____?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "呢",
+        "pinyin": "ne",
+        "vi": "trợ từ hỏi lại (còn… thì sao)"
+       },
+       {
+        "id": "2",
+        "zh": "二十",
+        "pinyin": "èrshí",
+        "vi": "hai mươi"
+       },
+       {
+        "id": "3",
+        "zh": "没",
+        "pinyin": "méi",
+        "vi": "không — phủ định của 有"
+       },
+       {
+        "id": "4",
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ đếm người trong nhà"
+       },
+       {
+        "id": "5",
+        "zh": "大",
+        "pinyin": "dà",
+        "vi": "lớn — dùng khi hỏi tuổi"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sách không in đáp án; đáp án do dự án biên tập theo nội dung bài: 大 — hỏi tuổi người trên mười tuổi dùng 多大 (xem ô trợ giúp tr.024).",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 25,
+        "section": "综合练习 · 选词填空"
+       }
+      ],
+      "grammarIds": [
+       "kp-hsk1-l04-numbers"
+      ]
+     },
+     {
+      "id": "wb4-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “五” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "五",
+      "promptPinyin": "wǔ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "学生",
+        "pinyin": "xuésheng",
+        "vi": "học sinh",
+        "image": "assets/lesson-04/warm-students.webp",
+        "imageAlt": "Minh họa vẽ lại: học sinh giơ tay trong lớp học"
+       },
+       {
+        "id": "2",
+        "zh": "五",
+        "pinyin": "wǔ",
+        "vi": "số năm",
+        "image": "assets/lesson-04/warm-five.webp",
+        "imageAlt": "Minh họa vẽ lại: một số 5 lớn màu xanh"
+       },
+       {
+        "id": "3",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "image": "assets/lesson-04/warm-teacher.webp",
+        "imageAlt": "Minh họa vẽ lại: một cô giáo cầm que chỉ đứng trước bảng đen"
+       },
+       {
+        "id": "4",
+        "zh": "妈妈",
+        "pinyin": "māma",
+        "vi": "mẹ",
+        "image": "assets/lesson-04/warm-mother.webp",
+        "imageAlt": "Minh họa vẽ lại: một người mẹ bế em bé trong bếp"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "wb4-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “哥哥” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "哥哥",
+      "promptPinyin": "gēge",
+      "options": [
+       {
+        "id": "1",
+        "zh": "哥哥",
+        "pinyin": "gēge",
+        "vi": "anh trai",
+        "image": "assets/lesson-04/warm-brother.webp",
+        "imageAlt": "Minh họa vẽ lại: một anh trai ôm em nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "六十岁",
+        "pinyin": "liùshí suì",
+        "vi": "sáu mươi tuổi",
+        "image": "assets/lesson-04/warm-elderly.webp",
+        "imageAlt": "Minh họa vẽ lại: một ông lão khoảng sáu mươi tuổi đứng ngoài trời"
+       },
+       {
+        "id": "3",
+        "zh": "学生",
+        "pinyin": "xuésheng",
+        "vi": "học sinh",
+        "image": "assets/lesson-04/warm-students.webp",
+        "imageAlt": "Minh họa vẽ lại: học sinh giơ tay trong lớp học"
+       },
+       {
+        "id": "4",
+        "zh": "五",
+        "pinyin": "wǔ",
+        "vi": "số năm",
+        "image": "assets/lesson-04/warm-five.webp",
+        "imageAlt": "Minh họa vẽ lại: một số 5 lớn màu xanh"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "wb4-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “学生” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "学生",
+      "promptPinyin": "xuésheng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "image": "assets/lesson-04/warm-teacher.webp",
+        "imageAlt": "Minh họa vẽ lại: một cô giáo cầm que chỉ đứng trước bảng đen"
+       },
+       {
+        "id": "2",
+        "zh": "妈妈",
+        "pinyin": "māma",
+        "vi": "mẹ",
+        "image": "assets/lesson-04/warm-mother.webp",
+        "imageAlt": "Minh họa vẽ lại: một người mẹ bế em bé trong bếp"
+       },
+       {
+        "id": "3",
+        "zh": "学生",
+        "pinyin": "xuésheng",
+        "vi": "học sinh",
+        "image": "assets/lesson-04/warm-students.webp",
+        "imageAlt": "Minh họa vẽ lại: học sinh giơ tay trong lớp học"
+       },
+       {
+        "id": "4",
+        "zh": "哥哥",
+        "pinyin": "gēge",
+        "vi": "anh trai",
+        "image": "assets/lesson-04/warm-brother.webp",
+        "imageAlt": "Minh họa vẽ lại: một anh trai ôm em nhỏ"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "wb4-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “六十岁” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "六十岁",
+      "promptPinyin": "liùshí suì",
+      "options": [
+       {
+        "id": "1",
+        "zh": "五",
+        "pinyin": "wǔ",
+        "vi": "số năm",
+        "image": "assets/lesson-04/warm-five.webp",
+        "imageAlt": "Minh họa vẽ lại: một số 5 lớn màu xanh"
+       },
+       {
+        "id": "2",
+        "zh": "六十岁",
+        "pinyin": "liùshí suì",
+        "vi": "sáu mươi tuổi",
+        "image": "assets/lesson-04/warm-elderly.webp",
+        "imageAlt": "Minh họa vẽ lại: một ông lão khoảng sáu mươi tuổi đứng ngoài trời"
+       },
+       {
+        "id": "3",
+        "zh": "哥哥",
+        "pinyin": "gēge",
+        "vi": "anh trai",
+        "image": "assets/lesson-04/warm-brother.webp",
+        "imageAlt": "Minh họa vẽ lại: một anh trai ôm em nhỏ"
+       },
+       {
+        "id": "4",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "image": "assets/lesson-04/warm-teacher.webp",
+        "imageAlt": "Minh họa vẽ lại: một cô giáo cầm que chỉ đứng trước bảng đen"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "wb4-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “妈妈” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "妈妈",
+      "promptPinyin": "māma",
+      "options": [
+       {
+        "id": "1",
+        "zh": "学生",
+        "pinyin": "xuésheng",
+        "vi": "học sinh",
+        "image": "assets/lesson-04/warm-students.webp",
+        "imageAlt": "Minh họa vẽ lại: học sinh giơ tay trong lớp học"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "image": "assets/lesson-04/warm-teacher.webp",
+        "imageAlt": "Minh họa vẽ lại: một cô giáo cầm que chỉ đứng trước bảng đen"
+       },
+       {
+        "id": "3",
+        "zh": "妈妈",
+        "pinyin": "māma",
+        "vi": "mẹ",
+        "image": "assets/lesson-04/warm-mother.webp",
+        "imageAlt": "Minh họa vẽ lại: một người mẹ bế em bé trong bếp"
+       },
+       {
+        "id": "4",
+        "zh": "六十岁",
+        "pinyin": "liùshí suì",
+        "vi": "sáu mươi tuổi",
+        "image": "assets/lesson-04/warm-elderly.webp",
+        "imageAlt": "Minh họa vẽ lại: một ông lão khoảng sáu mươi tuổi đứng ngoài trời"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
+     },
+     {
+      "id": "wb4-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Khởi động (Textbook trang 018): từ “老师” ứng với hình nào? Chọn hình đúng.",
+      "promptZh": "老师",
+      "promptPinyin": "lǎoshī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "妈妈",
+        "pinyin": "māma",
+        "vi": "mẹ",
+        "image": "assets/lesson-04/warm-mother.webp",
+        "imageAlt": "Minh họa vẽ lại: một người mẹ bế em bé trong bếp"
+       },
+       {
+        "id": "2",
+        "zh": "哥哥",
+        "pinyin": "gēge",
+        "vi": "anh trai",
+        "image": "assets/lesson-04/warm-brother.webp",
+        "imageAlt": "Minh họa vẽ lại: một anh trai ôm em nhỏ"
+       },
+       {
+        "id": "3",
+        "zh": "五",
+        "pinyin": "wǔ",
+        "vi": "số năm",
+        "image": "assets/lesson-04/warm-five.webp",
+        "imageAlt": "Minh họa vẽ lại: một số 5 lớn màu xanh"
+       },
+       {
+        "id": "4",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "image": "assets/lesson-04/warm-teacher.webp",
+        "imageAlt": "Minh họa vẽ lại: một cô giáo cầm que chỉ đứng trước bảng đen"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ghép từ – hình theo đúng trang khởi động của sách; hình là tranh vẽ mới của dự án mô phỏng ảnh gốc.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 18,
+        "section": "热身 Warm-Up"
+       }
+      ],
+      "grammarIds": []
      }
     ]
    },
@@ -9753,21 +10809,230 @@
       "end": 57.5
      },
      "audioSegmentNote": "Mốc đoạn xác định từ vị trí câu hướng dẫn và dãy âm tiết trong track (đối chiếu ASR nháp local trên chính track này); chưa nghe kiểm chứng bởi người."
+    },
+    {
+     "id": "st-l04-02",
+     "titleVi": "Nghe và đọc lại: chú ý biến điệu thanh 3 (bài 2, trang in 015)",
+     "instructionVi": "Nghe đoạn của bài này trong track Workbook 4-2 rồi đọc lại từng từ, chú ý hai thanh 3 liên tiếp: thanh 3 đầu đọc thành thanh 2. Đây là bài luyện đọc theo, không chấm đúng/sai; ô ghi chú để bạn tự ghi điều nghe được.",
+     "audioTrackId": "trk-wb-l04-2",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 22,
+       "printedPage": 15,
+       "section": "听读练"
+      }
+     ],
+     "prompts": [
+      "nǐ hǎo",
+      "kěyǐ",
+      "nǎlǐ",
+      "shuǐguǒ",
+      "shǒubiǎo",
+      "suǒyǐ",
+      "pěngchǎng",
+      "hǎojiǔ",
+      "wǎndiǎn",
+      "liǎojiě",
+      "xǐzǎo",
+      "zhǐyǒu"
+     ],
+     "kind": "listening-comparison",
+     "guideVi": "Lượt 1: nghe và nhìn dấu thanh gốc. Lượt 2: đọc theo, đổi thanh 3 đầu thành thanh 2. Lượt 3: tự đọc lại cả danh sách.",
+     "practiceEvidence": "Workbook tr.015 bài 2 yêu cầu nghe, đọc theo rồi đọc to, chú ý biến điệu thanh 3; danh sách 12 mục lấy nguyên văn bản in."
+    },
+    {
+     "id": "st-l04-03",
+     "titleVi": "Nghe và đọc lại: chú ý thanh nhẹ (bài 3, trang in 015)",
+     "instructionVi": "Nghe đoạn của bài này trong track Workbook 4-2 rồi đọc lại từng mục, chú ý âm cuối đọc nhẹ và ngắn (thanh nhẹ). Đây là bài luyện đọc theo, không chấm đúng/sai.",
+     "audioTrackId": "trk-wb-l04-2",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 22,
+       "printedPage": 15,
+       "section": "听读练"
+      }
+     ],
+     "prompts": [
+      "bāozi",
+      "xièxie",
+      "piányi",
+      "dìdi",
+      "piàoliang",
+      "méi guānxi",
+      "duìbuqǐ",
+      "rènshi"
+     ],
+     "kind": "listening-comparison",
+     "guideVi": "Lượt 1: nghe và để ý âm cuối nhẹ. Lượt 2: đọc theo. Lượt 3: tự đọc lại cả danh sách.",
+     "practiceEvidence": "Workbook tr.015 bài 3 yêu cầu nghe, đọc theo rồi đọc to, chú ý thanh nhẹ; danh sách 8 mục lấy nguyên văn bản in."
+    },
+    {
+     "id": "st-l04-04",
+     "titleVi": "Phân biệt thanh nhẹ và không thanh nhẹ (bài 4, trang in 015)",
+     "instructionVi": "Nghe và phân biệt hai dạng trong từng cặp: dạng có thanh (nghĩa khác) và dạng thanh nhẹ. Đây là bài phân biệt phát âm, không phải chọn một đáp án đúng; ghi chú của bạn được lưu tự động.",
+     "audioTrackId": "trk-wb-l04-2",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 22,
+       "printedPage": 15,
+       "section": "听读练"
+      }
+     ],
+     "prompts": [
+      "Sūnzǐ / sūnzi",
+      "dōngxī / dōngxi",
+      "yùnqì / yùnqi",
+      "Lǎozǐ / lǎozi",
+      "dìfāng / dìfang",
+      "mǎmǎhūhū / mǎhu"
+     ],
+     "kind": "listening-comparison",
+     "guideVi": "Đối chiếu với phần giải thích thanh nhẹ ở Workbook tr.014: 东西 dōngxī là phương hướng, dōngxi là đồ vật; 孙子 Sūnzǐ là Tôn Tử, sūnzi là cháu trai.",
+     "practiceEvidence": "Workbook tr.015 bài 4 yêu cầu nghe, phân biệt thanh nhẹ với không thanh nhẹ rồi đọc theo; sáu cặp lấy nguyên văn bản in."
+    },
+    {
+     "id": "st-l04-05",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 025–026) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ mới của dự án, vẽ theo cảnh trong sách), hoàn thành khung câu bằng từ và điểm ngữ pháp của bài rồi nói thành tiếng. Khung 1: 他家有____。Khung 2: 这是李文的____和____。Khung 3: 我儿子今年____岁。Khung 4: 我有一个____。Gợi ý kiểm tra: khung 1 đếm đủ người trong hình — sáu người （六口人）; khung 2 là 爸爸 và 妈妈; khung 3 tuổi do bạn tự chọn theo ý muốn (sách không in đáp án); khung 4 nói 哥哥 hay 弟弟 tuỳ bạn đóng vai người anh hay người em. App lưu nháp, không chấm tự động.",
+     "prompts": [
+      "他家有____。",
+      "这是李文的____和____。",
+      "我儿子今年____岁。",
+      "我有一个____。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-04/describe-1.webp",
+       "alt": "Tranh vẽ mới: một gia đình sáu người ngồi trên bậc thềm trước nhà",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.025 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 40,
+         "printedPage": 25,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片 (1)"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-04/describe-2.webp",
+       "alt": "Tranh vẽ mới: một cặp vợ chồng trung niên ngồi trên ghế sofa",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.025 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 40,
+         "printedPage": 25,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片 (2)"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-04/describe-3.webp",
+       "alt": "Tranh vẽ mới: một cậu bé mặc áo sơ mi trắng đứng trong nhà mỉm cười",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.026 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 41,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片 (3)"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-04/describe-4.webp",
+       "alt": "Tranh vẽ mới: hai anh em trai ôm nhau ngoài trời",
+       "captionVi": "Tranh minh họa phẳng vẽ mới của dự án theo cảnh Textbook tr.026 (không dùng ảnh sách)",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 41,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片 (4)"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 25,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 26,
+       "section": "综合练习 · 描述图片 (tiếp)"
+      }
+     ]
     }
    ],
-   "selfCheckIntroVi": "Workbook trang 015, bài 1. Mỗi ô được lưu tự động. Có chấm tự động theo đáp án đã đối chiếu (bản in + tài liệu lời đọc + nghe đối chiếu); chưa phải đáp án chính thức của NXB.",
+   "selfCheckIntroVi": "Các bài tự luyện của bài: nghe – viết chọn âm tiết (Workbook tr.015 bài 1, có chấm tự động theo đáp án đã đối chiếu), hai bài nghe và đọc lại về biến điệu thanh 3 và thanh nhẹ (bài 2–3), bài phân biệt thanh nhẹ (bài 4) và bài dùng hình để nói (Textbook tr.025–026). Trừ bài nghe – viết, các bài còn lại không chấm tự động.",
    "selfCheckListenVi": "▶ Nghe track Workbook 4-2",
    "apply": {
     "titleVi": "Đóng vai và nói về gia đình thật của mình",
     "instructionVi": "Chọn hội thoại 2. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: dựa vào tình huống thật của mình, nói nhà mình có mấy người, gồm những ai （我家有…口人）. Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
     "audioTrackId": "trk-tb-l04-3",
-    "noteVi": "Nhiệm vụ đóng vai và nói theo tình huống thật lấy từ Textbook trang in 022. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "noteVi": "Hai nhiệm vụ lấy từ Textbook: đóng vai Hội thoại 2 rồi nói theo tình huống thật (tr.022) và hoạt động cặp hỏi về cá nhân, gia đình (tr.026). Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
     "sourceRefs": [
      {
       "sourceId": "src-hsk1-textbook-pdf",
       "pdfPage": 37,
       "printedPage": 22,
       "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+     }
+    ],
+    "samplePassageIds": [
+     "l04-dialogue-2"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l04-1",
+      "titleVi": "Đóng vai: nhà bạn có mấy người?",
+      "situationVi": "Hai đồng nghiệp trò chuyện giờ nghỉ: một người khoe có hai anh trai rồi hỏi lại, người kia nói nhà mình có bốn người.",
+      "sampleZh": "我有两个哥哥，你呢？— 我没有哥哥。— 你家有几口人？— 我家有四口人，爸爸、妈妈、妹妹和我。",
+      "samplePinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne? — Wǒ méiyǒu gēge. — Nǐ jiā yǒu jǐ kǒu rén? — Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+      "sampleVi": "Tôi có hai anh trai, còn bạn? — Tôi không có anh trai. — Nhà bạn có mấy người? — Nhà tôi có bốn người: bố, mẹ, em gái và tôi.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 37,
+        "printedPage": 22,
+        "section": "课文 2 · 分角色朗读对话 · 两人一组，根据实际情况对话"
+       }
+      ],
+      "swapVi": "Luyện theo cặp theo tình huống thật của mình: nói nhà mình có mấy người, gồm những ai, như sách yêu cầu ở tr.022.",
+      "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 2 （课文 2, Textbook tr.022); hoạt động đóng vai và luyện theo cặp theo tình huống thật cũng ở tr.022."
+     },
+     {
+      "id": "speak-l04-2",
+      "titleVi": "Hỏi nhau về cá nhân và gia đình (hoạt động lớp)",
+      "situationVi": "Hoạt động cặp của sách (tr.026): hai người hỏi nhau về thông tin cá nhân và gia đình — quốc tịch, nhà có mấy người, tuổi — có thể bịa chi tiết.",
+      "sampleZh": "你是哪国人？— 我是中国人。— 你家有几口人？",
+      "samplePinyin": "Nǐ shì nǎ guó rén? — Wǒ shì Zhōngguó rén. — Nǐ jiā yǒu jǐ kǒu rén?",
+      "sampleVi": "Bạn là người nước nào? — Tôi là người Trung Quốc. — Nhà bạn có mấy người? (mẫu 小语的例子 trong sách; tiếp tục hỏi đáp tự do)",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 26,
+        "section": "课堂活动 · 双人活动"
+       }
+      ],
+      "swapVi": "Đổi vai và đổi chi tiết: hỏi quốc tịch, số người trong nhà và tuổi của người thân; có thể bịa chi tiết như sách cho phép.",
+      "sourceNoteVi": "Hoạt động cặp ở mục 课堂活动 (Textbook tr.026); câu mẫu là ví dụ của Tiểu Ngữ in cùng trang."
      }
     ]
    },
@@ -10012,7 +11277,240 @@
       "status": "asr-draft"
      }
     }
-   ]
+   ],
+   "prepGroups": [
+    {
+     "id": "l04-vocab-1",
+     "dialogueId": "l04-dialogue-1",
+     "titleVi": "Hội thoại 1 · Cô ấy có bao nhiêu học sinh?",
+     "trackId": "trk-tb-l04-2",
+     "trackLabelVi": "Track 4-2"
+    },
+    {
+     "id": "l04-vocab-2",
+     "dialogueId": "l04-dialogue-2",
+     "titleVi": "Hội thoại 2 · Nhà bạn có mấy người?",
+     "trackId": "trk-tb-l04-4",
+     "trackLabelVi": "Track 4-4"
+    },
+    {
+     "id": "l04-vocab-3",
+     "dialogueId": "l04-dialogue-3",
+     "titleVi": "Hội thoại 3 · Hỏi tuổi các con",
+     "trackId": "trk-tb-l04-6",
+     "trackLabelVi": "Track 4-6"
+    }
+   ],
+   "prepSummaryVi": "21 từ mới, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Cô ấy có bao nhiêu học sinh?",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → nói ai có gì bằng câu chữ 有.",
+     "sectionId": "prep",
+     "dialogueId": "l04-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Nhà bạn có mấy người?",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → hỏi lại bằng 呢 và đếm người nhà bằng lượng từ 口.",
+     "sectionId": "reader",
+     "dialogueId": "l04-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Con của chị mấy tuổi?",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → hỏi tuổi trẻ em bằng 几岁, người lớn hơn bằng 多大.",
+     "sectionId": "reader",
+     "dialogueId": "l04-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Bốn điều cần nhớ và tự nói về gia đình thật của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu chữ 有",
+     "bodyVi": "有 nói sở hữu người/vật; phủ định bằng 没/没有 (không dùng 不）; hỏi số lượng bằng 多少 hoặc 几 + lượng từ.",
+     "exampleZh": "她有二十个学生。",
+     "examplePinyin": "Tā yǒu èrshí gè xuésheng.",
+     "exampleVi": "Cô ấy có hai mươi học sinh."
+    },
+    {
+     "titleVi": "Hỏi lại bằng 呢",
+     "bodyVi": "“A……，B呢？” hỏi lại đúng điều vừa nói tới — còn B thì sao.",
+     "exampleZh": "我有两个哥哥，你呢？",
+     "examplePinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
+     "exampleVi": "Tôi có hai anh trai, còn bạn thì sao?"
+    },
+    {
+     "titleVi": "Số và lượng từ",
+     "bodyVi": "Số từ + lượng từ + danh từ: đếm người nhà dùng 口, đếm chung dùng 个; trước lượng từ dùng 两, không dùng 二.",
+     "exampleZh": "我家有四口人。",
+     "examplePinyin": "Wǒ jiā yǒu sì kǒu rén.",
+     "exampleVi": "Nhà tôi có bốn người."
+    },
+    {
+     "titleVi": "Hỏi tuổi",
+     "bodyVi": "Trẻ từ mười tuổi trở xuống hỏi 几岁； người lớn hơn thường hỏi 多大.",
+     "exampleZh": "他今年五岁。",
+     "examplePinyin": "Tā jīnnián wǔ suì.",
+     "exampleVi": "Năm nay cậu bé năm tuổi."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu để xem Pinyin, Hán–Việt và nghĩa. Tên nhân vật và cách đọc số do dự án bổ sung đã kiểm duyệt.",
+    "extras": [
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Tên nhân vật — người hỏi chuyện trong Hội thoại 1"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Tên nhân vật — xuất hiện trong cả ba hội thoại của bài"
+     },
+     {
+      "zh": "杨同乐",
+      "pinyin": "Yáng Tónglè",
+      "hanViet": "DƯƠNG ĐỒNG LẠC",
+      "vi": "Tên nhân vật — đồng nghiệp trong Hội thoại 2 và 3"
+     },
+     {
+      "zh": "一飞",
+      "pinyin": "Yīfēi",
+      "hanViet": "NHẤT PHI",
+      "vi": "Tên gọi của Vương Nhất Phi, nhân vật các bài trước"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Tên nhân vật chính của Bài 2"
+     },
+     {
+      "zh": "零",
+      "pinyin": "líng",
+      "hanViet": "LINH",
+      "vi": "số 0"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "số 1"
+     },
+     {
+      "zh": "二",
+      "pinyin": "èr",
+      "hanViet": "NHỊ",
+      "vi": "số 2"
+     },
+     {
+      "zh": "三",
+      "pinyin": "sān",
+      "hanViet": "TAM",
+      "vi": "số 3"
+     },
+     {
+      "zh": "四",
+      "pinyin": "sì",
+      "hanViet": "TỨ",
+      "vi": "số 4"
+     },
+     {
+      "zh": "五",
+      "pinyin": "wǔ",
+      "hanViet": "NGŨ",
+      "vi": "số 5"
+     },
+     {
+      "zh": "六",
+      "pinyin": "liù",
+      "hanViet": "LỤC",
+      "vi": "số 6"
+     },
+     {
+      "zh": "七",
+      "pinyin": "qī",
+      "hanViet": "THẤT",
+      "vi": "số 7"
+     },
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "hanViet": "BÁT",
+      "vi": "số 8"
+     },
+     {
+      "zh": "九",
+      "pinyin": "jiǔ",
+      "hanViet": "CỬU",
+      "vi": "số 9"
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": "THẬP",
+      "vi": "số 10"
+     },
+     {
+      "zh": "百",
+      "pinyin": "bǎi",
+      "hanViet": "BÁCH",
+      "vi": "trăm"
+     },
+     {
+      "zh": "千",
+      "pinyin": "qiān",
+      "hanViet": "THIÊN",
+      "vi": "nghìn"
+     },
+     {
+      "zh": "两",
+      "pinyin": "liǎng",
+      "hanViet": "LƯỠNG",
+      "vi": "hai — dùng trước lượng từ, thay cho 二"
+     },
+     {
+      "zh": "本",
+      "pinyin": "běn",
+      "hanViet": "BẢN",
+      "vi": "lượng từ cho sách, vở"
+     },
+     {
+      "zh": "书",
+      "pinyin": "shū",
+      "hanViet": "THƯ",
+      "vi": "sách"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Tên nhân vật — bạn học trong các bài trước"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l05",

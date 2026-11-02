@@ -37,12 +37,12 @@ const state = () => JSON.parse(localStorage.getItem('hsk30.progress.v1'));
 test('lesson 2 content matches the printed books: counts, pages, answers, prompts', () => {
   assert.ok(l2, 'additionalLessons must contain hsk1-l02');
   assert.equal(l2.prepWords.length, 15);
-  assert.equal(l2.knowledgePoints.length, 7);
+  assert.equal(l2.knowledgePoints.length, 8); // 7 original + tongue-twister foundation point (D27 standardization)
   assert.equal(l2.knowledgePoints.filter((k) => k.kind !== 'foundation-pronunciation').length, 5);
   assert.equal(l2.reader.sentences.length, 10);
   assert.equal(l2.reader.passages.length, 3);
-  assert.equal(l2.reader.audioTracks.length, 8); // 5 pilot tracks + 3 word-list tracks for per-word speakers
-  assert.deepEqual(l2.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb')).map((t) => t.durationSec), [5.377, 13.222, 11.814, 15.281, 13.587, 10.459]); // dialogues, then the three word-list tracks
+  assert.equal(l2.reader.audioTracks.length, 9); // + tongue-twister track 2-7 (D27)
+  assert.deepEqual(l2.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb')).map((t) => t.durationSec), [5.377, 13.222, 11.814, 15.281, 13.587, 10.459, 22.969]); // dialogues, word lists, then the tongue-twister track
   assert.equal(l2.exerciseSet.items.length, 4);
   assert.deepEqual(l2.exerciseSet.items.map((i) => i.answer), ['3', '1', '4', '2']);
   for (const item of l2.exerciseSet.items) {

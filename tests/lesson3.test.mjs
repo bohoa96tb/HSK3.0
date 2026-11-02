@@ -74,7 +74,8 @@ test('lesson 3 picture exercises: images exist, answers grade, review links fit 
   }
   // the flagged lesson-2 link stays fixed
   const l2 = content.additionalLessons.find((c) => c.lessonId === 'hsk1-l02');
-  assert.deepEqual(l2.exerciseSet.items.find((i) => i.id === 'wb2-picture-1').grammarIds, ['kp-hsk1-l02-word-order']);
+  // D27: picture 1 is the first-meeting dialogue; its review point is the introduction pattern, not word order.
+  assert.deepEqual(l2.exerciseSet.items.find((i) => i.id === 'wb2-picture-1').grammarIds, ['kp-hsk1-l02-jiao']);
   // D13-class guard: the L3 introduction dialogue (answer 2) reviews the 是 pattern, not the 叫 name point.
   assert.deepEqual(l3.exerciseSet.items.find((i) => i.id === 'wb3-picture-4').grammarIds, ['kp-hsk1-l03-shi']);
 });

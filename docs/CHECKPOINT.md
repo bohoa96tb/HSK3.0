@@ -126,8 +126,8 @@
 
 - Hoa duyệt áp dụng mức hoàn thiện của bộ hình Bài 7 images2 cho Bài 1–6 và 8. Kiểm kê trực tiếp từng bộ hình hiện tại: Bài 1 (4 hình), Bài 2 (5), Bài 3 (7), Bài 4 (11) và Bài 8 (28) vốn đã là minh họa chi tiết có khuôn mặt/bối cảnh — ĐẠT mức mới, không vẽ lại (vẽ lại bằng công cụ hiện có chỉ làm giảm chất lượng). Chỉ Bài 5 và Bài 6 còn ở mức người que/khối trừu tượng.
 - Bài 5 ĐÃ VẼ LẠI + PHÁT HÀNH: 11/11 hình (cảnh: minh họa sinh mới theo ảnh gốc tr.032–033; lịch/khối gỗ: vẽ bằng chương trình, lưới ngày tính từ lịch thật). QA hình độc lập 11/11 ĐẠT (lịch kiểm từng vị trí bằng lịch thật). PR #76; contentVersion live `20261102-lesson5-images2`; sha256 live 11/11 khớp; kiểm trực quan live 2/2.
-- Bài 6: đã chuẩn bị xong kế hoạch + prompt sinh hình (`~/workspace/hsk3-work/img-l6/plan-v2.md` ở máy làm việc: 2 lưới 2×2 + 1 hình đơn; hình siêu thị và taxi dùng chung cho cặp file warm/speaking cùng khái niệm). Lượt tiếp theo: sinh hình → cắt → QA → phát hành `20261102-lesson6-images2`.
-- Sau Bài 6: quay lại nextTask chính — kiểm hồi quy Bài 8, rồi Bài 9.
+- Bài 6 ĐÃ VẼ LẠI + PHÁT HÀNH: 11/11 hình minh họa sinh mới theo ảnh gốc tr.036/041–042 (siêu thị và taxi dùng chung cho cặp file cùng khái niệm ở hai bộ câu hỏi). QA hình độc lập 11/11 ĐẠT. PR #78 (live `20261102-lesson6-images2`, byte 11/11 khớp) — kiểm trực quan live bắt được hình ngữ cảnh sai bố cục đối diện, đã sửa và phát hành PR #79 (live `20261102-lesson6-images3`, kiểm lại trực quan ĐẠT). **Vòng hình ảnh kết thúc: cả 8 bài đều ở mức hình đẹp mới.**
+- Việc tiếp theo: quay lại nextTask chính — kiểm hồi quy Bài 8, rồi Bài 9.
 
 ## Vẽ lại hình Bài 7 đẹp hơn — yêu cầu của Hoa (2026-11-02)
 

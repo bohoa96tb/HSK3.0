@@ -394,6 +394,13 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **Kiểm nghe thực tế:** không — vòng này không đổi audio; nút nghe ví dụ dùng cơ chế cũ (audio sách/TTS theo D20).
 - **Kiểm giao diện:** jsdom + đọc cascade CSS; trang responsive của dự án dùng để đối chiếu trực quan khung 390px. Trình duyệt kiểm tra không đặt được viewport 390px tùy ý và không đọc được offsetHeight nên không có số đo px tuyệt đối; một lượt chụp qua trang responsive cho kết quả không nhất quán với dữ liệu thật (mô tả trang không tồn tại trong dự án) nên bị loại, không dùng làm bằng chứng. Chưa Android thật.
 
+## Kiểm hồi quy Bài 8 — chốt chặng chuẩn hoá D27 (2026-11-02)
+
+- Audit chuẩn (`scripts/audit-standard.mjs`) trên dữ liệu hiện tại: cả 8 bài đều đạt mọi cột. Riêng Bài 8 (bài mẫu chuẩn): lộ trình 6 bước; từ vựng 3 nhóm hội thoại với 23 từ + 1 tên riêng; 3/3 điểm chính có mục "Khi nào dùng" và câu "Thử ngay"; tổng kết 3 điểm; tra từ phủ 33/33 bề mặt đích; bài chính 19 câu; 3 bài tự luyện; bộ đề mô phỏng 20 câu tách riêng.
+- Test tự động toàn bộ: 159/159 đạt trên phiên bản live `20261102-lesson6-images3`.
+- Kiểm nhanh live 5/5 ĐẠT: (1) trang mở đầu có hình ngữ cảnh và lộ trình 6 bước; (2) trang Từ cần biết đủ 3 nhóm, mỗi từ có loa riêng; nút Tiếp tục ở trang Từ cần biết chuyển sang mục Hiểu cách dùng, không tự liên kết — kiểm 2 lần (quy tắc D26 giữ nguyên sau mọi vòng phát hành kể từ khi sửa); (3) tra từ trên trang hội thoại: chạm vào một từ hiện pinyin và nghĩa tiếng Việt kèm nút nghe; (4) trang Luyện tập ghi rõ Bài chính 19 câu, bộ mô phỏng 20 câu điểm riêng, mục lỗi cần sửa 9 câu; làm thử một câu và chấm đúng/sai hoạt động; (5) trang Tổng kết hiển thị 3 điểm, không lỗi.
+- Không phát hiện lỗi hồi quy nào; không cần vòng sửa. **Chặng chuẩn hoá D27 chính thức hoàn tất: Bài 1–7 đã chuẩn hoá theo chuẩn Bài 8, Bài 8 kiểm hồi quy đạt.** Việc tiếp theo là Bài 9.
+
 ## Vòng sửa lỗi nút Tiếp tục ở mục Bắt đầu — D26 (02/11/2026)
 
 - **Báo cáo thiết bị thật (Hoa, Android):** tại mục Bắt đầu của Bài 8, nút "Tiếp tục học" trong khối Lộ trình không phản ứng khi chạm (kèm ảnh chụp: dòng "lần trước bạn ở mục: Bắt đầu").

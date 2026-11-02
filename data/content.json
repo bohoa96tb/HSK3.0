@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson1-standard1",
+ "contentVersion": "20261102-lesson2-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -224,7 +224,8 @@
     "kp-hsk1-l02-word-order",
     "kp-hsk1-l02-names",
     "kp-hsk1-l02-initials-finals-2",
-    "kp-hsk1-l02-spelling"
+    "kp-hsk1-l02-spelling",
+    "kp-hsk1-l02-twister"
    ],
    "sectionIds": [
     "intro",
@@ -2905,7 +2906,8 @@
       "status": "asr-draft"
      },
      "hanViet": "THỈNH VẤN",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-2",
@@ -2928,7 +2930,8 @@
      },
      "hanViet": "NHĨ",
      "hanVietStatus": "verified-editorial",
-     "hanVietNoteVi": "Từ điển Hán Nôm còn ghi âm “nễ”; app thống nhất dùng “nhĩ” như cách dạy phổ biến hiện nay."
+     "hanVietNoteVi": "Từ điển Hán Nôm còn ghi âm “nễ”; app thống nhất dùng “nhĩ” như cách dạy phổ biến hiện nay.",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-3",
@@ -2950,7 +2953,8 @@
       "status": "asr-draft"
      },
      "hanViet": "KHIẾU",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-4",
@@ -2973,7 +2977,8 @@
      },
      "hanViet": "THẬM MA",
      "hanVietStatus": "verified-editorial",
-     "hanVietNoteVi": "什 ở đây đọc “thậm” (thậm ma), không đọc “thập”."
+     "hanVietNoteVi": "什 ở đây đọc “thậm” (thậm ma), không đọc “thập”.",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-5",
@@ -2995,7 +3000,8 @@
       "status": "asr-draft"
      },
      "hanViet": "DANH TỰ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-6",
@@ -3017,7 +3023,8 @@
       "status": "asr-draft"
      },
      "hanViet": "NGÃ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 1
     },
     {
      "id": "l02w-7",
@@ -3039,7 +3046,8 @@
       "status": "asr-draft"
      },
      "hanViet": "BẤT",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 2
     },
     {
      "id": "l02w-8",
@@ -3061,7 +3069,8 @@
       "status": "asr-draft"
      },
      "hanViet": "THỊ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 2
     },
     {
      "id": "l02w-9",
@@ -3083,7 +3092,8 @@
       "status": "asr-draft"
      },
      "hanViet": "ĐỐI BẤT KHỞI",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 2
     },
     {
      "id": "l02w-10",
@@ -3105,7 +3115,8 @@
       "status": "asr-draft"
      },
      "hanViet": "MỘT QUAN HỆ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 2
     },
     {
      "id": "l02w-11",
@@ -3127,7 +3138,8 @@
       "status": "asr-draft"
      },
      "hanViet": "MỘT SỰ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 2
     },
     {
      "id": "l02w-12",
@@ -3150,7 +3162,8 @@
      },
      "hanViet": "NGẬN",
      "hanVietStatus": "verified-editorial",
-     "hanVietNoteVi": "Âm Hán–Việt là “ngận”, không phải “hẩn”."
+     "hanVietNoteVi": "Âm Hán–Việt là “ngận”, không phải “hẩn”.",
+     "dialogueGroup": 3
     },
     {
      "id": "l02w-13",
@@ -3173,7 +3186,8 @@
      },
      "hanViet": "CAO HỨNG",
      "hanVietStatus": "verified-editorial",
-     "hanVietNoteVi": "兴 ở đây đọc “hứng” (gāoxìng), không đọc “hưng”."
+     "hanVietNoteVi": "兴 ở đây đọc “hứng” (gāoxìng), không đọc “hưng”.",
+     "dialogueGroup": 3
     },
     {
      "id": "l02w-14",
@@ -3196,7 +3210,8 @@
      },
      "hanViet": "NHẬN THỨC",
      "hanVietStatus": "verified-editorial",
-     "hanVietNoteVi": "“Nhận thức” trong tiếng Việt thường là hiểu biết; ở đây 认识 nghĩa là quen biết nhau."
+     "hanVietNoteVi": "“Nhận thức” trong tiếng Việt thường là hiểu biết; ở đây 认识 nghĩa là quen biết nhau.",
+     "dialogueGroup": 3
     },
     {
      "id": "l02w-15",
@@ -3218,7 +3233,8 @@
       "status": "asr-draft"
      },
      "hanViet": "DÃ",
-     "hanVietStatus": "verified-editorial"
+     "hanVietStatus": "verified-editorial",
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -3287,7 +3303,24 @@
      "exerciseIds": [
       "wb2-picture-1",
       "wb2-picture-3"
-     ]
+     ],
+     "useWhenVi": "Khi mới gặp ai và muốn hỏi – đáp tên nhau.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: điền từ đúng để thành câu hỏi tên.",
+      "stemZh": "请问，你叫什么__？",
+      "options": [
+       {
+        "zh": "名字",
+        "vi": "tên"
+       },
+       {
+        "zh": "学生",
+        "vi": "học sinh"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Câu hỏi tên đầy đủ: 请问，你叫什么名字？ — Xin hỏi, bạn tên là gì?"
+     }
     },
     {
      "id": "kp-hsk1-l02-shi",
@@ -3320,7 +3353,7 @@
        }
       }
      ],
-     "positionVi": "不 đứng ngay trước 是, không đứng sau. Đây là cách dùng gặp trong hội thoại 2 của bài này.",
+     "positionVi": "Phủ định: 不 đứng ngay trước 是， thành 不是。",
      "sourceRefs": [
       {
        "sourceId": "src-hsk1-textbook-pdf",
@@ -3332,7 +3365,24 @@
      "sentenceIds": [
       "l02-s4"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi nói ai đó là ai, hoặc sửa lại khi mình bị nhận nhầm là người khác.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Tôi không phải là An Ni” — chọn phần đúng để điền vào chỗ trống.",
+      "stemZh": "我__安妮。",
+      "options": [
+       {
+        "zh": "不是",
+        "vi": "không phải là"
+       },
+       {
+        "zh": "不叫",
+        "vi": "không có tên là"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Phủ định của 是 là 不是： 我不是安妮，我是白家月。 — Tôi không phải là An Ni, tôi là Bạch Gia Nguyệt."
+     }
     },
     {
      "id": "kp-hsk1-l02-apology",
@@ -3380,7 +3430,24 @@
      ],
      "exerciseIds": [
       "wb2-picture-4"
-     ]
+     ],
+     "useWhenVi": "Khi bạn nhận nhầm người, làm phiền hoặc mắc lỗi với ai đó.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: bạn nghe “对不起！”, đáp lại bằng câu nào?",
+      "stemZh": "对不起！— __！",
+      "options": [
+       {
+        "zh": "没关系",
+        "vi": "không sao đâu"
+       },
+       {
+        "zh": "不客气",
+        "vi": "câu đáp cho lời cảm ơn"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "没关系 là lời đáp dành cho lời xin lỗi. 不客气 là lời đáp dành cho lời cảm ơn (Bài 1)."
+     }
     },
     {
      "id": "kp-hsk1-l02-word-order",
@@ -3411,6 +3478,12 @@
         "end": 5.56,
         "status": "asr-draft"
        }
+      },
+      {
+       "zh": "我是学生。",
+       "pinyin": "Wǒ shì xuésheng.",
+       "noteVi": "Tôi là học sinh. (câu luyện đọc của sách)",
+       "audio": null
       }
      ],
      "positionVi": "Giữ đúng thứ tự này khi tự đặt câu giới thiệu tên; đừng đảo tân ngữ lên trước động từ.",
@@ -3426,7 +3499,24 @@
       "l02-s2",
       "l02-s8"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Với mọi câu nói cơ bản: xếp “ai/cái gì → làm gì → với ai/cái gì”.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: câu nào đúng trật tự Chủ ngữ + Động từ + Tân ngữ?",
+      "stemZh": "",
+      "options": [
+       {
+        "zh": "我叫白家月。",
+        "vi": "Tôi tên là Bạch Gia Nguyệt."
+       },
+       {
+        "zh": "叫我白家月。",
+        "vi": "trật tự sai"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "我 (tôi, chủ ngữ) + 叫 (tên là, động từ) + 白家月 (tân ngữ): đúng trật tự cơ bản của tiếng Trung."
+     }
     },
     {
      "id": "kp-hsk1-l02-names",
@@ -3472,7 +3562,24 @@
       "l02-s7",
       "l02-s8"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi đọc, viết và giới thiệu tên người Trung Quốc.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: tên “李文” gồm phần nào trước?",
+      "stemZh": "李文 = __",
+      "options": [
+       {
+        "zh": "李 là họ, 文 là tên",
+        "vi": "họ trước, tên sau"
+       },
+       {
+        "zh": "文 là họ, 李 là tên",
+        "vi": "ngược lại"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Tên người Trung Quốc viết họ trước, tên sau — giống cách viết tên trong tiếng Việt."
+     }
     },
     {
      "id": "kp-hsk1-l02-initials-finals-2",
@@ -3593,6 +3700,38 @@
      ],
      "sentenceIds": [],
      "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk1-l02-twister",
+     "kind": "foundation-pronunciation",
+     "kindLabel": "Nền tảng · Phát âm",
+     "title": "Đọc vè luyện âm （跟读绕口令）",
+     "pattern": "Đọc chậm từng câu, rồi đọc liền cả bài như sách",
+     "explanationVi": "Bài đọc vè ở cuối bài (Textbook tr.009, track 2-7) luyện các âm tiết gần nhau: qī （七）, jiā （加）, jiǎn （减）, jǐ （几）. Nghe track gốc của sách rồi đọc theo; loa nhỏ ở từng câu là giọng máy của thiết bị.",
+     "audioTrackId": "trk-tb-l02-7",
+     "audioTrackLabelVi": "Track 2-7",
+     "examples": [
+      {
+       "zh": "七加一，再减一，加完减完等于几？",
+       "pinyin": "Qī jiā yī, zài jiǎn yī, jiāwán jiǎnwán děngyú jǐ?",
+       "noteVi": "Bảy cộng một, rồi trừ một, cộng xong trừ xong bằng mấy?",
+       "audio": null
+      },
+      {
+       "zh": "加完减完还是七。",
+       "pinyin": "Jiāwán jiǎnwán háishì qī.",
+       "noteVi": "Cộng xong trừ xong vẫn là bảy.",
+       "audio": null
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 24,
+       "printedPage": 9,
+       "section": "跟读绕口令 · Đọc vè"
+      }
+     ]
     }
    ],
    "reader": {
@@ -3981,6 +4120,26 @@
        }
       ],
       "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn; căn đoạn bằng ASR nháp (faster-whisper), chưa nghe kiểm chứng."
+     },
+     {
+      "id": "trk-tb-l02-7",
+      "label": "Đọc vè luyện âm · 绕口令",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-02/02-7.mp3",
+      "durationSec": 22.969,
+      "bookRef": "Textbook · track 2-7",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 9,
+        "section": "跟读绕口令 · Đọc vè"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ URL nguồn. Chưa nghe kiểm chứng."
      }
     ],
     "passages": [
@@ -4130,7 +4289,7 @@
        }
       ],
       "grammarIds": [
-       "kp-hsk1-l02-word-order"
+       "kp-hsk1-l02-jiao"
       ]
      },
      {
@@ -4608,6 +4767,28 @@
     "samplePassageIds": [
      "l02-dialogue-1",
      "l02-dialogue-3"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l02-1",
+      "titleVi": "Đóng vai: hỏi tên nhau",
+      "situationVi": "Trong lớp học, cô giáo hỏi tên một bạn học mới.",
+      "sampleZh": "请问，你叫什么名字？ — 我叫陈天中。",
+      "samplePinyin": "Qǐngwèn, nǐ jiào shénme míngzi? — Wǒ jiào Chén Tiānzhōng.",
+      "sampleVi": "Xin hỏi, bạn tên là gì? — Tôi tên là Trần Thiên Trung.",
+      "swapVi": "Luyện theo cặp và dùng tên thật của nhau để hỏi – đáp, như sách yêu cầu ở tr.006.",
+      "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 1 （课文 1, Textbook tr.006); hoạt động đóng vai và luyện theo cặp cũng ở tr.006."
+     },
+     {
+      "id": "speak-l02-2",
+      "titleVi": "Đóng vai: lần đầu gặp nhau",
+      "situationVi": "Hai bạn lần đầu gặp nhau trong trường, tự giới thiệu tên và chào nhau.",
+      "sampleZh": "你好！我叫李文。 — 你好！我叫白家月。 — 很高兴认识你。 — 认识你我也很高兴。",
+      "samplePinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén. — Nǐ hǎo! Wǒ jiào Bái Jiāyuè. — Hěn gāoxìng rènshi nǐ. — Rènshi nǐ wǒ yě hěn gāoxìng.",
+      "sampleVi": "Chào bạn! Tôi tên là Lý Văn. — Chào bạn! Tôi tên là Bạch Gia Nguyệt. — Rất vui được gặp bạn. — Được gặp bạn tôi cũng rất vui.",
+      "swapVi": "Luyện theo cặp và tự giới thiệu bằng tên thật của mình, như sách yêu cầu ở tr.009.",
+      "sourceNoteVi": "Câu mẫu là toàn bộ Hội thoại 3 （课文 3, Textbook tr.008); hoạt động đóng vai ở tr.008 và luyện theo cặp ở tr.009."
+     }
     ]
    },
    "foundationWords": [
@@ -4911,7 +5092,131 @@
       "status": "asr-draft"
      }
     }
-   ]
+   ],
+   "prepGroups": [
+    {
+     "id": "l02-vocab-1",
+     "dialogueId": "l02-dialogue-1",
+     "titleVi": "Hội thoại 1 · Hỏi tên bạn học",
+     "trackId": "trk-tb-l02-2",
+     "trackLabelVi": "Track 2-2"
+    },
+    {
+     "id": "l02-vocab-2",
+     "dialogueId": "l02-dialogue-2",
+     "titleVi": "Hội thoại 2 · Nhận nhầm người",
+     "trackId": "trk-tb-l02-4",
+     "trackLabelVi": "Track 2-4"
+    },
+    {
+     "id": "l02-vocab-3",
+     "dialogueId": "l02-dialogue-3",
+     "titleVi": "Hội thoại 3 · Lần đầu gặp nhau",
+     "trackId": "trk-tb-l02-6",
+     "trackLabelVi": "Track 2-6"
+    }
+   ],
+   "prepSummaryVi": "15 từ mới, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Hỏi tên bạn học",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → hỏi tên lịch sự bằng 请问。",
+     "sectionId": "prep",
+     "dialogueId": "l02-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Nhận nhầm người",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → nói “không phải là” bằng 不是 rồi xin lỗi.",
+     "sectionId": "reader",
+     "dialogueId": "l02-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Lần đầu gặp nhau",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → tự giới thiệu và nói “rất vui được gặp bạn”.",
+     "sectionId": "reader",
+     "dialogueId": "l02-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Chọn lời thoại theo hình; nghe – viết thanh mẫu, vận mẫu và thanh điệu.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Ba điều cần nhớ, kết quả và phần tự nói bằng tên thật của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Hỏi và nói tên",
+     "bodyVi": "Hỏi lịch sự bằng 请问，你叫什么名字？và đáp 我叫 + tên mình.",
+     "exampleZh": "我叫李文。",
+     "examplePinyin": "Wǒ jiào Lǐ Wén.",
+     "exampleVi": "Tôi tên là Lý Văn."
+    },
+    {
+     "titleVi": "Là ai và không phải ai",
+     "bodyVi": "是 nói ai đó là ai; phủ định bằng 不是 — mẫu để sửa khi bị nhận nhầm.",
+     "exampleZh": "我不是安妮，我是白家月。",
+     "examplePinyin": "Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+     "exampleVi": "Tôi không phải là An Ni, tôi là Bạch Gia Nguyệt."
+    },
+    {
+     "titleVi": "Xin lỗi và đáp lại",
+     "bodyVi": "对不起 là lời xin lỗi; đáp lại bằng 没关系 (hoặc 没事 trong khẩu ngữ).",
+     "exampleZh": "没关系！",
+     "examplePinyin": "Méi guānxi!",
+     "exampleVi": "Không sao đâu!"
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu để xem Pinyin, Hán–Việt và nghĩa. Tên người trong bài do dự án bổ sung đã kiểm duyệt; chạm vào tên để biết họ và tên.",
+    "extras": [
+     {
+      "zh": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "hanViet": "TRẦN THIÊN TRUNG",
+      "vi": "Tên của bạn học trong Hội thoại 1: họ Trần （陈）, tên Thiên Trung （天中）"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Tên của bạn học trong Hội thoại 2 và 3: họ Bạch （白）, tên Gia Nguyệt （家月）"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Tên của bạn học trong Hội thoại 3: họ Lý （李）, tên Văn （文）"
+     },
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "Tên của người bạn bị nhận nhầm trong Hội thoại 2"
+     },
+     {
+      "zh": "学生",
+      "pinyin": "xuésheng",
+      "hanViet": "HỌC SINH",
+      "vi": "học sinh"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l03",

@@ -79,7 +79,7 @@ test('prep bar: Pinyin / Nghĩa / Hán–Việt / A− / A+ each toggle only the
   assert.equal($('#main').classList.contains('off-hv-prep'), false); // HV unaffected
   assert.equal($('#main').classList.contains('off-pinyin-prep'), false); // pinyin unaffected
   // Guidance text is not a "meaning" field: the intro paragraph stays put.
-  assert.ok([...document.querySelectorAll('p.muted')].some((p) => p.textContent.includes('mục từ xuất hiện')));
+  assert.ok([...document.querySelectorAll('p.muted')].some((p) => p.textContent.includes('chia theo 3 hội thoại'))); // D27: Bài 2 now carries its own prep summary line
   viBtn.click(); await tick();
   assert.equal($('#main').classList.contains('off-vi-prep'), false);
 });

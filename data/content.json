@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261102-lesson5-standard1",
+ "contentVersion": "20261102-lesson6-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -14967,10 +14967,10 @@
     ],
     "contextImage": {
      "src": "assets/lesson-06/classroom.webp",
-     "alt": "Lý Văn và Bạch Gia Nguyệt ngồi đối diện, mỗi người cầm một chiếc điện thoại — hình trích từ Textbook Bài 6",
-     "caption": "Ở trường · Textbook, trang 036",
-     "width": 607,
-     "height": 333
+     "alt": "Tranh vẽ: Lý Văn và Bạch Gia Nguyệt ngồi đối diện ở bàn nhỏ trong trường, mỗi người cầm một chiếc điện thoại — mô phỏng theo ảnh Textbook Bài 6",
+     "caption": "Ở trường · tranh vẽ mới theo cảnh Textbook tr.036",
+     "width": 760,
+     "height": 560
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (âm nhi hóa và dấu cách âm) là kiến thức bổ trợ, bạn có thể mở khi cần.",
     "foundationSummaryVi": "Ôn phát âm nền tảng: âm nhi hóa （儿化） và quy tắc viết dấu cách âm",
@@ -14999,7 +14999,8 @@
       "start": 0.0,
       "end": 1.12,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l06w-2",
@@ -15021,7 +15022,8 @@
       "start": 2.56,
       "end": 5.44,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l06w-3",
@@ -15044,7 +15046,8 @@
       "start": 5.66,
       "end": 6.46,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 1
     },
     {
      "id": "l06w-4",
@@ -15066,7 +15069,8 @@
       "start": 0.0,
       "end": 1.09,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-5",
@@ -15088,7 +15092,8 @@
       "start": 3.71,
       "end": 4.71,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-6",
@@ -15110,7 +15115,8 @@
       "start": 4.79,
       "end": 5.65,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-7",
@@ -15132,7 +15138,8 @@
       "start": 5.87,
       "end": 8.21,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-8",
@@ -15154,7 +15161,8 @@
       "start": 8.45,
       "end": 12.79,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-9",
@@ -15176,7 +15184,8 @@
       "start": 12.77,
       "end": 15.11,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-10",
@@ -15198,7 +15207,8 @@
       "start": 15.29,
       "end": 18.05,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-11",
@@ -15221,7 +15231,8 @@
       "start": 17.97,
       "end": 20.37,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-12",
@@ -15243,7 +15254,8 @@
       "start": 20.27,
       "end": 21.81,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 2
     },
     {
      "id": "l06w-13",
@@ -15266,7 +15278,8 @@
       "start": 1.15,
       "end": 2.0,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-14",
@@ -15288,7 +15301,8 @@
       "start": 3.85,
       "end": 5.49,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-15",
@@ -15310,7 +15324,8 @@
       "start": 6.77,
       "end": 8.73,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-16",
@@ -15332,7 +15347,8 @@
       "start": 9.89,
       "end": 11.23,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-17",
@@ -15354,7 +15370,8 @@
       "start": 12.57,
       "end": 14.19,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-18",
@@ -15377,7 +15394,8 @@
       "start": 15.61,
       "end": 17.43,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-19",
@@ -15399,7 +15417,8 @@
       "start": 18.83,
       "end": 20.63,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-20",
@@ -15422,7 +15441,8 @@
       "start": 21.59,
       "end": 23.19,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-21",
@@ -15444,7 +15464,8 @@
       "start": 24.29,
       "end": 25.77,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
     },
     {
      "id": "l06w-22",
@@ -15466,7 +15487,28 @@
       "start": 27.29,
       "end": 29.09,
       "status": "asr-draft"
-     }
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l06w-p1",
+     "zh": "西安饭店",
+     "pinyin": "Xī'ān Fàndiàn",
+     "vi": "Nhà hàng Tây An (tên riêng)",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "hanViet": "TÂY AN PHẠN ĐIẾM",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 55,
+       "printedPage": "040",
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "audio": null,
+     "dialogueGroup": 3
     }
    ],
    "knowledgePoints": [
@@ -15529,7 +15571,24 @@
       "wb6-text-2",
       "wb6-text-4",
       "wb6-comp-4"
-     ]
+     ],
+     "useWhenVi": "Khi nói mong muốn hoặc dự định làm một việc （想 + động từ); phủ định 不想.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Tôi muốn đi siêu thị mua đồ” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "我__去超市买东西。",
+      "options": [
+       {
+        "zh": "想",
+        "vi": "muốn, định (dự định)"
+       },
+       {
+        "zh": "会",
+        "vi": "biết làm (do học mà biết)"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "想 diễn đạt dự định: 我想去超市买东西。"
+     }
     },
     {
      "id": "kp-hsk1-l06-serial",
@@ -15590,7 +15649,24 @@
       "wb6-comp-1",
       "wb6-comp-2",
       "wb6-comp-3"
-     ]
+     ],
+     "useWhenVi": "Khi hai hành động nối tiếp nhau trong một câu: đi đâu để làm gì (mục đích) hoặc đi bằng cách nào (cách thức).",
+     "quickCheck": {
+      "questionVi": "Thử ngay: “Chúng tôi đi taxi đến Nhà hàng Tây An” — chọn câu liên động đúng thứ tự.",
+      "stemZh": "____",
+      "options": [
+       {
+        "zh": "我们坐出租车去西安饭店。",
+        "vi": "Chúng tôi đi taxi đến Nhà hàng Tây An."
+       },
+       {
+        "zh": "我们去西安饭店坐出租车。",
+        "vi": "thứ tự sai — nghe như đến nhà hàng rồi mới đi taxi"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Cụm chỉ cách thức （坐出租车） đứng trước cụm chỉ nơi đến: 我们坐出租车去西安饭店。"
+     }
     },
     {
      "id": "kp-hsk1-l06-zenme",
@@ -15647,7 +15723,24 @@
       "l06-s13",
       "l06-s14"
      ],
-     "exerciseIds": []
+     "exerciseIds": [],
+     "useWhenVi": "Khi hỏi cách thức hoặc phương tiện để làm một việc; trả lời thường là một câu liên động.",
+     "quickCheck": {
+      "questionVi": "Thử ngay: hỏi “Bạn đi siêu thị bằng cách nào?” — chọn từ đúng để điền vào chỗ trống.",
+      "stemZh": "你__去超市？",
+      "options": [
+       {
+        "zh": "怎么",
+        "vi": "bằng cách nào, như thế nào"
+       },
+       {
+        "zh": "哪儿",
+        "vi": "ở đâu, đi đâu"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Hỏi cách thức dùng 怎么： 你怎么去超市？"
+     }
     },
     {
      "id": "kp-hsk1-l06-erhua",
@@ -15700,6 +15793,21 @@
         "end": 102.05,
         "status": "asr-draft"
        }
+      },
+      {
+       "zh": "盖儿",
+       "pinyin": "gàir",
+       "noteVi": "Từ trong bảng nhi hóa của Workbook tr.031 （画 盖 个 眼 đều đổi từ loại khi thêm 儿）."
+      },
+      {
+       "zh": "个儿",
+       "pinyin": "gèr",
+       "noteVi": "Từ trong bảng nhi hóa của Workbook tr.031 （画 盖 个 眼 đều đổi từ loại khi thêm 儿）."
+      },
+      {
+       "zh": "眼儿",
+       "pinyin": "yǎnr",
+       "noteVi": "Từ trong bảng nhi hóa của Workbook tr.031 （画 盖 个 眼 đều đổi từ loại khi thêm 儿）."
       }
      ],
      "positionVi": "Bảng nhi hóa và dãy từ kèm hình in ở Workbook trang in 031–032; nghe và đọc theo track Workbook 6-1.",
@@ -16380,7 +16488,7 @@
    "exerciseSet": {
     "id": "set-tb-l06-text-v1",
     "titleVi": "Câu hỏi nghe hiểu hội thoại trong sách",
-    "noteVi": "Bốn câu hỏi in trong Textbook trước Hội thoại 2 (trang 037) và Hội thoại 3 (trang 038), đáp án lấy từ chính lời thoại in trong sách; cộng năm câu chọn từ điền trống của phần bài tập tổng hợp (trang 041, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của trang 041–042 là bài tự luyện riêng ở khối nghe–viết, không chấm tự động.",
+    "noteVi": "Gồm ba nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.035); 6 câu hỏi hiểu Hội thoại 2 và 3 (tr.037, 038 và phần đọc hiểu tr.039), đáp án lấy từ chính lời thoại in; 5 câu chọn từ điền trống của phần bài tập tổng hợp (tr.041, ngân hàng từ in sẵn, đáp án đối chiếu với hội thoại và điểm kiến thức của bài). Phần dùng hình để nói của tr.041–042 là bài tự luyện riêng ở khối B, không chấm tự động.",
     "items": [
      {
       "id": "wb6-text-1",
@@ -17018,6 +17126,507 @@
        }
       ],
       "grammarIds": []
+     },
+     {
+      "id": "wb6-text-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): bánh bao của Nhà hàng Tây An có ngon không?",
+      "promptZh": "西安饭店的包子好吃吗？",
+      "promptPinyin": "Xī'ān Fàndiàn de bāozi hǎochī ma?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "好吃",
+        "pinyin": "hǎochī",
+        "vi": "ngon"
+       },
+       {
+        "id": "2",
+        "zh": "不好吃",
+        "pinyin": "bù hǎochī",
+        "vi": "không ngon"
+       },
+       {
+        "id": "3",
+        "zh": "没说",
+        "pinyin": "méi shuō",
+        "vi": "hội thoại không nói"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Tiểu Tuyết: 那边的包子非常好吃。",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 54,
+        "printedPage": "039",
+        "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb6-text-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu hỏi in trong Textbook dưới Hội thoại 3 (trang 039): họ đi Nhà hàng Tây An bằng cách nào?",
+      "promptZh": "他们怎么去西安饭店？",
+      "promptPinyin": "Tāmen zěnme qù Xī'ān Fàndiàn?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "坐出租车去",
+        "pinyin": "zuò chūzūchē qù",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "2",
+        "zh": "走路去",
+        "pinyin": "zǒulù qù",
+        "vi": "đi bộ"
+       },
+       {
+        "id": "3",
+        "zh": "坐公共汽车去",
+        "pinyin": "zuò gōnggòng qìchē qù",
+        "vi": "đi xe buýt"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Câu hỏi in ở Textbook tr.039. Đáp án lấy từ lời thoại in của Lưu Minh: 坐出租车去。",
+      "grammarIds": [
+       "kp-hsk1-l06-zenme",
+       "kp-hsk1-l06-serial"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 54,
+        "printedPage": "039",
+        "section": "Textbook Bài 6 · Hội thoại 3 · câu hỏi đọc hiểu in dưới hội thoại"
+       }
+      ]
+     },
+     {
+      "id": "wb6-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "手机",
+      "promptPinyin": "shǒujī",
+      "options": [
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       },
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       },
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       },
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       },
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       },
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       }
+      ],
+      "answer": "phone",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ A — 手机). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb6-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "晚饭",
+      "promptPinyin": "wǎnfàn",
+      "options": [
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       },
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       },
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       },
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       },
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       },
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       }
+      ],
+      "answer": "dinner",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ B — 晚饭). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb6-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "超市",
+      "promptPinyin": "chāoshì",
+      "options": [
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       },
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       },
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       },
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       },
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       },
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       }
+      ],
+      "answer": "market",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ C — 超市). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb6-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "牛奶",
+      "promptPinyin": "niúnǎi",
+      "options": [
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       },
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       },
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       },
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       },
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       },
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       }
+      ],
+      "answer": "milk",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ D — 牛奶). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb6-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "出租车",
+      "promptPinyin": "chūzūchē",
+      "options": [
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       },
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       },
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       },
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       },
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       },
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       }
+      ],
+      "answer": "taxi",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ E — 出租车). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
+     },
+     {
+      "id": "wb6-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động của sách (Textbook trang 035): thẻ từ nào khớp với các hình lựa chọn? Nhìn hình và chọn thẻ đúng.",
+      "promptZh": "米饭",
+      "promptPinyin": "mǐfàn",
+      "options": [
+       {
+        "id": "rice",
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "image": "assets/lesson-06/warm-rice.webp",
+        "imageAlt": "Hình vẽ một bát cơm trắng với đôi đũa"
+       },
+       {
+        "id": "phone",
+        "zh": "手机",
+        "pinyin": "shǒujī",
+        "vi": "điện thoại di động",
+        "image": "assets/lesson-06/warm-phone.webp",
+        "imageAlt": "Hình vẽ một bàn tay cầm điện thoại thông minh"
+       },
+       {
+        "id": "dinner",
+        "zh": "晚饭",
+        "pinyin": "wǎnfàn",
+        "vi": "bữa tối",
+        "image": "assets/lesson-06/warm-dinner.webp",
+        "imageAlt": "Hình vẽ một gia đình quây quần ăn tối quanh bàn tròn"
+       },
+       {
+        "id": "market",
+        "zh": "超市",
+        "pinyin": "chāoshì",
+        "vi": "siêu thị",
+        "image": "assets/lesson-06/warm-market.webp",
+        "imageAlt": "Hình vẽ lối đi giữa hai dãy kệ hàng trong siêu thị"
+       },
+       {
+        "id": "milk",
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa bò",
+        "image": "assets/lesson-06/warm-milk.webp",
+        "imageAlt": "Hình vẽ sữa đang được rót từ bình vào hai ly"
+       },
+       {
+        "id": "taxi",
+        "zh": "出租车",
+        "pinyin": "chūzūchē",
+        "vi": "taxi",
+        "image": "assets/lesson-06/warm-taxi.webp",
+        "imageAlt": "Hình vẽ một chiếc taxi màu cam trên đường phố"
+       }
+      ],
+      "answer": "rice",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bài khởi động in ở Textbook tr.035 (thẻ chữ F — 米饭). Hình là tranh minh họa vẽ lại đúng cảnh ảnh sách.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 50,
+        "printedPage": "035",
+        "section": "Textbook Bài 6 · khởi động (热身） nối từ với hình"
+       }
+      ],
+      "explanationVi": "Hình đúng phải thể hiện đúng nội dung của thẻ từ."
      }
     ]
    },
@@ -17114,14 +17723,14 @@
      "id": "st-l06-03",
      "kind": "speaking",
      "titleVi": "Dùng hình để nói (Textbook trang 041–042) — tự luyện, không chấm tự động",
-     "instructionVi": "Nhìn từng hình trích từ sách, dùng từ và cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 041–042), dùng từ và cách dùng trong bài để hoàn thành khung câu, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
      "prompts": [
       "她的______是多少？",
       "我想______超市______牛奶。",
       "王一雪想______去超市。",
       "这些包子非常______。"
      ],
-     "draftPromptVi": "Viết câu bạn muốn nói vào ô nháp bên cạnh hình, rồi kiểm lại từ mới và cách dùng của bài.",
+     "draftPromptVi": "Viết câu bạn hoàn thành vào ô nháp rồi tự đối chiếu: (1) 她的手机号是多少？(2) 我想去超市买牛奶。(3) 王一雪想坐出租车去超市。(4) 这些包子非常好吃。App không chấm bài này: sách không in đáp án, phần điền phụ thuộc vào hình.",
      "answerStatus": "unverified",
      "sourceRefs": [
       {
@@ -17140,8 +17749,8 @@
      "promptImages": [
       {
        "src": "assets/lesson-06/speaking-1.webp",
-       "alt": "Hình 1 của bài dùng hình để nói — Bài 6",
-       "captionVi": "Textbook, trang 041 · hình 1",
+       "alt": "Hình vẽ hai bàn tay cầm một chiếc điện thoại thông minh",
+       "captionVi": "Hình 1 — hai tay cầm điện thoại. Tranh vẽ lại theo ảnh Textbook tr.041.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -17153,8 +17762,8 @@
       },
       {
        "src": "assets/lesson-06/speaking-2.webp",
-       "alt": "Hình 2 của bài dùng hình để nói — Bài 6",
-       "captionVi": "Textbook, trang 041 · hình 2",
+       "alt": "Hình vẽ một xe đẩy hàng trong lối đi siêu thị đầy kệ hàng",
+       "captionVi": "Hình 2 — xe đẩy hàng trong siêu thị. Tranh vẽ lại theo ảnh Textbook tr.041.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -17166,8 +17775,8 @@
       },
       {
        "src": "assets/lesson-06/speaking-3.webp",
-       "alt": "Hình 3 của bài dùng hình để nói — Bài 6",
-       "captionVi": "Textbook, trang 042 · hình 3",
+       "alt": "Hình vẽ một chiếc taxi màu cam trên đường phố có nhà cao tầng",
+       "captionVi": "Hình 3 — taxi trên phố. Tranh vẽ lại theo ảnh Textbook tr.042.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -17179,8 +17788,8 @@
       },
       {
        "src": "assets/lesson-06/speaking-4.webp",
-       "alt": "Hình 4 của bài dùng hình để nói — Bài 6",
-       "captionVi": "Textbook, trang 042 · hình 4",
+       "alt": "Hình vẽ ba chiếc bánh bao trắng trên đĩa",
+       "captionVi": "Hình 4 — đĩa bánh bao. Tranh vẽ lại theo ảnh Textbook tr.042.",
        "sourceRefs": [
         {
          "sourceId": "src-hsk1-textbook-pdf",
@@ -17199,13 +17808,54 @@
     "titleVi": "Đóng vai và hỏi số điện thoại thật của nhau",
     "instructionVi": "Chọn hội thoại 1. Đọc lần lượt hai vai. Sau đó luyện theo cặp theo yêu cầu trong sách: hỏi và đọc số điện thoại thật của mình, đọc từng chữ số một (số 1 đọc là yāo). Tự nghe lại cách đọc của mình; ứng dụng không chấm phát âm.",
     "audioTrackId": "trk-tb-l06-1",
-    "noteVi": "Nhiệm vụ đóng vai và hỏi số điện thoại theo tình huống thật lấy từ Textbook trang in 036. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "noteVi": "Hai nhiệm vụ nói đều lấy từ sách: đóng vai + hỏi số điện thoại theo tình huống thật (tr.036) và hoạt động lớp điền bảng bữa sáng rồi chia sẻ theo cặp (tr.042). Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
     "sourceRefs": [
      {
       "sourceId": "src-hsk1-textbook-pdf",
       "pdfPage": 51,
       "printedPage": 36,
       "section": "分角色朗读对话 · 两人一组，根据实际情况对话"
+     }
+    ],
+    "samplePassageIds": [
+     "l06-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l06-1",
+      "titleVi": "Đóng vai Hội thoại 1 và hỏi số điện thoại thật của nhau",
+      "situationVi": "Hai học viên trong trường hỏi số điện thoại của nhau (Textbook tr.036: đóng vai, sau đó hai người một nhóm hỏi – đáp theo tình huống thật, đọc số từng chữ số, số 1 đọc là yāo).",
+      "sampleZh": "家月，你的手机号是多少？— 我的手机号是+33 601493190。— 我的手机号是+86 13552721160。— 好的。",
+      "samplePinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao? — Wǒ de shǒujīhào shì +33 liù líng yāo sì jiǔ sān yāo jiǔ líng. — Wǒ de shǒujīhào shì +86 yāo sān wǔ wǔ èr qī èr yāo yāo liù líng. — Hǎo de.",
+      "sampleVi": "Gia Nguyệt, số điện thoại của bạn là bao nhiêu? — Số của tôi là +33 601493190. — Số của tôi là +86 13552721160. — Được rồi.",
+      "swapVi": "Đổi hai số điện thoại trong mẫu thành số thật của bạn và bạn học rồi hỏi – đáp lại cả đoạn.",
+      "sourceNoteVi": "Mẫu là nguyên văn Hội thoại 1 (Textbook tr.036); cách đọc số điện thoại theo mẹo của sách ở cùng trang (đọc từng chữ số, 1 đọc là yāo).",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 51,
+        "printedPage": "036",
+        "section": "Textbook Bài 6 · Hội thoại 1 + hoạt động đóng vai/theo tình huống thật + 小语助力 mẹo đọc số"
+       }
+      ]
+     },
+     {
+      "id": "speak-l06-2",
+      "titleVi": "Điền bảng bữa sáng và chia sẻ theo cặp (hoạt động lớp, Textbook tr.042)",
+      "situationVi": "Hai người một nhóm: chọn bữa sáng cho thứ Hai, thứ Ba và thứ Bảy từ các món của sách (A 包子 B 面条儿 C 饺子 D 米饭）, điền vào bảng rồi chia sẻ (Textbook tr.042).",
+      "sampleZh": "星期一我想吃饺子，星期二我想吃包子，星期六我想吃面条儿。",
+      "samplePinyin": "Xīngqīyī wǒ xiǎng chī jiǎozi, Xīngqī’èr wǒ xiǎng chī bāozi, Xīngqīliù wǒ xiǎng chī miàntiáor.",
+      "sampleVi": "Thứ Hai tôi muốn ăn sủi cảo, thứ Ba tôi muốn ăn bánh bao, thứ Bảy tôi muốn ăn mì.",
+      "swapVi": "Đổi các món theo lựa chọn thật của bạn cho ba ngày rồi nói lại cả câu.",
+      "sourceNoteVi": "Mẫu dựng thành câu từ bảng ví dụ của Tiểu Ngữ in ở Textbook tr.042 (thứ Hai = C 饺子， thứ Ba = A 包子， thứ Bảy = B 面条儿）; câu mẫu do dự án viết từ bảng in, không phải nguyên văn lời thoại.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 57,
+        "printedPage": "042",
+        "section": "Textbook Bài 6 · 课堂活动 · 填写表格 + 小语的例子"
+       }
+      ]
      }
     ]
    },
@@ -17458,7 +18108,216 @@
       "status": "asr-draft"
      }
     }
-   ]
+   ],
+   "prepGroups": [
+    {
+     "id": "l06-vocab-1",
+     "dialogueId": "l06-dialogue-1",
+     "titleVi": "Hội thoại 1 · Số điện thoại của bạn là bao nhiêu?",
+     "trackId": "trk-tb-l06-2",
+     "trackLabelVi": "Track 6-2"
+    },
+    {
+     "id": "l06-vocab-2",
+     "dialogueId": "l06-dialogue-2",
+     "titleVi": "Hội thoại 2 · Ngày mai bạn đi đâu?",
+     "trackId": "trk-tb-l06-4",
+     "trackLabelVi": "Track 6-4"
+    },
+    {
+     "id": "l06-vocab-3",
+     "dialogueId": "l06-dialogue-3",
+     "titleVi": "Hội thoại 3 · Chủ nhật đi đâu ăn tối?",
+     "trackId": "trk-tb-l06-6",
+     "trackLabelVi": "Track 6-6"
+    }
+   ],
+   "prepSummaryVi": "22 từ mới và 1 tên riêng, chia theo 3 hội thoại.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Số điện thoại của bạn là bao nhiêu?",
+     "descVi": "Từ của Hội thoại 1 → nghe Hội thoại 1 → hỏi và đọc số điện thoại từng chữ số (số 1 đọc là yāo).",
+     "sectionId": "prep",
+     "dialogueId": "l06-dialogue-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Ngày mai bạn đi đâu?",
+     "descVi": "Từ của Hội thoại 2 → nghe Hội thoại 2 → nói muốn làm gì bằng 想 và đi đâu làm gì bằng câu liên động.",
+     "sectionId": "reader",
+     "dialogueId": "l06-dialogue-2"
+    },
+    {
+     "step": 4,
+     "titleVi": "Chủ nhật đi đâu ăn tối?",
+     "descVi": "Từ của Hội thoại 3 → nghe Hội thoại 3 → hỏi cách đi bằng 怎么 và trả lời bằng cụm 坐 + phương tiện.",
+     "sectionId": "reader",
+     "dialogueId": "l06-dialogue-3"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Khởi động nối từ – hình, câu hỏi hiểu hội thoại, bài điền từ tổng hợp và các bài nghe – đọc phát âm của sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tổng kết",
+     "descVi": "Bốn điều cần nhớ và tự nói kế hoạch đi lại, ăn uống của bạn.",
+     "sectionId": "summary"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Đọc số điện thoại từng chữ số",
+     "bodyVi": "Số điện thoại đọc từng chữ số một; số 1 đọc là yāo. Ngày nay người ta cũng dùng 电话 để chỉ điện thoại di động.",
+     "exampleZh": "我的手机号是+86 13552721160。",
+     "examplePinyin": "Wǒ de shǒujīhào shì +86 yāo sān wǔ wǔ èr qī èr yāo yāo liù líng.",
+     "exampleVi": "Số điện thoại của tôi là +86 13552721160."
+    },
+    {
+     "titleVi": "想： muốn, định làm gì",
+     "bodyVi": "想 + động từ diễn đạt mong muốn hoặc dự định; phủ định là 不想.",
+     "exampleZh": "我想去超市买东西。",
+     "examplePinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+     "exampleVi": "Tôi muốn đi siêu thị mua đồ."
+    },
+    {
+     "titleVi": "Câu liên động: nối hai hành động",
+     "bodyVi": "Đi đâu để làm gì (mục đích) hoặc đi bằng cách nào (cách thức) đều nối hai cụm động từ trong một câu.",
+     "exampleZh": "我们坐出租车去西安饭店。",
+     "examplePinyin": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+     "exampleVi": "Chúng tôi đi taxi đến Nhà hàng Tây An."
+    },
+    {
+     "titleVi": "怎么： hỏi cách thức",
+     "bodyVi": "怎么 đứng trước động từ để hỏi cách làm; trả lời bằng câu liên động.",
+     "exampleZh": "我们怎么去？— 坐出租车去。",
+     "examplePinyin": "Wǒmen zěnme qù? — Zuò chūzūchē qù.",
+     "exampleVi": "Chúng ta đi bằng cách nào? — Đi taxi."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả chữ số và tên nhân vật của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "家月",
+      "pinyin": "Jiāyuè",
+      "hanViet": "GIA NGUYỆT",
+      "vi": "Gia Nguyệt — cách gọi ngắn tên Bạch Gia Nguyệt trong hội thoại"
+     },
+     {
+      "zh": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "hanViet": "TRẦN THIÊN TRUNG",
+      "vi": "Trần Thiên Trung — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘小雪",
+      "pinyin": "Liú Xiǎoxuě",
+      "hanViet": "LƯU TIỂU TUYẾT",
+      "vi": "Lưu Tiểu Tuyết — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘小明",
+      "pinyin": "Liú Xiǎomíng",
+      "hanViet": "LƯU TIỂU MINH",
+      "vi": "Lưu Tiểu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "số 1"
+     },
+     {
+      "zh": "二",
+      "pinyin": "èr",
+      "hanViet": "NHỊ",
+      "vi": "số 2"
+     },
+     {
+      "zh": "三",
+      "pinyin": "sān",
+      "hanViet": "TAM",
+      "vi": "số 3"
+     },
+     {
+      "zh": "四",
+      "pinyin": "sì",
+      "hanViet": "TỨ",
+      "vi": "số 4"
+     },
+     {
+      "zh": "五",
+      "pinyin": "wǔ",
+      "hanViet": "NGŨ",
+      "vi": "số 5"
+     },
+     {
+      "zh": "六",
+      "pinyin": "liù",
+      "hanViet": "LỤC",
+      "vi": "số 6"
+     },
+     {
+      "zh": "七",
+      "pinyin": "qī",
+      "hanViet": "THẤT",
+      "vi": "số 7"
+     },
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "hanViet": "BÁT",
+      "vi": "số 8"
+     },
+     {
+      "zh": "九",
+      "pinyin": "jiǔ",
+      "hanViet": "CỬU",
+      "vi": "số 9"
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": "THẬP",
+      "vi": "số 10"
+     }
+    ],
+    "phrases": []
+   }
   },
   {
    "lessonId": "hsk1-l07",

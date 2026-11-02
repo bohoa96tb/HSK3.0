@@ -25,7 +25,7 @@ const $ = (s) => document.querySelector(s);
 test('lesson 6 content matches the printed books: counts, pages, tracks, han-viet', () => {
   assert.ok(l6, 'additionalLessons must contain hsk1-l06');
   assert.match(content.contentVersion, /^2026/);
-  assert.equal(l6.prepWords.length, 22);
+  assert.equal(l6.prepWords.length, 23);
   for (const w of l6.prepWords) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
@@ -57,8 +57,8 @@ test('lesson 6 content matches the printed books: counts, pages, tracks, han-vie
 });
 
 test('lesson 6 exercises: printed answers grade, stems render, comprehensive bank included', async () => {
-  assert.equal(l6.exerciseSet.items.length, 9);
-  assert.deepEqual(l6.exerciseSet.items.map((i) => i.answer), ['3', '2', '3', '2', '5', '2', '4', '3', '1']);
+  assert.equal(l6.exerciseSet.items.length, 17);
+  assert.deepEqual(l6.exerciseSet.items.map((i) => i.answer), ['3', '2', '3', '2', '5', '2', '4', '3', '1', '1', '1', 'phone', 'dinner', 'market', 'milk', 'taxi', 'rice']);
   const kpIds = new Set(content.additionalLessons.flatMap((c) => c.knowledgePoints.map((k) => k.id))
     .concat(content.pilot.knowledgePoints.map((k) => k.id)));
   for (const item of l6.exerciseSet.items) {
@@ -71,7 +71,7 @@ test('lesson 6 exercises: printed answers grade, stems render, comprehensive ban
   }
   await route('lesson/hsk1-l06/exercises');
   assert.ok($('.exercise-stem')?.textContent.includes('白家月'), 'the printed question stem renders');
-  assert.ok(document.body.textContent.includes('Câu 1/9'));
+  assert.ok(document.body.textContent.includes('Câu 1/17'));
 });
 
 test('lesson 6 choose-a-disyllable task: syllable grading grades exactly', () => {

@@ -43,5 +43,5 @@ test('comparison UI preserves old notes, plays the intended block and never offe
 
 test('lesson intro renders the source caption, not only the image alt',async()=>{
  await route('lesson/hsk1-l07/intro');assert.match(document.querySelector('.context-figure figcaption').textContent,/Textbook, trang 046/);
- await route('lesson/hsk1-l06/intro');assert.match(document.querySelector('.context-figure figcaption').textContent,/Textbook, trang 036/);
+ await route('lesson/hsk1-l06/intro');assert.match(document.querySelector('.context-figure figcaption').textContent,/Textbook tr.036/);
 });

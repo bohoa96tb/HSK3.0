@@ -129,7 +129,7 @@
 - Bổ sung: dialogueGroup 8/7/7; prepGroups (track 5-2/5-4/5-6); learningPath; useWhen + quickCheck 3 điểm chính; bảng tháng 1–12 + bảng thứ nguyên bản vào KP Thời gian; 2 câu đọc hiểu tr.032; 6 câu khởi động + 6 tranh mới; 2 bài tự luyện biến điệu WB tr.024; bài dùng hình để nói 4 tranh mới + đáp án gợi ý kiểm chứng bằng lịch thật; apply thêm trò chơi nhóm tr.034; summaryPoints 4; tra từ phủ 50/50.
 - QA bắt và đã sửa 2 lỗi thật trước phát hành: ví dụ 一口 ghi sai thanh (yí → yì kǒu, 口 là thanh 3) và hình lịch tháng 9 lệch một cột (ngày 7 phải ở cột Chủ nhật). Bài học: khi tự dựng lịch/ví dụ biến điệu phải kiểm chứng bằng lịch thật và quy tắc thanh của chính âm tiết đi kèm.
 - Trạng thái chuẩn hoá: Bài 1, 2, 3, 4, 5 ĐẠT; Bài 6–7 chưa; Bài 8 chuẩn mẫu.
-- nextTask: "Tiếp tục" → chuẩn hoá Bài 6 《明天星期几》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 6 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Sau đó Bài 7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 6 《你的手机号是多少？》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 6 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Sau đó Bài 7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
 
 ## Chuẩn hoá Bài 4 — D27 (2026-11-02)
 

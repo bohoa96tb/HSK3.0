@@ -122,6 +122,12 @@
 - PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
 - Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.
 
+## Vẽ lại hình Bài 7 đẹp hơn — yêu cầu của Hoa (2026-11-02)
+
+- Hoa nhận xét bộ hình Bài 7 bản standard1 "quá sơ sài", yêu cầu xem lại PDF gốc và mô phỏng đẹp hơn. Đã vẽ lại cả 11 hình với độ hoàn thiện cao hơn: đồng hồ đủ số 1–12 + vạch 60 phút + kim hình thoi + bóng đổ/bóng kính; hình ngữ cảnh có khuôn mặt đầy đủ, trang phục đúng nhân vật tr.046, nền hồng chia chéo đúng gốc (bản trước chia dọc); hình bài nói có đủ bối cảnh (tay ấn nóc đồng hồ báo thức, cảnh đêm trăng sao, kim giây đỏ như gốc). Giờ trên đồng hồ không đổi (đặt bằng phép tính góc) — đáp án giữ nguyên.
+- QA hình độc lập: 11/11 ĐẠT (tự đọc kim cả 10 đồng hồ khớp kỳ vọng; speaking-1 ngón tay che số 11–12 là trung thực theo ảnh gốc, không ảnh hưởng đáp án). Test 159/159. PR #74 merge 779c9493; contentVersion live `20261102-lesson7-images2`; sha256 11/11 hình khớp bản local.
+- Bài học: bản vẽ v1 đạt chuẩn "đúng đáp án" nhưng chưa đạt kỳ vọng thẩm mỹ của Hoa — từ nay hình vẽ mới phải đạt mức hoàn thiện của bộ images2 này (đủ chi tiết nhận diện của cảnh gốc, nhân vật có khuôn mặt, nền có bối cảnh) ngay từ vòng đầu.
+
 ## Chuẩn hoá Bài 7 — D27 (2026-11-02)
 
 - Bài 7 《我晚上六点半下班》 ĐẠT CHUẨN D27: PR #72; contentVersion 20261102-lesson7-standard1; test 159/159; QA nội dung ĐẠT toàn bộ (10 mục + mục kiểm thêm), code ĐẠT 4/4, hình 11/11 — đạt ngay một vòng QA; nghiệm thu live: sha256 11/11 hình khớp + phiên bản đúng + kiểm trực quan 3/3.

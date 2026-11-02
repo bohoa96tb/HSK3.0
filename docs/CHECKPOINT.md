@@ -116,3 +116,8 @@
 - Bài học quy trình: connector push-files CHỈ đẩy được file văn bản UTF-8; file nhị phân (WebP) phải tải qua giao diện web GitHub rồi đối chiếu sha1 blob/sha256 — bản thử create_or_update_file với base64 đã lưu nhầm văn bản base64, phải ghi đè và kiểm bằng git blob SHA (raw.githubusercontent có thể phục vụ bản cache cũ). Test DOM: render trang prep hoàn tất bất đồng bộ — phải thăm dò phần tử đích.
 - Trạng thái chuẩn hoá: Bài 1, 2, 3 ĐẠT; Bài 4–7 chưa; Bài 8 chuẩn mẫu.
 - nextTask: "Tiếp tục" → chuẩn hoá Bài 4 《你今年多大》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 4 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Lần lượt Bài 5→7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
+
+## Vẽ lại hình Bài 1–3 theo chuẩn Bài 8 (2026-11-02, chỉ đạo riêng của Hoa)
+
+- PR #62 merge fa670bfe; contentVersion 20261102-img-redraw-l123. Toàn bộ 14 file hình vốn là ảnh trích sách ở Bài 1–3 (11 hình bài chọn hội thoại + 3 hình ngữ cảnh classroom.webp) đã thay bằng tranh minh họa phẳng vẽ mới: 4 tờ lưới 2×2 → cắt lẻ 760×760 → đối chiếu trực quan từng cảnh. Chú thích/alt đã đổi khỏi "Hình gốc"; ATTRIBUTION.md của 3 bài viết lại; SOURCE_AUDIT + QA_REPORT đã ghi. QA hình ảnh độc lập ĐẠT 14/14 (0 hình gây nhầm đáp án; 3 ghi chú nhẹ đã lưu). File nhị phân tải qua web GitHub, đối chiếu git blob SHA 14/14 và sha256 trên Pages.
+- Bài 4–7 vẫn còn ảnh trích sách (chưa có chỉ đạo vẽ lại). nextTask chuẩn hoá D27 không đổi: Bài 4 《你今年多大》.

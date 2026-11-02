@@ -1,5 +1,5 @@
 // One audio element; source media is streamed, never copied into the repo.
-import { loadProgress, update } from './store.js?v=20261102-lesson5-images2';
+import { loadProgress, update } from './store.js?v=20261102-lesson6-images2';
 const audio = new Audio();
 audio.preload = 'none';
 const listeners = new Set();

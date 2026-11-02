@@ -107,3 +107,12 @@
 - QA độc lập MỘT vòng đạt ngay trên bản cuối: nội dung 8/8 (0 lỗi), code 7/7 (23/23). Bài học schema (đã ghi ở QA_REPORT): quickCheck answer là chỉ số dạng chuỗi; dialogueGroup từ 1; learningPath là mảng bước — Bài 3 trở đi đọc schema từ dữ liệu mẫu trước khi viết.
 - Trạng thái chuẩn hoá: Bài 1 ĐẠT, Bài 2 ĐẠT; Bài 3–7 chưa; Bài 8 chuẩn mẫu.
 - nextTask: "Tiếp tục" → chuẩn hoá Bài 3 《我是中国人》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 3 gồm ô trợ giúp/câu hỏi mở/hoạt động/汉字 nếu có; QA D17; PR riêng). Lần lượt Bài 4→7; Bài 9 sau khi Bài 1–8 đạt chuẩn.
+
+## Chuẩn hoá Bài 3 — D27 (2026-11-02)
+
+- Bài 3 《我是中国人》 ĐẠT CHUẨN D27: PR #60 merge a39697cb; contentVersion 20261102-lesson3-standard1; test 137/137; QA một vòng đạt ngay (nội dung 8/8, code 7/7).
+- Đối chiếu TB in 010–016 + WB in 009–012. Bổ sung: 4 tên riêng sách liệt kê theo hội thoại （中国/法国/中文/泰国 — dữ liệu cũ thiếu hẳn); bài đọc vè + track 3-7 (tr.016, 23,647s đo từ file tải qua URL CDN vì nguồn cục bộ chỉ có tới 3-6); 2 cụm luyện đọc lược 的 （我学生/你同学）; toàn bộ 综合练习 TB tr.015: 5 câu điền từ khung 哪/吗/谁/中国人/想 (đáp án verified-editorial; câu 3 tách hai câu hỏi) + bài Dùng hình để nói tự luyện với 2 tranh phẳng vẽ mới (assets/lesson-03/describe-*.webp, truy vết ở SOURCE_AUDIT).
+- Nâng cấp: learningPath; prepGroups 2+3/6+1/10; quickCheck 3 điểm chính; summaryPoints; apply.tasks 2 nhiệm vụ; tra từ Bài 3 (extras 一飞/白家月； phủ 32/32).
+- Bài học quy trình: connector push-files CHỈ đẩy được file văn bản UTF-8; file nhị phân (WebP) phải tải qua giao diện web GitHub rồi đối chiếu sha1 blob/sha256 — bản thử create_or_update_file với base64 đã lưu nhầm văn bản base64, phải ghi đè và kiểm bằng git blob SHA (raw.githubusercontent có thể phục vụ bản cache cũ). Test DOM: render trang prep hoàn tất bất đồng bộ — phải thăm dò phần tử đích.
+- Trạng thái chuẩn hoá: Bài 1, 2, 3 ĐẠT; Bài 4–7 chưa; Bài 8 chuẩn mẫu.
+- nextTask: "Tiếp tục" → chuẩn hoá Bài 4 《你今年多大》 theo LESSON_STANDARD (kiểm kê PDF TB + WB của Bài 4 gồm tên riêng/ô trợ giúp/bài tổng hợp/汉字 nếu có; QA D17; PR riêng). Lần lượt Bài 5→7; Bài 9 sau khi Bài 1–8 đạt chuẩn.

@@ -563,3 +563,14 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **3 ghi chú nhẹ**: (1) `kp-hsk1-l14-characters-7` thiếu trích dẫn WB tr.104 — đã bổ sung sourceRef trong nhánh. (2) Hán–Việt 不要 "BẤT YẾU" chưa thống nhất với 要 "YÊU" ở Bài 13 (cả hai đều là âm chuẩn) — đã đổi thành "BẤT YÊU" trong nhánh cho nhất quán toàn app. (3) Đáp án gợi ý cho câu hỏi mở "陈天中为什么没看见王老师？" là suy luận biên soạn (đã ghi unverified) — giữ nguyên. Sau sửa: hồi quy 195/195.
 - **Hình**: QA mở xem 11/11 — khớp cảnh gốc, mỗi câu khởi động một đáp án rõ ràng; hình chữ 春 vẽ bằng chương trình đúng tuyệt đối; đã kiểm blob SHA 11/11 trước khi merge.
 - **Nghiệm thu live**: nội dung chính đạt (điểm loa mục Từ cần biết chưa xác nhận được trạng thái phát trong môi trường kiểm tra tự động — giới hạn môi trường đã biết; bản ghi có chi tiết quan sát bịa về thân câu/lựa chọn — dữ liệu khớp byte nên không phải lỗi app).
+
+## Bài 15 — QA độc lập (2026-11-03, PR #101, live 20261103-lesson15-standard1)
+
+- **Phạm vi kiểm**: agent QA độc lập đối chiếu dữ liệu Bài 15 với bản in: hội thoại 14/14, từ 17+3, KP chính duy nhất + Hán tự (8), 23 câu chính (mọi đáp án tự suy từ bản in), 6 câu tại hội thoại + audioSegment, 3 bài tự luyện, 11 hình, áp dụng/tổng kết, nhất quán (kiểm chứng việc sách chỉ in MỘT KP chính cho Bài 15 và khối tổng kết liên bài 13–15 không lọt vào dữ liệu).
+- **Kết quả vòng 1**: 8/9 mảng ĐẠT. QA khen: Pinyin chép đúng cả chỗ sách dùng 星期天 (s11) khác 星期日 (s12); bốn điểm tổng kết đối chiếu từng hội thoại đều đúng (không lặp lỗi Bài 12); đáp án ngữ điệu cảm thán/cầu khiến suy ra duy nhất.
+- **1 lỗi nghiêm trọng**: khoá đáp án sai 5/6 câu nối âm tiết `wb15-match-2..6` — khoá theo số thứ tự âm tiết ở cột trái sách thay vì lựa chọn có Pinyin trùng với âm tiết được đọc; học viên chọn đúng từ sẽ bị chấm sai. Đã sửa trong nhánh: sắp lại 6 câu theo thứ tự cột âm tiết của sách, khoá lại (1/4/5/2/6/3), viết lại answerEvidence.
+- **1 lỗi nhẹ**: stub catalogue lệch khuôn Bài 13/14 (bookId là workbook, sectionIds rỗng) — đã sửa trong nhánh.
+- **Kiểm lại vòng 2**: QA tự đối chiếu bản in WB tr.111 và dữ liệu đã sửa: ĐẠT 6/6 câu nối âm tiết và stub đúng khuôn; không phát hiện lỗi mới. Sau sửa: hồi quy 200/200.
+- **Hình**: QA mở xem 11/11 — khớp cảnh gốc; cặp dễ nhầm 早/早饭 phân biệt rõ (mặt trời mọc trên đồng không có đồ ăn vs khay ăn sáng); blob SHA 11/11 trước khi merge.
+- **Nghiệm thu live**: 5/5 điểm đạt (lộ trình 6 bước + hình sân bay Đại Hưng; 3 nhóm từ đúng định dạng "2 từ / 5 từ + 2 tên riêng / 10 từ + 1 tên riêng"; câu hỏi tại Hội thoại 1 có nút nghe riêng 0:00–0:01, không Pinyin trước chấm, chọn 爱 chấm đúng 1/1; bộ chính 23 câu kèm nhóm ngữ điệu bốn loại; tổng kết 4 điểm).
+- **Lưu ý hồ sơ**: file báo cáo chi tiết vòng 1 (qa-l15-report.md trong thư mục làm việc) bị cụt ở mục 4b do lỗi ghi file; kết luận và chi tiết hai lỗi còn nguyên ở phần đầu file và trong mục này.

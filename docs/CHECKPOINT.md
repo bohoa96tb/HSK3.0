@@ -223,3 +223,10 @@
 - Giới hạn giữ nguyên: mọi mốc audio asr-draft chưa nghe kiểm chứng bởi người; quyền sách/audio unknown; CI GitHub Actions vẫn chưa tạo được (403) — bản bàn giao docs/ci/ci.yml; kiểm tra là trình duyệt giả lập, chưa phải thiết bị thật của Hoa.
 - Việc ngoài phạm vi vòng này, chờ Hoa quyết: âm Hán–Việt của từ 这里 ở Bài 12 đang là “CHÁ LÝ” — sai quy ước dự án （这 = GIÁ như Bài 3/10); sửa cần một vòng nhỏ riêng cho Bài 12.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
+
+## Sửa Hán–Việt Bài 12 — 这里 (2026-11-03)
+
+- branch: fix-l12-hanviet → PR #97, merge db66164f; contentVersion live 20261103-l12hanviet1 (content.json trên URL thật khớp byte bản local; đọc trực tiếp dữ liệu live: 这里 = “GIÁ LÝ”; kiểm giao diện thật tại mục Từ cần biết Bài 12 hiển thị “HV: GIÁ LÝ” — ĐẠT).
+- Nội dung sửa: đúng MỘT giá trị — prepWords Bài 12: 这里 hanViet “CHÁ LÝ” → “GIÁ LÝ”. Đã rà toàn bộ dữ liệu trước khi sửa: mọi từ chứa 这 ở các bài khác đều dùng GIÁ (Bài 3 这， Bài 8 这只， Bài 10 这边/这些/这儿/这个/这件， Bài 13 这个） — đây là trường hợp duy nhất lệch quy ước. Ghi chú đính chính trong docs/SOURCE_AUDIT.md (mục Bài 12) và script biên soạn build_l12.py đã đồng bộ.
+- Kiểm thử: validator OK, audit-standard đạt, test 190/190 (không test nào khẳng định giá trị sai cũ). Không đổi nội dung/audio/đáp án nào khác.
+- nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.

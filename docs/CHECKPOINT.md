@@ -224,6 +224,13 @@
 - Việc ngoài phạm vi vòng này, chờ Hoa quyết: âm Hán–Việt của từ 这里 ở Bài 12 đang là “CHÁ LÝ” — sai quy ước dự án （这 = GIÁ như Bài 3/10); sửa cần một vòng nhỏ riêng cho Bài 12.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
 
+## Bài 14 —《我看了一个电影》(đang xây, chờ QA)
+
+- Trạng thái: dữ liệu + hình + test XONG ở bản local (chưa phát hành). contentVersion `20261103-lesson14-standard1`.
+- Nội dung: 15 câu/3 hội thoại (4/5/6), 26 từ + 2 tên riêng （汉语/汉字， audio null theo tiền lệ Bài 3), 3 KP chính （动态助词“了（2）”, 离合词（1), 范围副词“都”) + 汉字书写（七） bốn cấu trúc hợp thể, bộ chính 23 câu (6 khởi động + 5 điền từ + 6 nghe–nối âm tiết + 6 nghe–phân biệt ngữ điệu câu — dạng bài MỚI, đáp án xác định từ nội dung câu in), 6 câu hỏi tại CẢ BA hội thoại theo D28 kèm audioSegment, 3 tự luyện (nói theo 4 hình tr.110–111, trả lời 6 câu hỏi mở, điền 了/没 vào đối thoại ở phần giảng tr.105), tra từ 30/30, 11 hình mới (hình chữ 春 vẽ bằng chương trình).
+- Kiểm thử: test 195/195, validator OK, audit-standard đạt cột Bài 14.
+- Chờ: QA độc lập (D17) → sửa trong nhánh nếu có lỗi → phát hành.
+
 ## Sửa Hán–Việt Bài 12 — 这里 (2026-11-03)
 
 - branch: fix-l12-hanviet → PR #97, merge db66164f; contentVersion live 20261103-l12hanviet1 (content.json trên URL thật khớp byte bản local; đọc trực tiếp dữ liệu live: 这里 = “GIÁ LÝ”; kiểm giao diện thật tại mục Từ cần biết Bài 12 hiển thị “HV: GIÁ LÝ” — ĐẠT).

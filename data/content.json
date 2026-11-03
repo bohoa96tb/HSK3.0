@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-l12hanviet1",
+ "contentVersion": "20261103-lesson14-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -704,28 +704,41 @@
   },
   {
    "id": "hsk1-l14",
-   "bookId": "book-hsk1-workbook",
+   "bookId": "book-hsk1-textbook",
    "level": "HSK 1",
    "sourceUnit": "Lesson 14",
    "lessonNumber": 14,
    "titleZh": "我看了一个电影",
    "titleEn": "I watched a movie",
    "titleVi": "Tôi đã xem một bộ phim",
-   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "titleProvenance": "Đối chiếu tên Bài 14 ở trang mở đầu Textbook trang in 103 và Workbook trang in 102 (cả hai đều là 我看了一个电影； tên cũ trong danh mục ghi nguồn từ mục lục Workbook nay đã kiểm chứng trực tiếp).",
    "sourceRefs": [
     {
-     "sourceId": "src-hsk1-workbook-pdf",
-     "pdfPage": 109,
-     "printedPage": 102,
-     "section": "目录 Contents (mục lục)"
+     "sourceId": "src-hsk1-textbook-pdf",
+     "pdfPage": 118,
+     "printedPage": 103,
+     "section": "Bài 14 · mục tiêu và khởi động"
     }
    ],
    "textbookAudioTrackCount": 6,
-   "workbookAudioTrackCount": 2,
-   "publicationStatus": "catalogue-only",
-   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-   "grammarIds": [],
-   "sectionIds": []
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Trợ từ động thái “了（2）”, từ ly hợp (1) và phó từ phạm vi “都”; cả ba hội thoại đều có hai câu hỏi in kèm, nằm tại hội thoại theo D28; kèm phát âm Workbook (nghe – nối âm tiết + nghe – phân biệt ngữ điệu câu) và nền tảng Hán tự (7): bốn cấu trúc chữ hợp thể. Track Workbook 14-2 thuộc phần đề mô phỏng, không dùng trong bài (D15).",
+   "grammarIds": [
+    "kp-hsk1-l14-le2",
+    "kp-hsk1-l14-separable",
+    "kp-hsk1-l14-dou",
+    "kp-hsk1-l14-characters-7"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
   },
   {
    "id": "hsk1-l15",
@@ -41891,6 +41904,3501 @@
       "pinyin": "liǎng",
       "hanViet": "LƯỠNG",
       "vi": "hai (dùng trước lượng từ)"
+     }
+    ],
+    "phrases": []
+   }
+  },
+  {
+   "lessonId": "hsk1-l14",
+   "intro": {
+    "goalVi": "Nghe hiểu và dùng được trợ từ động thái “了（2）” để nói việc đã xảy ra hoặc đã hoàn thành; nắm cách dùng phó từ phạm vi “都”; nắm cách dùng cơ bản của một số từ ly hợp; hiểu và miêu tả được tình hình học tập, theo mục tiêu in tại Textbook tr.103.",
+    "estimatedMinutes": 25,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bài theo Bạch Gia Nguyệt và Trần Thiên Trung ôn lại chuyến tàu ngoại khoá lần trước, vào lớp nghe cô Vương khen cả lớp đều biết viết chữ Hán, rồi về nhà cùng Lưu Minh và Vương Nhất Tuyết bàn chuyện hai con sắp đi học.",
+    "outcomesVi": [
+     "Kể việc đã làm bằng “động từ + 了”: 我看了一个电影。",
+     "Phủ định việc đã qua bằng “没” và bỏ “了”: 我没看见。",
+     "Nói về toàn bộ một nhóm bằng “都”: 我们都会写了。",
+     "Nhận ra từ ly hợp và cách tách: 睡觉 → 睡了一觉。",
+     "Nói về việc đi học của trẻ: 明年女儿上中学，儿子上小学。"
+    ],
+    "contextImage": {
+     "src": "assets/lesson-14/classroom.webp",
+     "alt": "Tranh vẽ: trên khoang tàu, một hành khách đang đọc sách, một người đã ngủ, và một bạn trẻ đeo tai nghe xem phim trên máy tính bảng",
+     "caption": "Trên chuyến tàu lần trước · tranh vẽ mới theo cảnh Textbook tr.103–104",
+     "width": 760,
+     "height": 560
+    },
+    "studyTipVi": "Khi kể chuyện đã qua, cứ gắn “了” ngay sau động từ cho mỗi việc đã làm xong: 看了、买了、吃了. Chỉ khi nói việc đó KHÔNG xảy ra thì đổi sang “没 + động từ” và bỏ “了” đi.",
+    "foundationSummaryVi": "Nền tảng Hán tự của bài ở Workbook tr.103–104: nhận diện bốn cấu trúc chữ hợp thể — trên – dưới （分）, trên – giữa – dưới （爱）, nửa bao quanh （同） và bao quanh kín （国）; phần chép các từ 苹果、爱读书、看病、回家.",
+    "courseTagsVi": "Trợ từ “了（2）” · Từ ly hợp · Phó từ “都” · Kể việc đã qua",
+    "priorLessonNoteVi": "Bài 13 đã học cấu trúc “động từ + 一下” — mẫu của Tiểu Ngữ ở hoạt động cuối bài này dùng lại đúng cấu trúc đó: “休息了一下”. Bài 12 đã học trợ từ ngữ khí “了（1）” đặt cuối câu; bài này học tiếp “了（2）” bám ngay sau động từ.",
+    "priorLessonId": "hsk1-l13"
+   },
+   "prepWords": [
+    {
+     "id": "l14w-1",
+     "zh": "上",
+     "pinyin": "shàng",
+     "vi": "lên; lên (xe, tàu)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "THƯỢNG",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 0.3,
+      "end": 0.95,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-2",
+     "zh": "火车",
+     "pinyin": "huǒchē",
+     "vi": "tàu hoả, xe lửa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "HOẢ XA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 2.85,
+      "end": 3.71,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-3",
+     "zh": "中午",
+     "pinyin": "zhōngwǔ",
+     "vi": "buổi trưa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "TRUNG NGỌ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 5.74,
+      "end": 6.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-4",
+     "zh": "开",
+     "pinyin": "kāi",
+     "vi": "(xe, tàu) chạy, khởi hành",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "KHAI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 8.78,
+      "end": 9.42,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-5",
+     "zh": "有些",
+     "pinyin": "yǒuxiē",
+     "vi": "một số, vài (chỉ một bộ phận)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "HỮU TA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 11.12,
+      "end": 11.98,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-6",
+     "zh": "有的",
+     "pinyin": "yǒude",
+     "vi": "một số, có những",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "HỮU ĐÍCH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 13.82,
+      "end": 14.45,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-7",
+     "zh": "了",
+     "pinyin": "le",
+     "vi": "trợ từ động thái sau động từ, chỉ hành động đã xảy ra hoặc đã hoàn thành",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "生词 · Từ mới 14-2"
+      }
+     ],
+     "hanViet": "LIỄU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-2",
+      "start": 16.25,
+      "end": 16.8,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l14w-8",
+     "zh": "写",
+     "pinyin": "xiě",
+     "vi": "viết",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "TẢ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 0.48,
+      "end": 1.21,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-9",
+     "zh": "都",
+     "pinyin": "dōu",
+     "vi": "đều, tất cả",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "ĐÔ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 3.17,
+      "end": 3.72,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-10",
+     "zh": "听见",
+     "pinyin": "tīngjiàn",
+     "vi": "nghe thấy",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "THÍNH KIẾN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 5.56,
+      "end": 6.56,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-11",
+     "zh": "不要",
+     "pinyin": "búyào",
+     "vi": "đừng, không nên",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "BẤT YÊU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 8.63,
+      "end": 9.45,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-12",
+     "zh": "说话",
+     "pinyin": "shuōhuà",
+     "vi": "nói, nói chuyện",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "THUYẾT THOẠI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 11.47,
+      "end": 12.52,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-13",
+     "zh": "听",
+     "pinyin": "tīng",
+     "vi": "nghe",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "THÍNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 14.51,
+      "end": 15.13,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-14",
+     "zh": "哪些",
+     "pinyin": "nǎxiē",
+     "vi": "những ... nào",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "NÃ TA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 16.86,
+      "end": 17.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-15",
+     "zh": "字",
+     "pinyin": "zì",
+     "vi": "chữ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "生词 · Từ mới 14-4"
+      }
+     ],
+     "hanViet": "TỰ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-4",
+      "start": 19.75,
+      "end": 20.26,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-p1",
+     "zh": "汉语",
+     "pinyin": "Hànyǔ",
+     "vi": "tiếng Hán, tiếng Trung",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "hanViet": "HÁN NGỮ",
+     "hanVietStatus": "verified-editorial",
+     "audio": null,
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-p2",
+     "zh": "汉字",
+     "pinyin": "Hànzì",
+     "vi": "chữ Hán",
+     "isProperName": true,
+     "properKind": "Tên riêng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "专有名词 · Tên riêng"
+      }
+     ],
+     "hanViet": "HÁN TỰ",
+     "hanVietStatus": "verified-editorial",
+     "audio": null,
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l14w-16",
+     "zh": "明年",
+     "pinyin": "míngnián",
+     "vi": "năm sau, năm tới",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "MINH NIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 0.43,
+      "end": 1.38,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-17",
+     "zh": "上",
+     "pinyin": "shàng",
+     "vi": "bắt đầu làm việc gì vào giờ cố định (đi học, đi làm)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "THƯỢNG",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 3.38,
+      "end": 3.93,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-18",
+     "zh": "中学",
+     "pinyin": "zhōngxué",
+     "vi": "trường trung học (cấp hai và cấp ba)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "TRUNG HỌC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 5.77,
+      "end": 6.66,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-19",
+     "zh": "小学",
+     "pinyin": "xiǎoxué",
+     "vi": "trường tiểu học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "TIỂU HỌC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 8.59,
+      "end": 9.58,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-20",
+     "zh": "中学生",
+     "pinyin": "zhōngxuéshēng",
+     "vi": "học sinh trung học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "TRUNG HỌC SINH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 11.72,
+      "end": 12.83,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-21",
+     "zh": "小学生",
+     "pinyin": "xiǎoxuéshēng",
+     "vi": "học sinh tiểu học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "TIỂU HỌC SINH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 15.1,
+      "end": 16.3,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-22",
+     "zh": "上学",
+     "pinyin": "shàngxué",
+     "vi": "đi học; nhập học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "THƯỢNG HỌC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 18.59,
+      "end": 19.51,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-23",
+     "zh": "他们",
+     "pinyin": "tāmen",
+     "vi": "họ (chỉ nam hoặc nhóm chung)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "THA MÔN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 21.35,
+      "end": 21.93,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-24",
+     "zh": "她们",
+     "pinyin": "tāmen",
+     "vi": "họ (chỉ toàn nữ)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "THA MÔN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 23.96,
+      "end": 24.67,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-25",
+     "zh": "它们",
+     "pinyin": "tāmen",
+     "vi": "chúng (chỉ vật; số nhiều của 它)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "THA MÔN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 26.61,
+      "end": 27.22,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l14w-26",
+     "zh": "晚",
+     "pinyin": "wǎn",
+     "vi": "muộn, khuya",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 124,
+       "printedPage": 109,
+       "section": "生词 · Từ mới 14-6"
+      }
+     ],
+     "hanViet": "VÃN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l14-6",
+      "start": 29.31,
+      "end": 30.01,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk1-l14-le2",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Trợ từ động thái “了（2）”: việc đã xảy ra, đã hoàn thành",
+     "useWhenVi": "Dùng để kể một việc đã xảy ra hoặc đã làm xong: đã xem một bộ phim, đã ngủ rồi, nhà đã có một học sinh trung học.",
+     "explanationVi": "Sách nêu: trợ từ động thái “了（2）” đặt ngay sau động từ, biểu thị hành động đã phát sinh hoặc đã hoàn thành. Khi phủ định, dùng “没” và bỏ “了” (ví dụ “我昨天没去商店买东西”). Điểm này khác trợ từ ngữ khí “了” ở Bài 12: “了” của bài này bám ngay sau động từ, còn “了” ở Bài 12 đặt cuối câu để báo tình hình mới.",
+     "pattern": "Động từ + 了 (+ tân ngữ) — phủ định: 没 + động từ (bỏ “了”)",
+     "examples": [
+      {
+       "zh": "我看了一个电影。",
+       "pinyin": "Wǒ kànle yí gè diànyǐng.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.105): tôi đã xem một bộ phim — cũng là câu của Trần Thiên Trung ở Hội thoại 1."
+      },
+      {
+       "zh": "我买了一个新电脑。",
+       "pinyin": "Wǒ mǎi le yí gè xīn diànnǎo.",
+       "noteVi": "Câu luyện đọc của sách: tôi đã mua một chiếc máy tính mới."
+      },
+      {
+       "zh": "我昨天没去商店买东西。",
+       "pinyin": "Wǒ zuótiān méi qù shāngdiàn mǎi dōngxi.",
+       "noteVi": "Câu luyện đọc của sách: hôm qua tôi không đi cửa hàng mua đồ — phủ định dùng “没” và bỏ “了”."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Điền từ đúng theo quy tắc phủ định của bài:",
+      "stemZh": "我昨天（）去商店买东西。",
+      "options": [
+       {
+        "zh": "没",
+        "vi": "phủ định việc chưa xảy ra dùng “没” và bỏ “了”."
+       },
+       {
+        "zh": "不了",
+        "vi": "không dùng “不” cùng “了” cho việc đã qua theo quy tắc của sách."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Phủ định của “động từ + 了” dùng “没” và bỏ “了”: 我昨天没去商店买东西 — đúng câu luyện đọc ở Textbook tr.105."
+     },
+     "positionVi": "Điểm chính 1 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.105).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "小语讲堂 1 · 动态助词“了（2）”"
+      }
+     ],
+     "sentenceIds": [
+      "l14-s4",
+      "l14-s12"
+     ],
+     "exerciseIds": [
+      "tb14-fill-1"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l14-separable",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Từ ly hợp (1): những từ có thể tách ra chèn thành phần vào giữa",
+     "useWhenVi": "Dùng để nhận ra các từ như 睡觉、上课、说话、读书、生病 có thể tách đôi: khi kể việc đã qua hoặc nói rõ lượng, thành phần như “了”, lượng từ hoặc tân ngữ được chèn vào giữa hai phần của từ.",
+     "explanationVi": "Sách nêu: trong cuốn này, các từ “上课、下课、上班、下班、说话、读书、睡觉、看病、生病” thuộc một loại cấu trúc động từ đặc biệt — hợp lại thì là một từ, tách ra và chèn thành phần khác vào giữa thì thành cụm, nên được gọi là từ ly hợp. Khi tách ra, thành phần được chèn vào giữa chỉ giới hạn ở một số loại nhất định.",
+     "pattern": "Hợp: 睡觉 · 上课 · 说话 — Tách: 睡了一觉 · 上中文课 · 说了很多话",
+     "examples": [
+      {
+       "zh": "睡了一觉",
+       "pinyin": "shuìle yí jiào",
+       "noteVi": "Bảng đối chiếu hợp – tách ở Textbook tr.106: “睡觉” tách thành “睡了一觉” — ngủ một giấc."
+      },
+      {
+       "zh": "上中文课",
+       "pinyin": "shàng Zhōngwén kè",
+       "noteVi": "Bảng đối chiếu ở Textbook tr.106: “上课” tách thành “上中文课” — học tiết tiếng Trung."
+      },
+      {
+       "zh": "说了很多话",
+       "pinyin": "shuōle hěn duō huà",
+       "noteVi": "Bảng đối chiếu ở Textbook tr.106: “说话” tách thành “说了很多话” — nói rất nhiều lời."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Cách tách từ ly hợp nào đúng theo bảng của sách?",
+      "stemZh": "睡觉",
+      "options": [
+       {
+        "zh": "睡了一觉",
+        "vi": "“了” và “一觉” được chèn vào giữa hai phần của từ."
+       },
+       {
+        "zh": "睡觉了一觉",
+        "vi": "giữ nguyên cả từ rồi mới thêm vào sau — không phải cách tách của từ ly hợp."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Thành phần chèn vào nằm giữa hai phần của từ ly hợp: 睡 + 了一 + 觉 — đúng bảng hợp – tách ở Textbook tr.106."
+     },
+     "positionVi": "Điểm chính 2 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.105–106).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "小语讲堂 2 · 离合词（1）"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 121,
+       "printedPage": 106,
+       "section": "小语讲堂 2 · 离合词（1）· bảng hợp – tách"
+      }
+     ],
+     "sentenceIds": [
+      "l14-s2",
+      "l14-s15"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk1-l14-dou",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Phó từ phạm vi “都”: đều, tất cả",
+     "useWhenVi": "Dùng để nói toàn bộ một nhóm người hoặc vật đều cùng làm một việc hay cùng một trạng thái: cả lớp đều biết viết chữ Hán, hai con đều bận sau khi đi học.",
+     "explanationVi": "Sách nêu: phó từ phạm vi “都” biểu thị toàn bộ, tổng quát; đối tượng được tổng quát đứng trước “都”. Khi phủ định, từ phủ định đứng sau “都” (ví dụ “同学们都没听见” — tất cả đều không nghe thấy).",
+     "pattern": "Đối tượng được tổng quát + 都 + động từ — phủ định: 都 + 没/不 + động từ",
+     "examples": [
+      {
+       "zh": "我们都会写了。",
+       "pinyin": "Wǒmen dōu huì xiě le.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.108): chúng em đều biết viết rồi — cũng là câu ở Hội thoại 2."
+      },
+      {
+       "zh": "我和我的朋友们都去。",
+       "pinyin": "Wǒ hé wǒ de péngyǒumen dōu qù.",
+       "noteVi": "Câu luyện đọc của sách: tôi và các bạn của tôi đều đi."
+      },
+      {
+       "zh": "同学们都没听见。",
+       "pinyin": "Tóngxuémen dōu méi tīngjiàn.",
+       "noteVi": "Câu luyện đọc của sách: các bạn học đều không nghe thấy — từ phủ định “没” đứng sau “都”."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Điền từ đúng theo câu luyện đọc của sách:",
+      "stemZh": "同学们（）没听见。",
+      "options": [
+       {
+        "zh": "都",
+        "vi": "“都” đứng trước từ phủ định “没”."
+       },
+       {
+        "zh": "了",
+        "vi": "vị trí này cần phó từ phạm vi, không phải trợ từ “了”."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Phó từ “都” đứng trước từ phủ định: 同学们都没听见 — đúng câu luyện đọc ở Textbook tr.108."
+     },
+     "positionVi": "Điểm chính 3 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.108).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 123,
+       "printedPage": 108,
+       "section": "小语讲堂 3 · 范围副词“都”"
+      }
+     ],
+     "sentenceIds": [
+      "l14-s6",
+      "l14-s8",
+      "l14-s14"
+     ],
+     "exerciseIds": [
+      "tb14-fill-4b"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l14-characters-7",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Cấu trúc chữ hợp thể: trên – dưới, trên – giữa – dưới, nửa bao quanh, bao quanh kín",
+     "explanationVi": "Workbook Bài 14 （汉字书写（七）, tr.103–104) luyện nhận diện bốn cấu trúc của chữ hợp thể. Cấu trúc trên – dưới gồm phần trên và phần dưới xếp dọc (ví dụ chữ 分）. Cấu trúc trên – giữa – dưới gồm ba lớp xếp dọc (ví dụ chữ 爱）. Cấu trúc nửa bao quanh chỉ bao quanh một phần (ví dụ chữ 同）. Cấu trúc bao quanh kín bao kín cả bốn phía (ví dụ chữ 国）. Phần chép từ gồm 苹果、爱读书、看病、回家 — đây là bài luyện viết tay trong sách; app chỉ giới thiệu để nhận diện, không chấm nét viết.",
+     "pattern": "上下结构： 分 · 上中下结构： 爱 · 半包围结构： 同 · 全包围结构： 国",
+     "examples": [
+      {
+       "zh": "分",
+       "pinyin": "fēn",
+       "noteVi": "Chữ ví dụ cho cấu trúc trên – dưới ở Workbook tr.103: chia, phân."
+      },
+      {
+       "zh": "爱",
+       "pinyin": "ài",
+       "noteVi": "Chữ ví dụ cho cấu trúc trên – giữa – dưới ở Workbook tr.103: yêu."
+      },
+      {
+       "zh": "同",
+       "pinyin": "tóng",
+       "noteVi": "Chữ ví dụ cho cấu trúc nửa bao quanh ở Workbook tr.104: cùng, giống."
+      },
+      {
+       "zh": "国",
+       "pinyin": "guó",
+       "noteVi": "Chữ ví dụ cho cấu trúc bao quanh kín ở Workbook tr.104: nước, quốc gia."
+      },
+      {
+       "zh": "苹果",
+       "pinyin": "píngguǒ",
+       "noteVi": "Từ chép ở Workbook tr.104: quả táo."
+      },
+      {
+       "zh": "回家",
+       "pinyin": "huí jiā",
+       "noteVi": "Từ chép ở Workbook tr.104: về nhà."
+      }
+     ],
+     "positionVi": "Điểm nền tảng Hán tự của bài (Workbook tr.103–104), không phải điểm ngữ pháp chính.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 110,
+       "printedPage": 103,
+       "section": "二、汉字 · 汉字书写（七）"
+      },
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 111,
+       "printedPage": 104,
+       "section": "二、汉字 · 汉字书写（七）"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "l14-reader",
+    "titleVi": "Ba hội thoại của Bài 14",
+    "headingVi": "Nghe & đọc",
+    "noteVi": "Cả ba hội thoại trong sách đều được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và hai câu hỏi của mỗi hội thoại nằm ngay dưới hội thoại đó.",
+    "sentences": [
+     {
+      "id": "l14-s1",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "你们上火车后看见王老师了吗？",
+      "pinyin": "Nǐmen shàng huǒchē hòu kànjiàn Wáng lǎoshī le ma?",
+      "vi": "Sau khi lên tàu, các bạn có nhìn thấy cô Vương không?",
+      "passageId": "l14-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-1",
+       "start": 0.02,
+       "end": 3.82,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s2",
+      "speaker": "Trần Thiên Trung",
+      "zh": "没看见。中午车开后，有些人在看书，有些人睡觉了。",
+      "pinyin": "Méi kànjiàn. Zhōngwǔ chē kāi hòu, yǒuxiē rén zài kàn shū, yǒuxiē rén shuìjiào le.",
+      "vi": "Không nhìn thấy. Trưa, sau khi tàu chạy, một số người đang đọc sách, một số người đã ngủ rồi.",
+      "passageId": "l14-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-1",
+       "start": 4.32,
+       "end": 10.74,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s3",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "你呢？",
+      "pinyin": "Nǐ ne?",
+      "vi": "Còn bạn thì sao?",
+      "passageId": "l14-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-1",
+       "start": 11.06,
+       "end": 12.28,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s4",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我看了一个电影。",
+      "pinyin": "Wǒ kànle yí gè diànyǐng.",
+      "vi": "Tôi đã xem một bộ phim.",
+      "passageId": "l14-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-1",
+       "start": 12.74,
+       "end": 14.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s5",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "你们会说汉语了，也会写汉字了吗？",
+      "pinyin": "Nǐmen huì shuō Hànyǔ le, yě huì xiě Hànzì le ma?",
+      "vi": "Các em đã nói được tiếng Trung rồi, cũng đã biết viết chữ Hán chưa?",
+      "passageId": "l14-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-3",
+       "start": 3.25,
+       "end": 7.05,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s6",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我们都会写了。",
+      "pinyin": "Wǒmen dōu huì xiě le.",
+      "vi": "Chúng em đều biết viết rồi.",
+      "passageId": "l14-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-3",
+       "start": 7.59,
+       "end": 9.29,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s7",
+      "speaker": "Trần Thiên Trung",
+      "zh": "老师，我听不见。",
+      "pinyin": "Lǎoshī, wǒ tīng bú jiàn.",
+      "vi": "Thưa cô, em không nghe thấy.",
+      "passageId": "l14-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-3",
+       "start": 9.32,
+       "end": 11.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s8",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "请大家不要说话！请听老师的问题：你们都会写哪些汉字了？",
+      "pinyin": "Qǐng dàjiā búyào shuōhuà! Qǐng tīng lǎoshī de wèntí: Nǐmen dōu huì xiě nǎxiē Hànzì le?",
+      "vi": "Mong các em đừng nói chuyện! Hãy nghe câu hỏi của cô: các em đều biết viết những chữ Hán nào rồi?",
+      "passageId": "l14-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-3",
+       "start": 12.6,
+       "end": 21.67,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s9",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我会写这些字了，您看！",
+      "pinyin": "Wǒ huì xiě zhèxiē zì le, nín kàn!",
+      "vi": "Em biết viết những chữ này rồi, cô xem!",
+      "passageId": "l14-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-3",
+       "start": 22.33,
+       "end": 25.19,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s10",
+      "speaker": "Lưu Minh",
+      "zh": "明年女儿上中学。",
+      "pinyin": "Míngnián nǚ'ér shàng zhōngxué.",
+      "vi": "Năm sau con gái lên trung học.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 0.46,
+       "end": 2.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s11",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "对。儿子也上小学了。",
+      "pinyin": "Duì. Érzi yě shàng xiǎoxué le.",
+      "vi": "Đúng vậy. Con trai cũng vào tiểu học rồi.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 3.29,
+       "end": 5.99,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s12",
+      "speaker": "Lưu Minh",
+      "zh": "我们家有了一个中学生。",
+      "pinyin": "Wǒmen jiā yǒule yí gè zhōngxuéshēng.",
+      "vi": "Nhà mình đã có thêm một học sinh trung học.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 6.24,
+       "end": 8.96,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s13",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "还有了一个小学生。",
+      "pinyin": "Hái yǒule yí gè xiǎoxuéshēng.",
+      "vi": "Còn có thêm một học sinh tiểu học nữa.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 9.03,
+       "end": 11.97,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s14",
+      "speaker": "Lưu Minh",
+      "zh": "上学后，他们都忙了。",
+      "pinyin": "Shàngxué hòu, tāmen dōu máng le.",
+      "vi": "Sau khi đi học, chúng đều bận rộn rồi.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 12.29,
+       "end": 15.01,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l14-s15",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "是的。太晚了，睡觉吧。",
+      "pinyin": "Shì de. Tài wǎn le, shuìjiào ba.",
+      "vi": "Đúng vậy. Muộn quá rồi, ngủ thôi.",
+      "passageId": "l14-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l14-5",
+       "start": 15.2,
+       "end": 18.89,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb-l14-1",
+      "label": "Hội thoại 1 · Trên tàu lần trước mọi người làm gì",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-1.mp3",
+      "durationSec": 15.411,
+      "bookRef": "Textbook · track 14-1",
+      "segments": [
+       {
+        "sentenceId": "l14-s1",
+        "start": 0.02,
+        "end": 3.82,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s2",
+        "start": 4.32,
+        "end": 10.74,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s3",
+        "start": 11.06,
+        "end": 12.28,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s4",
+        "start": 12.74,
+        "end": 14.3,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l14-2",
+      "label": "Từ mới · Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-2.mp3",
+      "durationSec": 17.835,
+      "bookRef": "Textbook · track 14-2 · 生词 Hội thoại 1",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 120,
+        "printedPage": 105,
+        "section": "课文 1 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l14-3",
+      "label": "Hội thoại 2 · Cả lớp đều biết viết chữ Hán rồi",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-3.mp3",
+      "durationSec": 26.175,
+      "bookRef": "Textbook · track 14-3",
+      "segments": [
+       {
+        "sentenceId": "l14-s5",
+        "start": 3.25,
+        "end": 7.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s6",
+        "start": 7.59,
+        "end": 9.29,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s7",
+        "start": 9.32,
+        "end": 11.9,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s8",
+        "start": 12.6,
+        "end": 21.67,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s9",
+        "start": 22.33,
+        "end": 25.19,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l14-4",
+      "label": "Từ mới · Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-4.mp3",
+      "durationSec": 27.243,
+      "bookRef": "Textbook · track 14-4 · 生词 Hội thoại 2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l14-5",
+      "label": "Hội thoại 3 · Năm sau các con đều đi học",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-5.mp3",
+      "durationSec": 20.024,
+      "bookRef": "Textbook · track 14-5",
+      "segments": [
+       {
+        "sentenceId": "l14-s10",
+        "start": 0.46,
+        "end": 2.54,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s11",
+        "start": 3.29,
+        "end": 5.99,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s12",
+        "start": 6.24,
+        "end": 8.96,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s13",
+        "start": 9.03,
+        "end": 11.97,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s14",
+        "start": 12.29,
+        "end": 15.01,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l14-s15",
+        "start": 15.2,
+        "end": 18.89,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l14-6",
+      "label": "Từ mới · Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-14/14-6.mp3",
+      "durationSec": 31.726,
+      "bookRef": "Textbook · track 14-6 · 生词 Hội thoại 3",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb-l14-1",
+      "label": "Track 14-1 · Pronunciation (phát âm)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-14/14-1.mp3",
+      "durationSec": 169.284,
+      "bookRef": "Workbook Bài 14, phần 一、语音, ký hiệu track 14-1 in ở trang in 102",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "l14-dialogue-1",
+      "title": "Hội thoại 1 · Trên tàu lần trước mọi người làm gì",
+      "context": "Trong lớp học, sau giờ học, Bạch Gia Nguyệt và Trần Thiên Trung nói về chuyến đi ngoại khoá lần trước (Textbook tr.104). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 14-1); lời thoại đầy đủ in ở tr.104 và hai câu hỏi của sách nằm ngay dưới hội thoại này. Mẹo của Tiểu Ngữ ở tr.104: “有些” cũng có thể nói là “有的”.",
+      "audioTrackId": "trk-tb-l14-1",
+      "sentenceIds": [
+       "l14-s1",
+       "l14-s2",
+       "l14-s3",
+       "l14-s4"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb14-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 104, track 14-1): Trần Thiên Trung có nhìn thấy cô Vương không?",
+        "promptZh": "陈天中（ ）王老师。",
+        "promptPinyin": "Chén Tiānzhōng ( ) Wáng lǎoshī.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "正在看",
+          "pinyin": "zhèngzài kàn",
+          "vi": "đang nhìn"
+         },
+         {
+          "id": "2",
+          "zh": "没看见",
+          "pinyin": "méi kànjiàn",
+          "vi": "không nhìn thấy"
+         },
+         {
+          "id": "3",
+          "zh": "看见了",
+          "pinyin": "kànjiànle",
+          "vi": "đã nhìn thấy"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.104: Trần Thiên Trung đáp ngay “没看见” — anh không nhìn thấy cô Vương.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 119,
+          "printedPage": 104,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-1",
+         "start": 4.32,
+         "end": 10.74,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb14-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 104, track 14-1): Trần Thiên Trung đã làm gì trên tàu?",
+        "promptZh": "陈天中在火车上（ ）。",
+        "promptPinyin": "Chén Tiānzhōng zài huǒchē shang ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "读书",
+          "pinyin": "dúshū",
+          "vi": "đọc sách"
+         },
+         {
+          "id": "2",
+          "zh": "找王老师",
+          "pinyin": "zhǎo Wáng lǎoshī",
+          "vi": "tìm cô Vương"
+         },
+         {
+          "id": "3",
+          "zh": "看了一个电影",
+          "pinyin": "kànle yí gè diànyǐng",
+          "vi": "xem một bộ phim"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.104: Trần Thiên Trung nói “我看了一个电影” — anh xem một bộ phim; đọc sách là việc của những người khác trên tàu.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 119,
+          "printedPage": 104,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-1",
+         "start": 12.74,
+         "end": 14.3,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l14-dialogue-2",
+      "title": "Hội thoại 2 · Cả lớp đều biết viết chữ Hán rồi",
+      "context": "Trong giờ học, cô Vương hỏi tình hình học tập của học sinh (Textbook tr.106–107). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 14-3); lời thoại đầy đủ in ở tr.107 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l14-3",
+      "sentenceIds": [
+       "l14-s5",
+       "l14-s6",
+       "l14-s7",
+       "l14-s8",
+       "l14-s9"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 122,
+        "printedPage": 107,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb14-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 106, track 14-3): các bạn học sinh thế nào với tiếng Hán?",
+        "promptZh": "同学们（ ）汉语了。",
+        "promptPinyin": "Tóngxuémen ( ) Hànyǔ le.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "想说",
+          "pinyin": "xiǎng shuō",
+          "vi": "muốn nói"
+         },
+         {
+          "id": "2",
+          "zh": "不会说",
+          "pinyin": "bú huì shuō",
+          "vi": "không biết nói"
+         },
+         {
+          "id": "3",
+          "zh": "都会说",
+          "pinyin": "dōu huì shuō",
+          "vi": "đều biết nói"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.107: cô Vương mở đầu “你们会说汉语了” và cả lớp đều biết viết chữ Hán — các bạn đều biết nói tiếng Hán rồi.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 121,
+          "printedPage": 106,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-3",
+         "start": 3.25,
+         "end": 7.05,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb14-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 106, track 14-3): Trần Thiên Trung có nghe thấy cô Vương đang nói gì không?",
+        "promptZh": "陈天中（ ）王老师在说什么。",
+        "promptPinyin": "Chén Tiānzhōng ( ) Wáng lǎoshī zài shuō shénme.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "听见了",
+          "pinyin": "tīngjiànle",
+          "vi": "đã nghe thấy"
+         },
+         {
+          "id": "2",
+          "zh": "没听见",
+          "pinyin": "méi tīngjiàn",
+          "vi": "không nghe thấy"
+         },
+         {
+          "id": "3",
+          "zh": "不想听",
+          "pinyin": "bù xiǎng tīng",
+          "vi": "không muốn nghe"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.107: Trần Thiên Trung nói “老师，我听不见” — anh không nghe thấy cô nói.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 121,
+          "printedPage": 106,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-3",
+         "start": 9.32,
+         "end": 11.9,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l14-dialogue-3",
+      "title": "Hội thoại 3 · Năm sau các con đều đi học",
+      "context": "Ở nhà, Lưu Minh và Vương Nhất Tuyết bàn về việc con cái đi học (Textbook tr.108–109). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 14-5); lời thoại đầy đủ in ở tr.109 và hai câu hỏi của sách nằm ngay dưới hội thoại này. Mẹo của Tiểu Ngữ ở tr.109: “她们” chỉ nhóm toàn nữ và “它们” chỉ vật — cả ba từ 他们/她们/它们 đều đọc là tāmen.",
+      "audioTrackId": "trk-tb-l14-5",
+      "sentenceIds": [
+       "l14-s10",
+       "l14-s11",
+       "l14-s12",
+       "l14-s13",
+       "l14-s14",
+       "l14-s15"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 124,
+        "printedPage": 109,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb14-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 108, track 14-5): năm sau con gái của Lưu Minh và Vương Nhất Tuyết vào cấp học nào?",
+        "promptZh": "明年刘明和王一雪的女儿（ ）。",
+        "promptPinyin": "Míngnián Liú Míng hé Wáng Yīxuě de nǚ'ér ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上小学",
+          "pinyin": "shàng xiǎoxué",
+          "vi": "vào tiểu học"
+         },
+         {
+          "id": "2",
+          "zh": "上中学",
+          "pinyin": "shàng zhōngxué",
+          "vi": "lên trung học"
+         },
+         {
+          "id": "3",
+          "zh": "上大学",
+          "pinyin": "shàng dàxué",
+          "vi": "lên đại học"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.109: Lưu Minh nói “明年女儿上中学” — con gái lên trung học; con trai mới là người vào tiểu học.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 123,
+          "printedPage": 108,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-5",
+         "start": 0.46,
+         "end": 2.54,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb14-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 108, track 14-5): khi nào thì các con đều bận rộn?",
+        "promptZh": "（ ）孩子们都忙了。",
+        "promptPinyin": "( ) háizimen dōu máng le.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上学",
+          "pinyin": "shàngxué",
+          "vi": "đi học"
+         },
+         {
+          "id": "2",
+          "zh": "上学前",
+          "pinyin": "shàngxué qián",
+          "vi": "trước khi đi học"
+         },
+         {
+          "id": "3",
+          "zh": "上学后",
+          "pinyin": "shàngxué hòu",
+          "vi": "sau khi đi học"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.109: Lưu Minh nói “上学后，他们都忙了” — sau khi đi học thì chúng đều bận.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 123,
+          "printedPage": 108,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l14-5",
+         "start": 12.29,
+         "end": 15.01,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l14-text-v1",
+    "titleVi": "Bài tập chính của Bài 14",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.103); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.110, ngân hàng từ in sẵn; câu (4) của sách có hai chỗ trống nên tách thành hai câu, mỗi từ ngân hàng dùng đúng một lần); 6 câu nghe – nối âm tiết với từ (Workbook tr.102); và 6 câu nghe – phân biệt ngữ điệu câu trần thuật/nghi vấn (Workbook tr.102–103, đáp án xác định từ nội dung câu in sẵn). Sáu câu hỏi của cả ba hội thoại nằm ngay tại từng hội thoại ở mục Nghe & đọc (D28), không nằm trong bộ này. Phần dùng hình để nói ở tr.110–111 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "items": [
+     {
+      "id": "wb14-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động A (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "火车",
+      "promptPinyin": "huǒchē",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ A “火车” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb14-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động B (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "看见",
+      "promptPinyin": "kànjiàn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ B “看见” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb14-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động C (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "汉字",
+      "promptPinyin": "Hànzì",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ C “汉字” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb14-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động D (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "听",
+      "promptPinyin": "tīng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ D “听” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb14-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động E (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "小学生",
+      "promptPinyin": "xiǎoxuéshēng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ E “小学生” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb14-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động F (Textbook trang 103): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "说话",
+      "promptPinyin": "shuōhuà",
+      "options": [
+       {
+        "id": "1",
+        "zh": "看见",
+        "pinyin": "kànjiàn",
+        "vi": "nhìn thấy",
+        "image": "assets/lesson-14/warm-see.webp",
+        "imageAlt": "Tranh vẽ: cậu bé ngồi trên cỏ cầm kính lúp soi một mầm cây nhỏ"
+       },
+       {
+        "id": "2",
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "image": "assets/lesson-14/warm-hanzi.webp",
+        "imageAlt": "Tranh vẽ: chữ “春” viết thư pháp đen trên nền giấy đỏ"
+       },
+       {
+        "id": "3",
+        "zh": "听",
+        "pinyin": "tīng",
+        "vi": "nghe",
+        "image": "assets/lesson-14/warm-listen.webp",
+        "imageAlt": "Tranh vẽ: cô gái đeo tai nghe, nhắm mắt nghe nhạc ngoài trời"
+       },
+       {
+        "id": "4",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện",
+        "image": "assets/lesson-14/warm-speak.webp",
+        "imageAlt": "Tranh vẽ: hai người đàn ông đang nói chuyện với nhau ở quầy cà phê"
+       },
+       {
+        "id": "5",
+        "zh": "小学生",
+        "pinyin": "xiǎoxuéshēng",
+        "vi": "học sinh tiểu học",
+        "image": "assets/lesson-14/warm-pupil.webp",
+        "imageAlt": "Tranh vẽ: nữ sinh tiểu học ngồi ở bàn học trong lớp, giơ tay phát biểu"
+       },
+       {
+        "id": "6",
+        "zh": "火车",
+        "pinyin": "huǒchē",
+        "vi": "tàu hoả",
+        "image": "assets/lesson-14/warm-train.webp",
+        "imageAlt": "Tranh vẽ: đoàn tàu cao tốc trắng chạy qua cánh đồng xanh và đồi núi"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.103: từ F “说话” khớp ảnh tương ứng trong sáu ảnh khởi động (cậu bé dùng kính lúp — 看见， chữ “春” thư pháp — 汉字， người đeo tai nghe — 听， hai người đàn ông nói chuyện — 说话， nữ sinh giơ tay — 小学生， đoàn tàu cao tốc — 火车）; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 103,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "tb14-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 110). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "我写（ ）很多汉字。",
+      "promptPinyin": "Wǒ xiě ( ) hěn duō Hànzì.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "上学",
+        "pinyin": "shàngxué",
+        "vi": "đi học"
+       },
+       {
+        "id": "2",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ động thái “了”"
+       },
+       {
+        "id": "3",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "4",
+        "zh": "听见",
+        "pinyin": "tīngjiàn",
+        "vi": "nghe thấy"
+       },
+       {
+        "id": "5",
+        "zh": "有的",
+        "pinyin": "yǒude",
+        "vi": "một số"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Việc viết đã hoàn thành nên dùng trợ từ động thái “了”: “我写了很多汉字”.",
+      "grammarIds": [
+       "kp-hsk1-l14-le2"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 125,
+        "printedPage": 110,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb14-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 110). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "他没（ ）老师说什么。",
+      "promptPinyin": "Tā méi ( ) lǎoshī shuō shénme.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "上学",
+        "pinyin": "shàngxué",
+        "vi": "đi học"
+       },
+       {
+        "id": "2",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ động thái “了”"
+       },
+       {
+        "id": "3",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "4",
+        "zh": "听见",
+        "pinyin": "tīngjiàn",
+        "vi": "nghe thấy"
+       },
+       {
+        "id": "5",
+        "zh": "有的",
+        "pinyin": "yǒude",
+        "vi": "một số"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Không nghe thấy lời cô nói thì dùng 听见： “他没听见老师说什么” — giống tình huống của Trần Thiên Trung ở Hội thoại 2.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 125,
+        "printedPage": 110,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb14-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 110). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "白家月：你们昨天在车上做什么了？陈天中：我看了一本书，（ ）人在睡觉。",
+      "promptPinyin": "Bái Jiāyuè: Nǐmen zuótiān zài chē shang zuò shénme le? Chén Tiānzhōng: Wǒ kànle yí běn shū, ( ) rén zài shuìjiào.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "上学",
+        "pinyin": "shàngxué",
+        "vi": "đi học"
+       },
+       {
+        "id": "2",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ động thái “了”"
+       },
+       {
+        "id": "3",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "4",
+        "zh": "听见",
+        "pinyin": "tīngjiàn",
+        "vi": "nghe thấy"
+       },
+       {
+        "id": "5",
+        "zh": "有的",
+        "pinyin": "yǒude",
+        "vi": "một số"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Chỉ một bộ phận người thì dùng 有的： “有的人在睡觉” — sách ghi “有些” cũng nói được là “有的” (mẹo ở Hội thoại 1).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 125,
+        "printedPage": 110,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb14-fill-4a",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 110). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "刘明：明年（ ）后，他们（ ）忙了。王一雪：是的。— chỗ trống thứ nhất",
+      "promptPinyin": "Liú Míng: Míngnián ( ) hòu, tāmen ( ) máng le. Wáng Yīxuě: Shì de. — blank 1",
+      "options": [
+       {
+        "id": "1",
+        "zh": "上学",
+        "pinyin": "shàngxué",
+        "vi": "đi học"
+       },
+       {
+        "id": "2",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ động thái “了”"
+       },
+       {
+        "id": "3",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "4",
+        "zh": "听见",
+        "pinyin": "tīngjiàn",
+        "vi": "nghe thấy"
+       },
+       {
+        "id": "5",
+        "zh": "有的",
+        "pinyin": "yǒude",
+        "vi": "một số"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Nguyên câu ở Hội thoại 3 là “上学后，他们都忙了” nên chỗ trống đầu tiên là 上学.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 125,
+        "printedPage": 110,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb14-fill-4b",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 110). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "刘明：明年（ ）后，他们（ ）忙了。王一雪：是的。— chỗ trống thứ hai",
+      "promptPinyin": "Liú Míng: Míngnián ( ) hòu, tāmen ( ) máng le. Wáng Yīxuě: Shì de. — blank 2",
+      "options": [
+       {
+        "id": "1",
+        "zh": "上学",
+        "pinyin": "shàngxué",
+        "vi": "đi học"
+       },
+       {
+        "id": "2",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ động thái “了”"
+       },
+       {
+        "id": "3",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "4",
+        "zh": "听见",
+        "pinyin": "tīngjiàn",
+        "vi": "nghe thấy"
+       },
+       {
+        "id": "5",
+        "zh": "有的",
+        "pinyin": "yǒude",
+        "vi": "một số"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Chỗ trống thứ hai là phó từ phạm vi 都： “他们都忙了” — tất cả đều bận.",
+      "grammarIds": [
+       "kp-hsk1-l14-dou"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 125,
+        "printedPage": 110,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (1) được đọc là “nǐ hǎo”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "nǐ hǎo",
+      "promptPinyin": "nǐ hǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (2) được đọc là “méi guānxi”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "méi guānxi",
+      "promptPinyin": "méi guānxi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (3) được đọc là “nánpéngyou”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "nánpéngyou",
+      "promptPinyin": "nánpéngyou",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (4) được đọc là “bú kèqi”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "bú kèqi",
+      "promptPinyin": "bú kèqi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (5) được đọc là “nǚ'ér”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "nǚ'ér",
+      "promptPinyin": "nǚ'ér",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-match-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 102, bài 1, track 14-1): âm tiết số (6) được đọc là “hǎowánr”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "hǎowánr",
+      "promptPinyin": "hǎowánr",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "女儿",
+        "pinyin": "nǚ'ér",
+        "vi": "con gái"
+       },
+       {
+        "id": "3",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị, vui"
+       },
+       {
+        "id": "4",
+        "zh": "没关系",
+        "pinyin": "méi guānxi",
+        "vi": "không sao đâu"
+       },
+       {
+        "id": "5",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai"
+       },
+       {
+        "id": "6",
+        "zh": "不客气",
+        "pinyin": "bú kèqi",
+        "vi": "đừng khách sáo"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.102 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 14-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 109,
+        "printedPage": 102,
+        "section": "一、语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Nǐ shì xuéshēng ma",
+      "promptPinyin": "Nǐ shì xuéshēng ma",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu có trợ từ nghi vấn “吗” ở cuối là câu hỏi (sách in sẵn đáp án mẫu B cho câu này).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Nǐ shì nǎ guó rén",
+      "promptPinyin": "Nǐ shì nǎ guó rén",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu hỏi có từ để hỏi “哪” là câu nghi vấn (dạng câu hỏi có từ để hỏi).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Wǒ jiào Lǐ Wén",
+      "promptPinyin": "Wǒ jiào Lǐ Wén",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu giới thiệu sự thật “Tôi tên là Lý Văn” là câu trần thuật.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Jīntiān wǒ xiūxi",
+      "promptPinyin": "Jīntiān wǒ xiūxi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu kể “Hôm nay tôi nghỉ” là câu trần thuật.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Shéi shì lǎoshī",
+      "promptPinyin": "Shéi shì lǎoshī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu hỏi có từ để hỏi “谁” là câu nghi vấn.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb14-int-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 102–103, bài 2, track 14-1): câu được đọc có Pinyin in sẵn dưới đây là câu trần thuật hay câu nghi vấn? Đây là bài luyện phát âm nên Pinyin được hiện sẵn như sách in (đáp án xác định được từ chính nội dung câu in).",
+      "promptZh": "Wǒ xiǎng qù chāoshì mǎi dōngxi",
+      "promptPinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật (kể, nêu sự thật)"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn (câu hỏi)"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu kể “Tôi muốn đi siêu thị mua đồ” là câu trần thuật.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 103,
+        "section": "一、语音 2 · 听辨句调"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-l14-01",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 110–111) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 110–111), dùng từ mới và điểm ngữ pháp của bài để hoàn thành khung câu in trong sách, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "prompts": [
+      "姐姐和弟弟______。",
+      "我们昨天______，没去看电影。",
+      "鸡蛋、面包我______。",
+      "老师说：“______！”"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-14/describe-1.webp",
+       "alt": "Tranh vẽ: chị gái và em trai đeo cặp sách nắm tay nhau đi bộ — vẽ lại theo ảnh Textbook tr.110",
+       "captionVi": "Hình 1 — hai chị em đeo cặp đi bộ. Tranh vẽ lại theo ảnh Textbook tr.110",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 125,
+         "printedPage": 110,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-14/describe-2.webp",
+       "alt": "Tranh vẽ: các bạn sinh viên trong lớp học đang vỗ tay cười — vẽ lại theo ảnh Textbook tr.110",
+       "captionVi": "Hình 2 — cả lớp vỗ tay. Tranh vẽ lại theo ảnh Textbook tr.110",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 125,
+         "printedPage": 110,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-14/describe-3.webp",
+       "alt": "Tranh vẽ: đĩa bánh mì nướng kẹp trứng ốp la — vẽ lại theo ảnh Textbook tr.111",
+       "captionVi": "Hình 3 — bánh mì trứng. Tranh vẽ lại theo ảnh Textbook tr.111",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 126,
+         "printedPage": 111,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-14/describe-4.webp",
+       "alt": "Tranh vẽ: cô giáo đứng trước lớp, nhiều học sinh giơ tay — vẽ lại theo ảnh Textbook tr.111",
+       "captionVi": "Hình 4 — cô giáo và học sinh giơ tay. Tranh vẽ lại theo ảnh Textbook tr.111",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 126,
+         "printedPage": 111,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Câu gợi ý (chỉ là một cách nói, không phải đáp án duy nhất của sách): 姐姐和弟弟上学去了。/ 我们昨天上课了，没去看电影。/ 鸡蛋、面包我都吃了。/ 老师说：“请大家不要说话！”",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 125,
+       "printedPage": 110,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 126,
+       "printedPage": 111,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-l14-02",
+     "kind": "speaking",
+     "titleVi": "Trả lời câu hỏi theo cả ba hội thoại (Textbook trang 104–110) — tự luyện, không chấm tự động",
+     "instructionVi": "Đọc lại ba hội thoại rồi trả lời thành tiếng sáu câu hỏi in trong sách (hai câu sau mỗi hội thoại). Đáp án mẫu ở phần gợi ý để bạn tự đối chiếu sau khi trả lời.",
+     "prompts": [
+      "车开后，大家在做什么？",
+      "陈天中为什么没看见王老师？",
+      "白家月会写汉字了吗？",
+      "陈天中会写汉字了吗？",
+      "明年女儿和儿子都上小学吗？",
+      "上学后，他们忙不忙？"
+     ],
+     "draftPromptVi": "Đáp án theo lời thoại: 有些人在看书，有些人睡觉了。/ 因为他在火车上看了一个电影（没有找王老师）。/ 会了，她说“我们都会写了”。/ 会，他说“我会写这些字了”。/ 不是，女儿上中学，儿子上小学。/ 忙，刘明说“上学后，他们都忙了”。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 119,
+       "printedPage": 104,
+       "section": "课文 1 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 122,
+       "printedPage": 107,
+       "section": "课文 2 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 125,
+       "printedPage": 110,
+       "section": "课文 3 · 根据课文内容回答问题"
+      }
+     ]
+    },
+    {
+     "id": "st-l14-03",
+     "kind": "speaking",
+     "titleVi": "Hoàn thành đối thoại bằng “了 / 没” (Textbook trang 105) — tự luyện, không chấm tự động",
+     "instructionVi": "Trong phần giảng về trợ từ “了（2）”, sách cho hai đoạn đối thoại còn thiếu chữ: hãy điền “了” hoặc “没” vào từng chỗ trống theo quy tắc của bài rồi đọc to cả đoạn. App không chấm tự động; đáp án để tự đối chiếu ở phần gợi ý.",
+     "prompts": [
+      "A：你去哪儿（ ）？B：我今天有课，去学校上（ ）课，还在那儿吃（ ）午饭。",
+      "A：我昨天看（ ）电影，（ ）去超市。你呢？B：我昨天去（ ）超市，（ ）看电影。"
+     ],
+     "draftPromptVi": "Đáp án theo quy tắc “động từ + 了” và phủ định bằng “没”: (1) 你去哪儿了？/ 上了课 / 吃了午饭。(2) 我昨天看了电影，没去超市。/ 我昨天去了超市，没看电影。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 105,
+       "section": "小语讲堂 1 · 完成对话"
+      }
+     ]
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện lấy từ sách, không chấm tự động: dùng hình để nói (Textbook tr.110–111), trả lời câu hỏi theo cả ba hội thoại (tr.104–110) và hoàn thành đối thoại bằng “了/没” trong phần giảng của điểm kiến thức 1 (tr.105). Nháp và ghi chú của bạn được lưu trên thiết bị; điểm của các bài này không gộp vào điểm bài chính.",
+   "selfCheckListenVi": "Bài luyện nghe của bài này (nghe – nối âm tiết và nghe – phân biệt ngữ điệu câu, Workbook tr.102–103) đã nằm trong bộ bài chính; không có bài tự luyện nghe riêng.",
+   "apply": {
+    "titleVi": "Kể lại việc đã làm cuối tuần qua",
+    "instructionVi": "Hoạt động đôi trong sách (Textbook tr.111): hai người một nhóm, kể cho nhau nghe thứ Bảy hoặc Chủ nhật tuần trước mình đã làm những gì. Trong app, làm lần lượt hai nhiệm vụ dưới đây: đọc mẫu của Tiểu Ngữ, rồi tự kể ngày của mình.",
+    "audioTrackId": "trk-tb-l14-1",
+    "noteVi": "Nhiệm vụ 1 dùng nguyên mẫu của Tiểu Ngữ in ở Textbook tr.111; nhiệm vụ 2 kể lại cảnh trên tàu theo Hội thoại 1. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 126,
+      "printedPage": 111,
+      "section": "课堂活动 · 双人活动"
+     }
+    ],
+    "samplePassageIds": [
+     "l14-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l14-1",
+      "titleVi": "Kể ngày thứ Bảy của bạn",
+      "situationVi": "Kể lại thứ Bảy tuần trước theo trình tự sáng – trưa – chiều – tối, dùng “động từ + 了” cho mỗi việc đã làm — theo đúng mẫu của Tiểu Ngữ in ở Textbook tr.111.",
+      "sampleZh": "我星期六上午上了中文课，中午吃了饭后休息了一下，下午去商店买了一些东西，晚上和朋友吃了晚饭。",
+      "samplePinyin": "Wǒ xīngqīliù shàngwǔ shàngle Zhōngwén kè, zhōngwǔ chīle fàn hòu xiūxi le yíxià, xiàwǔ qù shāngdiàn mǎile yìxiē dōngxi, wǎnshang hé péngyou chīle wǎnfàn.",
+      "sampleVi": "Sáng thứ Bảy tôi học tiết tiếng Trung, trưa ăn cơm xong nghỉ một lát, chiều đi cửa hàng mua ít đồ, tối ăn tối cùng bạn bè.",
+      "swapVi": "Thay bằng ngày thật của bạn: đổi các mốc 上午/中午/下午/晚上 và các việc （上课 → 上班/看电影/睡觉…), giữ khung “động từ + 了” cho từng việc.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ trong hoạt động lớp ở Textbook tr.111.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 126,
+        "printedPage": 111,
+        "section": "课堂活动 · 双人活动"
+       }
+      ]
+     },
+     {
+      "id": "speak-l14-2",
+      "titleVi": "Kể lại cảnh trên chuyến tàu",
+      "situationVi": "Đóng vai Trần Thiên Trung: kể lại sau khi lên tàu mình không nhìn thấy cô Vương, mọi người trên tàu làm gì, và mình đã xem một bộ phim — theo khung của Hội thoại 1.",
+      "sampleZh": "没看见。中午车开后，有些人在看书，有些人睡觉了。我看了一个电影。",
+      "samplePinyin": "Méi kànjiàn. Zhōngwǔ chē kāi hòu, yǒuxiē rén zài kàn shū, yǒuxiē rén shuìjiào le. Wǒ kànle yí gè diànyǐng.",
+      "sampleVi": "Không nhìn thấy. Trưa, sau khi tàu chạy, một số người đang đọc sách, một số người đã ngủ rồi. Tôi đã xem một bộ phim.",
+      "swapVi": "Đổi phương tiện （火车 → 汽车） và việc bạn đã làm trên xe （看电影 → 听歌/睡觉/看书）, vẫn dùng “有些人……，有些人……” để tả hai nhóm người.",
+      "sourceNoteVi": "Khung theo Hội thoại 1 ở Textbook tr.104.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 104,
+        "section": "课文 1"
+       }
+      ]
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l14-vocab-1",
+     "dialogueId": "l14-dialogue-1",
+     "titleVi": "Hội thoại 1 · Trên tàu lần trước mọi người làm gì",
+     "trackId": "trk-tb-l14-2",
+     "trackLabelVi": "Track 14-2"
+    },
+    {
+     "id": "l14-vocab-2",
+     "dialogueId": "l14-dialogue-2",
+     "titleVi": "Hội thoại 2 · Cả lớp đều biết viết chữ Hán rồi",
+     "trackId": "trk-tb-l14-4",
+     "trackLabelVi": "Track 14-4"
+    },
+    {
+     "id": "l14-vocab-3",
+     "dialogueId": "l14-dialogue-3",
+     "titleVi": "Hội thoại 3 · Năm sau các con đều đi học",
+     "trackId": "trk-tb-l14-6",
+     "trackLabelVi": "Track 14-6"
+    }
+   ],
+   "prepSummaryVi": "26 từ mới + 2 tên riêng, chia theo ba hội thoại của bài.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu và cảnh chuyến tàu của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết",
+     "descVi": "Học 26 từ mới và 2 tên riêng theo ba hội thoại, nghe từng từ bằng audio sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "Trợ từ “了（2）” kể việc đã qua, từ ly hợp có thể tách, và phó từ “都” chỉ toàn bộ.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe và đọc ba hội thoại: trên tàu lần trước, trong lớp học, và chuyện con cái đi học.",
+     "sectionId": "reader",
+     "dialogueId": "l14-dialogue-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Làm 23 câu chính, 6 câu hỏi tại hội thoại, rồi luyện thêm với bài nói theo hình, bài trả lời câu hỏi và bài điền “了/没”.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói",
+     "descVi": "Kể lại việc đã làm cuối tuần qua theo hoạt động đôi của sách.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Trợ từ “了（2）” sau động từ",
+     "bodyVi": "“了” bám ngay sau động từ để nói việc đã xảy ra hoặc đã hoàn thành; phủ định thì dùng “没” và bỏ “了”. Tên bài là một ví dụ: “我看了一个电影” — xem xong một bộ phim.",
+     "exampleZh": "我看了一个电影。",
+     "examplePinyin": "Wǒ kànle yí gè diànyǐng.",
+     "exampleVi": "Tôi đã xem một bộ phim."
+    },
+    {
+     "titleVi": "Từ ly hợp có thể tách ra",
+     "bodyVi": "Các từ như 睡觉、上课、说话 khi tách ra thì chèn được thành phần vào giữa: “睡觉” thành “睡了一觉”, “上课” thành “上中文课”. Ở Hội thoại 1, Trần Thiên Trung dùng dạng hợp “睡觉了”.",
+     "exampleZh": "有些人睡觉了。",
+     "examplePinyin": "Yǒuxiē rén shuìjiào le.",
+     "exampleVi": "Một số người đã ngủ rồi."
+    },
+    {
+     "titleVi": "“都” — đều, tất cả",
+     "bodyVi": "Đối tượng được tổng quát đứng trước “都”; khi phủ định, từ phủ định đứng sau “都”. Ở Hội thoại 2, cả lớp đều biết viết chữ Hán: “我们都会写了”。",
+     "exampleZh": "我们都会写了。",
+     "examplePinyin": "Wǒmen dōu huì xiě le.",
+     "exampleVi": "Chúng em đều biết viết rồi."
+    },
+    {
+     "titleVi": "Ba chữ “họ” cùng một âm",
+     "bodyVi": "他们 (nam hoặc nhóm chung), 她们 (toàn nữ) và 它们 (chỉ vật) đều đọc là tāmen — chỉ khác nhau ở chữ viết. Ở Hội thoại 3, Lưu Minh nói về hai con: “他们都忙了”。",
+     "exampleZh": "他们都忙了。",
+     "examplePinyin": "Tāmen dōu máng le.",
+     "exampleVi": "Chúng đều bận rộn rồi."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả tên nhân vật và các từ của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "hanViet": "TRẦN THIÊN TRUNG",
+      "vi": "Trần Thiên Trung — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "电影",
+      "pinyin": "diànyǐng",
+      "hanViet": "ĐIỆN ẢNH",
+      "vi": "phim, điện ảnh"
+     },
+     {
+      "zh": "车",
+      "pinyin": "chē",
+      "hanViet": "XA",
+      "vi": "xe; tàu (trong 火车）"
+     },
+     {
+      "zh": "课",
+      "pinyin": "kè",
+      "hanViet": "KHOÁ",
+      "vi": "tiết học, bài học"
+     },
+     {
+      "zh": "午饭",
+      "pinyin": "wǔfàn",
+      "hanViet": "NGỌ PHẠN",
+      "vi": "bữa trưa"
+     },
+     {
+      "zh": "超市",
+      "pinyin": "chāoshì",
+      "hanViet": "SIÊU THỊ",
+      "vi": "siêu thị"
+     },
+     {
+      "zh": "东西",
+      "pinyin": "dōngxi",
+      "hanViet": "ĐÔNG TÂY",
+      "vi": "đồ, đồ vật"
+     },
+     {
+      "zh": "姐姐",
+      "pinyin": "jiějie",
+      "hanViet": "TỶ TỶ",
+      "vi": "chị gái"
+     },
+     {
+      "zh": "弟弟",
+      "pinyin": "dìdi",
+      "hanViet": "ĐỆ ĐỆ",
+      "vi": "em trai"
+     },
+     {
+      "zh": "女儿",
+      "pinyin": "nǚ'ér",
+      "hanViet": "NỮ NHI",
+      "vi": "con gái"
+     },
+     {
+      "zh": "儿子",
+      "pinyin": "érzi",
+      "hanViet": "NHI TỬ",
+      "vi": "con trai"
+     },
+     {
+      "zh": "家",
+      "pinyin": "jiā",
+      "hanViet": "GIA",
+      "vi": "nhà, gia đình"
+     },
+     {
+      "zh": "问题",
+      "pinyin": "wèntí",
+      "hanViet": "VẤN ĐỀ",
+      "vi": "câu hỏi; vấn đề"
+     },
+     {
+      "zh": "电脑",
+      "pinyin": "diànnǎo",
+      "hanViet": "ĐIỆN NÃO",
+      "vi": "máy tính"
+     },
+     {
+      "zh": "朋友们",
+      "pinyin": "péngyǒumen",
+      "hanViet": "BẰNG HỮU MÔN",
+      "vi": "các bạn, bạn bè (số nhiều)"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "một (số từ)"
+     },
+     {
+      "zh": "觉",
+      "pinyin": "jiào",
+      "hanViet": "GIÁC",
+      "vi": "giấc (ngủ) — “睡一觉” là ngủ một giấc"
+     },
+     {
+      "zh": "话",
+      "pinyin": "huà",
+      "hanViet": "THOẠI",
+      "vi": "lời, lời nói"
+     },
+     {
+      "zh": "六",
+      "pinyin": "liù",
+      "hanViet": "LỤC",
+      "vi": "sáu (số từ)"
      }
     ],
     "phrases": []

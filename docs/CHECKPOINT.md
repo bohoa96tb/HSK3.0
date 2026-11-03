@@ -224,12 +224,13 @@
 - Việc ngoài phạm vi vòng này, chờ Hoa quyết: âm Hán–Việt của từ 这里 ở Bài 12 đang là “CHÁ LÝ” — sai quy ước dự án （这 = GIÁ như Bài 3/10); sửa cần một vòng nhỏ riêng cho Bài 12.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
 
-## Bài 14 —《我看了一个电影》(đang xây, chờ QA)
+## Bài 14 —《我看了一个电影》ĐÃ PHÁT HÀNH (2026-11-03)
 
-- Trạng thái: dữ liệu + hình + test XONG ở bản local (chưa phát hành). contentVersion `20261103-lesson14-standard1`.
-- Nội dung: 15 câu/3 hội thoại (4/5/6), 26 từ + 2 tên riêng （汉语/汉字， audio null theo tiền lệ Bài 3), 3 KP chính （动态助词“了（2）”, 离合词（1), 范围副词“都”) + 汉字书写（七） bốn cấu trúc hợp thể, bộ chính 23 câu (6 khởi động + 5 điền từ + 6 nghe–nối âm tiết + 6 nghe–phân biệt ngữ điệu câu — dạng bài MỚI, đáp án xác định từ nội dung câu in), 6 câu hỏi tại CẢ BA hội thoại theo D28 kèm audioSegment, 3 tự luyện (nói theo 4 hình tr.110–111, trả lời 6 câu hỏi mở, điền 了/没 vào đối thoại ở phần giảng tr.105), tra từ 30/30, 11 hình mới (hình chữ 春 vẽ bằng chương trình).
-- Kiểm thử: test 195/195, validator OK, audit-standard đạt cột Bài 14.
-- Chờ: QA độc lập (D17) → sửa trong nhánh nếu có lỗi → phát hành.
+- branch: lesson-14-standard1 → PR #99, merge 07100c1a; contentVersion live `20261103-lesson14-standard1` (content.json trên URL thật khớp byte bản local; hình kiểm blob SHA 11/11; nghiệm thu live đạt nội dung chính 4/5 điểm — điểm loa ở mục Từ cần biết chưa xác nhận được trạng thái phát trong môi trường trình duyệt kiểm tra tự động, cùng giới hạn đã ghi ở các vòng trước; bản ghi nghiệm thu có vài chi tiết quan sát bịa về thân câu/lựa chọn không có trong dữ liệu — dữ liệu byte-khớp nên là lỗi quan sát như các vòng Bài 12/13).
+- Nội dung: 15 câu/3 hội thoại (4/5/6), 26 từ + 2 tên riêng （汉语/汉字， audio null theo tiền lệ Bài 3), 3 KP chính （动态助词"了（2）", 离合词（1), 范围副词"都") + 汉字书写（七）, bộ chính 23 câu (6 khởi động + 5 điền từ + 6 nghe–nối âm tiết + 6 nghe–phân biệt ngữ điệu câu — dạng bài mới), 6 câu hỏi tại CẢ BA hội thoại theo D28 kèm audioSegment, 3 tự luyện, tra từ 30/30, 11 hình mới (hình chữ 春 vẽ bằng chương trình cho chữ đúng tuyệt đối).
+- Kiểm thử: test 195/195 (thêm tests/lesson14standard.test.mjs; bộ đếm toàn cục: 192 câu hội thoại có đoạn, từ [300 có đoạn/310], lựa chọn bộ chính [143/923], 58 câu tại hội thoại trong đó 46 câu nghe hiểu có đoạn), validator OK, audit-standard đạt.
+- QA độc lập (D17): ĐẠT 9/9 mảng, 0 lỗi; 3 ghi chú nhẹ — đã sửa 2 trong nhánh trước phát hành (bổ sung trích dẫn WB tr.104 cho KP Hán tự (7); thống nhất Hán–Việt 不要 → "BẤT YÊU" theo âm 要 của Bài 13), ghi chú 3 (đáp án gợi ý câu hỏi mở "vì sao không thấy cô Vương" là suy luận biên soạn, đã ghi unverified) giữ nguyên.
+- nextTask: Bài 15 《大兴机场见！》 — bài cuối cấp 1 (TB tr. in 112–121 = PDF 127–136; WB phần bài học tương ứng tra khi bắt đầu; lưu ý Bài 15 có tổng kết liên bài 13–15 trong TB — theo tiền lệ D27, khối tổng kết liên bài không thuộc bài cuối khối, ghi loại trong SOURCE_AUDIT khi kiểm kê). Tiến độ cấp 1: 14/15 bài.
 
 ## Sửa Hán–Việt Bài 12 — 这里 (2026-11-03)
 

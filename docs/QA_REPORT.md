@@ -555,3 +555,11 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 
 - **Lỗi:** âm Hán–Việt của 这里 (Bài 12, nhóm Hội thoại 1) ghi “CHÁ LÝ” — sai âm chuẩn và lệch quy ước của chính dự án （这 = GIÁ ở Bài 3/8/10/13). Lỗi do vòng biên soạn Bài 12 ghi nhầm và QA Bài 12 đã chấp nhận; phát hiện khi xây Bài 13, Hoa quyết định sửa trong vòng nhỏ riêng.
 - **Sửa:** một giá trị duy nhất → “GIÁ LÝ”; rà soát toàn cục trước sửa xác nhận không còn từ nào khác dùng CHÁ cho 这. Validator OK, audit đạt, test 190/190; nghiệm thu live: dữ liệu khớp byte + giao diện Từ cần biết Bài 12 hiển thị đúng “HV: GIÁ LÝ”.
+
+## Bài 14 — QA độc lập (2026-11-03, PR #99, live 20261103-lesson14-standard1)
+
+- **Phạm vi kiểm**: agent QA độc lập đối chiếu dữ liệu Bài 14 với bản in: hội thoại 15/15, từ 26+2, 3 KP + Hán tự (7), 23 câu chính (mọi đáp án tự suy từ bản in), 6 câu tại hội thoại + audioSegment, 3 bài tự luyện, 11 hình, áp dụng/tổng kết/tra từ 30/30, tính nhất quán (soát sót nội dung Bài 13).
+- **Kết quả**: ĐẠT cả 9 mảng, 0 lỗi nghiêm trọng/vừa. QA khen riêng: Pinyin câu s7 chép đúng cách tách "tīng bú jiàn" của bản in; đáp án gợi ý 5/6 câu hỏi mở trích trực tiếp lời thoại; 4 điểm tổng kết dẫn đúng hội thoại thật.
+- **3 ghi chú nhẹ**: (1) `kp-hsk1-l14-characters-7` thiếu trích dẫn WB tr.104 — đã bổ sung sourceRef trong nhánh. (2) Hán–Việt 不要 "BẤT YẾU" chưa thống nhất với 要 "YÊU" ở Bài 13 (cả hai đều là âm chuẩn) — đã đổi thành "BẤT YÊU" trong nhánh cho nhất quán toàn app. (3) Đáp án gợi ý cho câu hỏi mở "陈天中为什么没看见王老师？" là suy luận biên soạn (đã ghi unverified) — giữ nguyên. Sau sửa: hồi quy 195/195.
+- **Hình**: QA mở xem 11/11 — khớp cảnh gốc, mỗi câu khởi động một đáp án rõ ràng; hình chữ 春 vẽ bằng chương trình đúng tuyệt đối; đã kiểm blob SHA 11/11 trước khi merge.
+- **Nghiệm thu live**: nội dung chính đạt (điểm loa mục Từ cần biết chưa xác nhận được trạng thái phát trong môi trường kiểm tra tự động — giới hạn môi trường đã biết; bản ghi có chi tiết quan sát bịa về thân câu/lựa chọn — dữ liệu khớp byte nên không phải lỗi app).

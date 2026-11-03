@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-lesson12-standard1",
+ "contentVersion": "20261103-lesson13-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -666,28 +666,41 @@
   },
   {
    "id": "hsk1-l13",
-   "bookId": "book-hsk1-workbook",
+   "bookId": "book-hsk1-textbook",
    "level": "HSK 1",
    "sourceUnit": "Lesson 13",
    "lessonNumber": 13,
    "titleZh": "请给我一杯茶",
    "titleEn": "I'll have a cup of tea, please",
-   "titleVi": "Cho tôi một tách trà",
-   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "titleVi": "Xin cho tôi một tách trà",
+   "titleProvenance": "Đối chiếu tên Bài 13 ở mục lục và trang mở đầu Textbook trang in 095 (cả Textbook và Workbook đều là 请给我一杯茶).",
    "sourceRefs": [
     {
-     "sourceId": "src-hsk1-workbook-pdf",
-     "pdfPage": 100,
-     "printedPage": 93,
-     "section": "目录 Contents (mục lục)"
+     "sourceId": "src-hsk1-textbook-pdf",
+     "pdfPage": 110,
+     "printedPage": 95,
+     "section": "Bài 13 · mục tiêu và khởi động"
     }
    ],
    "textbookAudioTrackCount": 6,
-   "workbookAudioTrackCount": 2,
-   "publicationStatus": "catalogue-only",
-   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-   "grammarIds": [],
-   "sectionIds": []
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Câu hai tân ngữ (1) với 给/问， trợ động từ “可以” và cấu trúc “động từ + 一下”; cả ba hội thoại đều có hai câu hỏi in kèm, nằm tại hội thoại theo D28; kèm phát âm Workbook (phân biệt thanh điệu + nghe – nối âm tiết) và nền tảng Hán tự (6): cấu tạo chữ độc thể/hợp thể và chữ hình thanh. Video bổ trợ “中国茶” ở Textbook tr.102 là nội dung xem thêm của sách, app không phân phối video. Track Workbook 13-2 thuộc phần đề mô phỏng, không dùng trong bài (D15).",
+   "grammarIds": [
+    "kp-hsk1-l13-keyi",
+    "kp-hsk1-l13-yixia",
+    "kp-hsk1-l13-double-object",
+    "kp-hsk1-l13-characters-6"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
   },
   {
    "id": "hsk1-l14",
@@ -38650,6 +38663,3234 @@
       "pinyin": "èr",
       "hanViet": "NHỊ",
       "vi": "hai"
+     }
+    ],
+    "phrases": []
+   }
+  },
+  {
+   "lessonId": "hsk1-l13",
+   "intro": {
+    "goalVi": "Nghe hiểu và dùng được câu hai tân ngữ (1) với “给/问” để hỏi người khác và đưa đồ cho người khác; nắm cách dùng trợ động từ “可以” và cấu trúc “động từ + 一下”; biết các câu thường dùng khi gọi món, theo mục tiêu in tại Textbook tr.095.",
+    "estimatedMinutes": 25,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bài theo Bạch Gia Nguyệt sau giờ học hỏi cô Vương thêm một câu về chiếc điện thoại, ghé quán cà phê cùng Vương Nhất Tuyết gọi bữa sáng, rồi vào nhà hàng xem Lưu Minh gọi sủi cảo và một tách trà.",
+    "outcomesVi": [
+     "Xin phép và hỏi thêm bằng “可以”: 我可以再问您一个问题吗？",
+     "Làm nhẹ hành động bằng “động từ + 一下”: 看一下、问一下。",
+     "Dùng câu hai tân ngữ với 给/问： 请给我一杯茶。/ 我问老师两个问题。",
+     "Gọi đồ uống và món ăn ở quán cà phê, nhà hàng: 您喝什么？我要一斤饺子。",
+     "Hiểu cách gọi món theo cân: 一斤饺子40个，一半 là 半斤20个。"
+    ],
+    "contextImage": {
+     "src": "assets/lesson-13/classroom.webp",
+     "alt": "Tranh vẽ: trong quán cà phê ấm cúng, nhân viên phục vụ đang ghi món cho một vị khách nữ ngồi ở bàn có thực đơn mở sẵn",
+     "caption": "Ăn sáng ở quán cà phê · tranh vẽ mới theo cảnh Textbook tr.095–098",
+     "width": 760,
+     "height": 560
+    },
+    "studyTipVi": "Khi gọi món, cứ dùng khung “请给我 + số + lượng từ + món”: 请给我一杯茶、请给我一杯牛奶. Khung này chính là câu hai tân ngữ của bài — người （我） luôn đứng ngay sau 给， món đứng sau cùng.",
+    "foundationSummaryVi": "Nền tảng Hán tự của bài ở Workbook tr.094–095: chữ độc thể và chữ hợp thể, chữ hình thanh (bộ chỉ nghĩa + bộ gợi âm, ví dụ họ chữ 奶、妈、姐）, hai cấu trúc trái – phải （和） và trái – giữa – phải （做）, cùng phần chép các từ 女儿、弟弟、汉语、谢谢.",
+    "courseTagsVi": "Câu hai tân ngữ · “可以” · Động từ + 一下 · Gọi món",
+    "priorLessonNoteVi": "Bài 12 đã học mẫu “太……了” — bài này gặp lại ngay trong câu “40个太多了” của Lưu Minh ở Hội thoại 3; và trợ từ “了” báo thay đổi cũng xuất hiện trong chính câu đó.",
+    "priorLessonId": "hsk1-l12"
+   },
+   "prepWords": [
+    {
+     "id": "l13w-1",
+     "zh": "可以",
+     "pinyin": "kěyǐ",
+     "vi": "có thể (được phép; có khả năng)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "KHẢ DĨ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 0.34,
+      "end": 1.46,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-2",
+     "zh": "再",
+     "pinyin": "zài",
+     "vi": "lại, thêm một lần nữa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "TÁI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 3.71,
+      "end": 4.25,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-3",
+     "zh": "问题",
+     "pinyin": "wèntí",
+     "vi": "câu hỏi; vấn đề",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "VẤN ĐỀ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 5.85,
+      "end": 6.95,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-4",
+     "zh": "卖",
+     "pinyin": "mài",
+     "vi": "bán",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "MẠI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 9.05,
+      "end": 9.75,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-5",
+     "zh": "打电话",
+     "pinyin": "dǎ diànhuà",
+     "vi": "gọi điện thoại",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "ĐẢ ĐIỆN THOẠI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 11.56,
+      "end": 12.72,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-6",
+     "zh": "一下",
+     "pinyin": "yíxià",
+     "vi": "một chút (sau động từ: làm thử, làm qua một lát)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "生词 · Từ mới 13-2"
+      }
+     ],
+     "hanViet": "NHẤT HẠ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-2",
+      "start": 15.31,
+      "end": 16.19,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l13w-7",
+     "zh": "服务员",
+     "pinyin": "fúwùyuán",
+     "vi": "nhân viên phục vụ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "PHỤC VỤ VIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 0.55,
+      "end": 1.75,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-8",
+     "zh": "女士",
+     "pinyin": "nǚshì",
+     "vi": "quý bà (cách gọi lịch sự)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "NỮ SĨ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 4.0,
+      "end": 4.9,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-9",
+     "zh": "请",
+     "pinyin": "qǐng",
+     "vi": "xin mời; làm ơn",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "THỈNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 6.8,
+      "end": 7.6,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-10",
+     "zh": "坐",
+     "pinyin": "zuò",
+     "vi": "ngồi",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "TOẠ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 9.3,
+      "end": 9.9,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-11",
+     "zh": "给",
+     "pinyin": "gěi",
+     "vi": "cho, đưa cho",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "CẤP",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 11.68,
+      "end": 12.42,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-12",
+     "zh": "杯",
+     "pinyin": "bēi",
+     "vi": "cốc, ly, tách (cũng là lượng từ cho đồ uống đựng trong cốc)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "BÔI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 14.2,
+      "end": 14.85,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-13",
+     "zh": "要",
+     "pinyin": "yào",
+     "vi": "muốn (muốn lấy, muốn dùng)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "YÊU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 16.53,
+      "end": 17.15,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-14",
+     "zh": "早饭",
+     "pinyin": "zǎofàn",
+     "vi": "bữa sáng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "TẢO PHẠN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 18.79,
+      "end": 19.72,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-15",
+     "zh": "这个",
+     "pinyin": "zhège",
+     "vi": "cái này",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "GIÁ CÁ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 21.3,
+      "end": 21.98,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-16",
+     "zh": "面包",
+     "pinyin": "miànbāo",
+     "vi": "bánh mì",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "MIẾN BAO",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 23.98,
+      "end": 24.93,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-17",
+     "zh": "鸡蛋",
+     "pinyin": "jīdàn",
+     "vi": "trứng gà",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "生词 · Từ mới 13-4"
+      }
+     ],
+     "hanViet": "KÊ ĐẢN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-4",
+      "start": 27.0,
+      "end": 27.92,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l13w-18",
+     "zh": "先生",
+     "pinyin": "xiānsheng",
+     "vi": "ông (cách gọi lịch sự); thưa ông",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 115,
+       "printedPage": 100,
+       "section": "生词 · Từ mới 13-6"
+      }
+     ],
+     "hanViet": "TIÊN SINH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-6",
+      "start": 0.0,
+      "end": 0.88,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l13w-19",
+     "zh": "一半",
+     "pinyin": "yíbàn",
+     "vi": "một nửa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 115,
+       "printedPage": 100,
+       "section": "生词 · Từ mới 13-6"
+      }
+     ],
+     "hanViet": "NHẤT BÁN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-6",
+      "start": 2.9,
+      "end": 3.75,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l13w-20",
+     "zh": "茶",
+     "pinyin": "chá",
+     "vi": "trà",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 115,
+       "printedPage": 100,
+       "section": "生词 · Từ mới 13-6"
+      }
+     ],
+     "hanViet": "TRÀ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l13-6",
+      "start": 5.7,
+      "end": 6.4,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk1-l13-keyi",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Trợ động từ “可以”: có thể, được phép",
+     "useWhenVi": "Dùng để xin phép hoặc hỏi mình có được làm gì không (“我可以坐吗？”), và để nói ai đó có khả năng hoặc được phép làm một việc (“你可以打电话问一下”).",
+     "explanationVi": "Sách nêu: trợ động từ “可以” đặt trước động từ, biểu thị khả năng, có thể hoặc cho phép. Trả lời ngắn khi đồng ý chỉ cần nói “可以”. Phủ định thường gặp là “不可以”.",
+     "pattern": "Chủ ngữ + 可以 + động từ (+ tân ngữ) — phủ định: 不可以",
+     "examples": [
+      {
+       "zh": "我可以再问您一个问题吗？",
+       "pinyin": "Wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.097): em hỏi thêm một câu nữa được không?"
+      },
+      {
+       "zh": "你们可以看这本书。",
+       "pinyin": "Nǐmen kěyǐ kàn zhè běn shū.",
+       "noteVi": "Câu luyện đọc của sách: các bạn có thể xem cuốn sách này."
+      },
+      {
+       "zh": "A：我可以坐吗？B：可以，请坐！",
+       "pinyin": "A: Wǒ kěyǐ zuò ma? B: Kěyǐ, qǐng zuò!",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách: tôi ngồi được không? — Được, mời ngồi!"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Muốn xin phép ngồi xuống, câu nào đúng cách dùng “可以” của bài?",
+      "stemZh": "我可以坐吗？",
+      "options": [
+       {
+        "zh": "我可以坐吗？",
+        "vi": "Tôi ngồi có được không? (可以 đặt trước động từ 坐）."
+       },
+       {
+        "zh": "我坐可以吗？",
+        "vi": "（可以 bị đặt sau động từ — sai vị trí)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "“可以” luôn đứng trước động từ: 我可以坐吗 — đúng cặp hỏi đáp luyện đọc ở Textbook tr.097."
+     },
+     "positionVi": "Điểm chính 1 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.097).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "小语讲堂 1 · 能愿动词“可以”"
+      }
+     ],
+     "sentenceIds": [
+      "l13-s1",
+      "l13-s2",
+      "l13-s4"
+     ],
+     "exerciseIds": [
+      "tb13-fill-3a"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l13-yixia",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Cấu trúc “động từ + 一下”: làm thử, làm một chút",
+     "useWhenVi": "Dùng để làm nhẹ một yêu cầu hoặc hành động: xem qua một chút, hỏi thử xem, nghỉ một lát — nghe mềm và lịch sự hơn động từ trần.",
+     "explanationVi": "Sách nêu: trong bài này, cấu trúc “động từ + 一下” biểu thị làm một lần hoặc thử làm, thời gian của hành động ngắn. Ví dụ “问一下” là hỏi thử một câu, “看一下” là xem qua một chút.",
+     "pattern": "Động từ + 一下 — ví dụ: 问一下、看一下、休息一下",
+     "examples": [
+      {
+       "zh": "你可以打电话问一下。",
+       "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.097): bạn có thể gọi điện hỏi thử."
+      },
+      {
+       "zh": "请休息一下。",
+       "pinyin": "Qǐng xiūxi yíxià.",
+       "noteVi": "Câu luyện đọc của sách: xin nghỉ một lát."
+      },
+      {
+       "zh": "你看一下吧。",
+       "pinyin": "Nǐ kàn yíxià ba.",
+       "noteVi": "Câu luyện đọc của sách: bạn xem qua một chút đi."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Muốn nói “để tôi xem qua đã” theo cấu trúc của bài, câu nào đúng?",
+      "stemZh": "我看一下。",
+      "options": [
+       {
+        "zh": "我看一下。",
+        "vi": "Để tôi xem qua đã (看 + 一下）."
+       },
+       {
+        "zh": "我一下看。",
+        "vi": "（一下 bị đặt trước động từ — sai vị trí)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "“一下” đứng ngay sau động từ: 看一下 — đúng câu của Vương Nhất Tuyết ở Hội thoại 2 và các câu luyện đọc ở Textbook tr.097."
+     },
+     "positionVi": "Điểm chính 2 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.097).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 112,
+       "printedPage": 97,
+       "section": "小语讲堂 2 · “动词+一下”结构"
+      }
+     ],
+     "sentenceIds": [
+      "l13-s4",
+      "l13-s6"
+     ],
+     "exerciseIds": [
+      "tb13-fill-4"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l13-double-object",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Câu hai tân ngữ (1): với “给” và “问”",
+     "useWhenVi": "Dùng khi một hành động hướng tới một người và kèm theo một vật hoặc một nội dung: đưa cho ai cái gì (“给我一杯茶”), hỏi ai điều gì (“问老师一个问题”).",
+     "explanationVi": "Sách nêu: câu hai tân ngữ là câu trong đó một động từ mang hai tân ngữ. Bài này học câu hai tân ngữ tạo bởi “给” và “问”: tân ngữ thứ nhất chỉ người, tân ngữ thứ hai chỉ vật hoặc nội dung câu hỏi.",
+     "pattern": "Chủ ngữ + 给/问 + người + vật/nội dung — ví dụ: 给我一杯牛奶、问老师两个问题",
+     "examples": [
+      {
+       "zh": "请给我一杯牛奶。",
+       "pinyin": "Qǐng gěi wǒ yì bēi niúnǎi.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.099): xin cho tôi một ly sữa."
+      },
+      {
+       "zh": "白家月给安妮一个苹果。",
+       "pinyin": "Bái Jiāyuè gěi Ānnī yí gè píngguǒ.",
+       "noteVi": "Câu luyện đọc của sách: Bạch Gia Nguyệt cho An Ni một quả táo."
+      },
+      {
+       "zh": "我问老师两个问题。",
+       "pinyin": "Wǒ wèn lǎoshī liǎng gè wèntí.",
+       "noteVi": "Câu luyện đọc của sách: tôi hỏi thầy/cô hai câu hỏi."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Câu nào là câu hai tân ngữ đúng thứ tự người – vật?",
+      "stemZh": "请给我一杯茶。",
+      "options": [
+       {
+        "zh": "请给我一杯茶。",
+        "vi": "Xin cho tôi một tách trà （给 + 我 + 一杯茶）."
+       },
+       {
+        "zh": "请给一杯茶我。",
+        "vi": "（vật bị đặt trước người — sai thứ tự)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Sau 给/问， tân ngữ chỉ người đứng trước, tân ngữ chỉ vật đứng sau: 给我一杯茶 — đúng câu luyện đọc ở Textbook tr.099 và cũng là tên bài học."
+     },
+     "positionVi": "Điểm chính 3 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.099).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 114,
+       "printedPage": 99,
+       "section": "小语讲堂 3 · 双宾语句（1）"
+      }
+     ],
+     "sentenceIds": [
+      "l13-s1",
+      "l13-s6",
+      "l13-s14"
+     ],
+     "exerciseIds": [
+      "tb13-fill-1"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l13-characters-6",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Cấu tạo Hán tự: chữ độc thể, chữ hợp thể và chữ hình thanh",
+     "explanationVi": "Workbook Bài 13 （汉字书写（六）, tr.094–095) giới thiệu hai cấu tạo cơ bản của Hán tự. Chữ độc thể do các nét cơ bản tạo thành, không tách được thành bộ phận hay bộ thủ (ví dụ 人 gồm một nét phẩy và một nét mác). Chữ hợp thể do hai bộ phận/bộ thủ trở lên ghép lại (ví dụ 认 = bộ 讠（言字旁） và 人）. Trong chữ hợp thể có chữ hình thanh: một bộ chỉ loại nghĩa （形旁）, một bộ gợi âm đọc （声旁） — như họ chữ 奶、姥、妈、姐、妹 đều có bộ 女 chỉ nghĩa liên quan đến phụ nữ, còn phần bên phải gợi cách đọc. Phần luyện cấu trúc ở tr.095 gồm cấu trúc trái – phải (ví dụ chữ 和） và trái – giữa – phải (ví dụ chữ 做）; phần chép từ gồm 女儿、弟弟、汉语、谢谢 — đây là bài luyện viết tay trong sách; app chỉ giới thiệu để nhận diện, không chấm nét viết.",
+     "pattern": "独体字 (vd 人、口、上、下） · 合体字 (vd 认、和） · 形声字 = bộ nghĩa + bộ âm (vd 妈 = 女 + 马）",
+     "examples": [
+      {
+       "zh": "人",
+       "pinyin": "rén",
+       "noteVi": "Chữ độc thể ví dụ ở Workbook tr.094: người."
+      },
+      {
+       "zh": "认",
+       "pinyin": "rèn",
+       "noteVi": "Chữ hợp thể ví dụ ở Workbook tr.094: bộ 言 ghép với 人 — nhận, biết."
+      },
+      {
+       "zh": "妈",
+       "pinyin": "mā",
+       "noteVi": "Chữ hình thanh ở Workbook tr.094: 女 gợi nghĩa, 马 gợi âm — mẹ."
+      },
+      {
+       "zh": "和",
+       "pinyin": "hé",
+       "noteVi": "Chữ ví dụ cho cấu trúc trái – phải ở Workbook tr.095: và, với."
+      },
+      {
+       "zh": "做",
+       "pinyin": "zuò",
+       "noteVi": "Chữ ví dụ cho cấu trúc trái – giữa – phải ở Workbook tr.095: làm."
+      },
+      {
+       "zh": "谢谢",
+       "pinyin": "xièxie",
+       "noteVi": "Từ chép ở Workbook tr.095: cảm ơn."
+      }
+     ],
+     "positionVi": "Điểm nền tảng Hán tự của bài (Workbook tr.094–095), không phải điểm ngữ pháp chính.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 101,
+       "printedPage": 94,
+       "section": "二、汉字 · 汉字书写（六）"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "l13-reader",
+    "titleVi": "Ba hội thoại của Bài 13",
+    "headingVi": "Nghe & đọc",
+    "noteVi": "Cả ba hội thoại trong sách đều được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và hai câu hỏi của mỗi hội thoại nằm ngay dưới hội thoại đó.",
+    "sentences": [
+     {
+      "id": "l13-s1",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "王老师，我可以再问您一个问题吗？",
+      "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+      "vi": "Cô Vương ơi, em có thể hỏi cô thêm một câu nữa được không?",
+      "passageId": "l13-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-1",
+       "start": 0.69,
+       "end": 4.63,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s2",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "可以。你有什么问题？",
+      "pinyin": "Kěyǐ. Nǐ yǒu shénme wèntí?",
+      "vi": "Được. Em có câu hỏi gì?",
+      "passageId": "l13-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-1",
+       "start": 5.87,
+       "end": 8.47,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s3",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "那个小店卖不卖手机？",
+      "pinyin": "Nàge xiǎo diàn mài bu mài shǒujī?",
+      "vi": "Cửa hàng nhỏ kia có bán điện thoại di động không ạ?",
+      "passageId": "l13-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-1",
+       "start": 9.96,
+       "end": 12.1,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s4",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "我不知道。你可以打电话问一下。",
+      "pinyin": "Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+      "vi": "Cô không biết. Em có thể gọi điện hỏi thử xem.",
+      "passageId": "l13-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-1",
+       "start": 13.78,
+       "end": 17.08,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s5",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "女士，请坐！您喝什么？",
+      "pinyin": "Nǚshì, qǐng zuò! Nín hē shénme?",
+      "vi": "Thưa bà, mời bà ngồi! Bà uống gì ạ?",
+      "passageId": "l13-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-3",
+       "start": 0.66,
+       "end": 4.42,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s6",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我看一下。请给我一杯牛奶。",
+      "pinyin": "Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi.",
+      "vi": "Để tôi xem đã. Xin cho tôi một ly sữa.",
+      "passageId": "l13-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-3",
+       "start": 5.52,
+       "end": 9.4,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s7",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "好的。您还要什么？",
+      "pinyin": "Hǎo de. Nín hái yào shénme?",
+      "vi": "Vâng ạ. Bà còn muốn dùng gì nữa không?",
+      "passageId": "l13-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-3",
+       "start": 11.27,
+       "end": 13.8,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s8",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我还没吃早饭，再要这个面包和鸡蛋吧。",
+      "pinyin": "Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
+      "vi": "Tôi vẫn chưa ăn sáng, cho thêm bánh mì này và trứng gà nữa nhé.",
+      "passageId": "l13-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-3",
+       "start": 15.65,
+       "end": 19.81,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s9",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "先生，请坐！您要什么？",
+      "pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme?",
+      "vi": "Thưa ông, mời ông ngồi! Ông muốn dùng gì ạ?",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 0.37,
+       "end": 3.71,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s10",
+      "speaker": "Lưu Minh",
+      "zh": "我要一斤饺子。",
+      "pinyin": "Wǒ yào yì jīn jiǎozi.",
+      "vi": "Cho tôi một cân sủi cảo.",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 5.34,
+       "end": 6.72,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s11",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "好的。一斤饺子40个。",
+      "pinyin": "Hǎo de. Yí jīn jiǎozi sìshí gè.",
+      "vi": "Vâng ạ. Một cân sủi cảo là 40 cái.",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 8.21,
+       "end": 10.97,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s12",
+      "speaker": "Lưu Minh",
+      "zh": "40个太多了，我要一半吧。",
+      "pinyin": "Sìshí gè tài duō le, wǒ yào yíbàn ba.",
+      "vi": "40 cái thì nhiều quá, cho tôi một nửa thôi nhé.",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 12.53,
+       "end": 15.79,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s13",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "半斤20个。您想喝什么？",
+      "pinyin": "Bàn jīn èrshí gè. Nín xiǎng hē shénme?",
+      "vi": "Nửa cân là 20 cái. Ông muốn uống gì ạ?",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 17.12,
+       "end": 19.88,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l13-s14",
+      "speaker": "Lưu Minh",
+      "zh": "请给我一杯茶吧。",
+      "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
+      "vi": "Xin cho tôi một tách trà nhé.",
+      "passageId": "l13-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l13-5",
+       "start": 21.26,
+       "end": 23.06,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb-l13-1",
+      "label": "Hội thoại 1 · Hỏi cô giáo thêm một câu",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-1.mp3",
+      "durationSec": 18.095,
+      "bookRef": "Textbook · track 13-1",
+      "segments": [
+       {
+        "sentenceId": "l13-s1",
+        "start": 0.69,
+        "end": 4.63,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s2",
+        "start": 5.87,
+        "end": 8.47,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s3",
+        "start": 9.96,
+        "end": 12.1,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s4",
+        "start": 13.78,
+        "end": 17.08,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l13-2",
+      "label": "Từ mới · Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-2.mp3",
+      "durationSec": 17.965,
+      "bookRef": "Textbook · track 13-2 · 生词 Hội thoại 1",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 112,
+        "printedPage": 97,
+        "section": "课文 1 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l13-3",
+      "label": "Hội thoại 2 · Ăn sáng ở quán cà phê",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-3.mp3",
+      "durationSec": 21.718,
+      "bookRef": "Textbook · track 13-3",
+      "segments": [
+       {
+        "sentenceId": "l13-s5",
+        "start": 0.66,
+        "end": 4.42,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s6",
+        "start": 5.52,
+        "end": 9.4,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s7",
+        "start": 11.27,
+        "end": 13.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s8",
+        "start": 15.65,
+        "end": 19.81,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l13-4",
+      "label": "Từ mới · Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-4.mp3",
+      "durationSec": 30.006,
+      "bookRef": "Textbook · track 13-4 · 生词 Hội thoại 2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 114,
+        "printedPage": 99,
+        "section": "课文 2 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l13-5",
+      "label": "Hội thoại 3 · Gọi sủi cảo ở nhà hàng",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-5.mp3",
+      "durationSec": 24.012,
+      "bookRef": "Textbook · track 13-5",
+      "segments": [
+       {
+        "sentenceId": "l13-s9",
+        "start": 0.37,
+        "end": 3.71,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s10",
+        "start": 5.34,
+        "end": 6.72,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s11",
+        "start": 8.21,
+        "end": 10.97,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s12",
+        "start": 12.53,
+        "end": 15.79,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s13",
+        "start": 17.12,
+        "end": 19.88,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l13-s14",
+        "start": 21.26,
+        "end": 23.06,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l13-6",
+      "label": "Từ mới · Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-13/13-6.mp3",
+      "durationSec": 7.801,
+      "bookRef": "Textbook · track 13-6 · 生词 Hội thoại 3",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb-l13-1",
+      "label": "Track 13-1 · Pronunciation (phát âm)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-13/13-1.mp3",
+      "durationSec": 180.517,
+      "bookRef": "Workbook Bài 13, phần 一、语音, ký hiệu track 13-1 in ở trang in 093",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "l13-dialogue-1",
+      "title": "Hội thoại 1 · Hỏi cô giáo thêm một câu",
+      "context": "Trong lớp học, sau giờ học, Bạch Gia Nguyệt hỏi cô Vương một câu hỏi (Textbook tr.096). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 13-1); lời thoại đầy đủ in ở tr.096 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l13-1",
+      "sentenceIds": [
+       "l13-s1",
+       "l13-s2",
+       "l13-s3",
+       "l13-s4"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 111,
+        "printedPage": 96,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb13-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 096, track 13-1): Bạch Gia Nguyệt muốn hỏi thêm cô Vương điều gì?",
+        "promptZh": "白家月想再问王老师（ ）。",
+        "promptPinyin": "Bái Jiāyuè xiǎng zài wèn Wáng lǎoshī ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "一个问题",
+          "pinyin": "yí gè wèntí",
+          "vi": "một câu hỏi"
+         },
+         {
+          "id": "2",
+          "zh": "两个问题",
+          "pinyin": "liǎng gè wèntí",
+          "vi": "hai câu hỏi"
+         },
+         {
+          "id": "3",
+          "zh": "这个问题",
+          "pinyin": "zhège wèntí",
+          "vi": "câu hỏi này"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.096: Bạch Gia Nguyệt nói “我可以再问您一个问题吗？” — hỏi thêm một câu hỏi.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 111,
+          "printedPage": 96,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-1",
+         "start": 0.69,
+         "end": 4.63,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb13-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 096, track 13-1): cô Vương có biết cửa hàng nhỏ kia có bán điện thoại không?",
+        "promptZh": "王老师（ ）那里卖不卖手机。",
+        "promptPinyin": "Wáng lǎoshī ( ) nàlǐ mài bu mài shǒujī.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "知道",
+          "pinyin": "zhīdào",
+          "vi": "biết"
+         },
+         {
+          "id": "2",
+          "zh": "不知道",
+          "pinyin": "bù zhīdào",
+          "vi": "không biết"
+         },
+         {
+          "id": "3",
+          "zh": "也想知道",
+          "pinyin": "yě xiǎng zhīdào",
+          "vi": "cũng muốn biết"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.096: cô Vương đáp “我不知道。你可以打电话问一下。” — cô không biết.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 111,
+          "printedPage": 96,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-1",
+         "start": 13.78,
+         "end": 17.08,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l13-dialogue-2",
+      "title": "Hội thoại 2 · Ăn sáng ở quán cà phê",
+      "context": "Trong quán cà phê, Vương Nhất Tuyết muốn ăn sáng (Textbook tr.098). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 13-3); lời thoại đầy đủ in ở tr.098 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l13-3",
+      "sentenceIds": [
+       "l13-s5",
+       "l13-s6",
+       "l13-s7",
+       "l13-s8"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 113,
+        "printedPage": 98,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb13-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 098, track 13-3): Vương Nhất Tuyết muốn uống gì?",
+        "promptZh": "王一雪要喝（ ）。",
+        "promptPinyin": "Wáng Yīxuě yào hē ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "水",
+          "pinyin": "shuǐ",
+          "vi": "nước"
+         },
+         {
+          "id": "2",
+          "zh": "茶",
+          "pinyin": "chá",
+          "vi": "trà"
+         },
+         {
+          "id": "3",
+          "zh": "牛奶",
+          "pinyin": "niúnǎi",
+          "vi": "sữa"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.098: Vương Nhất Tuyết nói “请给我一杯牛奶” — cô gọi một ly sữa.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 113,
+          "printedPage": 98,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-3",
+         "start": 5.52,
+         "end": 9.4,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb13-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 098, track 13-3): Vương Nhất Tuyết còn muốn ăn gì nữa?",
+        "promptZh": "王一雪还想吃（ ）。",
+        "promptPinyin": "Wáng Yīxuě hái xiǎng chī ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "包子",
+          "pinyin": "bāozi",
+          "vi": "bánh bao"
+         },
+         {
+          "id": "2",
+          "zh": "面条儿",
+          "pinyin": "miàntiáor",
+          "vi": "mì sợi"
+         },
+         {
+          "id": "3",
+          "zh": "面包和鸡蛋",
+          "pinyin": "miànbāo hé jīdàn",
+          "vi": "bánh mì và trứng gà"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.098: “我还没吃早饭，再要这个面包和鸡蛋吧” — cô gọi thêm bánh mì và trứng gà.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 113,
+          "printedPage": 98,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-3",
+         "start": 15.65,
+         "end": 19.81,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l13-dialogue-3",
+      "title": "Hội thoại 3 · Gọi sủi cảo ở nhà hàng",
+      "context": "Trong nhà hàng, Lưu Minh đang gọi món (Textbook tr.099–100). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 13-5); lời thoại đầy đủ in ở tr.100 và hai câu hỏi của sách nằm ngay dưới hội thoại này. Lưu ý đơn vị cân của Trung Quốc: một cân （一斤） sủi cảo là 40 cái, nửa cân （半斤） là 20 cái; 1 斤 bằng 500 gam.",
+      "audioTrackId": "trk-tb-l13-5",
+      "sentenceIds": [
+       "l13-s9",
+       "l13-s10",
+       "l13-s11",
+       "l13-s12",
+       "l13-s13",
+       "l13-s14"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb13-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 099, track 13-5): Lưu Minh muốn ăn gì?",
+        "promptZh": "刘明想吃（ ）。",
+        "promptPinyin": "Liú Míng xiǎng chī ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "米饭",
+          "pinyin": "mǐfàn",
+          "vi": "cơm"
+         },
+         {
+          "id": "2",
+          "zh": "饺子",
+          "pinyin": "jiǎozi",
+          "vi": "sủi cảo"
+         },
+         {
+          "id": "3",
+          "zh": "米饭和饺子",
+          "pinyin": "mǐfàn hé jiǎozi",
+          "vi": "cơm và sủi cảo"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.100: Lưu Minh nói “我要一斤饺子” — anh gọi sủi cảo, không gọi cơm.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 114,
+          "printedPage": 99,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-5",
+         "start": 5.34,
+         "end": 6.72,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb13-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 100, track 13-5): Lưu Minh muốn uống gì?",
+        "promptZh": "刘明想喝（ ）。",
+        "promptPinyin": "Liú Míng xiǎng hē ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "水",
+          "pinyin": "shuǐ",
+          "vi": "nước"
+         },
+         {
+          "id": "2",
+          "zh": "茶",
+          "pinyin": "chá",
+          "vi": "trà"
+         },
+         {
+          "id": "3",
+          "zh": "牛奶",
+          "pinyin": "niúnǎi",
+          "vi": "sữa"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.100: câu cuối của Lưu Minh là “请给我一杯茶吧” — anh gọi một tách trà.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 115,
+          "printedPage": 100,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l13-5",
+         "start": 21.26,
+         "end": 23.06,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l13-text-v1",
+    "titleVi": "Bài tập chính của Bài 13",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.095); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.101, ngân hàng từ in sẵn; câu (3) của sách có hai chỗ trống nên tách thành hai câu, mỗi từ ngân hàng dùng đúng một lần); 4 câu phân biệt thanh điệu (Workbook tr.093, đáp án theo dấu thanh in sẵn, đã kiểm ở bản phóng to 300 DPI); và 6 câu nghe – nối âm tiết với từ (Workbook tr.093, ánh xạ xác định duy nhất từ bản in). Sáu câu hỏi của cả ba hội thoại nằm ngay tại từng hội thoại ở mục Nghe & đọc (D28), không nằm trong bộ này. Phần dùng hình để nói ở tr.101 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "items": [
+     {
+      "id": "wb13-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động A (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "面包",
+      "promptPinyin": "miànbāo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ A “面包” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb13-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động B (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "说",
+      "promptPinyin": "shuō",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ B “说” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb13-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động C (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "给",
+      "promptPinyin": "gěi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ C “给” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb13-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động D (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "茶",
+      "promptPinyin": "chá",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ D “茶” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb13-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động E (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "一半",
+      "promptPinyin": "yíbàn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ E “一半” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb13-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động F (Textbook trang 095): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "请",
+      "promptPinyin": "qǐng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho, đưa cho",
+        "image": "assets/lesson-13/warm-give.webp",
+        "imageAlt": "Tranh vẽ: một bàn tay đang trao một cuốn sách cho bàn tay khác"
+       },
+       {
+        "id": "2",
+        "zh": "面包",
+        "pinyin": "miànbāo",
+        "vi": "bánh mì",
+        "image": "assets/lesson-13/warm-bread.webp",
+        "imageAlt": "Tranh vẽ: một ổ bánh mì nâu vàng trên bàn gỗ"
+       },
+       {
+        "id": "3",
+        "zh": "请",
+        "pinyin": "qǐng",
+        "vi": "xin mời",
+        "image": "assets/lesson-13/warm-waiter.webp",
+        "imageAlt": "Tranh vẽ: một nhân viên phục vụ mặc áo trắng thắt nơ, cầm thực đơn và đưa tay mời khách"
+       },
+       {
+        "id": "4",
+        "zh": "说",
+        "pinyin": "shuō",
+        "vi": "nói",
+        "image": "assets/lesson-13/warm-talk.webp",
+        "imageAlt": "Tranh vẽ: hai người phụ nữ đang ngồi trò chuyện với nhau"
+       },
+       {
+        "id": "5",
+        "zh": "茶",
+        "pinyin": "chá",
+        "vi": "trà",
+        "image": "assets/lesson-13/warm-tea.webp",
+        "imageAlt": "Tranh vẽ: một ly thuỷ tinh đựng trà xanh có lá trà"
+       },
+       {
+        "id": "6",
+        "zh": "一半",
+        "pinyin": "yíbàn",
+        "vi": "một nửa",
+        "image": "assets/lesson-13/warm-half.webp",
+        "imageAlt": "Tranh vẽ: một nửa quả táo đỏ được cắt đôi, thấy rõ hạt"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.095: từ F “请” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 110,
+        "printedPage": 95,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "tb13-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 101). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "请（ ）我一杯热水。",
+      "promptPinyin": "Qǐng ( ) wǒ yì bēi rè shuǐ.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一下",
+        "pinyin": "yíxià",
+        "vi": "một chút (sau động từ)"
+       },
+       {
+        "id": "2",
+        "zh": "可以",
+        "pinyin": "kěyǐ",
+        "vi": "có thể"
+       },
+       {
+        "id": "3",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho"
+       },
+       {
+        "id": "4",
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "vấn đề; câu hỏi"
+       },
+       {
+        "id": "5",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu hai tân ngữ với 给： “请给我一杯热水” — xin cho tôi một cốc nước nóng.",
+      "grammarIds": [
+       "kp-hsk1-l13-double-object"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 116,
+        "printedPage": 101,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb13-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 101). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "我们（ ）一斤饺子。",
+      "promptPinyin": "Wǒmen ( ) yì jīn jiǎozi.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一下",
+        "pinyin": "yíxià",
+        "vi": "một chút (sau động từ)"
+       },
+       {
+        "id": "2",
+        "zh": "可以",
+        "pinyin": "kěyǐ",
+        "vi": "có thể"
+       },
+       {
+        "id": "3",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho"
+       },
+       {
+        "id": "4",
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "vấn đề; câu hỏi"
+       },
+       {
+        "id": "5",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Muốn lấy một cân sủi cảo thì dùng 要： “我们要一斤饺子”.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 116,
+        "printedPage": 101,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb13-fill-3a",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 101). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "A: 我（ ）坐这儿吗？",
+      "promptPinyin": "A: Wǒ ( ) zuò zhèr ma?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一下",
+        "pinyin": "yíxià",
+        "vi": "một chút (sau động từ)"
+       },
+       {
+        "id": "2",
+        "zh": "可以",
+        "pinyin": "kěyǐ",
+        "vi": "có thể"
+       },
+       {
+        "id": "3",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho"
+       },
+       {
+        "id": "4",
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "vấn đề; câu hỏi"
+       },
+       {
+        "id": "5",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Xin phép được ngồi thì dùng 可以 đặt trước động từ: “我可以坐这儿吗？”.",
+      "grammarIds": [
+       "kp-hsk1-l13-keyi"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 116,
+        "printedPage": 101,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb13-fill-3b",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 101). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "B: 没（ ），请坐。",
+      "promptPinyin": "B: Méi ( ), qǐng zuò.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一下",
+        "pinyin": "yíxià",
+        "vi": "một chút (sau động từ)"
+       },
+       {
+        "id": "2",
+        "zh": "可以",
+        "pinyin": "kěyǐ",
+        "vi": "có thể"
+       },
+       {
+        "id": "3",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho"
+       },
+       {
+        "id": "4",
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "vấn đề; câu hỏi"
+       },
+       {
+        "id": "5",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm đáp quen thuộc “没问题” nghĩa là không vấn đề gì, cứ tự nhiên.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 116,
+        "printedPage": 101,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb13-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 101). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "A: 这个商店卖不卖手机？B: 你可以去问（ ）。",
+      "promptPinyin": "A: Zhège shāngdiàn mài bu mài shǒujī? B: Nǐ kěyǐ qù wèn ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一下",
+        "pinyin": "yíxià",
+        "vi": "một chút (sau động từ)"
+       },
+       {
+        "id": "2",
+        "zh": "可以",
+        "pinyin": "kěyǐ",
+        "vi": "có thể"
+       },
+       {
+        "id": "3",
+        "zh": "给",
+        "pinyin": "gěi",
+        "vi": "cho"
+       },
+       {
+        "id": "4",
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "vấn đề; câu hỏi"
+       },
+       {
+        "id": "5",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hỏi thử một chút dùng cấu trúc động từ + 一下： “去问一下” — gần giống lời cô Vương ở Hội thoại 1.",
+      "grammarIds": [
+       "kp-hsk1-l13-yixia"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 116,
+        "printedPage": 101,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb13-tone-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 093, track 13-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "jiǎozi · shuǐguǒ · zǎoshang",
+      "promptPinyin": "jiǎozi · shuǐguǒ · zǎoshang",
+      "options": [
+       {
+        "id": "1",
+        "zh": "jiǎozi",
+        "pinyin": "jiǎozi",
+        "vi": "thanh 3 + thanh nhẹ"
+       },
+       {
+        "id": "2",
+        "zh": "shuǐguǒ",
+        "pinyin": "shuǐguǒ",
+        "vi": "thanh 3 + 3"
+       },
+       {
+        "id": "3",
+        "zh": "zǎoshang",
+        "pinyin": "zǎoshang",
+        "vi": "thanh 3 + thanh nhẹ"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.093 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 13-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb13-tone-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 093, track 13-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "xuéxí · fángjiān · míngtiān",
+      "promptPinyin": "xuéxí · fángjiān · míngtiān",
+      "options": [
+       {
+        "id": "1",
+        "zh": "xuéxí",
+        "pinyin": "xuéxí",
+        "vi": "thanh 2 + 2"
+       },
+       {
+        "id": "2",
+        "zh": "fángjiān",
+        "pinyin": "fángjiān",
+        "vi": "thanh 2 + 1"
+       },
+       {
+        "id": "3",
+        "zh": "míngtiān",
+        "pinyin": "míngtiān",
+        "vi": "thanh 2 + 1"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.093 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 13-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb13-tone-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 093, track 13-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "mǎi bāozi · xiě Hànzì · yǒu bēizi",
+      "promptPinyin": "mǎi bāozi · xiě Hànzì · yǒu bēizi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "mǎi bāozi",
+        "pinyin": "mǎi bāozi",
+        "vi": "thanh 3 + 1 + nhẹ"
+       },
+       {
+        "id": "2",
+        "zh": "xiě Hànzì",
+        "pinyin": "xiě Hànzì",
+        "vi": "thanh 3 + 4 + 4"
+       },
+       {
+        "id": "3",
+        "zh": "yǒu bēizi",
+        "pinyin": "yǒu bēizi",
+        "vi": "thanh 3 + 1 + nhẹ"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.093 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 13-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb13-tone-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 093, track 13-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "máng gōngzuò · lái shūdiàn · zhǎo tóngxué",
+      "promptPinyin": "máng gōngzuò · lái shūdiàn · zhǎo tóngxué",
+      "options": [
+       {
+        "id": "1",
+        "zh": "máng gōngzuò",
+        "pinyin": "máng gōngzuò",
+        "vi": "thanh 2 + 1 + 4"
+       },
+       {
+        "id": "2",
+        "zh": "lái shūdiàn",
+        "pinyin": "lái shūdiàn",
+        "vi": "thanh 2 + 1 + 4"
+       },
+       {
+        "id": "3",
+        "zh": "zhǎo tóngxué",
+        "pinyin": "zhǎo tóngxué",
+        "vi": "thanh 3 + 2 + 2"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.093 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 13-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (1) được đọc là “nǐ hǎo”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "nǐ hǎo",
+      "promptPinyin": "nǐ hǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (2) được đọc là “gōngsī”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "gōngsī",
+      "promptPinyin": "gōngsī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (3) được đọc là “xiānsheng”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "xiānsheng",
+      "promptPinyin": "xiānsheng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (4) được đọc là “gōngzuò”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "gōngzuò",
+      "promptPinyin": "gōngzuò",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (5) được đọc là “jiǎozi”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "jiǎozi",
+      "promptPinyin": "jiǎozi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb13-match-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 093, bài 2, track 13-1): âm tiết số (6) được đọc là “péngyou”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "péngyou",
+      "promptPinyin": "péngyou",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "饺子",
+        "pinyin": "jiǎozi",
+        "vi": "sủi cảo"
+       },
+       {
+        "id": "3",
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty"
+       },
+       {
+        "id": "4",
+        "zh": "朋友",
+        "pinyin": "péngyou",
+        "vi": "bạn bè"
+       },
+       {
+        "id": "5",
+        "zh": "先生",
+        "pinyin": "xiānsheng",
+        "vi": "ông; thưa ông"
+       },
+       {
+        "id": "6",
+        "zh": "工作",
+        "pinyin": "gōngzuò",
+        "vi": "công việc"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.093 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 13-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 93,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-l13-01",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 101) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 101), dùng từ mới và điểm ngữ pháp của bài để hoàn thành khung câu in trong sách, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "prompts": [
+      "我__________？",
+      "你好！我______坐这儿吗？",
+      "我______热水，请______我____________。",
+      "服务员：请问，____________？刘明：我要____________。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-13/describe-1.webp",
+       "alt": "Tranh vẽ: một phụ nữ giơ tay phát biểu trong buổi họp — vẽ lại theo ảnh Textbook tr.101",
+       "captionVi": "Hình 1 — giơ tay xin phát biểu. Tranh vẽ lại theo ảnh Textbook tr.101",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 116,
+         "printedPage": 101,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-13/describe-2.webp",
+       "alt": "Tranh vẽ: nhà ăn của trường, một bạn gái bưng khay đồ ăn hỏi chỗ ngồi — vẽ lại theo ảnh Textbook tr.101",
+       "captionVi": "Hình 2 — hỏi chỗ ngồi ở nhà ăn. Tranh vẽ lại theo ảnh Textbook tr.101",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 116,
+         "printedPage": 101,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-13/describe-3.webp",
+       "alt": "Tranh vẽ: ấm điện đang rót nước nóng vào một chiếc cốc trắng — vẽ lại theo ảnh Textbook tr.101",
+       "captionVi": "Hình 3 — rót nước nóng. Tranh vẽ lại theo ảnh Textbook tr.101",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 116,
+         "printedPage": 101,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-13/describe-4.webp",
+       "alt": "Tranh vẽ: một đĩa sủi cảo kèm bát nước chấm — vẽ lại theo ảnh Textbook tr.101",
+       "captionVi": "Hình 4 — đĩa sủi cảo. Tranh vẽ lại theo ảnh Textbook tr.101",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 116,
+         "printedPage": 101,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Câu gợi ý (chỉ là một cách nói, không phải đáp án duy nhất của sách): 我可以问一个问题吗？/ 我可以坐这儿吗？/ 我要热水，请给我一杯。/ 服务员：请问，您要什么？刘明：我要一斤饺子。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 116,
+       "printedPage": 101,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-l13-02",
+     "kind": "speaking",
+     "titleVi": "Trả lời câu hỏi theo cả ba hội thoại (Textbook trang 096–100) — tự luyện, không chấm tự động",
+     "instructionVi": "Đọc lại ba hội thoại rồi trả lời thành tiếng sáu câu hỏi in trong sách (hai câu sau mỗi hội thoại). Đáp án mẫu ở phần gợi ý để bạn tự đối chiếu sau khi trả lời.",
+     "prompts": [
+      "白家月还有什么问题？",
+      "王老师对白家月说什么了？",
+      "服务员问王一雪什么问题了？",
+      "王一雪吃早饭了吗？",
+      "刘明想要多少饺子？",
+      "刘明要米饭了吗？"
+     ],
+     "draftPromptVi": "Đáp án theo lời thoại: 那个小店卖不卖手机。/ 她说她不知道，白家月可以打电话问一下。/ 问她喝什么、还要什么。/ 还没吃。/ 先要一斤，后来要一半（半斤，20个）。/ 没要，他要饺子和茶。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 111,
+       "printedPage": 96,
+       "section": "课文 1 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 113,
+       "printedPage": 98,
+       "section": "课文 2 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 115,
+       "printedPage": 100,
+       "section": "课文 3 · 根据课文内容回答问题"
+      }
+     ]
+    },
+    {
+     "id": "st-l13-03",
+     "kind": "speaking",
+     "titleVi": "Tự gọi món ở quán cà phê (rút gọn từ hoạt động lớp, Textbook trang 102) — tự luyện, không chấm tự động",
+     "instructionVi": "Hoạt động lớp trong sách làm theo nhóm ba người (một nhân viên phục vụ, hai khách) ở quán cà phê. Tự luyện một mình bằng cách đóng cả hai vai theo bốn lượt gợi ý dưới đây.",
+     "prompts": [
+      "服务员：请坐！您要喝什么？",
+      "（Bạn, khách 1）我要______。",
+      "（Bạn, khách 2）我要______。",
+      "服务员：你们要吃什么？（Bạn）______。"
+     ],
+     "draftPromptVi": "Theo mẫu của Tiểu Ngữ in ở Textbook tr.102: Khách 1 gọi 我要一杯茶， khách 2 gọi 我要一杯牛奶； phần ăn có thể nói 我要这个面包和鸡蛋。Hãy thay bằng món bạn thích.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 117,
+       "printedPage": 102,
+       "section": "课堂活动 · 角色扮演"
+      }
+     ]
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện lấy từ sách, không chấm tự động: dùng hình để nói (Textbook tr.101), trả lời câu hỏi theo cả ba hội thoại (tr.096–100) và tự gọi món ở quán cà phê rút gọn từ hoạt động lớp (tr.102). Nháp và ghi chú của bạn được lưu trên thiết bị; điểm của các bài này không gộp vào điểm bài chính.",
+   "selfCheckListenVi": "Bài luyện nghe của bài này (phân biệt thanh điệu và nghe – nối âm tiết, Workbook tr.093) đã nằm trong bộ bài chính; không có bài tự luyện nghe riêng.",
+   "apply": {
+    "titleVi": "Đóng vai gọi món ở quán cà phê và nhà hàng",
+    "instructionVi": "Hoạt động lớp trong sách (Textbook tr.102): ba người một nhóm, một người đóng nhân viên phục vụ, hai người đóng khách, diễn cảnh gọi món ở quán cà phê. Trong app, làm lần lượt hai nhiệm vụ dưới đây: đọc mẫu, rồi đổi vai và thay món.",
+    "audioTrackId": "trk-tb-l13-3",
+    "noteVi": "Nhiệm vụ 1 dùng nguyên mẫu đối thoại của Tiểu Ngữ in ở Textbook tr.102; nhiệm vụ 2 dựng theo Hội thoại 3 ở nhà hàng (gọi sủi cảo theo cân rồi đổi sang một nửa). Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 117,
+      "printedPage": 102,
+      "section": "课堂活动 · 角色扮演"
+     }
+    ],
+    "samplePassageIds": [
+     "l13-dialogue-2"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l13-1",
+      "titleVi": "Gọi món ở quán cà phê",
+      "situationVi": "Nhân viên phục vụ mời khách ngồi và hỏi đồ uống; hai vị khách lần lượt gọi trà và sữa — theo đúng mẫu của Tiểu Ngữ in ở Textbook tr.102.",
+      "sampleZh": "服务员：请坐！你们要喝什么？顾客1：我要一杯茶。顾客2：我要一杯牛奶。服务员：你们要吃什么？",
+      "samplePinyin": "Fúwùyuán: Qǐng zuò! Nǐmen yào hē shénme? Gùkè 1: Wǒ yào yì bēi chá. Gùkè 2: Wǒ yào yì bēi niúnǎi. Fúwùyuán: Nǐmen yào chī shénme?",
+      "sampleVi": "Nhân viên phục vụ: Mời ngồi! Các vị uống gì ạ? Khách 1: Cho tôi một tách trà. Khách 2: Cho tôi một ly sữa. Nhân viên phục vụ: Các vị ăn gì ạ?",
+      "swapVi": "Đổi đồ uống （茶 → 水/牛奶） và thêm món ăn theo Hội thoại 2 （这个面包和鸡蛋）; đổi vai để ai cũng được làm nhân viên phục vụ.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ trong hoạt động lớp ở Textbook tr.102.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 117,
+        "printedPage": 102,
+        "section": "课堂活动 · 角色扮演"
+       }
+      ]
+     },
+     {
+      "id": "speak-l13-2",
+      "titleVi": "Gọi sủi cảo ở nhà hàng",
+      "situationVi": "Khách gọi một cân sủi cảo, nghe số lượng thì thấy nhiều quá nên đổi sang một nửa, rồi gọi thêm một tách trà — theo khung của Hội thoại 3.",
+      "sampleZh": "先生，请坐！您要什么？——我要一斤饺子。——好的，一斤饺子40个。——40个太多了，我要一半吧。——半斤20个。您想喝什么？——请给我一杯茶吧。",
+      "samplePinyin": "Xiānsheng, qǐng zuò! Nín yào shénme? —— Wǒ yào yì jīn jiǎozi. —— Hǎo de, yí jīn jiǎozi sìshí gè. —— Sìshí gè tài duō le, wǒ yào yíbàn ba. —— Bàn jīn èrshí gè. Nín xiǎng hē shénme? —— Qǐng gěi wǒ yì bēi chá ba.",
+      "sampleVi": "Thưa ông, mời ngồi! Ông muốn dùng gì ạ? — Cho tôi một cân sủi cảo. — Vâng, một cân là 40 cái. — 40 cái nhiều quá, cho tôi một nửa thôi. — Nửa cân 20 cái. Ông muốn uống gì ạ? — Cho tôi một tách trà nhé.",
+      "swapVi": "Đổi 一斤 thành 半斤 ngay từ đầu, đổi đồ uống （茶 → 牛奶/水）; tự đóng cả hai vai và đọc to cả đoạn.",
+      "sourceNoteVi": "Khung theo Hội thoại 3 ở Textbook tr.099–100.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 115,
+        "printedPage": 100,
+        "section": "课文 3"
+       }
+      ]
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l13-vocab-1",
+     "dialogueId": "l13-dialogue-1",
+     "titleVi": "Hội thoại 1 · Hỏi cô giáo thêm một câu",
+     "trackId": "trk-tb-l13-2",
+     "trackLabelVi": "Track 13-2"
+    },
+    {
+     "id": "l13-vocab-2",
+     "dialogueId": "l13-dialogue-2",
+     "titleVi": "Hội thoại 2 · Ăn sáng ở quán cà phê",
+     "trackId": "trk-tb-l13-4",
+     "trackLabelVi": "Track 13-4"
+    },
+    {
+     "id": "l13-vocab-3",
+     "dialogueId": "l13-dialogue-3",
+     "titleVi": "Hội thoại 3 · Gọi sủi cảo ở nhà hàng",
+     "trackId": "trk-tb-l13-6",
+     "trackLabelVi": "Track 13-6"
+    }
+   ],
+   "prepSummaryVi": "20 từ mới, chia theo ba hội thoại của bài.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu và cảnh gọi món của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết",
+     "descVi": "Học 20 từ mới theo ba hội thoại, nghe từng từ bằng audio sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "“可以” xin phép, “động từ + 一下” làm thử một chút và câu hai tân ngữ với 给/问.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe và đọc ba hội thoại: hỏi cô giáo, ăn sáng ở quán cà phê, gọi sủi cảo ở nhà hàng.",
+     "sectionId": "reader",
+     "dialogueId": "l13-dialogue-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Làm 21 câu chính, 6 câu hỏi tại hội thoại, rồi luyện thêm với bài nói theo hình, bài trả lời câu hỏi và bài tự gọi món.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói",
+     "descVi": "Đóng vai gọi món ở quán cà phê và nhà hàng theo hoạt động lớp của sách.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu hai tân ngữ với “给 / 问”",
+     "bodyVi": "Sau 给 và 问， tân ngữ chỉ người đứng trước, tân ngữ chỉ vật hoặc nội dung đứng sau. Tên bài là một ví dụ: “请给我一杯茶” — 给 + 我 (người) + 一杯茶 (vật).",
+     "exampleZh": "我问老师两个问题。",
+     "examplePinyin": "Wǒ wèn lǎoshī liǎng gè wèntí.",
+     "exampleVi": "Tôi hỏi thầy/cô hai câu hỏi."
+    },
+    {
+     "titleVi": "“可以” — xin phép và khả năng",
+     "bodyVi": "“可以” đứng trước động từ: xin phép (“我可以坐吗？”), được phép hoặc có thể làm (“你可以打电话问一下”). Đồng ý ngắn gọn chỉ cần đáp “可以”。",
+     "exampleZh": "我可以再问您一个问题吗？",
+     "examplePinyin": "Wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+     "exampleVi": "Em hỏi thêm một câu nữa được không ạ?"
+    },
+    {
+     "titleVi": "“Động từ + 一下” — làm thử một chút",
+     "bodyVi": "Thêm “一下” sau động từ để nói hành động ngắn hoặc thử làm, nghe mềm hơn: 看一下 (xem qua), 问一下 (hỏi thử), 休息一下 (nghỉ một lát).",
+     "exampleZh": "我看一下。",
+     "examplePinyin": "Wǒ kàn yíxià.",
+     "exampleVi": "Để tôi xem qua đã."
+    },
+    {
+     "titleVi": "Gọi món và đồ uống",
+     "bodyVi": "Chuỗi câu ở Hội thoại 2 tại quán cà phê: nhân viên mời ngồi và hỏi “您喝什么？”, khách xem qua rồi gọi “请给我一杯牛奶”, chưa ăn sáng thì gọi thêm “这个面包和鸡蛋”。",
+     "exampleZh": "请给我一杯牛奶。",
+     "examplePinyin": "Qǐng gěi wǒ yì bēi niúnǎi.",
+     "exampleVi": "Xin cho tôi một ly sữa."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả tên nhân vật và các từ của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "An Ni — nhân vật nhắc tới trong ví dụ của điểm kiến thức (tên riêng)"
+     },
+     {
+      "zh": "斤",
+      "pinyin": "jīn",
+      "hanViet": "CÂN",
+      "vi": "cân (đơn vị trọng lượng của Trung Quốc, bằng 500 gam)"
+     },
+     {
+      "zh": "半斤",
+      "pinyin": "bàn jīn",
+      "hanViet": "BÁN CÂN",
+      "vi": "nửa cân (250 gam)"
+     },
+     {
+      "zh": "饺子",
+      "pinyin": "jiǎozi",
+      "hanViet": "GIẢO TỬ",
+      "vi": "sủi cảo"
+     },
+     {
+      "zh": "牛奶",
+      "pinyin": "niúnǎi",
+      "hanViet": "NGƯU NÃI",
+      "vi": "sữa (bò)"
+     },
+     {
+      "zh": "米饭",
+      "pinyin": "mǐfàn",
+      "hanViet": "MỄ PHẠN",
+      "vi": "cơm"
+     },
+     {
+      "zh": "包子",
+      "pinyin": "bāozi",
+      "hanViet": "BAO TỬ",
+      "vi": "bánh bao"
+     },
+     {
+      "zh": "面条儿",
+      "pinyin": "miàntiáor",
+      "hanViet": "MIẾN ĐIỀU NHI",
+      "vi": "mì sợi"
+     },
+     {
+      "zh": "热水",
+      "pinyin": "rè shuǐ",
+      "hanViet": "NHIỆT THỦY",
+      "vi": "nước nóng"
+     },
+     {
+      "zh": "小店",
+      "pinyin": "xiǎo diàn",
+      "hanViet": "TIỂU ĐIẾM",
+      "vi": "cửa hàng nhỏ"
+     },
+     {
+      "zh": "商店",
+      "pinyin": "shāngdiàn",
+      "hanViet": "THƯƠNG ĐIẾM",
+      "vi": "cửa hàng"
+     },
+     {
+      "zh": "顾客",
+      "pinyin": "gùkè",
+      "hanViet": "CỐ KHÁCH",
+      "vi": "khách hàng"
+     },
+     {
+      "zh": "手机",
+      "pinyin": "shǒujī",
+      "hanViet": "THỦ CƠ",
+      "vi": "điện thoại di động"
+     },
+     {
+      "zh": "苹果",
+      "pinyin": "píngguǒ",
+      "hanViet": "BÌNH QUẢ",
+      "vi": "quả táo"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "một (số từ)"
+     },
+     {
+      "zh": "两",
+      "pinyin": "liǎng",
+      "hanViet": "LƯỠNG",
+      "vi": "hai (dùng trước lượng từ)"
      }
     ],
     "phrases": []

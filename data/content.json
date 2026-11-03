@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-l1review1",
+ "contentVersion": "20261103-hsk2l1-writing1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -77,6 +77,46 @@
    "retrievedAt": "2026-11-01",
    "rightsStatus": "unknown",
    "verification": "Tra cứu từng chữ ngày 2026-11-01 cho 27 mục từ Bài 1–2; các chữ đa âm đã chọn theo ngữ cảnh từ (什 trong 什么 đọc thậm, 么 đọc ma; 兴 trong 高兴 đọc hứng; 很 đọc ngận; 叫 đọc khiếu; 您 đọc nâm; 没 đọc một; 你 ghi nhĩ — từ điển cũng liệt kê nễ). Chỉ dùng làm nguồn cho âm Hán–Việt, không thay nguồn bài học Baulchino."
+  },
+  {
+   "id": "src-hsk2-textbook-pdf",
+   "kind": "book-pdf",
+   "title": "New HSK 3.0 Level 2 — Textbook (PDF do người dùng tải lên)",
+   "url": "https://www.baulchino.com/new-hsk-books-2026",
+   "retrievedAt": "2026-11-03",
+   "rightsStatus": "unknown",
+   "rightsEvidence": "File PDF do Hoa tải lên hệ thống ngày 2026-11-03 (31,4 MB, 164 trang PDF, PDF = in + 16); cùng ấn bản FLTRP trong danh mục Baulchino. Không có bằng chứng quyền tái xuất bản — chỉ đối chiếu nội bộ, không commit PDF vào repo.",
+   "verification": "Đã đọc trực quan mục lục (PDF 13–15) và Bài 1 (trang in 001–009, PDF 17–25): 4 đoạn 课文, 14 từ mới + 1 tên riêng, 3 điểm Tiểu Ngữ giảng đường, câu hỏi in tại từng đoạn, bài tập tổng hợp tr.008. Audio đối ứng theo ký hiệu track in trong sách (1-1…1-8); mốc đoạn theo ASR, chưa nghe kiểm chứng."
+  },
+  {
+   "id": "src-hsk2-workbook-pdf",
+   "kind": "book-pdf",
+   "title": "New HSK 3.0 Level 2 — Workbook 学练手册 (PDF do người dùng tải lên)",
+   "url": "https://www.baulchino.com/new-hsk-books-2026",
+   "retrievedAt": "2026-11-03",
+   "rightsStatus": "unknown",
+   "rightsEvidence": "File PDF do Hoa tải lên ngày 2026-11-03 (227,8 MB, 176 trang PDF dạng scan ảnh, PDF = in + 7). Không có bằng chứng quyền tái xuất bản — chỉ đối chiếu nội bộ.",
+   "verification": "Đã đọc mục lục (PDF 7) và Bài 1 (trang in 001–010, PDF 8–17): Tiểu Ngữ giảng đường gồm 汉字 (bộ 扌/冫 + tô chữ — trùng bộ chữ với sách viết) và 字词拓展 (điền 3 câu); phần 模拟测练 tr.003–010 loại khỏi bài học theo D15. Track audio WB Bài 1 (01-1, 543 giây) là audio phần mô phỏng."
+  },
+  {
+   "id": "src-hsk2-writing-pdf",
+   "kind": "book-pdf",
+   "title": "New HSK 3.0 Level 2 — Sách luyện viết chữ Hán (PDF do người dùng tải lên)",
+   "url": "https://www.baulchino.com/new-hsk-books-2026",
+   "retrievedAt": "2026-11-03",
+   "rightsStatus": "unknown",
+   "rightsEvidence": "File PDF 15 trang do Hoa tải lên ngày 2026-11-03 (16,6 MB, trang ảnh). Không có bằng chứng quyền tái xuất bản — app chỉ dùng danh sách chữ/từ/câu làm dữ liệu học tập có ghi nguồn, không đưa ảnh trang sách hay PDF lên web.",
+   "verification": "Đã đọc trực tiếp cả 15 trang ảnh: mỗi trang là một bài (tiêu đề khớp tên bài Textbook), mỗi bài 4 chữ (Bài 13, 14 có 3 chữ), tổng 58 chữ; mỗi chữ có dãy ô thứ tự nét, một từ chứa chữ và một câu mẫu. Bộ chữ trùng phần 汉字 của Workbook từng bài."
+  },
+  {
+   "id": "src-hanzi-stroke-data",
+   "kind": "open-data",
+   "title": "Hanzi Writer 3.7.3 + dữ liệu nét Make Me a Hanzi (hanzi-writer-data 2.0.1)",
+   "url": "https://hanziwriter.org/docs.html",
+   "retrievedAt": "2026-11-03",
+   "rightsStatus": "licensed",
+   "rightsEvidence": "Thư viện Hanzi Writer: giấy phép MIT (bản sao tại assets/vendor/HANZI-WRITER-LICENSE.txt). Dữ liệu nét: Arphic Public License (bản sao đầy đủ tại data/hanzi/ARPHICPL.TXT đi kèm mọi bản sao dữ liệu); cho phép sao chép/phân phối kèm nguyên văn giấy phép. App chỉ lưu dữ liệu của các chữ đã triển khai tại data/hanzi/<chữ>.json.",
+   "verification": "Đã kiểm tra số nét của 4 chữ Bài 1 HSK2 （打 5, 接 11, 冷 7, 次 6) khớp dãy ô tô theo nét trong sách viết và Workbook tr.001."
   }
  ],
  "books": [
@@ -111,15 +151,6 @@
    "noteVi": "Đã thấy trong danh mục; chưa đọc nội dung."
   },
   {
-   "id": "book-hsk2",
-   "level": "HSK 2",
-   "kind": "Textbook/Workbook/Writing",
-   "titleEn": "New HSK 3.0 Level 2",
-   "sourceId": "src-baul-books",
-   "publicationStatus": "catalogue-verified",
-   "noteVi": "Mới ở mức danh mục trang sách; chưa đọc quyển nào."
-  },
-  {
    "id": "book-hsk3",
    "level": "HSK 3",
    "kind": "Textbook/Workbook",
@@ -145,6 +176,36 @@
    "sourceId": "src-baul-books",
    "publicationStatus": "catalogue-verified",
    "noteVi": "Mới ở mức danh mục trang sách; trang audio đã khảo sát chưa liệt kê audio 4B."
+  },
+  {
+   "id": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "kind": "Textbook",
+   "titleEn": "New HSK 3.0 Level 2 — Textbook",
+   "sourceId": "src-hsk2-textbook-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "partially-read",
+   "noteVi": "Đã đọc mục lục 15 bài và Bài 1 đầy đủ (trang in 001–009). Các bài 2–15 mới ở mức mục lục."
+  },
+  {
+   "id": "book-hsk2-workbook",
+   "level": "HSK 2",
+   "kind": "Workbook",
+   "titleEn": "New HSK Course 2 Workbook (学练手册)",
+   "sourceId": "src-hsk2-workbook-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "partially-read",
+   "noteVi": "Đã đọc mục lục và Bài 1 (trang in 001–010). Mỗi bài: Tiểu Ngữ giảng đường （汉字 + 字词拓展) và 模拟测练 (loại theo D15); cuối sách có 模拟测试."
+  },
+  {
+   "id": "book-hsk2-writing",
+   "level": "HSK 2",
+   "kind": "Writing",
+   "titleEn": "New HSK 3.0 Level 2 — Writing (luyện viết chữ Hán)",
+   "sourceId": "src-hsk2-writing-pdf",
+   "catalogueSourceId": "src-baul-books",
+   "publicationStatus": "read",
+   "noteVi": "Đã đọc cả 15 trang: 58 chữ theo 15 bài, mỗi chữ có từ chứa chữ và câu mẫu. Khu Luyện viết của app triển khai theo đúng thứ tự này."
   }
  ],
  "lessons": [
@@ -772,6 +833,506 @@
     "kp-hsk1-l15-coordinate",
     "kp-hsk1-l15-characters-8"
    ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l01",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 01",
+   "lessonNumber": 1,
+   "titleZh": "她请我们吃了北京烤鸭",
+   "titleEn": "She treated us to Peking Duck",
+   "titleVi": "Cô ấy mời chúng tôi ăn vịt quay Bắc Kinh",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 17,
+     "printedPage": 1,
+     "section": "Bài 1 · 她请我们吃了北京烤鸭"
+    }
+   ],
+   "textbookAudioTrackCount": 8,
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo chuẩn Bài 8 + D28 (câu hỏi tại từng đoạn) kèm khu Luyện viết chữ Hán riêng. Đang chờ QA độc lập và nghiệm thu.",
+   "grammarIds": [
+    "kp-hsk2-l01-ba",
+    "kp-hsk2-l01-shide",
+    "kp-hsk2-l01-pivotal",
+    "kp-hsk2-l01-characters"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l02",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 02",
+   "lessonNumber": 2,
+   "titleZh": "还是打车去北大吧",
+   "titleEn": "Let's take a taxi to Peking University instead",
+   "titleVi": "Hay là đi taxi đến Đại học Bắc Kinh đi",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 26,
+     "printedPage": 10,
+     "section": "Bài 2 · 还是打车去北大吧"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l03",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 03",
+   "lessonNumber": 3,
+   "titleZh": "我想去西安旅游",
+   "titleEn": "I want to visit Xi'an",
+   "titleVi": "Tôi muốn đi du lịch Tây An",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 35,
+     "printedPage": 19,
+     "section": "Bài 3 · 我想去西安旅游"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l04",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 04",
+   "lessonNumber": 4,
+   "titleZh": "你穿红色的很好看",
+   "titleEn": "You look pretty good in red",
+   "titleVi": "Bạn mặc màu đỏ trông rất đẹp",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 45,
+     "printedPage": 29,
+     "section": "Bài 4 · 你穿红色的很好看"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l05",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 05",
+   "lessonNumber": 5,
+   "titleZh": "第一次去中国朋友家",
+   "titleEn": "Visiting a Chinese friend's home for the first time",
+   "titleVi": "Lần đầu đến nhà một người bạn Trung Quốc",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 53,
+     "printedPage": 37,
+     "section": "Bài 5 · 第一次去中国朋友家"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l06",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 06",
+   "lessonNumber": 6,
+   "titleZh": "小雪，生日快乐！",
+   "titleEn": "Happy birthday, Xiaoxue!",
+   "titleVi": "Tiểu Tuyết, chúc mừng sinh nhật!",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 62,
+     "printedPage": 46,
+     "section": "Bài 6 · 小雪，生日快乐！"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l07",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 07",
+   "lessonNumber": 7,
+   "titleZh": "他篮球打得很好",
+   "titleEn": "He plays basketball very well",
+   "titleVi": "Anh ấy chơi bóng rổ rất giỏi",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 72,
+     "printedPage": 56,
+     "section": "Bài 7 · 他篮球打得很好"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l08",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 08",
+   "lessonNumber": 8,
+   "titleZh": "虽然你忘了，但是我记得",
+   "titleEn": "Even though you forgot, I remembered",
+   "titleVi": "Tuy bạn đã quên, nhưng tôi vẫn nhớ",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 80,
+     "printedPage": 64,
+     "section": "Bài 8 · 虽然你忘了，但是我记得"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l09",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 09",
+   "lessonNumber": 9,
+   "titleZh": "我去买杯奶茶",
+   "titleEn": "I'm going to buy a cup of bubble tea",
+   "titleVi": "Tôi đi mua một cốc trà sữa",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 89,
+     "printedPage": 73,
+     "section": "Bài 9 · 我去买杯奶茶"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l10",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 10",
+   "lessonNumber": 10,
+   "titleZh": "就要考试了",
+   "titleEn": "The exam is coming",
+   "titleVi": "Sắp thi rồi",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 100,
+     "printedPage": 84,
+     "section": "Bài 10 · 就要考试了"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l11",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 11",
+   "lessonNumber": 11,
+   "titleZh": "我最喜欢吃中国菜",
+   "titleEn": "I like Chinese food the most",
+   "titleVi": "Tôi thích ăn món Trung Quốc nhất",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 109,
+     "printedPage": 93,
+     "section": "Bài 11 · 我最喜欢吃中国菜"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l12",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 12",
+   "lessonNumber": 12,
+   "titleZh": "这里比北京冷多了",
+   "titleEn": "It's much colder here than in Beijing",
+   "titleVi": "Ở đây lạnh hơn Bắc Kinh nhiều",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 118,
+     "printedPage": 102,
+     "section": "Bài 12 · 这里比北京冷多了"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l13",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 13",
+   "lessonNumber": 13,
+   "titleZh": "我们爱上中文课",
+   "titleEn": "We love attending Chinese class",
+   "titleVi": "Chúng tôi yêu thích giờ học tiếng Trung",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 128,
+     "printedPage": 112,
+     "section": "Bài 13 · 我们爱上中文课"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l14",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 14",
+   "lessonNumber": 14,
+   "titleZh": "一个人过年多没意思啊",
+   "titleEn": "It's boring to celebrate the Spring Festival alone",
+   "titleVi": "Một mình đón Tết thì chán lắm",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 137,
+     "printedPage": 121,
+     "section": "Bài 14 · 一个人过年多没意思啊"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
+  },
+  {
+   "id": "hsk2-l15",
+   "bookId": "book-hsk2-textbook",
+   "level": "HSK 2",
+   "sourceUnit": "Lesson 15",
+   "lessonNumber": 15,
+   "titleZh": "我想再去一次中国",
+   "titleEn": "I want to go to China again",
+   "titleVi": "Tôi muốn đến Trung Quốc thêm một lần nữa",
+   "titleProvenance": "verified-from-print",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-textbook-pdf",
+     "pdfPage": 146,
+     "printedPage": 130,
+     "section": "Bài 15 · 我想再去一次中国"
+    }
+   ],
+   "textbookAudioTrackCount": null,
+   "workbookAudioTrackCount": null,
+   "publicationStatus": "catalogued",
+   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
+   "grammarIds": [],
    "sectionIds": [
     "intro",
     "prep",
@@ -48718,10 +49279,3111 @@
       "pinyin": "Lǐ Wén",
       "hanViet": "LÝ VĂN",
       "vi": "Lý Văn (tên người)"
+     },
+     {
+      "zh": "有时间",
+      "pinyin": "yǒu shíjiān",
+      "hanViet": "HỮU THỜI GIAN",
+      "vi": "có thời gian"
      }
     ],
     "phrases": []
    }
+  },
+  {
+   "lessonId": "hsk2-l01",
+   "intro": {
+    "goalVi": "Học cách gặp gỡ và đón người quen ở sân bay, nhờ người khác giúp đỡ và dùng mẫu “是……的” nhấn mạnh chi tiết của việc đã xảy ra — qua câu chuyện Bạch Gia Nguyệt và An Ni lần đầu đến Bắc Kinh.",
+    "estimatedMinutes": 75,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bạch Gia Nguyệt và An Ni là học trò của cô Vương Nhất Phi. Lần đầu đến Bắc Kinh, hai cô được chị của cô Vương ra sân bay đón, được mời ăn vịt quay Bắc Kinh trứ danh. Trong bài, các em còn gặp một cuộc gọi nhờ giúp đỡ và luyện bốn chữ đầu tiên của sách viết HSK 2: 打、接、冷、次.",
+    "outcomesVi": [
+     "Nhận diện và dùng 14 từ mới, 1 tên riêng 北京烤鸭 của bài.",
+     "Dùng “吧” để phỏng đoán kèm mong đợi xác nhận.",
+     "Dùng mẫu “是……的” nhấn mạnh thời gian, cách thức, mục đích của việc đã xảy ra.",
+     "Dùng câu kiêm ngữ 请/让/叫 để nói nhờ, mời, bảo ai làm gì.",
+     "Nghe hiểu và trả lời câu hỏi của bốn đoạn, viết được tin nhắn báo đã đến nơi.",
+     "Luyện viết 4 chữ 打、接、冷、次 ở khu Luyện viết chữ Hán."
+    ],
+    "contextImage": {
+     "src": "assets/hsk2-lesson-01/context-airport.webp",
+     "alt": "Tranh vẽ lại cảnh sân bay Bắc Kinh: Vương Nhất Tuyết cầm bảng tên đón Bạch Gia Nguyệt và An Ni bên xe đẩy hành lý, phía sau là tháp không lưu và máy bay cất cánh.",
+     "caption": "Tranh vẽ lại theo bối cảnh Đoạn 1 của bài (Textbook tr.002): chị của cô Vương ra sân bay đón hai học trò lần đầu đến Bắc Kinh.",
+     "width": 1280,
+     "height": 853
+    },
+    "studyTipVi": "Bài này có bốn đoạn thay vì ba như HSK 1, và mỗi đoạn đều có câu hỏi ngay dưới đoạn — hãy trả lời tại chỗ sau khi nghe. Đừng quên mục Luyện viết: bốn chữ 打、接、冷、次 đều nằm trong từ mới của bài.",
+    "foundationSummaryVi": "Phần Hán tự (Workbook tr.001 + sách viết Bài 1): hai bộ 扌 提手旁 và 冫 两点水 qua bốn chữ 打、接、冷、次. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+    "courseTagsVi": "HSK 2 · Bài 1 · 她请我们吃了北京烤鸭",
+    "priorLessonNoteVi": "Đây là bài đầu tiên của HSK 2. Nếu vừa học xong HSK 1, bạn đã biết “吧” để đề nghị, câu với 请 và cách nói cảm ơn — bài này mở rộng “吧” sang nghĩa phỏng đoán và giới thiệu mẫu “是……的” hoàn toàn mới.",
+    "priorLessonId": "hsk1-l15"
+   },
+   "prepWords": [
+    {
+     "id": "h2l1-w01",
+     "zh": "就",
+     "pinyin": "jiù",
+     "vi": "đúng là; chính là; thì",
+     "hanViet": "CỮU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 2,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l01-2",
+      "start": 0.21,
+      "end": 0.95,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w02",
+     "zh": "给",
+     "pinyin": "gěi",
+     "vi": "cho; gọi (điện thoại cho ai)",
+     "hanViet": "CẤP",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 2,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l01-2",
+      "start": 2.57,
+      "end": 3.37,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w03",
+     "zh": "让",
+     "pinyin": "ràng",
+     "vi": "để cho; bảo, sai (ai làm gì)",
+     "hanViet": "NHƯỢNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 2,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l01-2",
+      "start": 4.71,
+      "end": 5.41,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w04",
+     "zh": "接",
+     "pinyin": "jiē",
+     "vi": "đón; tiếp",
+     "hanViet": "TIẾP",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 2,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l01-2",
+      "start": 6.89,
+      "end": 7.59,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w05",
+     "zh": "次",
+     "pinyin": "cì",
+     "vi": "lần",
+     "hanViet": "THỨ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 20,
+       "printedPage": 4,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l01-4",
+      "start": 0.4,
+      "end": 1.1,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w06",
+     "zh": "旅游",
+     "pinyin": "lǚyóu",
+     "vi": "du lịch",
+     "hanViet": "LỮ DU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 20,
+       "printedPage": 4,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l01-4",
+      "start": 1.5,
+      "end": 4.88,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w07",
+     "zh": "帮忙",
+     "pinyin": "bāngmáng",
+     "vi": "giúp đỡ; sự giúp đỡ",
+     "hanViet": "BANG MANG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 21,
+       "printedPage": 5,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l01-6",
+      "start": 0.11,
+      "end": 2.71,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w08",
+     "zh": "不好意思",
+     "pinyin": "bù hǎoyìsi",
+     "vi": "xin lỗi; ngại quá",
+     "hanViet": "BẤT HẢO Ý TỨ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 21,
+       "printedPage": 5,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l01-6",
+      "start": 3.41,
+      "end": 4.59,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w09",
+     "zh": "已经",
+     "pinyin": "yǐjīng",
+     "vi": "đã",
+     "hanViet": "DĨ KINH",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 21,
+       "printedPage": 5,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l01-6",
+      "start": 6.29,
+      "end": 7.69,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w10",
+     "zh": "那",
+     "pinyin": "nà",
+     "vi": "thế thì, vậy thì",
+     "hanViet": "NA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 21,
+       "printedPage": 5,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l01-6",
+      "start": 9.63,
+      "end": 10.33,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w11",
+     "zh": "介绍",
+     "pinyin": "jièshào",
+     "vi": "giới thiệu",
+     "hanViet": "GIỚI THIỆU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 23,
+       "printedPage": 7,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l01-8",
+      "start": 0.08,
+      "end": 2.48,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w12",
+     "zh": "有时",
+     "pinyin": "yǒushí",
+     "vi": "có lúc, thỉnh thoảng",
+     "hanViet": "HỮU THỜI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 23,
+       "printedPage": 7,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l01-8",
+      "start": 2.48,
+      "end": 5.3,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w13",
+     "zh": "懂",
+     "pinyin": "dǒng",
+     "vi": "hiểu",
+     "hanViet": "ĐỔNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 23,
+       "printedPage": 7,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l01-8",
+      "start": 5.3,
+      "end": 6.36,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w14",
+     "zh": "意思",
+     "pinyin": "yìsi",
+     "vi": "ý; ý nghĩa",
+     "hanViet": "Ý TỨ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 23,
+       "printedPage": 7,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l01-8",
+      "start": 7.8,
+      "end": 8.5,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l1-w15",
+     "zh": "北京烤鸭",
+     "pinyin": "Běijīng Kǎoyā",
+     "vi": "vịt quay Bắc Kinh",
+     "hanViet": "BẮC KINH KHẢO ÁP",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 23,
+       "printedPage": 7,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l01-8",
+      "start": 10.1,
+      "end": 12.24,
+      "status": "asr-draft"
+     },
+     "isProperName": true,
+     "properKind": "Tên riêng"
+    }
+   ],
+   "prepGroups": [
+    {
+     "id": "h2l1-g1",
+     "dialogueId": "h2l1-text-1",
+     "titleVi": "Từ mới Đoạn 1 · Ở sân bay",
+     "trackId": "trk-tb2-l01-2",
+     "trackLabelVi": "Track 1-2 · Từ mới Đoạn 1"
+    },
+    {
+     "id": "h2l1-g2",
+     "dialogueId": "h2l1-text-2",
+     "titleVi": "Từ mới Đoạn 2 · Trong xe",
+     "trackId": "trk-tb2-l01-4",
+     "trackLabelVi": "Track 1-4 · Từ mới Đoạn 2"
+    },
+    {
+     "id": "h2l1-g3",
+     "dialogueId": "h2l1-text-3",
+     "titleVi": "Từ mới Đoạn 3 · Cuộc gọi điện thoại",
+     "trackId": "trk-tb2-l01-6",
+     "trackLabelVi": "Track 1-6 · Từ mới Đoạn 3"
+    },
+    {
+     "id": "h2l1-g4",
+     "dialogueId": "h2l1-text-4",
+     "titleVi": "Từ mới Đoạn 4 · Tin nhắn",
+     "trackId": "trk-tb2-l01-8",
+     "trackLabelVi": "Track 1-8 · Từ mới Đoạn 4"
+    }
+   ],
+   "prepSummaryVi": "14 từ mới và 1 tên riêng （北京烤鸭） trong bốn đoạn: đón người ở sân bay （就、给、让、接）, chuyến đi đầu tiên （次、旅游）, nhờ giúp đỡ qua điện thoại （帮忙、不好意思、已经、那） và tin nhắn sau khi đến nơi （介绍、有时、懂、意思）.",
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk2-l01-ba",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Trợ từ ngữ khí “吧” (2): phỏng đoán kèm mong đợi xác nhận",
+     "explanationVi": "“吧” đặt cuối câu trần thuật để người nói đưa ra phỏng đoán về một sự việc và mong người nghe xác nhận hoặc đồng ý. Đây là cách nói nhẹ nhàng hơn khẳng định thẳng: “你们就是她的学生吧？” = “Các em đúng là học trò của cô ấy nhỉ?”. So với “吧” để đề nghị (HSK1, ví dụ “走吧”), ở bài này 吧 thể hiện suy đoán, không phải rủ rê.",
+     "pattern": "Chủ ngữ + Động từ/Tính từ + (Tân ngữ) + 吧？",
+     "useWhenVi": "Dùng khi bạn khá chắc về điều mình nói nhưng vẫn muốn người nghe xác nhận, ví dụ khi nhận diện người, đoán tình hình thời tiết, quê quán, nghề nghiệp…",
+     "positionVi": "“吧” luôn ở cuối câu. Khi câu đã có từ nghi vấn thì không dùng 吧 kiểu này.",
+     "examples": [
+      {
+       "zh": "你们就是她的学生吧？",
+       "pinyin": "Nǐmen jiù shì tā de xuéshēng ba?",
+       "noteVi": "Các em đúng là học trò của cô ấy nhỉ? (ví dụ trong sách, Tiểu Ngữ giảng đường tr.003)"
+      },
+      {
+       "zh": "她唱歌很好听吧？",
+       "pinyin": "Tā chàng gē hěn hǎotīng ba?",
+       "noteVi": "Cô ấy hát rất hay nhỉ? (ví dụ trong sách)"
+      },
+      {
+       "zh": "陈天中是泰国人吧？",
+       "pinyin": "Chén Tiānzhōng shì Tàiguó rén ba?",
+       "noteVi": "Trần Thiên Trung là người Thái Lan nhỉ? (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu dùng “吧” phỏng đoán đúng:",
+      "stemZh": "外面下雨了，____",
+      "options": [
+       {
+        "zh": "今天很冷吧？",
+        "vi": "Hôm nay chắc lạnh lắm nhỉ?"
+       },
+       {
+        "zh": "冷吧今天很？",
+        "vi": "thứ tự từ sai"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "“吧” phỏng đoán đặt ở cuối câu: 今天很冷吧？ — giống câu trong sách viết “北京现在很冷吧？”. "
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 19,
+       "printedPage": 3,
+       "section": "小语讲堂 · 语气助词“吧”(2)"
+      }
+     ],
+     "sentenceIds": [
+      "h2l1-s2"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l01-shide",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Câu “是……的”: nhấn mạnh thời gian, địa điểm, cách thức của việc đã xảy ra",
+     "explanationVi": "Mẫu “是……的” dùng cho việc ĐÃ xảy ra, để nhấn mạnh thông tin người nói muốn làm rõ: việc đó xảy ra khi nào, ở đâu, bằng cách nào, với ai… Ví dụ “我是今天早上到的” nhấn mạnh thời gian đến là sáng nay; “我们是来旅游的” nhấn mạnh mục đích đến. Lưu ý của sách: trong câu khẳng định và câu hỏi có thể lược bỏ “是” (“我今天早上到的。” vẫn đúng), nhưng câu phủ định KHÔNG lược bỏ được (“我不是坐出租车去的”).",
+     "pattern": "Chủ ngữ + 是 + [thời gian / địa điểm / cách thức / mục đích] + Động từ + 的",
+     "useWhenVi": "Dùng khi muốn làm rõ một chi tiết của việc đã xảy ra: đến khi nào, đến bằng gì, mua ở đâu, đi cùng ai, đến để làm gì.",
+     "positionVi": "“的” đặt ở cuối câu (sau động từ và tân ngữ nếu có). Phủ định: 不是……的.",
+     "examples": [
+      {
+       "zh": "我们是来旅游的。",
+       "pinyin": "Wǒmen shì lái lǚyóu de.",
+       "noteVi": "Chúng tôi đến để du lịch. (ví dụ trong sách; câu này cũng có trong Đoạn 2)"
+      },
+      {
+       "zh": "苹果在哪儿买的？",
+       "pinyin": "Píngguǒ zài nǎr mǎi de?",
+       "noteVi": "Táo mua ở đâu vậy? — câu hỏi lược bỏ 是 (ví dụ trong sách)"
+      },
+      {
+       "zh": "我们不是坐出租车去的。",
+       "pinyin": "Wǒmen bú shì zuò chūzūchē qù de.",
+       "noteVi": "Chúng tôi không phải đi bằng taxi. — phủ định giữ nguyên 是 (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu đúng mẫu “是……的” để nhấn mạnh cách đi:",
+      "stemZh": "我们____。",
+      "options": [
+       {
+        "zh": "是坐出租车去的",
+        "vi": "đi bằng taxi (đúng mẫu)"
+       },
+       {
+        "zh": "坐出租车是去的",
+        "vi": "的 đặt sai vị trí"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Cấu trúc: 是 + cách thức （坐出租车） + động từ （去） + 的 ở cuối câu."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 20,
+       "printedPage": 4,
+       "section": "小语讲堂 · “是……的”句"
+      }
+     ],
+     "sentenceIds": [
+      "h2l1-s10",
+      "h2l1-s16",
+      "h2l1-s20"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l01-pivotal",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Câu kiêm ngữ （兼语句） với 请 / 让 / 叫： nhờ, bảo ai làm gì",
+     "explanationVi": "Trong câu kiêm ngữ, một người/vật vừa là tân ngữ của động từ trước （请/让/叫） vừa là chủ ngữ của động từ sau: “一飞给我打电话了，让我来接你们” — “我” vừa là người được “让”, vừa là người thực hiện “来接你们”. Ba động từ thường gặp: 请 (mời/nhờ, lịch sự), 让 (bảo, để cho), 叫 (bảo, gọi). Trong bài, cả ba đều xuất hiện: 请我们吃了北京烤鸭 (mời ăn), 让我去接一个人 (bảo đi đón), 叫李文帮忙 (bảo Lý Văn giúp).",
+     "pattern": "Chủ ngữ + 请/让/叫 + Tân ngữ (kiêm chủ ngữ) + Động từ/Cụm động từ",
+     "useWhenVi": "Dùng khi nói ai nhờ/mời/bảo ai làm việc gì: nhờ bạn giúp, bảo học sinh nói tiếng Trung, mẹ gọi các con về nhà.",
+     "positionVi": "Tân ngữ đứng giữa hai động từ và làm chủ ngữ của phần sau; không thêm dấu câu hay 的 ở giữa.",
+     "examples": [
+      {
+       "zh": "我想请你帮个忙。",
+       "pinyin": "Wǒ xiǎng qǐng nǐ bāng gè máng.",
+       "noteVi": "Mình muốn nhờ bạn giúp một việc. (ví dụ trong sách; Trần Thiên Trung nói gần giống vậy ở Đoạn 3)"
+      },
+      {
+       "zh": "王老师让我们说中文。",
+       "pinyin": "Wáng lǎoshī ràng wǒmen shuō Zhōngwén.",
+       "noteVi": "Cô Vương bảo chúng tôi nói tiếng Trung. (ví dụ trong sách)"
+      },
+      {
+       "zh": "妈妈叫孩子们回家。",
+       "pinyin": "Māma jiào háizimen huí jiā.",
+       "noteVi": "Mẹ gọi các con về nhà. (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu kiêm ngữ đúng:",
+      "stemZh": "妈妈____。",
+      "options": [
+       {
+        "zh": "叫孩子们回家",
+        "vi": "gọi các con về nhà (đúng mẫu)"
+       },
+       {
+        "zh": "孩子们叫回家妈妈",
+        "vi": "thứ tự từ sai"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Mẫu: Chủ ngữ （妈妈） + 叫 + tân ngữ kiêm chủ ngữ （孩子们） + động từ （回家）."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 22,
+       "printedPage": 6,
+       "section": "小语讲堂 · 兼语句"
+      }
+     ],
+     "sentenceIds": [
+      "h2l1-s4",
+      "h2l1-s17",
+      "h2l1-s21"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l01-characters",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự",
+     "title": "Hai bộ thủ của bài: 扌（提手旁） và 冫（两点水）",
+     "explanationVi": "Workbook (tr.001) giới thiệu hai bộ thủ gắn với bốn chữ của sách viết Bài 1. Bộ 扌 gọi là 提手旁 (tíshǒupáng) — là chữ 手 (tay) viết gọn khi làm bộ thủ, nên các chữ có 扌 thường liên quan đến tay và hành động của tay: 打 (đánh; gọi điện), 接 (đón, tiếp). Bộ 冫 gọi là 两点水 (liǎngdiǎnshuǐ — “hai chấm nước”) — liên quan đến nước và cái lạnh: 冷 (lạnh), 次 (lần) mang bộ 冫. Học theo bộ giúp nhớ mặt chữ nhanh hơn và đoán nghĩa của chữ mới cùng bộ.",
+     "pattern": "扌 + 丁 = 打 · 扌 + 妾 = 接 · 冫 + 令 = 冷 · 冫 + 欠 = 次",
+     "examples": [
+      {
+       "zh": "打电话",
+       "pinyin": "dǎ diànhuà",
+       "noteVi": "gọi điện thoại — 打 có bộ tay 扌 vì gọi điện là hành động dùng tay."
+      },
+      {
+       "zh": "接人",
+       "pinyin": "jiē rén",
+       "noteVi": "đón người — 接 cũng có bộ 扌."
+      },
+      {
+       "zh": "北京现在很冷。",
+       "pinyin": "Běijīng xiànzài hěn lěng.",
+       "noteVi": "Bắc Kinh bây giờ rất lạnh. — 冷 có bộ hai chấm nước 冫."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chữ nào sau đây có bộ 两点水 冫?",
+      "stemZh": "选有冫的字：",
+      "options": [
+       {
+        "zh": "冷",
+        "vi": "lạnh — có 冫"
+       },
+       {
+        "zh": "打",
+        "vi": "đánh — có 扌"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "冷 = 冫 + 令； 打 = 扌 + 丁 thuộc bộ 提手旁."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      },
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 1,
+       "printedPage": 1,
+       "section": "Bài 1 · 打 接 冷 次"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "reader-h2l1",
+    "titleVi": "Bốn đoạn của bài: đón ở sân bay, trong xe, cuộc gọi và tin nhắn",
+    "headingVi": "Nghe & đọc bốn đoạn",
+    "noteVi": "Track lẻ (1-1, 1-3, 1-5, 1-7) là audio của bốn đoạn; track chẵn là audio đọc từ mới của từng đoạn. Mỗi đoạn có câu hỏi kiểm tra ngay bên dưới — làm tại chỗ sau khi nghe (theo chuẩn D28). Đoạn 4 là một tin nhắn, không phải hội thoại. Mốc đoạn audio là mốc máy (ASR), chưa nghe kiểm chứng.",
+    "sentences": [
+     {
+      "id": "h2l1-s1",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "请问，您是王一飞老师的姐姐吗？",
+      "pinyin": "Qǐngwèn, nín shì Wáng Yīfēi lǎoshī de jiějie ma?",
+      "vi": "Xin hỏi, chị là chị của cô Vương Nhất Phi phải không ạ?",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 0.46,
+       "end": 4.28,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s2",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "是的，你们就是她的学生吧？",
+      "pinyin": "Shì de, nǐmen jiù shì tā de xuéshēng ba?",
+      "vi": "Đúng vậy, các em đúng là học trò của cô ấy nhỉ?",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 5.42,
+       "end": 8.66,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s3",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "对。我是白家月，她是安妮。",
+      "pinyin": "Duì. Wǒ shì Bái Jiāyuè, tā shì Ānnī.",
+      "vi": "Dạ đúng. Em là Bạch Gia Nguyệt, còn đây là An Ni.",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 9.64,
+       "end": 14.14,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s4",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "你们好，我叫王一雪。一飞给我打电话了，让我来接你们。",
+      "pinyin": "Nǐmen hǎo, wǒ jiào Wáng Yīxuě. Yīfēi gěi wǒ dǎ diànhuà le, ràng wǒ lái jiē nǐmen.",
+      "vi": "Chào các em, chị là Vương Nhất Tuyết. Nhất Phi đã gọi điện cho chị, bảo chị đến đón các em.",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 15.36,
+       "end": 22.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s5",
+      "speaker": "Bạch Gia Nguyệt và An Ni",
+      "zh": "谢谢您。",
+      "pinyin": "Xièxie nín.",
+      "vi": "Chúng em cảm ơn chị ạ.",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 23.66,
+       "end": 24.56,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s6",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "不客气。",
+      "pinyin": "Bú kèqi.",
+      "vi": "Không có gì.",
+      "passageId": "h2l1-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-1",
+       "start": 25.76,
+       "end": 26.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s7",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "你们是第一次来北京吗？",
+      "pinyin": "Nǐmen shì dì-yī cì lái Běijīng ma?",
+      "vi": "Đây là lần đầu tiên các em đến Bắc Kinh à?",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 0.14,
+       "end": 2.52,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s8",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "是的，我们都是第一次来。",
+      "pinyin": "Shì de, wǒmen dōu shì dì-yī cì lái.",
+      "vi": "Dạ, cả hai chúng em đều là lần đầu đến.",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 3.34,
+       "end": 6.44,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s9",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "你们是来学中文的吗？",
+      "pinyin": "Nǐmen shì lái xué Zhōngwén de ma?",
+      "vi": "Các em đến để học tiếng Trung à?",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 7.36,
+       "end": 9.58,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s10",
+      "speaker": "An Ni",
+      "zh": "不是，我们是来旅游的。",
+      "pinyin": "Bú shì, wǒmen shì lái lǚyóu de.",
+      "vi": "Không ạ, chúng em đến du lịch.",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 10.62,
+       "end": 13.74,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s11",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我这几天都不忙，你们有事就找我。",
+      "pinyin": "Wǒ zhè jǐ tiān dōu bù máng, nǐmen yǒu shì jiù zhǎo wǒ.",
+      "vi": "Mấy hôm nay chị đều không bận, có việc gì các em cứ tìm chị.",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 14.48,
+       "end": 18.64,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s12",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "好的，谢谢您。",
+      "pinyin": "Hǎo de, xièxie nín.",
+      "vi": "Dạ vâng, cảm ơn chị ạ.",
+      "passageId": "h2l1-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-3",
+       "start": 20.08,
+       "end": 21.88,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s13",
+      "speaker": "Trần Thiên Trung",
+      "zh": "喂，家月，你明天有时间吗？我想请你帮个忙。",
+      "pinyin": "Wèi, Jiāyuè, nǐ míngtiān yǒu shíjiān ma? Wǒ xiǎng qǐng nǐ bāng gè máng.",
+      "vi": "A lô, Gia Nguyệt, ngày mai bạn có thời gian không? Mình muốn nhờ bạn giúp một việc.",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 0.14,
+       "end": 5.98,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s14",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "不好意思，天中，我已经到北京了。",
+      "pinyin": "Bù hǎoyìsi, Tiānzhōng, wǒ yǐjīng dào Běijīng le.",
+      "vi": "Xin lỗi nhé Thiên Trung, mình đã đến Bắc Kinh rồi.",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 7.36,
+       "end": 11.4,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s15",
+      "speaker": "Trần Thiên Trung",
+      "zh": "你是什么时候到的？",
+      "pinyin": "Nǐ shì shénme shíhou dào de?",
+      "vi": "Bạn đến khi nào vậy?",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 12.8,
+       "end": 14.6,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s16",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我是今天早上到的。",
+      "pinyin": "Wǒ shì jīntiān zǎoshang dào de.",
+      "vi": "Mình đến sáng nay.",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 15.76,
+       "end": 17.94,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s17",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "你有事可以叫李文帮忙，他还在学校呢。",
+      "pinyin": "Nǐ yǒu shì kěyǐ jiào Lǐ Wén bāngmáng, tā hái zài xuéxiào ne.",
+      "vi": "Có việc thì bạn có thể nhờ Lý Văn giúp, cậu ấy vẫn còn ở trường đấy.",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 18.62,
+       "end": 22.98,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s18",
+      "speaker": "Trần Thiên Trung",
+      "zh": "好的，那我给他打个电话。",
+      "pinyin": "Hǎo de, nà wǒ gěi tā dǎ gè diànhuà.",
+      "vi": "Được, vậy mình gọi điện cho cậu ấy.",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 24.16,
+       "end": 26.78,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s19",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "好，再见！",
+      "pinyin": "Hǎo, zàijiàn!",
+      "vi": "Ừ, tạm biệt nhé!",
+      "passageId": "h2l1-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-5",
+       "start": 26.78,
+       "end": 29.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s20",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "王老师，我们已经到北京了，是您姐姐来接的我们。",
+      "pinyin": "Wáng lǎoshī, wǒmen yǐjīng dào Běijīng le, shì nín jiějie lái jiē de wǒmen.",
+      "vi": "Thưa cô Vương, chúng em đã đến Bắc Kinh rồi ạ, là chị của cô đến đón chúng em.",
+      "passageId": "h2l1-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-7",
+       "start": 0.14,
+       "end": 5.78,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s21",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "她请我们吃了北京烤鸭，还给我们介绍了很多东西。",
+      "pinyin": "Tā qǐng wǒmen chīle Běijīng Kǎoyā, hái gěi wǒmen jièshàole hěn duō dōngxi.",
+      "vi": "Chị ấy mời chúng em ăn vịt quay Bắc Kinh, còn giới thiệu cho chúng em rất nhiều thứ.",
+      "passageId": "h2l1-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-7",
+       "start": 6.58,
+       "end": 11.64,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l1-s22",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我们的中文不太好，有时不太懂她的意思。",
+      "pinyin": "Wǒmen de Zhōngwén bú tài hǎo, yǒushí bú tài dǒng tā de yìsi.",
+      "vi": "Tiếng Trung của chúng em chưa tốt lắm, thỉnh thoảng không hiểu ý chị ấy.",
+      "passageId": "h2l1-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l01-7",
+       "start": 12.46,
+       "end": 16.66,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb2-l01-1",
+      "label": "Track 1-1 · Đoạn 1 (ở sân bay)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-1.mp3",
+      "durationSec": 27.413,
+      "bookRef": "Textbook HSK 2 track 1-1",
+      "segments": [
+       {
+        "sentenceId": "h2l1-s1",
+        "start": 0.46,
+        "end": 4.28,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s2",
+        "start": 5.42,
+        "end": 8.66,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s3",
+        "start": 9.64,
+        "end": 14.14,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s4",
+        "start": 15.36,
+        "end": 22.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s5",
+        "start": 23.66,
+        "end": 24.56,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s6",
+        "start": 25.76,
+        "end": 26.54,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "Track 1-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-2",
+      "label": "Track 1-2 · Từ mới Đoạn 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-2.mp3",
+      "durationSec": 9.773,
+      "bookRef": "Textbook HSK 2 track 1-2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "Track 1-2 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-3",
+      "label": "Track 1-3 · Đoạn 2 (trong xe)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-3.mp3",
+      "durationSec": 22.733,
+      "bookRef": "Textbook HSK 2 track 1-3",
+      "segments": [
+       {
+        "sentenceId": "h2l1-s7",
+        "start": 0.14,
+        "end": 2.52,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s8",
+        "start": 3.34,
+        "end": 6.44,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s9",
+        "start": 7.36,
+        "end": 9.58,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s10",
+        "start": 10.62,
+        "end": 13.74,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s11",
+        "start": 14.48,
+        "end": 18.64,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s12",
+        "start": 20.08,
+        "end": 21.88,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 19,
+        "printedPage": 3,
+        "section": "Track 1-3 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-4",
+      "label": "Track 1-4 · Từ mới Đoạn 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-4.mp3",
+      "durationSec": 5.501,
+      "bookRef": "Textbook HSK 2 track 1-4",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "Track 1-4 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-5",
+      "label": "Track 1-5 · Đoạn 3 (cuộc gọi điện thoại)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-5.mp3",
+      "durationSec": 30.893,
+      "bookRef": "Textbook HSK 2 track 1-5",
+      "segments": [
+       {
+        "sentenceId": "h2l1-s13",
+        "start": 0.14,
+        "end": 5.98,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s14",
+        "start": 7.36,
+        "end": 11.4,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s15",
+        "start": 12.8,
+        "end": 14.6,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s16",
+        "start": 15.76,
+        "end": 17.94,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s17",
+        "start": 18.62,
+        "end": 22.98,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s18",
+        "start": 24.16,
+        "end": 26.78,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s19",
+        "start": 26.78,
+        "end": 29.54,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "Track 1-5 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-6",
+      "label": "Track 1-6 · Từ mới Đoạn 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-6.mp3",
+      "durationSec": 12.221,
+      "bookRef": "Textbook HSK 2 track 1-6",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "Track 1-6 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-7",
+      "label": "Track 1-7 · Đoạn 4 (tin nhắn)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-7.mp3",
+      "durationSec": 17.693,
+      "bookRef": "Textbook HSK 2 track 1-7",
+      "segments": [
+       {
+        "sentenceId": "h2l1-s20",
+        "start": 0.14,
+        "end": 5.78,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s21",
+        "start": 6.58,
+        "end": 11.64,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l1-s22",
+        "start": 12.46,
+        "end": 16.66,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "Track 1-7 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l01-8",
+      "label": "Track 1-8 · Từ mới Đoạn 4",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-8.mp3",
+      "durationSec": 14.813,
+      "bookRef": "Textbook HSK 2 track 1-8",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (1-1…1-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "Track 1-8 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "h2l1-text-1",
+      "title": "Đoạn 1 · Ở sân bay",
+      "context": "Ở sân bay, Vương Nhất Tuyết — chị của cô Vương Nhất Phi — đến đón Bạch Gia Nguyệt và An Ni (Textbook tr.002).",
+      "audioTrackId": "trk-tb2-l01-1",
+      "sentenceIds": [
+       "h2l1-s1",
+       "h2l1-s2",
+       "h2l1-s3",
+       "h2l1-s4",
+       "h2l1-s5",
+       "h2l1-s6"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 18,
+        "printedPage": 2,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (Textbook tr.002, track 1-1): Ai đến đón Bạch Gia Nguyệt?",
+        "promptZh": "谁来接白家月了？",
+        "promptPinyin": "Shéi lái jiē Bái Jiāyuè le?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "王一飞",
+          "pinyin": "Wáng Yīfēi",
+          "vi": "Vương Nhất Phi"
+         },
+         {
+          "id": "2",
+          "zh": "王一雪",
+          "pinyin": "Wáng Yīxuě",
+          "vi": "Vương Nhất Tuyết"
+         },
+         {
+          "id": "3",
+          "zh": "她的姐姐",
+          "pinyin": "tā de jiějie",
+          "vi": "chị của cô ấy"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Đoạn 1: người đến đón là 王一雪 (chị của Vương Nhất Phi) — “一飞给我打电话了，让我来接你们”. Đáp án suy trực tiếp từ lời thoại in ở Textbook tr.002.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 18,
+          "printedPage": 2,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-1",
+         "start": 0.46,
+         "end": 26.54,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (Textbook tr.002, track 1-1): Vương Nhất Phi đã gọi điện cho ai?",
+        "promptZh": "王一飞给谁打电话了？",
+        "promptPinyin": "Wáng Yīfēi gěi shéi dǎ diànhuà le?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "安妮",
+          "pinyin": "Ānnī",
+          "vi": "An Ni"
+         },
+         {
+          "id": "2",
+          "zh": "白家月",
+          "pinyin": "Bái Jiāyuè",
+          "vi": "Bạch Gia Nguyệt"
+         },
+         {
+          "id": "3",
+          "zh": "王一雪",
+          "pinyin": "Wáng Yīxuě",
+          "vi": "Vương Nhất Tuyết"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Vương Nhất Tuyết nói “一飞给我打电话了” — người nhận cuộc gọi là chính cô ấy. Đối chiếu lời thoại in ở Textbook tr.002.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 18,
+          "printedPage": 2,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-1",
+         "start": 0.46,
+         "end": 26.54,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l1-text-2",
+      "title": "Đoạn 2 · Trong xe của Vương Nhất Tuyết",
+      "context": "Trong xe, ba người trò chuyện: đây là lần đầu hai cô gái đến Bắc Kinh để du lịch (Textbook tr.003–004).",
+      "audioTrackId": "trk-tb2-l01-3",
+      "sentenceIds": [
+       "h2l1-s7",
+       "h2l1-s8",
+       "h2l1-s9",
+       "h2l1-s10",
+       "h2l1-s11",
+       "h2l1-s12"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 20,
+        "printedPage": 4,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (Textbook tr.003, track 1-3): Đây là lần thứ mấy Bạch Gia Nguyệt đến Bắc Kinh?",
+        "promptZh": "白家月是第几次来北京？",
+        "promptPinyin": "Bái Jiāyuè shì dì-jǐ cì lái Běijīng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "第一次",
+          "pinyin": "dì-yī cì",
+          "vi": "lần đầu tiên"
+         },
+         {
+          "id": "2",
+          "zh": "第四次",
+          "pinyin": "dì-sì cì",
+          "vi": "lần thứ tư"
+         },
+         {
+          "id": "3",
+          "zh": "第七次",
+          "pinyin": "dì-qī cì",
+          "vi": "lần thứ bảy"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Cô ấy trả lời “我们都是第一次来”. Đối chiếu lời thoại in ở Textbook tr.004 (câu hỏi in ở tr.003).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 19,
+          "printedPage": 3,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-3",
+         "start": 0.14,
+         "end": 21.88,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (Textbook tr.003, track 1-3): Bạch Gia Nguyệt và An Ni đến Bắc Kinh để làm gì?",
+        "promptZh": "白家月和安妮是来北京做什么的？",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī shì lái Běijīng zuò shénme de?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "旅游",
+          "pinyin": "lǚyóu",
+          "vi": "du lịch"
+         },
+         {
+          "id": "2",
+          "zh": "学中文",
+          "pinyin": "xué Zhōngwén",
+          "vi": "học tiếng Trung"
+         },
+         {
+          "id": "3",
+          "zh": "找王一雪",
+          "pinyin": "zhǎo Wáng Yīxuě",
+          "vi": "tìm Vương Nhất Tuyết"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "An Ni nói “不是，我们是来旅游的”. Đối chiếu lời thoại in ở Textbook tr.004.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 19,
+          "printedPage": 3,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-3",
+         "start": 0.14,
+         "end": 21.88,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l1-text-3",
+      "title": "Đoạn 3 · Cuộc gọi của Trần Thiên Trung",
+      "context": "Trong xe, Bạch Gia Nguyệt nhận cuộc gọi của Trần Thiên Trung — cậu muốn nhờ cô giúp một việc (Textbook tr.005).",
+      "audioTrackId": "trk-tb2-l01-5",
+      "sentenceIds": [
+       "h2l1-s13",
+       "h2l1-s14",
+       "h2l1-s15",
+       "h2l1-s16",
+       "h2l1-s17",
+       "h2l1-s18",
+       "h2l1-s19"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 21,
+        "printedPage": 5,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (Textbook tr.005, track 1-5): Trần Thiên Trung gọi điện cho Bạch Gia Nguyệt để làm gì?",
+        "promptZh": "陈天中为什么给白家月打电话？",
+        "promptPinyin": "Chén Tiānzhōng wèishénme gěi Bái Jiāyuè dǎ diànhuà?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "找她帮忙",
+          "pinyin": "zhǎo tā bāngmáng",
+          "vi": "nhờ cô ấy giúp"
+         },
+         {
+          "id": "2",
+          "zh": "请她吃饭",
+          "pinyin": "qǐng tā chīfàn",
+          "vi": "mời cô ấy ăn cơm"
+         },
+         {
+          "id": "3",
+          "zh": "让她接个朋友",
+          "pinyin": "ràng tā jiē gè péngyou",
+          "vi": "bảo cô ấy đón một người bạn"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Anh ấy nói “我想请你帮个忙”. Đối chiếu lời thoại in ở Textbook tr.005.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 21,
+          "printedPage": 5,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-5",
+         "start": 0.14,
+         "end": 29.54,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (Textbook tr.005, track 1-5): Bạch Gia Nguyệt đến Bắc Kinh khi nào?",
+        "promptZh": "白家月是什么时候到北京的？",
+        "promptPinyin": "Bái Jiāyuè shì shénme shíhou dào Běijīng de?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "昨天中午",
+          "pinyin": "zuótiān zhōngwǔ",
+          "vi": "trưa hôm qua"
+         },
+         {
+          "id": "2",
+          "zh": "昨天晚上",
+          "pinyin": "zuótiān wǎnshang",
+          "vi": "tối hôm qua"
+         },
+         {
+          "id": "3",
+          "zh": "今天早上",
+          "pinyin": "jīntiān zǎoshang",
+          "vi": "sáng nay"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Cô ấy nói “我是今天早上到的”. Đối chiếu lời thoại in ở Textbook tr.005.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 21,
+          "printedPage": 5,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-5",
+         "start": 0.14,
+         "end": 29.54,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l1-text-4",
+      "title": "Đoạn 4 · Tin nhắn gửi cô Vương",
+      "context": "Ở khách sạn, Bạch Gia Nguyệt nhắn tin cho cô Vương Nhất Phi báo tin đã đến Bắc Kinh (Textbook tr.007). Đoạn này là một tin nhắn, không phải hội thoại.",
+      "audioTrackId": "trk-tb2-l01-7",
+      "sentenceIds": [
+       "h2l1-s20",
+       "h2l1-s21",
+       "h2l1-s22"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 23,
+        "printedPage": 7,
+        "section": "课文 4"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2-text4-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (Textbook tr.007, track 1-7): nghe đoạn rồi判断 câu sau đúng hay sai — “王老师到北京了，是她姐姐来接的她。”",
+        "promptZh": "王老师到北京了，是她姐姐来接的她。",
+        "promptPinyin": "Wáng lǎoshī dào Běijīng le, shì tā jiějie lái jiē de tā.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Tin nhắn nói “我们已经到北京了，是您姐姐来接的我们” — người đến là Bạch Gia Nguyệt và An Ni, không phải cô Vương. Câu phán đoán sai. Đối chiếu Textbook tr.007.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 23,
+          "printedPage": 7,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-7",
+         "start": 0.14,
+         "end": 16.66,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2-text4-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (Textbook tr.007, track 1-7): nghe đoạn rồi判断 câu sau đúng hay sai — “白家月现在要去饭店吃北京烤鸭。”",
+        "promptZh": "白家月现在要去饭店吃北京烤鸭。",
+        "promptPinyin": "Bái Jiāyuè xiànzài yào qù fàndiàn chī Běijīng Kǎoyā.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Tin nhắn nói “她请我们吃了北京烤鸭” — họ đã ăn rồi, không phải sắp đi ăn. Câu phán đoán sai. Đối chiếu Textbook tr.007.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 23,
+          "printedPage": 7,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l01-7",
+         "start": 0.14,
+         "end": 16.66,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2-text4-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (Textbook tr.007): Chị của cô Vương đã mời Bạch Gia Nguyệt ăn gì?",
+        "promptZh": "王老师的姐姐请白家月吃什么了？",
+        "promptPinyin": "Wáng lǎoshī de jiějie qǐng Bái Jiāyuè chī shénme le?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "面包",
+          "pinyin": "miànbāo",
+          "vi": "bánh mì"
+         },
+         {
+          "id": "2",
+          "zh": "饺子",
+          "pinyin": "jiǎozi",
+          "vi": "sủi cảo"
+         },
+         {
+          "id": "3",
+          "zh": "北京烤鸭",
+          "pinyin": "Běijīng Kǎoyā",
+          "vi": "vịt quay Bắc Kinh"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Tin nhắn viết rõ “她请我们吃了北京烤鸭”. Đối chiếu Textbook tr.007.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 23,
+          "printedPage": 7,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       },
+       {
+        "id": "tb2-text4-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (Textbook tr.007): Vì sao Bạch Gia Nguyệt không hiểu ý chị của cô Vương?",
+        "promptZh": "白家月为什么不懂王老师姐姐的意思？",
+        "promptPinyin": "Bái Jiāyuè wèishénme bù dǒng Wáng lǎoshī jiějie de yìsi?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "她不会中文",
+          "pinyin": "tā bú huì Zhōngwén",
+          "vi": "cô ấy không biết tiếng Trung"
+         },
+         {
+          "id": "2",
+          "zh": "她的中文不太好",
+          "pinyin": "tā de Zhōngwén bú tài hǎo",
+          "vi": "tiếng Trung của cô ấy chưa tốt lắm"
+         },
+         {
+          "id": "3",
+          "zh": "没有王老师帮忙",
+          "pinyin": "méiyǒu Wáng lǎoshī bāngmáng",
+          "vi": "không có cô Vương giúp"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Tin nhắn viết “我们的中文不太好，有时不太懂她的意思”. Đối chiếu Textbook tr.007.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 23,
+          "printedPage": 7,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "exercises-hsk2-l01-main",
+    "titleVi": "Bộ luyện tập chính — Bài 1 HSK 2",
+    "noteVi": "Gồm ba nhóm theo sách: 4 câu khởi động nối từ – hình (Textbook tr.001); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.008, ngân hàng từ in sẵn); 3 câu điền từ mở rộng của Workbook (tr.002). Câu hỏi riêng của bốn đoạn nằm ngay dưới từng đoạn ở mục Nghe & đọc (chuẩn D28), không nằm trong bộ này.",
+    "items": [
+     {
+      "id": "tb2-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.001): nối từ với hình đúng — 不好意思.",
+      "promptZh": "不好意思",
+      "promptPinyin": "bù hǎoyìsi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "旅游",
+        "pinyin": "lǚyóu",
+        "vi": "du lịch",
+        "image": "assets/hsk2-lesson-01/warm-travel.webp",
+        "imageAlt": "Tranh vẽ lại: gia đình chụp ảnh kỷ niệm trước cổng đền trong chuyến đi"
+       },
+       {
+        "id": "2",
+        "zh": "不好意思",
+        "pinyin": "bù hǎoyìsi",
+        "vi": "xin lỗi; ngại quá",
+        "image": "assets/hsk2-lesson-01/warm-embarrassed.webp",
+        "imageAlt": "Tranh vẽ lại: chàng trai gãi đầu, vẻ mặt ngượng ngùng xin lỗi"
+       },
+       {
+        "id": "3",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ",
+        "image": "assets/hsk2-lesson-01/warm-help.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái trẻ giúp ông cụ xách túi đồ"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu",
+        "image": "assets/hsk2-lesson-01/warm-introduce.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái giới thiệu hai người đàn ông bắt tay làm quen"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 2 (chàng trai gãi đầu ngượng) thể hiện đúng 不好意思 theo tranh minh họa gốc ở Textbook tr.001; ba hình còn lại rõ ràng là du lịch, giúp đỡ và giới thiệu.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 17,
+        "printedPage": 1,
+        "section": "热身 · 连线"
+       }
+      ]
+     },
+     {
+      "id": "tb2-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.001): nối từ với hình đúng — 旅游.",
+      "promptZh": "旅游",
+      "promptPinyin": "lǚyóu",
+      "options": [
+       {
+        "id": "1",
+        "zh": "旅游",
+        "pinyin": "lǚyóu",
+        "vi": "du lịch",
+        "image": "assets/hsk2-lesson-01/warm-travel.webp",
+        "imageAlt": "Tranh vẽ lại: gia đình chụp ảnh kỷ niệm trước cổng đền trong chuyến đi"
+       },
+       {
+        "id": "2",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu",
+        "image": "assets/hsk2-lesson-01/warm-introduce.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái giới thiệu hai người đàn ông bắt tay làm quen"
+       },
+       {
+        "id": "3",
+        "zh": "不好意思",
+        "pinyin": "bù hǎoyìsi",
+        "vi": "xin lỗi; ngại quá",
+        "image": "assets/hsk2-lesson-01/warm-embarrassed.webp",
+        "imageAlt": "Tranh vẽ lại: chàng trai gãi đầu, vẻ mặt ngượng ngùng xin lỗi"
+       },
+       {
+        "id": "4",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ",
+        "image": "assets/hsk2-lesson-01/warm-help.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái trẻ giúp ông cụ xách túi đồ"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 1 (gia đình chụp ảnh trước cổng đền, có vali và máy ảnh) thể hiện đúng 旅游 theo tranh gốc ở Textbook tr.001.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 17,
+        "printedPage": 1,
+        "section": "热身 · 连线"
+       }
+      ]
+     },
+     {
+      "id": "tb2-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.001): nối từ với hình đúng — 介绍.",
+      "promptZh": "介绍",
+      "promptPinyin": "jièshào",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ",
+        "image": "assets/hsk2-lesson-01/warm-help.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái trẻ giúp ông cụ xách túi đồ"
+       },
+       {
+        "id": "2",
+        "zh": "旅游",
+        "pinyin": "lǚyóu",
+        "vi": "du lịch",
+        "image": "assets/hsk2-lesson-01/warm-travel.webp",
+        "imageAlt": "Tranh vẽ lại: gia đình chụp ảnh kỷ niệm trước cổng đền trong chuyến đi"
+       },
+       {
+        "id": "3",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu",
+        "image": "assets/hsk2-lesson-01/warm-introduce.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái giới thiệu hai người đàn ông bắt tay làm quen"
+       },
+       {
+        "id": "4",
+        "zh": "不好意思",
+        "pinyin": "bù hǎoyìsi",
+        "vi": "xin lỗi; ngại quá",
+        "image": "assets/hsk2-lesson-01/warm-embarrassed.webp",
+        "imageAlt": "Tranh vẽ lại: chàng trai gãi đầu, vẻ mặt ngượng ngùng xin lỗi"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 3 (một người giới thiệu hai người bắt tay) thể hiện đúng 介绍 theo tranh gốc ở Textbook tr.001.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 17,
+        "printedPage": 1,
+        "section": "热身 · 连线"
+       }
+      ]
+     },
+     {
+      "id": "tb2-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.001): nối từ với hình đúng — 帮忙.",
+      "promptZh": "帮忙",
+      "promptPinyin": "bāngmáng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu",
+        "image": "assets/hsk2-lesson-01/warm-introduce.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái giới thiệu hai người đàn ông bắt tay làm quen"
+       },
+       {
+        "id": "2",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ",
+        "image": "assets/hsk2-lesson-01/warm-help.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái trẻ giúp ông cụ xách túi đồ"
+       },
+       {
+        "id": "3",
+        "zh": "旅游",
+        "pinyin": "lǚyóu",
+        "vi": "du lịch",
+        "image": "assets/hsk2-lesson-01/warm-travel.webp",
+        "imageAlt": "Tranh vẽ lại: gia đình chụp ảnh kỷ niệm trước cổng đền trong chuyến đi"
+       },
+       {
+        "id": "4",
+        "zh": "不好意思",
+        "pinyin": "bù hǎoyìsi",
+        "vi": "xin lỗi; ngại quá",
+        "image": "assets/hsk2-lesson-01/warm-embarrassed.webp",
+        "imageAlt": "Tranh vẽ lại: chàng trai gãi đầu, vẻ mặt ngượng ngùng xin lỗi"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 2 (cô gái xách túi giúp ông cụ) thể hiện đúng 帮忙 theo tranh gốc ở Textbook tr.001.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 17,
+        "printedPage": 1,
+        "section": "热身 · 连线"
+       }
+      ]
+     },
+     {
+      "id": "tb2-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.008): chọn từ trong ngân hàng từ （帮忙/已经/意思/介绍/有时） điền vào chỗ trống.",
+      "promptZh": "我（）去电影院看个电影。",
+      "promptPinyin": "Wǒ ( ) qù diànyǐngyuàn kàn gè diànyǐng.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ"
+       },
+       {
+        "id": "2",
+        "zh": "已经",
+        "pinyin": "yǐjīng",
+        "vi": "đã"
+       },
+       {
+        "id": "3",
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "ý; ý nghĩa"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu"
+       },
+       {
+        "id": "5",
+        "zh": "有时",
+        "pinyin": "yǒushí",
+        "vi": "thỉnh thoảng"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Từ còn thiếu là 有时 (thỉnh thoảng): 'thỉnh thoảng tôi đến rạp xem một bộ phim'. Thân câu và ngân hàng từ in nguyên văn ở Textbook tr.008.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 8,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.008): chọn từ trong ngân hàng từ （帮忙/已经/意思/介绍/有时） điền vào chỗ trống.",
+      "promptZh": "上课要多听、多说，你懂我的（）吗？",
+      "promptPinyin": "Shàngkè yào duō tīng, duō shuō, nǐ dǒng wǒ de ( ) ma?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ"
+       },
+       {
+        "id": "2",
+        "zh": "已经",
+        "pinyin": "yǐjīng",
+        "vi": "đã"
+       },
+       {
+        "id": "3",
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "ý; ý nghĩa"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu"
+       },
+       {
+        "id": "5",
+        "zh": "有时",
+        "pinyin": "yǒushí",
+        "vi": "thỉnh thoảng"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm cố định 你懂我的意思吗 (bạn có hiểu ý tôi không) cần 意思. Thân câu in nguyên văn ở Textbook tr.008 (sách còn chú thích 多听、多说 ngay tại trang này).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 8,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.008): chọn từ trong ngân hàng từ （帮忙/已经/意思/介绍/有时） điền vào chỗ trống.",
+      "promptZh": "我很喜欢北京，这（）是我第三次来北京了。",
+      "promptPinyin": "Wǒ hěn xǐhuan Běijīng, zhè ( ) shì wǒ dì-sān cì lái Běijīng le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ"
+       },
+       {
+        "id": "2",
+        "zh": "已经",
+        "pinyin": "yǐjīng",
+        "vi": "đã"
+       },
+       {
+        "id": "3",
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "ý; ý nghĩa"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu"
+       },
+       {
+        "id": "5",
+        "zh": "有时",
+        "pinyin": "yǒushí",
+        "vi": "thỉnh thoảng"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần 已经 (đã): 'đây đã là lần thứ ba tôi đến Bắc Kinh rồi'. Thân câu in nguyên văn ở Textbook tr.008.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 8,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.008): chọn từ trong ngân hàng từ （帮忙/已经/意思/介绍/有时） điền vào chỗ trống.",
+      "promptZh": "A：安妮，我给你（）一下，这是我的中国朋友李文。B：你好，李文。认识你很高兴。",
+      "promptPinyin": "Ānnī, wǒ gěi nǐ ( ) yíxià, zhè shì wǒ de Zhōngguó péngyou Lǐ Wén. —— Nǐ hǎo, Lǐ Wén. Rènshi nǐ hěn gāoxìng.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ"
+       },
+       {
+        "id": "2",
+        "zh": "已经",
+        "pinyin": "yǐjīng",
+        "vi": "đã"
+       },
+       {
+        "id": "3",
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "ý; ý nghĩa"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu"
+       },
+       {
+        "id": "5",
+        "zh": "有时",
+        "pinyin": "yǒushí",
+        "vi": "thỉnh thoảng"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Mẫu 介绍一下 (giới thiệu một chút) dùng khi giới thiệu người thứ ba. Hội thoại in nguyên văn ở Textbook tr.008.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 8,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.008): chọn từ trong ngân hàng từ （帮忙/已经/意思/介绍/有时） điền vào chỗ trống.",
+      "promptZh": "A：今天的工作太多了！B：那你找个人来（）吧。",
+      "promptPinyin": "Jīntiān de gōngzuò tài duō le! —— Nà nǐ zhǎo gè rén lái ( ) ba.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "帮忙",
+        "pinyin": "bāngmáng",
+        "vi": "giúp đỡ"
+       },
+       {
+        "id": "2",
+        "zh": "已经",
+        "pinyin": "yǐjīng",
+        "vi": "đã"
+       },
+       {
+        "id": "3",
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "ý; ý nghĩa"
+       },
+       {
+        "id": "4",
+        "zh": "介绍",
+        "pinyin": "jièshào",
+        "vi": "giới thiệu"
+       },
+       {
+        "id": "5",
+        "zh": "有时",
+        "pinyin": "yǒushí",
+        "vi": "thỉnh thoảng"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần 帮忙 (giúp đỡ): 'vậy bạn tìm người đến giúp đi'. Hội thoại in nguyên văn ở Textbook tr.008.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 24,
+        "printedPage": 8,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb2-ext-1",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.002): dùng từ mới ghép được （茶杯/好喝/雨衣） điền vào chỗ trống.",
+      "promptZh": "他喜欢喝茶，我就给他买了个（）。",
+      "promptPinyin": "Tā xǐhuan hē chá, wǒ jiù gěi tā mǎile gè ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "茶杯",
+        "pinyin": "chábēi",
+        "vi": "cốc trà"
+       },
+       {
+        "id": "2",
+        "zh": "好喝",
+        "pinyin": "hǎohē",
+        "vi": "ngon (đồ uống)"
+       },
+       {
+        "id": "3",
+        "zh": "雨衣",
+        "pinyin": "yǔyī",
+        "vi": "áo mưa"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Từ mới 茶杯 (ghép 茶 + 杯）: 'anh ấy thích uống trà, tôi bèn mua cho anh ấy một cái cốc trà'. Câu in ở Workbook tr.002 （做一做 câu 1).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 9,
+        "printedPage": 2,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     },
+     {
+      "id": "wb2-ext-2",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.002): dùng từ mới ghép được （茶杯/好喝/雨衣） điền vào chỗ trống.",
+      "promptZh": "下雨了，她穿了一件（）。",
+      "promptPinyin": "Xià yǔ le, tā chuānle yí jiàn ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "茶杯",
+        "pinyin": "chábēi",
+        "vi": "cốc trà"
+       },
+       {
+        "id": "2",
+        "zh": "好喝",
+        "pinyin": "hǎohē",
+        "vi": "ngon (đồ uống)"
+       },
+       {
+        "id": "3",
+        "zh": "雨衣",
+        "pinyin": "yǔyī",
+        "vi": "áo mưa"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Từ 雨衣 (ghép 雨 + 衣） đi với 穿 và lượng từ 件： 'trời mưa rồi, cô ấy mặc một chiếc áo mưa'. Câu in ở Workbook tr.002 （做一做 câu 2).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 9,
+        "printedPage": 2,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     },
+     {
+      "id": "wb2-ext-3",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.002): dùng từ mới ghép được （茶杯/好喝/雨衣） điền vào chỗ trống.",
+      "promptZh": "牛奶很（），你是在哪儿买的？",
+      "promptPinyin": "Niúnǎi hěn ( ), nǐ shì zài nǎr mǎi de?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "茶杯",
+        "pinyin": "chábēi",
+        "vi": "cốc trà"
+       },
+       {
+        "id": "2",
+        "zh": "好喝",
+        "pinyin": "hǎohē",
+        "vi": "ngon (đồ uống)"
+       },
+       {
+        "id": "3",
+        "zh": "雨衣",
+        "pinyin": "yǔyī",
+        "vi": "áo mưa"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Từ 好喝 (ghép 好 + 喝， dùng cho đồ uống): 'sữa rất ngon, bạn mua ở đâu vậy?'. Câu in ở Workbook tr.002 （做一做 câu 3); vế sau còn dùng mẫu “是……的” của bài.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 9,
+        "printedPage": 2,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckIntroVi": "Ba bài tự luyện theo sách: đóng vai đi đón bạn ở ga tàu (tr.009), kể lại một chuyến đi bằng mẫu “是……的” (theo câu hỏi khảo sát tr.001) và nhìn hình hoàn thành khung câu (bài tập tổng hợp B, tr.008). Phần tự luyện không chấm điểm; hãy sử dụng ô nháp và tự đối chiếu.",
+   "selfCheckListenVi": "",
+   "selfCheckTasks": [
+    {
+     "id": "st-h2l1-01",
+     "kind": "speaking",
+     "titleVi": "Đóng vai: đi đón bạn",
+     "promptVi": "Theo hoạt động giao tiếp ở cuối bài (Textbook tr.009): làm việc theo cặp — một người đóng vai cô Vương Nhất Phi, gọi điện nhờ bạn thân ra ga tàu đón hai sinh viên nước ngoài; người đi đón chào hỏi, tự giới thiệu, hỏi hai bạn đến để làm gì và sắp đi đâu. Dùng các mẫu đã học: “……给我打电话了，让我来接你们。”; “你们是来……的吗？”.",
+     "prompts": [
+      "（Người A là cô Vương Nhất Phi, gọi điện nhờ bạn đến ga tàu đón học trò.)",
+      "（Người B là người đi đón: chào hỏi, tự giới thiệu, hỏi mục đích chuyến đi và nơi họ sắp đến.)"
+     ],
+     "draftPromptVi": "Nháp hội thoại đóng vai của bạn:",
+     "answerStatus": "unverified",
+     "instructionVi": "Đóng vai theo cặp: một người nhờ qua điện thoại, một người đi đón ở sân bay và giới thiệu, hỏi thăm.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 25,
+       "printedPage": 9,
+       "section": "交际活动"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l1-02",
+     "kind": "speaking",
+     "titleVi": "Kể lại một chuyến đi của bạn",
+     "promptVi": "Dùng ba câu hỏi khảo sát ở phần Khởi động (Textbook tr.001) và mẫu “是……的”: chuyến đi gần nhất của bạn — bạn đi khi nào, đi cùng ai, đi bằng phương tiện gì? Kể lại trong 4–5 câu, ví dụ: “我是去年去的。”; “我是和朋友一起去的。”; “我们是坐飞机去的。”",
+     "prompts": [
+      "你是什么时候去的？（Bạn đi khi nào?)",
+      "你是和谁一起去的？（Bạn đi cùng ai?)",
+      "你们是怎么去的？（Các bạn đi bằng gì?)"
+     ],
+     "draftPromptVi": "Nháp câu chuyện chuyến đi của bạn:",
+     "answerStatus": "unverified",
+     "instructionVi": "Trả lời ba câu hỏi khảo sát ở phần Khởi động rồi kể thành một đoạn ngắn bằng mẫu “是……的”.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 17,
+       "printedPage": 1,
+       "section": "热身 · 调查"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l1-03",
+     "kind": "speaking",
+     "titleVi": "Nhìn hình nói câu theo khung (Textbook tr.008)",
+     "promptVi": "Bài tập tổng hợp B: nhìn bốn hình và hoàn thành bốn khung câu in trong sách, nói to thành tiếng rồi tự đối chiếu với gợi ý: 1) 他们是开车________。 2) 妈妈________孩子们________。 3) 他们________去的。 4) 她________7点________。 Gợi ý hoàn chỉnh: 1) 去旅游的； 2) 让……吃早饭 (nhờ các con ăn sáng — cũng có thể nói 给……做早饭 tuỳ cách hiểu; bản tham chiếu này dùng 让 vì khớp mẫu kiêm ngữ của bài); 3) 是坐飞机； 4) 是……起床的. Phần này tự luyện nói, không chấm điểm.",
+     "prompts": [
+      "Hình 1：他们是开车________。",
+      "Hình 2：妈妈________孩子们________。",
+      "Hình 3：他们________去的。",
+      "Hình 4：她________7点________。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/hsk2-lesson-01/describe-drive.webp",
+       "alt": "Tranh vẽ lại: gia đình bên chiếc xe cắm trại chất đầy vali lúc hoàng hôn",
+       "captionVi": "Tranh vẽ lại theo hình 1 của bài tập tổng hợp B (Textbook tr.008): cả nhà đi bằng ô tô.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 24,
+         "printedPage": 8,
+         "section": "综合练习 B · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-01/describe-breakfast.webp",
+       "alt": "Tranh vẽ lại: người mẹ bưng khay bữa sáng cho hai con đang ngồi ở bàn ăn",
+       "captionVi": "Tranh vẽ lại theo hình 2 (Textbook tr.008): mẹ mang bữa sáng cho các con.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 24,
+         "printedPage": 8,
+         "section": "综合练习 B · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-01/describe-plane.webp",
+       "alt": "Tranh vẽ lại: cặp đôi kéo vali đi về phía máy bay",
+       "captionVi": "Tranh vẽ lại theo hình 3 (Textbook tr.008): hai người đi máy bay.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 24,
+         "printedPage": 8,
+         "section": "综合练习 B · 看图说话"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-01/describe-wake.webp",
+       "alt": "Tranh vẽ lại: cô gái vươn vai thức dậy, bên cạnh là chiếc đồng hồ báo thức",
+       "captionVi": "Tranh vẽ lại theo hình 4 (Textbook tr.008): cô gái dậy lúc 7 giờ.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 24,
+         "printedPage": 8,
+         "section": "综合练习 B · 看图说话"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết bốn câu hoàn chỉnh của bạn để tự đối chiếu:",
+     "answerStatus": "unverified",
+     "instructionVi": "Nhìn từng hình, hoàn thành khung câu rồi nói to; sau đó mở phần gợi ý trong đề để tự đối chiếu.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 24,
+       "printedPage": 8,
+       "section": "综合练习 B · 看图说话"
+      }
+     ]
+    }
+   ],
+   "apply": {
+    "titleVi": "Đóng vai đón bạn và viết tin nhắn báo đã đến",
+    "instructionVi": "Hai nhiệm vụ vận dụng của bài: đóng vai cuộc đón tiếp ở sân bay và viết một tin nhắn ngắn báo tin đã đến — giống hai tình huống trung tâm của bài học.",
+    "audioTrackId": "trk-tb2-l01-1",
+    "noteVi": "Nghe lại track 1-1 để nhớ mẫu chào hỏi và tự giới thiệu khi đi đón người.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 25,
+      "printedPage": 9,
+      "section": "交际活动"
+     },
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 23,
+      "printedPage": 7,
+      "section": "课文 4"
+     }
+    ],
+    "samplePassageIds": [
+     "h2l1-text-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-h2l1-pickup",
+      "kind": "speaking",
+      "titleVi": "Đóng vai: đi đón bạn ở sân bay",
+      "promptVi": "Tưởng tượng bạn đi đón một người bạn Trung Quốc lần đầu đến Việt Nam. Chào hỏi, tự giới thiệu, nhận mình là người được nhờ đến đón và hỏi bạn đến lần thứ mấy, đến du lịch hay học tập. Dùng ít nhất một câu kiêm ngữ với 让/请 và một câu “是……的”.",
+      "sampleZh": "你们好，我叫王一雪。一飞给我打电话了，让我来接你们。",
+      "samplePinyin": "Nǐmen hǎo, wǒ jiào Wáng Yīxuě. Yīfēi gěi wǒ dǎ diànhuà le, ràng wǒ lái jiē nǐmen.",
+      "sampleVi": "Chào các em, chị là Vương Nhất Tuyết. Nhất Phi đã gọi điện cho chị, bảo chị đến đón các em. (Câu mẫu — Đoạn 1 của bài.)"
+     },
+     {
+      "id": "speak-h2l1-message",
+      "kind": "speaking",
+      "titleVi": "Viết và đọc tin nhắn báo đã đến",
+      "promptVi": "Đóng vai Bạch Gia Nguyệt: viết một tin nhắn 3 câu gửi cô Vương — báo đã đến nơi, ai ra đón, và một điều bạn chưa quen (ví dụ chưa hiểu hết lời người đón). Đọc to tin nhắn sau khi viết.",
+      "sampleZh": "王老师，我们已经到北京了，是您姐姐来接的我们。",
+      "samplePinyin": "Wáng lǎoshī, wǒmen yǐjīng dào Běijīng le, shì nín jiějie lái jiē de wǒmen.",
+      "sampleVi": "Thưa cô Vương, chúng em đã đến Bắc Kinh rồi ạ, là chị của cô đến đón chúng em. (Câu mẫu — Đoạn 4 của bài.)"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "lookup": {
+    "introVi": "Chạm vào một từ hoặc cụm từ trong câu của bốn đoạn, ví dụ kiến thức và tổng kết để xem nhanh Pinyin, Hán–Việt và nghĩa tiếng Việt. Từ điển gồm 14 từ mới, tên riêng 北京烤鸭 của bài và các từ vựng HSK 1 đã học.",
+    "extras": [
+     {
+      "zh": "王一飞",
+      "pinyin": "Wáng Yīfēi",
+      "hanViet": "VƯƠNG NHẤT PHI",
+      "vi": "Vương Nhất Phi — cô giáo tiếng Trung của Bạch Gia Nguyệt và An Ni (tên riêng)"
+     },
+     {
+      "zh": "一飞",
+      "pinyin": "Yīfēi",
+      "hanViet": "NHẤT PHI",
+      "vi": "Nhất Phi — cách gọi tắt tên Vương Nhất Phi (tên riêng)"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — sinh viên, nhân vật chính của bài (tên riêng)"
+     },
+     {
+      "zh": "家月",
+      "pinyin": "Jiāyuè",
+      "hanViet": "GIA NGUYỆT",
+      "vi": "Gia Nguyệt — cách gọi tắt tên Bạch Gia Nguyệt (tên riêng)"
+     },
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "An Ni — bạn học của Bạch Gia Nguyệt (tên riêng)"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết — chị của cô Vương Nhất Phi (tên riêng)"
+     },
+     {
+      "zh": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "hanViet": "TRẦN THIÊN TRUNG",
+      "vi": "Trần Thiên Trung — bạn học gọi điện nhờ giúp đỡ (tên riêng)"
+     },
+     {
+      "zh": "天中",
+      "pinyin": "Tiānzhōng",
+      "hanViet": "THIÊN TRUNG",
+      "vi": "Thiên Trung — cách gọi tắt tên Trần Thiên Trung (tên riêng)"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn — bạn học vẫn còn ở trường (tên riêng)"
+     },
+     {
+      "zh": "第一次",
+      "pinyin": "dì-yī cì",
+      "hanViet": "ĐỆ NHẤT THỨ",
+      "vi": "lần đầu tiên"
+     },
+     {
+      "zh": "有时间",
+      "pinyin": "yǒu shíjiān",
+      "hanViet": "HỮU THỜI GIAN",
+      "vi": "có thời gian"
+     },
+     {
+      "zh": "帮个忙",
+      "pinyin": "bāng gè máng",
+      "hanViet": "BANG CÁ MANG",
+      "vi": "giúp (ai) một việc"
+     },
+     {
+      "zh": "打个电话",
+      "pinyin": "dǎ gè diànhuà",
+      "hanViet": "ĐẢ CÁ ĐIỆN THOẠI",
+      "vi": "gọi một cuộc điện thoại"
+     }
+    ],
+    "phrases": []
+   },
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem bối cảnh: hai học trò lần đầu đến Bắc Kinh và người chị ra đón ở sân bay.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết trước",
+     "descVi": "Học 14 từ mới và tên riêng 北京烤鸭 theo bốn đoạn, nghe audio từ mới của sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "“吧” phỏng đoán, mẫu “是……的” và câu kiêm ngữ 请/让/叫, kèm phần Hán tự 扌/冫.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe bốn đoạn và trả lời câu hỏi ngay dưới mỗi đoạn.",
+     "sectionId": "reader",
+     "dialogueId": "h2l1-text-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Nối từ – hình, chọn từ điền trống theo sách và mở rộng từ vựng của Workbook.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói / vận dụng",
+     "descVi": "Đóng vai đi đón bạn và viết tin nhắn báo đã đến nơi.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Đoạn 1 · Ở sân bay",
+     "bodyVi": "Vương Nhất Tuyết — chị của cô Vương Nhất Phi — đến đón Bạch Gia Nguyệt và An Ni vì Nhất Phi đã gọi điện nhờ （让 + 接）. Cô dùng “吧” để phỏng đoán: “你们就是她的学生吧？”",
+     "exampleZh": "一飞给我打电话了，让我来接你们。",
+     "examplePinyin": "Yīfēi gěi wǒ dǎ diànhuà le, ràng wǒ lái jiē nǐmen.",
+     "exampleVi": "Nhất Phi đã gọi điện cho chị, bảo chị đến đón các em."
+    },
+    {
+     "titleVi": "Đoạn 2 · Lần đầu đến Bắc Kinh",
+     "bodyVi": "Cả hai đều lần đầu đến Bắc Kinh （第一次） và đến để du lịch, không phải học tiếng Trung. Mẫu “是……的” ở đây nhấn mạnh mục đích của chuyến đi.",
+     "exampleZh": "不是，我们是来旅游的。",
+     "examplePinyin": "Bú shì, wǒmen shì lái lǚyóu de.",
+     "exampleVi": "Không ạ, chúng em đến du lịch."
+    },
+    {
+     "titleVi": "Đoạn 3 · Cuộc gọi nhờ giúp",
+     "bodyVi": "Trần Thiên Trung gọi điện nhờ Bạch Gia Nguyệt giúp （请你帮个忙）, nhưng cô đã đến Bắc Kinh từ sáng nay. Cô gợi ý nhờ Lý Văn — người vẫn còn ở trường （叫李文帮忙）.",
+     "exampleZh": "我是今天早上到的。",
+     "examplePinyin": "Wǒ shì jīntiān zǎoshang dào de.",
+     "exampleVi": "Mình đến sáng nay."
+    },
+    {
+     "titleVi": "Đoạn 4 · Tin nhắn và bữa vịt quay",
+     "bodyVi": "Bạch Gia Nguyệt nhắn tin báo đã đến nơi: chị của cô Vương ra đón, mời ăn vịt quay Bắc Kinh và giới thiệu nhiều thứ. Tiếng Trung của hai cô chưa tốt nên thỉnh thoảng không hiểu ý người nói （有时不太懂她的意思）.",
+     "exampleZh": "她请我们吃了北京烤鸭，还给我们介绍了很多东西。",
+     "examplePinyin": "Tā qǐng wǒmen chīle Běijīng Kǎoyā, hái gěi wǒmen jièshàole hěn duō dōngxi.",
+     "exampleVi": "Chị ấy mời chúng em ăn vịt quay Bắc Kinh, còn giới thiệu cho chúng em rất nhiều thứ."
+    },
+    {
+     "titleVi": "Ba điểm ngữ pháp cần nhớ",
+     "bodyVi": "“吧” cuối câu trần thuật: phỏng đoán kèm mong đợi xác nhận. “是……的”: nhấn mạnh thời gian, cách thức, mục đích của việc đã xảy ra; phủ định giữ 不是……的. Câu kiêm ngữ: Chủ ngữ + 请/让/叫 + người + việc — người ở giữa vừa là tân ngữ vừa là chủ ngữ của phần sau.",
+     "exampleZh": "王老师让我们说中文。",
+     "examplePinyin": "Wáng lǎoshī ràng wǒmen shuō Zhōngwén.",
+     "exampleVi": "Cô Vương bảo chúng tôi nói tiếng Trung."
+    }
+   ]
+  }
+ ],
+ "writingSets": [
+  {
+   "id": "writing-hsk2-l01",
+   "lessonId": "hsk2-l01",
+   "bookId": "book-hsk2-writing",
+   "titleVi": "Luyện viết Bài 1 · 她请我们吃了北京烤鸭",
+   "introVi": "Bốn chữ đầu tiên của sách luyện viết HSK 2, theo đúng thứ tự của sách: hai chữ có bộ tay 扌 （打、接） và hai chữ có bộ hai chấm nước 冫 （冷、次）. Mỗi chữ học theo mạch của sách: nhìn chữ → xem thứ tự nét → tập viết theo mẫu → tự viết → nhớ lại từ và câu chứa chữ.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-writing-pdf",
+     "pdfPage": 1,
+     "printedPage": 1,
+     "section": "Trang 1 (PDF) — không có số trang in"
+    }
+   ],
+   "chars": [
+    {
+     "id": "w-h2l1-da",
+     "char": "打",
+     "pinyin": "dǎ",
+     "hanViet": "ĐẢ",
+     "meaningVi": "đánh; gọi (điện thoại)",
+     "radical": {
+      "zh": "扌（提手旁）",
+      "pinyin": "tíshǒupáng"
+     },
+     "strokeCount": 5,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "vi": "gọi điện thoại"
+     },
+     "sentence": {
+      "zh": "请你给她打个电话。",
+      "pinyin": "Qǐng nǐ gěi tā dǎ gè diànhuà.",
+      "vi": "Xin bạn gọi điện cho cô ấy."
+     },
+     "tipVi": "打 = 扌 (bộ tay) + 丁. Vì là hành động của tay nên có bộ 提手旁. Nét khó: nét phẩy cuối của 丁 đi xuống dài, đừng viết thành chữ 丁 độc lập quá to.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 1,
+       "printedPage": 1,
+       "section": "Sách viết HSK 2 · Bài 1"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l1-jie",
+     "char": "接",
+     "pinyin": "jiē",
+     "hanViet": "TIẾP",
+     "meaningVi": "đón; tiếp",
+     "radical": {
+      "zh": "扌（提手旁）",
+      "pinyin": "tíshǒupáng"
+     },
+     "strokeCount": 11,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "接人",
+      "pinyin": "jiē rén",
+      "vi": "đón người"
+     },
+     "sentence": {
+      "zh": "他让我去接一个人。",
+      "pinyin": "Tā ràng wǒ qù jiē yí gè rén.",
+      "vi": "Anh ấy bảo tôi đi đón một người."
+     },
+     "tipVi": "接 = 扌 + 妾. Đây là chữ nhiều nét nhất của bài (11 nét): viết gọn phần 扌 bên trái, phần 妾 bên phải viết cao ráo, nét ngang dài của 妾 là trục của chữ.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 1,
+       "printedPage": 1,
+       "section": "Sách viết HSK 2 · Bài 1"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l1-leng",
+     "char": "冷",
+     "pinyin": "lěng",
+     "hanViet": "LÃNH",
+     "meaningVi": "lạnh",
+     "radical": {
+      "zh": "冫（两点水）",
+      "pinyin": "liǎngdiǎnshuǐ"
+     },
+     "strokeCount": 7,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "很冷",
+      "pinyin": "hěn lěng",
+      "vi": "rất lạnh"
+     },
+     "sentence": {
+      "zh": "北京现在很冷吧？",
+      "pinyin": "Běijīng xiànzài hěn lěng ba?",
+      "vi": "Bắc Kinh bây giờ chắc lạnh lắm nhỉ?"
+     },
+     "tipVi": "冷 = 冫 (hai chấm nước) + 令. Bộ 冫 gợi ý nghĩa lạnh và nước. Đừng nhầm với chữ 令 viết đơn độc: 冷 luôn có hai nét chấm–nét gẩy ở bên trái.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 1,
+       "printedPage": 1,
+       "section": "Sách viết HSK 2 · Bài 1"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l1-ci",
+     "char": "次",
+     "pinyin": "cì",
+     "hanViet": "THỨ",
+     "meaningVi": "lần",
+     "radical": {
+      "zh": "冫（两点水）",
+      "pinyin": "liǎngdiǎnshuǐ"
+     },
+     "strokeCount": 6,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "这次",
+      "pinyin": "zhè cì",
+      "vi": "lần này"
+     },
+     "sentence": {
+      "zh": "我这次是一个人来的。",
+      "pinyin": "Wǒ zhè cì shì yí gè rén lái de.",
+      "vi": "Lần này tôi đến một mình."
+     },
+     "tipVi": "次 = 冫 + 欠. Chữ này dùng đếm số lần: 第一次 (lần đầu), 这次 (lần này). Nét cuối của 欠 là nét mác dài sang phải, viết thoáng để chữ cân đối.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 1,
+       "printedPage": 1,
+       "section": "Sách viết HSK 2 · Bài 1"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 8,
+       "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

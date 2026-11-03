@@ -239,7 +239,44 @@ export function emptyProgress() {
     dictation: {}, // taskId -> {first:{idx:bool}, tries:{idx:n}, peeked:bool, updatedAt} — first-attempt results are never overwritten
     audioState: {}, // trackId -> {position, trackUrl}
     sessions: [], // {date, minutes} active-study estimates recorded on section completion
+    writing: {}, // charId -> {seen, practiced, self, paper, needsReview, updatedAt, dueAt} — Luyện viết chữ Hán (D30); stages are never labelled "mastered"
   };
+}
+
+// --- Luyện viết chữ Hán (writing practice) -------------------------------
+// Review spacing for characters: 1, 3, then 7 days by completed stages.
+export const WRITING_REVIEW_DAYS = [1, 3, 7];
+
+export function writingEntryOf(progress, charId) {
+  return (progress && progress.writing && progress.writing[charId]) || null;
+}
+
+export function writingStageCount(entry) {
+  if (!entry) return 0;
+  return ["seen", "practiced", "self", "paper"].filter((k) => entry[k]).length;
+}
+
+// Pure transition: returns a NEW entry with the patch applied and the next
+// review date recomputed. A character flagged needsReview is due in 1 day;
+// otherwise the spacing grows with the number of completed stages.
+export function markWriting(entry, patch, nowMs) {
+  const next = {
+    seen: false, practiced: false, self: false, paper: false,
+    needsReview: false, updatedAt: null, dueAt: null,
+    ...(entry || {}), ...(patch || {}),
+  };
+  next.updatedAt = new Date(nowMs).toISOString();
+  const stages = writingStageCount(next);
+  if (next.needsReview) next.dueAt = new Date(nowMs + WRITING_REVIEW_DAYS[0] * 86400000).toISOString();
+  else if (stages > 0) next.dueAt = new Date(nowMs + WRITING_REVIEW_DAYS[Math.min(stages, WRITING_REVIEW_DAYS.length) - 1] * 86400000).toISOString();
+  else next.dueAt = null;
+  return next;
+}
+
+export function isWritingDue(entry, nowMs) {
+  if (!entry) return false;
+  if (entry.needsReview) return true;
+  return Boolean(entry.dueAt) && new Date(entry.dueAt).getTime() <= nowMs;
 }
 
 export function validateProgress(data) {
@@ -250,7 +287,7 @@ export function validateProgress(data) {
   if (data.schemaVersion !== PROGRESS_SCHEMA_VERSION) {
     errors.push(`schemaVersion phải là ${PROGRESS_SCHEMA_VERSION} (đang là ${JSON.stringify(data.schemaVersion)}).`);
   }
-  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState", "exerciseSessions", "drafts", "dictation"]) {
+  for (const key of ["settings", "lessons", "selfChecks", "reviewItems", "audioState", "exerciseSessions", "drafts", "dictation", "writing"]) {
     if (data[key] !== undefined && (typeof data[key] !== "object" || data[key] === null || Array.isArray(data[key]))) {
       errors.push(`Trường "${key}" phải là một đối tượng.`);
     }
@@ -278,6 +315,7 @@ export function migrateProgress(data) {
     dictation: data.dictation || {},
     audioState: data.audioState || {},
     sessions: data.sessions || [],
+    writing: data.writing || {},
   };
 }
 

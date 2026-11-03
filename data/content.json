@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-dialoguechecks1",
+ "contentVersion": "20261103-lesson11-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -590,28 +590,41 @@
   },
   {
    "id": "hsk1-l11",
-   "bookId": "book-hsk1-workbook",
+   "bookId": "book-hsk1-textbook",
    "level": "HSK 1",
    "sourceUnit": "Lesson 11",
    "lessonNumber": 11,
    "titleZh": "我读大学呢",
    "titleEn": "I'm studying at university",
    "titleVi": "Tôi đang học đại học",
-   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "titleProvenance": "Đối chiếu tên Bài 11 ở mục lục và trang mở đầu Textbook trang in 078 (cả Textbook và Workbook đều là 我读大学呢).",
    "sourceRefs": [
     {
-     "sourceId": "src-hsk1-workbook-pdf",
-     "pdfPage": 82,
-     "printedPage": 75,
-     "section": "目录 Contents (mục lục)"
+     "sourceId": "src-hsk1-textbook-pdf",
+     "pdfPage": 93,
+     "printedPage": 78,
+     "section": "Bài 11 · mục tiêu và khởi động"
     }
    ],
    "textbookAudioTrackCount": 6,
-   "workbookAudioTrackCount": 2,
-   "publicationStatus": "catalogue-only",
-   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-   "grammarIds": [],
-   "sectionIds": []
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Câu hỏi chính – phủ, ba cách nói việc đang diễn ra （在/正在/…呢） và “要” muốn/dự định; 4 câu hỏi nghe hiểu nằm tại Hội thoại 2 và 3 theo D28; kèm phát âm Workbook (đánh dấu + phân biệt thanh điệu) và nền tảng nét bút (4). Track Workbook 11-2 thuộc phần đề mô phỏng, không dùng trong bài (D15).",
+   "grammarIds": [
+    "kp-hsk1-l11-affirm-neg",
+    "kp-hsk1-l11-progressive",
+    "kp-hsk1-l11-yao",
+    "kp-hsk1-l11-strokes-4"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
   },
   {
    "id": "hsk1-l12",
@@ -32147,6 +32160,3106 @@
       "pinyin": "líng",
       "hanViet": "LINH",
       "vi": "số không — đọc khi số 0 nằm giữa một số tiền"
+     }
+    ],
+    "phrases": []
+   }
+  },
+  {
+   "lessonId": "hsk1-l11",
+   "intro": {
+    "goalVi": "Nghe hiểu, nhìn hiểu và nói đơn giản về việc đang diễn ra; đặt câu hỏi có – không bằng mẫu chính – phủ; và nói điều mình muốn, dự định làm bằng “要”.",
+    "estimatedMinutes": 25,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bài này theo chân Lý Văn đang tìm nhà hàng qua điện thoại, gặp Vương Nhất Phi trò chuyện về việc học đại học, rồi ghé nhà Lưu Minh sáng thứ bảy — nơi cậu em trai vẫn đang ngủ say.",
+    "outcomesVi": [
+     "Nghe, nhìn và nói đơn giản việc đang diễn ra bằng ba cấu trúc: 我读大学呢。",
+     "Dùng câu hỏi chính – phủ để hỏi: 你开车没开车？",
+     "Dùng động từ năng nguyện “要” nói muốn và dự định: 他今天要和小朋友玩。"
+    ],
+    "contextImage": {
+     "src": "assets/lesson-11/classroom.webp",
+     "alt": "Tranh vẽ: một sinh viên trẻ ngồi học bên bàn trong phòng học sáng sủa, trên bàn có sách vở — mô phỏng theo cảnh Hội thoại 2, Textbook Bài 11",
+     "caption": "Đang học ở trường · tranh vẽ mới theo cảnh Textbook tr.081",
+     "width": 760,
+     "height": 560
+    },
+    "studyTipVi": "Nghe ai nói “…呢” ở cuối câu hoặc thấy 在/正在 trước động từ thì đó là việc đang diễn ra ngay lúc nói. Còn “要” cho biết việc chưa diễn ra — đó là điều người nói muốn hoặc dự định làm.",
+    "foundationSummaryVi": "Nền tảng Hán tự của bài ở Workbook tr.076–077: năm nét móc （横钩、竖钩、斜钩、弯钩、卧钩）, quy tắc thứ tự nét 先外后里，再封口 (ví dụ chữ 日） và phần chép các từ 买卖、小学、飞机、小狗、怎么样、中国.",
+    "courseTagsVi": "Câu hỏi chính – phủ · Việc đang diễn ra · “要” muốn và dự định",
+    "priorLessonNoteVi": "Bài 10 đã học “怎么样” để hỏi ý kiến và tính từ làm vị ngữ — bài này nối tiếp ngay: tính từ cũng vào được câu hỏi chính – phủ （贵不贵？好看不好看？), và “能” của Bài 10 xuất hiện lại ở câu mở đầu “你什么时候能到饭店？”",
+    "priorLessonId": "hsk1-l10"
+   },
+   "prepWords": [
+    {
+     "id": "l11w-1",
+     "zh": "时候",
+     "pinyin": "shíhou",
+     "vi": "lúc, khi (thời điểm)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "THỜI HẬU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 0.08,
+      "end": 1.12,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-2",
+     "zh": "饭店",
+     "pinyin": "fàndiàn",
+     "vi": "nhà hàng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "PHẠN ĐIẾM",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 2.62,
+      "end": 5.0,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-3",
+     "zh": "知道",
+     "pinyin": "zhīdào",
+     "vi": "biết",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "TRI ĐẠO",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 5.68,
+      "end": 6.5,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-4",
+     "zh": "正在",
+     "pinyin": "zhèngzài",
+     "vi": "đang (đang trong quá trình làm gì)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "CHÍNH TẠI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 8.18,
+      "end": 10.88,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-5",
+     "zh": "找",
+     "pinyin": "zhǎo",
+     "vi": "tìm, tìm kiếm",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "TRẢO",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 10.88,
+      "end": 12.1,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-6",
+     "zh": "开车",
+     "pinyin": "kāichē",
+     "vi": "lái xe",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "KHAI XA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 13.48,
+      "end": 15.98,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-7",
+     "zh": "车",
+     "pinyin": "chē",
+     "vi": "xe, phương tiện đi lại",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 94,
+       "printedPage": 79,
+       "section": "生词 · Từ mới 11-2"
+      }
+     ],
+     "hanViet": "XA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-2",
+      "start": 16.46,
+      "end": 17.16,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l11w-8",
+     "zh": "在",
+     "pinyin": "zài",
+     "vi": "đang (chỉ việc đang diễn ra)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "TẠI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 0.0,
+      "end": 0.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-9",
+     "zh": "读",
+     "pinyin": "dú",
+     "vi": "theo học; đọc",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "ĐỘC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 2.1,
+      "end": 2.8,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-10",
+     "zh": "大学",
+     "pinyin": "dàxué",
+     "vi": "trường đại học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "ĐẠI HỌC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 4.08,
+      "end": 5.22,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-11",
+     "zh": "大学生",
+     "pinyin": "dàxuéshēng",
+     "vi": "sinh viên đại học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "ĐẠI HỌC SINH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 5.22,
+      "end": 8.68,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-12",
+     "zh": "学",
+     "pinyin": "xué",
+     "vi": "học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "HỌC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 10.42,
+      "end": 11.12,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-13",
+     "zh": "医",
+     "pinyin": "yī",
+     "vi": "y, y học",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 96,
+       "printedPage": 81,
+       "section": "生词 · Từ mới 11-4"
+      }
+     ],
+     "hanViet": "Y",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-4",
+      "start": 12.5,
+      "end": 13.2,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l11w-14",
+     "zh": "弟弟",
+     "pinyin": "dìdi",
+     "vi": "em trai",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "ĐỆ ĐỆ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 0.14,
+      "end": 2.46,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-15",
+     "zh": "起床",
+     "pinyin": "qǐchuáng",
+     "vi": "dậy, thức dậy (ra khỏi giường)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "KHỞI SÀNG",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 2.46,
+      "end": 3.78,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-16",
+     "zh": "睡觉",
+     "pinyin": "shuìjiào",
+     "vi": "ngủ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "THỤY GIÁC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 5.44,
+      "end": 8.28,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-17",
+     "zh": "睡",
+     "pinyin": "shuì",
+     "vi": "ngủ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "THỤY",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 8.28,
+      "end": 9.22,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-18",
+     "zh": "那里",
+     "pinyin": "nàli",
+     "vi": "ở đó, nơi đó",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "NA LÝ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 10.82,
+      "end": 13.62,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-19",
+     "zh": "哪里",
+     "pinyin": "nǎli",
+     "vi": "ở đâu, nơi nào",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "NA LÝ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 13.69,
+      "end": 16.95,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-20",
+     "zh": "昨天",
+     "pinyin": "zuótiān",
+     "vi": "hôm qua",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "TẠC THIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 16.95,
+      "end": 19.85,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-21",
+     "zh": "问",
+     "pinyin": "wèn",
+     "vi": "hỏi",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "VẤN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 19.85,
+      "end": 20.77,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-22",
+     "zh": "对",
+     "pinyin": "duì",
+     "vi": "với, đối với (giới từ)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "ĐỐI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 22.43,
+      "end": 23.13,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-23",
+     "zh": "说",
+     "pinyin": "shuō",
+     "vi": "nói",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "THUYẾT",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 24.85,
+      "end": 25.63,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-24",
+     "zh": "要",
+     "pinyin": "yào",
+     "vi": "muốn, định (sắp làm gì)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "YẾU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 27.23,
+      "end": 27.93,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l11w-25",
+     "zh": "小朋友",
+     "pinyin": "xiǎopéngyou",
+     "vi": "bạn nhỏ, trẻ em",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "生词 · Từ mới 11-6"
+      }
+     ],
+     "hanViet": "TIỂU BẰNG HỮU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l11-6",
+      "start": 29.23,
+      "end": 30.53,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk1-l11-affirm-neg",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Câu hỏi chính – phủ: “× + 不/没 + ×”",
+     "useWhenVi": "Dùng khi muốn hỏi có – không một cách trực tiếp và mong câu trả lời ngắn: có đi không, có biết không, đã dậy chưa — trong điện thoại, ở nhà, ở lớp.",
+     "explanationVi": "Sách nêu: câu hỏi chính – phủ theo mẫu “×＋不/没＋×”, trong đó “×” là động từ hoặc tính từ. Với động từ, phần phủ định dùng “不” hoặc “没”; với tính từ chỉ dùng “不”. Trả lời bằng cách nhắc lại phần khẳng định hoặc phủ định: “去” / “不去”, “没去”, “不知道”.",
+     "pattern": "Động/Tính từ + 不/没 + Động/Tính từ — ví dụ: 你开车没开车？你们学习忙不忙？",
+     "examples": [
+      {
+       "zh": "它是不是在超市后边？",
+       "pinyin": "Tā shì bu shì zài chāoshì hòubian?",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.080): hỏi “có phải … không”."
+      },
+      {
+       "zh": "你去没去学校？",
+       "pinyin": "Nǐ qù méi qù xuéxiào?",
+       "noteVi": "Câu luyện đọc của sách: việc đã qua dùng 没."
+      },
+      {
+       "zh": "这件衣服好看不好看？",
+       "pinyin": "Zhè jiàn yīfu hǎokàn bú hǎokàn?",
+       "noteVi": "Câu luyện đọc của sách: tính từ chỉ dùng 不."
+      },
+      {
+       "zh": "他去哪儿了？你知道不知道？——我不知道。",
+       "pinyin": "Tā qù nǎr le? Nǐ zhīdào bù zhīdào? —— Wǒ bù zhīdào.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách (Textbook tr.080)."
+      },
+      {
+       "zh": "昨天你去没去书店？——我没去。",
+       "pinyin": "Zuótiān nǐ qù méi qù shūdiàn? —— Wǒ méi qù.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách."
+      },
+      {
+       "zh": "这件衣服贵不贵？——不贵。",
+       "pinyin": "Zhè jiàn yīfu guì bú guì? —— Bú guì.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Với tính từ “好看”, câu hỏi chính – phủ nào đúng mẫu của sách?",
+      "stemZh": "这件衣服好看不好看？",
+      "options": [
+       {
+        "zh": "这件衣服好看不好看？",
+        "vi": "Chiếc áo này có đẹp không?"
+       },
+       {
+        "zh": "这件衣服好看没好看？",
+        "vi": "Chiếc áo này có đẹp không? (dùng 没 cho tính từ)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Tính từ chỉ dùng 不 trong câu hỏi chính – phủ: 好看不好看 — đúng câu luyện đọc thứ ba ở Textbook tr.080; 没 chỉ đi với động từ."
+     },
+     "positionVi": "Điểm chính 1 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.080).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 95,
+       "printedPage": 80,
+       "section": "小语讲堂 1 · 正反问"
+      }
+     ],
+     "sentenceIds": [
+      "l11-s2",
+      "l11-s3",
+      "l11-s7",
+      "l11-s9",
+      "l11-s11"
+     ],
+     "exerciseIds": [
+      "tb11-text3-2",
+      "tb11-fill-1"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l11-progressive",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Việc đang diễn ra: “在/正在 + động từ” và “…呢”",
+     "useWhenVi": "Dùng khi nói một việc đang xảy ra ngay lúc nói: đang tìm đường, đang ngủ, đang học — và khi trả lời câu hỏi “đang làm gì thế?”.",
+     "explanationVi": "Sách nêu: phó từ chỉ thời gian “在/正在” đứng trước động từ, chỉ hành động đang tiến hành hoặc tình trạng đang tiếp diễn. Bài có ba cách nói: (1) 在/正在＋động từ; (2) 在/正在＋động từ＋呢； (3) động từ＋呢. Khi đáp phủ định, dùng phó từ “没（有）”: “我没买菜”.",
+     "pattern": "(Chủ ngữ) + 在/正在 + động từ (+ 呢) — hoặc động từ + 呢； phủ định: 没（有）+ động từ",
+     "examples": [
+      {
+       "zh": "你还在读大学吗？",
+       "pinyin": "Nǐ hái zài dú dàxué ma?",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.082), cũng là câu mở đầu Hội thoại 2."
+      },
+      {
+       "zh": "学生们在/正在上课呢。",
+       "pinyin": "Xuéshengmen zài/zhèngzài shàngkè ne.",
+       "noteVi": "Câu luyện đọc của sách: hai cách dùng 在 và 正在 thay nhau được."
+      },
+      {
+       "zh": "我们读书呢。",
+       "pinyin": "Wǒmen dú shū ne.",
+       "noteVi": "Câu luyện đọc của sách: chỉ cần động từ + 呢."
+      },
+      {
+       "zh": "你在做什么呢？——我正在看电视。",
+       "pinyin": "Nǐ zài zuò shénme ne? —— Wǒ zhèngzài kàn diànshì.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách (Textbook tr.082)."
+      },
+      {
+       "zh": "我去看电影，你去不去？——我在学习呢，不去。",
+       "pinyin": "Wǒ qù kàn diànyǐng, nǐ qù bu qù? —— Wǒ zài xuéxí ne, bú qù.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách."
+      },
+      {
+       "zh": "你在买菜吗？——我没买菜，买水果呢。",
+       "pinyin": "Nǐ zài mǎi cài ma? —— Wǒ méi mǎi cài, mǎi shuǐguǒ ne.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách: phủ định bằng 没."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Câu nào nói “Tôi đang học đây” đúng mẫu của bài?",
+      "stemZh": "我在学习呢。",
+      "options": [
+       {
+        "zh": "我在学习呢。",
+        "vi": "Tôi đang học đây."
+       },
+       {
+        "zh": "我是学习呢。",
+        "vi": "Tôi là học đây (dùng 是 thay 在）."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Việc đang diễn ra dùng 在/正在 trước động từ (có thể thêm 呢 ở cuối): 我在学习呢 — đúng cặp luyện đọc thứ hai ở Textbook tr.082."
+     },
+     "positionVi": "Điểm chính 2 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.082).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 97,
+       "printedPage": 82,
+       "section": "小语讲堂 2 · 时间副词“在/正在”"
+      }
+     ],
+     "sentenceIds": [
+      "l11-s2",
+      "l11-s4",
+      "l11-s5",
+      "l11-s6",
+      "l11-s10"
+     ],
+     "exerciseIds": [
+      "tb11-text2-1",
+      "tb11-fill-2"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l11-yao",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Động từ năng nguyện “要”: muốn, dự định làm gì",
+     "useWhenVi": "Dùng khi nói điều mình muốn làm hoặc sắp làm: muốn đi siêu thị, định chơi với bạn, muốn học tiếng Trung ở nhà.",
+     "explanationVi": "Sách nêu: động từ năng nguyện “要” đứng trước động từ, diễn tả muốn làm, dự định làm một việc gì đó: “他今天要和小朋友玩” — hôm nay em ấy muốn chơi với bạn nhỏ.",
+     "pattern": "Chủ ngữ + 要 + động từ (+ tân ngữ) — ví dụ: 妈妈要去超市。",
+     "examples": [
+      {
+       "zh": "他今天要和小朋友玩。",
+       "pinyin": "Tā jīntiān yào hé xiǎopéngyou wán.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.084), cũng là ý cuối Hội thoại 3."
+      },
+      {
+       "zh": "妈妈要去超市。",
+       "pinyin": "Māma yào qù chāoshì.",
+       "noteVi": "Câu luyện đọc của sách."
+      },
+      {
+       "zh": "白家月要在家里学中文。",
+       "pinyin": "Bái Jiāyuè yào zài jiā li xué Zhōngwén.",
+       "noteVi": "Câu luyện đọc của sách: Bạch Gia Nguyệt dự định học tiếng Trung ở nhà."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Muốn nói “Hôm nay tôi muốn đi siêu thị”, câu nào đúng mẫu “要”?",
+      "stemZh": "我今天要去超市。",
+      "options": [
+       {
+        "zh": "我今天要去超市。",
+        "vi": "Hôm nay tôi muốn đi siêu thị."
+       },
+       {
+        "zh": "我今天在去超市。",
+        "vi": "Hôm nay tôi đang đi siêu thị (đang trên đường đi, khác nghĩa muốn/dự định)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "“要” trước động từ diễn tả muốn/dự định: 要去超市； còn 在＋động từ chỉ việc đang diễn ra, không nói lên ý định."
+     },
+     "positionVi": "Điểm chính 3 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.084).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 99,
+       "printedPage": 84,
+       "section": "小语讲堂 3 · 能愿动词“要”"
+      }
+     ],
+     "sentenceIds": [
+      "l11-s14"
+     ],
+     "exerciseIds": [
+      "tb11-fill-3b"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l11-strokes-4",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Nét bút (4): năm nét móc và quy tắc “ngoài trước, trong sau, cuối cùng đóng khung”",
+     "explanationVi": "Workbook Bài 11 （汉字书写（四）, tr.076–077) luyện năm nét móc: 横钩 (hénggōu, ngang móc), 竖钩 (shùgōu, đứng móc), 斜钩 (xiégōu, chéo móc), 弯钩 (wāngōu, cong móc), 卧钩 (wògōu, nằm móc). Quy tắc thứ tự nét: 先外后里，再封口 — viết phần bao ngoài trước, phần trong sau, cuối cùng mới đóng khung (ví dụ chữ 日）. Phần chép chữ và từ ở tr.077 gồm: 买卖、小学、飞机、小狗、怎么样、中国 — đây là bài luyện viết tay trong sách; app chỉ giới thiệu để người học nhận diện, không chấm nét viết.",
+     "pattern": "横钩 hénggōu · 竖钩 shùgōu · 斜钩 xiégōu · 弯钩 wāngōu · 卧钩 wògōu | 先外后里，再封口 (vd 日）",
+     "examples": [
+      {
+       "zh": "日",
+       "pinyin": "rì",
+       "noteVi": "Chữ ví dụ cho quy tắc 先外后里，再封口 ở Workbook tr.076."
+      },
+      {
+       "zh": "买卖",
+       "pinyin": "mǎimài",
+       "noteVi": "Từ chép ở Workbook tr.077: mua bán."
+      },
+      {
+       "zh": "小学",
+       "pinyin": "xiǎoxué",
+       "noteVi": "Từ chép ở Workbook tr.077: trường tiểu học."
+      },
+      {
+       "zh": "飞机",
+       "pinyin": "fēijī",
+       "noteVi": "Từ chép ở Workbook tr.077: máy bay."
+      },
+      {
+       "zh": "小狗",
+       "pinyin": "xiǎogǒu",
+       "noteVi": "Từ chép ở Workbook tr.077: chó con."
+      },
+      {
+       "zh": "怎么样",
+       "pinyin": "zěnmeyàng",
+       "noteVi": "Từ chép ở Workbook tr.077: thế nào (đã học ở Bài 10)."
+      },
+      {
+       "zh": "中国",
+       "pinyin": "Zhōngguó",
+       "noteVi": "Từ chép ở Workbook tr.077: Trung Quốc."
+      }
+     ],
+     "positionVi": "Điểm nền tảng Hán tự của bài (Workbook tr.076–077), không phải điểm ngữ pháp chính.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 83,
+       "printedPage": 76,
+       "section": "二、汉字 · 汉字书写（四）"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "l11-reader",
+    "titleVi": "Ba hội thoại của Bài 11",
+    "headingVi": "Nghe & đọc",
+    "noteVi": "Hội thoại 2 và 3 trong sách được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và câu hỏi chọn đáp án của sách nằm ngay dưới từng hội thoại đó.",
+    "sentences": [
+     {
+      "id": "l11-s1",
+      "speaker": "Vương Nhất Phi",
+      "zh": "喂，李文，你什么时候能到饭店？",
+      "pinyin": "Wèi, Lǐ Wén, nǐ shénme shíhou néng dào fàndiàn?",
+      "vi": "A lô, Lý Văn, khi nào cậu đến được nhà hàng?",
+      "passageId": "l11-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-1",
+       "start": 0.69,
+       "end": 4.07,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s2",
+      "speaker": "Lý Văn",
+      "zh": "还不知道，正在找呢。它是不是在超市后边？",
+      "pinyin": "Hái bù zhīdào, zhèngzài zhǎo ne. Tā shì bu shì zài chāoshì hòubian?",
+      "vi": "Chưa biết nữa, tớ đang tìm đây. Nó ở phía sau siêu thị phải không?",
+      "passageId": "l11-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-1",
+       "start": 5.01,
+       "end": 9.71,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s3",
+      "speaker": "Vương Nhất Phi",
+      "zh": "是的。你开车没开车？",
+      "pinyin": "Shì de. Nǐ kāichē méi kāichē?",
+      "vi": "Đúng vậy. Cậu có lái xe đến không?",
+      "passageId": "l11-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-1",
+       "start": 10.51,
+       "end": 13.15,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s4",
+      "speaker": "Lý Văn",
+      "zh": "我没开车，坐车呢。",
+      "pinyin": "Wǒ méi kāichē, zuò chē ne.",
+      "vi": "Tớ không lái xe, tớ đang đi xe đây.",
+      "passageId": "l11-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-1",
+       "start": 13.15,
+       "end": 16.11,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s5",
+      "speaker": "Vương Nhất Phi",
+      "zh": "你还在读大学吗？",
+      "pinyin": "Nǐ hái zài dú dàxué ma?",
+      "vi": "Cậu vẫn đang học đại học à?",
+      "passageId": "l11-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-3",
+       "start": 0.53,
+       "end": 2.29,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s6",
+      "speaker": "Lý Văn",
+      "zh": "对，我读大学呢，还是大学生。",
+      "pinyin": "Duì, wǒ dú dàxué ne, hái shì dàxuéshēng.",
+      "vi": "Ừ, tớ đang học đại học đây, vẫn là sinh viên đại học.",
+      "passageId": "l11-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-3",
+       "start": 3.22,
+       "end": 7.4,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s7",
+      "speaker": "Vương Nhất Phi",
+      "zh": "你们学习忙不忙？",
+      "pinyin": "Nǐmen xuéxí máng bu máng?",
+      "vi": "Các cậu học có bận không?",
+      "passageId": "l11-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-3",
+       "start": 8.52,
+       "end": 10.78,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s8",
+      "speaker": "Lý Văn",
+      "zh": "非常忙，我学医，我们的课很多。",
+      "pinyin": "Fēicháng máng, wǒ xué yī, wǒmen de kè hěn duō.",
+      "vi": "Rất bận, tớ học ngành y, bọn tớ có rất nhiều tiết học.",
+      "passageId": "l11-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-3",
+       "start": 12.42,
+       "end": 16.32,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s9",
+      "speaker": "Lưu Minh",
+      "zh": "弟弟起床没起床呢？",
+      "pinyin": "Dìdi qǐchuáng méi qǐchuáng ne?",
+      "vi": "Em trai dậy chưa?",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 1.39,
+       "end": 3.55,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s10",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "没起床呢，还在睡觉。",
+      "pinyin": "Méi qǐchuáng ne, hái zài shuìjiào.",
+      "vi": "Chưa dậy đâu, vẫn đang ngủ ạ.",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 3.74,
+       "end": 6.56,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s11",
+      "speaker": "Lưu Minh",
+      "zh": "还睡呢？他今天去不去那里？",
+      "pinyin": "Hái shuì ne? Tā jīntiān qù bu qù nàli?",
+      "vi": "Vẫn ngủ à? Hôm nay nó có đi đến đó không?",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 6.56,
+       "end": 10.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s12",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "去哪里？",
+      "pinyin": "Qù nǎli?",
+      "vi": "Đi đâu cơ ạ?",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 10.65,
+       "end": 12.23,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s13",
+      "speaker": "Lưu Minh",
+      "zh": "去超市。",
+      "pinyin": "Qù chāoshì.",
+      "vi": "Đi siêu thị.",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 12.39,
+       "end": 13.45,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l11-s14",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "我昨天问他，他对我说，他不去，他今天要和小朋友玩。",
+      "pinyin": "Wǒ zuótiān wèn tā, tā duì wǒ shuō, tā bú qù, tā jīntiān yào hé xiǎopéngyou wán.",
+      "vi": "Hôm qua con hỏi em rồi, em bảo với con là em không đi, hôm nay em muốn chơi với bạn nhỏ.",
+      "passageId": "l11-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l11-5",
+       "start": 13.45,
+       "end": 19.47,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb-l11-1",
+      "label": "Hội thoại 1 · Đang tìm nhà hàng",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-1.mp3",
+      "durationSec": 18.148,
+      "bookRef": "Textbook · track 11-1",
+      "segments": [
+       {
+        "sentenceId": "l11-s1",
+        "start": 0.69,
+        "end": 4.07,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s2",
+        "start": 5.01,
+        "end": 9.71,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s3",
+        "start": 10.51,
+        "end": 13.15,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s4",
+        "start": 13.15,
+        "end": 16.11,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l11-2",
+      "label": "Từ mới · Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-2.mp3",
+      "durationSec": 18.903,
+      "bookRef": "Textbook · track 11-2 · 生词 Hội thoại 1",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l11-3",
+      "label": "Hội thoại 2 · Tôi đang học đại học đây",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-3.mp3",
+      "durationSec": 17.757,
+      "bookRef": "Textbook · track 11-3",
+      "segments": [
+       {
+        "sentenceId": "l11-s5",
+        "start": 0.53,
+        "end": 2.29,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s6",
+        "start": 3.22,
+        "end": 7.4,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s7",
+        "start": 8.52,
+        "end": 10.78,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s8",
+        "start": 12.42,
+        "end": 16.32,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 95,
+        "printedPage": 80,
+        "section": "课文 2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l11-4",
+      "label": "Từ mới · Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-4.mp3",
+      "durationSec": 15.046,
+      "bookRef": "Textbook · track 11-4 · 生词 Hội thoại 2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l11-5",
+      "label": "Hội thoại 3 · Em trai vẫn đang ngủ",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-5.mp3",
+      "durationSec": 20.832,
+      "bookRef": "Textbook · track 11-5",
+      "segments": [
+       {
+        "sentenceId": "l11-s9",
+        "start": 1.39,
+        "end": 3.55,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s10",
+        "start": 3.74,
+        "end": 6.56,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s11",
+        "start": 6.56,
+        "end": 10.65,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s12",
+        "start": 10.65,
+        "end": 12.23,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s13",
+        "start": 12.39,
+        "end": 13.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l11-s14",
+        "start": 13.45,
+        "end": 19.47,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 97,
+        "printedPage": 82,
+        "section": "课文 3"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l11-6",
+      "label": "Từ mới · Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-11/11-6.mp3",
+      "durationSec": 33.029,
+      "bookRef": "Textbook · track 11-6 · 生词 Hội thoại 3",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb-l11-1",
+      "label": "Track 11-1 · Pronunciation (phát âm)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-11/11-1.mp3",
+      "durationSec": 205.016,
+      "bookRef": "Workbook Bài 11, phần 一、语音, ký hiệu track 11-1 in ở trang in 075",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "l11-dialogue-1",
+      "title": "Hội thoại 1 · Đang tìm nhà hàng",
+      "context": "Trên đường, Lý Văn đang tìm nhà hàng thì Vương Nhất Phi gọi điện đến (Textbook tr.079).",
+      "audioTrackId": "trk-tb-l11-1",
+      "sentenceIds": [
+       "l11-s1",
+       "l11-s2",
+       "l11-s3",
+       "l11-s4"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 94,
+        "printedPage": 79,
+        "section": "课文 1"
+       }
+      ]
+     },
+     {
+      "id": "l11-dialogue-2",
+      "title": "Hội thoại 2 · Tôi đang học đại học đây",
+      "context": "Trong nhà hàng, Vương Nhất Phi và Lý Văn gặp nhau rồi trò chuyện (Textbook tr.081). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 11-3); lời thoại đầy đủ in ở tr.081 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l11-3",
+      "sentenceIds": [
+       "l11-s5",
+       "l11-s6",
+       "l11-s7",
+       "l11-s8"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 96,
+        "printedPage": 81,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb11-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 080, track 11-3): Lý Văn đang làm gì?",
+        "promptZh": "李文（ ）读大学。",
+        "promptPinyin": "Lǐ Wén ( ) dú dàxué.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "不",
+          "pinyin": "bù",
+          "vi": "không"
+         },
+         {
+          "id": "2",
+          "zh": "没",
+          "pinyin": "méi",
+          "vi": "chưa"
+         },
+         {
+          "id": "3",
+          "zh": "在",
+          "pinyin": "zài",
+          "vi": "đang"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.081: Lý Văn đáp “对，我读大学呢，还是大学生” — anh ấy đang học đại học, nên chỗ trống là phó từ chỉ việc đang diễn ra “在”.",
+        "grammarIds": [
+         "kp-hsk1-l11-progressive"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 95,
+          "printedPage": 80,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l11-3",
+         "start": 3.22,
+         "end": 7.4,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb11-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 080, track 11-3): Lý Văn bận, có rất nhiều cái gì?",
+        "promptZh": "李文很忙，有很多（ ）。",
+        "promptPinyin": "Lǐ Wén hěn máng, yǒu hěn duō ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "课",
+          "pinyin": "kè",
+          "vi": "tiết học"
+         },
+         {
+          "id": "2",
+          "zh": "书",
+          "pinyin": "shū",
+          "vi": "sách"
+         },
+         {
+          "id": "3",
+          "zh": "椅子",
+          "pinyin": "yǐzi",
+          "vi": "ghế"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.081: “我们的课很多” — có rất nhiều tiết học.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 95,
+          "printedPage": 80,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l11-3",
+         "start": 12.42,
+         "end": 16.32,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l11-dialogue-3",
+      "title": "Hội thoại 3 · Em trai vẫn đang ngủ",
+      "context": "Sáng thứ bảy, Lưu Minh chuẩn bị đi làm thêm ở bệnh viện, trước khi ra khỏi nhà nói chuyện với con gái (Textbook tr.083). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 11-5); lời thoại đầy đủ in ở tr.083 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l11-5",
+      "sentenceIds": [
+       "l11-s9",
+       "l11-s10",
+       "l11-s11",
+       "l11-s12",
+       "l11-s13",
+       "l11-s14"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 98,
+        "printedPage": 83,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb11-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 082, track 11-5): em trai đang làm gì?",
+        "promptZh": "弟弟正在（ ）。",
+        "promptPinyin": "Dìdi zhèngzài ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "玩",
+          "pinyin": "wán",
+          "vi": "chơi"
+         },
+         {
+          "id": "2",
+          "zh": "起床",
+          "pinyin": "qǐchuáng",
+          "vi": "dậy, thức dậy"
+         },
+         {
+          "id": "3",
+          "zh": "睡觉",
+          "pinyin": "shuìjiào",
+          "vi": "ngủ"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.083: Lưu Tiểu Tuyết nói “没起床呢，还在睡觉” — em trai chưa dậy, vẫn đang ngủ.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 97,
+          "printedPage": 82,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l11-5",
+         "start": 3.74,
+         "end": 6.56,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb11-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 082, track 11-5): bố hỏi chị gái điều gì về em trai và siêu thị?",
+        "promptZh": "爸爸问姐姐，弟弟（ ）超市。",
+        "promptPinyin": "Bàba wèn jiějie, dìdi ( ) chāoshì.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "在",
+          "pinyin": "zài",
+          "vi": "đang, ở"
+         },
+         {
+          "id": "2",
+          "zh": "去",
+          "pinyin": "qù",
+          "vi": "đi"
+         },
+         {
+          "id": "3",
+          "zh": "去不去",
+          "pinyin": "qù bu qù",
+          "vi": "có đi không"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.083: bố hỏi “他今天去不去那里？”, chị hỏi lại “去哪里？”, bố nói “去超市” — tức bố hỏi em trai có đi siêu thị không, câu hỏi chính – phủ “去不去”.",
+        "grammarIds": [
+         "kp-hsk1-l11-affirm-neg"
+        ],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 97,
+          "printedPage": 82,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l11-5",
+         "start": 6.56,
+         "end": 10.65,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l11-text-v1",
+    "titleVi": "Bài tập chính của Bài 11",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.078); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.084, ngân hàng từ in sẵn; câu (3) của sách có hai chỗ trống nên tách thành hai câu); 5 câu phân biệt thanh điệu của Workbook tr.075 (đáp án theo dấu thanh in sẵn, đã kiểm ở bản phóng to). Bốn câu hỏi nghe hiểu của Hội thoại 2 và 3 nằm ngay tại từng hội thoại ở mục Nghe & đọc (D28), không nằm trong bộ này. Phần dùng hình để nói ở tr.085 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "items": [
+     {
+      "id": "wb11-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động A (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "开车",
+      "promptPinyin": "kāichē",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ A “开车” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb11-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động B (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "睡觉",
+      "promptPinyin": "shuìjiào",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ B “睡觉” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb11-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động C (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "问",
+      "promptPinyin": "wèn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ C “问” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb11-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động D (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "饭店",
+      "promptPinyin": "fàndiàn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ D “饭店” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb11-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động E (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "找",
+      "promptPinyin": "zhǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ E “找” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb11-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động F (Textbook trang 078): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "大学生",
+      "promptPinyin": "dàxuéshēng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "饭店",
+        "pinyin": "fàndiàn",
+        "vi": "nhà hàng",
+        "image": "assets/lesson-11/warm-restaurant.webp",
+        "imageAlt": "Tranh vẽ: bên trong một nhà hàng rộng với nhiều bàn tròn trải khăn trắng và đèn chùm"
+       },
+       {
+        "id": "2",
+        "zh": "问",
+        "pinyin": "wèn",
+        "vi": "hỏi",
+        "image": "assets/lesson-11/warm-ask.webp",
+        "imageAlt": "Tranh vẽ: ba sinh viên ngồi quanh bàn trong quán, một cô gái đang giơ tay hỏi chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "开车",
+        "pinyin": "kāichē",
+        "vi": "lái xe",
+        "image": "assets/lesson-11/warm-drive.webp",
+        "imageAlt": "Tranh vẽ: một phụ nữ đang lái ô tô, hai tay đặt trên vô lăng"
+       },
+       {
+        "id": "4",
+        "zh": "找",
+        "pinyin": "zhǎo",
+        "vi": "tìm",
+        "image": "assets/lesson-11/warm-search.webp",
+        "imageAlt": "Tranh vẽ: một cô gái đang cúi nhìn, lục tìm trong chiếc ba lô của mình"
+       },
+       {
+        "id": "5",
+        "zh": "大学生",
+        "pinyin": "dàxuéshēng",
+        "vi": "sinh viên đại học",
+        "image": "assets/lesson-11/warm-student.webp",
+        "imageAlt": "Tranh vẽ: một sinh viên đeo ba lô đang đứng ở quầy trong khuôn viên trường đại học"
+       },
+       {
+        "id": "6",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ",
+        "image": "assets/lesson-11/warm-sleep.webp",
+        "imageAlt": "Tranh vẽ: một cậu bé đang ngủ say trên giường, bên cạnh có đồng hồ báo thức"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.078: từ F “大学生” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 93,
+        "printedPage": 78,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "tb11-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 084).",
+      "promptZh": "你（ ）超市？",
+      "promptPinyin": "Nǐ ( ) chāoshì?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "那里",
+        "pinyin": "nàli",
+        "vi": "ở đó"
+       },
+       {
+        "id": "2",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ"
+       },
+       {
+        "id": "3",
+        "zh": "去不去",
+        "pinyin": "qù bu qù",
+        "vi": "có đi không"
+       },
+       {
+        "id": "4",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, định"
+       },
+       {
+        "id": "5",
+        "zh": "正在",
+        "pinyin": "zhèngzài",
+        "vi": "đang"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu hỏi “có đi siêu thị không” dùng câu hỏi chính – phủ: “你去不去超市？”.",
+      "grammarIds": [
+       "kp-hsk1-l11-affirm-neg"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 99,
+        "printedPage": 84,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb11-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 084).",
+      "promptZh": "她没在看电视，（ ）学习呢。",
+      "promptPinyin": "Tā méi zài kàn diànshì, ( ) xuéxí ne.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "那里",
+        "pinyin": "nàli",
+        "vi": "ở đó"
+       },
+       {
+        "id": "2",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ"
+       },
+       {
+        "id": "3",
+        "zh": "去不去",
+        "pinyin": "qù bu qù",
+        "vi": "có đi không"
+       },
+       {
+        "id": "4",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, định"
+       },
+       {
+        "id": "5",
+        "zh": "正在",
+        "pinyin": "zhèngzài",
+        "vi": "đang"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cô ấy không xem TV mà đang học: “正在学习呢” — 正在 chỉ việc đang diễn ra, đi với 呢 ở cuối câu.",
+      "grammarIds": [
+       "kp-hsk1-l11-progressive"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 99,
+        "printedPage": 84,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb11-fill-3a",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 084).",
+      "promptZh": "弟弟：姐姐，我们去（ ）玩吧，好不好？姐姐：我不去，我要读书。",
+      "promptPinyin": "Dìdi: Jiějie, wǒmen qù ( ) wán ba, hǎo bu hǎo? Jiějie: Wǒ bú qù, wǒ yào dú shū.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "那里",
+        "pinyin": "nàli",
+        "vi": "ở đó"
+       },
+       {
+        "id": "2",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ"
+       },
+       {
+        "id": "3",
+        "zh": "去不去",
+        "pinyin": "qù bu qù",
+        "vi": "có đi không"
+       },
+       {
+        "id": "4",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, định"
+       },
+       {
+        "id": "5",
+        "zh": "正在",
+        "pinyin": "zhèngzài",
+        "vi": "đang"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đi đến đó chơi: “我们去那里玩吧” — 那里 là “ở đó”.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 99,
+        "printedPage": 84,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb11-fill-3b",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 084).",
+      "promptZh": "弟弟：姐姐，我们去那里玩吧，好不好？姐姐：我不去，我（ ）读书。",
+      "promptPinyin": "Dìdi: Jiějie, wǒmen qù nàli wán ba, hǎo bu hǎo? Jiějie: Wǒ bú qù, wǒ ( ) dú shū.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "那里",
+        "pinyin": "nàli",
+        "vi": "ở đó"
+       },
+       {
+        "id": "2",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ"
+       },
+       {
+        "id": "3",
+        "zh": "去不去",
+        "pinyin": "qù bu qù",
+        "vi": "có đi không"
+       },
+       {
+        "id": "4",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, định"
+       },
+       {
+        "id": "5",
+        "zh": "正在",
+        "pinyin": "zhèngzài",
+        "vi": "đang"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Chị nói dự định của mình bằng “要”: “我要读书” — tôi muốn/định đọc sách.",
+      "grammarIds": [
+       "kp-hsk1-l11-yao"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 99,
+        "printedPage": 84,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb11-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 084).",
+      "promptZh": "妈妈：爸爸在做什么？孩子：他在（ ）呢。",
+      "promptPinyin": "Māma: Bàba zài zuò shénme? Háizi: Tā zài ( ) ne.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "那里",
+        "pinyin": "nàli",
+        "vi": "ở đó"
+       },
+       {
+        "id": "2",
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "ngủ"
+       },
+       {
+        "id": "3",
+        "zh": "去不去",
+        "pinyin": "qù bu qù",
+        "vi": "có đi không"
+       },
+       {
+        "id": "4",
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, định"
+       },
+       {
+        "id": "5",
+        "zh": "正在",
+        "pinyin": "zhèngzài",
+        "vi": "đang"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Khung “在……呢” cần một động từ: “他在睡觉呢” — bố đang ngủ.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 99,
+        "printedPage": 84,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb11-tone-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 075, track 11-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "mǎi · néng · méi",
+      "promptPinyin": "mǎi · néng · méi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "mǎi",
+        "pinyin": "mǎi",
+        "vi": "thanh 3"
+       },
+       {
+        "id": "2",
+        "zh": "néng",
+        "pinyin": "néng",
+        "vi": "thanh 2"
+       },
+       {
+        "id": "3",
+        "zh": "méi",
+        "pinyin": "méi",
+        "vi": "thanh 2"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.075 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 11-1 (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音 2 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb11-tone-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 075, track 11-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "xīn · zhēn · rè",
+      "promptPinyin": "xīn · zhēn · rè",
+      "options": [
+       {
+        "id": "1",
+        "zh": "xīn",
+        "pinyin": "xīn",
+        "vi": "thanh 1"
+       },
+       {
+        "id": "2",
+        "zh": "zhēn",
+        "pinyin": "zhēn",
+        "vi": "thanh 1"
+       },
+       {
+        "id": "3",
+        "zh": "rè",
+        "pinyin": "rè",
+        "vi": "thanh 4"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.075 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 11-1 (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音 2 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb11-tone-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 075, track 11-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "zuò fàn · zhèngzài · xiàbān",
+      "promptPinyin": "zuò fàn · zhèngzài · xiàbān",
+      "options": [
+       {
+        "id": "1",
+        "zh": "zuò fàn",
+        "pinyin": "zuò fàn",
+        "vi": "thanh 4 + 4"
+       },
+       {
+        "id": "2",
+        "zh": "zhèngzài",
+        "pinyin": "zhèngzài",
+        "vi": "thanh 4 + 4"
+       },
+       {
+        "id": "3",
+        "zh": "xiàbān",
+        "pinyin": "xiàbān",
+        "vi": "thanh 4 + 1"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.075 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 11-1 (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音 2 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb11-tone-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 075, track 11-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "shíjiān · hǎotīng · míngtiān",
+      "promptPinyin": "shíjiān · hǎotīng · míngtiān",
+      "options": [
+       {
+        "id": "1",
+        "zh": "shíjiān",
+        "pinyin": "shíjiān",
+        "vi": "thanh 2 + 1"
+       },
+       {
+        "id": "2",
+        "zh": "hǎotīng",
+        "pinyin": "hǎotīng",
+        "vi": "thanh 3 + 1"
+       },
+       {
+        "id": "3",
+        "zh": "míngtiān",
+        "pinyin": "míngtiān",
+        "vi": "thanh 2 + 1"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.075 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 11-1 (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音 2 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb11-tone-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 075, track 11-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "Xīngqītiān · zhōngxuéshēng · chūzūchē",
+      "promptPinyin": "Xīngqītiān · zhōngxuéshēng · chūzūchē",
+      "options": [
+       {
+        "id": "1",
+        "zh": "Xīngqītiān",
+        "pinyin": "Xīngqītiān",
+        "vi": "thanh 1 + 1 + 1"
+       },
+       {
+        "id": "2",
+        "zh": "zhōngxuéshēng",
+        "pinyin": "zhōngxuéshēng",
+        "vi": "thanh 1 + 2 + 1"
+       },
+       {
+        "id": "3",
+        "zh": "chūzūchē",
+        "pinyin": "chūzūchē",
+        "vi": "thanh 1 + 1 + 1"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.075 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 11-1 (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 82,
+        "printedPage": 75,
+        "section": "一、语音 2 · 声调辨析"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-l11-01",
+     "kind": "listening-comparison",
+     "titleVi": "Đánh dấu thanh điệu (Workbook trang 075, bài 1)",
+     "instructionVi": "Nghe track 11-1 của Workbook và tự ghi dấu thanh cho từng âm tiết dưới đây, rồi đọc to. Đây là bài luyện nghe – ghi dấu, đáp án phụ thuộc hoàn toàn vào băng nghe nên app không chấm; ghi chú của bạn được lưu tự động.",
+     "guideVi": "Tám âm tiết in trơn trong sách: chang, leng, hui, shuijiao, pingguo, jidan, daxuesheng, dianyingyuan. Nghe từng âm, ghi thanh bạn nghe được, đối chiếu bằng cách nghe lại.",
+     "prompts": [
+      "chang",
+      "leng",
+      "hui",
+      "shuijiao",
+      "pingguo",
+      "jidan",
+      "daxuesheng",
+      "dianyingyuan"
+     ],
+     "practiceEvidence": "Workbook tr.075, phần 一、语音 bài 1 声调标写： nghe, đánh dấu thanh cho 8 âm tiết rồi đọc to; track 11-1.",
+     "audioTrackId": "trk-wb-l11-1",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 82,
+       "printedPage": 75,
+       "section": "一、语音 1 · 声调标写"
+      }
+     ]
+    },
+    {
+     "id": "st-l11-02",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 085) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 085), dùng từ mới và điểm ngữ pháp của bài để hoàn thành khung câu in trong sách, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "prompts": [
+      "我们________。",
+      "桌子上________书？",
+      "弟弟________睡觉，在学习呢，他明天________。",
+      "她________看电视，________。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-11/describe-1.webp",
+       "alt": "Tranh vẽ: một người mẹ và con gái đang chọn đồ trên kệ trong siêu thị — vẽ lại theo ảnh Textbook tr.085",
+       "captionVi": "Hình 1 — hai mẹ con trong siêu thị. Tranh vẽ lại theo ảnh Textbook tr.085",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 100,
+         "printedPage": 85,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-11/describe-2.webp",
+       "alt": "Tranh vẽ: một chiếc bàn gỗ trống không — vẽ lại theo ảnh Textbook tr.085",
+       "captionVi": "Hình 2 — chiếc bàn trống. Tranh vẽ lại theo ảnh Textbook tr.085",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 100,
+         "printedPage": 85,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-11/describe-3.webp",
+       "alt": "Tranh vẽ: một cậu bé đang ngồi học bài viết chữ bên bàn vào buổi tối — vẽ lại theo ảnh Textbook tr.085",
+       "captionVi": "Hình 3 — em trai đang học bài. Tranh vẽ lại theo ảnh Textbook tr.085",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 100,
+         "printedPage": 85,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-11/describe-4.webp",
+       "alt": "Tranh vẽ: một cô gái đang đọc sách, bên cạnh là chồng sách cao — vẽ lại theo ảnh Textbook tr.085",
+       "captionVi": "Hình 4 — cô gái đang đọc sách. Tranh vẽ lại theo ảnh Textbook tr.085",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 100,
+         "printedPage": 85,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Câu gợi ý (chỉ là một cách nói, không phải đáp án duy nhất của sách): 我们在超市买东西呢。/ 桌子上有没有书？/ 弟弟没在睡觉，在学习呢，他明天要上课。/ 她没在看电视，在看书呢。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 100,
+       "printedPage": 85,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-l11-03",
+     "kind": "speaking",
+     "titleVi": "Trả lời câu hỏi theo Hội thoại 3 (Textbook trang 083) — tự luyện, không chấm tự động",
+     "instructionVi": "Đọc lại Hội thoại 3 rồi trả lời thành tiếng hai câu hỏi in trong sách. Đáp án mẫu ở phần gợi ý để bạn tự đối chiếu sau khi trả lời.",
+     "prompts": [
+      "弟弟起床没起床？",
+      "弟弟今天要做什么？"
+     ],
+     "draftPromptVi": "Đáp án theo lời thoại: 弟弟没起床，他还在睡觉。/ 弟弟今天要和小朋友玩。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 98,
+       "printedPage": 83,
+       "section": "课文 3 · 根据课文内容回答问题"
+      }
+     ]
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện lấy nguyên từ sách, không chấm tự động: đánh dấu thanh điệu theo băng nghe (Workbook tr.075), dùng hình để nói (Textbook tr.085) và trả lời câu hỏi theo Hội thoại 3 (Textbook tr.083). Nháp và ghi chú của bạn được lưu trên thiết bị; điểm của các bài này không gộp vào điểm bài chính.",
+   "selfCheckListenVi": "Bài tự luyện nghe: đánh dấu thanh điệu (Workbook tr.075).",
+   "apply": {
+    "titleVi": "Hỏi nhau: có làm không, đang làm gì",
+    "instructionVi": "Hoạt động lớp trong sách (Textbook tr.085): hai người một nhóm, luân phiên hỏi và đáp về việc có định làm một việc gì đó không, theo mẫu của Tiểu Ngữ. Trong app, làm lần lượt hai nhiệm vụ dưới đây: đọc mẫu, rồi thay hoạt động bằng việc của bạn.",
+    "audioTrackId": "trk-tb-l11-1",
+    "noteVi": "Nhiệm vụ gốc của sách là hoạt động đôi hỏi – đáp (tr.085). Hai nhiệm vụ trong app cụ thể hoá yêu cầu đó bằng đúng mẫu đối thoại của Tiểu Ngữ in ở tr.085; không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 100,
+      "printedPage": 85,
+      "section": "课堂活动 · 双人活动"
+     }
+    ],
+    "samplePassageIds": [
+     "l11-dialogue-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l11-1",
+      "titleVi": "Hỏi nhau bằng câu hỏi chính – phủ",
+      "situationVi": "Hai người: một người hỏi bạn có đi ăn trưa không bằng câu hỏi chính – phủ, người kia đáp ngắn; rồi đổi vai với một hoạt động khác （去超市、去看电影、去学习）.",
+      "sampleZh": "你去不去吃午饭？——我不去。",
+      "samplePinyin": "Nǐ qù bu qù chī wǔfàn? —— Wǒ bú qù.",
+      "sampleVi": "Cậu có đi ăn trưa không? — Tớ không đi.",
+      "swapVi": "Thay 吃午饭 bằng hoạt động khác và giữ mẫu “……不……？”; khi đáp việc đã qua thì dùng 没： “我没去”.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ trong hoạt động lớp ở Textbook tr.085.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 85,
+        "section": "课堂活动 · 双人活动"
+       }
+      ]
+     },
+     {
+      "id": "speak-l11-2",
+      "titleVi": "Hỏi bạn đang làm gì",
+      "situationVi": "Một người hỏi “你在做什么？”, người kia đáp việc mình đang làm bằng mẫu 在/正在…呢, rồi hỏi ngược lại bằng câu hỏi chính – phủ.",
+      "sampleZh": "我在学中文呢。你学不学？",
+      "samplePinyin": "Wǒ zài xué Zhōngwén ne. Nǐ xué bu xué?",
+      "sampleVi": "Tớ đang học tiếng Trung đây. Cậu có học không?",
+      "swapVi": "Thay 学中文 bằng việc bạn đang làm thật （看电视、读书、做作业） và giữ khung “我在……呢”.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ trong hoạt động lớp ở Textbook tr.085.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 100,
+        "printedPage": 85,
+        "section": "课堂活动 · 双人活动"
+       }
+      ]
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l11-vocab-1",
+     "dialogueId": "l11-dialogue-1",
+     "titleVi": "Hội thoại 1 · Đang tìm nhà hàng",
+     "trackId": "trk-tb-l11-2",
+     "trackLabelVi": "Track 11-2"
+    },
+    {
+     "id": "l11-vocab-2",
+     "dialogueId": "l11-dialogue-2",
+     "titleVi": "Hội thoại 2 · Tôi đang học đại học đây",
+     "trackId": "trk-tb-l11-4",
+     "trackLabelVi": "Track 11-4"
+    },
+    {
+     "id": "l11-vocab-3",
+     "dialogueId": "l11-dialogue-3",
+     "titleVi": "Hội thoại 3 · Em trai vẫn đang ngủ",
+     "trackId": "trk-tb-l11-6",
+     "trackLabelVi": "Track 11-6"
+    }
+   ],
+   "prepSummaryVi": "25 từ mới, chia theo ba hội thoại của bài.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu và cảnh sinh viên đang học của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết",
+     "descVi": "Học 25 từ mới theo ba hội thoại, nghe từng từ bằng audio sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "Câu hỏi chính – phủ, ba cách nói việc đang diễn ra và “要” muốn/dự định.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe và đọc ba hội thoại: tìm nhà hàng, học đại học, em trai vẫn đang ngủ.",
+     "sectionId": "reader",
+     "dialogueId": "l11-dialogue-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Làm 16 câu chính, 4 câu hỏi tại hội thoại, rồi luyện thêm với bài đánh dấu thanh điệu, bài nói theo hình và bài trả lời câu hỏi.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói",
+     "descVi": "Hoạt động đôi: luân phiên hỏi nhau có làm không, đang làm gì theo hoạt động lớp của sách.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu hỏi chính – phủ",
+     "bodyVi": "Ghép khẳng định và phủ định thành một câu hỏi: động từ dùng 不 hoặc 没 （去不去、去没去）, tính từ chỉ dùng 不 （忙不忙、好看不好看）. Trả lời ngắn bằng chính động/tính từ đó: 去 / 不去 / 没去.",
+     "exampleZh": "你们学习忙不忙？",
+     "examplePinyin": "Nǐmen xuéxí máng bu máng?",
+     "exampleVi": "Các cậu học có bận không?"
+    },
+    {
+     "titleVi": "Ba cách nói việc đang diễn ra",
+     "bodyVi": "在/正在＋động từ； 在/正在＋động từ＋呢； hoặc chỉ động từ＋呢. Phủ định bằng 没（有）: 我没开车。Hỏi ai đang làm gì: 你在做什么呢？",
+     "exampleZh": "我正在找呢。",
+     "examplePinyin": "Wǒ zhèngzài zhǎo ne.",
+     "exampleVi": "Tớ đang tìm đây."
+    },
+    {
+     "titleVi": "“要” — muốn, dự định",
+     "bodyVi": "“要” đứng trước động từ để nói điều muốn làm hoặc sắp làm, khác với 在 (việc đang diễn ra): 他今天要和小朋友玩 — hôm nay em ấy muốn chơi với bạn nhỏ.",
+     "exampleZh": "妈妈要去超市。",
+     "examplePinyin": "Māma yào qù chāoshì.",
+     "exampleVi": "Mẹ muốn đi siêu thị."
+    },
+    {
+     "titleVi": "Hỏi – đáp nhanh về việc đang làm",
+     "bodyVi": "Chuỗi hỏi đáp thường gặp của bài: hỏi bằng 吗 hoặc câu hỏi chính – phủ, đáp bằng câu đang diễn ra: “你还在读大学吗？— 对，我读大学呢。” và “弟弟起床没起床呢？— 没起床呢，还在睡觉。”",
+     "exampleZh": "没起床呢，还在睡觉。",
+     "examplePinyin": "Méi qǐchuáng ne, hái zài shuìjiào.",
+     "exampleVi": "Chưa dậy đâu, vẫn đang ngủ."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả tên nhân vật và các từ của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "王一飞",
+      "pinyin": "Wáng Yīfēi",
+      "hanViet": "VƯƠNG NHẤT PHI",
+      "vi": "Vương Nhất Phi — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "刘小雪",
+      "pinyin": "Liú Xiǎoxuě",
+      "hanViet": "LƯU TIỂU TUYẾT",
+      "vi": "Lưu Tiểu Tuyết — con gái của Lưu Minh (tên riêng)"
+     },
+     {
+      "zh": "小雪",
+      "pinyin": "Xiǎoxuě",
+      "hanViet": "TIỂU TUYẾT",
+      "vi": "Tiểu Tuyết — gọi tắt của Lưu Tiểu Tuyết (tên riêng)"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt — nhân vật trong sách (tên riêng)"
+     },
+     {
+      "zh": "课",
+      "pinyin": "kè",
+      "hanViet": "KHOÁ",
+      "vi": "tiết học, bài học"
+     },
+     {
+      "zh": "学习",
+      "pinyin": "xuéxí",
+      "hanViet": "HỌC TẬP",
+      "vi": "học tập"
+     },
+     {
+      "zh": "非常",
+      "pinyin": "fēicháng",
+      "hanViet": "PHI THƯỜNG",
+      "vi": "rất, vô cùng"
+     },
+     {
+      "zh": "忙",
+      "pinyin": "máng",
+      "hanViet": "MANG",
+      "vi": "bận"
+     },
+     {
+      "zh": "电视",
+      "pinyin": "diànshì",
+      "hanViet": "ĐIỆN THỊ",
+      "vi": "tivi, truyền hình"
+     },
+     {
+      "zh": "电影",
+      "pinyin": "diànyǐng",
+      "hanViet": "ĐIỆN ẢNH",
+      "vi": "phim, điện ảnh"
+     },
+     {
+      "zh": "书店",
+      "pinyin": "shūdiàn",
+      "hanViet": "THƯ ĐIẾM",
+      "vi": "hiệu sách"
+     },
+     {
+      "zh": "上课",
+      "pinyin": "shàngkè",
+      "hanViet": "THƯỢNG KHOÁ",
+      "vi": "lên lớp, vào học"
+     },
+     {
+      "zh": "学生们",
+      "pinyin": "xuéshengmen",
+      "hanViet": "HỌC SINH MÔN",
+      "vi": "các học sinh, các bạn học"
+     },
+     {
+      "zh": "买菜",
+      "pinyin": "mǎi cài",
+      "hanViet": "MÃI THÁI",
+      "vi": "mua rau, đi chợ mua thức ăn"
+     },
+     {
+      "zh": "菜",
+      "pinyin": "cài",
+      "hanViet": "THÁI",
+      "vi": "món ăn; rau"
+     },
+     {
+      "zh": "后边",
+      "pinyin": "hòubian",
+      "hanViet": "HẬU BIÊN",
+      "vi": "phía sau"
+     },
+     {
+      "zh": "学校",
+      "pinyin": "xuéxiào",
+      "hanViet": "HỌC HIỆU",
+      "vi": "trường học"
+     },
+     {
+      "zh": "衣服",
+      "pinyin": "yīfu",
+      "hanViet": "Y PHỤC",
+      "vi": "quần áo"
+     },
+     {
+      "zh": "贵",
+      "pinyin": "guì",
+      "hanViet": "QUÝ",
+      "vi": "đắt"
+     },
+     {
+      "zh": "好看",
+      "pinyin": "hǎokàn",
+      "hanViet": "HẢO KHÁN",
+      "vi": "đẹp, dễ nhìn"
+     },
+     {
+      "zh": "午饭",
+      "pinyin": "wǔfàn",
+      "hanViet": "NGỌ PHẠN",
+      "vi": "cơm trưa"
+     },
+     {
+      "zh": "中文",
+      "pinyin": "Zhōngwén",
+      "hanViet": "TRUNG VĂN",
+      "vi": "tiếng Trung"
+     },
+     {
+      "zh": "家里",
+      "pinyin": "jiā li",
+      "hanViet": "GIA LÝ",
+      "vi": "ở trong nhà"
+     },
+     {
+      "zh": "桌子",
+      "pinyin": "zhuōzi",
+      "hanViet": "TRÁC TỬ",
+      "vi": "cái bàn"
+     },
+     {
+      "zh": "上",
+      "pinyin": "shàng",
+      "hanViet": "THƯỢNG",
+      "vi": "trên; lên"
+     },
+     {
+      "zh": "书",
+      "pinyin": "shū",
+      "hanViet": "THƯ",
+      "vi": "sách"
+     },
+     {
+      "zh": "姐姐",
+      "pinyin": "jiějie",
+      "hanViet": "TỶ TỶ",
+      "vi": "chị gái"
+     },
+     {
+      "zh": "妈妈",
+      "pinyin": "māma",
+      "hanViet": "MA MA",
+      "vi": "mẹ"
+     },
+     {
+      "zh": "爸爸",
+      "pinyin": "bàba",
+      "hanViet": "BA BA",
+      "vi": "bố, cha"
+     },
+     {
+      "zh": "孩子",
+      "pinyin": "háizi",
+      "hanViet": "HÀI TỬ",
+      "vi": "trẻ con, con (của ai đó)"
+     },
+     {
+      "zh": "还",
+      "pinyin": "hái",
+      "hanViet": "HOÀN",
+      "vi": "vẫn, còn"
+     },
+     {
+      "zh": "和",
+      "pinyin": "hé",
+      "hanViet": "HOÀ",
+      "vi": "và, với, cùng"
+     },
+     {
+      "zh": "玩",
+      "pinyin": "wán",
+      "hanViet": "NGOẠN",
+      "vi": "chơi"
+     },
+     {
+      "zh": "去",
+      "pinyin": "qù",
+      "hanViet": "KHỨ",
+      "vi": "đi"
+     },
+     {
+      "zh": "吃",
+      "pinyin": "chī",
+      "hanViet": "KHÍCH",
+      "vi": "ăn"
+     },
+     {
+      "zh": "了",
+      "pinyin": "le",
+      "hanViet": "LIỄU",
+      "vi": "trợ từ — việc đã xảy ra hoặc đã hoàn thành (ở đây: đã đi đâu rồi)"
      }
     ],
     "phrases": []

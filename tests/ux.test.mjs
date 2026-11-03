@@ -9,14 +9,14 @@ test('speaker coverage: every unit either has a draft segment or an explicit mis
   const count = (arr) => arr.reduce((a, x) => [a[0] + (x.audio ? 1 : 0), a[1] + 1], [0, 0]);
   const sentences = lessons.flatMap((c) => c.reader.sentences);
   const segOf = (c, sen) => c.reader.audioTracks.find((t) => t.id === c.reader.passages.find((g) => g.id === sen.passageId)?.audioTrackId)?.segments?.find((x) => x.sentenceId === sen.id);
-  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 135); // all dialogue turns (91 through Lesson 7 + 14 in Lesson 8 + 14 in Lesson 9 + 16 in Lesson 10)
+  assert.equal(sentences.filter((sen) => segOf(lessons.find((c) => c.reader.sentences.includes(sen)), sen)).length, 149); // all dialogue turns (91 through Lesson 7 + 14 in Lesson 8 + 14 in Lesson 9 + 16 in Lesson 10 + 14 in Lesson 11)
   const [prepOk, prepAll] = count(lessons.flatMap((c) => c.prepWords));
-  assert.deepEqual([prepOk, prepAll], [205, 213]); // 8 words have no confident segment: 大家 (L1), 吗 (L3), 王老师 (L1), Lesson 3's four proper nouns (added in D27, audio null) and one more legacy token; all 23 Lesson 9 and 23 Lesson 10 words carry draft segments
+  assert.deepEqual([prepOk, prepAll], [230, 238]); // 8 words have no confident segment: 大家 (L1), 吗 (L3), 王老师 (L1), Lesson 3's four proper nouns (added in D27, audio null) and one more legacy token; all Lesson 9, 10 and 11 words carry draft segments
   const [foundOk, foundAll] = count(lessons.flatMap((c) => c.foundationWords));
   assert.deepEqual([foundOk, foundAll], [64, 71]); // 雨/五/一/椅子 (L2), 嘴 (L3) and 盖儿/个儿 (L6) tokens not reliably identifiable
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
   const [optOk, optAll] = count(options);
-  assert.deepEqual([optOk, optAll], [143, 520]); // exercise-set options only; since D28 the dialogues' own questions (36 items, 108 options) live at their dialogues and are counted there. Set options per lesson: L4 49, L5-L7 61 each, L8 73 (37 with audio), L9 73, L10 76
+  assert.deepEqual([optOk, optAll], [143, 596]); // exercise-set options only; since D28 the dialogues' own questions (40 items, 120 options) live at their dialogues and are counted there. Set options per lesson: L4 49, L5-L7 61 each, L8 73 (37 with audio), L9 73, L10 76, L11 76
   for (const c of lessons) for (const t of c.reader.audioTracks) for (const sg of t.segments || []) {
     assert.ok(sg.end > sg.start && sg.end <= t.durationSec, `${t.id} segment in range`);
     assert.equal(sg.status, 'asr-draft'); // machine alignment is never labelled human-verified

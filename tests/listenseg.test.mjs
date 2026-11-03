@@ -32,6 +32,6 @@ test('listening comprehension items all carry a playable audio segment', () => {
       }
     }
   }
-  assert.equal(checked, 24); // Lessons 5-10, four listening items each
-  assert.equal(totalChecks, 36); // + Lessons 4-7's six dialogue questions each (4 listening + 2 printed under Dialogue 3; Lesson 4: 4 + 2 reading)
+  assert.equal(checked, 28); // Lessons 5-11, four listening items each
+  assert.equal(totalChecks, 40); // + Lessons 4-7's six dialogue questions each (4 listening + 2 printed under Dialogue 3; Lesson 4: 4 + 2 reading)
 });

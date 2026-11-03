@@ -4,8 +4,8 @@
 // practiced / self / paper / needsReview. A character is never labelled
 // "mastered" — completing a stage once, especially with hints, is practice,
 // not mastery.
-import { loadProgress, update } from "./store.js?v=20261103-hsk2l1-writing1";
-import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261103-hsk2l1-writing1";
+import { loadProgress, update } from "./store.js?v=20261103-hsk2l1-writing2";
+import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261103-hsk2l1-writing2";
 
 const VENDOR_SRC = "assets/vendor/hanzi-writer-3.7.3.min.js";
 let hwPromise = null;
@@ -19,6 +19,13 @@ export function writingChar(CONTENT, charId) {
     if (ch) return { set, ch };
   }
   return null;
+}
+
+// Hanzi Writer 3.x renamed the factory: HanziWriter.create(...) (the old
+// createWriter name was removed in 3.0). Support both spellings.
+function createWriter(HW, el, char, opts) {
+  if (typeof HW.createWriter === "function") return HW.createWriter(el, char, opts);
+  return HW.create(el, char, opts);
 }
 
 function loadHanziWriter() {
@@ -233,7 +240,7 @@ function bindChar(ctx, ch) {
       },
     }, extra);
     try {
-      writers.view = HW.createWriter(viewBox, ch.char, opts());
+      writers.view = createWriter(HW, viewBox, ch.char, opts());
       writers.view.animateCharacter({
         onComplete: () => { saveMark(ch.id, { seen: true }); refreshStages(ch); },
       });
@@ -243,7 +250,7 @@ function bindChar(ctx, ch) {
       if (!quizBox) return;
       quizBox.innerHTML = "";
       quizStroke = 0;
-      writers.quiz = HW.createWriter(quizBox, ch.char, opts({ showCharacter: false }));
+      writers.quiz = createWriter(HW, quizBox, ch.char, opts({ showCharacter: false }));
       writers.quiz.quiz({
         onMistake: (d) => { const s = document.getElementById("quiz-status"); if (s) s.textContent = `Nét ${d.strokeNum + 1} chưa đúng vị trí/thứ tự — thử lại, hoặc bấm “Gợi ý nét này”. (Đã sai ${d.mistakesOnStroke} lần ở nét này.)`; },
         onCorrectStroke: (d) => { quizStroke = d.strokeNum + 1; const s = document.getElementById("quiz-status"); if (s) s.textContent = `Đúng nét ${d.strokeNum + 1}/${ch.strokeCount}. ${quizStroke >= ch.strokeCount ? "" : "Tiếp tục nét tiếp theo."}`; },
@@ -253,7 +260,7 @@ function bindChar(ctx, ch) {
     const startSelf = () => {
       if (!selfBox) return;
       selfBox.innerHTML = "";
-      writers.self = HW.createWriter(selfBox, ch.char, opts({ showCharacter: false, showOutline: false }));
+      writers.self = createWriter(HW, selfBox, ch.char, opts({ showCharacter: false, showOutline: false }));
       writers.self.quiz({
         onComplete: () => { const s = document.getElementById("self-status"); if (s) s.textContent = "Bạn đã tự viết xong cả chữ không nhìn mẫu."; saveMark(ch.id, { self: true }); refreshStages(ch); },
       });
@@ -267,7 +274,7 @@ function bindChar(ctx, ch) {
     on("hw-slow", () => {
       if (!viewBox) return;
       viewBox.innerHTML = "";
-      writers.view = HW.createWriter(viewBox, ch.char, opts({ strokeAnimationSpeed: 0.35, delayBetweenStrokes: 450 }));
+      writers.view = createWriter(HW, viewBox, ch.char, opts({ strokeAnimationSpeed: 0.35, delayBetweenStrokes: 450 }));
       writers.view.animateCharacter({ onComplete: () => { saveMark(ch.id, { seen: true }); refreshStages(ch); } });
     });
     on("quiz-hint", () => { if (writers.quiz) writers.quiz.highlightStroke(quizStroke); });

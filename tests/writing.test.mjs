@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
+import { JSDOM } from 'jsdom';
 import { emptyProgress, migrateProgress, validateProgress, markWriting, writingEntryOf, writingStageCount, isWritingDue } from '../src/lib.js';
 
 const content = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url)));
@@ -75,4 +76,26 @@ test('writing tech: vendored Hanzi Writer + license files are present', () => {
   assert.ok(existsSync(new URL('../data/hanzi/ARPHICPL.TXT', import.meta.url)));
   const src = content.sources.find((s) => s.id === 'src-hanzi-stroke-data');
   assert.ok(src && src.rightsStatus === 'licensed');
+});
+
+test('vendored Hanzi Writer 3.7.3: factory renders and animates a few-stroke and a many-stroke char', async () => {
+  // Regression for the live failure of 2026-11-03: v3 renamed the factory to
+  // HanziWriter.create (createWriter no longer exists); src/writing.js must
+  // use the v3 name. This test exercises the real vendored library.
+  const dom = new JSDOM('<!doctype html><body><div id="v"></div><div id="q"></div></body>', { url: 'https://example.test/HSK3.0/', runScripts: 'dangerously' });
+  dom.window.eval(readFileSync(new URL('../assets/vendor/hanzi-writer-3.7.3.min.js', import.meta.url), 'utf8'));
+  const HW = dom.window.HanziWriter;
+  assert.equal(typeof HW.create, 'function');
+  const loader = (char, onComplete, onError) => {
+    try { onComplete(JSON.parse(readFileSync(new URL(`../data/hanzi/${char}.json`, import.meta.url)))); } catch (e) { onError(e); }
+  };
+  const base = { width: 264, height: 264, padding: 14, showOutline: true, delayBetweenStrokes: 1, charDataLoader: loader };
+  for (const [id, char] of [['v', '打'], ['q', '接']]) {
+    const w = HW.create(dom.window.document.getElementById(id), char, base);
+    assert.equal(typeof w.animateCharacter, 'function');
+    assert.equal(typeof w.quiz, 'function');
+    await new Promise((resolve) => w.animateCharacter({ onComplete: resolve }));
+    const svg = dom.window.document.querySelector(`#${id} svg`);
+    assert.ok(svg && svg.querySelectorAll('path').length > 10, `${char} rendered`);
+  }
 });

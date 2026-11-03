@@ -550,3 +550,8 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - **Sửa bóng sau QA (không phải lỗi nội dung):** ghi chú nhẹ của QA — KP nền tảng gọi “bộ 言” thay vì dạng bộ thủ 讠 （言字旁）; đã đổi thành “bộ 讠（言字旁）” trong dữ liệu + script biên soạn, test hồi quy 190/190, không đụng câu chấm nào.
 - **Nghiệm thu live:** nội dung chính đạt (chi tiết và lưu ý về lỗi quan sát trong bản ghi nghiệm thu ở CHECKPOINT mục Bài 13); content.json live khớp byte bản local.
 - **Giới hạn:** QA không kiểm nghe — mọi mốc là asr-draft căn bằng máy (từ 问题 ở track 13-2 ước theo vị trí ASR vì hai lần đọc dính nhau); ba track từ đọc mỗi từ hai lần, mốc lấy lần đầu theo khoảng lặng; quyền nguồn unknown; kiểm tra giao diện bằng trình duyệt giả lập, không phải thiết bị thật.
+
+## Sửa Hán–Việt Bài 12 — 这里 (2026-11-03, PR #97, live 20261103-l12hanviet1)
+
+- **Lỗi:** âm Hán–Việt của 这里 (Bài 12, nhóm Hội thoại 1) ghi “CHÁ LÝ” — sai âm chuẩn và lệch quy ước của chính dự án （这 = GIÁ ở Bài 3/8/10/13). Lỗi do vòng biên soạn Bài 12 ghi nhầm và QA Bài 12 đã chấp nhận; phát hiện khi xây Bài 13, Hoa quyết định sửa trong vòng nhỏ riêng.
+- **Sửa:** một giá trị duy nhất → “GIÁ LÝ”; rà soát toàn cục trước sửa xác nhận không còn từ nào khác dùng CHÁ cho 这. Validator OK, audit đạt, test 190/190; nghiệm thu live: dữ liệu khớp byte + giao diện Từ cần biết Bài 12 hiển thị đúng “HV: GIÁ LÝ”.

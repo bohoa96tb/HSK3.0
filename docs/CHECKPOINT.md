@@ -224,6 +224,14 @@
 - Việc ngoài phạm vi vòng này, chờ Hoa quyết: âm Hán–Việt của từ 这里 ở Bài 12 đang là “CHÁ LÝ” — sai quy ước dự án （这 = GIÁ như Bài 3/10); sửa cần một vòng nhỏ riêng cho Bài 12.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
 
+## Rà soát tổng thể cấp 1 — ĐÃ SỬA VÀ PHÁT HÀNH (2026-11-03)
+
+- branch: fix-l1-review-hanviet → PR #103, merge 5f58e54e; contentVersion live `20261103-l1review1` (content.json trên URL thật khớp byte bản local, sha256 đầu fdd6da72; kiểm nhanh live đạt 3/3 điểm tiêu biểu).
+- Phạm vi rà soát: cơ giới toàn cấp (test 200/200, validator OK, audit-standard đạt 15/15; 165/165 hình tải tốt trên URL thật; không trùng mã bài tập; chuỗi bài trước liền mạch; stub 15/15 đúng khuôn) + QA độc lập ngữ nghĩa: điểm tổng kết đối chiếu từng hội thoại ĐẠT 15/15 (lỗi kiểu Bài 12 đã hết; 6 câu ví dụ lấy từ phần luyện đọc của sách, truy được trong KP); nhãn nền tảng ĐẠT 14/15; đa nghĩa theo bài và 兴 HƯNG/HỨNG xác nhận đúng.
+- Đã sửa theo duyệt của Hoa (toàn bộ theo khuyến nghị QA): 13 trường Hán–Việt thống nhất — Bài 3 工作 CÔNG TÁ→CÔNG TÁC (lỗi thật), 女朋友→NỮ BẰNG HỮU, 哪→NÃ; Bài 4 女儿→NỮ NHI; Bài 6 哪儿→NÃ NHI; Bài 10 少 (nghĩa "ít") THIẾU→THIỂU; Bài 11 哪里→NÃ LÝ; Bài 13 坐→TỌA, 要→YẾU, 面包→DIỆN BAO, tra từ 面条儿→DIỆN ĐIỀU NHI; Bài 14 不要→BẤT YẾU; Bài 15 要→YẾU. Quyết định 要 = YẾU thay cho chuẩn YÊU đã chốt ở vòng Bài 14 (ghi nhận đính chính). Nhãn nền tảng Bài 6 tách rõ "(phát âm)" cho nhi hóa và "(cách viết)" cho dấu cách âm.
+- QA kiểm lại: 13/13 đúng; quét toàn bộ 637 trường hanViet không còn âm cũ trong các ngữ cảnh phải đổi; các trường hợp giữ nguyên （那 = NA, 兴 theo cách đọc, 多少 = ĐA THIỂU) còn đúng.
+- Việc còn treo không đổi: CI qua web; track mô phỏng Bài 5/6/7 chờ Hoa yêu cầu; kiểm lại nút Tiếp tục trên Android thật của Hoa; audio chưa nghe kiểm chứng bởi người (asr-draft).
+
 ## Bài 15 —《大兴机场见！》ĐÃ PHÁT HÀNH (2026-11-03) — CẤP 1 HOÀN THÀNH 15/15
 
 - branch: lesson-15-standard1 → PR #101, merge 49b515ef; contentVersion live `20261103-lesson15-standard1` (content.json trên URL thật khớp byte bản local, sha256 đầu 22527f39; hình kiểm blob SHA 11/11; nghiệm thu live đạt 5/5 điểm kiểm).

@@ -224,6 +224,11 @@
 - Việc ngoài phạm vi vòng này, chờ Hoa quyết: âm Hán–Việt của từ 这里 ở Bài 12 đang là “CHÁ LÝ” — sai quy ước dự án （这 = GIÁ như Bài 3/10); sửa cần một vòng nhỏ riêng cho Bài 12.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
 
+## Bài 15 —《大兴机场见！》(đang xây, chờ QA)
+
+- Đã kiểm kê từ sách thật: TB tr. in 112–121 (PDF 127–136), WB phần bài học tr. in 111–113 (PDF 118–120). Nội dung: 14 câu/3 hội thoại (4/4/6), 17 từ + 3 tên riêng （西安/北京/大兴机场， audio null theo tiền lệ Bài 3), CHỈ MỘT KP chính theo đúng bản in （并列复句“…，还/也……”) + 汉字书写（八） ở WB (sáu bộ thủ thường gặp), bộ chính 23 câu (6 khởi động + 5 điền từ + 6 nghe–nối âm tiết + 6 nghe–phân biệt ngữ điệu BỐN loại câu — mở rộng từ dạng hai loại của Bài 14), 6 câu hỏi tại CẢ BA hội thoại theo D28 kèm audioSegment, 3 tự luyện, tra từ 25/25, 11 hình mới. Khối 学习小结 liên bài 13–15 (TB tr.120–121) loại khỏi bài theo tiền lệ D27, đã ghi trong SOURCE_AUDIT; video bổ trợ 《北京欢迎你》 chỉ ghi nhận.
+- Đang chờ: QA độc lập đầy đủ (D17) → sửa trong nhánh nếu có lỗi → PR/merges → nghiệm thu live → sổ sách. Kiểm thử hiện tại: test 200/200 (thêm tests/lesson15standard.test.mjs; bộ đếm toàn cục: 206 câu hội thoại có đoạn, từ [317 có đoạn/330], lựa chọn bộ chính [143/1044], 64 câu tại hội thoại trong đó 52 câu nghe hiểu có đoạn), validator OK, audit-standard đạt.
+
 ## Bài 14 —《我看了一个电影》ĐÃ PHÁT HÀNH (2026-11-03)
 
 - branch: lesson-14-standard1 → PR #99, merge 07100c1a; contentVersion live `20261103-lesson14-standard1` (content.json trên URL thật khớp byte bản local; hình kiểm blob SHA 11/11; nghiệm thu live đạt nội dung chính 4/5 điểm — điểm loa ở mục Từ cần biết chưa xác nhận được trạng thái phát trong môi trường trình duyệt kiểm tra tự động, cùng giới hạn đã ghi ở các vòng trước; bản ghi nghiệm thu có vài chi tiết quan sát bịa về thân câu/lựa chọn không có trong dữ liệu — dữ liệu byte-khớp nên là lỗi quan sát như các vòng Bài 12/13).

@@ -32,6 +32,6 @@ test('listening comprehension items all carry a playable audio segment', () => {
       }
     }
   }
-  assert.equal(checked, 52); // Lessons 5-11, four listening items each + Lessons 12, 13, 14 and 15's six each (all three dialogues carry printed questions)
-  assert.equal(totalChecks, 64); // + Lessons 4-7's six dialogue questions each (4 listening + 2 printed under Dialogue 3; Lesson 4: 4 + 2 reading)
+  assert.equal(checked, 60); // Lessons 5-11, four listening items each + Lessons 12, 13, 14 and 15's six each (all three dialogues carry printed questions) + HSK2 Lesson 1's eight (2 per text, incl. 2 判断 items of Text 4)
+  assert.equal(totalChecks, 74); // + Lessons 4-7's six dialogue questions each (4 listening + 2 printed under Dialogue 3; Lesson 4: 4 + 2 reading) + HSK2 Lesson 1's ten (8 listening + 2 reading of Text 4)
 });

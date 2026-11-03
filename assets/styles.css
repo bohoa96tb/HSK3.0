@@ -515,3 +515,31 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .reader-checks h3 { margin: 0.25rem 0 0.35rem; }
 .reader-check-item { border-top: 1px dashed var(--line, #e5ded2); padding: 0.75rem 0 0.25rem; }
 .reader-check-item h4 { margin: 0 0 0.4rem; font-size: 1rem; }
+
+/* ---- Luyện viết chữ Hán (D30) ---- */
+.grid-box{position:relative;border:1.5px solid #b9c6d8;border-radius:10px;background-color:#fff;background-image:
+ linear-gradient(to right,transparent calc(50% - .5px),#dbe3ee calc(50% - .5px),#dbe3ee calc(50% + .5px),transparent calc(50% + .5px)),
+ linear-gradient(to bottom,transparent calc(50% - .5px),#dbe3ee calc(50% - .5px),#dbe3ee calc(50% + .5px),transparent calc(50% + .5px)),
+ linear-gradient(45deg,transparent calc(50% - .75px),#e7edf5 calc(50% - .75px),#e7edf5 calc(50% + .75px),transparent calc(50% + .75px)),
+ linear-gradient(-45deg,transparent calc(50% - .75px),#e7edf5 calc(50% - .75px),#e7edf5 calc(50% + .75px),transparent calc(50% + .75px));}
+.hw-box{width:264px;height:264px;max-width:80vw;max-height:80vw;display:flex;align-items:center;justify-content:center;touch-action:manipulation}
+.hw-wrap{display:flex;justify-content:center;margin:8px 0}
+.static-char{width:180px;height:180px;font-size:104px;line-height:1;display:flex;align-items:center;justify-content:center;color:#1f3a5f}
+.static-char-fallback{font-size:110px;line-height:1;color:#1f3a5f}
+.write-look{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.write-look-info{flex:1 1 260px}
+.write-pron{font-size:1.15rem}
+.writing-actions .btn{min-height:44px}
+.hw-status{min-height:1.4em}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px;margin:12px 0}
+.char-card{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 10px;background:#fff;border:1px solid #dde5ef;border-radius:12px;text-decoration:none;color:inherit;text-align:center}
+.char-card:hover{border-color:#9db6d4}
+.char-big{font-size:54px;line-height:1.15;color:#1f3a5f}
+.char-meta{font-size:.85rem;color:#5a6b82}
+.char-word{font-size:1.05rem}
+.char-badges{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.stage-list{list-style:none;padding:0;margin:8px 0}
+.stage-list li{padding:4px 0}
+.stage-mark{display:inline-block;width:1.4em}
+.due-char{font-size:1.25rem}
+.writing-entry h2 [lang="zh-CN"]{color:#1f3a5f}

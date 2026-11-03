@@ -1,9 +1,10 @@
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261103-l1review1";
-import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261103-l1review1";
-import * as player from "./player.js?v=20261103-l1review1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261103-hsk2l1-writing1";
+import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261103-hsk2l1-writing1";
+import * as player from "./player.js?v=20261103-hsk2l1-writing1";
+import { viewWritingHome, viewWritingSet, viewWritingChar, writingSetFor } from "./writing.js?v=20261103-hsk2l1-writing1";
 
 const main = document.getElementById("main");
 const mini = document.getElementById("miniplayer");
@@ -126,6 +127,12 @@ function renderInner() {
   if (page === "review") return viewReview();
   if (page === "progress") return viewProgress();
   if (page === "settings") return viewSettings();
+  if (page === "writing") {
+    const wctx = { CONTENT, main, esc, header, lessonById, refsHtml, navActive };
+    if (!seg[1]) return viewWritingHome(wctx);
+    if (!seg[2]) return viewWritingSet(wctx, seg[1], query);
+    return viewWritingChar(wctx, seg[1], seg[2]);
+  }
   if (page === "sources") return viewSources(seg[1]);
   main.innerHTML = `<section class="card"><h1>Không tìm thấy trang</h1><p>Đường dẫn không đúng hoặc nội dung chưa có.</p><a class="btn primary" href="#/today">Về Hôm nay</a></section>`;
 }
@@ -150,7 +157,7 @@ function viewToday() {
   const img=c.intro.contextImage;
   main.innerHTML=`${header("Mỗi ngày, một chút tiếng Trung.","Học để hiểu. Nghe để nhớ. Dùng ngay trong cuộc sống.")}
     <div class="dashboard"><section class="hero card">
-      <div class="hero-copy"><p class="kicker">KHÓA HỌC CỦA BẠN · HSK 1 · BÀI ${l.lessonNumber}</p><h2>${esc(l.titleVi)}<span class="hero-hanzi" lang="zh-CN">${esc(l.titleZh)}</span></h2>
+      <div class="hero-copy"><p class="kicker">KHÓA HỌC CỦA BẠN · ${esc(l.level || "HSK 1")} · BÀI ${l.lessonNumber}</p><h2>${esc(l.titleVi)}<span class="hero-hanzi" lang="zh-CN">${esc(l.titleZh)}</span></h2>
       <p>${esc(c.intro.goalVi)}</p>
       <div class="hero-meta"><span>◷ Khoảng ${c.intro.estimatedMinutes} phút</span><span>♫ ${c.reader.passages.length} hội thoại</span></div>
       <a class="btn primary" href="#/lesson/${l.id}/${st.lastSectionId || next?.id || 'intro'}">${done?'Tiếp tục học':'Bắt đầu bài '+l.lessonNumber} <span aria-hidden="true">→</span></a></div>
@@ -159,20 +166,24 @@ function viewToday() {
     <div class="dashboard-side"><section class="card"><p class="kicker">BƯỚC NHỎ HÔM NAY</p><h2>${done}<span class="muted"> / ${sections.length} mục</span></h2><div class="progress-bar"><div style="width:${done/sections.length*100}%"></div></div><p class="muted small">${next ? 'Tiếp theo: '+esc(next.titleVi) : 'Bạn đã đi hết các mục của bài.'}</p><a href="#/progress">Xem tiến độ →</a></section>
     <section class="card review-teaser"><span class="eyebrow">ÔN ĐỂ NHỚ LÂU</span><h2>${due ? due+' mục đến hạn' : 'Dành một phút ôn lại'}</h2><p class="muted small">Ôn những phần bạn còn chậm, theo nhịp của bạn.</p><a href="#/review">Mở sổ ôn tập →</a></section></div></div>
     <div class="section-heading"><h2>Học theo cách của bạn</h2><a href="#/course/HSK%201">Xem lộ trình →</a></div>
-    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>${esc(c.intro.courseTagsVi||'')}</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>${esc(c.exerciseSet.titleVi)}</p><span>Luyện tập →</span></a></div>
-    <p class="source-footer">${readyLessons().map(x=>'Bài '+x.lessonNumber).join(' và ')} đang mở · Học liệu từ Baulchino · <a href="#/sources">Nguồn và phạm vi đã kiểm tra</a></p>`;
+    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>${esc(c.intro.courseTagsVi||'')}</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>${esc(c.exerciseSet.titleVi)}</p><span>Luyện tập →</span></a><a class="quick-card" href="#/writing"><span class="tile-icon" lang="zh-CN">写</span><h3>Luyện viết chữ Hán</h3><p>Viết từng nét theo sách viết HSK 2.</p><span>Mở khu luyện viết →</span></a></div>
+    <p class="source-footer">${["HSK 1","HSK 2"].map(lv=>{const n=readyLessons().filter(x=>x.level===lv).length; return n? lv+': '+n+' bài đang mở':'';}).filter(Boolean).join(' · ')} · Học liệu từ Baulchino · <a href="#/sources">Nguồn và phạm vi đã kiểm tra</a></p>`;
 }
 
 // ---------- Course ----------
 function viewCourse(level) {
  navActive();
+ const lv = level || "HSK 1";
+ const lessons = CONTENT.lessons.filter((l) => (l.level || "HSK 1") === lv);
+ const readyN = lessons.filter((l) => l.publicationStatus === "pilot-ready").length;
+ const others = ["HSK 1", "HSK 2"].filter((x) => x !== lv);
  main.innerHTML=`${header('Lộ trình học','Đi từ lời chào đầu tiên đến những cuộc trò chuyện hằng ngày.')}
- <div class="course-banner"><div><p class="kicker">SƠ CẤP · HSK 1</p><h2>Những bước đầu với tiếng Trung</h2><p>${CONTENT.lessons.length} bài trong mục lục · ${readyLessons().length} bài đã mở</p></div><span class="course-mark" lang="zh-CN">学</span></div>
+ <div class="course-banner"><div><p class="kicker">SƠ CẤP · ${esc(lv)}</p><h2>${lv === "HSK 2" ? "Những cuộc trò chuyện dài hơn, chữ Hán viết tay" : "Những bước đầu với tiếng Trung"}</h2><p>${lessons.length} bài trong mục lục · ${readyN} bài đã mở</p></div><span class="course-mark" lang="zh-CN">学</span></div>
  <div class="section-heading"><h2>Danh sách bài học</h2><span class="muted small">Theo thứ tự giáo trình</span></div>
- <div class="lesson-list">${CONTENT.lessons.map(l=>{
+ <div class="lesson-list">${lessons.map(l=>{
  const ready=l.publicationStatus==='pilot-ready',st=lessonState(l.id);
  return `<article class="row-card ${ready?'available':'upcoming'}"><span class="lesson-num">${String(l.lessonNumber).padStart(2,'0')}</span><div class="grow"><h2 lang="zh-CN">${esc(l.titleZh)}</h2><p>${esc(l.titleVi)}</p><span class="tag">${ready?(st.completedSections.length?'Đang học':'Sẵn sàng học'):'Chưa mở'}</span>${ready?`<span class="small muted"> ${esc(contentFor(l.id)?.intro.courseTagsVi||'')}</span>`:''}</div>${ready?`<a class="btn primary" href="#/lesson/${l.id}">Vào bài →</a>`:`<a class="btn ghost small" href="#/lesson/${l.id}">Chi tiết</a>`}</article>`;}).join('')}</div>
- <details class="card"><summary>Các cấp học tiếp theo</summary><p>HSK 2–4 có trong danh mục nguồn. Nội dung chưa được biên tập và nghiệm thu để mở học.</p><a href="#/sources">Xem sách và audio nguồn →</a></details>`;
+ <details class="card"><summary>Các cấp học khác</summary>${others.map((o) => `<p><a href="#/course/${encodeURIComponent(o)}">Mở lộ trình ${esc(o)} →</a></p>`).join("")}<p>HSK 3–4 có trong danh mục nguồn. Nội dung chưa được biên tập và nghiệm thu để mở học.</p><a href="#/sources">Xem sách và audio nguồn →</a></details>`;
 }
 
 // ---------- Lesson ----------
@@ -183,7 +194,7 @@ function viewLesson(lessonId, sectionId, query) {
   if (lesson.publicationStatus !== "pilot-ready" || !contentFor(lesson.id)) {
     main.innerHTML = `${header(`Bài ${lesson.lessonNumber}: ${lesson.titleZh}`, lesson.titleVi)}
     <section class="card warn"><h2>Bài đang kiểm tra nguồn</h2><p>${esc(lesson.publicationNote)}</p>${refsHtml(lesson.sourceRefs)}
-    <p><a class="btn" href="#/sources/src-baul-books">Mở trang sách Baulchino</a> <a class="btn ghost" href="#/course/HSK%201">Quay lại lộ trình</a></p></section>`;
+    <p><a class="btn" href="#/sources/src-baul-books">Mở trang sách Baulchino</a> <a class="btn ghost" href="#/course/${encodeURIComponent(lesson.level || "HSK 1")}">Quay lại lộ trình</a></p></section>`;
     return;
   }
   const content = contentFor(lesson.id);
@@ -218,7 +229,7 @@ function viewLesson(lessonId, sectionId, query) {
 function viewLessonIntro(lesson, content) {
   content = content || contentFor(lesson.id);
   const st = lessonState(lesson.id);
-  main.innerHTML = `${header(`HSK 1 · Bài ${lesson.lessonNumber}`, lesson.titleVi)}
+  main.innerHTML = `${header(`${lesson.level || "HSK 1"} · Bài ${lesson.lessonNumber}`, lesson.titleVi)}
   ${sectionIntroHtml(lesson, content)}
   <section class="card"><h2>Các mục cần học</h2>
   ${content.intro.sections.map((s) => `<p class="row-line"><a href="#/lesson/${lesson.id}/${s.id}">${esc(s.titleVi)}</a><span class="tag">${st.completedSections.includes(s.id) ? "Đã xong" : "Chưa học"}</span></p>`).join("")}
@@ -248,11 +259,18 @@ function learningPathHtml(lesson, content, currentSectionId = null) {
   <p class="row-actions"><a class="btn primary big" href="#/lesson/${lesson.id}/${resume}">${st.completedSections.length || st.lastSectionId ? "Tiếp tục học" : "Bắt đầu học"} →</a></p>
   ${st.lastSectionId ? `<p class="muted small">Bạn đang học dở — lần trước bạn ở mục: ${esc(content.intro.sections.find((x) => x.id === st.lastSectionId)?.titleVi || st.lastSectionId)}.</p>` : ""}</section>`;
 }
+function writingEntryHtml(lesson) {
+ const set = writingSetFor(CONTENT, lesson.id);
+ if (!set) return "";
+ const p = loadProgress();
+ const done = set.chars.filter((ch) => { const e = p.writing?.[ch.id]; return e && (e.seen || e.practiced || e.self || e.paper); }).length;
+ return `<section class="card writing-entry"><p class="kicker">LUYỆN VIẾT CHỮ HÁN · SÁCH VIẾT BÀI ${lesson.lessonNumber}</p><h2>Viết ${set.chars.length} chữ của bài: <span lang="zh-CN">${set.chars.map((ch) => esc(ch.char)).join("、")}</span></h2><p class="muted">Học từng chữ theo mạch chữ → từ → câu của sách viết: xem thứ tự nét, tập viết theo mẫu rồi thử tự viết. Phần này là luyện thêm — không bắt buộc hoàn thành mới học tiếp bài.</p><p class="row-actions"><a class="btn primary" href="#/writing/${lesson.id}">Mở phần luyện viết →</a>${done ? `<span class="tag">Đã luyện ${done}/${set.chars.length} chữ</span>` : ""}</p></section>`;
+}
 function sectionIntroHtml(lesson, content, currentSectionId = null) {
  const intro = content.intro; const img = intro.contextImage;
- return `<section class="card lesson-welcome"><p class="kicker">HSK 1 · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
+ return `<section class="card lesson-welcome"><p class="kicker">${esc(lesson.level || "HSK 1")} · BÀI ${String(lesson.lessonNumber).padStart(2,'0')}</p><h2 lang="zh-CN">${esc(lesson.titleZh)}</h2><p class="lead">${esc(intro.leadVi || intro.goalVi)}</p>
  <div class="welcome-grid"><div><h3>Sau bài này, bạn có thể</h3><ul class="goal-list">${(intro.outcomesVi||[]).map(o=>`<li>${esc(o)}</li>`).join('')}</ul><p class="muted">Thời gian dự kiến khoảng ${intro.estimatedMinutes} phút nếu học liền một mạch (ước lượng của dự án, chưa đo trên người học thật). Bạn có thể chia thành nhiều phiên ngắn.</p><p class="tag">Textbook + Workbook · Bài ${lesson.lessonNumber}</p></div>${img?`<figure class="context-figure"><img class="context-image" src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width||436}" height="${img.height||239}"><figcaption>${esc(img.caption||'')}</figcaption></figure>`:''}</div>
- <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>${learningPathHtml(lesson, content, currentSectionId)}`;
+ <details class="study-tip"><summary>Ghi chú về bài học</summary><p>${esc(intro.studyTipVi||'')}</p></details>${intro.priorLessonId?`<p class="row-line"><span>${esc(intro.priorLessonNoteVi||'')}</span><a class="btn ghost small" href="#/lesson/${intro.priorLessonId}">Xem lại Bài ${lessonById(intro.priorLessonId)?.lessonNumber||''}</a></p>`:''}${refsHtml(lesson.sourceRefs)}</section>${learningPathHtml(lesson, content, currentSectionId)}${writingEntryHtml(lesson)}`;
 }
 
 // ---------- Lesson sections ----------

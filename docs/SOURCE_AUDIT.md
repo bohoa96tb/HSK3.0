@@ -317,3 +317,18 @@ Phương pháp: tải thêm các track từ mới Textbook (L1: 1-2/1-4/1-6; L2:
 - **Audio**: 7 track dùng trong bài theo đúng ký hiệu in trong sách (TB 15-1..15-6, WB 15-1), phát trực tuyến từ CDN Baulchino, thời lượng ffprobe ghi trong dữ liệu (CDN còn có WB 15-2 của phần mô phỏng — không dùng). Căn đoạn câu hội thoại bằng ASR local (faster-whisper, mức từ; track 15-3 ASR tách câu Hội thoại 2 tại dấu chấm — gộp lại theo bong bóng thoại in; track 15-5 ASR gộp nhiều bong bóng thoại vào một đoạn — tách lại bằng mốc mức từ). Track 15-4 mỗi từ đọc hai lần — mốc lấy lần đọc đầu; track 15-6 các cặp đọc dính nhau （小时、家人、机场） tách bằng phân tích khoảng lặng ở ngưỡng 0,12 giây; từ 哪个 ở track 15-2 bị ASR nghe thành âm gần giống — xác định theo vị trí và thứ tự đọc trong bảng từ; ba tên riêng không gắn đoạn theo tiền lệ Bài 3. Mọi đoạn `asr-draft`, chưa nghe kiểm chứng bởi người. Độ phủ Bài 15: câu 14/14, từ có đoạn 17/20 (trừ 3 tên riêng), đoạn cho 6 câu nghe hiểu tại hội thoại có đủ.
 - **Hình**: 11 tranh minh họa phẳng do dự án tự tạo mới, mô phỏng ảnh gốc tr.112/116/118 theo mức hoàn thiện hiện hành của dự án (nhân vật có khuôn mặt, bối cảnh đầy đủ); truy vết ở `assets/lesson-15/PRACTICE_ATTRIBUTION.md`.
 - **Hán–Việt Bài 15**: soạn theo từng chữ với âm đọc chuẩn (vd 飞机 PHI CƠ, 机场 CƠ TRƯỜNG， 家人 GIA NHÂN — 家 đọc GIA theo đúng từ này), 20/20 `verified-editorial`; kiểm chứng độc lập do QA vòng phát hành thực hiện.
+
+## HSK 2 — Ba sách nguồn, audio và dữ liệu nét (đối chiếu 03/11/2026)
+
+- Textbook 《新HSK教程 2》 (FLTRP): PDF do Hoa tải lên (`hsk-course-2.pdf`, 164 tr. PDF, PDF = in + 16, có lớp chữ OCR lỗi). Mục lục 15 bài đối chiếu trực quan PDF tr.13–15. Quyền tái xuất bản: **unknown** — chỉ đối chiếu nội bộ, không commit PDF vào repo.
+- Workbook 《新HSK教程 2 学练手册》: PDF do Hoa tải lên (176 tr. PDF dạng scan ảnh, PDF = in + 7). Mỗi bài: 小语讲堂 （汉字 trùng bộ chữ với sách viết + 字词拓展) và 模拟测练 (loại theo D15); cuối sách 模拟测试 từ tr. in 151.
+- Sách luyện viết chữ Hán HSK 2: PDF 15 trang ảnh do Hoa tải lên, 1 trang = 1 bài (tiêu đề khớp Textbook), tổng **58 chữ** (13 bài × 4 + Bài 13/14 × 3); mỗi chữ: dãy ô thứ tự nét → từ chứa chữ → câu mẫu. Đã đọc trực quan đủ 15 trang; bảng chữ đầy đủ lưu ở hồ sơ kiểm kê nội bộ của dự án.
+- Audio Baulchino HSK 2 (kiểm tra trực tiếp trên CDN 03/11/2026): Textbook `…/hsk-2-textbook/lesson-NN/<N>-<t>.mp3` (tên file không đệm 0; track lẻ = 课文, track chẵn = đọc từ mới của đoạn); Workbook `…/hsk-2-workbook/lesson-NN/<NN>-<t>.mp3` (đệm 0). Chỉ stream, không lưu file vào repo. Mốc đoạn theo ASR (faster-whisper) — trạng thái `asr-draft`, **chưa nghe kiểm chứng bởi người**.
+- Dữ liệu nét: xem DECISIONS D29 (Hanzi Writer MIT + Make Me a Hanzi theo Arphic Public License; nguồn `src-hanzi-stroke-data` trong app).
+
+## HSK 2 Bài 1 — 她请我们吃了北京烤鸭 (03/11/2026)
+
+- Textbook tr. in 001–009 (PDF 17–25): 4 课文 (sân bay / trong xe / điện thoại / tin nhắn), 22 câu print-verified; 14 từ mới + 1 tên riêng 北京烤鸭 (tên riêng này CÓ đoạn đọc trong track từ 1-8 nên có audio, khác tiền lệ tên riêng HSK 1); 3 KP chính （吧(2) tr.003; 是……的 tr.004–005; 兼语句 tr.006) + 汉字 （扌/冫, WB tr.001). Câu hỏi in tại 4 đoạn: 10 câu đặt tại đoạn theo D28 (8 nghe có audioSegment + 2 đọc hiểu). Bộ chính 12 câu: 4 nối hình （热身 tr.001) + 5 điền từ （综合 tr.008) + 3 điền từ mở rộng (WB tr.002). Hình vẽ mới: `assets/hsk2-lesson-01/` + PRACTICE_ATTRIBUTION.md (chuẩn D19).
+- Workbook: track 01-1 (543 giây) là audio 模拟测练 → loại theo D15; stub ghi workbookAudioTrackCount = 1 để minh bạch.
+- Sách viết tr.1: 打 （打电话 — 请你给她打个电话。) / 接 （接人 — 他让我去接一个人。) / 冷 （很冷 — 北京现在很冷吧？) / 次 （这次 — 我这次是一个人来的。); số nét 5/11/7/6 khớp dữ liệu Make Me a Hanzi.
+- Lưu ý bản in: bản dịch Anh của sách dịch 姐姐 thành "cousin" (tr.007) — app dịch đúng là "chị" (chị ruột của Vương Nhất Phi).

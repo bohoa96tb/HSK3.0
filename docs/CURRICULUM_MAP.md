@@ -203,3 +203,31 @@ Ba bài phân biệt đã đủ bằng chứng về mục tiêu luyện cả hai
 ## 10. Bài 8 — 我爸爸也在医院工作 (đã xuất bản 01/11/2026)
 
 Textbook trang in 054–060 (PDF 69–75): mục tiêu mô tả vị trí/nơi chốn, giới từ “在”, động từ năng nguyện “能”; khởi động nối từ–hình 6 hình; 3 hội thoại, 23 từ mới + 1 tên riêng （胡医生）; 3 điểm giảng đường （方位词 / 介词“在” / 能）; câu hỏi nghe hiểu in trước Hội thoại 2–3; bài tập tổng hợp 059–060 (ngân hàng A 哪儿 / B 在 / C 桌子 / D 书店 / E 能； câu 3 có hai chỗ trống, tách thành hai câu trong app; dùng hình để nói 4 hình — cặp hình–khung câu đối chiếu lại: 1 bác sĩ “医生______。”, 2 hiệu sách “我们在______见吧。”, 3 siêu thị “你______去______吗？”, 4 mèo trên bàn “桌子上______。”). Workbook phần bài học trang in 048–050: phân biệt âm tiết (1) 8 cặp — tài liệu lời đọc đăng lại (tr. 022) chỉ in âm tiết được đọc nên có đáp án biên tập (nián, rěn, tiē, chǎn, lüè, hún, bīng, kǒng); phân biệt âm tiết (2) chọn từ không điệp âm — đáp án đăng lại B/C/B/A khớp phân tích dạng từ, chấm ở trạng thái verified-editorial; bài chữ Hán là kiến thức nền. Phần Mô phỏng kiểm tra từ trang in 051 loại khỏi bài (D15). Hình: minh họa phẳng vẽ mới theo D19 (6 hình khởi động + 4 hình nói + 1 hình ngữ cảnh), file WebP riêng trong `assets/lesson-08/`.
+
+## 11. Bản đồ HSK 2 (thêm 03/11/2026)
+
+Nguồn: mục lục Textbook HSK 2 đối chiếu trực quan (PDF tr.13–15); mỗi bài 10 trang Workbook tương ứng (bài n mở đầu tr. in (n−1)×10+1, phần 模拟测练 loại theo D15); sách viết 1 trang/bài; audio Textbook 8 track/bài (lẻ = 课文, chẵn = từ mới).
+
+| Bài | Tên bài (Textbook) | Tr. in TB | Chữ sách viết | Trạng thái app |
+|---|---|---|---|---|
+| 1 | 她请我们吃了北京烤鸭 | 001 | 打 接 冷 次 | **Đã phát hành** (xem dưới) |
+| 2 | 还是打车去北大吧 | 010 | 间 问 过 远 | Chưa biên soạn |
+| 3 | 我想去西安旅游 | 019 | 汉 洗 家 完 | Chưa biên soạn |
+| 4 | 你穿红色的很好看 | 029 | 红 绿 场 块 | Chưa biên soạn |
+| 5 | 第一次去中国朋友家 | 037 | 茶 菜 店 床 | Chưa biên soạn |
+| 6 | 小雪，生日快乐！ | 046 | 笔 第 快 忙 | Chưa biên soạn |
+| 7 | 他篮球打得很好 | 056 | 跑 踢 往 很 | Chưa biên soạn |
+| 8 | 虽然你忘了，但是我记得 | 064 | 饭 饺 点 热 | Chưa biên soạn |
+| 9 | 我去买杯奶茶 | 073 | 校 样 吃 喝 | Chưa biên soạn |
+| 10 | 就要考试了 | 084 | 词 试 昨 明 | Chưa biên soạn |
+| 11 | 我最喜欢吃中国菜 | 093 | 他 体 病 疼 | Chưa biên soạn |
+| 12 | 这里比北京冷多了 | 102 | 铁 钱 阴 院 | Chưa biên soạn |
+| 13 | 我们爱上中文课 | 112 | 都 那 教 (3 chữ) | Chưa biên soạn |
+| 14 | 一个人过年多没意思啊 | 121 | 眼 睡 站 (3 chữ) | Chưa biên soạn |
+| 15 | 我想再去一次中国 | 130 | 姐 姓 期 脑 | Chưa biên soạn |
+
+(Cột chữ: theo bảng kiểm kê sách viết đã đọc trực tiếp đủ 15 trang ảnh — hồ sơ nội bộ INDEX HSK 2. Khi biên soạn từng bài vẫn phải đối chiếu lại trang sách viết của bài đó trước khi ghi dữ liệu vào app.)
+
+### Bài 1 HSK 2 — chi tiết (đã phát hành 03/11/2026)
+
+4 课文 / 22 câu; 15 từ (4 nhóm theo đoạn); KP: 吧（2), 是……的， 兼语句 + nền tảng bộ 扌/冫; 10 câu hỏi tại đoạn (D28); bộ chính 12 câu; tự luyện 3 bài; khu viết: bộ `writing-hsk2-l01` 4 chữ. Audio: 8 track Textbook (1-1…1-8); track Workbook 01-1 thuộc mô phỏng, loại.

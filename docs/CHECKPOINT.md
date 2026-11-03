@@ -254,3 +254,14 @@
 - Nội dung sửa: đúng MỘT giá trị — prepWords Bài 12: 这里 hanViet “CHÁ LÝ” → “GIÁ LÝ”. Đã rà toàn bộ dữ liệu trước khi sửa: mọi từ chứa 这 ở các bài khác đều dùng GIÁ (Bài 3 这， Bài 8 这只， Bài 10 这边/这些/这儿/这个/这件， Bài 13 这个） — đây là trường hợp duy nhất lệch quy ước. Ghi chú đính chính trong docs/SOURCE_AUDIT.md (mục Bài 12) và script biên soạn build_l12.py đã đồng bộ.
 - Kiểm thử: validator OK, audit-standard đạt, test 190/190 (không test nào khẳng định giá trị sai cũ). Không đổi nội dung/audio/đáp án nào khác.
 - nextTask: Bài 14 《我看了一个电影》 (TB tr. in 103–111 = PDF 118–126; WB phần bài học tr. in 102–104 = PDF 109–111) — xây theo chuẩn Bài 8 + D28. Tiến độ cấp 1: 13/15 bài.
+
+## HSK 2 Bài 1 + Khu Luyện viết chữ Hán — ĐÃ PHÁT HÀNH (2026-11-03)
+
+- branch: hsk2-lesson-01-writing → PR #105 merge 790cf0b7; sửa thư viện: fix-hanzi-writer-v3-api → PR #106 merge a7785f86; contentVersion live `20261103-hsk2l1-writing2` (content.json khớp byte, sha256 a4322c3e…).
+- Nội dung Bài 1 《她请我们吃了北京烤鸭》: 22 câu/4 课文， 15 từ (4 nhóm, tên riêng 北京烤鸭 có audio), 3 KP chính （吧（2)/是……的/兼语句） + nền tảng 扌/冫, 10 câu hỏi tại đoạn theo D28 (8 nghe + 2 đọc), bộ chính 12 câu, 3 tự luyện, apply 2 nhiệm vụ, tra từ 38/38, 9 hình mới (assets/hsk2-lesson-01).
+- Khu Luyện viết (D29/D30 trong DECISIONS): route #/writing 3 cấp; Hanzi Writer 3.7.3 vendor (MIT) + dữ liệu nét Make Me a Hanzi self-host (Arphic PL); bộ Bài 1: 打/接/冷/次 (nét 5/11/7/6 khớp sách); tiến độ progress.writing {seen/practiced/self/paper/needsReview/dueAt} nhịp ôn 1/3/7 ngày, không nhãn "thành thạo"; lối vào ở trang Bắt đầu + nav.
+- Lộ trình: 15 stub HSK 2 theo mục lục bản in (Bài 1 pilot-ready, 2–15 catalogued); viewCourse lọc theo cấp; HSK 1 không đổi (thêm extras 有时间 cho Bài 15 để giữ phủ tra từ 25/25 trước xung đột phân đoạn với 有时）.
+- QA: vòng 1 CHƯA ĐẠT (lỗi nghiêm trọng: 5 thân câu điền từ tự biên soạn ghi sai nguồn tr.008) → sửa nguyên văn + 5 lỗi nhẹ → vòng 2 ĐẠT 6/6. Nghiệm thu live: đạt sau khi sửa API Hanzi Writer v3 (create thay createWriter, PR #106) và kiểm lại bằng URL tránh đệm (chi tiết ở QA_REPORT).
+- Kiểm thử: test 211/211, validator OK, audit đạt. CI vẫn chưa tạo được qua connector (403), bản bàn giao docs/ci/ci.yml chờ Hoa tạo qua web.
+- nextTask: HSK 2 Bài 2 《还是打车去北大吧》 (TB tr. in 010–018 = PDF 26–34; WB tr. in 011–020 = PDF 18–27; sách viết tr.2: 间/问/过/远 — từ/câu đầy đủ ở INDEX kiểm kê nội bộ, phải đối chiếu lại trang ảnh trước khi ghi dữ liệu). Khi Hoa nhắn "Tiếp tục": làm trọn Bài 2 theo cùng khuôn (biên soạn → test → QA độc lập → PR → nghiệm thu live), gồm bộ chữ viết Bài 2 (tải thêm dữ liệu nét 4 chữ 间/问/过/远 và đối chiếu số nét với sách).
+- Việc treo cũ không đổi: CI qua web; nút Tiếp tục D26 chưa kiểm lại trên Android thật của Hoa; track mô phỏng Bài 5/6/7 HSK 1 chờ Hoa yêu cầu; toàn bộ mốc đoạn audio (HSK 1 + HSK 2) vẫn asr-draft chưa nghe kiểm chứng.

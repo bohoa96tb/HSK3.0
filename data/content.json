@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-lesson11-standard1",
+ "contentVersion": "20261103-lesson12-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -628,28 +628,41 @@
   },
   {
    "id": "hsk1-l12",
-   "bookId": "book-hsk1-workbook",
+   "bookId": "book-hsk1-textbook",
    "level": "HSK 1",
    "sourceUnit": "Lesson 12",
    "lessonNumber": 12,
    "titleZh": "昨天下雪了",
    "titleEn": "It snowed yesterday",
    "titleVi": "Hôm qua tuyết rơi",
-   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "titleProvenance": "Đối chiếu tên Bài 12 ở mục lục và trang mở đầu Textbook trang in 086 (cả Textbook và Workbook đều là 昨天下雪了).",
    "sourceRefs": [
     {
-     "sourceId": "src-hsk1-workbook-pdf",
-     "pdfPage": 91,
-     "printedPage": 84,
-     "section": "目录 Contents (mục lục)"
+     "sourceId": "src-hsk1-textbook-pdf",
+     "pdfPage": 101,
+     "printedPage": 86,
+     "section": "Bài 12 · mục tiêu và khởi động"
     }
    ],
    "textbookAudioTrackCount": 6,
-   "workbookAudioTrackCount": 2,
-   "publicationStatus": "catalogue-only",
-   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-   "grammarIds": [],
-   "sectionIds": []
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Câu không chủ – vị, trợ từ ngữ khí “了（1）” và mẫu “太……了”; cả ba hội thoại đều có hai câu hỏi in kèm, nằm tại hội thoại theo D28; kèm phát âm Workbook (phân biệt thanh điệu + nghe – nối âm tiết) và nền tảng nét bút (5). Bảng tổng kết liên bài 10–12 ở cuối Textbook không thuộc riêng Bài 12 nên không đưa vào bài. Track Workbook 12-2 thuộc phần đề mô phỏng, không dùng trong bài (D15).",
+   "grammarIds": [
+    "kp-hsk1-l12-non-subject",
+    "kp-hsk1-l12-le",
+    "kp-hsk1-l12-tai",
+    "kp-hsk1-l12-strokes-5"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
   },
   {
    "id": "hsk1-l13",
@@ -35260,6 +35273,3383 @@
       "pinyin": "le",
       "hanViet": "LIỄU",
       "vi": "trợ từ — việc đã xảy ra hoặc đã hoàn thành (ở đây: đã đi đâu rồi)"
+     }
+    ],
+    "phrases": []
+   }
+  },
+  {
+   "lessonId": "hsk1-l12",
+   "intro": {
+    "goalVi": "Nghe hiểu và mô tả được tình hình thời tiết; mô tả ngắn gọn tình trạng khi ốm; dùng trợ từ ngữ khí “了（1）” và mẫu cảm thán “太……了”, theo mục tiêu in tại Textbook tr.086.",
+    "estimatedMinutes": 25,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bài theo Vương Nhất Tuyết gọi điện hỏi thời tiết nơi Vương Nhất Phi đang mưa và lạnh, gặp Dương Đồng Lạc trong thang máy công ty sau một ngày tuyết rơi, rồi quay lại hôm qua — buổi anh ấy đến bệnh viện khám bệnh vì thấy rất lạnh.",
+    "outcomesVi": [
+     "Nghe hiểu và mô tả tình hình thời tiết: 今天天气怎么样？这里的天不太好，下雨了。",
+     "Mô tả ngắn gọn tình trạng khi ốm: 我病了，我觉得很冷。",
+     "Dùng trợ từ ngữ khí “了（1）” báo thay đổi: 下雪了。",
+     "Dùng mẫu “太……了” cảm thán mức độ: 太冷了！",
+     "Hiểu lời khuyên uống nước nóng khi bị ốm theo thói quen của người Trung Quốc."
+    ],
+    "contextImage": {
+     "src": "assets/lesson-12/classroom.webp",
+     "alt": "Tranh vẽ: một khu phố nhỏ phủ đầy tuyết trắng, tuyết vẫn đang rơi nhẹ — mô phỏng theo cảnh tuyết của Bài 12",
+     "caption": "Hôm qua tuyết rơi · tranh vẽ mới theo cảnh Textbook tr.086–089",
+     "width": 760,
+     "height": 560
+    },
+    "studyTipVi": "“了” ở cuối câu trong bài này không kể chuyện quá khứ — nó báo “tình hình vừa đổi khác”: 下雨了 nghĩa là trời vừa bắt đầu mưa. Khi đáp phủ định bằng “没” thì bỏ “了” ở cuối câu.",
+    "foundationSummaryVi": "Nền tảng Hán tự của bài ở Workbook tr.085–086: bốn nét gập móc （横折钩、竖弯钩、横折弯钩、竖折折钩）, quy tắc thứ tự nét 先中间后两边 (ví dụ chữ 水） và phần chép các từ 读书、几岁、吃饭、妈妈、多少.",
+    "courseTagsVi": "Câu không chủ – vị · Trợ từ ngữ khí “了” · Mẫu “太……了” · Thời tiết và đi khám bệnh",
+    "priorLessonNoteVi": "Bài 11 đã học 在/正在……呢 — bài này gặp lại 正在 trong câu “外边正在下雪” ở bài điền từ; và gặp lại chữ 医 của “学医” trong 医生、医院 của Hội thoại 3.",
+    "priorLessonId": "hsk1-l11"
+   },
+   "prepWords": [
+    {
+     "id": "l12w-1",
+     "zh": "天气",
+     "pinyin": "tiānqì",
+     "vi": "thời tiết",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "THIÊN KHÍ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 0.0,
+      "end": 1.06,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-2",
+     "zh": "这里",
+     "pinyin": "zhèlǐ",
+     "vi": "ở đây, nơi này",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "CHÁ LÝ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 3.24,
+      "end": 4.1,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-3",
+     "zh": "天",
+     "pinyin": "tiān",
+     "vi": "trời; thời tiết (nói gọn)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "THIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 6.06,
+      "end": 6.62,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-4",
+     "zh": "下雨",
+     "pinyin": "xià yǔ",
+     "vi": "mưa, trời mưa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "HẠ VŨ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 8.24,
+      "end": 9.2,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-5",
+     "zh": "了",
+     "pinyin": "le",
+     "vi": "trợ từ cuối câu: tình hình đã thay đổi",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "LIỄU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 11.32,
+      "end": 11.48,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-6",
+     "zh": "雨",
+     "pinyin": "yǔ",
+     "vi": "mưa",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "VŨ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 13.3,
+      "end": 13.83,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-7",
+     "zh": "有点儿",
+     "pinyin": "yǒudiǎnr",
+     "vi": "hơi, một chút",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "HỮU ĐIỂM NHI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 15.4,
+      "end": 16.36,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-8",
+     "zh": "觉得",
+     "pinyin": "juéde",
+     "vi": "cảm thấy",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "GIÁC ĐẮC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 18.25,
+      "end": 18.81,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-9",
+     "zh": "冷",
+     "pinyin": "lěng",
+     "vi": "lạnh",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "生词 · Từ mới 12-2"
+      }
+     ],
+     "hanViet": "LÃNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-2",
+      "start": 20.72,
+      "end": 21.33,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l12w-10",
+     "zh": "下",
+     "pinyin": "xià",
+     "vi": "rơi xuống (của mưa, tuyết)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "HẠ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 0.0,
+      "end": 0.74,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-11",
+     "zh": "雪",
+     "pinyin": "xuě",
+     "vi": "tuyết",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "TUYẾT",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 2.41,
+      "end": 3.15,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-12",
+     "zh": "来",
+     "pinyin": "lái",
+     "vi": "đến",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "LAI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 4.98,
+      "end": 5.51,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-13",
+     "zh": "公司",
+     "pinyin": "gōngsī",
+     "vi": "công ty",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "CÔNG TƯ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 7.21,
+      "end": 8.01,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-14",
+     "zh": "生病",
+     "pinyin": "shēngbìng",
+     "vi": "bị ốm, sinh bệnh",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "SINH BỆNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 9.97,
+      "end": 10.9,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-15",
+     "zh": "看病",
+     "pinyin": "kànbìng",
+     "vi": "đi khám bệnh",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 104,
+       "printedPage": 89,
+       "section": "生词 · Từ mới 12-4"
+      }
+     ],
+     "hanViet": "KHÁN BỆNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-4",
+      "start": 13.21,
+      "end": 14.11,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l12w-16",
+     "zh": "病",
+     "pinyin": "bìng",
+     "vi": "ốm; bệnh",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "BỆNH",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 0.37,
+      "end": 0.93,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-17",
+     "zh": "一点儿",
+     "pinyin": "yìdiǎnr",
+     "vi": "một ít, một chút",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "NHẤT ĐIỂM NHI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 3.42,
+      "end": 4.24,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-18",
+     "zh": "药",
+     "pinyin": "yào",
+     "vi": "thuốc",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "DƯỢC",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 6.66,
+      "end": 7.15,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-19",
+     "zh": "天",
+     "pinyin": "tiān",
+     "vi": "ngày (lượng từ chỉ thời gian)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "THIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 9.08,
+      "end": 9.67,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-20",
+     "zh": "回",
+     "pinyin": "huí",
+     "vi": "về, trở lại",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "HỒI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 11.52,
+      "end": 12.09,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-21",
+     "zh": "再",
+     "pinyin": "zài",
+     "vi": "rồi mới, sau đó mới",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "TÁI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 13.96,
+      "end": 14.48,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-22",
+     "zh": "喝",
+     "pinyin": "hē",
+     "vi": "uống",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "HÁT",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 16.25,
+      "end": 16.79,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-23",
+     "zh": "热",
+     "pinyin": "rè",
+     "vi": "nóng",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "NHIỆT",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 18.58,
+      "end": 19.14,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l12w-24",
+     "zh": "水",
+     "pinyin": "shuǐ",
+     "vi": "nước",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "生词 · Từ mới 12-6"
+      }
+     ],
+     "hanViet": "THỦY",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l12-6",
+      "start": 21.11,
+      "end": 21.99,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk1-l12-non-subject",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Câu không chủ – vị: chỉ một cụm từ cũng thành câu",
+     "useWhenVi": "Dùng để báo nhanh một hiện tượng thiên nhiên hay sự việc vừa xảy ra — trời mưa, tuyết rơi, đến giờ học — hoặc thốt lên, phản ứng ngắn trong giao tiếp hằng ngày.",
+     "explanationVi": "Sách nêu: câu không chủ – vị do từ hoặc cụm từ cấu tạo thành, không phân rõ chủ ngữ và vị ngữ, thường dùng trong khẩu ngữ. Như “下雨了。” đứng một mình vẫn trọn nghĩa, không cần nói ai hay cái gì làm gì.",
+     "pattern": "Từ / cụm từ (+ 了 hoặc !) — không cần chủ ngữ: 下雨了。真漂亮！",
+     "examples": [
+      {
+       "zh": "下雨了。",
+       "pinyin": "Xià yǔ le.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.088): trời mưa rồi."
+      },
+      {
+       "zh": "下雪了。",
+       "pinyin": "Xià xuě le.",
+       "noteVi": "Câu luyện đọc của sách: tuyết rơi rồi."
+      },
+      {
+       "zh": "上课了。",
+       "pinyin": "Shàngkè le.",
+       "noteVi": "Câu luyện đọc của sách: vào học rồi."
+      },
+      {
+       "zh": "真漂亮！",
+       "pinyin": "Zhēn piàoliang!",
+       "noteVi": "Câu luyện đọc của sách: đẹp thật!"
+      },
+      {
+       "zh": "对不起！",
+       "pinyin": "Duìbuqǐ!",
+       "noteVi": "Câu luyện đọc của sách: xin lỗi!"
+      },
+      {
+       "zh": "没关系！",
+       "pinyin": "Méi guānxi!",
+       "noteVi": "Câu luyện đọc của sách: không sao đâu!"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Câu nào là câu không chủ – vị đúng như sách mô tả?",
+      "stemZh": "下雪了。",
+      "options": [
+       {
+        "zh": "下雪了。",
+        "vi": "Tuyết rơi rồi (không có chủ ngữ)."
+       },
+       {
+        "zh": "他去上课了。",
+        "vi": "Anh ấy đi học rồi (có chủ ngữ 他）."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "“下雪了” không có chủ ngữ, chỉ một cụm từ đã thành câu hoàn chỉnh — đúng sáu câu luyện đọc ở Textbook tr.088."
+     },
+     "positionVi": "Điểm chính 1 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.088).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "小语讲堂 1 · 非主谓句"
+      }
+     ],
+     "sentenceIds": [
+      "l12-s2",
+      "l12-s5"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk1-l12-le",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Trợ từ ngữ khí “了（1）”: báo tình hình đã thay đổi",
+     "useWhenVi": "Dùng khi tình hình vừa đổi khác: trời bắt đầu mưa, đã đến giờ ăn trưa, ai đó đã dậy — và khi phủ định một việc chưa xảy ra thì dùng “没” và bỏ “了”.",
+     "explanationVi": "Sách nêu: trợ từ ngữ khí “了（1）” đặt ở cuối câu hoặc ở chỗ ngắt giữa câu, biểu thị đã có thay đổi hoặc xuất hiện tình hình mới. Khi trả lời phủ định, dùng phó từ “没”, cuối câu không dùng “了”: “没起床呢” — chưa dậy đâu.",
+     "pattern": "… + 了 (cuối câu / chỗ ngắt giữa câu); phủ định: 没 + động từ (bỏ 了）",
+     "examples": [
+      {
+       "zh": "下雨了。",
+       "pinyin": "Xià yǔ le.",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.088): trời vừa bắt đầu mưa."
+      },
+      {
+       "zh": "十二点了，吃午饭吧。",
+       "pinyin": "Shí'èr diǎn le, chī wǔfàn ba.",
+       "noteVi": "Câu luyện đọc của sách: “了” ở chỗ ngắt giữa câu — đã 12 giờ rồi, ăn trưa đi."
+      },
+      {
+       "zh": "弟弟起床了吗？——没起床呢。",
+       "pinyin": "Dìdi qǐchuáng le ma? —— Méi qǐchuáng ne.",
+       "noteVi": "Cặp hỏi – đáp luyện đọc của sách: phủ định bằng 没， bỏ “了” cuối câu, giữ 呢."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Trời vừa bắt đầu mưa, câu nào dùng “了” đúng ý thay đổi của sách?",
+      "stemZh": "下雨了。",
+      "options": [
+       {
+        "zh": "下雨了。",
+        "vi": "Trời mưa rồi (vừa bắt đầu mưa)."
+       },
+       {
+        "zh": "下雨没。",
+        "vi": "Mưa chưa (không phải mẫu của bài)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Tình hình mới xuất hiện thì thêm “了” ở cuối câu: 下雨了 — đúng câu luyện đọc đầu tiên ở Textbook tr.088."
+     },
+     "positionVi": "Điểm chính 2 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.088).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 103,
+       "printedPage": 88,
+       "section": "小语讲堂 2 · 语气助词“了（1）”"
+      }
+     ],
+     "sentenceIds": [
+      "l12-s2",
+      "l12-s5",
+      "l12-s7",
+      "l12-s8",
+      "l12-s9"
+     ],
+     "exerciseIds": [
+      "tb12-fill-2"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l12-tai",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp cơ bản",
+     "title": "Mẫu cảm thán “太……了”: quá…!",
+     "useWhenVi": "Dùng khi thốt lên vì mức độ rất cao: lạnh quá, vui quá, cái cốc nhỏ quá — thường kèm sắc thái khen hoặc phàn nàn tuỳ ngữ cảnh.",
+     "explanationVi": "Sách nêu: mẫu “太……了” dùng để cảm thán mức độ rất cao hoặc rất sâu. Giữa 太 và 了 là một tính từ: 太冷了！— lạnh quá!",
+     "pattern": "太 + tính từ + 了 — ví dụ: 太冷了！这个杯子太小了。",
+     "examples": [
+      {
+       "zh": "太冷了！",
+       "pinyin": "Tài lěng le!",
+       "noteVi": "Câu luyện đọc của sách (Textbook tr.090): lạnh quá!"
+      },
+      {
+       "zh": "这个杯子太小了。",
+       "pinyin": "Zhège bēizi tài xiǎo le.",
+       "noteVi": "Câu luyện đọc của sách: cái cốc này nhỏ quá."
+      },
+      {
+       "zh": "我们今天太高兴了！",
+       "pinyin": "Wǒmen jīntiān tài gāoxìng le!",
+       "noteVi": "Câu luyện đọc của sách: hôm nay chúng tôi vui quá!"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Muốn thốt lên “Lạnh quá!”, câu nào đúng mẫu của bài?",
+      "stemZh": "太冷了！",
+      "options": [
+       {
+        "zh": "太冷了！",
+        "vi": "Lạnh quá! (mẫu 太……了）."
+       },
+       {
+        "zh": "有点儿冷。",
+        "vi": "Hơi lạnh (chỉ mức độ nhẹ, không phải cảm thán)."
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Cảm thán mức độ cao dùng “太＋tính từ＋了”: 太冷了 — đúng câu luyện đọc đầu tiên ở Textbook tr.090; 有点儿 chỉ là “hơi”."
+     },
+     "positionVi": "Điểm chính 3 trong 3 điểm của bài (Tiểu Ngữ giảng đường, Textbook tr.090).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 105,
+       "printedPage": 90,
+       "section": "小语讲堂 3 · “太……了”格式"
+      }
+     ],
+     "sentenceIds": [
+      "l12-s6"
+     ],
+     "exerciseIds": [
+      "tb12-fill-1b"
+     ]
+    },
+    {
+     "id": "kp-hsk1-l12-strokes-5",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Nét bút (5): bốn nét gập móc và quy tắc “giữa trước, hai bên sau”",
+     "explanationVi": "Workbook Bài 12 （汉字书写（五）, tr.085–086) luyện bốn nét gập có móc: 横折钩 (héng zhé gōu, ngang gập móc), 竖弯钩 (shù wān gōu, đứng cong móc), 横折弯钩 (héng zhé wān gōu, ngang gập cong móc), 竖折折钩 (shù zhé zhé gōu, đứng gập gập móc). Quy tắc thứ tự nét: 先中间后两边 — viết phần giữa trước, hai bên sau (ví dụ chữ 水）. Phần chép chữ và từ ở tr.086 gồm: 读书、几岁、吃饭、妈妈、多少 — đây là bài luyện viết tay trong sách; app chỉ giới thiệu để người học nhận diện, không chấm nét viết.",
+     "pattern": "横折钩 héng zhé gōu · 竖弯钩 shù wān gōu · 横折弯钩 héng zhé wān gōu · 竖折折钩 shù zhé zhé gōu | 先中间后两边 (vd 水）",
+     "examples": [
+      {
+       "zh": "水",
+       "pinyin": "shuǐ",
+       "noteVi": "Chữ ví dụ cho quy tắc 先中间后两边 ở Workbook tr.085."
+      },
+      {
+       "zh": "读书",
+       "pinyin": "dú shū",
+       "noteVi": "Từ chép ở Workbook tr.086: đọc sách."
+      },
+      {
+       "zh": "几岁",
+       "pinyin": "jǐ suì",
+       "noteVi": "Từ chép ở Workbook tr.086: mấy tuổi (đã học ở Bài 3)."
+      },
+      {
+       "zh": "吃饭",
+       "pinyin": "chī fàn",
+       "noteVi": "Từ chép ở Workbook tr.086: ăn cơm."
+      },
+      {
+       "zh": "妈妈",
+       "pinyin": "māma",
+       "noteVi": "Từ chép ở Workbook tr.086: mẹ."
+      },
+      {
+       "zh": "多少",
+       "pinyin": "duōshao",
+       "noteVi": "Từ chép ở Workbook tr.086: bao nhiêu."
+      }
+     ],
+     "positionVi": "Điểm nền tảng Hán tự của bài (Workbook tr.085–086), không phải điểm ngữ pháp chính.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 92,
+       "printedPage": 85,
+       "section": "二、汉字 · 汉字书写（五）"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "l12-reader",
+    "titleVi": "Ba hội thoại của Bài 12",
+    "headingVi": "Nghe & đọc",
+    "noteVi": "Cả ba hội thoại trong sách đều được in dạng nghe trước hai lần rồi chọn đáp án; app cho đọc kèm lời thoại đầy đủ đúng bản in, và hai câu hỏi của mỗi hội thoại nằm ngay dưới hội thoại đó.",
+    "sentences": [
+     {
+      "id": "l12-s1",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "今天天气怎么样？",
+      "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "vi": "Hôm nay thời tiết thế nào?",
+      "passageId": "l12-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-1",
+       "start": 0.69,
+       "end": 2.41,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s2",
+      "speaker": "Vương Nhất Phi",
+      "zh": "这里的天不太好，下雨了。",
+      "pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
+      "vi": "Thời tiết ở đây không tốt lắm, trời mưa rồi.",
+      "passageId": "l12-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-1",
+       "start": 3.62,
+       "end": 6.64,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s3",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "雨大吗？",
+      "pinyin": "Yǔ dà ma?",
+      "vi": "Mưa có to không?",
+      "passageId": "l12-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-1",
+       "start": 7.79,
+       "end": 8.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s4",
+      "speaker": "Vương Nhất Phi",
+      "zh": "有点儿大，我觉得很冷。",
+      "pinyin": "Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+      "vi": "Hơi to, tôi cảm thấy rất lạnh.",
+      "passageId": "l12-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-1",
+       "start": 9.94,
+       "end": 12.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s5",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "昨天下雪了。",
+      "pinyin": "Zuótiān xià xuě le.",
+      "vi": "Hôm qua tuyết rơi.",
+      "passageId": "l12-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-3",
+       "start": 0.18,
+       "end": 1.84,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s6",
+      "speaker": "Dương Đồng Lạc",
+      "zh": "是的，太冷了。",
+      "pinyin": "Shì de, tài lěng le.",
+      "vi": "Ừ, lạnh quá đi.",
+      "passageId": "l12-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-3",
+       "start": 2.0,
+       "end": 5.04,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s7",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "你昨天没来公司，生病了？",
+      "pinyin": "Nǐ zuótiān méi lái gōngsī, shēngbìng le?",
+      "vi": "Hôm qua cậu không đến công ty, cậu ốm à?",
+      "passageId": "l12-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-3",
+       "start": 5.04,
+       "end": 8.24,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s8",
+      "speaker": "Dương Đồng Lạc",
+      "zh": "对，我昨天去医院看病了。",
+      "pinyin": "Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
+      "vi": "Ừ, hôm qua tôi đến bệnh viện khám bệnh.",
+      "passageId": "l12-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-3",
+       "start": 8.93,
+       "end": 12.35,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s9",
+      "speaker": "Dương Đồng Lạc",
+      "zh": "医生，我病了。",
+      "pinyin": "Yīshēng, wǒ bìng le.",
+      "vi": "Bác sĩ ơi, tôi bị ốm rồi.",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 0.3,
+       "end": 2.58,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s10",
+      "speaker": "Bác sĩ Hồ",
+      "zh": "我看看。你觉得怎么样？",
+      "pinyin": "Wǒ kànkan. Nǐ juéde zěnmeyàng?",
+      "vi": "Để tôi xem nào. Bạn cảm thấy thế nào?",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 2.97,
+       "end": 6.29,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s11",
+      "speaker": "Dương Đồng Lạc",
+      "zh": "我很冷。",
+      "pinyin": "Wǒ hěn lěng.",
+      "vi": "Tôi thấy rất lạnh.",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 6.97,
+       "end": 8.05,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s12",
+      "speaker": "Bác sĩ Hồ",
+      "zh": "好的，吃一点儿药，今天休息半天吧。",
+      "pinyin": "Hǎo de, chī yìdiǎnr yào, jīntiān xiūxi bàn tiān ba.",
+      "vi": "Được, uống một ít thuốc, hôm nay nghỉ nửa ngày nhé.",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 8.85,
+       "end": 13.93,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s13",
+      "speaker": "Dương Đồng Lạc",
+      "zh": "好的。",
+      "pinyin": "Hǎo de.",
+      "vi": "Vâng ạ.",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 14.31,
+       "end": 15.21,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l12-s14",
+      "speaker": "Bác sĩ Hồ",
+      "zh": "回家后再喝些热水。",
+      "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+      "vi": "Về nhà rồi uống thêm ít nước nóng.",
+      "passageId": "l12-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l12-5",
+       "start": 16.32,
+       "end": 18.66,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb-l12-1",
+      "label": "Hội thoại 1 · Hôm nay thời tiết thế nào",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-1.mp3",
+      "durationSec": 14.212,
+      "bookRef": "Textbook · track 12-1",
+      "segments": [
+       {
+        "sentenceId": "l12-s1",
+        "start": 0.69,
+        "end": 2.41,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s2",
+        "start": 3.62,
+        "end": 6.64,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s3",
+        "start": 7.79,
+        "end": 8.65,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s4",
+        "start": 9.94,
+        "end": 12.54,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l12-2",
+      "label": "Từ mới · Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-2.mp3",
+      "durationSec": 22.682,
+      "bookRef": "Textbook · track 12-2 · 生词 Hội thoại 1",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 103,
+        "printedPage": 88,
+        "section": "课文 1 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l12-3",
+      "label": "Hội thoại 2 · Hôm qua tuyết rơi",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-3.mp3",
+      "durationSec": 13.117,
+      "bookRef": "Textbook · track 12-3",
+      "segments": [
+       {
+        "sentenceId": "l12-s5",
+        "start": 0.18,
+        "end": 1.84,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s6",
+        "start": 2.0,
+        "end": 5.04,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s7",
+        "start": 5.04,
+        "end": 8.24,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s8",
+        "start": 8.93,
+        "end": 12.35,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l12-4",
+      "label": "Từ mới · Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-4.mp3",
+      "durationSec": 16.584,
+      "bookRef": "Textbook · track 12-4 · 生词 Hội thoại 2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l12-5",
+      "label": "Hội thoại 3 · Đi khám bệnh",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-5.mp3",
+      "durationSec": 20.441,
+      "bookRef": "Textbook · track 12-5",
+      "segments": [
+       {
+        "sentenceId": "l12-s9",
+        "start": 0.3,
+        "end": 2.58,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s10",
+        "start": 2.97,
+        "end": 6.29,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s11",
+        "start": 6.97,
+        "end": 8.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s12",
+        "start": 8.85,
+        "end": 13.93,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s13",
+        "start": 14.31,
+        "end": 15.21,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l12-s14",
+        "start": 16.32,
+        "end": 18.66,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l12-6",
+      "label": "Từ mới · Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-12/12-6.mp3",
+      "durationSec": 24.194,
+      "bookRef": "Textbook · track 12-6 · 生词 Hội thoại 3",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3 · 生词"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb-l12-1",
+      "label": "Track 12-1 · Pronunciation (phát âm)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-12/12-1.mp3",
+      "durationSec": 178.093,
+      "bookRef": "Workbook Bài 12, phần 一、语音, ký hiệu track 12-1 in ở trang in 084",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Chưa nghe kiểm chứng nội dung bằng tai; đối ứng theo số track in trong sách và tên thư mục trên trang audio Baulchino.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "l12-dialogue-1",
+      "title": "Hội thoại 1 · Hôm nay thời tiết thế nào",
+      "context": "Vương Nhất Tuyết gọi điện cho Vương Nhất Phi, hỏi tình hình thời tiết bên anh ấy (Textbook tr.087). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 12-1); lời thoại đầy đủ in ở tr.087 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l12-1",
+      "sentenceIds": [
+       "l12-s1",
+       "l12-s2",
+       "l12-s3",
+       "l12-s4"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb12-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 087, track 12-1): thời tiết bên Vương Nhất Phi thế nào?",
+        "promptZh": "王一飞那儿的天气（ ）。",
+        "promptPinyin": "Wáng Yīfēi nàr de tiānqì ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "很好",
+          "pinyin": "hěn hǎo",
+          "vi": "rất tốt"
+         },
+         {
+          "id": "2",
+          "zh": "很不好",
+          "pinyin": "hěn bù hǎo",
+          "vi": "rất không tốt"
+         },
+         {
+          "id": "3",
+          "zh": "不太好",
+          "pinyin": "bú tài hǎo",
+          "vi": "không tốt lắm"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.087: Vương Nhất Phi nói “这里的天不太好，下雨了” — thời tiết không tốt lắm.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 102,
+          "printedPage": 87,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-1",
+         "start": 3.62,
+         "end": 6.64,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb12-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 087, track 12-1): Vương Nhất Phi cảm thấy thế nào?",
+        "promptZh": "王一飞觉得（ ）。",
+        "promptPinyin": "Wáng Yīfēi juéde ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "不冷",
+          "pinyin": "bù lěng",
+          "vi": "không lạnh"
+         },
+         {
+          "id": "2",
+          "zh": "很冷",
+          "pinyin": "hěn lěng",
+          "vi": "rất lạnh"
+         },
+         {
+          "id": "3",
+          "zh": "有点儿冷",
+          "pinyin": "yǒudiǎnr lěng",
+          "vi": "hơi lạnh"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.087: “有点儿大，我觉得很冷” — anh ấy cảm thấy rất lạnh.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 102,
+          "printedPage": 87,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-1",
+         "start": 9.94,
+         "end": 12.54,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l12-dialogue-2",
+      "title": "Hội thoại 2 · Hôm qua tuyết rơi",
+      "context": "Trong thang máy của công ty, Vương Nhất Tuyết và Dương Đồng Lạc trò chuyện (Textbook tr.089). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 12-3); lời thoại đầy đủ in ở tr.089 và hai câu hỏi của sách nằm ngay dưới hội thoại này.",
+      "audioTrackId": "trk-tb-l12-3",
+      "sentenceIds": [
+       "l12-s5",
+       "l12-s6",
+       "l12-s7",
+       "l12-s8"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 104,
+        "printedPage": 89,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb12-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 089, track 12-3): hôm qua Dương Đồng Lạc làm sao?",
+        "promptZh": "杨同乐昨天（ ）了。",
+        "promptPinyin": "Yáng Tónglè zuótiān ( ) le.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "生病",
+          "pinyin": "shēngbìng",
+          "vi": "sinh bệnh, ốm"
+         },
+         {
+          "id": "2",
+          "zh": "上班",
+          "pinyin": "shàngbān",
+          "vi": "đi làm"
+         },
+         {
+          "id": "3",
+          "zh": "去公司",
+          "pinyin": "qù gōngsī",
+          "vi": "đi đến công ty"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.089: Vương Nhất Tuyết hỏi “你昨天没来公司，生病了？”, anh ấy đáp “对，我昨天去医院看病了” — hôm qua anh ấy bị ốm.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 104,
+          "printedPage": 89,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-3",
+         "start": 5.04,
+         "end": 8.24,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb12-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 089, track 12-3): hôm nay Dương Đồng Lạc thế nào?",
+        "promptZh": "杨同乐今天（ ）了。",
+        "promptPinyin": "Yáng Tónglè jīntiān ( ) le.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "在家里",
+          "pinyin": "zài jiā lǐ",
+          "vi": "ở nhà"
+         },
+         {
+          "id": "2",
+          "zh": "去医院",
+          "pinyin": "qù yīyuàn",
+          "vi": "đi bệnh viện"
+         },
+         {
+          "id": "3",
+          "zh": "来公司",
+          "pinyin": "lái gōngsī",
+          "vi": "đến công ty"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Hai người đang trò chuyện trong thang máy của công ty (bối cảnh in ở tr.089) và câu trước nói hôm qua anh ấy “没来公司” — tức hôm nay anh ấy đã đến công ty.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 104,
+          "printedPage": 89,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-3",
+         "start": 5.04,
+         "end": 8.24,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l12-dialogue-3",
+      "title": "Hội thoại 3 · Đi khám bệnh",
+      "context": "Hôm qua ở bệnh viện, bác sĩ Hồ khám bệnh cho Dương Đồng Lạc (Textbook tr.090–091). Sách in phần này dạng nghe trước hai lần rồi chọn đáp án (track 12-5). Hai ô trợ giúp của Tiểu Ngữ ở tr.091: “看看” là dạng lặp lại của “看”, chỉ hành động ngắn, nhẹ; và người Trung Quốc thích uống nước nóng, cho rằng uống nước nóng tốt cho sức khoẻ hơn.",
+      "audioTrackId": "trk-tb-l12-5",
+      "sentenceIds": [
+       "l12-s9",
+       "l12-s10",
+       "l12-s11",
+       "l12-s12",
+       "l12-s13",
+       "l12-s14"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 106,
+        "printedPage": 91,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb12-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 090, track 12-5): Dương Đồng Lạc cảm thấy thế nào?",
+        "promptZh": "杨同乐觉得（ ）。",
+        "promptPinyin": "Yáng Tónglè juéde ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "很热",
+          "pinyin": "hěn rè",
+          "vi": "rất nóng"
+         },
+         {
+          "id": "2",
+          "zh": "很冷",
+          "pinyin": "hěn lěng",
+          "vi": "rất lạnh"
+         },
+         {
+          "id": "3",
+          "zh": "有点儿冷",
+          "pinyin": "yǒudiǎnr lěng",
+          "vi": "hơi lạnh"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.091: bác sĩ hỏi “你觉得怎么样？”, anh ấy đáp “我很冷”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 105,
+          "printedPage": 90,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-5",
+         "start": 6.97,
+         "end": 8.05,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb12-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 090, track 12-5): bác sĩ dặn Dương Đồng Lạc hôm nay thế nào?",
+        "promptZh": "医生对杨同乐说：“今天（ ）吧。”",
+        "promptPinyin": "Yīshēng duì Yáng Tónglè shuō: “Jīntiān ( ) ba.”",
+        "options": [
+         {
+          "id": "1",
+          "zh": "上班",
+          "pinyin": "shàngbān",
+          "vi": "đi làm"
+         },
+         {
+          "id": "2",
+          "zh": "下班",
+          "pinyin": "xiàbān",
+          "vi": "tan làm"
+         },
+         {
+          "id": "3",
+          "zh": "休息半天",
+          "pinyin": "xiūxi bàn tiān",
+          "vi": "nghỉ nửa ngày"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Lời thoại in ở Textbook tr.091: bác sĩ nói “吃一点儿药，今天休息半天吧”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 105,
+          "printedPage": 90,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l12-5",
+         "start": 8.85,
+         "end": 13.93,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l12-text-v1",
+    "titleVi": "Bài tập chính của Bài 12",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.086); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.092, ngân hàng từ in sẵn; câu (1) của sách có hai chỗ trống nên tách thành hai câu, mỗi từ ngân hàng dùng đúng một lần); 4 câu phân biệt thanh điệu (Workbook tr.084, đáp án theo dấu thanh in sẵn, đã kiểm ở bản phóng to 300 DPI); và 6 câu nghe – nối âm tiết với từ (Workbook tr.084, ánh xạ xác định duy nhất từ bản in). Sáu câu hỏi của cả ba hội thoại nằm ngay tại từng hội thoại ở mục Nghe & đọc (D28), không nằm trong bộ này. Phần dùng hình để nói ở tr.092 là bài tự luyện riêng ở khối B, không chấm tự động.",
+    "items": [
+     {
+      "id": "wb12-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động A (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "下雨",
+      "promptPinyin": "xià yǔ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ A “下雨” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb12-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động B (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "冷",
+      "promptPinyin": "lěng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ B “冷” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb12-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động C (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "生病",
+      "promptPinyin": "shēngbìng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ C “生病” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb12-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động D (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "看病",
+      "promptPinyin": "kànbìng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ D “看病” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb12-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động E (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "雪",
+      "promptPinyin": "xuě",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ E “雪” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "wb12-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động F (Textbook trang 086): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "水",
+      "promptPinyin": "shuǐ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "水",
+        "pinyin": "shuǐ",
+        "vi": "nước",
+        "image": "assets/lesson-12/warm-water.webp",
+        "imageAlt": "Tranh vẽ: một ly nước trong suốt có tia nước bắn lên cao"
+       },
+       {
+        "id": "2",
+        "zh": "看病",
+        "pinyin": "kànbìng",
+        "vi": "đi khám bệnh",
+        "image": "assets/lesson-12/warm-doctor.webp",
+        "imageAlt": "Tranh vẽ: một bệnh nhân ngồi đối diện bác sĩ mặc áo trắng đeo khẩu trang trong phòng khám"
+       },
+       {
+        "id": "3",
+        "zh": "冷",
+        "pinyin": "lěng",
+        "vi": "lạnh",
+        "image": "assets/lesson-12/warm-cold.webp",
+        "imageAlt": "Tranh vẽ: một cô gái mặc áo khoác dày, quấn mình ngồi co ro trên ghế vì lạnh"
+       },
+       {
+        "id": "4",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết",
+        "image": "assets/lesson-12/warm-snow.webp",
+        "imageAlt": "Tranh vẽ: một cây cầu nhỏ và những ngôi nhà phủ đầy tuyết trắng, tuyết đang rơi"
+       },
+       {
+        "id": "5",
+        "zh": "生病",
+        "pinyin": "shēngbìng",
+        "vi": "bị ốm",
+        "image": "assets/lesson-12/warm-sick.webp",
+        "imageAlt": "Tranh vẽ: một người nằm trên giường đắp chăn, trên trán có khăn lạnh, trông mệt mỏi"
+       },
+       {
+        "id": "6",
+        "zh": "下雨",
+        "pinyin": "xià yǔ",
+        "vi": "trời mưa",
+        "image": "assets/lesson-12/warm-rain.webp",
+        "imageAlt": "Tranh vẽ: một chiếc ô trong suốt dưới cơn mưa, những hạt mưa rơi xung quanh"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Ảnh gốc ở Textbook tr.086: từ F “水” khớp ảnh tương ứng trong sáu ảnh khởi động; tranh trong app là tranh vẽ lại theo đúng các cảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 101,
+        "printedPage": 86,
+        "section": "热身 Warm-Up"
+       }
+      ]
+     },
+     {
+      "id": "tb12-fill-1a",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 092). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "外边正在下（ ），",
+      "promptPinyin": "Wàibian zhèngzài xià ( ),",
+      "options": [
+       {
+        "id": "1",
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào"
+       },
+       {
+        "id": "2",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết"
+       },
+       {
+        "id": "3",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ báo thay đổi"
+       },
+       {
+        "id": "4",
+        "zh": "看",
+        "pinyin": "kàn",
+        "vi": "khám (trong 看病）"
+       },
+       {
+        "id": "5",
+        "zh": "太",
+        "pinyin": "tài",
+        "vi": "quá"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bên ngoài đang đổ tuyết: “正在下雪” — 下 đi với danh từ chỉ hiện tượng là 雪.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 107,
+        "printedPage": 92,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb12-fill-1b",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 092). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "外边正在下雪，（ ）冷了！",
+      "promptPinyin": "Wàibian zhèngzài xià xuě, ( ) lěng le!",
+      "options": [
+       {
+        "id": "1",
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào"
+       },
+       {
+        "id": "2",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết"
+       },
+       {
+        "id": "3",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ báo thay đổi"
+       },
+       {
+        "id": "4",
+        "zh": "看",
+        "pinyin": "kàn",
+        "vi": "khám (trong 看病）"
+       },
+       {
+        "id": "5",
+        "zh": "太",
+        "pinyin": "tài",
+        "vi": "quá"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu cảm thán dùng mẫu “太……了”: “太冷了！”.",
+      "grammarIds": [
+       "kp-hsk1-l12-tai"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 107,
+        "printedPage": 92,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb12-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 092). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "他去公司工作（ ）。",
+      "promptPinyin": "Tā qù gōngsī gōngzuò ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào"
+       },
+       {
+        "id": "2",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết"
+       },
+       {
+        "id": "3",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ báo thay đổi"
+       },
+       {
+        "id": "4",
+        "zh": "看",
+        "pinyin": "kàn",
+        "vi": "khám (trong 看病）"
+       },
+       {
+        "id": "5",
+        "zh": "太",
+        "pinyin": "tài",
+        "vi": "quá"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cuối câu thêm trợ từ “了” báo việc đã thành hiện thực: “他去公司工作了”.",
+      "grammarIds": [
+       "kp-hsk1-l12-le"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 107,
+        "printedPage": 92,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb12-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 092). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "医生：你觉得（ ）？杨同乐：我很冷。",
+      "promptPinyin": "Yīshēng: Nǐ juéde ( )? Yáng Tónglè: Wǒ hěn lěng.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào"
+       },
+       {
+        "id": "2",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết"
+       },
+       {
+        "id": "3",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ báo thay đổi"
+       },
+       {
+        "id": "4",
+        "zh": "看",
+        "pinyin": "kàn",
+        "vi": "khám (trong 看病）"
+       },
+       {
+        "id": "5",
+        "zh": "太",
+        "pinyin": "tài",
+        "vi": "quá"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hỏi cảm giác bằng “你觉得怎么样？”, đúng câu của bác sĩ ở Hội thoại 3.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 107,
+        "printedPage": 92,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb12-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Chọn từ trong ngân hàng từ của sách để điền vào chỗ trống (Textbook trang 092). Mỗi từ trong ngân hàng chỉ dùng đúng một lần cho cả bài.",
+      "promptZh": "王一雪：你昨天去医院（ ）病了吗？杨同乐：没有，我今天去。",
+      "promptPinyin": "Wáng Yīxuě: Nǐ zuótiān qù yīyuàn ( ) bìng le ma? Yáng Tónglè: Méiyǒu, wǒ jīntiān qù.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào"
+       },
+       {
+        "id": "2",
+        "zh": "雪",
+        "pinyin": "xuě",
+        "vi": "tuyết"
+       },
+       {
+        "id": "3",
+        "zh": "了",
+        "pinyin": "le",
+        "vi": "trợ từ báo thay đổi"
+       },
+       {
+        "id": "4",
+        "zh": "看",
+        "pinyin": "kàn",
+        "vi": "khám (trong 看病）"
+       },
+       {
+        "id": "5",
+        "zh": "太",
+        "pinyin": "tài",
+        "vi": "quá"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm cố định “看病” nghĩa là đi khám bệnh: “去医院看病”.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 107,
+        "printedPage": 92,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb12-tone-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 084, track 12-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "shuǐ · shuì · hěn",
+      "promptPinyin": "shuǐ · shuì · hěn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "shuǐ",
+        "pinyin": "shuǐ",
+        "vi": "thanh 3"
+       },
+       {
+        "id": "2",
+        "zh": "shuì",
+        "pinyin": "shuì",
+        "vi": "thanh 4"
+       },
+       {
+        "id": "3",
+        "zh": "hěn",
+        "pinyin": "hěn",
+        "vi": "thanh 3"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.084 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 12-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb12-tone-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 084, track 12-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "wèntí · kànbìng · diànshì",
+      "promptPinyin": "wèntí · kànbìng · diànshì",
+      "options": [
+       {
+        "id": "1",
+        "zh": "wèntí",
+        "pinyin": "wèntí",
+        "vi": "thanh 4 + 2"
+       },
+       {
+        "id": "2",
+        "zh": "kànbìng",
+        "pinyin": "kànbìng",
+        "vi": "thanh 4 + 4"
+       },
+       {
+        "id": "3",
+        "zh": "diànshì",
+        "pinyin": "diànshì",
+        "vi": "thanh 4 + 4"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.084 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 12-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb12-tone-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 084, track 12-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "gāoxìng · fēicháng · zhīdào",
+      "promptPinyin": "gāoxìng · fēicháng · zhīdào",
+      "options": [
+       {
+        "id": "1",
+        "zh": "gāoxìng",
+        "pinyin": "gāoxìng",
+        "vi": "thanh 1 + 4"
+       },
+       {
+        "id": "2",
+        "zh": "fēicháng",
+        "pinyin": "fēicháng",
+        "vi": "thanh 1 + 2"
+       },
+       {
+        "id": "3",
+        "zh": "zhīdào",
+        "pinyin": "zhīdào",
+        "vi": "thanh 1 + 4"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.084 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 12-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb12-tone-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài luyện phân biệt thanh điệu (Workbook trang 084, track 12-1): trong ba lựa chọn in sẵn dấu thanh, lựa chọn nào có thanh điệu KHÁC hai lựa chọn còn lại (với từ nhiều âm tiết, so cả mẫu thanh của toàn bộ từ)? Đây là bài luyện phát âm nên Pinyin được hiện sẵn.",
+      "promptZh": "qù chāoshì · zài shāngdiàn · duìbuqǐ",
+      "promptPinyin": "qù chāoshì · zài shāngdiàn · duìbuqǐ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "qù chāoshì",
+        "pinyin": "qù chāoshì",
+        "vi": "thanh 4 + 1 + 4"
+       },
+       {
+        "id": "2",
+        "zh": "zài shāngdiàn",
+        "pinyin": "zài shāngdiàn",
+        "vi": "thanh 4 + 1 + 4"
+       },
+       {
+        "id": "3",
+        "zh": "duìbuqǐ",
+        "pinyin": "duìbuqǐ",
+        "vi": "thanh 4 + nhẹ + 3"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đáp án suy ra trực tiếp từ dấu thanh in sẵn trong Workbook tr.084 (đã kiểm ở bản phóng to 300 DPI); phần nghe đi kèm là track 12-1 của Workbook (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 1 · 声调辨析"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (1) được đọc là “nǐ hǎo”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "nǐ hǎo",
+      "promptPinyin": "nǐ hǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (2) được đọc là “míngzi”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "míngzi",
+      "promptPinyin": "míngzi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (3) được đọc là “Zhōngguó”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "Zhōngguó",
+      "promptPinyin": "Zhōngguó",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (4) được đọc là “lǎoshī”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "lǎoshī",
+      "promptPinyin": "lǎoshī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (5) được đọc là “háizi”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "háizi",
+      "promptPinyin": "háizi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb12-match-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết (Workbook trang 084, bài 2, track 12-1): âm tiết số (6) được đọc là “xièxie”. Từ nào trong cột từ của sách có cách đọc đó? Đây là bài luyện phát âm nên âm tiết được hiện kèm dấu thanh như sách in.",
+      "promptZh": "xièxie",
+      "promptPinyin": "xièxie",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "thầy, cô giáo"
+       },
+       {
+        "id": "3",
+        "zh": "谢谢",
+        "pinyin": "xièxie",
+        "vi": "cảm ơn"
+       },
+       {
+        "id": "4",
+        "zh": "孩子",
+        "pinyin": "háizi",
+        "vi": "trẻ con"
+       },
+       {
+        "id": "5",
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên"
+       },
+       {
+        "id": "6",
+        "zh": "中国",
+        "pinyin": "Zhōngguó",
+        "vi": "Trung Quốc"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Sáu âm tiết nghe được in kèm dấu thanh ở Workbook tr.084 và mỗi âm tiết ứng với đúng một từ trong cột từ của sách, nên ánh xạ xác định duy nhất từ bản in; phần nghe nằm ở track Workbook 12-1, app không cắt đoạn riêng cho từng âm tiết (chưa nghe kiểm chứng).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 91,
+        "printedPage": 84,
+        "section": "一、语音 2 · 听音节，匹配词语"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-l12-01",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 092) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 092), dùng từ mới và điểm ngữ pháp của bài để hoàn thành khung câu in trong sách, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "prompts": [
+      "昨天________。",
+      "今天________。",
+      "杨同乐________了，他昨天去________，今天来________。",
+      "医生对杨同乐说：“今天________，回家________。”"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-12/describe-1.webp",
+       "alt": "Tranh vẽ: mưa rơi trên những tán cây xanh — vẽ lại theo ảnh Textbook tr.092",
+       "captionVi": "Hình 1 — trời mưa. Tranh vẽ lại theo ảnh Textbook tr.092",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 107,
+         "printedPage": 92,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-12/describe-2.webp",
+       "alt": "Tranh vẽ: mặt trời chói sáng giữa bầu trời đầy mây — vẽ lại theo ảnh Textbook tr.092",
+       "captionVi": "Hình 2 — trời nắng. Tranh vẽ lại theo ảnh Textbook tr.092",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 107,
+         "printedPage": 92,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-12/describe-3.webp",
+       "alt": "Tranh vẽ: một người đàn ông nằm trên giường đắp chăn, tay che miệng ho — vẽ lại theo ảnh Textbook tr.092",
+       "captionVi": "Hình 3 — người ốm nằm trên giường. Tranh vẽ lại theo ảnh Textbook tr.092",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 107,
+         "printedPage": 92,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-12/describe-4.webp",
+       "alt": "Tranh vẽ: một bệnh nhân ngồi trước bàn của bác sĩ trong phòng khám — vẽ lại theo ảnh Textbook tr.092",
+       "captionVi": "Hình 4 — ở phòng khám của bác sĩ. Tranh vẽ lại theo ảnh Textbook tr.092",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 107,
+         "printedPage": 92,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Câu gợi ý (chỉ là một cách nói, không phải đáp án duy nhất của sách): 昨天下雨了。/ 今天很热。/ 杨同乐病了，他昨天去医院看病，今天来公司了。/ 医生对杨同乐说：“今天休息半天吧，回家后喝些热水。”",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 107,
+       "printedPage": 92,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-l12-02",
+     "kind": "speaking",
+     "titleVi": "Trả lời câu hỏi theo Hội thoại 2 và 3 (Textbook trang 090–091) — tự luyện, không chấm tự động",
+     "instructionVi": "Đọc lại Hội thoại 2 và 3 rồi trả lời thành tiếng bốn câu hỏi in trong sách (hai câu sau Hội thoại 2 ở tr.090, hai câu sau Hội thoại 3 ở tr.091). Đáp án mẫu ở phần gợi ý để bạn tự đối chiếu sau khi trả lời.",
+     "prompts": [
+      "昨天天气怎么样？",
+      "杨同乐昨天做什么了？",
+      "杨同乐生病了吗？",
+      "看病后，杨同乐回家要做什么？"
+     ],
+     "draftPromptVi": "Đáp án theo lời thoại: 昨天下雪了，很冷。/ 他生病了，去医院看病了。/ 生病了，他对医生说“我病了”。/ 回家后喝些热水。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 105,
+       "printedPage": 90,
+       "section": "课文 2 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 106,
+       "printedPage": 91,
+       "section": "课文 3 · 根据课文内容回答问题"
+      }
+     ]
+    },
+    {
+     "id": "st-l12-03",
+     "kind": "speaking",
+     "titleVi": "Nói về thời tiết hôm nay ở chỗ bạn (hoạt động đôi sau Hội thoại 1, Textbook trang 087) — tự luyện, không chấm tự động",
+     "instructionVi": "Sách yêu cầu hai người một nhóm, dựa vào tình hình thực tế để đối thoại như Hội thoại 1. Tự luyện bằng cách hỏi và tự trả lời bốn câu dưới đây về thời tiết thật ở chỗ bạn hôm nay.",
+     "prompts": [
+      "今天天气怎么样？",
+      "今天下雨（下雪）了吗？",
+      "雨（雪）大吗？",
+      "你觉得冷不冷？"
+     ],
+     "draftPromptVi": "Câu mẫu theo Hội thoại 1: 今天天气不太好，下雨了。/ 下雨了。/ 有点儿大。/ 我觉得很冷。Hãy thay bằng thời tiết thật ở chỗ bạn.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 102,
+       "printedPage": 87,
+       "section": "课文 1 · 两人一组，根据实际情况对话"
+      }
+     ]
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện lấy nguyên từ sách, không chấm tự động: dùng hình để nói (Textbook tr.092), trả lời câu hỏi theo Hội thoại 2 và 3 (tr.090–091) và nói về thời tiết hôm nay ở chỗ bạn (hoạt động đôi sau Hội thoại 1, tr.087). Nháp và ghi chú của bạn được lưu trên thiết bị; điểm của các bài này không gộp vào điểm bài chính.",
+   "selfCheckListenVi": "Bài luyện nghe của bài này (phân biệt thanh điệu và nghe – nối âm tiết, Workbook tr.084) đã nằm trong bộ bài chính; không có bài tự luyện nghe riêng.",
+   "apply": {
+    "titleVi": "Đóng vai bác sĩ và bệnh nhân",
+    "instructionVi": "Hoạt động lớp trong sách (Textbook tr.093): hai người một nhóm, một người đóng bác sĩ, một người đóng bệnh nhân đến khám bệnh. Trong app, làm lần lượt hai nhiệm vụ dưới đây: đọc mẫu, rồi đổi vai và thay chi tiết.",
+    "audioTrackId": "trk-tb-l12-5",
+    "noteVi": "Nhiệm vụ 1 dùng nguyên mẫu đối thoại của Tiểu Ngữ in ở Textbook tr.093; nhiệm vụ 2 mở rộng sang cảnh gọi điện hỏi thời tiết của Hội thoại 1 cho đủ hoạt động nói của bài. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 108,
+      "printedPage": 93,
+      "section": "课堂活动 · 角色扮演"
+     }
+    ],
+    "samplePassageIds": [
+     "l12-dialogue-3"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l12-1",
+      "titleVi": "Đi khám bệnh",
+      "situationVi": "Bệnh nhân đến phòng khám nói mình bị ốm; bác sĩ xem qua, hỏi cảm giác, rồi dặn uống thuốc — theo đúng mẫu của Tiểu Ngữ in ở Textbook tr.093.",
+      "sampleZh": "病人：医生，我病了。医生：我看看。你觉得冷不冷？病人：有点儿冷。医生：好的，吃一点儿药吧。",
+      "samplePinyin": "Bìngrén: Yīshēng, wǒ bìng le. Yīshēng: Wǒ kànkan. Nǐ juéde lěng bu lěng? Bìngrén: Yǒudiǎnr lěng. Yīshēng: Hǎo de, chī yìdiǎnr yào ba.",
+      "sampleVi": "Bệnh nhân: Bác sĩ ơi, tôi bị ốm rồi. Bác sĩ: Để tôi xem nào. Bạn thấy có lạnh không? Bệnh nhân: Hơi lạnh. Bác sĩ: Được, uống một ít thuốc nhé.",
+      "swapVi": "Đổi triệu chứng （有点儿冷 → 很冷 / 有点儿热） và lời dặn （吃一点儿药 → 今天休息半天，回家喝些热水）; đổi vai để cả hai đều được làm bác sĩ.",
+      "sourceNoteVi": "Mẫu là ví dụ của Tiểu Ngữ trong hoạt động lớp ở Textbook tr.093.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 108,
+        "printedPage": 93,
+        "section": "课堂活动 · 角色扮演"
+       }
+      ]
+     },
+     {
+      "id": "speak-l12-2",
+      "titleVi": "Gọi điện hỏi thời tiết",
+      "situationVi": "Một người gọi điện cho người ở nơi khác, hỏi thời tiết bên đó theo khung của Hội thoại 1; người kia trả lời theo thời tiết thật.",
+      "sampleZh": "今天天气怎么样？——这里的天不太好，下雨了。——雨大吗？——有点儿大，我觉得很冷。",
+      "samplePinyin": "Jīntiān tiānqì zěnmeyàng? —— Zhèlǐ de tiān bú tài hǎo, xià yǔ le. —— Yǔ dà ma? —— Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+      "sampleVi": "Hôm nay thời tiết thế nào? — Thời tiết ở đây không tốt lắm, trời mưa rồi. — Mưa có to không? — Hơi to, tôi thấy rất lạnh.",
+      "swapVi": "Đổi 下雨 thành 下雪， đổi cảm giác 很冷 thành 很热， và trả lời theo thời tiết thật ở chỗ của mỗi người.",
+      "sourceNoteVi": "Khung theo Hội thoại 1 ở Textbook tr.087 và yêu cầu đối thoại theo tình hình thực tế in ngay dưới hội thoại đó.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 102,
+        "printedPage": 87,
+        "section": "课文 1"
+       }
+      ]
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l12-vocab-1",
+     "dialogueId": "l12-dialogue-1",
+     "titleVi": "Hội thoại 1 · Hôm nay thời tiết thế nào",
+     "trackId": "trk-tb-l12-2",
+     "trackLabelVi": "Track 12-2"
+    },
+    {
+     "id": "l12-vocab-2",
+     "dialogueId": "l12-dialogue-2",
+     "titleVi": "Hội thoại 2 · Hôm qua tuyết rơi",
+     "trackId": "trk-tb-l12-4",
+     "trackLabelVi": "Track 12-4"
+    },
+    {
+     "id": "l12-vocab-3",
+     "dialogueId": "l12-dialogue-3",
+     "titleVi": "Hội thoại 3 · Đi khám bệnh",
+     "trackId": "trk-tb-l12-6",
+     "trackLabelVi": "Track 12-6"
+    }
+   ],
+   "prepSummaryVi": "24 từ mới, chia theo ba hội thoại của bài.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu và cảnh tuyết rơi của bài.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết",
+     "descVi": "Học 24 từ mới theo ba hội thoại, nghe từng từ bằng audio sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "Câu không chủ – vị, trợ từ “了” báo thay đổi và mẫu cảm thán “太……了”.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe và đọc ba hội thoại: gọi điện hỏi thời tiết, tuyết rơi ở thang máy, đi khám bệnh.",
+     "sectionId": "reader",
+     "dialogueId": "l12-dialogue-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Làm 21 câu chính, 6 câu hỏi tại hội thoại, rồi luyện thêm với bài nói theo hình, bài trả lời câu hỏi và bài nói về thời tiết.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói",
+     "descVi": "Đóng vai bác sĩ và bệnh nhân theo hoạt động lớp của sách.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu không chủ – vị",
+     "bodyVi": "Chỉ một từ hay cụm từ cũng có thể là câu hoàn chỉnh trong khẩu ngữ, hay dùng để báo hiện tượng vừa xảy ra: 下雨了。、下雪了。、上课了。",
+     "exampleZh": "下雪了。",
+     "examplePinyin": "Xià xuě le.",
+     "exampleVi": "Tuyết rơi rồi."
+    },
+    {
+     "titleVi": "“了” báo thay đổi",
+     "bodyVi": "Trợ từ ngữ khí “了（1）” ở cuối câu (hoặc chỗ ngắt giữa câu) báo tình hình đã thay đổi hoặc mới xuất hiện. Phủ định dùng “没” và bỏ “了”: 没起床呢。",
+     "exampleZh": "十二点了，吃午饭吧。",
+     "examplePinyin": "Shí'èr diǎn le, chī wǔfàn ba.",
+     "exampleVi": "12 giờ rồi, ăn trưa đi."
+    },
+    {
+     "titleVi": "Mẫu “太……了”",
+     "bodyVi": "Cảm thán mức độ rất cao: 太＋tính từ＋了。Hội thoại 2 dùng đúng mẫu này khi nhận xét thời tiết sau ngày tuyết rơi.",
+     "exampleZh": "我们今天太高兴了！",
+     "examplePinyin": "Wǒmen jīntiān tài gāoxìng le!",
+     "exampleVi": "Hôm nay chúng tôi vui quá!"
+    },
+    {
+     "titleVi": "Nói về ốm và đi khám",
+     "bodyVi": "Chuỗi câu của Hội thoại 3: khai bệnh （我病了）, bác sĩ hỏi cảm giác （你觉得怎么样？), trả lời （我很冷）, và lời dặn （吃一点儿药，今天休息半天吧。回家后再喝些热水）.",
+     "exampleZh": "我病了，我觉得很冷。",
+     "examplePinyin": "Wǒ bìng le, wǒ juéde hěn lěng.",
+     "exampleVi": "Tôi bị ốm rồi, tôi thấy rất lạnh."
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào từng từ hoặc cụm trong các câu ở mục Đọc và nghe, ví dụ của điểm kiến thức chính, mục Tổng kết và mẫu Tự nói để xem Pinyin, âm Hán–Việt và nghĩa. Có thể tra cả tên nhân vật và các từ của bài. Tra từ chỉ để tham khảo, không làm lộ đáp án trong phần bài tập.",
+    "extras": [
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "王一飞",
+      "pinyin": "Wáng Yīfēi",
+      "hanViet": "VƯƠNG NHẤT PHI",
+      "vi": "Vương Nhất Phi — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "杨同乐",
+      "pinyin": "Yáng Tónglè",
+      "hanViet": "DƯƠNG ĐỒNG LẠC",
+      "vi": "Dương Đồng Lạc — nhân vật trong hội thoại (tên riêng)"
+     },
+     {
+      "zh": "胡医生",
+      "pinyin": "Hú yīshēng",
+      "hanViet": "HỒ Y SINH",
+      "vi": "bác sĩ Hồ — nhân vật trong hội thoại"
+     },
+     {
+      "zh": "看看",
+      "pinyin": "kànkan",
+      "hanViet": "KHÁN KHÁN",
+      "vi": "xem qua một chút (dạng lặp lại của 看， chỉ hành động ngắn, nhẹ)"
+     },
+     {
+      "zh": "医院",
+      "pinyin": "yīyuàn",
+      "hanViet": "Y VIỆN",
+      "vi": "bệnh viện"
+     },
+     {
+      "zh": "休息",
+      "pinyin": "xiūxi",
+      "hanViet": "HƯU TỨC",
+      "vi": "nghỉ ngơi"
+     },
+     {
+      "zh": "半天",
+      "pinyin": "bàn tiān",
+      "hanViet": "BÁN THIÊN",
+      "vi": "nửa ngày"
+     },
+     {
+      "zh": "回家",
+      "pinyin": "huí jiā",
+      "hanViet": "HỒI GIA",
+      "vi": "về nhà"
+     },
+     {
+      "zh": "些",
+      "pinyin": "xiē",
+      "hanViet": "TA",
+      "vi": "một ít, vài (lượng từ không xác định)"
+     },
+     {
+      "zh": "后",
+      "pinyin": "hòu",
+      "hanViet": "HẬU",
+      "vi": "sau, phía sau"
+     },
+     {
+      "zh": "外边",
+      "pinyin": "wàibian",
+      "hanViet": "NGOẠI BIÊN",
+      "vi": "bên ngoài"
+     },
+     {
+      "zh": "工作",
+      "pinyin": "gōngzuò",
+      "hanViet": "CÔNG TÁC",
+      "vi": "công việc; làm việc"
+     },
+     {
+      "zh": "杯子",
+      "pinyin": "bēizi",
+      "hanViet": "BÔI TỬ",
+      "vi": "cái cốc, cái ly"
+     },
+     {
+      "zh": "小",
+      "pinyin": "xiǎo",
+      "hanViet": "TIỂU",
+      "vi": "nhỏ, bé"
+     },
+     {
+      "zh": "漂亮",
+      "pinyin": "piàoliang",
+      "hanViet": "PHIÊU LƯỢNG",
+      "vi": "đẹp, xinh"
+     },
+     {
+      "zh": "真",
+      "pinyin": "zhēn",
+      "hanViet": "CHÂN",
+      "vi": "thật, rất (nhấn mạnh)"
+     },
+     {
+      "zh": "对不起",
+      "pinyin": "duìbuqǐ",
+      "hanViet": "ĐỐI BẤT KHỞI",
+      "vi": "xin lỗi"
+     },
+     {
+      "zh": "没关系",
+      "pinyin": "méi guānxi",
+      "hanViet": "MỘT QUAN HỆ",
+      "vi": "không sao đâu"
+     },
+     {
+      "zh": "关系",
+      "pinyin": "guānxi",
+      "hanViet": "QUAN HỆ",
+      "vi": "quan hệ"
+     },
+     {
+      "zh": "高兴",
+      "pinyin": "gāoxìng",
+      "hanViet": "CAO HỨNG",
+      "vi": "vui, vui mừng"
+     },
+     {
+      "zh": "点",
+      "pinyin": "diǎn",
+      "hanViet": "ĐIỂM",
+      "vi": "giờ (chỉ giờ); điểm"
+     },
+     {
+      "zh": "那儿",
+      "pinyin": "nàr",
+      "hanViet": "NA NHI",
+      "vi": "ở đó, chỗ đó"
+     },
+     {
+      "zh": "病人",
+      "pinyin": "bìngrén",
+      "hanViet": "BỆNH NHÂN",
+      "vi": "bệnh nhân, người bệnh"
+     },
+     {
+      "zh": "上课",
+      "pinyin": "shàngkè",
+      "hanViet": "THƯỢNG KHOÁ",
+      "vi": "lên lớp, vào học"
+     },
+     {
+      "zh": "十",
+      "pinyin": "shí",
+      "hanViet": "THẬP",
+      "vi": "mười"
+     },
+     {
+      "zh": "二",
+      "pinyin": "èr",
+      "hanViet": "NHỊ",
+      "vi": "hai"
      }
     ],
     "phrases": []

@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-lesson14-standard1",
+ "contentVersion": "20261103-lesson15-standard1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -742,28 +742,45 @@
   },
   {
    "id": "hsk1-l15",
-   "bookId": "book-hsk1-workbook",
+   "bookId": "book-hsk1-textbook",
    "level": "HSK 1",
    "sourceUnit": "Lesson 15",
    "lessonNumber": 15,
    "titleZh": "大兴机场见！",
    "titleEn": "See you at Daxing Airport!",
-   "titleVi": "Hẹn gặp nhau ở sân bay Đại Hưng!",
-   "titleProvenance": "Tên bài lấy từ mục lục sách bài tập (Workbook) trang in VI; tên sách giáo khoa chưa đọc trực tiếp nên chưa xác minh trùng khớp. Tên Việt là bản dịch biên tập từ tên tiếng Anh in trong sách.",
+   "titleVi": "Hẹn gặp ở sân bay Đại Hưng!",
+   "titleProvenance": "verified-from-print",
    "sourceRefs": [
+    {
+     "sourceId": "src-hsk1-textbook-pdf",
+     "pdfPage": 127,
+     "printedPage": 112,
+     "section": "Bài 15 · 大兴机场见！"
+    },
     {
      "sourceId": "src-hsk1-workbook-pdf",
      "pdfPage": 118,
      "printedPage": 111,
-     "section": "目录 Contents (mục lục)"
+     "section": "Bài 15 · 语音/汉字"
     }
    ],
    "textbookAudioTrackCount": 6,
-   "workbookAudioTrackCount": 2,
-   "publicationStatus": "catalogue-only",
-   "publicationNote": "Mới kiểm chứng ở mức mục lục + danh mục audio; chưa đọc nội dung bài, chưa có nút Học.",
-   "grammarIds": [],
-   "sectionIds": []
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo chuẩn Bài 8 + D28 (câu hỏi tại hội thoại). Đang chờ QA độc lập và nghiệm thu.",
+   "grammarIds": [
+    "kp-hsk1-l15-coordinate",
+    "kp-hsk1-l15-characters-8"
+   ],
+   "sectionIds": [
+    "intro",
+    "prep",
+    "knowledge",
+    "reader",
+    "exercises",
+    "apply",
+    "summary"
+   ]
   }
  ],
  "pilot": {
@@ -45399,6 +45416,3308 @@
       "pinyin": "liù",
       "hanViet": "LỤC",
       "vi": "sáu (số từ)"
+     }
+    ],
+    "phrases": []
+   }
+  },
+  {
+   "lessonId": "hsk1-l15",
+   "intro": {
+    "goalVi": "Nghe, nói được về món ăn yêu thích, kể kế hoạch du lịch năm ngoái – năm nay và hẹn gặp nhau ở sân bay, dùng câu ghép song song “…，还/也…”.",
+    "estimatedMinutes": 50,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Ở nhà Lý Văn, mọi người nếm món Trung Quốc, bàn chuyện đi Tây An và Bắc Kinh, rồi hẹn nhau ở sân bay Đại Hưng — bài cuối của cấp 1.",
+    "outcomesVi": [
+     "Hiểu và dùng được từ vựng về du lịch để nói ý định, kế hoạch.",
+     "Dùng được câu ghép song song “…，还/也…” để nối hai ý song song.",
+     "Hiểu văn hoá bàn ăn và lễ tiếp khách của người Trung Quốc.",
+     "Biết thêm về thủ đô của Trung Quốc — Bắc Kinh."
+    ],
+    "contextImage": {
+     "src": "assets/lesson-15/airport.webp",
+     "alt": "Tranh vẽ: sân bay Đại Hưng hình sao biển mái đỏ cam nhìn từ trên cao, có máy bay đỗ bên cạnh",
+     "caption": "Bối cảnh: sân bay Đại Hưng ở Bắc Kinh · tranh vẽ mới theo ảnh Textbook tr.116",
+     "width": 760,
+     "height": 560
+    },
+    "studyTipVi": "Bài này chỉ có một điểm ngữ pháp mới; hãy tận dụng để ôn lại các mẫu của cả cấp 1 qua ba hội thoại — đặc biệt là “都” (Bài 14), “可以” (Bài 13) và câu chính–phản “早不早” (Bài 11) đều xuất hiện lại tại đây.",
+    "foundationSummaryVi": "Hán tự (8): sáu bộ thủ thường gặp — 口 (trong 喝), 亻 (trong 你), 讠 (trong 认), 日 (trong 明), 木 (trong 杯), 女 (trong 姐).",
+    "courseTagsVi": "Câu ghép song song “还/也” · Du lịch · Hẹn ở sân bay",
+    "priorLessonNoteVi": "Bài 14 đã học trợ từ “了（2）” và “都” — cả hai đều xuất hiện trong hội thoại bài này （去了西安、这些菜都好吃）.",
+    "priorLessonId": "hsk1-l14"
+   },
+   "prepWords": [
+    {
+     "id": "l15-w01",
+     "zh": "爱",
+     "pinyin": "ài",
+     "vi": "thích; yêu thích",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 128,
+       "printedPage": 113,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "ÁI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-2",
+      "start": 0.0,
+      "end": 0.74,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l15-w02",
+     "zh": "哪个",
+     "pinyin": "nǎge",
+     "vi": "cái nào",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 128,
+       "printedPage": 113,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "NÃ CÁ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-2",
+      "start": 2.38,
+      "end": 3.5,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "l15-w03",
+     "zh": "去年",
+     "pinyin": "qùnián",
+     "vi": "năm ngoái",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "KHỨ NIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-4",
+      "start": 0.05,
+      "end": 1.19,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l15-w04",
+     "zh": "男朋友",
+     "pinyin": "nánpéngyou",
+     "vi": "bạn trai",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "NAM BẰNG HỮU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-4",
+      "start": 3.01,
+      "end": 4.29,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l15-w05",
+     "zh": "几",
+     "pinyin": "jǐ",
+     "vi": "mấy; vài",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "KỶ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-4",
+      "start": 6.19,
+      "end": 6.77,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l15-w06",
+     "zh": "年",
+     "pinyin": "nián",
+     "vi": "năm",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "NIÊN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-4",
+      "start": 8.37,
+      "end": 9.37,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l15-w07",
+     "zh": "好玩儿",
+     "pinyin": "hǎowánr",
+     "vi": "thú vị; vui",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "HẢO NGOẠN NHI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-4",
+      "start": 10.53,
+      "end": 11.81,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "l15-w08",
+     "zh": "西安",
+     "pinyin": "Xī'ān",
+     "vi": "Tây An (thành phố ở Trung Quốc)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "TÂY AN",
+     "hanVietStatus": "verified-editorial",
+     "audio": null,
+     "dialogueGroup": 2,
+     "isProperName": true,
+     "properKind": "Tên riêng"
+    },
+    {
+     "id": "l15-w09",
+     "zh": "北京",
+     "pinyin": "Běijīng",
+     "vi": "Bắc Kinh (thủ đô Trung Quốc)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "BẮC KINH",
+     "hanVietStatus": "verified-editorial",
+     "audio": null,
+     "dialogueGroup": 2,
+     "isProperName": true,
+     "properKind": "Tên riêng"
+    },
+    {
+     "id": "l15-w10",
+     "zh": "飞机",
+     "pinyin": "fēijī",
+     "vi": "máy bay",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "PHI CƠ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 0.0,
+      "end": 2.34,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w11",
+     "zh": "要",
+     "pinyin": "yào",
+     "vi": "cần; mất (thời gian)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "YÊU",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 2.78,
+      "end": 3.48,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w12",
+     "zh": "小时",
+     "pinyin": "xiǎoshí",
+     "vi": "giờ; tiếng đồng hồ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "TIỂU THỜI",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 4.56,
+      "end": 5.99,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w13",
+     "zh": "家人",
+     "pinyin": "jiārén",
+     "vi": "người nhà",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "GIA NHÂN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 7.36,
+      "end": 9.06,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w14",
+     "zh": "时间",
+     "pinyin": "shíjiān",
+     "vi": "thời gian",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "THỜI GIAN",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 9.98,
+      "end": 11.32,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w15",
+     "zh": "机场",
+     "pinyin": "jīchǎng",
+     "vi": "sân bay",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "CƠ TRƯỜNG",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 13.24,
+      "end": 14.91,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w16",
+     "zh": "接",
+     "pinyin": "jiē",
+     "vi": "đón; tiếp",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "TIẾP",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 16.98,
+      "end": 17.68,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w17",
+     "zh": "住",
+     "pinyin": "zhù",
+     "vi": "ở; trọ",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "TRÚ",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 19.22,
+      "end": 19.92,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w18",
+     "zh": "早",
+     "pinyin": "zǎo",
+     "vi": "sớm",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "TẢO",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 21.22,
+      "end": 21.92,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w19",
+     "zh": "那",
+     "pinyin": "nà",
+     "vi": "vậy thì (liên từ)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "NA",
+     "hanVietStatus": "verified-editorial",
+     "audio": {
+      "trackId": "trk-tb-l15-6",
+      "start": 23.68,
+      "end": 24.46,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "l15-w20",
+     "zh": "大兴机场",
+     "pinyin": "Dàxīng Jīchǎng",
+     "vi": "sân bay Đại Hưng (ở Bắc Kinh)",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "生词"
+      }
+     ],
+     "hanViet": "ĐẠI HƯNG CƠ TRƯỜNG",
+     "hanVietStatus": "verified-editorial",
+     "audio": null,
+     "dialogueGroup": 3,
+     "isProperName": true,
+     "properKind": "Tên riêng"
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk1-l15-coordinate",
+     "kind": "grammar",
+     "kindLabel": "Điểm kiến thức chính",
+     "title": "并列复句 “……，还/也……” — câu ghép song song",
+     "explanationVi": "Câu ghép song song gồm hai hay nhiều vế có quan hệ logic và cấu trúc tương tự nhau. Mẫu của bài này là “…，还/也…”: vế hai thêm một ý song song với vế một — thêm một điều nữa cùng chiều (还) hoặc một trường hợp tương tự cũng đúng (也). Sách in phần này ở Tiểu Ngữ giảng đường, Textbook tr.114, ngay sau Hội thoại 1.",
+     "pattern": "Vế 1，还/也 + vế 2",
+     "useWhenVi": "Dùng khi muốn nói thêm một điều song song: thích cái này cũng thích cái kia, món ăn ngon mà còn đẹp, đi Tây An rồi còn muốn đi Bắc Kinh.",
+     "positionVi": "还/也 đứng ở đầu vế thứ hai, ngay trước vị ngữ của vế đó. Hai vế thường có cấu trúc giống nhau và thường cùng một chủ ngữ.",
+     "examples": [
+      {
+       "zh": "我喜欢这个，也喜欢那个。",
+       "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+       "noteVi": "Câu luyện đọc 1 in ở Textbook tr.114 (cũng là lời thoại của Bạch Gia Nguyệt ở Hội thoại 1): hai vế dùng chung động từ 喜欢."
+      },
+      {
+       "zh": "王老师是北京人，李文也是北京人。",
+       "pinyin": "Wáng lǎoshī shì Běijīng rén, Lǐ Wén yě shì Běijīng rén.",
+       "noteVi": "Câu luyện đọc 2 in ở Textbook tr.114: chủ ngữ đổi người nhưng vị ngữ “是北京人” giữ nguyên, 也 đứng trước 是."
+      },
+      {
+       "zh": "我喜欢喝中国茶，还喜欢吃中国菜。",
+       "pinyin": "Wǒ xǐhuan hē Zhōngguó chá, hái xǐhuan chī Zhōngguó cài.",
+       "noteVi": "Câu luyện đọc 3 in ở Textbook tr.114: 还 nối thêm một sở thích nữa."
+      },
+      {
+       "zh": "这些菜都好吃，还很好看。",
+       "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+       "noteVi": "Lời thoại Hội thoại 1: món ăn ngon, còn thêm một ý song song là đẹp."
+      },
+      {
+       "zh": "我爱吃中国菜，也喜欢做。",
+       "pinyin": "Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò.",
+       "noteVi": "Lời thoại Hội thoại 1: thích ăn món Trung Quốc, cũng thích nấu."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn từ đúng để hoàn thành câu theo mẫu câu ghép song song:",
+      "stemZh": "王老师是北京人，李文（ ）北京人。",
+      "options": [
+       {
+        "zh": "也是",
+        "vi": "cũng là"
+       },
+       {
+        "zh": "还",
+        "vi": "còn (đứng một mình)"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Vế hai cần “也 + 是”: 李文也是北京人 — cấu trúc hai vế tương tự nhau. “还” đứng một mình không thành vị ngữ hoàn chỉnh ở câu này."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 129,
+       "printedPage": 114,
+       "section": "小语讲堂 1 · 并列复句"
+      }
+     ],
+     "sentenceIds": [
+      "l15-s2",
+      "l15-s3",
+      "l15-s4"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk1-l15-characters-8",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "汉字书写（八）: sáu bộ thủ thường gặp",
+     "explanationVi": "Workbook Bài 15 （汉字书写（八）, tr.112–113) luyện sáu bộ thủ hay gặp trong chữ hợp thể: bộ Khẩu 口 (trong 喝）, bộ Nhân đứng 亻 (trong 你）, bộ Ngôn 讠 (trong 认）, bộ Nhật 日 (trong 明）, bộ Mộc 木 (trong 杯） và bộ Nữ 女 (trong 姐）. Phần chép từ của sách gồm 喝茶、你们、认识、明天、杯子、姐姐 — đây là bài luyện viết tay; app chỉ giới thiệu để nhận diện bộ thủ, không chấm nét viết.",
+     "pattern": "口 + 曷 = 喝 · 亻 + 尔 = 你 · 讠 + 人 = 认 · 日 + 月 = 明 · 木 + 不 = 杯 · 女 + 且 = 姐",
+     "examples": [
+      {
+       "zh": "喝",
+       "pinyin": "hē",
+       "noteVi": "Chữ ví dụ cho bộ Khẩu 口 ở Workbook tr.112: uống (trong 喝茶)."
+      },
+      {
+       "zh": "你",
+       "pinyin": "nǐ",
+       "noteVi": "Chữ ví dụ cho bộ Nhân đứng 亻 ở Workbook tr.112: bạn (trong 你们)."
+      },
+      {
+       "zh": "认",
+       "pinyin": "rèn",
+       "noteVi": "Chữ ví dụ cho bộ Ngôn 讠 ở Workbook tr.112: nhận (trong 认识)."
+      },
+      {
+       "zh": "明",
+       "pinyin": "míng",
+       "noteVi": "Chữ ví dụ cho bộ Nhật 日 ở Workbook tr.112: sáng (trong 明天)."
+      },
+      {
+       "zh": "杯",
+       "pinyin": "bēi",
+       "noteVi": "Chữ ví dụ cho bộ Mộc 木 ở Workbook tr.112: cốc (trong 杯子)."
+      },
+      {
+       "zh": "姐",
+       "pinyin": "jiě",
+       "noteVi": "Chữ ví dụ cho bộ Nữ 女 ở Workbook tr.112: chị (trong 姐姐)."
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 119,
+       "printedPage": 112,
+       "section": "汉字书写（八）"
+      },
+      {
+       "sourceId": "src-hsk1-workbook-pdf",
+       "pdfPage": 120,
+       "printedPage": 113,
+       "section": "汉字书写（八）· 抄写字词"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "l15-reader",
+    "titleVi": "Nghe & đọc Bài 15",
+    "headingVi": "Ba hội thoại: ăn món Trung Quốc ở nhà Lý Văn, bàn kế hoạch đi nghỉ và hẹn gặp ở sân bay Đại Hưng",
+    "noteVi": "Nghe từng hội thoại bằng audio gốc của sách. Câu hỏi sách in ngay tại mỗi hội thoại nằm ngay dưới hội thoại đó: nghe xong thì trả lời tại chỗ, điểm tính chung với bộ Luyện tập.",
+    "sentences": [
+     {
+      "id": "l15-s1",
+      "speaker": "Lý Văn",
+      "zh": "你们爱吃哪个菜？",
+      "pinyin": "Nǐmen ài chī nǎge cài?",
+      "vi": "Các bạn thích ăn món nào?",
+      "passageId": "l15-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-1",
+       "start": 0.0,
+       "end": 1.72,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s2",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我喜欢这个，也喜欢那个。",
+      "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+      "vi": "Tôi thích cái này, cũng thích cái kia.",
+      "passageId": "l15-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-1",
+       "start": 2.6,
+       "end": 5.56,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s3",
+      "speaker": "Trần Thiên Trung",
+      "zh": "这些菜都好吃，还很好看。",
+      "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+      "vi": "Những món này đều ngon, còn rất đẹp nữa.",
+      "passageId": "l15-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-1",
+       "start": 5.56,
+       "end": 9.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s4",
+      "speaker": "Lý Văn",
+      "zh": "我爱吃中国菜，也喜欢做。大家多吃点儿。",
+      "pinyin": "Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
+      "vi": "Tôi thích ăn món Trung Quốc, cũng thích nấu. Mọi người ăn nhiều một chút nhé.",
+      "passageId": "l15-dialogue-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-1",
+       "start": 10.42,
+       "end": 15.06,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s5",
+      "speaker": "Lý Văn",
+      "zh": "你们都想去哪儿？",
+      "pinyin": "Nǐmen dōu xiǎng qù nǎr?",
+      "vi": "Các bạn đều muốn đi đâu?",
+      "passageId": "l15-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-3",
+       "start": 0.05,
+       "end": 2.77,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s6",
+      "speaker": "An Ni",
+      "zh": "去年我和男朋友去了西安，今年我想去北京。",
+      "pinyin": "Qùnián wǒ hé nánpéngyou qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng.",
+      "vi": "Năm ngoái tôi và bạn trai đã đi Tây An, năm nay tôi muốn đi Bắc Kinh.",
+      "passageId": "l15-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-3",
+       "start": 3.09,
+       "end": 7.61,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s7",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "前几年我去了西安，非常好玩儿。今年我也想去北京。",
+      "pinyin": "Qián jǐ nián wǒ qùle Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng.",
+      "vi": "Mấy năm trước tôi đã đi Tây An, rất là thú vị. Năm nay tôi cũng muốn đi Bắc Kinh.",
+      "passageId": "l15-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-3",
+       "start": 8.27,
+       "end": 14.89,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s8",
+      "speaker": "Lý Văn",
+      "zh": "我和王老师都是北京人，北京非常漂亮。",
+      "pinyin": "Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
+      "vi": "Tôi và cô Vương đều là người Bắc Kinh, Bắc Kinh rất đẹp.",
+      "passageId": "l15-dialogue-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-3",
+       "start": 15.53,
+       "end": 20.15,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s9",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "你们的飞机到北京要几个小时？",
+      "pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí?",
+      "vi": "Máy bay của các em đến Bắc Kinh mất mấy giờ?",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 0.18,
+       "end": 3.46,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s10",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "九个小时。",
+      "pinyin": "Jiǔ gè xiǎoshí.",
+      "vi": "Chín giờ ạ.",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 4.84,
+       "end": 6.42,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s11",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "我家人都在北京，星期天我姐姐也有时间，她可以去机场接你们，你们也可以住我家。",
+      "pinyin": "Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen, nǐmen yě kěyǐ zhù wǒ jiā.",
+      "vi": "Người nhà cô đều ở Bắc Kinh, chủ nhật chị cô cũng có thời gian, chị có thể ra sân bay đón các em, các em cũng có thể ở nhà cô.",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 8.58,
+       "end": 17.94,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s12",
+      "speaker": "An Ni",
+      "zh": "我们星期日早上八点到大兴机场，早不早？",
+      "pinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo?",
+      "vi": "Sáng chủ nhật chúng em đến sân bay Đại Hưng lúc tám giờ, có sớm không ạ?",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 19.1,
+       "end": 23.32,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s13",
+      "speaker": "Vương Nhất Phi (cô Vương)",
+      "zh": "不早。",
+      "pinyin": "Bù zǎo.",
+      "vi": "Không sớm.",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 24.01,
+       "end": 24.75,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "l15-s14",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "谢谢老师！那我们和您姐姐在大兴机场见！",
+      "pinyin": "Xièxie lǎoshī! Nà wǒmen hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+      "vi": "Cảm ơn cô! Vậy chúng em và chị của cô hẹn gặp nhau ở sân bay Đại Hưng nhé!",
+      "passageId": "l15-dialogue-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l15-5",
+       "start": 25.7,
+       "end": 30.88,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb-l15-1",
+      "label": "Track 15-1 · Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-1.mp3",
+      "durationSec": 15.958,
+      "bookRef": "Textbook track 15-1",
+      "segments": [
+       {
+        "sentenceId": "l15-s1",
+        "start": 0.0,
+        "end": 1.72,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s2",
+        "start": 2.6,
+        "end": 5.56,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s3",
+        "start": 5.56,
+        "end": 9.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s4",
+        "start": 10.42,
+        "end": 15.06,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l15-2",
+      "label": "Track 15-2 · Từ mới Hội thoại 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-2.mp3",
+      "durationSec": 5.299,
+      "bookRef": "Textbook track 15-2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "生词 15-2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l15-3",
+      "label": "Track 15-3 · Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-3.mp3",
+      "durationSec": 20.936,
+      "bookRef": "Textbook track 15-3",
+      "segments": [
+       {
+        "sentenceId": "l15-s5",
+        "start": 0.05,
+        "end": 2.77,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s6",
+        "start": 3.09,
+        "end": 7.61,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s7",
+        "start": 8.27,
+        "end": 14.89,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s8",
+        "start": 15.53,
+        "end": 20.15,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l15-4",
+      "label": "Track 15-4 · Từ mới Hội thoại 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-4.mp3",
+      "durationSec": 18.747,
+      "bookRef": "Textbook track 15-4",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "生词 15-4"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l15-5",
+      "label": "Track 15-5 · Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-5.mp3",
+      "durationSec": 31.804,
+      "bookRef": "Textbook track 15-5",
+      "segments": [
+       {
+        "sentenceId": "l15-s9",
+        "start": 0.18,
+        "end": 3.46,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s10",
+        "start": 4.84,
+        "end": 6.42,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s11",
+        "start": 8.58,
+        "end": 17.94,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s12",
+        "start": 19.1,
+        "end": 23.32,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s13",
+        "start": 24.01,
+        "end": 24.75,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "l15-s14",
+        "start": 25.7,
+        "end": 30.88,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb-l15-6",
+      "label": "Track 15-6 · Từ mới Hội thoại 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-textbook/lesson-15/15-6.mp3",
+      "durationSec": 30.788,
+      "bookRef": "Textbook track 15-6",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "生词 15-6"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb-l15-1",
+      "label": "Track WB 15-1 · Phát âm và Hán tự (Workbook)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-1-workbook/lesson-15/15-1.mp3",
+      "durationSec": 171.082,
+      "bookRef": "Workbook track 15-1",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track bản in. Chưa kiểm chứng bằng nghe.",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 · 汉字"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-03 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "l15-dialogue-1",
+      "title": "Hội thoại 1 · Thưởng thức món Trung Quốc ở nhà Lý Văn",
+      "context": "Tại nhà Lý Văn, anh mời Trần Thiên Trung, Bạch Gia Nguyệt và các bạn đến nếm món Trung Quốc (Textbook tr.113).",
+      "audioTrackId": "trk-tb-l15-1",
+      "sentenceIds": [
+       "l15-s1",
+       "l15-s2",
+       "l15-s3",
+       "l15-s4"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 128,
+        "printedPage": 113,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb15-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 113, track 15-1): Lý Văn hỏi mọi người thích ăn món nào?",
+        "promptZh": "李文问大家（ ）吃哪个菜。",
+        "promptPinyin": "Lǐ Wén wèn dàjiā ( ) chī nǎge cài.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "好",
+          "pinyin": "hǎo",
+          "vi": "ngon; tốt"
+         },
+         {
+          "id": "2",
+          "zh": "爱",
+          "pinyin": "ài",
+          "vi": "thích"
+         },
+         {
+          "id": "3",
+          "zh": "不爱",
+          "pinyin": "bú ài",
+          "vi": "không thích"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu đầu của Hội thoại 1 in ở Textbook tr.113 là “你们爱吃哪个菜？” — động từ cần điền là 爱.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 128,
+          "printedPage": 113,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-1",
+         "start": 0.0,
+         "end": 1.72,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb15-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 1 (Textbook trang 113, track 15-1): Lý Văn nói mọi người hãy ăn thế nào?",
+        "promptZh": "李文说：“大家（ ）。”",
+        "promptPinyin": "Lǐ Wén shuō: “Dàjiā ( ).”",
+        "options": [
+         {
+          "id": "1",
+          "zh": "吃点儿",
+          "pinyin": "chī diǎnr",
+          "vi": "ăn một chút"
+         },
+         {
+          "id": "2",
+          "zh": "少吃点儿",
+          "pinyin": "shǎo chī diǎnr",
+          "vi": "ăn ít một chút"
+         },
+         {
+          "id": "3",
+          "zh": "多吃点儿",
+          "pinyin": "duō chī diǎnr",
+          "vi": "ăn nhiều một chút"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu cuối của Hội thoại 1 in ở Textbook tr.113 kết bằng “大家多吃点儿” — Lý Văn mời mọi người ăn nhiều một chút (văn hoá mời ăn của người Trung Quốc, xem mẹo của Tiểu Ngữ cùng trang).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 128,
+          "printedPage": 113,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-1",
+         "start": 10.42,
+         "end": 15.06,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l15-dialogue-2",
+      "title": "Hội thoại 2 · Bàn kế hoạch đi nghỉ",
+      "context": "Vẫn ở nhà Lý Văn, mọi người vừa ăn vừa bàn kế hoạch kỳ nghỉ (Textbook tr.114–115).",
+      "audioTrackId": "trk-tb-l15-3",
+      "sentenceIds": [
+       "l15-s5",
+       "l15-s6",
+       "l15-s7",
+       "l15-s8"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 130,
+        "printedPage": 115,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb15-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 114, track 15-3): năm ngoái An Ni và bạn trai đã đi đâu?",
+        "promptZh": "安妮和她男朋友去年去了（ ）。",
+        "promptPinyin": "Ānnī hé tā nánpéngyou qùnián qùle ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "西安",
+          "pinyin": "Xī'ān",
+          "vi": "Tây An"
+         },
+         {
+          "id": "2",
+          "zh": "北京",
+          "pinyin": "Běijīng",
+          "vi": "Bắc Kinh"
+         },
+         {
+          "id": "3",
+          "zh": "学校",
+          "pinyin": "xuéxiào",
+          "vi": "trường học"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "An Ni nói ở Hội thoại 2 (Textbook tr.115): “去年我和男朋友去了西安” — năm ngoái đi Tây An; Bắc Kinh là kế hoạch năm nay.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 129,
+          "printedPage": 114,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-3",
+         "start": 3.09,
+         "end": 7.61,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb15-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 2 (Textbook trang 114, track 15-3): cô Vương và Lý Văn đều là người ở đâu?",
+        "promptZh": "王老师和李文都是（ ）。",
+        "promptPinyin": "Wáng lǎoshī hé Lǐ Wén dōu shì ( ).",
+        "options": [
+         {
+          "id": "1",
+          "zh": "西安人",
+          "pinyin": "Xī'ān rén",
+          "vi": "người Tây An"
+         },
+         {
+          "id": "2",
+          "zh": "北京人",
+          "pinyin": "Běijīng rén",
+          "vi": "người Bắc Kinh"
+         },
+         {
+          "id": "3",
+          "zh": "哪里人",
+          "pinyin": "nǎlǐ rén",
+          "vi": "người ở đâu"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu cuối của Hội thoại 2 (Textbook tr.115): “我和王老师都是北京人” — cả hai đều là người Bắc Kinh.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 129,
+          "printedPage": 114,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-3",
+         "start": 15.53,
+         "end": 20.15,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "l15-dialogue-3",
+      "title": "Hội thoại 3 · Hẹn gặp ở sân bay Đại Hưng",
+      "context": "Ngoài lớp học, Bạch Gia Nguyệt, An Ni và cô Vương Nhất Phi bàn chuyện đi Bắc Kinh (Textbook tr.116–117).",
+      "audioTrackId": "trk-tb-l15-5",
+      "sentenceIds": [
+       "l15-s9",
+       "l15-s10",
+       "l15-s11",
+       "l15-s12",
+       "l15-s13",
+       "l15-s14"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 132,
+        "printedPage": 117,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb15-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 116, track 15-5): Bạch Gia Nguyệt và An Ni đi Bắc Kinh bằng gì?",
+        "promptZh": "白家月和安妮坐（ ）去北京。",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī zuò ( ) qù Běijīng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "火车",
+          "pinyin": "huǒchē",
+          "vi": "tàu hoả"
+         },
+         {
+          "id": "2",
+          "zh": "飞机",
+          "pinyin": "fēijī",
+          "vi": "máy bay"
+         },
+         {
+          "id": "3",
+          "zh": "出租车",
+          "pinyin": "chūzūchē",
+          "vi": "taxi"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Cô Vương hỏi ngay đầu Hội thoại 3 (Textbook tr.117): “你们的飞机到北京要几个小时？” — hai bạn đi bằng máy bay.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 131,
+          "printedPage": 116,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-5",
+         "start": 0.18,
+         "end": 3.46,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb15-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Hội thoại 3 (Textbook trang 116, track 15-5): ai của cô Vương đều ở Bắc Kinh?",
+        "promptZh": "王老师的（ ）都在北京。",
+        "promptPinyin": "Wáng lǎoshī de ( ) dōu zài Běijīng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "家人",
+          "pinyin": "jiārén",
+          "vi": "người nhà"
+         },
+         {
+          "id": "2",
+          "zh": "朋友",
+          "pinyin": "péngyou",
+          "vi": "bạn bè"
+         },
+         {
+          "id": "3",
+          "zh": "学生",
+          "pinyin": "xuésheng",
+          "vi": "học sinh"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Cô Vương nói ở Hội thoại 3 (Textbook tr.117): “我家人都在北京” — người nhà cô đều ở Bắc Kinh.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk1-textbook-pdf",
+          "pdfPage": 131,
+          "printedPage": 116,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb-l15-5",
+         "start": 8.58,
+         "end": 17.94,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "set-tb-l15-text-v1",
+    "titleVi": "Bài tập chính của Bài 15",
+    "noteVi": "Gồm bốn nhóm theo sách: 6 câu khởi động nối từ – hình (Textbook tr.112); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.118, ngân hàng từ in sẵn; câu (4) của sách có hai chỗ trống nên tách thành hai câu, mỗi từ ngân hàng dùng đúng một lần); 6 câu nghe – nối âm tiết (Workbook tr.111, track 15-1); 6 câu nghe – phân biệt ngữ điệu bốn loại câu trần thuật/nghi vấn/cảm thán/cầu khiến (Workbook tr.111–112, track 15-1). Sáu câu hỏi nghe hiểu in tại các hội thoại nằm ở mục Nghe & đọc, ngay dưới từng hội thoại, theo đúng vị trí trong sách. Điểm lần đầu của bộ này được tính riêng.",
+    "items": [
+     {
+      "id": "wb15-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động A (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "北京",
+      "promptPinyin": "Běijīng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "wb15-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động B (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "好玩儿",
+      "promptPinyin": "hǎowánr",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "wb15-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động C (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "飞机",
+      "promptPinyin": "fēijī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "wb15-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động D (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "早饭",
+      "promptPinyin": "zǎofàn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "wb15-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động E (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "早",
+      "promptPinyin": "zǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "wb15-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Câu khởi động F (Textbook trang 112): chọn hình đúng cho từ được đánh dấu.",
+      "promptZh": "男朋友",
+      "promptPinyin": "nánpéngyou",
+      "options": [
+       {
+        "id": "1",
+        "zh": "北京",
+        "pinyin": "Běijīng",
+        "vi": "Bắc Kinh",
+        "image": "assets/lesson-15/warm-temple.webp",
+        "imageAlt": "Tranh vẽ: Thiên Đàn ở Bắc Kinh với mái xanh ba tầng trên nền trời chiều"
+       },
+       {
+        "id": "2",
+        "zh": "好玩儿",
+        "pinyin": "hǎowánr",
+        "vi": "thú vị; vui",
+        "image": "assets/lesson-15/warm-playground.webp",
+        "imageAlt": "Tranh vẽ: các bạn nhỏ chơi cầu trượt đỏ ở sân chơi có cây và hàng rào"
+       },
+       {
+        "id": "3",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay",
+        "image": "assets/lesson-15/warm-plane.webp",
+        "imageAlt": "Tranh vẽ: máy bay trắng bay trên bầu trời xanh có mây"
+       },
+       {
+        "id": "4",
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "image": "assets/lesson-15/warm-breakfast.webp",
+        "imageAlt": "Tranh vẽ: khay bữa sáng có ly sữa, bánh bao, quả lê, quả táo và trứng luộc cạnh cửa sổ"
+       },
+       {
+        "id": "5",
+        "zh": "早",
+        "pinyin": "zǎo",
+        "vi": "sớm",
+        "image": "assets/lesson-15/warm-sunrise.webp",
+        "imageAlt": "Tranh vẽ: mặt trời mọc trên cánh đồng xanh, tia nắng toả ra trên bầu trời hồng cam"
+       },
+       {
+        "id": "6",
+        "zh": "男朋友",
+        "pinyin": "nánpéngyou",
+        "vi": "bạn trai",
+        "image": "assets/lesson-15/warm-couple.webp",
+        "imageAlt": "Tranh vẽ: một đôi bạn trẻ ngồi trên bãi cỏ rải lá thu trong công viên"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Đối chiếu trực quan với sáu ảnh ở phần Khởi động, Textbook tr.112: ảnh sân chơi = 好玩儿, Thiên Đàn = 北京, máy bay = 飞机, khay ăn sáng = 早饭, mặt trời mọc = 早, đôi bạn trên cỏ = 男朋友. Tranh của app là tranh vẽ mới mô phỏng các ảnh đó.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 127,
+        "printedPage": 112,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb15-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook trang 118): chọn từ trong ngân hàng từ in sẵn （爱/时间/早不早/都/飞机) để điền vào chỗ trống — câu (1).",
+      "promptZh": "这本书有15课，我们（ ）学了。",
+      "promptPinyin": "Zhè běn shū yǒu shíwǔ kè, wǒmen ( ) xué le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "爱",
+        "pinyin": "ài",
+        "vi": "thích"
+       },
+       {
+        "id": "2",
+        "zh": "时间",
+        "pinyin": "shíjiān",
+        "vi": "thời gian"
+       },
+       {
+        "id": "3",
+        "zh": "早不早",
+        "pinyin": "zǎo bu zǎo",
+        "vi": "có sớm không"
+       },
+       {
+        "id": "4",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "5",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "“都学了” — cả 15 bài đều đã học; các từ còn lại không hợp nghĩa/cấu trúc.",
+      "grammarIds": [
+       "kp-hsk1-l14-dou"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 133,
+        "printedPage": 118,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb15-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook trang 118): chọn từ trong ngân hàng từ in sẵn （爱/时间/早不早/都/飞机) để điền vào chỗ trống — câu (2).",
+      "promptZh": "我的家人都（ ）喝茶。",
+      "promptPinyin": "Wǒ de jiārén dōu ( ) hē chá.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "爱",
+        "pinyin": "ài",
+        "vi": "thích"
+       },
+       {
+        "id": "2",
+        "zh": "时间",
+        "pinyin": "shíjiān",
+        "vi": "thời gian"
+       },
+       {
+        "id": "3",
+        "zh": "早不早",
+        "pinyin": "zǎo bu zǎo",
+        "vi": "có sớm không"
+       },
+       {
+        "id": "4",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "5",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần động từ trước 喝茶: “爱喝茶” — thích uống trà.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 133,
+        "printedPage": 118,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb15-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook trang 118): chọn từ trong ngân hàng từ in sẵn （爱/时间/早不早/都/飞机) để điền vào chỗ trống — câu (3), một đoạn hội thoại ngắn trong sách.",
+      "promptZh": "陈天中：我们明天晚上六点到，你觉得（ ）？李文：不早。",
+      "promptPinyin": "Chén Tiānzhōng: Wǒmen míngtiān wǎnshang liù diǎn dào, nǐ juéde ( )? Lǐ Wén: Bù zǎo.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "爱",
+        "pinyin": "ài",
+        "vi": "thích"
+       },
+       {
+        "id": "2",
+        "zh": "时间",
+        "pinyin": "shíjiān",
+        "vi": "thời gian"
+       },
+       {
+        "id": "3",
+        "zh": "早不早",
+        "pinyin": "zǎo bu zǎo",
+        "vi": "có sớm không"
+       },
+       {
+        "id": "4",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "5",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu trả lời in sẵn là “不早” nên câu hỏi phải là dạng chính–phản “早不早” (học ở Bài 11).",
+      "grammarIds": [
+       "kp-hsk1-l11-affirm-neg"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 133,
+        "printedPage": 118,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb15-fill-4a",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook trang 118): chọn từ trong ngân hàng từ in sẵn （爱/时间/早不早/都/飞机) để điền vào chỗ trống — câu (4), chỗ trống thứ nhất.",
+      "promptZh": "王一飞：她们想坐（ ）去北京，你们呢？",
+      "promptPinyin": "Wáng Yīfēi: Tāmen xiǎng zuò ( ) qù Běijīng, nǐmen ne?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "爱",
+        "pinyin": "ài",
+        "vi": "thích"
+       },
+       {
+        "id": "2",
+        "zh": "时间",
+        "pinyin": "shíjiān",
+        "vi": "thời gian"
+       },
+       {
+        "id": "3",
+        "zh": "早不早",
+        "pinyin": "zǎo bu zǎo",
+        "vi": "có sớm không"
+       },
+       {
+        "id": "4",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "5",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "“坐飞机去北京” — đi máy bay đến Bắc Kinh (đúng phương tiện ở Hội thoại 3).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 133,
+        "printedPage": 118,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb15-fill-4b",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook trang 118): chọn từ trong ngân hàng từ in sẵn （爱/时间/早不早/都/飞机) để điền vào chỗ trống — câu (4), chỗ trống thứ hai.",
+      "promptZh": "陈天中：我们没有（ ），不能出去玩。",
+      "promptPinyin": "Chén Tiānzhōng: Wǒmen méiyǒu ( ), bù néng chūqù wán.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "爱",
+        "pinyin": "ài",
+        "vi": "thích"
+       },
+       {
+        "id": "2",
+        "zh": "时间",
+        "pinyin": "shíjiān",
+        "vi": "thời gian"
+       },
+       {
+        "id": "3",
+        "zh": "早不早",
+        "pinyin": "zǎo bu zǎo",
+        "vi": "có sớm không"
+       },
+       {
+        "id": "4",
+        "zh": "都",
+        "pinyin": "dōu",
+        "vi": "đều"
+       },
+       {
+        "id": "5",
+        "zh": "飞机",
+        "pinyin": "fēijī",
+        "vi": "máy bay"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "“没有时间” — không có thời gian nên không đi chơi được.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-textbook-pdf",
+        "pdfPage": 133,
+        "printedPage": 118,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 1 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "nǐ hǎo",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "你好 trùng khớp âm tiết (1) “nǐ hǎo”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 2 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "méi kànjiàn",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "没看见 trùng khớp âm tiết (2) “méi kànjiàn”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 3 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "nǎxiē rén",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "哪些人 trùng khớp âm tiết (3) “nǎxiē rén”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 4 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "shuōhuà",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "说话 trùng khớp âm tiết (4) “shuōhuà”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 5 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "shénme shíhou",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "6",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "什么时候 trùng khớp âm tiết (5) “shénme shíhou”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-match-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – nối âm tiết với từ (Workbook trang 111, bài 1, track 15-1): nghe âm tiết được đọc rồi chọn từ tương ứng — âm tiết số 6 trong sách.",
+      "promptZh": "",
+      "promptPinyin": "zuò fēijī",
+      "options": [
+       {
+        "id": "1",
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào"
+       },
+       {
+        "id": "2",
+        "zh": "说话",
+        "pinyin": "shuōhuà",
+        "vi": "nói chuyện"
+       },
+       {
+        "id": "3",
+        "zh": "坐飞机",
+        "pinyin": "zuò fēijī",
+        "vi": "đi máy bay"
+       },
+       {
+        "id": "4",
+        "zh": "没看见",
+        "pinyin": "méi kànjiàn",
+        "vi": "không nhìn thấy"
+       },
+       {
+        "id": "5",
+        "zh": "哪些人",
+        "pinyin": "nǎxiē rén",
+        "vi": "những người nào"
+       },
+       {
+        "id": "6",
+        "zh": "什么时候",
+        "pinyin": "shénme shíhou",
+        "vi": "khi nào"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "坐飞机 trùng khớp âm tiết (6) “zuò fēijī”. Thứ tự âm tiết và cột từ đều chép theo bản in Workbook tr.111 (đây là phần luyện phát âm, Pinyin chính là nội dung cần phân biệt).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 118,
+        "printedPage": 111,
+        "section": "语音 1 · 听音节，匹配词语"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Nǐ shì xuéshēng ma” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Nǐ shì xuéshēng ma",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu có “吗” ở cuối là câu hỏi — sách in sẵn đáp án mẫu B（疑问句）cho câu này ở Workbook tr.112. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Wǒ ài chī shuǐguǒ” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Wǒ ài chī shuǐguǒ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu kể một sự việc, không có từ/cấu trúc hỏi, không cảm thán hay mệnh lệnh — câu trần thuật. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Zhè jiàn yīfu zhēn piàoliang” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Zhè jiàn yīfu zhēn piàoliang",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu khen ngợi có “真…漂亮” mang sắc thái cảm thán — câu cảm thán. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Nǐmen qù nǎlǐ” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Nǐmen qù nǎlǐ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu có từ hỏi “哪儿/哪里” là câu hỏi — câu nghi vấn. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Qǐng zuò” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Qǐng zuò",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "“请坐” là lời mời/yêu cầu lịch sự — câu cầu khiến. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     },
+     {
+      "id": "wb15-int-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nghe – phân biệt ngữ điệu câu (Workbook trang 111–112, bài 2, track 15-1): câu được đọc có Pinyin là “Yǔ dà ma” — đó là loại câu nào?",
+      "promptZh": "",
+      "promptPinyin": "Yǔ dà ma",
+      "options": [
+       {
+        "id": "1",
+        "zh": "陈述句",
+        "pinyin": "chénshùjù",
+        "vi": "câu trần thuật"
+       },
+       {
+        "id": "2",
+        "zh": "疑问句",
+        "pinyin": "yíwènjù",
+        "vi": "câu nghi vấn"
+       },
+       {
+        "id": "3",
+        "zh": "感叹句",
+        "pinyin": "gǎntànjù",
+        "vi": "câu cảm thán"
+       },
+       {
+        "id": "4",
+        "zh": "祈使句",
+        "pinyin": "qíshǐjù",
+        "vi": "câu cầu khiến"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Câu có “吗” ở cuối là câu hỏi — câu nghi vấn. Đáp án xác định duy nhất từ nội dung câu in (Workbook tr.112); chưa nghe kiểm chứng audio.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk1-workbook-pdf",
+        "pdfPage": 119,
+        "printedPage": 112,
+        "section": "语音 2 · 听辨句调"
+       }
+      ]
+     }
+    ],
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 127,
+      "printedPage": 112,
+      "section": "热身"
+     },
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 133,
+      "printedPage": 118,
+      "section": "综合练习"
+     },
+     {
+      "sourceId": "src-hsk1-workbook-pdf",
+      "pdfPage": 118,
+      "printedPage": 111,
+      "section": "语音"
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-l15-01",
+     "kind": "speaking",
+     "titleVi": "Dùng hình để nói (Textbook trang 118) — tự luyện, không chấm tự động",
+     "instructionVi": "Nhìn từng hình (tranh vẽ lại theo ảnh ở Textbook trang 118), dùng từ mới và điểm ngữ pháp của bài để hoàn thành khung câu in trong sách, rồi nói thành tiếng. Có thể có nhiều cách diễn đạt; app lưu nháp và tự đánh giá, không chấm tự động.",
+     "prompts": [
+      "我爱吃面包，________。",
+      "去年我去________。",
+      "王一飞的姐姐________。",
+      "王老师是________人，她________。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/lesson-15/describe-buns.webp",
+       "alt": "Tranh vẽ: xửng tre đựng ba chiếc bánh bao trắng, nắp xửng mở hé, đũa đặt bên cạnh",
+       "captionVi": "Hình 1 — xửng bánh bao. Tranh vẽ lại theo ảnh Textbook tr.118",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 133,
+         "printedPage": 118,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-15/describe-wall.webp",
+       "alt": "Tranh vẽ: Vạn Lý Trường Thành uốn lượn trên các dãy núi xanh lúc hoàng hôn",
+       "captionVi": "Hình 2 — Vạn Lý Trường Thành. Tranh vẽ lại theo ảnh Textbook tr.118",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 133,
+         "printedPage": 118,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-15/describe-wave.webp",
+       "alt": "Tranh vẽ: một cô gái tóc dài vẫy tay chào trước cửa kính của sân bay",
+       "captionVi": "Hình 3 — chị của Vương Nhất Phi vẫy tay ở sân bay. Tranh vẽ lại theo ảnh Textbook tr.118",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 133,
+         "printedPage": 118,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/lesson-15/describe-portrait.webp",
+       "alt": "Tranh vẽ: chân dung một cô giáo trẻ tóc dài mặc áo trắng",
+       "captionVi": "Hình 4 — chân dung cô Vương. Tranh vẽ lại theo ảnh Textbook tr.118",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk1-textbook-pdf",
+         "pdfPage": 133,
+         "printedPage": 118,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết câu hoàn chỉnh của bạn cho từng hình vào đây, rồi đọc to.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 133,
+       "printedPage": 118,
+       "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+      }
+     ],
+     "answerStatus": "unverified"
+    },
+    {
+     "id": "st-l15-02",
+     "kind": "speaking",
+     "titleVi": "Trả lời câu hỏi theo bài khoá (Textbook trang 113, 115, 117) — tự luyện, không chấm tự động",
+     "instructionVi": "Sách in hai câu hỏi sau mỗi hội thoại. Trả lời thành tiếng bằng câu đầy đủ; đáp án gợi ý dưới đây trích từ chính lời thoại, chỉ để tự đối chiếu sau khi đã trả lời.",
+     "prompts": [
+      "白家月爱吃哪个菜？",
+      "李文做饭好吃不好吃？",
+      "安妮今年想去哪儿？",
+      "前几年白家月去了哪儿？",
+      "大兴机场在哪儿？",
+      "王老师的姐姐可以去接白家月和安妮吗？"
+     ],
+     "draftPromptVi": "Viết câu trả lời của bạn vào đây trước khi xem gợi ý.",
+     "practiceEvidence": "Đáp án gợi ý: （她）喜欢这个，也喜欢那个。/ 好吃，这些菜都好吃。/ 她想去北京。/ 她去了西安。/ 大兴机场在北京。/ 可以，星期天她有时间，可以去机场接她们。",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 128,
+       "printedPage": 113,
+       "section": "课文 1 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 130,
+       "printedPage": 115,
+       "section": "课文 2 · 根据课文内容回答问题"
+      },
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 132,
+       "printedPage": 117,
+       "section": "课文 3 · 根据课文内容回答问题"
+      }
+     ],
+     "answerStatus": "unverified"
+    },
+    {
+     "id": "st-l15-03",
+     "kind": "speaking",
+     "titleVi": "Đóng vai: mời bạn về nhà nấu món Trung Quốc (Textbook trang 119) — tự luyện, không chấm tự động",
+     "instructionVi": "Hoạt động lớp học trong sách: ba người đóng vai Lý Văn, Trần Thiên Trung và Bạch Gia Nguyệt — Lý Văn mời hai bạn đến nhà cùng nấu món Trung Quốc. Trong app, đọc to đoạn mẫu của Tiểu Ngữ in ở Textbook tr.119, đổi vai cho nhau rồi tự thêm lời mời và lời đáp của mình.",
+     "prompts": [
+      "李文：天中、家月，你们星期六有时间吗？",
+      "陈天中：我有时间。",
+      "白家月：我也有时间。",
+      "李文：太好了！你们都来我家吧，我们做中国菜吃，怎么样？……"
+     ],
+     "draftPromptVi": "Viết tiếp đoạn hội thoại đóng vai của bạn vào đây.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk1-textbook-pdf",
+       "pdfPage": 134,
+       "printedPage": 119,
+       "section": "课堂活动 · 角色扮演"
+      }
+     ],
+     "answerStatus": "unverified"
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện theo sách: nói theo hình (tr.118), trả lời câu hỏi của cả ba hội thoại và đóng vai mời bạn về nhà nấu món Trung Quốc (tr.119).",
+   "selfCheckListenVi": "Nghe lại track của từng hội thoại ở mục Nghe & đọc trước khi trả lời câu hỏi tự luyện.",
+   "apply": {
+    "titleVi": "Nói về kế hoạch đi Bắc Kinh và hẹn gặp ở sân bay",
+    "instructionVi": "Dùng từ và mẫu câu của Bài 15 để nói về một chuyến đi và một cuộc hẹn đón ở sân bay. Làm lần lượt hai nhiệm vụ: đọc mẫu, rồi tự nói phần của mình.",
+    "audioTrackId": "trk-tb-l15-3",
+    "noteVi": "Nhiệm vụ 1 dựa trên kế hoạch đi Bắc Kinh ở Hội thoại 2; nhiệm vụ 2 dựa trên cuộc hẹn ở sân bay Đại Hưng ở Hội thoại 3. Không có đánh giá tự động hay AI chấm nói trong phạm vi bài này.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 130,
+      "printedPage": 115,
+      "section": "课文 2"
+     },
+     {
+      "sourceId": "src-hsk1-textbook-pdf",
+      "pdfPage": 132,
+      "printedPage": 117,
+      "section": "课文 3"
+     }
+    ],
+    "samplePassageIds": [
+     "l15-dialogue-2",
+     "l15-dialogue-3"
+    ],
+    "tasks": [
+     {
+      "id": "speak-l15-plan",
+      "kind": "speaking",
+      "titleVi": "Kể kế hoạch du lịch của bạn",
+      "promptVi": "Nói 3–4 câu: năm ngoái bạn đã đi đâu, năm nay muốn đi đâu, nơi đó thế nào. Mẫu:",
+      "sampleZh": "去年我去了西安，今年我想去北京。北京非常漂亮。",
+      "samplePinyin": "Qùnián wǒ qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng. Běijīng fēicháng piàoliang.",
+      "sampleVi": "Năm ngoái tôi đã đi Tây An, năm nay tôi muốn đi Bắc Kinh. Bắc Kinh rất đẹp."
+     },
+     {
+      "id": "speak-l15-meet",
+      "kind": "speaking",
+      "titleVi": "Hẹn đón nhau ở sân bay",
+      "promptVi": "Nói một cuộc hẹn ngắn: máy bay đến lúc mấy giờ, ai ra sân bay đón, hẹn gặp ở đâu. Mẫu:",
+      "sampleZh": "我们星期日早上八点到大兴机场。那我们在大兴机场见！",
+      "samplePinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng. Nà wǒmen zài Dàxīng Jīchǎng jiàn!",
+      "sampleVi": "Sáng chủ nhật chúng tôi đến sân bay Đại Hưng lúc tám giờ. Vậy hẹn gặp nhau ở sân bay Đại Hưng nhé!"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepGroups": [
+    {
+     "id": "l15-g1",
+     "dialogueId": "l15-dialogue-1",
+     "titleVi": "Nhóm 1 — Từ mới trong bài",
+     "trackId": "trk-tb-l15-2",
+     "trackLabelVi": "Track 15-2"
+    },
+    {
+     "id": "l15-g2",
+     "dialogueId": "l15-dialogue-2",
+     "titleVi": "Nhóm 2 — Từ mới trong bài",
+     "trackId": "trk-tb-l15-4",
+     "trackLabelVi": "Track 15-4"
+    },
+    {
+     "id": "l15-g3",
+     "dialogueId": "l15-dialogue-3",
+     "titleVi": "Nhóm 3 — Từ mới trong bài",
+     "trackId": "trk-tb-l15-6",
+     "trackLabelVi": "Track 15-6"
+    }
+   ],
+   "prepSummaryVi": "17 từ mới và 3 tên riêng （西安、北京、大兴机场） trong ba hội thoại: món ăn và lời mời ăn, kế hoạch du lịch, hẹn gặp ở sân bay.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem mục tiêu và bối cảnh sân bay Đại Hưng của bài cuối cấp 1.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết",
+     "descVi": "Học 17 từ mới và 3 tên riêng theo ba hội thoại.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "Câu ghép song song với 还/也 và Hán tự (8): sáu bộ thủ thường gặp.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe ba hội thoại và trả lời câu hỏi của sách ngay tại từng hội thoại.",
+     "sectionId": "reader",
+     "dialogueId": "l15-dialogue-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Làm 23 câu: nối hình, điền từ, nối âm tiết và phân biệt ngữ điệu bốn loại câu.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói",
+     "descVi": "Kể kế hoạch du lịch và hẹn đón nhau ở sân bay bằng mẫu câu của bài.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Câu ghép song song “…，还/也…”",
+     "bodyVi": "Hai vế song song: vế hai bắt đầu bằng 还 (thêm một ý nữa) hoặc 也 (trường hợp tương tự cũng vậy).",
+     "exampleZh": "我喜欢这个，也喜欢那个。",
+     "examplePinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+     "exampleVi": "Tôi thích cái này, cũng thích cái kia."
+    },
+    {
+     "titleVi": "Nói về món ăn và lời mời ăn",
+     "bodyVi": "Hỏi thích ăn món nào bằng “爱吃哪个菜”, nhận xét món ăn bằng “好吃/好看”, và mời khách “多吃点儿” theo văn hoá tiếp khách của người Trung Quốc.",
+     "exampleZh": "这些菜都好吃，还很好看。",
+     "examplePinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+     "exampleVi": "Những món này đều ngon, còn rất đẹp nữa."
+    },
+    {
+     "titleVi": "Kế hoạch du lịch: năm ngoái – năm nay",
+     "bodyVi": "Dùng 去年/今年 với 去了/想去 để đối chiếu chuyến đi đã qua và kế hoạch sắp tới, kèm tên riêng 西安、北京.",
+     "exampleZh": "去年我和男朋友去了西安，今年我想去北京。",
+     "examplePinyin": "Qùnián wǒ hé nánpéngyou qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng.",
+     "exampleVi": "Năm ngoái tôi và bạn trai đã đi Tây An, năm nay tôi muốn đi Bắc Kinh."
+    },
+    {
+     "titleVi": "Hẹn gặp ở sân bay",
+     "bodyVi": "Hỏi chuyến bay mất mấy giờ bằng “要几个小时”, hẹn giờ đến và chốt cuộc hẹn bằng “…见！”; liên từ 那 mở đầu câu kết luận “vậy thì…”.",
+     "exampleZh": "那我们和您姐姐在大兴机场见！",
+     "examplePinyin": "Nà wǒmen hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+     "exampleVi": "Vậy chúng em và chị của cô hẹn gặp ở sân bay Đại Hưng nhé!"
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ hoặc cụm từ trong câu hội thoại, ví dụ kiến thức và tổng kết để xem nhanh Pinyin, nghĩa Hán–Việt và nghĩa tiếng Việt. Từ điển tra cứu của Bài 15 gồm từ mới của bài và các từ phụ trợ dưới đây.",
+    "extras": [
+     {
+      "zh": "这些",
+      "pinyin": "zhèxiē",
+      "hanViet": "GIÁ TA",
+      "vi": "những cái này"
+     },
+     {
+      "zh": "好吃",
+      "pinyin": "hǎochī",
+      "hanViet": "HẢO CẬT",
+      "vi": "ngon"
+     },
+     {
+      "zh": "好看",
+      "pinyin": "hǎokàn",
+      "hanViet": "HẢO KHÁN",
+      "vi": "đẹp; dễ nhìn"
+     },
+     {
+      "zh": "中国菜",
+      "pinyin": "Zhōngguó cài",
+      "hanViet": "TRUNG QUỐC THÁI",
+      "vi": "món ăn Trung Quốc"
+     },
+     {
+      "zh": "多",
+      "pinyin": "duō",
+      "hanViet": "ĐA",
+      "vi": "nhiều"
+     },
+     {
+      "zh": "点儿",
+      "pinyin": "diǎnr",
+      "hanViet": "ĐIỂM NHI",
+      "vi": "một chút"
+     },
+     {
+      "zh": "前几年",
+      "pinyin": "qián jǐ nián",
+      "hanViet": "TIỀN KỶ NIÊN",
+      "vi": "mấy năm trước"
+     },
+     {
+      "zh": "非常",
+      "pinyin": "fēicháng",
+      "hanViet": "PHI THƯỜNG",
+      "vi": "rất; vô cùng"
+     },
+     {
+      "zh": "漂亮",
+      "pinyin": "piàoliang",
+      "hanViet": "PHIÊU LƯỢNG",
+      "vi": "xinh đẹp"
+     },
+     {
+      "zh": "姐姐",
+      "pinyin": "jiějie",
+      "hanViet": "TỶ TỶ",
+      "vi": "chị gái"
+     },
+     {
+      "zh": "您",
+      "pinyin": "nín",
+      "hanViet": "NIN",
+      "vi": "ngài; cô/thầy (kính ngữ)"
+     },
+     {
+      "zh": "见",
+      "pinyin": "jiàn",
+      "hanViet": "KIẾN",
+      "vi": "gặp; thấy"
+     },
+     {
+      "zh": "早上",
+      "pinyin": "zǎoshang",
+      "hanViet": "TẢO THƯỢNG",
+      "vi": "buổi sáng"
+     },
+     {
+      "zh": "星期日",
+      "pinyin": "Xīngqīrì",
+      "hanViet": "TINH KỲ NHẬT",
+      "vi": "chủ nhật"
+     },
+     {
+      "zh": "星期六",
+      "pinyin": "Xīngqīliù",
+      "hanViet": "TINH KỲ LỤC",
+      "vi": "thứ Bảy"
+     },
+     {
+      "zh": "太好了",
+      "pinyin": "tài hǎo le",
+      "hanViet": "THÁI HẢO LIỄU",
+      "vi": "tốt quá; tuyệt quá"
+     },
+     {
+      "zh": "来",
+      "pinyin": "lái",
+      "hanViet": "LAI",
+      "vi": "đến"
+     },
+     {
+      "zh": "吧",
+      "pinyin": "ba",
+      "hanViet": "BA",
+      "vi": "nhé; thôi (trợ từ ngữ khí)"
+     },
+     {
+      "zh": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "hanViet": "CHẨM MA DẠNG",
+      "vi": "thế nào; có được không"
+     },
+     {
+      "zh": "做",
+      "pinyin": "zuò",
+      "hanViet": "TÁC",
+      "vi": "làm; nấu"
+     },
+     {
+      "zh": "想",
+      "pinyin": "xiǎng",
+      "hanViet": "TƯỞNG",
+      "vi": "muốn; nghĩ"
+     },
+     {
+      "zh": "到",
+      "pinyin": "dào",
+      "hanViet": "ĐÁO",
+      "vi": "đến"
+     },
+     {
+      "zh": "个",
+      "pinyin": "gè",
+      "hanViet": "CÁ",
+      "vi": "cái (lượng từ)"
+     },
+     {
+      "zh": "家",
+      "pinyin": "jiā",
+      "hanViet": "GIA",
+      "vi": "nhà"
+     },
+     {
+      "zh": "和",
+      "pinyin": "hé",
+      "hanViet": "HOÀ",
+      "vi": "và; với"
+     },
+     {
+      "zh": "她",
+      "pinyin": "tā",
+      "hanViet": "THA",
+      "vi": "cô ấy; chị ấy"
+     },
+     {
+      "zh": "九",
+      "pinyin": "jiǔ",
+      "hanViet": "CỬU",
+      "vi": "chín"
+     },
+     {
+      "zh": "八",
+      "pinyin": "bā",
+      "hanViet": "BÁT",
+      "vi": "tám"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn (tên người)"
      }
     ],
     "phrases": []

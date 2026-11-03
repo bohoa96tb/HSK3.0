@@ -32,7 +32,7 @@ test('lesson 6 content matches the printed books: counts, pages, tracks, han-vie
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
   }
   assert.equal(l6.prepWords.find((w) => w.zh === '手机').hanViet, 'THỦ CƠ');
-  assert.equal(l6.prepWords.find((w) => w.zh === '哪儿').hanViet, 'NA NHI');
+  assert.equal(l6.prepWords.find((w) => w.zh === '哪儿').hanViet, 'NÃ NHI');
   assert.equal(l6.prepWords.find((w) => w.zh === '想').hanViet, 'TƯỞNG');
   assert.equal(l6.prepWords.find((w) => w.zh === '吃').hanViet, 'CẬT');
   assert.equal(l6.prepWords.find((w) => w.zh === '怎么').hanViet, 'CHẨM MA');

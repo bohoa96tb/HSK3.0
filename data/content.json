@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-lesson15-standard1",
+ "contentVersion": "20261103-l1review1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -5537,7 +5537,7 @@
        "section": "生词 · Từ mới"
       }
      ],
-     "hanViet": "NHỮ BẰNG HỮU",
+     "hanViet": "NỮ BẰNG HỮU",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l03-4",
@@ -5560,7 +5560,7 @@
        "section": "生词 · Từ mới"
       }
      ],
-     "hanViet": "NA",
+     "hanViet": "NÃ",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l03-4",
@@ -5696,7 +5696,7 @@
        "section": "生词 · Từ mới"
       }
      ],
-     "hanViet": "CÔNG TÁ",
+     "hanViet": "CÔNG TÁC",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l03-6",
@@ -8475,7 +8475,7 @@
        "section": "生词 · Từ mới 4-6"
       }
      ],
-     "hanViet": "NHỮ NHI",
+     "hanViet": "NỮ NHI",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l04-6",
@@ -15100,7 +15100,7 @@
      "height": 560
     },
     "studyTipVi": "Cách học: xem từ cần biết → nghe hội thoại → hiểu cách dùng → luyện tập. Phần phát âm (âm nhi hóa và dấu cách âm) là kiến thức bổ trợ, bạn có thể mở khi cần.",
-    "foundationSummaryVi": "Ôn phát âm nền tảng: âm nhi hóa （儿化） và quy tắc viết dấu cách âm",
+    "foundationSummaryVi": "Ôn nền tảng: âm nhi hóa （儿化） (phát âm) · dấu cách âm ( ’ ) ngăn hai âm tiết dính nhau khi viết Pinyin (cách viết)",
     "courseTagsVi": "Số điện thoại · 想 · Câu liên động (1) · 怎么",
     "priorLessonNoteVi": "Bài này dùng lại ngày tháng và câu chữ 会/想 trong đời sống hằng ngày: hỏi số điện thoại, nói kế hoạch ngày mai và cách đi lại.",
     "priorLessonId": "hsk1-l05"
@@ -15235,7 +15235,7 @@
        "section": "生词 · Từ mới 6-4"
       }
      ],
-     "hanViet": "NA NHI",
+     "hanViet": "NÃ NHI",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l06-4",
@@ -29391,7 +29391,7 @@
        "section": "生词 · Từ mới 10-4"
       }
      ],
-     "hanViet": "THIẾU",
+     "hanViet": "THIỂU",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l10-4",
@@ -32703,7 +32703,7 @@
        "section": "生词 · Từ mới 11-6"
       }
      ],
-     "hanViet": "NA LÝ",
+     "hanViet": "NÃ LÝ",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l11-6",
@@ -38975,7 +38975,7 @@
        "section": "生词 · Từ mới 13-4"
       }
      ],
-     "hanViet": "TOẠ",
+     "hanViet": "TỌA",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l13-4",
@@ -39044,7 +39044,7 @@
        "section": "生词 · Từ mới 13-4"
       }
      ],
-     "hanViet": "YÊU",
+     "hanViet": "YẾU",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l13-4",
@@ -39113,7 +39113,7 @@
        "section": "生词 · Từ mới 13-4"
       }
      ],
-     "hanViet": "MIẾN BAO",
+     "hanViet": "DIỆN BAO",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l13-4",
@@ -41871,7 +41871,7 @@
      {
       "zh": "面条儿",
       "pinyin": "miàntiáor",
-      "hanViet": "MIẾN ĐIỀU NHI",
+      "hanViet": "DIỆN ĐIỀU NHI",
       "vi": "mì sợi"
      },
      {
@@ -42226,7 +42226,7 @@
        "section": "生词 · Từ mới 14-4"
       }
      ],
-     "hanViet": "BẤT YÊU",
+     "hanViet": "BẤT YẾU",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l14-4",
@@ -45714,7 +45714,7 @@
        "section": "生词"
       }
      ],
-     "hanViet": "YÊU",
+     "hanViet": "YẾU",
      "hanVietStatus": "verified-editorial",
      "audio": {
       "trackId": "trk-tb-l15-6",

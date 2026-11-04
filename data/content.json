@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261103-hsk2l1-writing2",
+ "contentVersion": "20261104-hsk2l2-writing1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -899,11 +899,16 @@
      "section": "Bài 2 · 还是打车去北大吧"
     }
    ],
-   "textbookAudioTrackCount": null,
-   "workbookAudioTrackCount": null,
-   "publicationStatus": "catalogued",
-   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
-   "grammarIds": [],
+   "textbookAudioTrackCount": 8,
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo chuẩn Bài 8 + D28 (câu hỏi in trong sách đặt tại từng đoạn) kèm bộ Luyện viết chữ Hán 间/问/过/远. Đang chờ QA độc lập và nghiệm thu.",
+   "grammarIds": [
+    "kp-hsk2-l02-haishi",
+    "kp-hsk2-l02-duo",
+    "kp-hsk2-l02-attributive",
+    "kp-hsk2-l02-characters"
+   ],
    "sectionIds": [
     "intro",
     "prep",
@@ -52209,6 +52214,2910 @@
      "exampleVi": "Cô Vương bảo chúng tôi nói tiếng Trung."
     }
    ]
+  },
+  {
+   "lessonId": "hsk2-l02",
+   "intro": {
+    "goalVi": "Học cách hỏi đường và phương tiện đi lại, mô tả một trường đại học bằng số lượng gần đúng, và đề xuất phương án tốt hơn bằng mẫu “还是……吧” — qua chuyến tham quan Đại học Bắc Kinh của Bạch Gia Nguyệt và An Ni.",
+    "estimatedMinutes": 75,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Bạch Gia Nguyệt và An Ni (gặp ở Bài 1) đến thăm Đại học Bắc Kinh. Trạm xe buýt hơi xa nên hai cô quyết định đi taxi; vào trường, họ ngỡ ngàng trước hơn bốn mươi nghìn sinh viên, một rạp chiếu phim vé rẻ ngay trong trường, và kết thúc bằng một tin nhắn gửi Trần Thiên Trung. Bài này cũng mở bộ chữ viết thứ hai: 间、问、过、远.",
+    "outcomesVi": [
+     "Nhận diện và dùng 16 từ mới, 1 tên riêng 北京大学 của bài.",
+     "Dùng cấu trúc “还是……吧” để đề xuất phương án tốt hơn.",
+     "Dùng “多” nói số lượng gần đúng （四万多、二十多）.",
+     "Nhận diện định ngữ là động từ/cụm chủ–vị đứng trước danh từ （他们卖的电影票）.",
+     "Nghe hiểu và trả lời câu hỏi của bốn đoạn, viết được tin nhắn kể về một nơi đã đến.",
+     "Luyện viết 4 chữ 间、问、过、远 ở khu Luyện viết chữ Hán."
+    ],
+    "contextImage": {
+     "src": "assets/hsk2-lesson-02/context-campus.webp",
+     "alt": "Tranh vẽ lại cổng trường đại học kiểu Trung Quốc với mái ngói cong: hai cô gái kéo vali bước vào cổng, bên cạnh là chiếc taxi màu vàng, phía sau là hồ và các tòa nhà trong trường.",
+     "caption": "Tranh vẽ lại theo bối cảnh bài học (Textbook tr.011–016): hai cô gái đi taxi đến tham quan Đại học Bắc Kinh.",
+     "width": 1280,
+     "height": 853
+    },
+    "studyTipVi": "Cả bốn đoạn của bài này đều có câu hỏi in sẵn trong sách — trong app, chúng nằm ngay dưới từng đoạn ở mục Nghe & đọc; hãy nghe hai lần rồi mới trả lời. Chú ý hai cách dùng mới của những từ quen: “好” trong “好打车” nghĩa là “dễ”, và “多” đứng sau con số để nói “hơn một chút”.",
+    "foundationSummaryVi": "Phần Hán tự (Workbook tr.011 + sách viết Bài 2): hai bộ 门字框 （门） và 走之旁 （辶） qua bốn chữ 间、问、过、远. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+    "courseTagsVi": "HSK 2 · Bài 2 · 还是打车去北大吧",
+    "priorLessonNoteVi": "Nhân vật nối tiếp Bài 1: Bạch Gia Nguyệt và An Ni đã đến Bắc Kinh, nay đi tham quan; tin nhắn ở Đoạn 4 gửi cho Trần Thiên Trung — người gọi điện nhờ giúp ở Bài 1. Mẫu “是……的” của Bài 1 cũng xuất hiện lại trong bài này (“你是怎么知道的？”).",
+    "priorLessonId": "hsk2-l01"
+   },
+   "prepWords": [
+    {
+     "id": "h2l2-w01",
+     "zh": "公交车",
+     "pinyin": "gōngjiāochē",
+     "vi": "xe buýt",
+     "hanViet": "CÔNG GIAO XA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 0.05,
+      "end": 3.3,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w02",
+     "zh": "但",
+     "pinyin": "dàn",
+     "vi": "nhưng",
+     "hanViet": "ĐÁN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 3.42,
+      "end": 4.26,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w03",
+     "zh": "车站",
+     "pinyin": "chēzhàn",
+     "vi": "trạm xe; bến xe",
+     "hanViet": "XA TRẠM",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 5.9,
+      "end": 6.9,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w04",
+     "zh": "远",
+     "pinyin": "yuǎn",
+     "vi": "xa",
+     "hanViet": "VIỄN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 8.44,
+      "end": 9.2,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w05",
+     "zh": "打车",
+     "pinyin": "dǎchē",
+     "vi": "bắt taxi; đi taxi",
+     "hanViet": "ĐẢ XA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 10.7,
+      "end": 12.6,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w06",
+     "zh": "还是",
+     "pinyin": "háishi",
+     "vi": "hay là; vẫn nên",
+     "hanViet": "HOÀN THỊ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 13.8,
+      "end": 14.6,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w07",
+     "zh": "北京大学",
+     "pinyin": "Běijīng Dàxué",
+     "vi": "Đại học Bắc Kinh",
+     "hanViet": "BẮC KINH ĐẠI HỌC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 27,
+       "printedPage": 11,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 1,
+     "audio": {
+      "trackId": "trk-tb2-l02-2",
+      "start": 15.86,
+      "end": 17.6,
+      "status": "asr-draft"
+     },
+     "isProperName": true,
+     "properKind": "Tên riêng"
+    },
+    {
+     "id": "h2l2-w08",
+     "zh": "啊",
+     "pinyin": "a",
+     "vi": "(trợ từ cuối câu, tỏ ý cảm thán/đồng tình)",
+     "hanViet": "A",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 0.05,
+      "end": 0.68,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w09",
+     "zh": "万",
+     "pinyin": "wàn",
+     "vi": "mười nghìn; vạn",
+     "hanViet": "VẠN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 2.1,
+      "end": 3.2,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w10",
+     "zh": "名",
+     "pinyin": "míng",
+     "vi": "vị; người (lượng từ cho người)",
+     "hanViet": "DANH",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 5.0,
+      "end": 5.82,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w11",
+     "zh": "网上",
+     "pinyin": "wǎngshang",
+     "vi": "trên mạng",
+     "hanViet": "VÕNG THƯỢNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 7.0,
+      "end": 8.9,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w12",
+     "zh": "外国",
+     "pinyin": "wàiguó",
+     "vi": "nước ngoài",
+     "hanViet": "NGOẠI QUỐC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 9.56,
+      "end": 11.6,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w13",
+     "zh": "间",
+     "pinyin": "jiān",
+     "vi": "gian; phòng (lượng từ cho phòng)",
+     "hanViet": "GIAN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 13.0,
+      "end": 14.1,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w14",
+     "zh": "教室",
+     "pinyin": "jiàoshì",
+     "vi": "phòng học",
+     "hanViet": "GIÁO THẤT",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 29,
+       "printedPage": 13,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 2,
+     "audio": {
+      "trackId": "trk-tb2-l02-4",
+      "start": 14.5,
+      "end": 16.06,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w15",
+     "zh": "票",
+     "pinyin": "piào",
+     "vi": "vé",
+     "hanViet": "PHIẾU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 31,
+       "printedPage": 15,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l02-6",
+      "start": 0.05,
+      "end": 1.44,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w16",
+     "zh": "别",
+     "pinyin": "bié",
+     "vi": "đừng; chớ",
+     "hanViet": "BIỆT",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 31,
+       "printedPage": 15,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 3,
+     "audio": {
+      "trackId": "trk-tb2-l02-6",
+      "start": 4.3,
+      "end": 5.1,
+      "status": "asr-draft"
+     }
+    },
+    {
+     "id": "h2l2-w17",
+     "zh": "过来",
+     "pinyin": "guòlái",
+     "vi": "đến đây; lại đây",
+     "hanViet": "QUÁ LAI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 32,
+       "printedPage": 16,
+       "section": "生词"
+      }
+     ],
+     "dialogueGroup": 4,
+     "audio": {
+      "trackId": "trk-tb2-l02-8",
+      "start": 0.05,
+      "end": 1.44,
+      "status": "asr-draft"
+     }
+    }
+   ],
+   "prepGroups": [
+    {
+     "id": "h2l2-g1",
+     "dialogueId": "h2l2-text-1",
+     "titleVi": "Từ mới Đoạn 1 · Ở quầy lễ tân",
+     "trackId": "trk-tb2-l02-2",
+     "trackLabelVi": "Track 2-2 · Từ mới Đoạn 1"
+    },
+    {
+     "id": "h2l2-g2",
+     "dialogueId": "h2l2-text-2",
+     "titleVi": "Từ mới Đoạn 2 · Tham quan trường",
+     "trackId": "trk-tb2-l02-4",
+     "trackLabelVi": "Track 2-4 · Từ mới Đoạn 2"
+    },
+    {
+     "id": "h2l2-g3",
+     "dialogueId": "h2l2-text-3",
+     "titleVi": "Từ mới Đoạn 3 · Rạp chiếu phim",
+     "trackId": "trk-tb2-l02-6",
+     "trackLabelVi": "Track 2-6 · Từ mới Đoạn 3"
+    },
+    {
+     "id": "h2l2-g4",
+     "dialogueId": "h2l2-text-4",
+     "titleVi": "Từ mới Đoạn 4 · Tin nhắn",
+     "trackId": "trk-tb2-l02-8",
+     "trackLabelVi": "Track 2-8 · Từ mới Đoạn 4"
+    }
+   ],
+   "prepSummaryVi": "16 từ mới và 1 tên riêng （北京大学） trong bốn đoạn: hỏi đường và đi lại （公交车、但、车站、远、打车、还是）, tham quan trường （啊、万、名、网上、外国、间、教室）, rạp chiếu phim （票、别） và tin nhắn （过来）.",
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk2-l02-haishi",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Cấu trúc cố định “还是……吧”: gợi ý lựa chọn tốt hơn",
+     "explanationVi": "“还是……吧” là cấu trúc cố định để đưa ra lựa chọn thiên về một phương án, với hàm ý “làm thế này thì tốt hơn”. Bạch Gia Nguyệt cân nhắc: đi xe buýt thì trạm xa, nên đề xuất “我们还是打车去吧” (hay là đi taxi đi). Cấu trúc này khác “还是” trong câu hỏi lựa chọn kiểu “你喝茶还是咖啡？” — ở đây không phải hỏi chọn A hay B, mà là đề nghị sau khi đã cân nhắc.",
+     "pattern": "还是 + [phương án được chọn] + 吧",
+     "useWhenVi": "Dùng khi đề xuất một phương án mà bạn cho là tốt hơn sau khi so sánh: trời mưa thì hay là đi taxi, bận quá thì hay là để mai.",
+     "positionVi": "“还是” đứng trước phương án được chọn, “吧” ở cuối câu. Kết hợp với 别 thành “还是别……了” để khuyên KHÔNG làm: “还是别看电影了” (thôi đừng xem phim nữa).",
+     "examples": [
+      {
+       "zh": "我们还是打车去吧。",
+       "pinyin": "Wǒmen háishi dǎchē qù ba.",
+       "noteVi": "Chúng ta hay là đi taxi đi. (ví dụ trong sách, Tiểu Ngữ giảng đường tr.012)"
+      },
+      {
+       "zh": "那件衣服很好看，还是买那件吧。",
+       "pinyin": "Nà jiàn yīfu hěn hǎokàn, háishi mǎi nà jiàn ba.",
+       "noteVi": "Chiếc áo kia rất đẹp, hay là mua chiếc kia đi. (ví dụ trong sách)"
+      },
+      {
+       "zh": "你第一次去北京，还是找个人接你吧。",
+       "pinyin": "Nǐ dì-yī cì qù Běijīng, háishi zhǎo gè rén jiē nǐ ba.",
+       "noteVi": "Bạn lần đầu đến Bắc Kinh, hay là tìm người đón bạn đi. (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu dùng “还是……吧” đúng để đề xuất sau khi cân nhắc:",
+      "stemZh": "车站有点儿远，____",
+      "options": [
+       {
+        "zh": "我们去吧还是打车。",
+        "vi": "thứ tự từ sai"
+       },
+       {
+        "zh": "我们还是打车去吧。",
+        "vi": "hay là đi taxi đi (đúng mẫu)"
+       }
+      ],
+      "answer": "2",
+      "explanationVi": "Mẫu cố định: 还是 + phương án + 吧 ở cuối câu — giống hệt câu chốt của Đoạn 1."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 28,
+       "printedPage": 12,
+       "section": "小语讲堂 · 固定格式“还是……吧”"
+      }
+     ],
+     "sentenceIds": [
+      "h2l2-s5",
+      "h2l2-s18"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l02-duo",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Dùng “多” biểu thị số gần đúng (có số lẻ)",
+     "explanationVi": "Thêm “多” sau số từ hoặc cụm số–lượng để nói số lượng HƠN con số nêu ra một chút （四万多 = hơn 40.000). Quy tắc vị trí của sách: nếu con số là bội số của 10 thì “多” thường đứng ngay sau số từ （二十多, 四万多）; nếu không phải bội số của 10 thì “多” thường đứng sau lượng từ （五块多钱 — 5 tệ hơn). Trong bài, “多” xuất hiện ở hai đoạn: “四万多名学生” và “三千多名外国学生”.",
+     "pattern": "Số từ (bội số của 10) + 多 + Lượng từ + Danh từ · Số từ + Lượng từ + 多 + Danh từ",
+     "useWhenVi": "Dùng khi nói số lượng ước chừng mà không cần (hoặc không biết) con số chính xác: hơn hai mươi người, ba mươi tệ hơn, hơn mười phút.",
+     "positionVi": "Chú ý đổi vị trí của 多 theo loại số: bội số của 10 → 多 ngay sau số; số còn lại → 多 sau lượng từ. Không dùng 多 với con số chính xác đã chốt.",
+     "examples": [
+      {
+       "zh": "北京大学有四万多名学生呢！",
+       "pinyin": "Běijīng Dàxué yǒu sìwàn duō míng xuéshēng ne!",
+       "noteVi": "Đại học Bắc Kinh có hơn bốn mươi nghìn sinh viên! (ví dụ trong sách)"
+      },
+      {
+       "zh": "教室里有二十多个学生。",
+       "pinyin": "Jiàoshì li yǒu èrshí duō gè xuéshēng.",
+       "noteVi": "Trong phòng học có hơn hai mươi học sinh. (ví dụ trong sách)"
+      },
+      {
+       "zh": "这两个苹果五块多钱。",
+       "pinyin": "Zhè liǎng gè píngguǒ wǔ kuài duō qián.",
+       "noteVi": "Hai quả táo này năm tệ hơn. — 5 không phải bội số của 10 nên 多 đứng sau lượng từ 块 (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu dùng “多” đúng vị trí:",
+      "stemZh": "我们班有____。",
+      "options": [
+       {
+        "zh": "三十多个学生",
+        "vi": "hơn ba mươi học sinh (đúng: 30 là bội số của 10)"
+       },
+       {
+        "zh": "三个十多学生",
+        "vi": "thứ tự từ sai"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "30 là bội số của 10 nên 多 đứng ngay sau số từ: 三十多 + lượng từ 个."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 30,
+       "printedPage": 14,
+       "section": "小语讲堂 · 用“多”表达概数"
+      }
+     ],
+     "sentenceIds": [
+      "h2l2-s8",
+      "h2l2-s10"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l02-attributive",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Động từ, cụm động từ và cụm chủ–vị làm định ngữ (……的 + danh từ)",
+     "explanationVi": "Một động từ, cụm động từ hoặc cả cụm chủ–vị có thể đứng trước danh từ (kèm 的） để bổ nghĩa cho danh từ đó, nêu đặc điểm hoặc trạng thái của nó. Trong bài: “他们卖的电影票” — cụm chủ–vị “他们卖” (họ bán) bổ nghĩa cho “电影票” (vé do họ bán). Điểm này nối tiếp “的”字短语 đã gặp: phần bổ nghĩa càng dài thì càng cần 的 ở giữa.",
+     "pattern": "[Động từ / Cụm động từ / Cụm chủ–vị] + 的 + Danh từ",
+     "useWhenVi": "Dùng khi cần nói rõ danh từ theo nguồn gốc, người thực hiện hoặc hành động liên quan: vé họ bán, học sinh đang học tiếng Trung, cái cốc bạn tôi tặng.",
+     "positionVi": "Phần định ngữ đứng TRƯỚC danh từ và luôn có 的 ngay trước danh từ chính; đừng đặt định ngữ sau danh từ như tiếng Việt.",
+     "examples": [
+      {
+       "zh": "他们卖的电影票也很便宜。",
+       "pinyin": "Tāmen mài de diànyǐngpiào yě hěn piányi.",
+       "noteVi": "Vé xem phim họ bán cũng rất rẻ. (ví dụ trong sách; cũng là câu ở Đoạn 3)"
+      },
+      {
+       "zh": "现在学中文的学生很多。",
+       "pinyin": "Xiànzài xué Zhōngwén de xuéshēng hěn duō.",
+       "noteVi": "Học sinh học tiếng Trung bây giờ rất nhiều. (ví dụ trong sách)"
+      },
+      {
+       "zh": "这是朋友给我的杯子。",
+       "pinyin": "Zhè shì péngyou gěi wǒ de bēizi.",
+       "noteVi": "Đây là cái cốc bạn tôi tặng tôi. — cụm chủ–vị “朋友给我” làm định ngữ (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu có định ngữ đúng:",
+      "stemZh": "____很便宜。",
+      "options": [
+       {
+        "zh": "他们卖的电影票",
+        "vi": "vé xem phim họ bán (đúng mẫu)"
+       },
+       {
+        "zh": "电影票他们卖的",
+        "vi": "định ngữ đặt sai phía"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Định ngữ “他们卖的” phải đứng trước danh từ “电影票”, theo đúng câu của Đoạn 3."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 31,
+       "printedPage": 15,
+       "section": "小语讲堂 · 动词或动词性短语、主谓短语作定语"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 32,
+       "printedPage": 16,
+       "section": "小语讲堂 · 动词或动词性短语、主谓短语作定语 (ví dụ)"
+      }
+     ],
+     "sentenceIds": [
+      "h2l2-s15"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l02-characters",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự",
+     "title": "Hai bộ thủ của bài: 门（门字框） và 辶（走之旁）",
+     "explanationVi": "Workbook (tr.011) giới thiệu hai bộ thủ gắn với bốn chữ của sách viết Bài 2. Bộ 门 gọi là 门字框 (ménzìkuàng — “khung chữ cửa”): 间 (gian; khoảng) và 问 (hỏi) đều có khung cửa bao quanh. Bộ 辶 gọi là 走之旁 (zǒuzhīpáng): 过 (qua) và 远 (xa) đều có bộ này vì liên quan đến đi lại và di chuyển. Nhận diện được hai bộ này giúp viết đúng khung của cả bốn chữ trong khu Luyện viết.",
+     "pattern": "门 + 日 = 间 · 门 + 口 = 问 · 寸 + 辶 = 过 · 元 + 辶 = 远",
+     "examples": [
+      {
+       "zh": "一间教室",
+       "pinyin": "yì jiān jiàoshì",
+       "noteVi": "một phòng học — 间 có bộ 门字框, cũng là lượng từ đếm phòng trong bài."
+      },
+      {
+       "zh": "问一下",
+       "pinyin": "wèn yíxià",
+       "noteVi": "hỏi một chút — 问 = 门 + 口 (miệng trong khung cửa)."
+      },
+      {
+       "zh": "不远",
+       "pinyin": "bù yuǎn",
+       "noteVi": "không xa — 远 có bộ 走之旁 giống 过."
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chữ nào sau đây có bộ 走之旁 辶?",
+      "stemZh": "选有辶的字：",
+      "options": [
+       {
+        "zh": "远",
+        "vi": "xa — có 辶"
+       },
+       {
+        "zh": "问",
+        "vi": "hỏi — có 门"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "远 = 元 + 辶 thuộc bộ 走之旁； 问 = 门 + 口 thuộc bộ 门字框."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 11,
+       "section": "小语讲堂 · 一、汉字"
+      },
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 2,
+       "printedPage": 2,
+       "section": "Bài 2 · 间 问 过 远"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "reader-h2l2",
+    "titleVi": "Bốn đoạn của bài: hỏi đường, tham quan trường, rạp chiếu phim và tin nhắn",
+    "headingVi": "Nghe & đọc bốn đoạn",
+    "noteVi": "Track lẻ (2-1, 2-3, 2-5, 2-7) là audio của bốn đoạn; track chẵn là audio đọc từ mới của từng đoạn. Câu hỏi của sách nằm ngay dưới mỗi đoạn — làm tại chỗ sau khi nghe (theo chuẩn D28). Đoạn 4 là một tin nhắn, không phải hội thoại. Mốc đoạn audio là mốc máy (ASR), chưa nghe kiểm chứng.",
+    "sentences": [
+     {
+      "id": "h2l2-s1",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "请问，这儿有到北京大学的公交车吗？",
+      "pinyin": "Qǐngwèn, zhèr yǒu dào Běijīng Dàxué de gōngjiāochē ma?",
+      "vi": "Xin hỏi, ở đây có xe buýt đến Đại học Bắc Kinh không ạ?",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 0.05,
+       "end": 4.2,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s2",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "有，但车站有点儿远。",
+      "pinyin": "Yǒu, dàn chēzhàn yǒudiǎnr yuǎn.",
+      "vi": "Có, nhưng trạm xe hơi xa một chút.",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 5.08,
+       "end": 7.56,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s3",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "这儿好打车吗？",
+      "pinyin": "Zhèr hǎo dǎchē ma?",
+      "vi": "Ở đây có dễ bắt taxi không ạ?",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 8.56,
+       "end": 10.14,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s4",
+      "speaker": "Nhân viên phục vụ",
+      "zh": "好打车。",
+      "pinyin": "Hǎo dǎchē.",
+      "vi": "Dễ bắt taxi.",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 11.14,
+       "end": 11.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s5",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "谢谢。安妮，我们还是打车去吧。",
+      "pinyin": "Xièxie. Ānnī, wǒmen háishi dǎchē qù ba.",
+      "vi": "Cảm ơn ạ. An Ni, chúng ta hay là đi taxi đi.",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 12.54,
+       "end": 16.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s6",
+      "speaker": "An Ni",
+      "zh": "好，没问题。",
+      "pinyin": "Hǎo, méi wèntí.",
+      "vi": "Được, không vấn đề gì.",
+      "passageId": "h2l2-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-1",
+       "start": 17.54,
+       "end": 18.88,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s7",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "学校里人真多啊！",
+      "pinyin": "Xuéxiào li rén zhēn duō a!",
+      "vi": "Trong trường đông người thật đấy!",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 0.05,
+       "end": 3.24,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s8",
+      "speaker": "An Ni",
+      "zh": "是啊，北京大学有四万多名学生呢！",
+      "pinyin": "Shì a, Běijīng Dàxué yǒu sìwàn duō míng xuéshēng ne!",
+      "vi": "Đúng vậy, Đại học Bắc Kinh có hơn bốn mươi nghìn sinh viên cơ mà!",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 3.54,
+       "end": 7.8,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s9",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "你是怎么知道的？",
+      "pinyin": "Nǐ shì zěnme zhīdào de?",
+      "vi": "Sao bạn biết được vậy?",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 8.76,
+       "end": 10.48,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s10",
+      "speaker": "An Ni",
+      "zh": "是网上说的，网上还说北京大学有三千多名外国学生。",
+      "pinyin": "Shì wǎngshang shuō de, wǎngshang hái shuō Běijīng Dàxué yǒu sānqiān duō míng wàiguó xuéshēng.",
+      "vi": "Trên mạng nói vậy; trên mạng còn nói Đại học Bắc Kinh có hơn ba nghìn sinh viên nước ngoài.",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 11.32,
+       "end": 18.28,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s11",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我也想来这儿学习。",
+      "pinyin": "Wǒ yě xiǎng lái zhèr xuéxí.",
+      "vi": "Mình cũng muốn đến đây học.",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 19.26,
+       "end": 21.18,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s12",
+      "speaker": "An Ni",
+      "zh": "那边就有一间教室，我们去看一下吧。",
+      "pinyin": "Nàbiān jiù yǒu yì jiān jiàoshì, wǒmen qù kàn yíxià ba.",
+      "vi": "Đằng kia có một phòng học đấy, chúng ta vào xem thử đi.",
+      "passageId": "h2l2-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-3",
+       "start": 22.54,
+       "end": 26.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s13",
+      "speaker": "An Ni",
+      "zh": "家月，你看，学校里有家电影院！",
+      "pinyin": "Jiāyuè, nǐ kàn, xuéxiào li yǒu jiā diànyǐngyuàn!",
+      "vi": "Gia Nguyệt, bạn xem này, trong trường có một rạp chiếu phim!",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 0.05,
+       "end": 4.46,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s14",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "是啊，电影院还不小。",
+      "pinyin": "Shì a, diànyǐngyuàn hái bù xiǎo.",
+      "vi": "Đúng thế, rạp cũng không nhỏ đâu.",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 5.4,
+       "end": 8.22,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s15",
+      "speaker": "An Ni",
+      "zh": "他们卖的电影票也很便宜。",
+      "pinyin": "Tāmen mài de diànyǐngpiào yě hěn piányi.",
+      "vi": "Vé xem phim họ bán cũng rất rẻ.",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 9.16,
+       "end": 12.2,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s16",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "天啊！有的还不到二十块钱。",
+      "pinyin": "Tiān a! Yǒude hái bú dào èrshí kuài qián.",
+      "vi": "Trời ơi! Có vé còn chưa đến hai mươi tệ.",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 13.06,
+       "end": 16.54,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s17",
+      "speaker": "An Ni",
+      "zh": "那你想不想去看个电影？",
+      "pinyin": "Nà nǐ xiǎng bu xiǎng qù kàn gè diànyǐng?",
+      "vi": "Vậy bạn có muốn đi xem một bộ phim không?",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 17.22,
+       "end": 20.12,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s18",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "还是别看电影了，北京大学就很好看！",
+      "pinyin": "Háishi bié kàn diànyǐng le, Běijīng Dàxué jiù hěn hǎokàn!",
+      "vi": "Thôi đừng xem phim nữa, Đại học Bắc Kinh đã đẹp lắm rồi!",
+      "passageId": "h2l2-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-5",
+       "start": 21.58,
+       "end": 25.84,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s19",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "北京大学很大，有四万多名学生。",
+      "pinyin": "Běijīng Dàxué hěn dà, yǒu sìwàn duō míng xuéshēng.",
+      "vi": "Đại học Bắc Kinh rất lớn, có hơn bốn mươi nghìn sinh viên.",
+      "passageId": "h2l2-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-7",
+       "start": 0.05,
+       "end": 4.1,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s20",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "学校很漂亮，里边还有家电影院，电影票也不贵。",
+      "pinyin": "Xuéxiào hěn piàoliang, lǐbian hái yǒu jiā diànyǐngyuàn, diànyǐngpiào yě bú guì.",
+      "vi": "Trường rất đẹp, bên trong còn có một rạp chiếu phim, vé xem phim cũng không đắt.",
+      "passageId": "h2l2-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-7",
+       "start": 4.8,
+       "end": 10.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l2-s21",
+      "speaker": "Bạch Gia Nguyệt",
+      "zh": "我们有时间还想再过来看个电影。",
+      "pinyin": "Wǒmen yǒu shíjiān hái xiǎng zài guòlái kàn gè diànyǐng.",
+      "vi": "Khi nào có thời gian, chúng mình còn muốn quay lại xem một bộ phim.",
+      "passageId": "h2l2-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l02-7",
+       "start": 11.36,
+       "end": 14.58,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb2-l02-1",
+      "label": "Track 2-1 · Đoạn 1 (ở quầy lễ tân)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-1.mp3",
+      "durationSec": 19.733,
+      "bookRef": "Textbook HSK 2 track 2-1",
+      "segments": [
+       {
+        "sentenceId": "h2l2-s1",
+        "start": 0.05,
+        "end": 4.2,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s2",
+        "start": 5.08,
+        "end": 7.56,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s3",
+        "start": 8.56,
+        "end": 10.14,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s4",
+        "start": 11.14,
+        "end": 11.9,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s5",
+        "start": 12.54,
+        "end": 16.54,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s6",
+        "start": 17.54,
+        "end": 18.88,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "Track 2-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-2",
+      "label": "Track 2-2 · Từ mới Đoạn 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-2.mp3",
+      "durationSec": 20.141,
+      "bookRef": "Textbook HSK 2 track 2-2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "Track 2-2 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-3",
+      "label": "Track 2-3 · Đoạn 2 (tham quan trường)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-3.mp3",
+      "durationSec": 28.469,
+      "bookRef": "Textbook HSK 2 track 2-3",
+      "segments": [
+       {
+        "sentenceId": "h2l2-s7",
+        "start": 0.05,
+        "end": 3.24,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s8",
+        "start": 3.54,
+        "end": 7.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s9",
+        "start": 8.76,
+        "end": 10.48,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s10",
+        "start": 11.32,
+        "end": 18.28,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s11",
+        "start": 19.26,
+        "end": 21.18,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s12",
+        "start": 22.54,
+        "end": 26.3,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 28,
+        "printedPage": 12,
+        "section": "Track 2-3 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-4",
+      "label": "Track 2-4 · Từ mới Đoạn 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-4.mp3",
+      "durationSec": 18.269,
+      "bookRef": "Textbook HSK 2 track 2-4",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "Track 2-4 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-5",
+      "label": "Track 2-5 · Đoạn 3 (rạp chiếu phim trong trường)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-5.mp3",
+      "durationSec": 27.101,
+      "bookRef": "Textbook HSK 2 track 2-5",
+      "segments": [
+       {
+        "sentenceId": "h2l2-s13",
+        "start": 0.05,
+        "end": 4.46,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s14",
+        "start": 5.4,
+        "end": 8.22,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s15",
+        "start": 9.16,
+        "end": 12.2,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s16",
+        "start": 13.06,
+        "end": 16.54,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s17",
+        "start": 17.22,
+        "end": 20.12,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s18",
+        "start": 21.58,
+        "end": 25.84,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 30,
+        "printedPage": 14,
+        "section": "Track 2-5 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-6",
+      "label": "Track 2-6 · Từ mới Đoạn 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-6.mp3",
+      "durationSec": 6.869,
+      "bookRef": "Textbook HSK 2 track 2-6",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "Track 2-6 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-7",
+      "label": "Track 2-7 · Đoạn 4 (tin nhắn)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-7.mp3",
+      "durationSec": 15.749,
+      "bookRef": "Textbook HSK 2 track 2-7",
+      "segments": [
+       {
+        "sentenceId": "h2l2-s19",
+        "start": 0.05,
+        "end": 4.1,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s20",
+        "start": 4.8,
+        "end": 10.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l2-s21",
+        "start": 11.36,
+        "end": 14.58,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "Track 2-7 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l02-8",
+      "label": "Track 2-8 · Từ mới Đoạn 4",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-02/2-8.mp3",
+      "durationSec": 4.349,
+      "bookRef": "Textbook HSK 2 track 2-8",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (2-1…2-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "Track 2-8 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "h2l2-text-1",
+      "title": "Đoạn 1 · Ở quầy lễ tân khách sạn",
+      "context": "Ở quầy lễ tân khách sạn, Bạch Gia Nguyệt và An Ni hỏi nhân viên cách đến Đại học Bắc Kinh (Textbook tr.011).",
+      "audioTrackId": "trk-tb2-l02-1",
+      "sentenceIds": [
+       "h2l2-s1",
+       "h2l2-s2",
+       "h2l2-s3",
+       "h2l2-s4",
+       "h2l2-s5",
+       "h2l2-s6"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 27,
+        "printedPage": 11,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l2-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.011, track 2-1): Bạch Gia Nguyệt và An Ni muốn đi đâu?",
+        "promptZh": "白家月和安妮想去哪儿？",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī xiǎng qù nǎr?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "饭店",
+          "pinyin": "fàndiàn",
+          "vi": "nhà hàng"
+         },
+         {
+          "id": "2",
+          "zh": "车站",
+          "pinyin": "chēzhàn",
+          "vi": "trạm xe"
+         },
+         {
+          "id": "3",
+          "zh": "北京大学",
+          "pinyin": "Běijīng Dàxué",
+          "vi": "Đại học Bắc Kinh"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.011. Đáp án C: ngay câu đầu, Bạch Gia Nguyệt hỏi xe buýt “到北京大学” (đến Đại học Bắc Kinh).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 27,
+          "printedPage": 11,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-1",
+         "start": 0.05,
+         "end": 18.88,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l2-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.011, track 2-1): Bạch Gia Nguyệt và An Ni đi đến đó bằng cách nào?",
+        "promptZh": "白家月和安妮怎么去那儿？",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī zěnme qù nàr?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "开车",
+          "pinyin": "kāi chē",
+          "vi": "lái xe"
+         },
+         {
+          "id": "2",
+          "zh": "坐出租车",
+          "pinyin": "zuò chūzūchē",
+          "vi": "đi taxi"
+         },
+         {
+          "id": "3",
+          "zh": "坐公交车",
+          "pinyin": "zuò gōngjiāochē",
+          "vi": "đi xe buýt"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.011. Đáp án B: sau khi biết trạm xe buýt hơi xa, cô nói “我们还是打车去吧” — đi taxi （打车 = 坐出租车).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 27,
+          "printedPage": 11,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-1",
+         "start": 0.05,
+         "end": 18.88,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l2-text-2",
+      "title": "Đoạn 2 · Tham quan Đại học Bắc Kinh",
+      "context": "Tại Đại học Bắc Kinh, hai cô tham quan khuôn viên trường và trầm trồ vì số sinh viên rất đông (Textbook tr.013).",
+      "audioTrackId": "trk-tb2-l02-3",
+      "sentenceIds": [
+       "h2l2-s7",
+       "h2l2-s8",
+       "h2l2-s9",
+       "h2l2-s10",
+       "h2l2-s11",
+       "h2l2-s12"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 13,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l2-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.012, track 2-3): Đại học Bắc Kinh có bao nhiêu sinh viên?",
+        "promptZh": "北京大学有多少学生？",
+        "promptPinyin": "Běijīng Dàxué yǒu duōshao xuéshēng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "三千多",
+          "pinyin": "sānqiān duō",
+          "vi": "hơn ba nghìn"
+         },
+         {
+          "id": "2",
+          "zh": "四万多",
+          "pinyin": "sìwàn duō",
+          "vi": "hơn bốn mươi nghìn"
+         },
+         {
+          "id": "3",
+          "zh": "十万多",
+          "pinyin": "shíwàn duō",
+          "vi": "hơn một trăm nghìn"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.012. Đáp án B: An Ni nói “北京大学有四万多名学生呢”. Ba nghìn là số sinh viên NƯỚC NGOÀI, mười vạn không được nhắc tới.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 28,
+          "printedPage": 12,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-3",
+         "start": 0.05,
+         "end": 26.3,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l2-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.012, track 2-3): Bạch Gia Nguyệt muốn làm gì ở Đại học Bắc Kinh?",
+        "promptZh": "白家月想在北京大学做什么？",
+        "promptPinyin": "Bái Jiāyuè xiǎng zài Běijīng Dàxué zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "玩",
+          "pinyin": "wán",
+          "vi": "chơi"
+         },
+         {
+          "id": "2",
+          "zh": "学习",
+          "pinyin": "xuéxí",
+          "vi": "học tập"
+         },
+         {
+          "id": "3",
+          "zh": "找教室",
+          "pinyin": "zhǎo jiàoshì",
+          "vi": "tìm phòng học"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.012. Đáp án B: cô nói “我也想来这儿学习” (cũng muốn đến đây học).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 28,
+          "printedPage": 12,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-3",
+         "start": 0.05,
+         "end": 26.3,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l2-text-3",
+      "title": "Đoạn 3 · Rạp chiếu phim trong trường",
+      "context": "Hai cô phát hiện trong trường có một rạp chiếu phim với vé rất rẻ, nhưng quyết định chưa xem phim vội (Textbook tr.015).",
+      "audioTrackId": "trk-tb2-l02-5",
+      "sentenceIds": [
+       "h2l2-s13",
+       "h2l2-s14",
+       "h2l2-s15",
+       "h2l2-s16",
+       "h2l2-s17",
+       "h2l2-s18"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 31,
+        "printedPage": 15,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l2-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.014, track 2-5): An Ni nói trong Đại học Bắc Kinh có gì?",
+        "promptZh": "安妮说北京大学里有什么？",
+        "promptPinyin": "Ānnī shuō Běijīng Dàxué li yǒu shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "银行",
+          "pinyin": "yínháng",
+          "vi": "ngân hàng"
+         },
+         {
+          "id": "2",
+          "zh": "电影院",
+          "pinyin": "diànyǐngyuàn",
+          "vi": "rạp chiếu phim"
+         },
+         {
+          "id": "3",
+          "zh": "公交车站",
+          "pinyin": "gōngjiāochēzhàn",
+          "vi": "trạm xe buýt"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.014. Đáp án B: câu đầu của An Ni ở Đoạn 3: “学校里有家电影院”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 30,
+          "printedPage": 14,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-5",
+         "start": 0.05,
+         "end": 25.84,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l2-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.014, track 2-5): Có vé xem phim còn chưa đến bao nhiêu tiền?",
+        "promptZh": "有的电影票还不到多少钱？",
+        "promptPinyin": "Yǒude diànyǐngpiào hái bú dào duōshao qián?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "十块钱",
+          "pinyin": "shí kuài qián",
+          "vi": "mười tệ"
+         },
+         {
+          "id": "2",
+          "zh": "二十块钱",
+          "pinyin": "èrshí kuài qián",
+          "vi": "hai mươi tệ"
+         },
+         {
+          "id": "3",
+          "zh": "三十块钱",
+          "pinyin": "sānshí kuài qián",
+          "vi": "ba mươi tệ"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.014. Đáp án B: Bạch Gia Nguyệt thốt lên “有的还不到二十块钱”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 30,
+          "printedPage": 14,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-5",
+         "start": 0.05,
+         "end": 25.84,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l2-text-4",
+      "title": "Đoạn 4 · Tin nhắn ở cổng trường",
+      "context": "Ở cổng Đại học Bắc Kinh, Bạch Gia Nguyệt gửi tin nhắn cho Trần Thiên Trung kể về ngôi trường (Textbook tr.016). Đoạn này là một tin nhắn, không phải hội thoại.",
+      "audioTrackId": "trk-tb2-l02-7",
+      "sentenceIds": [
+       "h2l2-s19",
+       "h2l2-s20",
+       "h2l2-s21"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 32,
+        "printedPage": 16,
+        "section": "课文 4"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l2-text4-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.016, track 2-7): nghe đoạn rồi判断 câu sau đúng hay sai — “北京大学有四万多名外国学生。”",
+        "promptZh": "北京大学有四万多名外国学生。",
+        "promptPinyin": "Běijīng Dàxué yǒu sìwàn duō míng wàiguó xuéshēng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.016. Đoạn 4 nói trường có hơn bốn mươi nghìn SINH VIÊN nói chung; số sinh viên nước ngoài là hơn ba nghìn (Đoạn 2). Câu phán đoán sai.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 32,
+          "printedPage": 16,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-7",
+         "start": 0.05,
+         "end": 14.58,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l2-text4-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.016, track 2-7): nghe đoạn rồi判断 câu sau đúng hay sai — “白家月和安妮现在要在北京大学看电影。”",
+        "promptZh": "白家月和安妮现在要在北京大学看电影。",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī xiànzài yào zài Běijīng Dàxué kàn diànyǐng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.016. Ở Đoạn 3 hai cô quyết định KHÔNG xem phim ngay （还是别看电影了）, chỉ định khi nào có thời gian sẽ quay lại. Câu phán đoán sai.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 32,
+          "printedPage": 16,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l02-7",
+         "start": 0.05,
+         "end": 14.58,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l2-text4-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.017): Đại học Bắc Kinh như thế nào?",
+        "promptZh": "北京大学怎么样？",
+        "promptPinyin": "Běijīng Dàxué zěnmeyàng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "人不多",
+          "pinyin": "rén bù duō",
+          "vi": "ít người"
+         },
+         {
+          "id": "2",
+          "zh": "很漂亮",
+          "pinyin": "hěn piàoliang",
+          "vi": "rất đẹp"
+         },
+         {
+          "id": "3",
+          "zh": "东西很贵",
+          "pinyin": "dōngxi hěn guì",
+          "vi": "đồ đạc đắt"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.017. Đoạn 4 viết “学校很漂亮” và trường có hơn bốn mươi nghìn sinh viên nên không thể là “ít người”; vé phim lại rẻ.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 33,
+          "printedPage": 17,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       },
+       {
+        "id": "tb2l2-text4-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.017): Khi có thời gian, Bạch Gia Nguyệt và An Ni còn muốn quay lại Đại học Bắc Kinh để làm gì?",
+        "promptZh": "白家月和安妮有时间还想再来北京大学做什么？",
+        "promptPinyin": "Bái Jiāyuè hé Ānnī yǒu shíjiān hái xiǎng zài lái Běijīng Dàxué zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "看学生",
+          "pinyin": "kàn xuéshēng",
+          "vi": "ngắm sinh viên"
+         },
+         {
+          "id": "2",
+          "zh": "学中文",
+          "pinyin": "xué Zhōngwén",
+          "vi": "học tiếng Trung"
+         },
+         {
+          "id": "3",
+          "zh": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "vi": "xem phim"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.017. Câu cuối của tin nhắn: “我们有时间还想再过来看个电影” — quay lại xem một bộ phim.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 33,
+          "printedPage": 17,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "exercises-hsk2-l02-main",
+    "titleVi": "Bộ luyện tập chính — Bài 2 HSK 2",
+    "noteVi": "Gồm ba nhóm theo sách: 4 câu khởi động nối từ – hình (Textbook tr.010); 5 câu chọn từ điền trống của bài tập tổng hợp (tr.017, ngân hàng từ in sẵn); 3 câu điền cụm từ mở rộng của Workbook (tr.012). Câu hỏi riêng của bốn đoạn nằm ngay dưới từng đoạn ở mục Nghe & đọc (chuẩn D28), không nằm trong bộ này.",
+    "items": [
+     {
+      "id": "tb2l2-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.010): nối từ với hình đúng — 公交车.",
+      "promptZh": "公交车",
+      "promptPinyin": "gōngjiāochē",
+      "options": [
+       {
+        "id": "1",
+        "zh": "票",
+        "pinyin": "piào",
+        "vi": "vé",
+        "image": "assets/hsk2-lesson-02/warm-ticket.webp",
+        "imageAlt": "Tranh vẽ lại: bàn tay đưa một tấm vé cho nhân viên soát vé"
+       },
+       {
+        "id": "2",
+        "zh": "公交车",
+        "pinyin": "gōngjiāochē",
+        "vi": "xe buýt",
+        "image": "assets/hsk2-lesson-02/warm-bus.webp",
+        "imageAlt": "Tranh vẽ lại: chiếc xe buýt màu vàng đang chạy trên đường phố"
+       },
+       {
+        "id": "3",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "bắt taxi",
+        "image": "assets/hsk2-lesson-02/warm-taxi.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái đứng bên đường giơ tay vẫy chiếc taxi màu vàng"
+       },
+       {
+        "id": "4",
+        "zh": "教室",
+        "pinyin": "jiàoshì",
+        "vi": "phòng học",
+        "image": "assets/hsk2-lesson-02/warm-classroom.webp",
+        "imageAlt": "Tranh vẽ lại: phòng học trống với nhiều bàn ghế và bảng đen"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 2 là xe buýt — đúng ảnh 1 của bài nối hình ở Textbook tr.010 (ảnh chụp xe buýt); ba hình còn lại là vé, taxi và phòng học.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 26,
+        "printedPage": 10,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.010): nối từ với hình đúng — 打车.",
+      "promptZh": "打车",
+      "promptPinyin": "dǎchē",
+      "options": [
+       {
+        "id": "1",
+        "zh": "教室",
+        "pinyin": "jiàoshì",
+        "vi": "phòng học",
+        "image": "assets/hsk2-lesson-02/warm-classroom.webp",
+        "imageAlt": "Tranh vẽ lại: phòng học trống với nhiều bàn ghế và bảng đen"
+       },
+       {
+        "id": "2",
+        "zh": "票",
+        "pinyin": "piào",
+        "vi": "vé",
+        "image": "assets/hsk2-lesson-02/warm-ticket.webp",
+        "imageAlt": "Tranh vẽ lại: bàn tay đưa một tấm vé cho nhân viên soát vé"
+       },
+       {
+        "id": "3",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "bắt taxi",
+        "image": "assets/hsk2-lesson-02/warm-taxi.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái đứng bên đường giơ tay vẫy chiếc taxi màu vàng"
+       },
+       {
+        "id": "4",
+        "zh": "公交车",
+        "pinyin": "gōngjiāochē",
+        "vi": "xe buýt",
+        "image": "assets/hsk2-lesson-02/warm-bus.webp",
+        "imageAlt": "Tranh vẽ lại: chiếc xe buýt màu vàng đang chạy trên đường phố"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 3 (cô gái giơ tay vẫy taxi) thể hiện đúng 打车 theo ảnh 2 của Textbook tr.010.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 26,
+        "printedPage": 10,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.010): nối từ với hình đúng — 教室.",
+      "promptZh": "教室",
+      "promptPinyin": "jiàoshì",
+      "options": [
+       {
+        "id": "1",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "bắt taxi",
+        "image": "assets/hsk2-lesson-02/warm-taxi.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái đứng bên đường giơ tay vẫy chiếc taxi màu vàng"
+       },
+       {
+        "id": "2",
+        "zh": "教室",
+        "pinyin": "jiàoshì",
+        "vi": "phòng học",
+        "image": "assets/hsk2-lesson-02/warm-classroom.webp",
+        "imageAlt": "Tranh vẽ lại: phòng học trống với nhiều bàn ghế và bảng đen"
+       },
+       {
+        "id": "3",
+        "zh": "公交车",
+        "pinyin": "gōngjiāochē",
+        "vi": "xe buýt",
+        "image": "assets/hsk2-lesson-02/warm-bus.webp",
+        "imageAlt": "Tranh vẽ lại: chiếc xe buýt màu vàng đang chạy trên đường phố"
+       },
+       {
+        "id": "4",
+        "zh": "票",
+        "pinyin": "piào",
+        "vi": "vé",
+        "image": "assets/hsk2-lesson-02/warm-ticket.webp",
+        "imageAlt": "Tranh vẽ lại: bàn tay đưa một tấm vé cho nhân viên soát vé"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 2 là phòng học với bàn ghế và bảng — đúng ảnh 3 của Textbook tr.010.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 26,
+        "printedPage": 10,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài khởi động (Textbook tr.010): nối từ với hình đúng — 票.",
+      "promptZh": "票",
+      "promptPinyin": "piào",
+      "options": [
+       {
+        "id": "1",
+        "zh": "公交车",
+        "pinyin": "gōngjiāochē",
+        "vi": "xe buýt",
+        "image": "assets/hsk2-lesson-02/warm-bus.webp",
+        "imageAlt": "Tranh vẽ lại: chiếc xe buýt màu vàng đang chạy trên đường phố"
+       },
+       {
+        "id": "2",
+        "zh": "教室",
+        "pinyin": "jiàoshì",
+        "vi": "phòng học",
+        "image": "assets/hsk2-lesson-02/warm-classroom.webp",
+        "imageAlt": "Tranh vẽ lại: phòng học trống với nhiều bàn ghế và bảng đen"
+       },
+       {
+        "id": "3",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "bắt taxi",
+        "image": "assets/hsk2-lesson-02/warm-taxi.webp",
+        "imageAlt": "Tranh vẽ lại: cô gái đứng bên đường giơ tay vẫy chiếc taxi màu vàng"
+       },
+       {
+        "id": "4",
+        "zh": "票",
+        "pinyin": "piào",
+        "vi": "vé",
+        "image": "assets/hsk2-lesson-02/warm-ticket.webp",
+        "imageAlt": "Tranh vẽ lại: bàn tay đưa một tấm vé cho nhân viên soát vé"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Hình 4 (bàn tay đưa tấm vé) thể hiện đúng 票 theo ảnh 4 của Textbook tr.010.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 26,
+        "printedPage": 10,
+        "section": "热身 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.017): chọn từ trong ngân hàng từ （但/间/车站/打车/过来） điền vào chỗ trống.",
+      "promptZh": "你家太远了，我们是（）过来的。",
+      "promptPinyin": "Nǐ jiā tài yuǎn le, wǒmen shì ( ) guòlái de.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "但",
+        "pinyin": "dàn",
+        "vi": "nhưng"
+       },
+       {
+        "id": "2",
+        "zh": "间",
+        "pinyin": "jiān",
+        "vi": "gian/phòng"
+       },
+       {
+        "id": "3",
+        "zh": "车站",
+        "pinyin": "chēzhàn",
+        "vi": "trạm xe"
+       },
+       {
+        "id": "4",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "5",
+        "zh": "过来",
+        "pinyin": "guòlái",
+        "vi": "đến đây"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần 打车 (đi taxi): 'nhà bạn xa quá, chúng tôi đi taxi đến đây'. Thân câu và ngân hàng từ in nguyên văn ở Textbook tr.017.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 17,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.017): chọn từ trong ngân hàng từ （但/间/车站/打车/过来） điền vào chỗ trống.",
+      "promptZh": "那是一（）大教室，我们明天要去那儿上课。",
+      "promptPinyin": "Nà shì yí ( ) dà jiàoshì, wǒmen míngtiān yào qù nàr shàngkè.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "但",
+        "pinyin": "dàn",
+        "vi": "nhưng"
+       },
+       {
+        "id": "2",
+        "zh": "间",
+        "pinyin": "jiān",
+        "vi": "gian/phòng"
+       },
+       {
+        "id": "3",
+        "zh": "车站",
+        "pinyin": "chēzhàn",
+        "vi": "trạm xe"
+       },
+       {
+        "id": "4",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "5",
+        "zh": "过来",
+        "pinyin": "guòlái",
+        "vi": "đến đây"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần lượng từ 间 (đếm phòng): 'đó là một phòng học lớn'. Thân câu in nguyên văn ở Textbook tr.017.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 17,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.017): chọn từ trong ngân hàng từ （但/间/车站/打车/过来） điền vào chỗ trống.",
+      "promptZh": "李文让我去接他的朋友，（）我太忙了，没时间。",
+      "promptPinyin": "Lǐ Wén ràng wǒ qù jiē tā de péngyou, ( ) wǒ tài máng le, méi shíjiān.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "但",
+        "pinyin": "dàn",
+        "vi": "nhưng"
+       },
+       {
+        "id": "2",
+        "zh": "间",
+        "pinyin": "jiān",
+        "vi": "gian/phòng"
+       },
+       {
+        "id": "3",
+        "zh": "车站",
+        "pinyin": "chēzhàn",
+        "vi": "trạm xe"
+       },
+       {
+        "id": "4",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "5",
+        "zh": "过来",
+        "pinyin": "guòlái",
+        "vi": "đến đây"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần 但 (nhưng) nối hai vế đối lập: được nhờ đi đón bạn nhưng quá bận. Thân câu in nguyên văn ở Textbook tr.017.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 17,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.017): chọn từ trong ngân hàng từ （但/间/车站/打车/过来） điền vào chỗ trống.",
+      "promptZh": "A：请问，去北京大学的（）在哪儿？B：就在前边，不远。",
+      "promptPinyin": "Qǐngwèn, qù Běijīng Dàxué de ( ) zài nǎr? —— Jiù zài qiánbian, bù yuǎn.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "但",
+        "pinyin": "dàn",
+        "vi": "nhưng"
+       },
+       {
+        "id": "2",
+        "zh": "间",
+        "pinyin": "jiān",
+        "vi": "gian/phòng"
+       },
+       {
+        "id": "3",
+        "zh": "车站",
+        "pinyin": "chēzhàn",
+        "vi": "trạm xe"
+       },
+       {
+        "id": "4",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "5",
+        "zh": "过来",
+        "pinyin": "guòlái",
+        "vi": "đến đây"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cần 车站 (trạm xe): 'trạm xe đi Đại học Bắc Kinh ở đâu?'. Hội thoại in nguyên văn ở Textbook tr.017.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 17,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l2-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài tập tổng hợp (Textbook tr.017): chọn từ trong ngân hàng từ （但/间/车站/打车/过来） điền vào chỗ trống.",
+      "promptZh": "A：家月，我想请你（）帮个忙，你有时间吗？B：不好意思，我在外边旅游呢。",
+      "promptPinyin": "Jiāyuè, wǒ xiǎng qǐng nǐ ( ) bāng gè máng, nǐ yǒu shíjiān ma? —— Bù hǎoyìsi, wǒ zài wàibian lǚyóu ne.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "但",
+        "pinyin": "dàn",
+        "vi": "nhưng"
+       },
+       {
+        "id": "2",
+        "zh": "间",
+        "pinyin": "jiān",
+        "vi": "gian/phòng"
+       },
+       {
+        "id": "3",
+        "zh": "车站",
+        "pinyin": "chēzhàn",
+        "vi": "trạm xe"
+       },
+       {
+        "id": "4",
+        "zh": "打车",
+        "pinyin": "dǎchē",
+        "vi": "đi taxi"
+       },
+       {
+        "id": "5",
+        "zh": "过来",
+        "pinyin": "guòlái",
+        "vi": "đến đây"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Mẫu 请你过来帮个忙 (nhờ bạn đến đây giúp một việc) cần 过来. Hội thoại in nguyên văn ở Textbook tr.017.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 33,
+        "printedPage": 17,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb2l2-ext-1",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.012): dùng cụm từ mới （公交站/火车站/下次） điền vào chỗ trống.",
+      "promptZh": "我们还是（）再去饭店吃饭吧。",
+      "promptPinyin": "Wǒmen háishi ( ) zài qù fàndiàn chīfàn ba.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "公交站",
+        "pinyin": "gōngjiāozhàn",
+        "vi": "trạm xe buýt"
+       },
+       {
+        "id": "2",
+        "zh": "火车站",
+        "pinyin": "huǒchēzhàn",
+        "vi": "ga tàu"
+       },
+       {
+        "id": "3",
+        "zh": "下次",
+        "pinyin": "xià cì",
+        "vi": "lần sau"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm mới 下次 (lần sau, ghép 下 + 次）: 'chúng ta hay là để lần sau hãy đến nhà hàng ăn'. Câu in ở Workbook tr.012 （做一做 câu 1).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 19,
+        "printedPage": 12,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     },
+     {
+      "id": "wb2l2-ext-2",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.012): dùng cụm từ mới （公交站/火车站/下次） điền vào chỗ trống.",
+      "promptZh": "前边有个（），我们去看一下有没有到学校的车。",
+      "promptPinyin": "Qiánbian yǒu gè ( ), wǒmen qù kàn yíxià yǒu méiyǒu dào xuéxiào de chē.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "公交站",
+        "pinyin": "gōngjiāozhàn",
+        "vi": "trạm xe buýt"
+       },
+       {
+        "id": "2",
+        "zh": "火车站",
+        "pinyin": "huǒchēzhàn",
+        "vi": "ga tàu"
+       },
+       {
+        "id": "3",
+        "zh": "下次",
+        "pinyin": "xià cì",
+        "vi": "lần sau"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm mới 公交站 (trạm xe buýt, ghép 公交 + 站）: phía trước có một trạm xe buýt. Câu in ở Workbook tr.012 （做一做 câu 2).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 19,
+        "printedPage": 12,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     },
+     {
+      "id": "wb2l2-ext-3",
+      "type": "multiple-choice",
+      "promptVi": "Mở rộng từ vựng (Workbook tr.012): dùng cụm từ mới （公交站/火车站/下次） điền vào chỗ trống.",
+      "promptZh": "我们的火车是十点的，现在九点多了，打车去（）吧。",
+      "promptPinyin": "Wǒmen de huǒchē shì shí diǎn de, xiànzài jiǔ diǎn duō le, dǎchē qù ( ) ba.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "公交站",
+        "pinyin": "gōngjiāozhàn",
+        "vi": "trạm xe buýt"
+       },
+       {
+        "id": "2",
+        "zh": "火车站",
+        "pinyin": "huǒchēzhàn",
+        "vi": "ga tàu"
+       },
+       {
+        "id": "3",
+        "zh": "下次",
+        "pinyin": "xià cì",
+        "vi": "lần sau"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Cụm mới 火车站 (ga tàu, ghép 火车 + 站）: đi taxi đến ga tàu. Câu in ở Workbook tr.012 （做一做 câu 3).",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 19,
+        "printedPage": 12,
+        "section": "小语讲堂 · 二、字词拓展"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckIntroVi": "Ba bài tự luyện theo sách: đóng vai hỏi đường đến rạp chiếu phim (hoạt động lớp học tr.018), nói lựa chọn trong ba tình huống của phần Khởi động (tr.010) và nhìn hình hoàn thành câu (bài tập tổng hợp, tr.017). Phần tự luyện không chấm điểm; hãy sử dụng ô nháp và tự đối chiếu.",
+   "selfCheckListenVi": "",
+   "selfCheckTasks": [
+    {
+     "id": "st-h2l2-01",
+     "kind": "speaking",
+     "titleVi": "Đóng vai: hỏi đường đến rạp chiếu phim",
+     "promptVi": "Theo hoạt động lớp học ở cuối bài (Textbook tr.018): làm việc theo cặp — một người hỏi đường, một người trả lời. Người hỏi hỏi quanh đây có xe buýt đến rạp chiếu phim Tân Tân （新新电影院） không, trạm xe có xa không, đến rạp mất bao lâu…; dùng từ và mẫu của bài （公交车、车站、远、打车、还是……吧）. Ví dụ mở đầu của sách: A：请问，这儿有到新新电影院的公交车吗？B：有，但车站有点儿远。",
+     "instructionVi": "Đóng vai theo cặp: một người hỏi đường đến rạp chiếu phim, một người trả lời về xe buýt, trạm xe và quãng đường.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 34,
+       "printedPage": 18,
+       "section": "课堂活动 · 角色扮演"
+      }
+     ],
+     "prompts": [
+      "（Người A hỏi: có xe buýt đến 新新电影院 không？)",
+      "（Người B trả lời: có, nhưng trạm xe xa/gần thế nào, đi mất bao lâu?)"
+     ],
+     "draftPromptVi": "Nháp hội thoại hỏi đường của bạn:",
+     "answerStatus": "unverified"
+    },
+    {
+     "id": "st-h2l2-02",
+     "kind": "speaking",
+     "titleVi": "Nói sở thích: bạn thích cách nào hơn?",
+     "promptVi": "Theo bài Khởi động 2 (Textbook tr.010): với ba tình huống trong bảng của sách, nói bạn thích cách nào hơn và kết luận bằng mẫu “还是……吧”: 1) Khi đi du lịch — đi tàu （坐火车去） hay đi máy bay （坐飞机去）? 2) Khi tan làm rất muộn — về nhà nấu cơm （回家做饭） hay đến nhà hàng ăn （去饭店吃饭）? 3) Tối thứ Bảy — nghỉ ở nhà （在家休息） hay đi xem phim （去看电影）?",
+     "instructionVi": "Nói lựa chọn của bạn cho ba tình huống trong bảng Khởi động, mỗi tình huống kết bằng một câu “还是……吧”.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 26,
+       "printedPage": 10,
+       "section": "热身 2"
+      }
+     ],
+     "prompts": [
+      "去旅游的时候：坐火车去 / 坐飞机去？",
+      "很晚下班的时候：回家做饭 / 去饭店吃饭？",
+      "星期六的晚上：在家休息 / 去看电影？"
+     ],
+     "draftPromptVi": "Nháp ba câu lựa chọn của bạn:",
+     "answerStatus": "unverified"
+    },
+    {
+     "id": "st-h2l2-03",
+     "kind": "speaking",
+     "titleVi": "Nhìn hình hoàn thành câu (Textbook tr.017)",
+     "promptVi": "Bài tập tổng hợp: nhìn bốn hình và hoàn thành bốn câu in trong sách bằng từ và điểm ngữ pháp của bài, nói to rồi tự đối chiếu gợi ý: 1) 今天不忙，你________在家吃早饭吧。 2) 这件衣服________。 3) 他在学习，我们________去找他玩了。 4) 新来的这个老师________岁。 Gợi ý hoàn chỉnh: 1) 还是； 2) 二百多块钱 (biển giá trong hình là 219 tệ — dùng “多” nói số gần đúng); 3) 还是别 (cậu ấy đang học, đừng đến quấy rầy); 4) 二十多 (cô giáo trẻ, khoảng hơn hai mươi tuổi). Phần này tự luyện nói, không chấm điểm.",
+     "prompts": [
+      "Hình 1：今天不忙，你________在家吃早饭吧。",
+      "Hình 2：这件衣服________。",
+      "Hình 3：他在学习，我们________去找他玩了。",
+      "Hình 4：新来的这个老师________岁。"
+     ],
+     "instructionVi": "Nhìn từng hình, hoàn thành câu rồi nói to; sau đó mở gợi ý trong đề để tự đối chiếu.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 33,
+       "printedPage": 17,
+       "section": "综合练习 · 描述图片"
+      }
+     ],
+     "promptImages": [
+      {
+       "src": "assets/hsk2-lesson-02/desc-breakfast.webp",
+       "alt": "Tranh vẽ lại: đĩa bánh quẩy và bát sữa đậu nành trên bàn ăn sáng",
+       "captionVi": "Tranh vẽ lại theo hình 1 của bài tập mô tả hình (Textbook tr.017): bữa sáng ở nhà.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 33,
+         "printedPage": 17,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-02/desc-clothes.webp",
+       "alt": "Tranh vẽ lại: chồng áo phông nhiều màu trong cửa hàng với biển giá 219 tệ",
+       "captionVi": "Tranh vẽ lại theo hình 2 (Textbook tr.017): chiếc áo giá 219 tệ trong cửa hàng.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 33,
+         "printedPage": 17,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-02/desc-study.webp",
+       "alt": "Tranh vẽ lại: cậu bé ngồi học bài ở bàn học cạnh bàn tính",
+       "captionVi": "Tranh vẽ lại theo hình 3 (Textbook tr.017): cậu bé đang học bài.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 33,
+         "printedPage": 17,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-02/desc-teacher.webp",
+       "alt": "Tranh vẽ lại: cô giáo trẻ đứng giảng bài trước lớp học",
+       "captionVi": "Tranh vẽ lại theo hình 4 (Textbook tr.017): cô giáo mới đến đang dạy học.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 33,
+         "printedPage": 17,
+         "section": "综合练习 · 用本课新学的词语和语言点描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết bốn câu hoàn chỉnh của bạn để tự đối chiếu:",
+     "answerStatus": "unverified"
+    }
+   ],
+   "apply": {
+    "titleVi": "Đóng vai hỏi đường và viết tin nhắn kể về trường",
+    "instructionVi": "Hai nhiệm vụ vận dụng của bài: đóng vai hỏi đường như hoạt động cuối bài của sách và viết một tin nhắn ngắn kể về một ngôi trường — giống hai tình huống trung tâm của bài học.",
+    "audioTrackId": "trk-tb2-l02-1",
+    "noteVi": "Nghe lại track 2-1 để nhớ mẫu hỏi xe buýt và đề xuất đi taxi.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 34,
+      "printedPage": 18,
+      "section": "课堂活动"
+     },
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 32,
+      "printedPage": 16,
+      "section": "课文 4"
+     }
+    ],
+    "samplePassageIds": [
+     "h2l2-text-1"
+    ],
+    "tasks": [
+     {
+      "id": "speak-h2l2-directions",
+      "kind": "speaking",
+      "titleVi": "Đóng vai: hỏi đường đi xem phim",
+      "promptVi": "Tưởng tượng bạn đang ở khách sạn và muốn đến rạp chiếu phim gần nhất. Hỏi nhân viên lễ tân: có xe buýt đến đó không, trạm xe có xa không; nếu xa thì đề xuất đi taxi bằng mẫu “还是……吧”. Nói ít nhất 4 câu.",
+      "sampleZh": "请问，这儿有到北京大学的公交车吗？——有，但车站有点儿远。——我们还是打车去吧。",
+      "samplePinyin": "Qǐngwèn, zhèr yǒu dào Běijīng Dàxué de gōngjiāochē ma? —— Yǒu, dàn chēzhàn yǒudiǎnr yuǎn. —— Wǒmen háishi dǎchē qù ba.",
+      "sampleVi": "Xin hỏi, ở đây có xe buýt đến Đại học Bắc Kinh không? — Có, nhưng trạm xe hơi xa. — Chúng ta hay là đi taxi đi. (Câu mẫu — Đoạn 1 của bài.)"
+     },
+     {
+      "id": "speak-h2l2-message",
+      "kind": "speaking",
+      "titleVi": "Viết và đọc tin nhắn kể về một ngôi trường",
+      "promptVi": "Đóng vai Bạch Gia Nguyệt: viết một tin nhắn 3 câu kể về một ngôi trường bạn từng đến — trường to thế nào, có bao nhiêu học sinh (dùng “多” nói số gần đúng), và một điều bạn muốn quay lại làm. Đọc to tin nhắn sau khi viết.",
+      "sampleZh": "北京大学很大，有四万多名学生。学校很漂亮，里边还有家电影院。",
+      "samplePinyin": "Běijīng Dàxué hěn dà, yǒu sìwàn duō míng xuéshēng. Xuéxiào hěn piàoliang, lǐbian hái yǒu jiā diànyǐngyuàn.",
+      "sampleVi": "Đại học Bắc Kinh rất lớn, có hơn bốn mươi nghìn sinh viên. Trường rất đẹp, bên trong còn có một rạp chiếu phim. (Câu mẫu — Đoạn 4 của bài.)"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "lookup": {
+    "introVi": "Chạm vào một từ hoặc cụm từ trong câu của bốn đoạn, ví dụ kiến thức và tổng kết để xem nhanh Pinyin, Hán–Việt và nghĩa tiếng Việt. Từ điển gồm 16 từ mới, tên riêng 北京大学 của bài, các từ đã học ở Bài 1 HSK 2 và từ vựng HSK 1.",
+    "extras": [
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "An Ni — sinh viên, bạn của Bạch Gia Nguyệt (tên riêng)"
+     },
+     {
+      "zh": "四万",
+      "pinyin": "sìwàn",
+      "hanViet": "TỨ VẠN",
+      "vi": "bốn mươi nghìn (40.000)"
+     },
+     {
+      "zh": "三千",
+      "pinyin": "sānqiān",
+      "hanViet": "TAM THIÊN",
+      "vi": "ba nghìn (3.000)"
+     },
+     {
+      "zh": "二十",
+      "pinyin": "èrshí",
+      "hanViet": "NHỊ THẬP",
+      "vi": "hai mươi (20)"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "một"
+     },
+     {
+      "zh": "两",
+      "pinyin": "liǎng",
+      "hanViet": "LƯỠNG",
+      "vi": "hai (dùng trước lượng từ)"
+     },
+     {
+      "zh": "五",
+      "pinyin": "wǔ",
+      "hanViet": "NGŨ",
+      "vi": "năm"
+     }
+    ],
+    "phrases": []
+   },
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Bắt đầu",
+     "descVi": "Xem bối cảnh: hai cô gái đi taxi đến tham quan Đại học Bắc Kinh.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Từ cần biết trước",
+     "descVi": "Học 16 từ mới và tên riêng 北京大学 theo bốn đoạn, nghe audio từ mới của sách.",
+     "sectionId": "prep"
+    },
+    {
+     "step": 3,
+     "titleVi": "Hiểu cách dùng",
+     "descVi": "“还是……吧” đề xuất, “多” số gần đúng, định ngữ đứng trước danh từ, kèm phần Hán tự 门/辶.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe & đọc",
+     "descVi": "Nghe bốn đoạn và trả lời câu hỏi in trong sách ngay dưới mỗi đoạn.",
+     "sectionId": "reader",
+     "dialogueId": "h2l2-text-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập",
+     "descVi": "Nối từ – hình, chọn từ điền trống theo sách và mở rộng cụm từ của Workbook.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói / vận dụng",
+     "descVi": "Đóng vai hỏi đường và viết tin nhắn kể về một ngôi trường.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Đoạn 1 · Hỏi đường ở lễ tân",
+     "bodyVi": "Có xe buýt đến Đại học Bắc Kinh nhưng trạm xe hơi xa （但 + 远）, lại dễ bắt taxi, nên hai cô chốt phương án bằng mẫu của bài: hay là đi taxi.",
+     "exampleZh": "我们还是打车去吧。",
+     "examplePinyin": "Wǒmen háishi dǎchē qù ba.",
+     "exampleVi": "Chúng ta hay là đi taxi đi."
+    },
+    {
+     "titleVi": "Đoạn 2 · Ngôi trường hơn bốn vạn sinh viên",
+     "bodyVi": "An Ni đọc trên mạng: trường có hơn 40.000 sinh viên （四万多名） và hơn 3.000 sinh viên nước ngoài. Bạch Gia Nguyệt cũng muốn đến đây học; gần đó có một phòng học để vào xem.",
+     "exampleZh": "北京大学有四万多名学生呢！",
+     "examplePinyin": "Běijīng Dàxué yǒu sìwàn duō míng xuéshēng ne!",
+     "exampleVi": "Đại học Bắc Kinh có hơn bốn mươi nghìn sinh viên cơ mà!"
+    },
+    {
+     "titleVi": "Đoạn 3 · Rạp chiếu phim vé rẻ",
+     "bodyVi": "Trong trường có rạp chiếu phim, vé họ bán rất rẻ — có vé chưa đến 20 tệ. Nhưng hai cô quyết định không xem phim ngay: trường đã đủ đẹp rồi.",
+     "exampleZh": "他们卖的电影票也很便宜。",
+     "examplePinyin": "Tāmen mài de diànyǐngpiào yě hěn piányi.",
+     "exampleVi": "Vé xem phim họ bán cũng rất rẻ."
+    },
+    {
+     "titleVi": "Đoạn 4 · Tin nhắn cho Trần Thiên Trung",
+     "bodyVi": "Tin nhắn tóm tắt chuyến đi: trường rất lớn và đẹp, có rạp chiếu phim, vé không đắt; khi nào có thời gian hai cô muốn quay lại xem một bộ phim.",
+     "exampleZh": "我们有时间还想再过来看个电影。",
+     "examplePinyin": "Wǒmen yǒu shíjiān hái xiǎng zài guòlái kàn gè diànyǐng.",
+     "exampleVi": "Khi nào có thời gian, chúng mình còn muốn quay lại xem một bộ phim."
+    },
+    {
+     "titleVi": "Ba điểm ngữ pháp cần nhớ",
+     "bodyVi": "“还是……吧”: đề xuất phương án tốt hơn sau khi cân nhắc. “多” sau số: số gần đúng — bội số của 10 thì 多 ngay sau số, còn lại 多 sau lượng từ. Định ngữ là động từ/cụm chủ–vị phải đứng trước danh từ kèm 的.",
+     "exampleZh": "教室里有二十多个学生。",
+     "examplePinyin": "Jiàoshì li yǒu èrshí duō gè xuéshēng.",
+     "exampleVi": "Trong phòng học có hơn hai mươi học sinh."
+    }
+   ]
   }
  ],
  "writingSets": [
@@ -52379,6 +55288,179 @@
        "sourceId": "src-hsk2-workbook-pdf",
        "pdfPage": 8,
        "printedPage": 1,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "writing-hsk2-l02",
+   "lessonId": "hsk2-l02",
+   "bookId": "book-hsk2-writing",
+   "titleVi": "Luyện viết Bài 2 · 还是打车去北大吧",
+   "introVi": "Bốn chữ của sách luyện viết Bài 2, theo đúng thứ tự của sách: hai chữ có khung cửa 门字框 （间、问） và hai chữ có bộ 走之旁 （过、远） gắn với đi lại. Mỗi chữ học theo mạch của sách: nhìn chữ → xem thứ tự nét → tập viết theo mẫu → tự viết → nhớ lại từ và câu chứa chữ.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-writing-pdf",
+     "pdfPage": 2,
+     "printedPage": 2,
+     "section": "Trang 2 (PDF) — không có số trang in"
+    }
+   ],
+   "chars": [
+    {
+     "id": "w-h2l2-jian",
+     "char": "间",
+     "pinyin": "jiān",
+     "hanViet": "GIAN",
+     "meaningVi": "khoảng; gian (phòng)",
+     "radical": {
+      "zh": "门（门字框）",
+      "pinyin": "ménzìkuàng"
+     },
+     "strokeCount": 7,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "二十间",
+      "pinyin": "èrshí jiān",
+      "vi": "hai mươi gian (phòng)"
+     },
+     "sentence": {
+      "zh": "这儿有二十多间教室。",
+      "pinyin": "Zhèr yǒu èrshí duō jiān jiàoshì.",
+      "vi": "Ở đây có hơn hai mươi phòng học."
+     },
+     "tipVi": "间 = 门 (khung cửa) + 日 (mặt trời) ở giữa. Viết khung 门 trước rồi mới đặt 日 vào trong; nét cuối là nét ngang đóng khung ở dưới của 日, đừng để 日 chạm hai cạnh khung.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 2,
+       "printedPage": 2,
+       "section": "Sách viết HSK 2 · Bài 2"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 11,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l2-wen",
+     "char": "问",
+     "pinyin": "wèn",
+     "hanViet": "VẤN",
+     "meaningVi": "hỏi",
+     "radical": {
+      "zh": "门（门字框）",
+      "pinyin": "ménzìkuàng"
+     },
+     "strokeCount": 6,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "问一下",
+      "pinyin": "wèn yíxià",
+      "vi": "hỏi một chút"
+     },
+     "sentence": {
+      "zh": "你还是问一下老师吧。",
+      "pinyin": "Nǐ háishi wèn yíxià lǎoshī ba.",
+      "vi": "Bạn hay là hỏi thầy/cô một chút đi."
+     },
+     "tipVi": "问 = 门 + 口 (cái miệng) — như ghé miệng vào khung cửa để hỏi. Khung 门 viết trước, 口 nhỏ gọn ở giữa dưới; đừng viết 口 to bằng khung.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 2,
+       "printedPage": 2,
+       "section": "Sách viết HSK 2 · Bài 2"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 11,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l2-guo",
+     "char": "过",
+     "pinyin": "guò",
+     "hanViet": "QUÁ",
+     "meaningVi": "qua; đến",
+     "radical": {
+      "zh": "辶（走之旁）",
+      "pinyin": "zǒuzhīpáng"
+     },
+     "strokeCount": 6,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "过来",
+      "pinyin": "guòlái",
+      "vi": "lại đây; đến đây"
+     },
+     "sentence": {
+      "zh": "你还是过来吧。",
+      "pinyin": "Nǐ háishi guòlái ba.",
+      "vi": "Bạn hay là lại đây đi."
+     },
+     "tipVi": "过 viết phần 寸 trước, bộ 辶 viết sau cùng: nét chấm của 辶 ở trên, nét cong ôm dưới và nét mác cuối kéo dài nâng cả chữ. Đây là thứ tự chung của các chữ có 走之旁.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 2,
+       "printedPage": 2,
+       "section": "Sách viết HSK 2 · Bài 2"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 11,
+       "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l2-yuan",
+     "char": "远",
+     "pinyin": "yuǎn",
+     "hanViet": "VIỄN",
+     "meaningVi": "xa",
+     "radical": {
+      "zh": "辶（走之旁）",
+      "pinyin": "zǒuzhīpáng"
+     },
+     "strokeCount": 7,
+     "strokeDataStatus": "verified",
+     "strokeSourceId": "src-hanzi-stroke-data",
+     "word": {
+      "zh": "不远",
+      "pinyin": "bù yuǎn",
+      "vi": "không xa"
+     },
+     "sentence": {
+      "zh": "不远，十多分钟就到了。",
+      "pinyin": "Bù yuǎn, shí duō fēnzhōng jiù dào le.",
+      "vi": "Không xa, mười mấy phút là đến nơi."
+     },
+     "tipVi": "远 = 元 + 辶. Viết 元 gọn ở góc trên phải, bộ 辶 ôm phía dưới; nét mác cuối là nét dài nhất, giúp chữ không bị chìm về một phía.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 2,
+       "printedPage": 2,
+       "section": "Sách viết HSK 2 · Bài 2"
+      },
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 18,
+       "printedPage": 11,
        "section": "小语讲堂 · 一、汉字"
       }
      ]

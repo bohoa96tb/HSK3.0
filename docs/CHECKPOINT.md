@@ -265,3 +265,14 @@
 - Kiểm thử: test 211/211, validator OK, audit đạt. CI vẫn chưa tạo được qua connector (403), bản bàn giao docs/ci/ci.yml chờ Hoa tạo qua web.
 - nextTask: HSK 2 Bài 2 《还是打车去北大吧》 (TB tr. in 010–018 = PDF 26–34; WB tr. in 011–020 = PDF 18–27; sách viết tr.2: 间/问/过/远 — từ/câu đầy đủ ở INDEX kiểm kê nội bộ, phải đối chiếu lại trang ảnh trước khi ghi dữ liệu). Khi Hoa nhắn "Tiếp tục": làm trọn Bài 2 theo cùng khuôn (biên soạn → test → QA độc lập → PR → nghiệm thu live), gồm bộ chữ viết Bài 2 (tải thêm dữ liệu nét 4 chữ 间/问/过/远 và đối chiếu số nét với sách).
 - Việc treo cũ không đổi: CI qua web; nút Tiếp tục D26 chưa kiểm lại trên Android thật của Hoa; track mô phỏng Bài 5/6/7 HSK 1 chờ Hoa yêu cầu; toàn bộ mốc đoạn audio (HSK 1 + HSK 2) vẫn asr-draft chưa nghe kiểm chứng.
+
+## HSK 2 Bài 2 + Bộ viết Bài 2 — ĐÃ PHÁT HÀNH (2026-11-04)
+
+- branch: hsk2-lesson-02-writing → PR #108 merge 9decf6cc; contentVersion live `20261104-hsk2l2-writing1` (content.json trên URL thật khớp byte bản local, sha256 c46c18ca…; 9 hình đối chiếu git blob SHA 9/9 trước merge).
+- Nội dung Bài 2 《还是打车去北大吧》: 21 câu/4 课文， 17 từ (4 nhóm; tên riêng 北京大学 có audio), 3 KP chính （还是……吧 / 多 biểu số gần đúng / định ngữ) + nền tảng 门字框/走之旁， 10 câu hỏi in tại đoạn theo D28 (8 nghe + 2 đọc), bộ chính 12 câu (4 nối hình + 5 điền từ nguyên văn tr.017 + 3 WB tr.012), 3 tự luyện, apply 2 nhiệm vụ, tra từ 37/37, 9 hình mới (assets/hsk2-lesson-02).
+- Khu viết: bộ Bài 2 — 间/问/过/远 (nét 7/6/6/7 khớp Make Me a Hanzi và sách viết tr.2); từ/câu đúng nguyên văn sách viết.
+- Biên soạn tự bắt 1 lỗi chữ trước QA: câu cuối Đoạn 4 thừa một chữ 看 trong bản nháp — đối chiếu ảnh 300 DPI + Pinyin in + ASR: bản đúng một 看 "我们有时间还想再过来看个电影。", đã khoá bằng test.
+- QA độc lập (D17): ĐẠT 10/10 mảng, 0 lỗi nghiêm trọng (tự chấm lại 22 đáp án khớp khóa; thân câu điền từ nguyên văn); 2 lỗi nhẹ đã sửa trong nhánh: alt ảnh ngữ cảnh bỏ "bảng tên trường" (tranh không có bảng tên đọc được), đáp án quickCheck phân bổ lại vị trí (2/2/1/1). Kiểm thử: test 216/216, validator OK, audit đạt.
+- Nghiệm thu live 6/6: lộ trình HSK 2 (2 bài đã mở, Bài 3 chưa mở), trang bài đủ 7 mục + thẻ viết, Nghe & đọc 4 đoạn + câu hỏi tại đoạn, track 2-1 phát thật, Luyện tập chấm đúng tại chỗ, khu viết Bài 2 mở chữ 间 có hoạt ảnh SVG; hồi quy trang khóa HSK 1 (15/15 mở).
+- nextTask: HSK 2 Bài 3 《我想去西安旅游》 (TB tr. in 019–028 = PDF 35–44; WB tr. in 021–030 = PDF 28–37; sách viết tr.3: 汉/洗/家/完 — đối chiếu lại trang ảnh trước khi ghi dữ liệu). Khi Hoa nhắn "Tiếp tục": làm trọn Bài 3 theo cùng khuôn (biên soạn → test → QA độc lập → PR → nghiệm thu live), gồm bộ chữ viết Bài 3.
+- Việc treo cũ không đổi: CI qua web; nút Tiếp tục D26 chưa kiểm lại trên Android thật của Hoa; track mô phỏng Bài 5/6/7 HSK 1 chờ Hoa yêu cầu; toàn bộ mốc đoạn audio (HSK 1 + HSK 2) vẫn asr-draft chưa nghe kiểm chứng; span audio của từ 别 (Bài 2, track 2-6) là ước lượng ASR yếu nhất bài.

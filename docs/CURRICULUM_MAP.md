@@ -211,7 +211,7 @@ Nguồn: mục lục Textbook HSK 2 đối chiếu trực quan (PDF tr.13–15);
 | Bài | Tên bài (Textbook) | Tr. in TB | Chữ sách viết | Trạng thái app |
 |---|---|---|---|---|
 | 1 | 她请我们吃了北京烤鸭 | 001 | 打 接 冷 次 | **Đã phát hành** (xem dưới) |
-| 2 | 还是打车去北大吧 | 010 | 间 问 过 远 | Chưa biên soạn |
+| 2 | 还是打车去北大吧 | 010 | 间 问 过 远 | **Đã phát hành** (xem dưới) |
 | 3 | 我想去西安旅游 | 019 | 汉 洗 家 完 | Chưa biên soạn |
 | 4 | 你穿红色的很好看 | 029 | 红 绿 场 块 | Chưa biên soạn |
 | 5 | 第一次去中国朋友家 | 037 | 茶 菜 店 床 | Chưa biên soạn |
@@ -231,3 +231,7 @@ Nguồn: mục lục Textbook HSK 2 đối chiếu trực quan (PDF tr.13–15);
 ### Bài 1 HSK 2 — chi tiết (đã phát hành 03/11/2026)
 
 4 课文 / 22 câu; 15 từ (4 nhóm theo đoạn); KP: 吧（2), 是……的， 兼语句 + nền tảng bộ 扌/冫; 10 câu hỏi tại đoạn (D28); bộ chính 12 câu; tự luyện 3 bài; khu viết: bộ `writing-hsk2-l01` 4 chữ. Audio: 8 track Textbook (1-1…1-8); track Workbook 01-1 thuộc mô phỏng, loại.
+
+### Bài 2 HSK 2 — chi tiết (đã phát hành 04/11/2026)
+
+4 课文 / 21 câu; 17 từ (4 nhóm theo đoạn, gồm tên riêng 北京大学）; KP: 还是……吧， 多 biểu số gần đúng, định ngữ + nền tảng bộ 门/辶; 10 câu hỏi tại đoạn (D28); bộ chính 12 câu; tự luyện 3 bài; khu viết: bộ `writing-hsk2-l02` 4 chữ （间/问/过/远）. Audio: 8 track Textbook (2-1…2-8); track Workbook 02-1 thuộc mô phỏng, loại.

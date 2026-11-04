@@ -332,3 +332,10 @@ Phương pháp: tải thêm các track từ mới Textbook (L1: 1-2/1-4/1-6; L2:
 - Workbook: track 01-1 (543 giây) là audio 模拟测练 → loại theo D15; stub ghi workbookAudioTrackCount = 1 để minh bạch.
 - Sách viết tr.1: 打 （打电话 — 请你给她打个电话。) / 接 （接人 — 他让我去接一个人。) / 冷 （很冷 — 北京现在很冷吧？) / 次 （这次 — 我这次是一个人来的。); số nét 5/11/7/6 khớp dữ liệu Make Me a Hanzi.
 - Lưu ý bản in: bản dịch Anh của sách dịch 姐姐 thành "cousin" (tr.007) — app dịch đúng là "chị" (chị ruột của Vương Nhất Phi).
+
+## HSK 2 Bài 2 — 还是打车去北大吧 (04/11/2026)
+
+- Textbook tr. in 010–018 (PDF 26–34): 4 课文 (lễ tân khách sạn / tham quan trường / rạp chiếu phim trong trường / tin nhắn ở cổng trường), 21 câu print-verified; 16 từ mới + 1 tên riêng 北京大学 (tên riêng này CÓ đoạn đọc trong track từ 2-2 nên có audio, như tiền lệ Bài 1); 3 KP chính （还是……吧 tr.012; 多 biểu số gần đúng tr.014; định ngữ tr.015–016) + 汉字 （门字框/走之旁， WB tr. in 011). Câu hỏi in tại 4 đoạn: 10 câu đặt tại đoạn theo D28 (8 nghe có audioSegment + 2 đọc hiểu tr.017). Bộ chính 12 câu: 4 nối hình （热身 tr.010) + 5 điền từ （综合 tr.017, nguyên văn) + 3 điền từ mở rộng (WB tr. in 012). Hình vẽ/sinh mới: `assets/hsk2-lesson-02/` + PRACTICE_ATTRIBUTION.md (chuẩn D19; biển giá "219" trong hình cửa hàng là nội dung câu hỏi nên giữ nguyên; chữ giả trên biển taxi của ảnh ngữ cảnh đã được làm trống; panel cô giáo sinh lần đầu có chữ giả trên bảng nên đã sinh lại với bảng trống).
+- Workbook: phần 模拟测练 bắt đầu từ tr. in 013 → loại theo D15; track WB 02-1 (khoảng 561 giây) là audio mô phỏng → loại; stub ghi workbookAudioTrackCount = 1 để minh bạch.
+- Kiểm chứng riêng câu cuối Đoạn 4: ảnh phóng to 300 DPI vùng câu + hàng Pinyin in ("guòlái kàn gè diànyǐng") + ASR cùng kết luận một 看 — "我们有时间还想再过来看个电影。" (bản nháp ban đầu của biên soạn thừa một 看， đã sửa trước QA).
+- Sách viết tr.2: 间 （二十间 — 这儿有二十多间教室。) / 问 （问一下 — 你还是问一下老师吧。) / 过 （过来 — 你还是过来吧。) / 远 （不远 — 不远，十多分钟就到了。); số nét 7/6/6/7 khớp dữ liệu Make Me a Hanzi.

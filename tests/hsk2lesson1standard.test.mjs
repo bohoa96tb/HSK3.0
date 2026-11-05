@@ -30,7 +30,8 @@ test('hsk2 catalogue: 15 lessons from the printed TOC, only lesson 1 open', () =
   assert.deepEqual(stubs.map((l) => l.titleZh), ['她请我们吃了北京烤鸭', '还是打车去北大吧', '我想去西安旅游', '你穿红色的很好看', '第一次去中国朋友家', '小雪，生日快乐！', '他篮球打得很好', '虽然你忘了，但是我记得', '我去买杯奶茶', '就要考试了', '我最喜欢吃中国菜', '这里比北京冷多了', '我们爱上中文课', '一个人过年多没意思啊', '我想再去一次中国']);
   assert.equal(stubs[0].publicationStatus, 'pilot-ready');
   assert.equal(stubs[1].publicationStatus, 'pilot-ready'); // lesson 2 opened in the next round
-  assert.ok(stubs.slice(2).every((l) => l.publicationStatus !== 'pilot-ready'));
+  assert.equal(stubs[2].publicationStatus, 'pilot-ready'); // lesson 3 opened in the round after
+  assert.ok(stubs.slice(3).every((l) => l.publicationStatus !== 'pilot-ready'));
   assert.equal(content.lessons.filter((l) => l.level === 'HSK 1').length, 15);
 });
 

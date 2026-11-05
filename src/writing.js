@@ -4,8 +4,8 @@
 // practiced / self / paper / needsReview. A character is never labelled
 // "mastered" — completing a stage once, especially with hints, is practice,
 // not mastery.
-import { loadProgress, update } from "./store.js?v=20261104-hsk2l2-writing1";
-import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261104-hsk2l2-writing1";
+import { loadProgress, update } from "./store.js?v=20261105-hsk2l3-writing1";
+import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261105-hsk2l3-writing1";
 
 const VENDOR_SRC = "assets/vendor/hanzi-writer-3.7.3.min.js";
 let hwPromise = null;

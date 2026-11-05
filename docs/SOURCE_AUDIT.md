@@ -339,3 +339,11 @@ Phương pháp: tải thêm các track từ mới Textbook (L1: 1-2/1-4/1-6; L2:
 - Workbook: phần 模拟测练 bắt đầu từ tr. in 013 → loại theo D15; track WB 02-1 (khoảng 561 giây) là audio mô phỏng → loại; stub ghi workbookAudioTrackCount = 1 để minh bạch.
 - Kiểm chứng riêng câu cuối Đoạn 4: ảnh phóng to 300 DPI vùng câu + hàng Pinyin in ("guòlái kàn gè diànyǐng") + ASR cùng kết luận một 看 — "我们有时间还想再过来看个电影。" (bản nháp ban đầu của biên soạn thừa một 看， đã sửa trước QA).
 - Sách viết tr.2: 间 （二十间 — 这儿有二十多间教室。) / 问 （问一下 — 你还是问一下老师吧。) / 过 （过来 — 你还是过来吧。) / 远 （不远 — 不远，十多分钟就到了。); số nét 7/6/6/7 khớp dữ liệu Make Me a Hanzi.
+
+## HSK 2 Bài 3 — 我想去西安旅游 (05/11/2026)
+
+- Textbook tr. in 019–028 (PDF 35–44): 4 课文 (ở cửa nhà / trò chuyện phòng khách / ăn táo bàn chuyện Tây An / cuộc gọi kể chuyện), 18 câu print-verified; 15 từ mới; 3 KP chính （结果补语 tr.021; 动词重叠（1） tr.022–023; 动词重叠（2） tr.024–025) + 汉字 （三点水/宝盖头， WB tr. in 021). Câu hỏi in tại 4 đoạn: 10 câu đặt tại đoạn theo D28 (8 nghe có audioSegment + 2 đọc hiểu tr.025). Bộ chính 12 câu: 4 nối hình （热身 tr.019) + 5 điền từ （综合 tr.026, nguyên văn) + 3 điền từ mở rộng (WB tr. in 022). Hình vẽ/sinh mới: `assets/hsk2-lesson-03/` + PRACTICE_ATTRIBUTION.md (chuẩn D19; trang sách trong tranh desc-read để trắng, không chữ giả).
+- Khối 学习小结 cuối bài là tổng kết LIÊN BÀI 1–3 (TB tr.027–028) → không thuộc riêng Bài 3, loại theo D27 như tiền lệ khối 13–15 ở cấp 1. Video 西安的旅游景点 （兵马俑） chỉ ghi nhận.
+- Workbook: phần 模拟测练 bắt đầu từ tr. in 023 → loại theo D15; track WB 03-1 là audio mô phỏng → loại; stub ghi workbookAudioTrackCount = 1 để minh bạch.
+- Sách viết tr.3: 汉 （汉字 — 我每天都会写写汉字。) / 洗 （洗手 — 饭前要洗洗手。) / 家 （在家 — 你在家休息休息吧。) / 完 （做完 — 我的工作做完了。); số nét 5/9/10/7 khớp dữ liệu Make Me a Hanzi (hanzi-writer-data@2.0.1, file ở gốc gói npm — kiểm chéo bằng file 打 khớp byte bản đã phát hành).
+- Lưu ý mốc audio: QA độc lập bắt mốc 为什么/不错 ở track 3-6 chồng biên 0,45 giây theo ASR word-level — đã cân lại trong nhánh trước phát hành; các mốc khác giữ asr-draft.

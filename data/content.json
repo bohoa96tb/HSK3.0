@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261104-hsk2l2-writing1",
+ "contentVersion": "20261105-hsk2l3-writing1",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -937,11 +937,16 @@
      "section": "Bài 3 · 我想去西安旅游"
     }
    ],
-   "textbookAudioTrackCount": null,
-   "workbookAudioTrackCount": null,
-   "publicationStatus": "catalogued",
-   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
-   "grammarIds": [],
+   "textbookAudioTrackCount": 8,
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo kiểm kê trực quan 2026-11-05 (Textbook tr. in 019–028; Workbook phần bài học tr. in 021–022, phần 模拟测练 từ tr.023 loại theo D15; khối 学习小结 liên bài 1–3 ở TB tr.027–028 loại theo D27; sách viết tr.3) và chuẩn Bài 8/D27/D28/D29. 4 đoạn, 18 câu print-verified; 15 từ mới; 4 điểm kiến thức (3 ngữ pháp + Hán tự nền tảng); 10 câu hỏi in trong sách đặt tại đoạn theo D28; bộ chính 12 câu; khu Luyện viết có bộ chữ của bài (汉/洗/家/完）. Mốc đoạn audio là asr-draft, chưa nghe kiểm chứng bởi người; track Workbook 03-1 thuộc phần mô phỏng nên không dùng.",
+   "grammarIds": [
+    "kp-hsk2-l03-result",
+    "kp-hsk2-l03-redup1",
+    "kp-hsk2-l03-redup2",
+    "kp-hsk2-l03-characters"
+   ],
    "sectionIds": [
     "intro",
     "prep",
@@ -55118,6 +55123,2768 @@
      "exampleVi": "Trong phòng học có hơn hai mươi học sinh."
     }
    ]
+  },
+  {
+   "lessonId": "hsk2-l03",
+   "intro": {
+    "goalVi": "Học cách hỏi và nói lý do （为什么）, dùng bổ ngữ kết quả để nói việc đã xong/thành thế nào, và dùng động từ trùng điệp để nói hành động ngắn, thử làm — qua một buổi tối bận rộn của Lưu Minh và kế hoạch đi Tây An.",
+    "estimatedMinutes": 75,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Lưu Minh đi làm về muộn vì việc chưa làm xong; ở nhà, Vương Nhất Tuyết đã nấu cơm xong chờ sẵn. Hai người bàn nhau tìm thời gian đi du lịch, và sau khi xem qua giới thiệu trên mạng, Nhất Tuyết rủ đi Tây An. Cuối bài, cô gọi điện kể cho bạn thân nghe một ngày mệt nhọc của Lưu Minh. Bài này cũng mở bộ chữ viết thứ ba: 汉、洗、家、完.",
+    "outcomesVi": [
+     "Nhận diện và dùng 15 từ mới của bài.",
+     "Dùng bổ ngữ kết quả （做好、做完、洗好） và phủ định đúng bằng 没… (bỏ “了”).",
+     "Dùng động từ trùng điệp cho việc sắp làm （想一想、休息休息） và việc đã làm （看了看、休息了一下）.",
+     "Hỏi và trả lời về lý do bằng 为什么.",
+     "Nghe hiểu và trả lời câu hỏi của bốn đoạn; kể lại được một ngày của người khác.",
+     "Luyện viết 4 chữ 汉、洗、家、完 ở khu Luyện viết chữ Hán."
+    ],
+    "contextImage": {
+     "src": "assets/hsk2-lesson-03/context-xian.webp",
+     "alt": "Tranh vẽ lại tháp chuông Tây An lúc hoàng hôn với vòng xoay giao thông quanh tháp, hai du khách đứng ngắm tháp",
+     "caption": "Tranh vẽ lại theo bối cảnh bài học (Textbook tr.023–024): Tháp Chuông ở trung tâm Tây An — nơi Vương Nhất Tuyết muốn đi du lịch.",
+     "width": 1280,
+     "height": 853
+    },
+    "studyTipVi": "Hai bẫy của bài: phủ định bổ ngữ kết quả phải BỎ “了” (“我没吃完饭”, không phải “没吃完饭了”), và động từ trùng điệp đổi dạng khi việc đã xảy ra （想一想 → 看了看）. Cả bốn đoạn đều có câu hỏi in sẵn trong sách — trong app, chúng nằm ngay dưới từng đoạn ở mục Nghe & đọc.",
+    "foundationSummaryVi": "Phần Hán tự (Workbook tr.021 + sách viết Bài 3): hai bộ 三点水 （氵） và 宝盖头 （宀） qua bốn chữ 汉、洗、家、完. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+    "courseTagsVi": "HSK 2 · Bài 3 · 我想去西安旅游",
+    "priorLessonNoteVi": "Hai nhân vật chính là người mới: Lưu Minh và Vương Nhất Tuyết. Từ vựng nối tiếp Bài 2: “过来” nay gặp thêm từ đối nghĩa “回去”, và cách nói xem thử “看一下” của Bài 2 được nâng lên dạng trùng điệp “看了看 / 想一想” trong bài này.",
+    "priorLessonId": "hsk2-l02"
+   },
+   "prepWords": [
+    {
+     "id": "h2l3-w01",
+     "zh": "回来",
+     "pinyin": "huílái",
+     "vi": "trở về; về",
+     "hanViet": "HỒI LAI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 36,
+       "printedPage": 20,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-2",
+      "start": 0.05,
+      "end": 2.75,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l3-w02",
+     "zh": "这么",
+     "pinyin": "zhème",
+     "vi": "như thế này; đến mức này",
+     "hanViet": "GIÁ MA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 36,
+       "printedPage": 20,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-2",
+      "start": 2.78,
+      "end": 4.32,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l3-w03",
+     "zh": "完",
+     "pinyin": "wán",
+     "vi": "xong; hết (kết quả)",
+     "hanViet": "HOÀN",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 36,
+       "printedPage": 20,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-2",
+      "start": 6.0,
+      "end": 6.82,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l3-w04",
+     "zh": "一起",
+     "pinyin": "yìqǐ",
+     "vi": "cùng nhau",
+     "hanViet": "NHẤT KHỞI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 38,
+       "printedPage": 22,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-4",
+      "start": 0.05,
+      "end": 1.3,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l3-w05",
+     "zh": "出去",
+     "pinyin": "chūqù",
+     "vi": "ra ngoài; đi ra",
+     "hanViet": "XUẤT KHỨ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 38,
+       "printedPage": 22,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-4",
+      "start": 3.3,
+      "end": 4.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l3-w06",
+     "zh": "洗",
+     "pinyin": "xǐ",
+     "vi": "rửa; giặt; tắm",
+     "hanViet": "TẨY",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 0.05,
+      "end": 1.22,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w07",
+     "zh": "自己",
+     "pinyin": "zìjǐ",
+     "vi": "tự mình; bản thân",
+     "hanViet": "TỰ KỶ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 1.82,
+      "end": 3.82,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w08",
+     "zh": "拿",
+     "pinyin": "ná",
+     "vi": "cầm; lấy; mang",
+     "hanViet": "NÃ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 6.05,
+      "end": 6.85,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w09",
+     "zh": "手",
+     "pinyin": "shǒu",
+     "vi": "tay",
+     "hanViet": "THỦ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 8.22,
+      "end": 8.66,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w10",
+     "zh": "为什么",
+     "pinyin": "wèi shénme",
+     "vi": "vì sao; tại sao",
+     "hanViet": "VỊ THẬP MA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 10.35,
+      "end": 11.1,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w11",
+     "zh": "不错",
+     "pinyin": "búcuò",
+     "vi": "khá tốt; không tệ",
+     "hanViet": "BẤT THÁC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-6",
+      "start": 11.05,
+      "end": 14.2,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l3-w12",
+     "zh": "送",
+     "pinyin": "sòng",
+     "vi": "đưa tiễn; đưa (ai) đến nơi; tặng",
+     "hanViet": "TỐNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 25,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-8",
+      "start": 0.05,
+      "end": 1.06,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    },
+    {
+     "id": "h2l3-w13",
+     "zh": "回去",
+     "pinyin": "huíqù",
+     "vi": "trở về; quay về",
+     "hanViet": "HỒI KHỨ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 25,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-8",
+      "start": 1.18,
+      "end": 3.5,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    },
+    {
+     "id": "h2l3-w14",
+     "zh": "每",
+     "pinyin": "měi",
+     "vi": "mỗi",
+     "hanViet": "MỖI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 25,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-8",
+      "start": 5.35,
+      "end": 6.35,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    },
+    {
+     "id": "h2l3-w15",
+     "zh": "累",
+     "pinyin": "lèi",
+     "vi": "mệt",
+     "hanViet": "LŨY",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 25,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l03-8",
+      "start": 7.75,
+      "end": 8.6,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    }
+   ],
+   "prepGroups": [
+    {
+     "id": "h2l3-g1",
+     "dialogueId": "h2l3-text-1",
+     "titleVi": "Từ mới Đoạn 1 · Ở cửa nhà",
+     "trackId": "trk-tb2-l03-2",
+     "trackLabelVi": "Track 3-2 · Từ mới Đoạn 1"
+    },
+    {
+     "id": "h2l3-g2",
+     "dialogueId": "h2l3-text-2",
+     "titleVi": "Từ mới Đoạn 2 · Trò chuyện ở phòng khách",
+     "trackId": "trk-tb2-l03-4",
+     "trackLabelVi": "Track 3-4 · Từ mới Đoạn 2"
+    },
+    {
+     "id": "h2l3-g3",
+     "dialogueId": "h2l3-text-3",
+     "titleVi": "Từ mới Đoạn 3 · Ăn táo, nói chuyện Tây An",
+     "trackId": "trk-tb2-l03-6",
+     "trackLabelVi": "Track 3-6 · Từ mới Đoạn 3"
+    },
+    {
+     "id": "h2l3-g4",
+     "dialogueId": "h2l3-text-4",
+     "titleVi": "Từ mới Đoạn 4 · Cuộc gọi cho bạn thân",
+     "trackId": "trk-tb2-l03-8",
+     "trackLabelVi": "Track 3-8 · Từ mới Đoạn 4"
+    }
+   ],
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk2-l03-result",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Bổ ngữ kết quả: nói việc đã thành/xong thế nào",
+     "explanationVi": "Một số động từ hoặc tính từ đứng ngay sau động từ để nói KẾT QUẢ của hành động: 做+好 (làm xong xuôi), 吃+完 (ăn hết/xong), 来+晚 (đến muộn). Phủ định: đặt 没（有）trước động từ và BỎ “了” — “我没吃完饭” (tôi chưa ăn xong cơm). Hỏi có ba cách: thêm “了吗” cuối câu, thêm “（了）没有” cuối câu, hoặc lặp “động từ + 没 + động từ + bổ ngữ” (你学没学会？).",
+     "pattern": "Động từ + [bổ ngữ kết quả: 好 / 完 / 晚 / 懂 …] (+ 了)",
+     "useWhenVi": "Dùng khi muốn nói một việc đã đạt kết quả gì, chứ không chỉ nói việc đã xảy ra: món ăn đã làm XONG, việc đã làm HẾT, đến MUỘN.",
+     "positionVi": "Bổ ngữ dính liền sau động từ, tân ngữ thường đứng sau bổ ngữ hoặc sau “了”: “吃完饭了”. Phủ định bắt buộc bỏ “了”.",
+     "examples": [
+      {
+       "zh": "菜都做好了。",
+       "pinyin": "Cài dōu zuòhǎo le.",
+       "noteVi": "Cơm canh làm xong cả rồi. (ví dụ trong sách, tr.021)"
+      },
+      {
+       "zh": "我吃完饭了。",
+       "pinyin": "Wǒ chīwán fàn le.",
+       "noteVi": "Tôi ăn xong cơm rồi. (ví dụ trong sách)"
+      },
+      {
+       "zh": "小雪今天来晚了。",
+       "pinyin": "Xiǎoxuě jīntiān láiwǎn le.",
+       "noteVi": "Hôm nay Tiểu Tuyết đến muộn. (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu phủ định ĐÚNG của “我吃完饭了”:",
+      "stemZh": "把“我吃完饭了”变成否定句：",
+      "options": [
+       {
+        "zh": "我没吃完饭了。",
+        "vi": "còn giữ “了” — sai"
+       },
+       {
+        "zh": "我没吃完饭。",
+        "vi": "bỏ “了”, đúng quy tắc sách"
+       }
+      ],
+      "answer": "2",
+      "explanationVi": "Sách (tr.021): phủ định của bổ ngữ kết quả là thêm 没（有）trước động từ và đồng thời bỏ “了”."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 37,
+       "printedPage": 21,
+       "section": "小语讲堂 · 结果补语"
+      }
+     ],
+     "sentenceIds": [
+      "h2l3-s2",
+      "h2l3-s3",
+      "h2l3-s11",
+      "h2l3-s17"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l03-redup1",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Động từ trùng điệp (1): làm một chút, thử làm",
+     "explanationVi": "Động từ có tính hành động mạnh, có thể lặp lại hoặc kéo dài thì được trùng điệp để nói hành động NGẮN, ÍT, hoặc THỬ làm, với giọng nhẹ nhàng, thoải mái — hay dùng trong khẩu ngữ. Động từ một âm tiết: “A（一）A” （想一想）; hai âm tiết: “ABAB” （休息休息）; từ ly hợp: “AAB” （帮帮忙）.",
+     "pattern": "A（一）A · ABAB · AAB",
+     "useWhenVi": "Dùng khi rủ/rủ rê nhẹ nhàng hoặc nói việc làm qua loa một chút: “nghĩ thử xem”, “nghỉ một lát”, “giúp một tay”.",
+     "positionVi": "Động từ trùng điệp đứng ở vị trí vị ngữ như động từ thường; âm tiết thứ hai của dạng ABAB thường đọc nhẹ (thanh nhẹ) trong khẩu ngữ.",
+     "examples": [
+      {
+       "zh": "那你再想一想，你想好了，我来买票。",
+       "pinyin": "Nà nǐ zài xiǎng yi xiǎng, nǐ xiǎnghǎo le, wǒ lái mǎi piào.",
+       "noteVi": "Vậy em nghĩ thêm đi, nghĩ xong thì anh mua vé. (ví dụ trong sách, tr.023)"
+      },
+      {
+       "zh": "我有点儿累，现在想休息休息。",
+       "pinyin": "Wǒ yǒudiǎnr lèi, xiànzài xiǎng xiūxi xiūxi.",
+       "noteVi": "Tôi hơi mệt, giờ muốn nghỉ một lát. (ví dụ trong sách)"
+      },
+      {
+       "zh": "你能过来帮帮忙吗？",
+       "pinyin": "Nǐ néng guòlái bāngbang máng ma?",
+       "noteVi": "Bạn qua giúp một tay được không? (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn dạng trùng điệp ĐÚNG của “休息” (động từ hai âm tiết):",
+      "stemZh": "我累了，想____。",
+      "options": [
+       {
+        "zh": "休息休息",
+        "vi": "dạng ABAB — đúng"
+       },
+       {
+        "zh": "休息一休息",
+        "vi": "chêm “一” vào giữa động từ hai âm tiết — sai"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Sách (tr.022): động từ hai âm tiết trùng điệp theo dạng ABAB （休息休息）; “一” chỉ chêm trong dạng một âm tiết A（一）A."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 38,
+       "printedPage": 22,
+       "section": "小语讲堂 · 动词重叠（1）"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 39,
+       "printedPage": 23,
+       "section": "小语讲堂 · 动词重叠（1）(tiếp)"
+      }
+     ],
+     "sentenceIds": [
+      "h2l3-s4",
+      "h2l3-s10",
+      "h2l3-s14",
+      "h2l3-s18"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l03-redup2",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Động từ trùng điệp (2): việc ĐÃ xảy ra rồi",
+     "explanationVi": "Khi nói việc đã xảy ra, dạng trùng điệp đổi khác: động từ một âm tiết là “A了A” （看了看）; động từ hai âm tiết thường KHÔNG trùng điệp được, phải dùng “AB了一下” （休息了一下）; từ ly hợp là “A了AB” （帮了帮忙）.",
+     "pattern": "A了A · AB了一下 · A了AB",
+     "useWhenVi": "Dùng khi kể lại một hành động ngắn đã làm rồi: “xem qua rồi”, “nghỉ một lát rồi”, “đã giúp một tay”.",
+     "positionVi": "“了” chêm vào GIỮA dạng trùng điệp (A了A), không đặt ở cuối thay thế; động từ hai âm tiết muốn nói “đã làm một chút” thì dùng nguyên động từ + “了一下”.",
+     "examples": [
+      {
+       "zh": "我看了看网上的介绍。",
+       "pinyin": "Wǒ kànle kàn wǎngshang de jièshào.",
+       "noteVi": "Tôi đã xem qua phần giới thiệu trên mạng. (ví dụ trong sách, tr.025)"
+      },
+      {
+       "zh": "我休息了一下，现在觉得不累了。",
+       "pinyin": "Wǒ xiūxi le yíxià, xiànzài juéde bú lèi le.",
+       "noteVi": "Tôi đã nghỉ một lát, giờ thấy không mệt nữa. (ví dụ trong sách)"
+      },
+      {
+       "zh": "他昨天来帮了帮忙。",
+       "pinyin": "Tā zuótiān lái bāngle bāng máng.",
+       "noteVi": "Hôm qua anh ấy đến giúp một tay. (ví dụ trong sách)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chọn câu ĐÚNG để nói “hôm qua tôi đã xem qua cuốn sách này”:",
+      "stemZh": "我昨天____这本书。",
+      "options": [
+       {
+        "zh": "看一看了",
+        "vi": "trùng điệp kiểu chưa xảy ra — sai ngữ cảnh"
+       },
+       {
+        "zh": "看了看",
+        "vi": "dạng A了A cho việc đã xảy ra — đúng"
+       }
+      ],
+      "answer": "2",
+      "explanationVi": "Sách (tr.024–025): việc đã xảy ra dùng “A了A” （看了看）; chính Đoạn 3 của bài có “我看了看网上的介绍”."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 40,
+       "printedPage": 24,
+       "section": "小语讲堂 · 动词重叠（2）"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 41,
+       "printedPage": 25,
+       "section": "小语讲堂 · 动词重叠（2）(tiếp)"
+      }
+     ],
+     "sentenceIds": [
+      "h2l3-s16"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l03-characters",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Hán tự nền tảng: bộ Tam điểm thủy 三点水 （氵） và bộ Bảo cái đầu 宝盖头 （宀）",
+     "explanationVi": "Workbook (tr.021) giới thiệu hai bộ: 三点水 (sāndiǎnshuǐ — bộ Ba chấm thủy 氵, liên quan đến nước/chất lỏng) với chữ ví dụ 汉、洗； và 宝盖头 (bǎogàitóu — bộ Bảo cái đầu 宀, như mái che trên nhà) với chữ ví dụ 家、完. Nhận ra hai bộ này giúp đoán nghĩa và nhớ cách viết của nhiều chữ Hán khác.",
+     "pattern": "氵 + 又 = 汉 · 氵 + 先 = 洗 · 宀 + 豕 = 家 · 宀 + 元 = 完",
+     "useWhenVi": "Học bộ thủ để nhận diện nhanh các chữ cùng họ: gặp 氵thì nghĩ tới nước （洗 rửa, 汉 trong 汉字）, gặp 宀thì nghĩ tới mái nhà/nơi ở （家 nhà, 完 trong 做完）.",
+     "positionVi": "氵viết ở phía trái của chữ, nét cuối hơi hất lên; 宀luôn viết trên cùng, bao phủ phần dưới của chữ.",
+     "examples": [
+      {
+       "zh": "汉字",
+       "pinyin": "Hànzì",
+       "noteVi": "chữ Hán — chữ mẫu của bộ 氵 (Workbook tr.021)"
+      },
+      {
+       "zh": "洗手",
+       "pinyin": "xǐ shǒu",
+       "noteVi": "rửa tay — chữ mẫu của bộ 氵 (Workbook tr.021)"
+      },
+      {
+       "zh": "在家",
+       "pinyin": "zài jiā",
+       "noteVi": "ở nhà — chữ mẫu của bộ 宀 (Workbook tr.021)"
+      }
+     ],
+     "quickCheck": {
+      "questionVi": "Chữ nào sau đây có bộ 宝盖头 宀ở trên cùng?",
+      "stemZh": "选有宀的字：",
+      "options": [
+       {
+        "zh": "完",
+        "vi": "宀 + 元 — đúng"
+       },
+       {
+        "zh": "洗",
+        "vi": "chữ này có 氵 — không phải"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "完 = 宀 （宝盖头） + 元； còn 洗 thuộc bộ 三点水 氵 (Workbook tr.021)."
+     },
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 28,
+       "printedPage": 21,
+       "section": "汉字 · 三点水/宝盖头"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": []
+    }
+   ],
+   "reader": {
+    "passageId": "reader-hsk2-l03",
+    "titleVi": "Nghe và đọc bốn đoạn của bài",
+    "headingVi": "Bốn đoạn: ở cửa nhà — phòng khách — ăn táo bàn chuyện Tây An — cuộc gọi kể chuyện",
+    "noteVi": "Mỗi đoạn có track riêng của sách; từ mới của đoạn đọc ở track ngay sau. Câu hỏi in trong sách nằm ngay dưới đoạn của chúng (làm tại chỗ, tính chung tiến độ với bộ Luyện tập).",
+    "sentences": [
+     {
+      "id": "h2l3-s1",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "今天回来这么晚啊！",
+      "pinyin": "Jīntiān huílái zhème wǎn a!",
+      "vi": "Hôm nay về muộn thế này cơ à!",
+      "passageId": "h2l3-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-1",
+       "start": 0.0,
+       "end": 3.05,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s2",
+      "speaker": "Lưu Minh",
+      "zh": "工作太多了，下班的时候没做完。",
+      "pinyin": "Gōngzuò tài duō le, xiàbān de shíhou méi zuòwán.",
+      "vi": "Việc nhiều quá, đến giờ tan làm vẫn chưa làm xong.",
+      "passageId": "h2l3-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-1",
+       "start": 3.06,
+       "end": 7.25,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s3",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "菜都做好了，过来吃饭吧。",
+      "pinyin": "Cài dōu zuòhǎo le, guòlái chī fàn ba.",
+      "vi": "Cơm canh làm xong cả rồi, lại ăn cơm đi.",
+      "passageId": "h2l3-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-1",
+       "start": 7.8,
+       "end": 11.25,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s4",
+      "speaker": "Lưu Minh",
+      "zh": "我想休息一下，喝杯水。",
+      "pinyin": "Wǒ xiǎng xiūxi yíxià, hē bēi shuǐ.",
+      "vi": "Tôi muốn nghỉ một lát, uống cốc nước đã.",
+      "passageId": "h2l3-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-1",
+       "start": 12.04,
+       "end": 14.61,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s5",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "好的。",
+      "pinyin": "Hǎo de.",
+      "vi": "Được.",
+      "passageId": "h2l3-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-1",
+       "start": 15.24,
+       "end": 15.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s6",
+      "speaker": "Lưu Minh",
+      "zh": "我们找个时间去旅游，怎么样？",
+      "pinyin": "Wǒmen zhǎo gè shíjiān qù lǚyóu, zěnmeyàng?",
+      "vi": "Chúng ta tìm lúc nào đó đi du lịch, được không?",
+      "passageId": "h2l3-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-3",
+       "start": 0.0,
+       "end": 3.73,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s7",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "好啊，我也很想一起出去玩。",
+      "pinyin": "Hǎo a, wǒ yě hěn xiǎng yìqǐ chūqù wán.",
+      "vi": "Hay đấy, em cũng rất muốn cùng ra ngoài chơi.",
+      "passageId": "h2l3-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-3",
+       "start": 4.82,
+       "end": 8.35,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s8",
+      "speaker": "Lưu Minh",
+      "zh": "你想去哪儿？",
+      "pinyin": "Nǐ xiǎng qù nǎr?",
+      "vi": "Em muốn đi đâu?",
+      "passageId": "h2l3-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-3",
+       "start": 9.48,
+       "end": 11.47,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s9",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我还没想好呢。",
+      "pinyin": "Wǒ hái méi xiǎnghǎo ne.",
+      "vi": "Em vẫn chưa nghĩ xong đâu.",
+      "passageId": "h2l3-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-3",
+       "start": 12.14,
+       "end": 13.89,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s10",
+      "speaker": "Lưu Minh",
+      "zh": "那你再想一想，你想好了，我来买票。",
+      "pinyin": "Nà nǐ zài xiǎng yi xiǎng, nǐ xiǎnghǎo le, wǒ lái mǎi piào.",
+      "vi": "Vậy em nghĩ thêm đi, em nghĩ xong thì anh mua vé.",
+      "passageId": "h2l3-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-3",
+       "start": 15.08,
+       "end": 19.27,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s11",
+      "speaker": "Lưu Minh",
+      "zh": "吃个苹果吧，我都洗好了。",
+      "pinyin": "Chī gè píngguǒ ba, wǒ dōu xǐhǎo le.",
+      "vi": "Ăn quả táo đi, anh rửa xong cả rồi.",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 1.02,
+       "end": 4.11,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s12",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "好的。",
+      "pinyin": "Hǎo de.",
+      "vi": "Vâng.",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 5.14,
+       "end": 5.91,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s13",
+      "speaker": "Lưu Minh",
+      "zh": "就在桌子上，你自己拿。",
+      "pinyin": "Jiù zài zhuōzi shang, nǐ zìjǐ ná.",
+      "vi": "Ngay trên bàn đấy, em tự lấy đi.",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 6.94,
+       "end": 9.81,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s14",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我去洗洗手。对了，我们去西安旅游，怎么样？",
+      "pinyin": "Wǒ qù xǐxi shǒu. Duìle, wǒmen qù Xī'ān lǚyóu, zěnmeyàng?",
+      "vi": "Em đi rửa tay đã. À đúng rồi, chúng ta đi du lịch Tây An nhé, được không?",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 10.9,
+       "end": 16.97,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s15",
+      "speaker": "Lưu Minh",
+      "zh": "为什么想去西安？",
+      "pinyin": "Wèi shénme xiǎng qù Xī'ān?",
+      "vi": "Sao lại muốn đi Tây An?",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 18.6,
+       "end": 20.59,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s16",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我看了看网上的介绍，这个时候去西安很不错！",
+      "pinyin": "Wǒ kànle kàn wǎngshang de jièshào, zhège shíhou qù Xī'ān hěn búcuò!",
+      "vi": "Em xem qua phần giới thiệu trên mạng rồi, thời điểm này đi Tây An rất tuyệt!",
+      "passageId": "h2l3-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-5",
+       "start": 21.82,
+       "end": 26.87,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s17",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "早上，刘明开车送孩子去学校，送完孩子回家后，医院就来电话了，让他回去上班。",
+      "pinyin": "Zǎoshang, Liú Míng kāichē sòng háizi qù xuéxiào, sòngwán háizi huí jiā hòu, yīyuàn jiù lái diànhuà le, ràng tā huíqù shàngbān.",
+      "vi": "Buổi sáng, Lưu Minh lái xe đưa con đi học; đưa con xong về nhà thì bệnh viện gọi điện đến, bảo anh quay lại làm việc.",
+      "passageId": "h2l3-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 25,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-7",
+       "start": 0.0,
+       "end": 9.89,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l3-s18",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我觉得他这个月每天都很累，真想让他休息休息。",
+      "pinyin": "Wǒ juéde tā zhège yuè měi tiān dōu hěn lèi, zhēn xiǎng ràng tā xiūxi xiūxi.",
+      "vi": "Em thấy tháng này ngày nào anh ấy cũng rất mệt, thật muốn để anh ấy nghỉ ngơi một chút.",
+      "passageId": "h2l3-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 25,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l03-7",
+       "start": 10.66,
+       "end": 15.59,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb2-l03-1",
+      "label": "Track 3-1 · Đoạn 1 (ở cửa nhà)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-1.mp3",
+      "durationSec": 17.429,
+      "bookRef": "Textbook HSK 2 track 3-1",
+      "segments": [
+       {
+        "sentenceId": "h2l3-s1",
+        "start": 0.0,
+        "end": 3.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s2",
+        "start": 3.06,
+        "end": 7.25,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s3",
+        "start": 7.8,
+        "end": 11.25,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s4",
+        "start": 12.04,
+        "end": 14.61,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s5",
+        "start": 15.24,
+        "end": 15.9,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "Track 3-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-2",
+      "label": "Track 3-2 · Từ mới Đoạn 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-2.mp3",
+      "durationSec": 8.501,
+      "bookRef": "Textbook HSK 2 track 3-2",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "Track 3-2 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-3",
+      "label": "Track 3-3 · Đoạn 2 (trò chuyện ở phòng khách)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-3.mp3",
+      "durationSec": 21.509,
+      "bookRef": "Textbook HSK 2 track 3-3",
+      "segments": [
+       {
+        "sentenceId": "h2l3-s6",
+        "start": 0.0,
+        "end": 3.73,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s7",
+        "start": 4.82,
+        "end": 8.35,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s8",
+        "start": 9.48,
+        "end": 11.47,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s9",
+        "start": 12.14,
+        "end": 13.89,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s10",
+        "start": 15.08,
+        "end": 19.27,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 37,
+        "printedPage": 21,
+        "section": "Track 3-3 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-4",
+      "label": "Track 3-4 · Từ mới Đoạn 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-4.mp3",
+      "durationSec": 7.541,
+      "bookRef": "Textbook HSK 2 track 3-4",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "Track 3-4 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-5",
+      "label": "Track 3-5 · Đoạn 3 (ăn táo, nói chuyện Tây An)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-5.mp3",
+      "durationSec": 28.973,
+      "bookRef": "Textbook HSK 2 track 3-5",
+      "segments": [
+       {
+        "sentenceId": "h2l3-s11",
+        "start": 1.02,
+        "end": 4.11,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s12",
+        "start": 5.14,
+        "end": 5.91,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s13",
+        "start": 6.94,
+        "end": 9.81,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s14",
+        "start": 10.9,
+        "end": 16.97,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s15",
+        "start": 18.6,
+        "end": 20.59,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s16",
+        "start": 21.82,
+        "end": 26.87,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 39,
+        "printedPage": 23,
+        "section": "Track 3-5 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-6",
+      "label": "Track 3-6 · Từ mới Đoạn 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-6.mp3",
+      "durationSec": 16.829,
+      "bookRef": "Textbook HSK 2 track 3-6",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "Track 3-6 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-7",
+      "label": "Track 3-7 · Đoạn 4 (gọi điện cho bạn)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-7.mp3",
+      "durationSec": 16.301,
+      "bookRef": "Textbook HSK 2 track 3-7",
+      "segments": [
+       {
+        "sentenceId": "h2l3-s17",
+        "start": 0.0,
+        "end": 9.89,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l3-s18",
+        "start": 10.66,
+        "end": 15.59,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 25,
+        "section": "Track 3-7 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l03-8",
+      "label": "Track 3-8 · Từ mới Đoạn 4",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-8.mp3",
+      "durationSec": 10.421,
+      "bookRef": "Textbook HSK 2 track 3-8",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (3-1…3-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 25,
+        "section": "Track 3-8 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-05 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "h2l3-text-1",
+      "title": "课文 1 · Ở cửa nhà",
+      "context": "Ở cửa nhà, Lưu Minh mở cửa bước vào nhà (Textbook tr.020). Vương Nhất Tuyết hỏi vì sao anh về muộn.",
+      "audioTrackId": "trk-tb2-l03-1",
+      "sentenceIds": [
+       "h2l3-s1",
+       "h2l3-s2",
+       "h2l3-s3",
+       "h2l3-s4",
+       "h2l3-s5"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 36,
+        "printedPage": 20,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l3-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.020, track 3-1): Vì sao Lưu Minh về muộn?",
+        "promptZh": "刘明为什么回来晚了？",
+        "promptPinyin": "Liú Míng wèi shénme huílái wǎn le?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "没做完工作",
+          "pinyin": "méi zuòwán gōngzuò",
+          "vi": "chưa làm xong việc"
+         },
+         {
+          "id": "2",
+          "zh": "去外边吃饭",
+          "pinyin": "qù wàibiān chī fàn",
+          "vi": "ra ngoài ăn cơm"
+         },
+         {
+          "id": "3",
+          "zh": "在公司休息",
+          "pinyin": "zài gōngsī xiūxi",
+          "vi": "nghỉ ở công ty"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.020. Đáp án A: Lưu Minh nói “工作太多了，下班的时候没做完” — việc nhiều, đến giờ tan làm vẫn chưa làm xong.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 36,
+          "printedPage": 20,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-1",
+         "start": 0.0,
+         "end": 15.9,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l3-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.020, track 3-1): Bây giờ Lưu Minh muốn làm gì trước?",
+        "promptZh": "刘明现在要做什么？",
+        "promptPinyin": "Liú Míng xiànzài yào zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "吃饭",
+          "pinyin": "chī fàn",
+          "vi": "ăn cơm"
+         },
+         {
+          "id": "2",
+          "zh": "喝水",
+          "pinyin": "hē shuǐ",
+          "vi": "uống nước"
+         },
+         {
+          "id": "3",
+          "zh": "工作",
+          "pinyin": "gōngzuò",
+          "vi": "làm việc"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.020. Đáp án B: anh nói “我想休息一下，喝杯水” — muốn nghỉ một lát và uống cốc nước trước, chưa ăn cơm ngay.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 36,
+          "printedPage": 20,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-1",
+         "start": 0.0,
+         "end": 15.9,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l3-text-2",
+      "title": "课文 2 · Trò chuyện ở phòng khách",
+      "context": "Ở phòng khách, Lưu Minh và Vương Nhất Tuyết trò chuyện (Textbook tr.022). Anh rủ tìm thời gian đi du lịch.",
+      "audioTrackId": "trk-tb2-l03-3",
+      "sentenceIds": [
+       "h2l3-s6",
+       "h2l3-s7",
+       "h2l3-s8",
+       "h2l3-s9",
+       "h2l3-s10"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 38,
+        "printedPage": 22,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l3-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.021, track 3-3): Lưu Minh muốn tìm thời gian để làm gì?",
+        "promptZh": "刘明想找时间做什么？",
+        "promptPinyin": "Liú Míng xiǎng zhǎo shíjiān zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "去吃饭",
+          "pinyin": "qù chī fàn",
+          "vi": "đi ăn cơm"
+         },
+         {
+          "id": "2",
+          "zh": "去旅游",
+          "pinyin": "qù lǚyóu",
+          "vi": "đi du lịch"
+         },
+         {
+          "id": "3",
+          "zh": "买东西",
+          "pinyin": "mǎi dōngxi",
+          "vi": "mua đồ"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.021. Đáp án B: câu đầu của Lưu Minh — “我们找个时间去旅游，怎么样？”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 37,
+          "printedPage": 21,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-3",
+         "start": 0.0,
+         "end": 19.27,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l3-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.021, track 3-3): Lưu Minh bảo Vương Nhất Tuyết làm gì?",
+        "promptZh": "刘明让王一雪做什么？",
+        "promptPinyin": "Liú Míng ràng Wáng Yīxuě zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "去买票",
+          "pinyin": "qù mǎi piào",
+          "vi": "đi mua vé"
+         },
+         {
+          "id": "2",
+          "zh": "看一下时间",
+          "pinyin": "kàn yíxià shíjiān",
+          "vi": "xem thời gian một chút"
+         },
+         {
+          "id": "3",
+          "zh": "想想去哪儿玩",
+          "pinyin": "xiǎngxiang qù nǎr wán",
+          "vi": "nghĩ xem đi chơi ở đâu"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.021. Đáp án C: “那你再想一想” — bảo cô nghĩ thêm xem đi đâu; việc mua vé là phần của Lưu Minh (“我来买票”).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 37,
+          "printedPage": 21,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-3",
+         "start": 0.0,
+         "end": 19.27,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l3-text-3",
+      "title": "课文 3 · Ăn táo, nói chuyện Tây An",
+      "context": "Vẫn ở phòng khách (Textbook tr.024). Lưu Minh mời ăn táo đã rửa sẵn; Vương Nhất Tuyết chợt nhớ ra và rủ đi du lịch Tây An.",
+      "audioTrackId": "trk-tb2-l03-5",
+      "sentenceIds": [
+       "h2l3-s11",
+       "h2l3-s12",
+       "h2l3-s13",
+       "h2l3-s14",
+       "h2l3-s15",
+       "h2l3-s16"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 40,
+        "printedPage": 24,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l3-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.023, track 3-5): Lưu Minh bảo Vương Nhất Tuyết làm gì?",
+        "promptZh": "刘明让王一雪做什么？",
+        "promptPinyin": "Liú Míng ràng Wáng Yīxuě zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "洗手",
+          "pinyin": "xǐ shǒu",
+          "vi": "rửa tay"
+         },
+         {
+          "id": "2",
+          "zh": "洗苹果",
+          "pinyin": "xǐ píngguǒ",
+          "vi": "rửa táo"
+         },
+         {
+          "id": "3",
+          "zh": "吃苹果",
+          "pinyin": "chī píngguǒ",
+          "vi": "ăn táo"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.023. Đáp án C: “吃个苹果吧，我都洗好了” — táo anh đã rửa rồi, anh bảo cô ăn táo; rửa tay là việc cô tự đi làm sau đó.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 39,
+          "printedPage": 23,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-5",
+         "start": 1.02,
+         "end": 26.87,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l3-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.023, track 3-5): Vương Nhất Tuyết muốn đi du lịch ở đâu?",
+        "promptZh": "王一雪想去哪儿旅游？",
+        "promptPinyin": "Wáng Yīxuě xiǎng qù nǎr lǚyóu?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "西安",
+          "pinyin": "Xī'ān",
+          "vi": "Tây An"
+         },
+         {
+          "id": "2",
+          "zh": "北京",
+          "pinyin": "Běijīng",
+          "vi": "Bắc Kinh"
+         },
+         {
+          "id": "3",
+          "zh": "上海",
+          "pinyin": "Shànghǎi",
+          "vi": "Thượng Hải"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.023. Đáp án A: “我们去西安旅游，怎么样？” — cũng là tên bài.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 39,
+          "printedPage": 23,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-5",
+         "start": 1.02,
+         "end": 26.87,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l3-text-4",
+      "title": "课文 4 · Cuộc gọi cho bạn thân",
+      "context": "Ở nhà, Vương Nhất Tuyết gọi điện cho bạn thân, kể về một ngày của Lưu Minh (Textbook tr.025). Đây là đoạn văn kể, không phải hội thoại hai người.",
+      "audioTrackId": "trk-tb2-l03-7",
+      "sentenceIds": [
+       "h2l3-s17",
+       "h2l3-s18"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 41,
+        "printedPage": 25,
+        "section": "课文 4"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l3-text4-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.025, track 3-7): nghe đoạn rồi判断 câu sau đúng hay sai — “刘明今天没去医院上班。”",
+        "promptZh": "刘明今天没去医院上班。",
+        "promptPinyin": "Liú Míng jīntiān méi qù yīyuàn shàngbān.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.025. Đoạn kể: bệnh viện gọi điện “让他回去上班” — bảo anh quay lại làm việc, tức là hôm nay anh CÓ đi làm. Câu phán đoán sai.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 41,
+          "printedPage": 25,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-7",
+         "start": 0.0,
+         "end": 15.59,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l3-text4-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.025, track 3-7): nghe đoạn rồi判断 câu sau đúng hay sai — “今天早上是刘明送孩子去学校的。”",
+        "promptZh": "今天早上是刘明送孩子去学校的。",
+        "promptPinyin": "Jīntiān zǎoshang shì Liú Míng sòng háizi qù xuéxiào de.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.025. Câu đầu của đoạn: “早上，刘明开车送孩子去学校” — đúng là Lưu Minh đưa con đi học sáng nay.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 41,
+          "printedPage": 25,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l03-7",
+         "start": 0.0,
+         "end": 15.59,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l3-text4-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.025): Lưu Minh đưa con đi học bằng cách nào?",
+        "promptZh": "刘明是怎么送的孩子？",
+        "promptPinyin": "Liú Míng shì zěnme sòng de háizi?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "打车",
+          "pinyin": "dǎchē",
+          "vi": "đi taxi"
+         },
+         {
+          "id": "2",
+          "zh": "开车",
+          "pinyin": "kāichē",
+          "vi": "lái xe"
+         },
+         {
+          "id": "3",
+          "zh": "坐公交车",
+          "pinyin": "zuò gōngjiāochē",
+          "vi": "đi xe buýt"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.025 (mục 朗读课文，读后选择正确答案）. Đáp án B: “刘明开车送孩子去学校”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 41,
+          "printedPage": 25,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       },
+       {
+        "id": "tb2l3-text4-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.025): Bệnh viện gọi điện có việc gì?",
+        "promptZh": "医院来电话有什么事？",
+        "promptPinyin": "Yīyuàn lái diànhuà yǒu shénme shì?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "让刘明休息",
+          "pinyin": "ràng Liú Míng xiūxi",
+          "vi": "bảo Lưu Minh nghỉ ngơi"
+         },
+         {
+          "id": "2",
+          "zh": "让刘明去上班",
+          "pinyin": "ràng Liú Míng qù shàngbān",
+          "vi": "bảo Lưu Minh đi làm"
+         },
+         {
+          "id": "3",
+          "zh": "让刘明去开车",
+          "pinyin": "ràng Liú Míng qù kāichē",
+          "vi": "bảo Lưu Minh đi lái xe"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-editorial",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.025. Đáp án B: “医院就来电话了，让他回去上班”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 41,
+          "printedPage": 25,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "exercises-hsk2-l03-main",
+    "title": "Luyện tập chính · Bài 3",
+    "items": [
+     {
+      "id": "tb2l3-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.019): chọn HÌNH đúng cho từ “不错” (khá tốt).",
+      "promptZh": "不错",
+      "promptPinyin": "búcuò",
+      "options": [
+       {
+        "id": "1",
+        "zh": "洗",
+        "pinyin": "xǐ",
+        "vi": "rửa",
+        "image": "assets/hsk2-lesson-03/warm-wash.webp",
+        "imageAlt": "Tranh minh họa: rửa"
+       },
+       {
+        "id": "2",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt",
+        "image": "assets/hsk2-lesson-03/warm-tired.webp",
+        "imageAlt": "Tranh minh họa: mệt"
+       },
+       {
+        "id": "3",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm, lấy",
+        "image": "assets/hsk2-lesson-03/warm-take.webp",
+        "imageAlt": "Tranh minh họa: cầm, lấy"
+       },
+       {
+        "id": "4",
+        "zh": "不错",
+        "pinyin": "búcuò",
+        "vi": "khá tốt",
+        "image": "assets/hsk2-lesson-03/warm-good.webp",
+        "imageAlt": "Tranh minh họa: khá tốt"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.019: ảnh 1 (chàng trai giơ ngón cái khen) tương ứng D 不错. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 35,
+        "printedPage": 19,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.019): chọn HÌNH đúng cho từ “洗” (rửa).",
+      "promptZh": "洗",
+      "promptPinyin": "xǐ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "洗",
+        "pinyin": "xǐ",
+        "vi": "rửa",
+        "image": "assets/hsk2-lesson-03/warm-wash.webp",
+        "imageAlt": "Tranh minh họa: rửa"
+       },
+       {
+        "id": "2",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt",
+        "image": "assets/hsk2-lesson-03/warm-tired.webp",
+        "imageAlt": "Tranh minh họa: mệt"
+       },
+       {
+        "id": "3",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm, lấy",
+        "image": "assets/hsk2-lesson-03/warm-take.webp",
+        "imageAlt": "Tranh minh họa: cầm, lấy"
+       },
+       {
+        "id": "4",
+        "zh": "不错",
+        "pinyin": "búcuò",
+        "vi": "khá tốt",
+        "image": "assets/hsk2-lesson-03/warm-good.webp",
+        "imageAlt": "Tranh minh họa: khá tốt"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.019: ảnh 2 (người rửa xe bọt xà phòng) tương ứng A 洗. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 35,
+        "printedPage": 19,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.019): chọn HÌNH đúng cho từ “累” (mệt).",
+      "promptZh": "累",
+      "promptPinyin": "lèi",
+      "options": [
+       {
+        "id": "1",
+        "zh": "洗",
+        "pinyin": "xǐ",
+        "vi": "rửa",
+        "image": "assets/hsk2-lesson-03/warm-wash.webp",
+        "imageAlt": "Tranh minh họa: rửa"
+       },
+       {
+        "id": "2",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt",
+        "image": "assets/hsk2-lesson-03/warm-tired.webp",
+        "imageAlt": "Tranh minh họa: mệt"
+       },
+       {
+        "id": "3",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm, lấy",
+        "image": "assets/hsk2-lesson-03/warm-take.webp",
+        "imageAlt": "Tranh minh họa: cầm, lấy"
+       },
+       {
+        "id": "4",
+        "zh": "不错",
+        "pinyin": "búcuò",
+        "vi": "khá tốt",
+        "image": "assets/hsk2-lesson-03/warm-good.webp",
+        "imageAlt": "Tranh minh họa: khá tốt"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.019: ảnh 3 (cô gái mệt mỏi bên laptop) tương ứng B 累. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 35,
+        "printedPage": 19,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.019): chọn HÌNH đúng cho từ “拿” (cầm, lấy).",
+      "promptZh": "拿",
+      "promptPinyin": "ná",
+      "options": [
+       {
+        "id": "1",
+        "zh": "洗",
+        "pinyin": "xǐ",
+        "vi": "rửa",
+        "image": "assets/hsk2-lesson-03/warm-wash.webp",
+        "imageAlt": "Tranh minh họa: rửa"
+       },
+       {
+        "id": "2",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt",
+        "image": "assets/hsk2-lesson-03/warm-tired.webp",
+        "imageAlt": "Tranh minh họa: mệt"
+       },
+       {
+        "id": "3",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm, lấy",
+        "image": "assets/hsk2-lesson-03/warm-take.webp",
+        "imageAlt": "Tranh minh họa: cầm, lấy"
+       },
+       {
+        "id": "4",
+        "zh": "不错",
+        "pinyin": "búcuò",
+        "vi": "khá tốt",
+        "image": "assets/hsk2-lesson-03/warm-good.webp",
+        "imageAlt": "Tranh minh họa: khá tốt"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.019: ảnh 4 (bàn tay cầm cốc mang đi) tương ứng C 拿. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 35,
+        "printedPage": 19,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.026): chọn từ trong khung A 一起 / B 送 / C 回去 / D 拿 / E 累 để điền vào chỗ trống.",
+      "promptZh": "已经下班了，你为什么还不（）？",
+      "promptPinyin": "Yǐjīng xiàbān le, nǐ wèi shénme hái bù ()?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一起",
+        "pinyin": "yìqǐ",
+        "vi": "cùng nhau"
+       },
+       {
+        "id": "2",
+        "zh": "送",
+        "pinyin": "sòng",
+        "vi": "đưa; tiễn"
+       },
+       {
+        "id": "3",
+        "zh": "回去",
+        "pinyin": "huíqù",
+        "vi": "trở về"
+       },
+       {
+        "id": "4",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm; lấy"
+       },
+       {
+        "id": "5",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.026. Đáp án C 回去: “Đã tan làm rồi, sao bạn còn chưa về?” — 送/拿/一起/累 không hợp nghĩa và ngữ pháp.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": 26,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.026): chọn từ trong khung A 一起 / B 送 / C 回去 / D 拿 / E 累 để điền vào chỗ trống.",
+      "promptZh": "他每天早上都（）女朋友去上班。",
+      "promptPinyin": "Tā měi tiān zǎoshang dōu () nǚpéngyou qù shàngbān.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一起",
+        "pinyin": "yìqǐ",
+        "vi": "cùng nhau"
+       },
+       {
+        "id": "2",
+        "zh": "送",
+        "pinyin": "sòng",
+        "vi": "đưa; tiễn"
+       },
+       {
+        "id": "3",
+        "zh": "回去",
+        "pinyin": "huíqù",
+        "vi": "trở về"
+       },
+       {
+        "id": "4",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm; lấy"
+       },
+       {
+        "id": "5",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.026. Đáp án B 送: “Sáng nào anh ấy cũng đưa bạn gái đi làm.” — cấu trúc kiêm ngữ 送 + người + đi làm.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": 26,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.026): chọn từ trong khung A 一起 / B 送 / C 回去 / D 拿 / E 累 để điền vào chỗ trống.",
+      "promptZh": "爸爸（）了一些水果给孩子们吃。",
+      "promptPinyin": "Bàba () le yìxiē shuǐguǒ gěi háizimen chī.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一起",
+        "pinyin": "yìqǐ",
+        "vi": "cùng nhau"
+       },
+       {
+        "id": "2",
+        "zh": "送",
+        "pinyin": "sòng",
+        "vi": "đưa; tiễn"
+       },
+       {
+        "id": "3",
+        "zh": "回去",
+        "pinyin": "huíqù",
+        "vi": "trở về"
+       },
+       {
+        "id": "4",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm; lấy"
+       },
+       {
+        "id": "5",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.026. Đáp án D 拿: “Bố lấy một ít hoa quả cho các con ăn.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": 26,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.026): chọn từ trong khung A 一起 / B 送 / C 回去 / D 拿 / E 累 để điền vào chỗ trống.",
+      "promptZh": "A：我昨天晚上没睡好，今天觉得很（）。B：那你休息休息吧。",
+      "promptPinyin": "A: Wǒ zuótiān wǎnshang méi shuìhǎo, jīntiān juéde hěn (). B: Nà nǐ xiūxi xiūxi ba.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一起",
+        "pinyin": "yìqǐ",
+        "vi": "cùng nhau"
+       },
+       {
+        "id": "2",
+        "zh": "送",
+        "pinyin": "sòng",
+        "vi": "đưa; tiễn"
+       },
+       {
+        "id": "3",
+        "zh": "回去",
+        "pinyin": "huíqù",
+        "vi": "trở về"
+       },
+       {
+        "id": "4",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm; lấy"
+       },
+       {
+        "id": "5",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.026. Đáp án E 累: “Tối qua tôi ngủ không ngon, hôm nay thấy rất mệt.” Câu đáp “那你休息休息吧” khẳng định trạng thái mệt.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": 26,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l3-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.026): chọn từ trong khung A 一起 / B 送 / C 回去 / D 拿 / E 累 để điền vào chỗ trống.",
+      "promptZh": "A：你认识家月吗？B：认识啊，我们每天（）坐公交车来学校。",
+      "promptPinyin": "A: Nǐ rènshi Jiāyuè ma? B: Rènshi a, wǒmen měi tiān () zuò gōngjiāochē lái xuéxiào.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "一起",
+        "pinyin": "yìqǐ",
+        "vi": "cùng nhau"
+       },
+       {
+        "id": "2",
+        "zh": "送",
+        "pinyin": "sòng",
+        "vi": "đưa; tiễn"
+       },
+       {
+        "id": "3",
+        "zh": "回去",
+        "pinyin": "huíqù",
+        "vi": "trở về"
+       },
+       {
+        "id": "4",
+        "zh": "拿",
+        "pinyin": "ná",
+        "vi": "cầm; lấy"
+       },
+       {
+        "id": "5",
+        "zh": "累",
+        "pinyin": "lèi",
+        "vi": "mệt"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.026. Đáp án A 一起: “Biết chứ, ngày nào chúng tôi cũng CÙNG đi xe buýt đến trường.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 42,
+        "printedPage": 26,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb2l3-ext-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.022): chọn cụm 书桌 / 洗车 / 回国 để điền vào chỗ trống.",
+      "promptZh": "明天有雨，你别去（）了。",
+      "promptPinyin": "Míngtiān yǒu yǔ, nǐ bié qù () le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "书桌",
+        "pinyin": "shūzhuō",
+        "vi": "bàn học"
+       },
+       {
+        "id": "2",
+        "zh": "洗车",
+        "pinyin": "xǐchē",
+        "vi": "rửa xe"
+       },
+       {
+        "id": "3",
+        "zh": "回国",
+        "pinyin": "huí guó",
+        "vi": "về nước"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.022 （做一做 câu 1). Đáp án 洗车: “Mai có mưa, bạn đừng đi rửa xe nữa.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 22,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l3-ext-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.022): chọn cụm 书桌 / 洗车 / 回国 để điền vào chỗ trống.",
+      "promptZh": "我的（）是在网上买的。",
+      "promptPinyin": "Wǒ de () shì zài wǎngshang mǎi de.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "书桌",
+        "pinyin": "shūzhuō",
+        "vi": "bàn học"
+       },
+       {
+        "id": "2",
+        "zh": "洗车",
+        "pinyin": "xǐchē",
+        "vi": "rửa xe"
+       },
+       {
+        "id": "3",
+        "zh": "回国",
+        "pinyin": "huí guó",
+        "vi": "về nước"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.022 （做一做 câu 2). Đáp án 书桌: “Bàn học của tôi mua trên mạng.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 22,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l3-ext-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.022): chọn cụm 书桌 / 洗车 / 回国 để điền vào chỗ trống.",
+      "promptZh": "安妮有点儿事，她明天要（）。",
+      "promptPinyin": "Ānnī yǒudiǎnr shì, tā míngtiān yào ().",
+      "options": [
+       {
+        "id": "1",
+        "zh": "书桌",
+        "pinyin": "shūzhuō",
+        "vi": "bàn học"
+       },
+       {
+        "id": "2",
+        "zh": "洗车",
+        "pinyin": "xǐchē",
+        "vi": "rửa xe"
+       },
+       {
+        "id": "3",
+        "zh": "回国",
+        "pinyin": "huí guó",
+        "vi": "về nước"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-editorial",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.022 （做一做 câu 3). Đáp án 回国: “An Ni có chút việc, ngày mai cô ấy phải về nước.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 29,
+        "printedPage": 22,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckTasks": [
+    {
+     "id": "st-h2l3-01",
+     "kind": "speaking",
+     "titleVi": "Hoạt động cặp: hỏi nhau về chuyến du lịch (Textbook tr.027)",
+     "instructionVi": "Làm việc theo cặp như hoạt động lớp ở Textbook tr.027: lần lượt hỏi và trả lời các câu hỏi dưới đây về chuyến du lịch của bạn, cố gắng dùng từ và ngữ pháp của bài （想好， 为什么， bổ ngữ kết quả, động từ trùng điệp). Đây là bài tự luyện, app không chấm tự động.",
+     "prompts": [
+      "你想不想去旅游？",
+      "你想好去哪儿旅游了吗？",
+      "你为什么选择这个旅游地？"
+     ],
+     "draftPromptVi": "Mẫu mở đầu của sách: A：你想去旅游吗？B：我想去旅游。Hãy viết nháp cuộc hỏi đáp của bạn (nơi muốn đi + lý do), rồi đọc to. Gợi ý: dùng “我想好了，我想去……，因为我看了看……的介绍，这个时候去很不错。”",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 43,
+       "printedPage": 27,
+       "section": "课堂活动 · 双人活动"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l3-02",
+     "kind": "speaking",
+     "titleVi": "Nhìn hình, hoàn thành câu (Textbook tr.026)",
+     "instructionVi": "Dùng từ mới và điểm ngôn ngữ của bài để hoàn thành 4 câu dưới mỗi hình như bài tập mô tả hình ở Textbook tr.026. Nói to câu hoàn chỉnh rồi tự đối chiếu gợi ý. Đây là bài tự luyện, app không chấm tự động.",
+     "prompts": [
+      "你吃苹果吗？我去给你______。",
+      "每天回家后他就想______。",
+      "这本书她还没______。",
+      "饭菜______，你们来吃饭吧。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/hsk2-lesson-03/desc-apple.webp",
+       "alt": "Tranh vẽ lại: hai bàn tay rửa một quả táo đỏ dưới vòi nước",
+       "captionVi": "Tranh vẽ lại (Textbook tr.026, hình 1): rửa táo — gợi ý đáp án: 洗一洗 (rửa qua một chút).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 42,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-03/desc-rest.webp",
+       "alt": "Tranh vẽ lại: người đàn ông nằm dài trên ghế sofa, tay che trán, vẻ mệt mỏi",
+       "captionVi": "Tranh vẽ lại (Textbook tr.026, hình 2): về nhà là muốn nghỉ — gợi ý đáp án: 休息休息.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 42,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-03/desc-read.webp",
+       "alt": "Tranh vẽ lại: hai bàn tay cầm một cuốn sách đang mở trên bàn, bên cạnh là cốc cà phê",
+       "captionVi": "Tranh vẽ lại (Textbook tr.026, hình 3): cuốn sách chưa đọc xong — gợi ý đáp án: 看完.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 42,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-03/desc-dinner.webp",
+       "alt": "Tranh vẽ lại: người phụ nữ đang bày các món ăn lên bàn tròn trong bếp",
+       "captionVi": "Tranh vẽ lại (Textbook tr.026, hình 4): cơm canh đã sẵn sàng — gợi ý đáp án: 做好了.",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 42,
+         "printedPage": 26,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết lại 4 câu hoàn chỉnh của bạn vào đây trước khi đối chiếu gợi ý trong caption từng hình.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 42,
+       "printedPage": 26,
+       "section": "综合练习 · 描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l3-03",
+     "kind": "speaking",
+     "titleVi": "Khởi động 2: ghép danh từ cho động từ (Textbook tr.019)",
+     "instructionVi": "Như bài Khởi động 2 ở Textbook tr.019: với mỗi động từ dưới đây, nói (và viết) ít nhất một danh từ đi cùng tự nhiên. Đây là bài mở, có nhiều đáp án đúng; gợi ý chỉ là ví dụ. App không chấm tự động.",
+     "prompts": [
+      "送______",
+      "拿______",
+      "做______",
+      "吃______",
+      "洗______",
+      "看______"
+     ],
+     "draftPromptVi": "Gợi ý đáp án (chỉ là ví dụ): 送人/送孩子 (đưa người/đưa con), 拿书/拿杯子 (cầm sách/cầm cốc), 做饭/做工作 (nấu cơm/làm việc), 吃饭/吃苹果 (ăn cơm/ăn táo), 洗手/洗车 (rửa tay/rửa xe), 看书/看电影 (đọc sách/xem phim).",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 35,
+       "printedPage": 19,
+       "section": "热身 2 · 给下面的动词加上合适的名词"
+      }
+     ]
+    }
+   ],
+   "selfCheckIntroVi": "Ba bài tự luyện dưới đây bám đúng các hoạt động của sách (hỏi đáp theo cặp, mô tả hình, ghép cụm từ). Chúng không được chấm tự động — hãy nói/viết ra rồi tự đối chiếu với gợi ý.",
+   "selfCheckListenVi": null,
+   "apply": {
+    "titleVi": "Dùng ngay: kể chuyện và bàn chuyến đi",
+    "instructionVi": "Hai nhiệm vụ nói dùng đúng hai tình huống trung tâm của bài: kể lại ngày bận rộn của Lưu Minh bằng bổ ngữ kết quả và động từ trùng điệp, rồi hỏi–đáp về kế hoạch du lịch như hoạt động cặp của sách.",
+    "audioTrackId": "trk-tb2-l03-7",
+    "noteVi": "Câu mẫu lấy từ chính Đoạn 4 và hoạt động lớp tr.027 của bài.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 41,
+      "printedPage": 25,
+      "section": "课文 4"
+     },
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 43,
+      "printedPage": 27,
+      "section": "课堂活动"
+     }
+    ],
+    "samplePassageIds": [
+     "h2l3-text-4",
+     "h2l3-text-2"
+    ],
+    "tasks": [
+     {
+      "id": "speak-h2l3-retell",
+      "kind": "speaking",
+      "titleVi": "Kể lại một ngày của Lưu Minh",
+      "promptVi": "Đọc to câu mẫu (Đoạn 4), rồi kể lại bằng lời của bạn: sáng anh đưa con đi học thế nào, bệnh viện gọi vì việc gì, vì sao anh mệt. Cố gắng dùng 送完， 回去 và 休息休息.",
+      "sampleZh": "早上，刘明开车送孩子去学校，送完孩子回家后，医院就来电话了，让他回去上班。",
+      "samplePinyin": "Zǎoshang, Liú Míng kāichē sòng háizi qù xuéxiào, sòngwán háizi huí jiā hòu, yīyuàn jiù lái diànhuà le, ràng tā huíqù shàngbān.",
+      "sampleVi": "Buổi sáng, Lưu Minh lái xe đưa con đi học; đưa con xong về nhà thì bệnh viện gọi điện đến, bảo anh quay lại làm việc."
+     },
+     {
+      "id": "speak-h2l3-ask",
+      "kind": "speaking",
+      "titleVi": "Hỏi nhau về chuyến du lịch",
+      "promptVi": "Đóng vai hai người như hoạt động cặp tr.027: một người hỏi “你想去旅游吗？想好去哪儿了吗？为什么？”, người kia trả lời bằng một nơi mình thật sự muốn đi và lý do （看了看……的介绍……).",
+      "sampleZh": "你想去旅游吗？我想去旅游。",
+      "samplePinyin": "Nǐ xiǎng qù lǚyóu ma? Wǒ xiǎng qù lǚyóu.",
+      "sampleVi": "Bạn muốn đi du lịch không? Tôi muốn đi du lịch. (mẫu mở đầu của sách, tr.027)"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "prepSummaryVi": "15 từ mới xếp theo 4 đoạn: về nhà và làm xong việc （回来/这么/完）, cùng nhau ra ngoài （一起/出去）, rửa ráy và tự lấy （洗/自己/拿/手/为什么/不错）, đưa tiễn hằng ngày （送/回去/每/累）.",
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Xem bức tranh Tây An và mục tiêu bài",
+     "descVi": "Bắt đầu: 4 mục tiêu của sách — hỏi lý do, bổ ngữ kết quả, động từ trùng điệp và điểm đến Tây An.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Học 15 từ mới theo 4 đoạn",
+     "descVi": "Từ cần biết: mỗi nhóm từ nghe bằng đúng track từ mới của đoạn.",
+     "sectionId": "prep",
+     "dialogueId": "h2l3-text-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Nắm bổ ngữ kết quả và động từ trùng điệp",
+     "descVi": "Hiểu cách dùng: 3 điểm ngữ pháp + phần Hán tự nền tảng （三点水/宝盖头）.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe và đọc 4 đoạn (18 câu)",
+     "descVi": "Nghe & đọc: mỗi đoạn nghe track riêng và trả lời ngay câu hỏi in trong sách ở dưới đoạn.",
+     "sectionId": "reader",
+     "dialogueId": "h2l3-text-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Làm 12 câu luyện tập chính",
+     "descVi": "Luyện tập: 4 câu nối hình, 5 câu điền từ tổng hợp và 3 câu mở rộng của Workbook — đều là bài in trong sách.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói và tổng kết",
+     "descVi": "Tự nói: hỏi đáp về chuyến du lịch của bạn; Tổng kết: 5 ý chính cần nhớ của bài.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Bổ ngữ kết quả: động từ + 好/完/晚…",
+     "bodyVi": "Động từ hoặc tính từ đứng sau động từ để nói kết quả: 做+好， 吃+完， 来+晚. Tân ngữ thường đứng sau bổ ngữ.",
+     "exampleZh": "菜都做好了。",
+     "examplePinyin": "Cài dōu zuòhǎo le.",
+     "exampleVi": "Cơm canh làm xong cả rồi."
+    },
+    {
+     "titleVi": "Phủ định bổ ngữ kết quả: 没… và bỏ “了”",
+     "bodyVi": "Phủ định thì đặt 没（有）trước động từ và bỏ “了” ở cuối: “我没吃完饭” — chưa ăn xong, không nói “没吃完饭了”.",
+     "exampleZh": "我还没想好呢。",
+     "examplePinyin": "Wǒ hái méi xiǎnghǎo ne.",
+     "exampleVi": "Em vẫn chưa nghĩ xong đâu. (câu trong Đoạn 2)"
+    },
+    {
+     "titleVi": "Trùng điệp cho việc sắp làm: A（一）A · ABAB · AAB",
+     "bodyVi": "Động từ một âm tiết: 想一想； hai âm tiết: 休息休息； từ ly hợp: 帮帮忙. Nghĩa: làm một chút, thử làm — giọng nhẹ nhàng.",
+     "exampleZh": "那你再想一想，你想好了，我来买票。",
+     "examplePinyin": "Nà nǐ zài xiǎng yi xiǎng, nǐ xiǎnghǎo le, wǒ lái mǎi piào.",
+     "exampleVi": "Vậy em nghĩ thêm đi, nghĩ xong thì anh mua vé."
+    },
+    {
+     "titleVi": "Trùng điệp cho việc đã làm: A了A · AB了一下 · A了AB",
+     "bodyVi": "Việc đã xảy ra: 看了看； động từ hai âm tiết dùng “AB了一下” （休息了一下）; từ ly hợp: 帮了帮忙.",
+     "exampleZh": "我看了看网上的介绍。",
+     "examplePinyin": "Wǒ kànle kàn wǎngshang de jièshào.",
+     "exampleVi": "Tôi đã xem qua phần giới thiệu trên mạng."
+    },
+    {
+     "titleVi": "Hỏi lý do bằng 为什么， chuyển ý bằng 对了",
+     "bodyVi": "为什么 đặt trước động từ để hỏi lý do. Khi chợt nhớ ra việc khác, người Trung Quốc mở đầu bằng “对了” — như Vương Nhất Tuyết chợt nhớ ra chuyến đi Tây An.",
+     "exampleZh": "为什么想去西安？",
+     "examplePinyin": "Wèi shénme xiǎng qù Xī'ān?",
+     "exampleVi": "Sao lại muốn đi Tây An? (câu trong Đoạn 3)"
+    }
+   ],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu (ở Nghe & đọc và các ví dụ) để xem Pinyin, Hán–Việt và nghĩa. Từ điển gồm toàn bộ từ mới của dự án cộng các mục bổ sung riêng cho bài này.",
+    "extras": [
+     {
+      "zh": "西安",
+      "pinyin": "Xī'ān",
+      "hanViet": "TÂY AN",
+      "vi": "Tây An (thành phố, tên riêng)"
+     },
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh (nhân vật trong bài)"
+     },
+     {
+      "zh": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "hanViet": "VƯƠNG NHẤT TUYẾT",
+      "vi": "Vương Nhất Tuyết (nhân vật trong bài)"
+     },
+     {
+      "zh": "一",
+      "pinyin": "yī",
+      "hanViet": "NHẤT",
+      "vi": "một (trong 想一想: nghĩ một chút)"
+     },
+     {
+      "zh": "帮",
+      "pinyin": "bāng",
+      "hanViet": "BANG",
+      "vi": "giúp (trong 帮帮忙: giúp một tay)"
+     }
+    ],
+    "phrases": []
+   }
   }
  ],
  "writingSets": [
@@ -55462,6 +58229,138 @@
        "pdfPage": 18,
        "printedPage": 11,
        "section": "小语讲堂 · 一、汉字"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "writing-hsk2-l03",
+   "lessonId": "hsk2-l03",
+   "titleVi": "Luyện viết Bài 3 · 汉 / 洗 / 家 / 完",
+   "introVi": "Bốn chữ của Bài 3 theo đúng thứ tự sách luyện viết chữ Hán HSK 2 (trang 3): mỗi chữ đi từ nhận diện nét, xem thứ tự nét, viết theo hướng dẫn, tự viết, đối chiếu, rồi ghi vào vở giấy. Hai bộ của bài — Ba chấm thủy 氵và Bảo cái đầu 宀 — cũng là điểm Hán tự nền tảng trong Workbook tr.021.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-writing-pdf",
+     "pdfPage": 3,
+     "printedPage": 3,
+     "section": "Sách viết tr.3 (trang ảnh thứ 3)"
+    }
+   ],
+   "chars": [
+    {
+     "id": "w-h2l3-han",
+     "char": "汉",
+     "pinyin": "hàn",
+     "hanViet": "HÁN",
+     "meaningVi": "Hán (chữ Hán, tiếng Hán)",
+     "strokeCount": 5,
+     "radical": "氵",
+     "radicalNameVi": "Ba chấm thủy",
+     "word": {
+      "zh": "汉字",
+      "pinyin": "Hànzì",
+      "vi": "chữ Hán"
+     },
+     "sentence": {
+      "zh": "我每天都会写写汉字。",
+      "pinyin": "Wǒ měi tiān dōu huì xiěxie Hànzì.",
+      "vi": "Ngày nào tôi cũng viết chữ Hán một chút."
+     },
+     "tipVi": "汉 = 氵（ba chấm thủy) + 又. Viết ba nét chấm thủy trước, nét cuối của 氵hất lên nối sang phần 又 ở bên phải.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 3,
+       "printedPage": 3,
+       "section": "汉"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l3-xi",
+     "char": "洗",
+     "pinyin": "xǐ",
+     "hanViet": "TẨY",
+     "meaningVi": "rửa; giặt",
+     "strokeCount": 9,
+     "radical": "氵",
+     "radicalNameVi": "Ba chấm thủy",
+     "word": {
+      "zh": "洗手",
+      "pinyin": "xǐ shǒu",
+      "vi": "rửa tay"
+     },
+     "sentence": {
+      "zh": "饭前要洗洗手。",
+      "pinyin": "Fàn qián yào xǐxi shǒu.",
+      "vi": "Trước bữa ăn phải rửa tay."
+     },
+     "tipVi": "洗 = 氵+ 先 （土 + 儿）. Bên phải viết phần 土 trước, hai nét của 儿 ở dưới sau cùng.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 3,
+       "printedPage": 3,
+       "section": "洗"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l3-jia",
+     "char": "家",
+     "pinyin": "jiā",
+     "hanViet": "GIA",
+     "meaningVi": "nhà; gia đình",
+     "strokeCount": 10,
+     "radical": "宀",
+     "radicalNameVi": "Bảo cái đầu",
+     "word": {
+      "zh": "在家",
+      "pinyin": "zài jiā",
+      "vi": "ở nhà"
+     },
+     "sentence": {
+      "zh": "你在家休息休息吧。",
+      "pinyin": "Nǐ zài jiā xiūxi xiūxi ba.",
+      "vi": "Bạn ở nhà nghỉ ngơi một chút đi."
+     },
+     "tipVi": "家 = 宀 （宝盖头） + 豕. Viết mái 宀trước (chấm, chấm ngang ngắn, móc ngang), rồi phần 豕 ở dưới.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 3,
+       "printedPage": 3,
+       "section": "家"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l3-wan",
+     "char": "完",
+     "pinyin": "wán",
+     "hanViet": "HOÀN",
+     "meaningVi": "xong; hoàn thành",
+     "strokeCount": 7,
+     "radical": "宀",
+     "radicalNameVi": "Bảo cái đầu",
+     "word": {
+      "zh": "做完",
+      "pinyin": "zuòwán",
+      "vi": "làm xong"
+     },
+     "sentence": {
+      "zh": "我的工作做完了。",
+      "pinyin": "Wǒ de gōngzuò zuòwán le.",
+      "vi": "Việc của tôi làm xong rồi."
+     },
+     "tipVi": "完 = 宀 + 元. Sau mái 宀， phần 元 viết ngang, nét dọc cong móc, rồi hai nét cuối khép chữ.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 3,
+       "printedPage": 3,
+       "section": "完"
       }
      ]
     }

@@ -45,7 +45,7 @@ test('writing progress: markWriting stages and 1/3/7-day review spacing', () => 
 
 test('writing data: HSK2 lesson 1 set matches the writing book page 1 inventory', () => {
   const sets = content.writingSets || [];
-  assert.equal(sets.length, 2); // lesson 1 + lesson 2 sets (lesson 2 checked in hsk2lesson2standard.test.mjs)
+  assert.equal(sets.length, 3); // lesson 1 + 2 + 3 sets (lessons 2-3 checked in their own standard test files)
   const set = sets.find((w) => w.lessonId === 'hsk2-l01');
   assert.equal(set.lessonId, 'hsk2-l01');
   // Book order from the writing book page 1 (read directly from page image):

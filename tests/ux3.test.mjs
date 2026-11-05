@@ -8,7 +8,7 @@ const lessons = [content.pilot, ...content.additionalLessons];
 // ---- Data: Han-Viet coverage + context-correct readings --------------------
 test('han-viet: all prep words carry a verified, context-checked reading', () => {
   const words = lessons.flatMap((c) => c.prepWords);
-  assert.equal(words.length, 362); // 310 before + 20 Lesson 15 entries (17 words + 3 proper nouns, D27 standard build) + 15 HSK2 Lesson 1 entries (14 words + 1 proper noun) + 17 HSK2 Lesson 2 entries (16 words + 1 proper noun)
+  assert.equal(words.length, 377); // 310 before + 20 Lesson 15 entries (17 words + 3 proper nouns, D27 standard build) + 15 HSK2 Lesson 1 entries (14 words + 1 proper noun) + 17 HSK2 Lesson 2 entries (16 words + 1 proper noun) + 15 HSK2 Lesson 3 entries (15 words, no proper noun)
   for (const w of words) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
@@ -29,7 +29,7 @@ test('han-viet: all prep words carry a verified, context-checked reading', () =>
 
 test('exercise support data: every Chinese option has pinyin and Vietnamese meaning', () => {
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
-  assert.equal(options.length, 1144); // exercise-set options only; since D28 the dialogues' own questions (250 options) live at their dialogues
+  assert.equal(options.length, 1194); // exercise-set options only; since D28 the dialogues' own questions (280 options) live at their dialogues
   for (const o of options) { assert.ok(o.pinyin, o.zh); assert.ok(o.vi, o.zh); }
 });
 

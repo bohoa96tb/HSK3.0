@@ -551,3 +551,17 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .review-modes small{font-weight:400;font-size:.82rem}.review-modes [aria-pressed=true]{background:#155c4d;color:white;border-color:#155c4d}
 .review-text{background:#fff;border-radius:12px;padding:16px;min-height:80px;font-size:1.2rem;line-height:1.7}
 .audio-review button,.audio-review select{min-height:44px}.audio-review .row-actions{flex-wrap:wrap;gap:8px}.audio-review label{display:flex;align-items:center;gap:6px;min-height:44px}.audio-review select{max-width:180px}.audio-review ol{padding-left:24px;max-height:340px;overflow:auto}.audio-review li{margin-bottom:10px}
+
+/* Reading card: full bilingual context, current speech highlighted in place. */
+.review-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 0 8px;font-size:.85rem;font-weight:650;color:#37675b}
+.review-caption [data-review-count]{white-space:nowrap;font-variant-numeric:tabular-nums;color:#60776f}
+.review-progress{display:block;width:100%;height:5px;border:0;border-radius:9px;overflow:hidden;background:#dce9e3;accent-color:#19705b;margin-bottom:14px}
+.review-progress::-webkit-progress-bar{background:#dce9e3}.review-progress::-webkit-progress-value{background:#19705b;border-radius:9px}
+.review-transcript{background:#fff;border:1px solid #e0ebe6;border-radius:18px;padding:20px;box-shadow:0 5px 18px #153e2c08;min-height:140px}
+.review-paragraph+.review-paragraph{border-top:1px solid #e4ebe7;margin-top:15px;padding-top:15px}
+.review-language{display:block;font-size:.66rem;letter-spacing:.12em;font-weight:700;color:#76877f;margin-bottom:10px}
+.review-paragraph p{margin:0!important;font-size:1.12rem;line-height:1.9;color:#35483e;overflow-wrap:anywhere}
+.review-chinese p{font-size:1.65rem;line-height:1.7;color:#143d30}.review-active{background:#e3f3e9;color:#104f3b;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.review-status{font-size:.82rem;min-height:1.5em;margin:10px 0 14px;color:#526e62}
+.audio-review .review-controls{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:7px}.review-controls .btn{padding:10px 8px;min-width:0;font-size:.9rem;white-space:nowrap}
+@media(max-width:420px){.review-transcript{padding:16px}.review-paragraph p{font-size:1.03rem}.review-chinese p{font-size:1.5rem}.audio-review .review-controls{grid-template-columns:1fr 1.4fr 1fr}.review-controls [data-review-action=stop]{grid-column:1/-1;justify-self:center;min-width:90px}}

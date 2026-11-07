@@ -1,9 +1,10 @@
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261107-review-pilot1";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
 import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261105-hsk2l3-writing1";
 import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261105-hsk2l3-writing1";
-import * as player from "./player.js?v=20261105-hsk2l3-writing1";
+import * as player from "./player.js?v=20261107-review-pilot1";
 import { viewWritingHome, viewWritingSet, viewWritingChar, writingSetFor } from "./writing.js?v=20261105-hsk2l3-writing1";
 
 const main = document.getElementById("main");
@@ -93,11 +94,14 @@ function restoreScrollAnchor(saved) {
   else if (Math.abs(window.scrollY - saved.y) > 1) window.scrollTo(0, saved.y);
 }
 function render() {
+  if (location.hash !== lastRenderedHash) stopReview();
   closeLookup(); clearPhraseSelection();
   if (!parseRoute().query.item) lastDeepLinkItem = null;
   const savedAnchor = captureScrollAnchor();
   renderInner();
   applyDisplaySettings();
+  const reviewContent = contentFor(parseRoute().seg[1]);
+  if (reviewContent) mountReview(reviewContent, () => player.pause());
   restoreScrollAnchor(savedAnchor);
   lastRenderedHash = location.hash;
   syncChromeInsets();
@@ -1092,7 +1096,7 @@ function sectionSummaryHtml(lesson, content) {
   const nextSection = content.intro.sections.find((x) => !st.completedSections.includes(x.id));
   const attempted = sum.firstTotal > 0 || (suppSum ? suppSum.firstTotal > 0 : false);
   const mainNotAttempted = sum.firstTotal === 0 && suppSum && suppSum.firstTotal > 0;
-  return `<section class="card"><h2>Tổng kết bài</h2>
+  return `${reviewHtml(content)}<section class="card"><h2>Tổng kết bài</h2>
   ${Array.isArray(content.summaryPoints) && content.summaryPoints.length ? `<h3>Những điều chính đã học</h3>${content.summaryPoints.map((pt) => `<div class="example"><strong>${esc(pt.titleVi)}</strong><div class="ex-row"><span class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(pt.exampleZh, content)}</span></div><div class="ex-meta"><span class="ex-note">${esc(pt.exampleVi)}</span>${phraseBtnHtml(content)}</div></div>`).join("")}` : ""}
   <p>Đã hoàn thành <strong>${st.completedSections.length}/${content.intro.sections.length}</strong> mục.</p>
   ${nextSection ? `<p class="row-actions"><a class="btn primary" href="#/lesson/${lesson.id}/${nextSection.id}">Tiếp tục: ${esc(nextSection.titleVi)} →</a></p>` : ""}

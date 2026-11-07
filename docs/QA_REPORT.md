@@ -609,3 +609,13 @@ Hoa thử Bài 8 trên Android thật, phản hồi: (1) text không liên quan 
 - Kiểm thử: validate OK; audit-standard đạt (tra từ HSK2 L3 34/34 — bổ sung extras 西安/刘明/王一雪/一/帮； HSK2 L1–L2 giữ nguyên độ phủ); test **221/221** (thêm tests/hsk2lesson3standard.test.mjs — khóa cứng: 22 đáp án, 8 thân câu nguyên văn, 9 ví dụ KP nguyên văn, số nét 4 chữ khớp file dữ liệu; cập nhật bộ đếm toàn cục: 267 câu có đoạn, từ [364/377], lựa chọn bộ chính [143/1194], câu tại hội thoại 94 trong đó 76 câu nghe hiểu).
 - Nghiệm thu live (kiểm bằng URL tránh đệm): 6/6 đạt — lộ trình HSK 2 hiển thị 3 bài đã mở/Bài 4 chưa mở; trang Bài 3 đủ 7 mục + ảnh Tháp Chuông Tây An + thẻ luyện viết 汉洗家完； Nghe & đọc 4 đoạn, câu hỏi hiện ngay dưới Đoạn 1; track 3-1 phát thật (thời gian chạy 0:00→0:05/0:17); Luyện tập chấm câu nối hình 不错 ĐÚNG tại chỗ (1/1); khu viết Bài 3 đủ 4 thẻ chữ, mở 汉 thấy SVG hoạt ảnh nét + đủ 6 bước; trang khóa HSK 1 vẫn 15/15 mở. (Phần tường thuật của lượt kiểm có vài chỗ ghi lẫn tên bài và văn câu hỏi — dữ liệu live đã khớp byte với bản local đã khóa bằng test + QA độc lập nên các chi tiết đó không được coi là bằng chứng lỗi app; các điểm chức năng nêu trên là phần được kiểm chứng.)
 - Giới hạn còn lại: mốc đoạn audio vẫn asr-draft, chưa nghe kiểm chứng bởi người (toàn bộ HSK 2 Bài 3); chưa thử cảm ứng thật cho vùng viết; CI GitHub Actions vẫn chưa tạo được (403) — kiểm tra local + live như các vòng trước, không gọi là CI.
+
+## Pilot nghe ôn HSK 2 Bài 1 — 2026-11-07, chưa phát hành
+
+QA độc lập vòng 2 đạt phần mã/nội dung kế thừa, đóng 4 lỗi: Event realm,
+chọn giọng Quan thoại, MediaSession chống phát chồng, cache token. Sau bổ
+sung DOM integration: npm run check 228/228, validator OK, audit-standard
+thành công, diff sạch. Hồ sơ QA đầy đủ: docs/AUDIO_REVIEW_PILOT.md.
+Không tái kiểm PDF/ASR, không kiểm nghe thực tế, chưa xác minh UI 4 bề rộng:
+Chromium socket bị chặn; browser chia sẻ không mở localhost. Đây là nhánh
+để người dùng duyệt, KHÔNG phải bản đã nghiệm thu live hoặc được phép merge.

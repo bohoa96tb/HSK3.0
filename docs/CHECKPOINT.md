@@ -286,3 +286,16 @@
 - Nghiệm thu live 6/6: lộ trình HSK 2 (3 bài đã mở, Bài 4 chưa mở), trang bài đủ 7 mục + ảnh Tháp Chuông Tây An + thẻ viết, Nghe & đọc 4 đoạn + câu hỏi tại đoạn, track 3-1 phát thật, Luyện tập chấm đúng tại chỗ, khu viết Bài 3 mở chữ 汉 có hoạt ảnh SVG; hồi quy trang khóa HSK 1 (15/15 mở). (Chi tiết phụ trong báo cáo kiểm tra có chỗ ghi lẫn tên bài/câu hỏi — dữ liệu live đã khớp byte với bản local đã khóa bằng test và QA nên không coi là lỗi app.)
 - nextTask: HSK 2 Bài 4 《你穿红色的很好看》 (TB tr. in 029–036 = PDF 45–52; WB tr. in 031–040 = PDF 38–47, phần bài học tra trực quan khi bắt đầu; sách viết tr.4: 红/绿/场/块 — đối chiếu lại trang ảnh trước khi ghi dữ liệu). Khi Hoa nhắn "Tiếp tục": làm trọn Bài 4 theo cùng khuôn (biên soạn → test → QA độc lập → PR → nghiệm thu live), gồm bộ chữ viết Bài 4.
 - Việc treo cũ không đổi: CI qua web; nút Tiếp tục D26 chưa kiểm lại trên Android thật của Hoa; track mô phỏng Bài 5/6/7 HSK 1 chờ Hoa yêu cầu; toàn bộ mốc đoạn audio (HSK 1 + HSK 2) vẫn asr-draft chưa nghe kiểm chứng; ghi chú tùy chọn của QA về chú thích nghĩa cho TỰ KỶ （自己） chưa xử lý.
+
+## Nhánh thử nghe ôn HSK 2 Bài 1 — 2026-11-07
+
+- Yêu cầu mới: thêm Ôn nhanh/Ôn chi tiết ở mục 7, pilot hsk2-l01;
+  nhánh `feat/hsk2-l01-audio-review`, phải chờ người dùng duyệt trước merge.
+- Đã làm luồng giọng máy Trung–Việt từ nội dung bài, điều khiển phát liên tục,
+  tạm dừng, chuyển lượt, tốc độ, nghỉ nhắc lại, lặp; bản chữ xem nội dung.
+- QA độc lập đã đóng lỗi mã; validator OK, 228/228 test, audit và diff đạt.
+- Chưa kiểm UI thực tế/4 kích thước và chưa nghe trên thiết bị: môi trường
+  chặn Chromium socket; shared browser không truy cập localhost.
+- Hồ sơ đầy đủ: docs/AUDIO_REVIEW_PILOT.md. Không đổi audio Baulchino.
+- nextTask của nhánh này: kiểm giao diện/giọng đọc và chờ Hoa duyệt pilot;
+  KHÔNG merge/phát hành hoặc làm bài tiếp theo trước khi có chỉ đạo.

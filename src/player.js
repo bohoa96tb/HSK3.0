@@ -15,9 +15,10 @@ audio.addEventListener('ended',()=>{currentSegment=null;});
 audio.addEventListener('pause',()=>{persist();emit();});
 audio.addEventListener('error',()=>{lastError='Không tải được audio. Chạm Phát để thử lại hoặc mở trang audio nguồn.';emit();});
 export function subscribe(fn){listeners.add(fn);fn(getState());return()=>listeners.delete(fn);}
-async function start(){try{await audio.play();}catch(e){if(e.name!=='AbortError'){lastError='Chưa phát được audio. Chạm Phát để thử lại.';emit();}}}
+async function start(){window.dispatchEvent(new window.Event("hsk-audio-start"));try{await audio.play();}catch(e){if(e.name!=='AbortError'){lastError='Chưa phát được audio. Chạm Phát để thử lại.';emit();}}}
 export function playTrack(track,{rate=1}={}){
  if(!track)return;
+ window.dispatchEvent(new window.Event("hsk-audio-start"));
  try{window.speechSynthesis?.cancel();}catch(e){}
  stopAt=null;currentSegment=null;
  const retry=!!lastError;lastError=null;
@@ -32,6 +33,7 @@ export function playTrack(track,{rate=1}={}){
 // segments); playback pauses itself at `end` via the timeupdate guard.
 export function playSegment(track,{start:segStart=0,end:segEnd=null,rate=1}={}){
  if(!track)return;
+ window.dispatchEvent(new window.Event("hsk-audio-start"));
  try{window.speechSynthesis?.cancel();}catch(e){}
  lastError=null;
  stopAt=(segEnd!=null&&segEnd>segStart)?segEnd:null;
@@ -51,6 +53,7 @@ export function playSegment(track,{start:segStart=0,end:segEnd=null,rate=1}={}){
 // the second reading on Android. Book audio stays in use for whole
 // dialogues and listening tasks, where each line is read once.
 export function speakText(text){
+ window.dispatchEvent(new window.Event("hsk-audio-start"));
  try{
   if(!('speechSynthesis' in window))return false;
   pause();

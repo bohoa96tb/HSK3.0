@@ -543,3 +543,11 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .stage-mark{display:inline-block;width:1.4em}
 .due-char{font-size:1.25rem}
 .writing-entry h2 [lang="zh-CN"]{color:#1f3a5f}
+
+/* Summary listening pilot — HSK 2 Lesson 1 only. */
+.audio-review{background:linear-gradient(135deg,#eaf7f2,#f5f8ff);border:1px solid #bcd9d0;border-radius:20px;padding:clamp(16px,3vw,28px);margin-bottom:24px;overflow-wrap:anywhere}
+.audio-review h3{margin-top:0;font-size:1.5rem}.review-modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.review-modes .btn{display:flex;flex-direction:column;align-items:flex-start;white-space:normal;text-align:left;gap:5px;padding:14px}
+.review-modes small{font-weight:400;font-size:.82rem}.review-modes [aria-pressed=true]{background:#155c4d;color:white;border-color:#155c4d}
+.review-text{background:#fff;border-radius:12px;padding:16px;min-height:80px;font-size:1.2rem;line-height:1.7}
+.audio-review button,.audio-review select{min-height:44px}.audio-review .row-actions{flex-wrap:wrap;gap:8px}.audio-review label{display:flex;align-items:center;gap:6px;min-height:44px}.audio-review select{max-width:180px}.audio-review ol{padding-left:24px;max-height:340px;overflow:auto}.audio-review li{margin-bottom:10px}

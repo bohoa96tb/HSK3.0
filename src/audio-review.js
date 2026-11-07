@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02'];
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
 export function reviewSupported(content) {
  return !!content && REVIEW_LESSONS.includes(content.lessonId);
@@ -36,6 +36,9 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l02-haishi': 'Mẫu câu: ngay trước phương án được chọn, nói cụm có nghĩa là hay là, cuối câu thêm trợ từ ba, để gợi ý phương án tốt hơn sau khi đã cân nhắc.',
  'kp-hsk2-l02-duo': 'Mẫu số gần đúng: nếu con số là bội số của mười, đặt chữ đa có nghĩa là hơn ngay sau con số, rồi mới đến lượng từ và danh từ. Nếu con số không phải bội số của mười, đặt chữ đa sau lượng từ.',
  'kp-hsk2-l02-attributive': 'Mẫu định ngữ: đặt động từ, cụm động từ hoặc cả cụm chủ ngữ và động từ ở trước, tiếp theo là chữ đích, rồi mới đến danh từ được bổ nghĩa. Định ngữ đứng trước danh từ, không đứng sau danh từ như tiếng Việt.',
+ 'kp-hsk2-l03-result': 'Mẫu câu: động từ đứng trước, ngay sau đó đặt một động từ hoặc tính từ để nói kết quả của hành động, như làm xong xuôi, ăn hết, đến muộn hay nghe hiểu. Cuối câu có thể thêm một trợ từ để nói việc đã hoàn thành. Khi phủ định, đặt một từ có nghĩa là chưa ngay trước động từ và bỏ trợ từ ở cuối câu.',
+ 'kp-hsk2-l03-redup1': 'Mẫu trùng điệp cho việc sắp làm: với động từ một âm tiết, lặp lại động từ đó, có thể chêm chữ nhất, nghĩa là một, ở giữa. Với động từ hai âm tiết, lặp lại cả cụm hai âm tiết. Với động từ ly hợp, chỉ lặp lại âm tiết đầu rồi mới nói phần còn lại. Cách lặp này có nghĩa làm một chút, thử làm, nghe nhẹ nhàng.',
+ 'kp-hsk2-l03-redup2': 'Mẫu trùng điệp cho việc đã làm: với động từ một âm tiết, chêm trợ từ chỉ việc đã xảy ra vào giữa hai lần lặp của động từ. Với động từ hai âm tiết, thường không lặp lại, mà dùng nguyên động từ rồi thêm cụm có nghĩa là một chút ở sau. Với động từ ly hợp, chêm trợ từ đã vào sau âm tiết đầu, rồi mới nói phần còn lại.',
 };
 // Only strip presentation/source annotations, never arbitrary lesson vocabulary.
 export function cleanReviewText(text) {

@@ -8,7 +8,9 @@ Android (PR #113), transcript song ngữ (PR #114) và nhịp nghỉ theo dấu 
 mẫu là chuẩn đã duyệt: mở rộng từng bài đã phát hành sau QA riêng của bài đó,
 mỗi lượt một bài (quyết định D31). Bài áp dụng đầu tiên: HSK 2 Bài 2
 (17 mục từ = 16 từ mới + 1 tên riêng, 3 điểm ngữ pháp, 4 đoạn, 21 câu —
-số liệu tính từ dữ liệu bài, không giữ cứng số của Bài 1).
+số liệu tính từ dữ liệu bài, không giữ cứng số của Bài 1). Bài 2 đã phát
+hành qua PR #116 (merge 8b8708f7) + sổ sách PR #117; bài tiếp theo áp dụng:
+HSK 2 Bài 3 (15 từ, 3 điểm ngữ pháp, 4 đoạn, 18 câu).
 
 Phần dưới giữ nguyên hồ sơ vòng thử nghiệm Bài 1.
 

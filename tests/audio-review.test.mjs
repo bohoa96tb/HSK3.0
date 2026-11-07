@@ -6,6 +6,7 @@ const data = JSON.parse(readFileSync(new URL('../data/content.json', import.meta
 const content = data.additionalLessons.find(c => c.lessonId === 'hsk2-l01');
 const content2 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l02');
 const content3 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l03');
+const notEnabled = data.additionalLessons.find(c => c.lessonId === 'hsk1-l02');
 function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  const spoken = [], timers = [], watchdogs = [];
  const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);u.onstart?.();}};
@@ -15,7 +16,7 @@ function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
 }
 test('enabled lessons only, detailed review includes all 15 words and 22 dialogue lines, no exercise answers', () => {
  assert.equal(buildReview(data.pilot).length,0);
- assert.equal(buildReview(content3).length,0);
+ assert.equal(buildReview(notEnabled).length,0);
  const quick=buildReview(content), detail=buildReview(content,'detail');
  assert.ok(detail.length>quick.length);
  for (const w of content.prepWords) assert.ok(detail.some(r=>r.source===w.id && r.text===w.zh));
@@ -125,7 +126,7 @@ test('HSK2 lesson 2 detail includes all 17 word entries, 21 dialogue lines in or
  // Counts in the mode button come from this lesson's data.
  assert.equal(reviewDetailLabel(content2), '16 từ + 1 tên riêng + 3 điểm ngữ pháp + 4 đoạn');
  assert.ok(reviewHtml(content2).includes('16 từ + 1 tên riêng + 3 điểm ngữ pháp + 4 đoạn'));
- assert.equal(reviewHtml(content3), '');
+ assert.equal(reviewHtml(notEnabled), '');
  // Foundation characters are not read as grammar; writing stays in the writing area.
  assert.ok(detail.every(r => !content2.knowledgePoints.filter(k => k.kind !== 'grammar').some(k => k.id === r.source)));
 });
@@ -141,7 +142,7 @@ test('HSK2 lesson 2 speech is sanitized, negations and parenthetical meanings su
  assert.ok(gloss.some(r => (r.displayText || '').includes('(họ bán)')));
 });
 test('grammar patterns stay on screen but are spoken as Vietnamese paraphrases', () => {
- for (const lesson of [content, content2]) {
+ for (const lesson of [content, content2, content3]) {
   const detail = buildReview(lesson, 'detail');
   for (const k of lesson.knowledgePoints.filter(k => k.kind === 'grammar')) {
    const row = detail.find(r => r.source === k.id && r.label === 'Mẫu câu');
@@ -180,6 +181,49 @@ test('HSK2 lesson 2 summary controls mount, switch modes and stop on book audio'
  click('[data-review-action="play"]');
  assert.match(document.querySelector('[data-review-status]').textContent, /Đang nghe/);
  // Book-audio stop is covered by the lesson 1 DOM test (one shared controller).
+ click('[data-review-action="stop"]');
+ assert.match(document.querySelector('[data-review-status]').textContent, /Sẵn sàng/);
+ click('[data-review-mode="quick"]');
+ assert.ok(document.querySelectorAll('[data-review-script] li').length < detailCount);
+ stopReview(); dom.window.close();
+});
+test('HSK2 lesson 3 detail includes all 15 words, 18 dialogue lines in order, no exercise answers', async () => {
+ const {reviewHtml, reviewDetailLabel} = await import('../src/audio-review.js');
+ const detail = buildReview(content3, 'detail'), quick = buildReview(content3);
+ assert.ok(detail.length > quick.length);
+ assert.equal(content3.prepWords.length, 15);
+ for (const w of content3.prepWords) assert.ok(detail.some(r => r.source === w.id && r.text === w.zh), w.zh);
+ const lineRows = content3.reader.sentences.map(s => detail.find(r => r.source === s.id && r.text === s.zh));
+ assert.ok(lineRows.every(Boolean));
+ const positions = lineRows.map(r => detail.indexOf(r));
+ assert.deepEqual(positions, [...positions].sort((a, b) => a - b));
+ for (const s of content3.reader.sentences) {
+  const row = detail.find(r => r.source === s.id && r.text === s.zh);
+  if (s.speaker) assert.ok(row.label.includes(s.speaker), row.label);
+ }
+ assert.ok(detail.every(r => !content3.exerciseSet.items.some(i => i.id === r.source)));
+ assert.equal(reviewDetailLabel(content3), '15 từ + 3 điểm ngữ pháp + 4 đoạn');
+ assert.ok(reviewHtml(content3).includes('15 từ + 3 điểm ngữ pháp + 4 đoạn'));
+ assert.ok(detail.every(r => !content3.knowledgePoints.filter(k => k.kind !== 'grammar').some(k => k.id === r.source)));
+ // Negation of the result complement survives: 没 in Chinese, chưa/không in Vietnamese.
+ assert.ok(detail.some(r => r.text.includes('没做完')));
+ assert.ok(detail.some(r => r.text.includes('没吃完')));
+ for (const r of detail) { assert.ok(r.speechText); assert.ok(!/[^\p{L}\p{M}\p{N}\s]/u.test(r.speechText), r.speechText); }
+});
+test('HSK2 lesson 3 summary controls mount and switch modes', async () => {
+ const {JSDOM} = await import('jsdom');
+ const {reviewHtml, mountReview, stopReview} = await import('../src/audio-review.js');
+ const dom = new JSDOM('<main></main>'); globalThis.window = dom.window; globalThis.document = dom.window.document;
+ Object.defineProperty(window, 'speechSynthesis', {value: {getVoices: () => [{lang: 'vi-VN'}, {lang: 'zh-CN'}], cancel(){}, speak(u){u.onstart?.();}}});
+ window.SpeechSynthesisUtterance = class { constructor(text){ this.text = text; } };
+ const main = document.querySelector('main'); main.innerHTML = reviewHtml(content3);
+ mountReview(content3, () => {});
+ const click = s => document.querySelector(s).click();
+ click('[data-review-mode="detail"]');
+ const detailCount = document.querySelectorAll('[data-review-script] li').length;
+ assert.ok(detailCount > 100);
+ click('[data-review-action="play"]');
+ assert.match(document.querySelector('[data-review-status]').textContent, /Đang nghe/);
  click('[data-review-action="stop"]');
  assert.match(document.querySelector('[data-review-status]').textContent, /Sẵn sàng/);
  click('[data-review-mode="quick"]');

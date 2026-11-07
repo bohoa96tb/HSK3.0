@@ -1,6 +1,18 @@
-# HSK 2 Bài 1 — nghe ôn tại mục 7 (nhánh thử, 2026-11-07)
+# Nghe ôn tại mục 7 — mẫu HSK 2 Bài 1 (2026-11-07) và mở rộng từng bài (D31)
 
-## Phạm vi do người dùng yêu cầu
+## Trạng thái mẫu (cập nhật 2026-11-08)
+
+Người dùng đã duyệt mẫu tại HSK 2 Bài 1 sau các vòng sửa phát audio trên
+Android (PR #113), transcript song ngữ (PR #114) và nhịp nghỉ theo dấu câu
+(PR #115, merge `05a09877678a53b63330916a590a744ffd2e3175`). Từ 08/11/2026
+mẫu là chuẩn đã duyệt: mở rộng từng bài đã phát hành sau QA riêng của bài đó,
+mỗi lượt một bài (quyết định D31). Bài áp dụng đầu tiên: HSK 2 Bài 2
+(17 mục từ = 16 từ mới + 1 tên riêng, 3 điểm ngữ pháp, 4 đoạn, 21 câu —
+số liệu tính từ dữ liệu bài, không giữ cứng số của Bài 1).
+
+Phần dưới giữ nguyên hồ sơ vòng thử nghiệm Bài 1.
+
+## Phạm vi vòng thử nghiệm (lịch sử)
 
 Thử nghiệm trên `hsk2-l01` trước. Chỉ đưa lên nhánh/PR để người dùng duyệt;
 **không merge, không phát hành main, không mở rộng sang bài khác trước duyệt**.

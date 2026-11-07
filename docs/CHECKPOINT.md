@@ -299,3 +299,14 @@
 - Hồ sơ đầy đủ: docs/AUDIO_REVIEW_PILOT.md. Không đổi audio Baulchino.
 - nextTask của nhánh này: kiểm giao diện/giọng đọc và chờ Hoa duyệt pilot;
   KHÔNG merge/phát hành hoặc làm bài tiếp theo trước khi có chỉ đạo.
+
+## Sửa phát giọng ôn bài — 2026-11-07
+
+- Pilot đã phát hành theo yêu cầu người dùng qua PR #112, merge dc2b66e.
+  Người dùng báo không phát được audio; bản cũ chặn khi getVoices chưa đủ 2 giọng.
+- Nhánh fix/review-voice-start: bỏ chặn theo danh sách giọng, thử theo lang;
+  không ép giọng ngôn ngữ khác; chỉ hiện Đang nghe sau onstart, báo lỗi nếu
+  không khởi động trong 10 giây; hướng dẫn mở Chrome/kiểm giọng thiết bị.
+- QA độc lập đạt phần mã, 8/8 test ôn và 229/229 toàn bộ, diff sạch.
+- nextTask: kiểm bản live và xác nhận nghe trên máy người dùng; không mở rộng
+  pilot. Chưa khẳng định lỗi thiết bị thiếu bộ đọc được giải quyết.

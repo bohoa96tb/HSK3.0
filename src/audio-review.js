@@ -40,28 +40,36 @@ export function buildReview(content, mode = 'quick') {
 }
 
 export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, changed = () => {}, schedule = setTimeout, unschedule = clearTimeout}) {
- let queue = [], index = 0, status = 'idle', error = '', token = 0, timer, utterance;
+ let queue = [], index = 0, status = 'idle', error = '', token = 0, timer, watchdog, utterance;
  let rate = 1, gap = 1, loop = false;
  const state = () => ({queue, index, status, error});
  const emit = () => changed(state());
- function cancel() { token++; unschedule(timer); if (utterance) { utterance.onend = null; utterance.onerror = null; } synth?.cancel(); utterance = null; }
+ function cancel() { token++; unschedule(timer); unschedule(watchdog); if (utterance) { utterance.onstart = null; utterance.onend = null; utterance.onerror = null; } synth?.cancel(); utterance = null; }
  function stop() { cancel(); status = 'idle'; error = ''; emit(); }
  function play() {
   cancel(); error = '';
-  const voices = synth?.getVoices() || [];
+  const voices = synth?.getVoices?.() || [];
   const select = lang => voices.find(v => v.lang.replace('_','-').toLowerCase() === lang.toLowerCase()) || voices.find(v => lang === 'zh-CN' ? /^(zh-(cn|sg|tw)|cmn)(-|$)/i.test(v.lang.replace('_','-')) : /^vi(-|$)/i.test(v.lang));
-  if (!Utterance || !select('vi-VN') || !select('zh-CN')) {
-   status = 'error'; error = 'Cần giọng tiếng Việt và tiếng Trung trên thiết bị. Hãy bật/cài hai giọng trong cài đặt chuyển văn bản thành giọng nói, rồi bấm Phát lại.'; emit(); return;
+  if (!Utterance || !synth?.speak) {
+   status = 'error'; error = 'Trình duyệt này không hỗ trợ đọc văn bản. Hãy mở trang bằng Chrome hoặc Safari để thử lại.'; emit(); return;
   }
   if (!queue.length) return;
   status = 'playing'; beforePlay(); const mine = token;
   const next = () => {
    if (mine !== token) return;
    if (index >= queue.length) { if (loop) index = 0; else { status = 'ended'; index = queue.length - 1; emit(); return; } }
-   const row = queue[index]; utterance = new Utterance(row.text); utterance.lang = row.lang; utterance.voice = select(row.lang); utterance.rate = rate;
-   utterance.onend = () => { if (mine !== token) return; index++; timer = schedule(next, gap * 1000); };
-   utterance.onerror = () => { if (mine !== token) return; cancel(); status = 'error'; error = 'Giọng đọc bị gián đoạn. Bấm Phát để nghe lại câu hiện tại.'; emit(); };
-   emit(); try { synth.speak(utterance); } catch { utterance.onerror(); }
+   const row = queue[index]; utterance = new Utterance(row.text); utterance.lang = row.lang; const voice = select(row.lang); if (voice) utterance.voice = voice; utterance.rate = rate;
+   // Android may expose no voices even when lang-based synthesis works.
+   // Keep voice unset in that case; never force an unrelated language.
+   status = 'starting';
+   utterance.onstart = () => { if (mine !== token) return; unschedule(watchdog); status = 'playing'; emit(); };
+   utterance.onend = () => { if (mine !== token) return; unschedule(watchdog); index++; timer = schedule(next, gap * 1000); };
+   const fail = reason => { if (mine !== token) return; cancel(); status = 'error'; error = reason; emit(); };
+   utterance.onerror = event => fail(event?.error === 'language-unavailable' || event?.error === 'voice-unavailable'
+    ? `Máy chưa đọc được ${row.lang === 'vi-VN' ? 'tiếng Việt' : 'tiếng Trung'}. Hãy tải giọng tương ứng trong cài đặt chuyển văn bản thành giọng nói của điện thoại, rồi bấm Phát.`
+    : 'Không phát được giọng đọc. Nếu đang mở trong ứng dụng ChatGPT, hãy mở link bằng Chrome rồi bấm Phát lại.');
+   watchdog = schedule(() => fail('Giọng đọc không khởi động. Hãy mở link bằng Chrome và kiểm tra giọng tiếng Việt/tiếng Trung trong cài đặt chuyển văn bản thành giọng nói.'), 10000);
+   emit(); try { synth.resume?.(); synth.speak(utterance); } catch { utterance.onerror(); }
   };
   next();
  }
@@ -69,8 +77,8 @@ export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, cha
   state, stop,
   load(rows) { stop(); queue = rows; index = 0; emit(); },
   configure(options) { rate = options.rate ?? rate; gap = options.gap ?? gap; loop = options.loop ?? loop; },
-  toggle() { if (status === 'playing') { cancel(); index = Math.min(index, queue.length - 1); status = 'paused'; emit(); } else { if (status === 'ended') index = 0; play(); } },
-  move(delta) { const active = status === 'playing'; cancel(); index = Math.max(0, Math.min(queue.length - 1, index + delta)); status = 'paused'; emit(); if (active) play(); }
+  toggle() { if (['playing','starting'].includes(status)) { cancel(); index = Math.min(index, queue.length - 1); status = 'paused'; emit(); } else { if (status === 'ended') index = 0; play(); } },
+  move(delta) { const active = ['playing','starting'].includes(status); cancel(); index = Math.max(0, Math.min(queue.length - 1, index + delta)); status = 'paused'; emit(); if (active) play(); }
  };
 }
 
@@ -85,16 +93,16 @@ export function reviewHtml(content) {
  <p data-review-status role="status" aria-live="polite"></p><p data-review-text class="review-text"></p>
  <div class="row-actions"><button class="btn" data-review-action="prev" aria-label="Nghe mục trước">← Trước</button><button class="btn primary" data-review-action="play">▶ Phát</button><button class="btn" data-review-action="next">Sau →</button><button class="btn" data-review-action="stop">Dừng</button></div>
  <div class="row-actions"><label>Tốc độ <select data-review-rate><option value="0.8">0,8×</option><option value="1" selected>1×</option><option value="1.2">1,2×</option></select></label><label>Nghỉ giữa lượt <select data-review-gap><option value="0">Không nghỉ</option><option value="1" selected>1 giây</option><option value="3">3 giây · nhắc lại</option></select></label><label><input type="checkbox" data-review-loop> Lặp cả bài ôn</label></div>
- <p class="muted small">Giữ trang mở khi nghe. Khóa màn hình hoặc chuyển ứng dụng có thể ngắt giọng đọc. Tiếp tục sẽ đọc lại lượt đang dở.</p>
+ <p class="muted small">Nếu không nghe được trong ứng dụng ChatGPT, hãy mở link bằng Chrome. Giữ trang mở khi nghe. Khóa màn hình hoặc chuyển ứng dụng có thể ngắt giọng đọc. Tiếp tục sẽ đọc lại lượt đang dở.</p>
  <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Chưa kiểm nghe trên điện thoại thật. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
 }
 function refresh(s) {
  const root = document.querySelector('.audio-review'); if (!root) return;
  const row = s.queue[s.index];
- root.querySelector('[data-review-status]').textContent = s.error || `${({idle:'Sẵn sàng',playing:'Đang nghe',paused:'Tạm dừng',ended:'Đã nghe xong'})[s.status]} · ${Math.min(s.index+1,s.queue.length)}/${s.queue.length} lượt · ${row?.label || ''}`;
+ root.querySelector('[data-review-status]').textContent = s.error || `${({idle:'Sẵn sàng',starting:'Đang khởi động giọng đọc',playing:'Đang nghe',paused:'Tạm dừng',ended:'Đã nghe xong'})[s.status]} · ${Math.min(s.index+1,s.queue.length)}/${s.queue.length} lượt · ${row?.label || ''}`;
  root.querySelector('[data-review-text]').textContent = row?.text || '';
  root.querySelector('[data-review-text]').lang = row?.lang || 'vi';
- root.querySelector('[data-review-action="play"]').textContent = s.status === 'playing' ? 'Ⅱ Tạm dừng' : s.status === 'ended' ? '↻ Nghe lại' : '▶ Phát';
+ root.querySelector('[data-review-action="play"]').textContent = ['playing','starting'].includes(s.status) ? 'Ⅱ Tạm dừng' : s.status === 'ended' ? '↻ Nghe lại' : '▶ Phát';
  root.querySelectorAll('[data-review-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.reviewMode === mode)));
  root.querySelector('[data-review-action="prev"]').disabled = s.index <= 0;
  root.querySelector('[data-review-action="next"]').disabled = s.index >= s.queue.length-1;

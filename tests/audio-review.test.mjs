@@ -5,11 +5,11 @@ import {buildReview, createReviewPlayer} from '../src/audio-review.js';
 const data = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url)));
 const content = data.additionalLessons.find(c => c.lessonId === 'hsk2-l01');
 function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
- const spoken = [], timers = [];
- const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);}};
- const p = createReviewPlayer({synth, Utterance: class {constructor(text){this.text=text;}}, schedule: fn => {timers.push(fn);return timers.length;}, unschedule(){}});
+ const spoken = [], timers = [], watchdogs = [];
+ const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);u.onstart?.();}};
+ const p = createReviewPlayer({synth, Utterance: class {constructor(text){this.text=text;}}, schedule: (fn,ms) => {if(ms===10000){watchdogs.push(fn);return -1;} timers.push(fn);return timers.length;}, unschedule(){}});
  p.load([{text:'你好',lang:'zh-CN'},{text:'Xin chào',lang:'vi-VN'}]);
- return {p,spoken,timers};
+ return {p,spoken,timers,watchdogs};
 }
 test('pilot only, detailed review includes all 15 words and 22 dialogue lines, no exercise answers', () => {
  assert.equal(buildReview(data.pilot).length,0);
@@ -30,8 +30,9 @@ test('pause invalidates stale end callback; resume repeats current utterance',()
  const {p,spoken,timers}=fixture();p.toggle();const stale=spoken[0].onend;p.toggle();stale();assert.equal(timers.length,0);
  p.toggle();assert.equal(spoken.at(-1).text,'你好');p.stop();assert.equal(p.state().status,'idle');
 });
-test('missing language fails visibly without speaking with wrong voice',()=>{
- const {p,spoken}=fixture([{lang:'en-US'},{lang:'zh-CN'}]);p.toggle();assert.equal(p.state().status,'error');assert.equal(spoken.length,0);
+test('empty Android voice list still attempts language-based speech',()=>{
+ const {p,spoken}=fixture([]);p.toggle();assert.equal(p.state().status,'playing');assert.equal(spoken[0].lang,'zh-CN');assert.equal(spoken[0].voice,undefined);
+ spoken[0].onerror({error:'language-unavailable'});assert.equal(p.state().status,'error');assert.match(p.state().error,/tiếng Trung/);
 });
 test('loop, skipping, rate and speech errors are controlled',()=>{
  const {p,spoken,timers}=fixture();p.configure({loop:true,rate:.8,gap:0});p.toggle();assert.equal(spoken[0].rate,.8);
@@ -39,13 +40,13 @@ test('loop, skipping, rate and speech errors are controlled',()=>{
  spoken.at(-1).onerror();assert.equal(p.state().status,'error');
 });
 test('Cantonese-only voice does not substitute for Mandarin',()=>{
- const {p,spoken}=fixture([{lang:'vi-VN'},{lang:'zh-HK'}]);p.toggle();assert.equal(p.state().status,'error');assert.equal(spoken.length,0);
+ const {p,spoken}=fixture([{lang:'vi-VN'},{lang:'zh-HK'}]);p.toggle();assert.equal(spoken[0].voice,undefined);assert.equal(spoken[0].lang,'zh-CN');
 });
 test('summary controls switch scripts, pause, survive remount and stop on book audio', async()=>{
  const {JSDOM}=await import('jsdom');
  const {reviewHtml,mountReview,stopReview}=await import('../src/audio-review.js');
  const dom=new JSDOM('<main></main>');globalThis.window=dom.window;globalThis.document=dom.window.document;
- const spoken=[];Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[{lang:'vi-VN'},{lang:'zh-CN'}],cancel(){},speak(u){spoken.push(u);}}});
+ const spoken=[];Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[{lang:'vi-VN'},{lang:'zh-CN'}],cancel(){},speak(u){spoken.push(u);u.onstart?.();}}});
  window.SpeechSynthesisUtterance=class {constructor(text){this.text=text;}};
  const main=document.querySelector('main');main.innerHTML=reviewHtml(content);let pauses=0;mountReview(content,()=>pauses++);
  const click=s=>document.querySelector(s).click();
@@ -55,4 +56,10 @@ test('summary controls switch scripts, pause, survive remount and stop on book a
  click('[data-review-action="play"]');assert.match(document.querySelector('[data-review-status]').textContent,/Tạm dừng/);
  click('[data-review-action="play"]');window.dispatchEvent(new window.Event('hsk-audio-start'));assert.match(document.querySelector('[data-review-status]').textContent,/Sẵn sàng/);
  click('[data-review-mode="quick"]');assert.ok(document.querySelectorAll('[data-review-script] li').length<count);stopReview();dom.window.close();
+});
+
+test('silent engine times out rather than claiming playback',()=>{
+ let watchdog, pending;
+ const p=createReviewPlayer({synth:{cancel(){},getVoices:()=>[],speak(u){pending=u;}},Utterance:class{},schedule:fn=>{watchdog=fn;},unschedule(){}});
+ p.load([{text:'Xin chào',lang:'vi-VN'}]);p.toggle();assert.equal(p.state().status,'starting');watchdog();assert.equal(p.state().status,'error');assert.match(p.state().error,/không khởi động/);assert.equal(pending.onstart,null);
 });

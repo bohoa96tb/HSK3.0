@@ -619,3 +619,11 @@ thành công, diff sạch. Hồ sơ QA đầy đủ: docs/AUDIO_REVIEW_PILOT.md.
 Không tái kiểm PDF/ASR, không kiểm nghe thực tế, chưa xác minh UI 4 bề rộng:
 Chromium socket bị chặn; browser chia sẻ không mở localhost. Đây là nhánh
 để người dùng duyệt, KHÔNG phải bản đã nghiệm thu live hoặc được phép merge.
+
+## Sửa lỗi khởi động giọng ôn — 2026-11-07
+
+QA độc lập: đạt mã. Đã kiểm bỏ chặn getVoices rỗng, lang vi-VN/zh-CN,
+không ép Quảng Đông; onstart mới báo đang nghe; timeout 10 giây; hủy timer
+và callback khi pause/stop/đổi lượt/chế độ; cache mới; thông báo lỗi rõ.
+8/8 test ôn, 229/229 toàn bộ, diff sạch. Nội dung sách không đổi nên không
+kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện thoại người dùng.

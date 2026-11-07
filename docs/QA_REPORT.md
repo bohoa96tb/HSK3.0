@@ -651,3 +651,11 @@ kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện th
   của cả hai chế độ giữ đủ lời đọc; pause/stop/chuyển lượt hủy timer và
   callback đúng; khoảng nghỉ thêm chỉ áp giữa ý. Kết luận đạt mã/nhịp thiết
   kế, chưa khẳng định độ tự nhiên như người thật trên máy người dùng.
+
+## Nghe ôn HSK 2 Bài 2 — D31 (2026-11-08)
+
+- QA độc lập (đọc toàn bộ báo cáo): ĐẠT, 0 nghiêm trọng, 0 trung bình, 3 nhẹ. Đối chiếu bằng mã chạy thật: 17/17 mục từ ghép khớp nguyên văn dữ liệu (gồm tên riêng 北京大学), 3/3 paraphrase mẫu đúng pattern/positionVi/explanationVi, 21/21 câu hội thoại đúng thứ tự và nhãn người nói, không lẫn đáp án bài tập, không đọc Pinyin/Hán–Việt, điểm nền chữ Hán không xuất hiện trong bản ôn.
+- Display/speech: transcript giữ công thức và dấu câu (4 dòng chứa "+", 15 dòng chứa ngoặc ở Ôn chi tiết); toàn bộ 182 dòng có speechText thuần chữ/số; player thực tế chỉ speak lời giải thích tiếng Việt cho dòng Mẫu câu (ghi được chuỗi speak: không "+", không Hán, lang vi-VN, rate 0,92). Nhịp nghỉ đo trực tiếp: phẩy 300 ms, hai chấm/chấm phẩy 450 ms, kết câu 750 ms, chuyển cặp Trung–Việt 550 ms, chuyển ý 900 ms, tùy chọn 3 giây chỉ nâng chuyển ý.
+- Lỗi nhẹ: (1) dòng Mẫu câu nối liền tiêu đề trong transcript → đã sửa trong nhánh (tách paragraph riêng) và kiểm lại 240/240; (2) paraphrase 还是……吧 rút gọn chủ ngữ → đã chỉnh wording, dòng Vị trí đọc ngay sau bổ sung chính xác; (3) thuật ngữ Hán lồng trong câu Việt ở Ôn nhanh bị tách mảnh đọc xen kẽ — cơ chế của mẫu đã duyệt, ghi nhận không chặn.
+- Test tự động: audio-review 19/19, toàn bộ npm run check 240/240, validator OK, audit-standard đạt. Phân biệt bằng chứng: đây là kiểm bằng mã + đối chiếu dữ liệu; chưa nghe kiểm chứng bằng tai.
+- Nghiệm thu live sau merge PR #116 (8b8708f7): token `20261108-hsk2l2-review1` trên bản thật; khối nghe ôn ở Tổng kết Bài 2 đúng nhãn số lượng, 182 mục; điều khiển Trước/Sau/tốc độ/nghỉ/lặp đạt; hồi quy Bài 1 và Bài 3 (không bật) đạt; audio giáo trình track 2-1 phát thật. Trình duyệt kiểm không có giọng TTS nên phát giọng ôn trên live chưa kiểm chứng được (app báo lỗi đúng); chưa kiểm Android thật và bề rộng 360/390/768/1440 cho vòng này — CSS khối nghe ôn giữ nguyên mẫu đã duyệt, chỉ đổi chú thích.

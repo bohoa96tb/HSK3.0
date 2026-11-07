@@ -321,3 +321,15 @@
   chỉ lọc chú thích nguồn đã nhận diện, không tự loại từ vựng/nội dung học.
 - Kiểm tra 233/233 đạt, diff sạch. nextTask: nghiệm thu live và phản hồi của
   người dùng về transcript; vẫn pilot Bài 1, không mở rộng bài tiếp theo.
+
+## Nhịp nghỉ giọng ôn — 2026-11-07
+
+- Người dùng phản hồi bản lọc dấu đọc dồn, yêu cầu nghỉ theo dấu câu.
+- Nhánh fix/review-natural-pauses: chia lời đọc thành vế trước khi bỏ dấu,
+  chờ 300ms sau phẩy, 450ms sau chấm phẩy/hai chấm, 750ms sau kết câu;
+  chuyển ý tối thiểu 900ms, chuyển Trung–Việt của cặp mẫu 550ms.
+  Đổi ngôn ngữ trong giải thích chỉ nghỉ 120ms nếu không có dấu câu.
+- Mặc định 0.92×, nghỉ theo dấu câu; tùy chọn nghỉ nhắc lại chỉ áp giữa ý.
+  Dấu vẫn hiển thị đầy đủ; không đọc tên ký hiệu. Không đổi nội dung học.
+- 235/235 test local đạt, diff sạch. nextTask: kiểm live và phản hồi nhịp
+  đọc trên thiết bị người dùng; chưa mở rộng sang bài khác.

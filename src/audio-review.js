@@ -13,6 +13,24 @@ export function reviewSpeechText(text) {
  // Boundaries become whitespace so adjacent words are not joined accidentally.
  return cleanReviewText(text).replace(/[^\p{L}\p{M}\p{N}\s]/gu, ' ').replace(/\s+/gu, ' ').trim();
 }
+// Timing is handled by the player, not by asking the voice to pronounce marks.
+export function reviewSpeechChunks(text) {
+ const input = cleanReviewText(text), chunks = [];
+ let start = 0;
+ for (const match of input.matchAll(/[.!?。！？…]+|[,，、;；:：]+/gu)) {
+  const at = match.index, mark = match[0];
+  // A decimal point is not a sentence boundary.
+  if (mark === '.' && /\d/u.test(input[at-1] || '') && /\d/u.test(input[at+1] || '')) continue;
+  const spoken = reviewSpeechText(input.slice(start, at));
+  const pauseMs = /[.!?。！？…]/u.test(mark) ? 750 : /[;；:：]/u.test(mark) ? 450 : 300;
+  if (spoken) chunks.push({text:spoken, pauseMs});
+  else if (chunks.length) chunks.at(-1).pauseMs = Math.max(chunks.at(-1).pauseMs,pauseMs);
+  start = at + mark.length;
+ }
+ const tail = reviewSpeechText(input.slice(start));
+ if (tail) chunks.push({text:tail,pauseMs:0});
+ return chunks;
+}
 export function buildReview(content, mode = 'quick') {
  if (content.lessonId !== REVIEW_LESSON) return [];
  const rows = [];
@@ -65,7 +83,7 @@ export function buildReview(content, mode = 'quick') {
 
 export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, changed = () => {}, schedule = setTimeout, unschedule = clearTimeout}) {
  let queue = [], index = 0, status = 'idle', error = '', token = 0, timer, watchdog, utterance;
- let rate = 1, gap = 1, loop = false;
+ let rate = 0.92, gap = 0, loop = false;
  const state = () => ({queue, index, status, error});
  const emit = () => changed(state());
  function cancel() { token++; unschedule(timer); unschedule(watchdog); if (utterance) { utterance.onstart = null; utterance.onend = null; utterance.onerror = null; } synth?.cancel(); utterance = null; }
@@ -78,16 +96,34 @@ export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, cha
    status = 'error'; error = 'Trình duyệt này không hỗ trợ đọc văn bản. Hãy mở trang bằng Chrome hoặc Safari để thử lại.'; emit(); return;
   }
   if (!queue.length) return;
-  status = 'playing'; beforePlay(); const mine = token;
+  status = 'playing'; beforePlay(); const mine = token; let chunkIndex = 0;
   const next = () => {
    if (mine !== token) return;
    if (index >= queue.length) { if (loop) index = 0; else { status = 'ended'; index = queue.length - 1; emit(); return; } }
-   const row = queue[index]; utterance = new Utterance(row.speechText ?? reviewSpeechText(row.text)); utterance.lang = row.lang; const voice = select(row.lang); if (voice) utterance.voice = voice; utterance.rate = rate;
+   const row = queue[index];
+   const chunks = reviewSpeechChunks(row.displayText ?? row.text);
+   const chunk = chunks[chunkIndex];
+   if (!chunk) { index++; chunkIndex = 0; next(); return; }
+   utterance = new Utterance(chunk.text); utterance.lang = row.lang; const voice = select(row.lang); if (voice) utterance.voice = voice; utterance.rate = rate;
    // Android may expose no voices even when lang-based synthesis works.
    // Keep voice unset in that case; never force an unrelated language.
    status = 'starting';
    utterance.onstart = () => { if (mine !== token) return; unschedule(watchdog); status = 'playing'; emit(); };
-   utterance.onend = () => { if (mine !== token) return; unschedule(watchdog); index++; timer = schedule(next, gap * 1000); };
+   utterance.onend = () => {
+    if (mine !== token) return;
+    unschedule(watchdog);
+    let pauseMs = chunk.pauseMs;
+    chunkIndex++;
+    if (chunkIndex >= chunks.length) {
+     const following = queue[index+1];
+     const newGroup = !following || following.group !== row.group;
+     const newParagraph = following?.paragraph !== row.paragraph;
+     // Optional practice gaps apply between ideas, never after every language fragment.
+     pauseMs = Math.max(pauseMs, newGroup ? Math.max(900,gap*1000) : newParagraph ? 550 : 120);
+     index++; chunkIndex = 0;
+    }
+    timer = schedule(next, pauseMs);
+   };
    const fail = reason => { if (mine !== token) return; cancel(); status = 'error'; error = reason; emit(); };
    utterance.onerror = event => fail(event?.error === 'language-unavailable' || event?.error === 'voice-unavailable'
     ? `Máy chưa đọc được ${row.lang === 'vi-VN' ? 'tiếng Việt' : 'tiếng Trung'}. Hãy tải giọng tương ứng trong cài đặt chuyển văn bản thành giọng nói của điện thoại, rồi bấm Phát.`
@@ -108,7 +144,7 @@ export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, cha
 
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let controller, currentContent, mode = 'quick';
-let options = {rate: 1, gap: 1, loop: false};
+let options = {rate: 0.92, gap: 0, loop: false};
 export function reviewHtml(content) {
  if (content.lessonId !== REVIEW_LESSON) return '';
  return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI · BẢN THỬ</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
@@ -119,9 +155,9 @@ export function reviewHtml(content) {
  <div class="review-transcript" data-review-text aria-label="Lời đọc và nghĩa"></div>
  <p data-review-status class="review-status" role="status" aria-live="polite"></p>
  <div class="row-actions review-controls"><button class="btn" data-review-action="prev" aria-label="Nghe mục trước">← Trước</button><button class="btn primary" data-review-action="play">▶ Phát</button><button class="btn" data-review-action="next">Sau →</button><button class="btn" data-review-action="stop">Dừng</button></div>
- <div class="row-actions"><label>Tốc độ <select data-review-rate><option value="0.8">0,8×</option><option value="1" selected>1×</option><option value="1.2">1,2×</option></select></label><label>Nghỉ giữa lượt <select data-review-gap><option value="0">Không nghỉ</option><option value="1" selected>1 giây</option><option value="3">3 giây · nhắc lại</option></select></label><label><input type="checkbox" data-review-loop> Lặp cả bài ôn</label></div>
+ <div class="row-actions"><label>Tốc độ <select data-review-rate><option value="0.8">0,8×</option><option value="0.92" selected>Vừa phải · 0,92×</option><option value="1">1×</option><option value="1.2">1,2×</option></select></label><label>Nghỉ giữa ý <select data-review-gap><option value="0" selected>Tự nhiên theo dấu câu</option><option value="1">Ít nhất 1 giây</option><option value="3">3 giây · nhắc lại</option></select></label><label><input type="checkbox" data-review-loop> Lặp cả bài ôn</label></div>
  <p class="muted small">Nếu không nghe được trong ứng dụng ChatGPT, hãy mở link bằng Chrome. Giữ trang mở khi nghe. Khóa màn hình hoặc chuyển ứng dụng có thể ngắt giọng đọc. Tiếp tục sẽ đọc lại lượt đang dở.</p>
- <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Người dùng đã xác nhận phát được audio trên điện thoại. Dấu và ký hiệu được bỏ khỏi lời đọc; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
+ <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Người dùng đã xác nhận phát được audio trên điện thoại. Không đọc tên dấu và ký hiệu; nghỉ ngắn sau dấu phẩy, lâu hơn sau dấu chấm và chuyển ý; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
 }
 function refresh(s) {
  const root = document.querySelector('.audio-review'); if (!root) return;

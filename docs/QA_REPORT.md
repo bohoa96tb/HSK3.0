@@ -627,3 +627,14 @@ không ép Quảng Đông; onstart mới báo đang nghe; timeout 10 giây; hủ
 và callback khi pause/stop/đổi lượt/chế độ; cache mới; thông báo lỗi rõ.
 8/8 test ôn, 229/229 toàn bộ, diff sạch. Nội dung sách không đổi nên không
 kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện thoại người dùng.
+
+## Transcript nghe ôn — 2026-11-07
+
+- 233/233 test local đạt; bổ sung test lọc ký hiệu/nguồn, giữ chú giải có
+  nghĩa, ghép Trung–Việt, nội dung thực gửi vào TTS và giữ trọn dấu trong
+  transcript. Không thay dữ liệu sách/đáp án/audio Baulchino.
+- QA phát hiện ký hiệu độc lập giữa hai mảnh chữ (ví dụ 让 + 接) bị mất ở
+  transcript; đã giữ chúng trong displayText nhưng không đưa vào speechText,
+  kiểm hồi quy so toàn bộ đoạn tổng kết với nguyên bản đã lọc nguồn.
+- Người dùng xác nhận audio bản trước phát được. Không coi đó là nghiệm
+  thu chất lượng giọng đọc hay bố cục mới trên mọi thiết bị.

@@ -63,3 +63,25 @@ test('silent engine times out rather than claiming playback',()=>{
  const p=createReviewPlayer({synth:{cancel(){},getVoices:()=>[],speak(u){pending=u;}},Utterance:class{},schedule:fn=>{watchdog=fn;},unschedule(){}});
  p.load([{text:'Xin chào',lang:'vi-VN'}]);p.toggle();assert.equal(p.state().status,'starting');watchdog();assert.equal(p.state().status,'error');assert.match(p.state().error,/không khởi động/);assert.equal(pending.onstart,null);
 });
+test('speech filters punctuation and source notes without dropping lesson words', async()=>{
+ const {reviewSpeechText,cleanReviewText}=await import('../src/audio-review.js');
+ assert.equal(reviewSpeechText('你好，朋友！'), '你好 朋友');
+ assert.equal(reviewSpeechText('请 / 让 + người → việc…'), '请 让 người việc');
+ assert.equal(reviewSpeechText('Mình muốn nhờ bạn giúp một việc. (ví dụ trong sách; tr.003)'), 'Mình muốn nhờ bạn giúp một việc');
+ assert.ok(cleanReviewText('lần đầu (không phải lần hai)').includes('không phải lần hai'));
+ assert.equal(reviewSpeechText('dấu phẩy và dấu chấm là dấu câu'), 'dấu phẩy và dấu chấm là dấu câu');
+ for(const r of buildReview(content,'detail')) {assert.ok(r.speechText);assert.ok(!/[^\p{L}\p{M}\p{N}\s]/u.test(r.speechText));}
+});
+test('paired transcript groups keep Chinese and Vietnamese together',()=>{
+ const rows=buildReview(content,'detail');
+ for(const w of content.prepWords){const group=rows.filter(r=>r.source===w.id);assert.equal(new Set(group.map(r=>r.group)).size,1);assert.deepEqual([...new Set(group.map(r=>r.paragraph))],[0,1]);}
+});
+test('device receives sanitized speech while transcript retains punctuation',()=>{
+ const {p,spoken}=fixture();const rows=buildReview(content,'detail');const row=rows.find(r=>r.text.includes('。'));
+ assert.ok(row);p.load([row]);p.toggle();assert.equal(spoken[0].text,row.speechText);assert.ok(!spoken[0].text.includes('。'));assert.ok(p.state().queue[0].text.includes('。'));p.stop();
+});
+test('non-spoken separators are retained in the displayed paragraph',async()=>{
+ const {cleanReviewText}=await import('../src/audio-review.js');const rows=buildReview(content);
+ for(const pt of content.summaryPoints){const first=rows.find(r=>r.label===pt.titleVi);const display=rows.filter(r=>r.group===first.group).map(r=>r.displayText).join('');assert.equal(display,cleanReviewText(pt.bodyVi));}
+ assert.ok(rows.some(r=>r.displayText.includes(' + ')));
+});

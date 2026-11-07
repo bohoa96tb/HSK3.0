@@ -310,3 +310,14 @@
 - QA độc lập đạt phần mã, 8/8 test ôn và 229/229 toàn bộ, diff sạch.
 - nextTask: kiểm bản live và xác nhận nghe trên máy người dùng; không mở rộng
   pilot. Chưa khẳng định lỗi thiết bị thiếu bộ đọc được giải quyết.
+
+## Transcript nghe ôn — 2026-11-07
+
+- Người dùng xác nhận audio đã phát trên điện thoại; yêu cầu làm đẹp ô lời
+  đọc và không đọc dấu/ký hiệu/chú thích ngoài bài.
+- Nhánh feat/review-transcript: thẻ Trung–Việt cùng ngữ cảnh, nhãn ngôn ngữ,
+  tô phần hiện tại, tiến độ nghe; phần giải thích giữ nguyên đoạn đầy đủ.
+- Tách displayText và speechText: dấu/ký hiệu vẫn hiện, không gửi vào TTS;
+  chỉ lọc chú thích nguồn đã nhận diện, không tự loại từ vựng/nội dung học.
+- Kiểm tra 233/233 đạt, diff sạch. nextTask: nghiệm thu live và phản hồi của
+  người dùng về transcript; vẫn pilot Bài 1, không mở rộng bài tiếp theo.

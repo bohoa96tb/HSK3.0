@@ -85,3 +85,18 @@ test('non-spoken separators are retained in the displayed paragraph',async()=>{
  for(const pt of content.summaryPoints){const first=rows.find(r=>r.label===pt.titleVi);const display=rows.filter(r=>r.group===first.group).map(r=>r.displayText).join('');assert.equal(display,cleanReviewText(pt.bodyVi));}
  assert.ok(rows.some(r=>r.displayText.includes(' + ')));
 });
+test('Vietnamese and Chinese punctuation produces short and long silent pauses',async()=>{
+ const {reviewSpeechChunks}=await import('../src/audio-review.js');
+ assert.deepEqual(reviewSpeechChunks('Xin chào, bạn khỏe không? Tôi khỏe.'),[
+  {text:'Xin chào',pauseMs:300},{text:'bạn khỏe không',pauseMs:750},{text:'Tôi khỏe',pauseMs:750}]);
+ assert.deepEqual(reviewSpeechChunks('你好，朋友。再见！'),[{text:'你好',pauseMs:300},{text:'朋友',pauseMs:750},{text:'再见',pauseMs:750}]);
+ assert.equal(reviewSpeechChunks('请 + 人 / 做（事）').length,1);
+});
+test('player waits for comma and full stop within one transcript row',()=>{
+ const spoken=[],delays=[],pending=[];
+ const p=createReviewPlayer({synth:{getVoices:()=>[],cancel(){},speak(u){spoken.push(u);u.onstart?.();}},Utterance:class{constructor(text){this.text=text;}},schedule:(fn,ms)=>{if(ms!==10000){delays.push(ms);pending.push(fn);}return ms;},unschedule(){}});
+ p.load([{text:'Chào bạn, tôi đến rồi. Cùng đi nhé!',lang:'vi-VN',group:1,paragraph:0}]);p.toggle();
+ assert.equal(spoken[0].text,'Chào bạn');spoken[0].onend();assert.equal(delays[0],300);assert.equal(p.state().index,0);
+ pending.shift()();assert.equal(spoken[1].text,'tôi đến rồi');spoken[1].onend();assert.equal(delays[1],750);
+ pending.shift()();assert.equal(spoken[2].text,'Cùng đi nhé');p.stop();
+});

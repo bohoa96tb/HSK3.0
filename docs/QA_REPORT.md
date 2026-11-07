@@ -638,3 +638,16 @@ kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện th
   kiểm hồi quy so toàn bộ đoạn tổng kết với nguyên bản đã lọc nguồn.
 - Người dùng xác nhận audio bản trước phát được. Không coi đó là nghiệm
   thu chất lượng giọng đọc hay bố cục mới trên mọi thiết bị.
+
+## Nhịp nghỉ giọng ôn — 2026-11-07
+
+- Test 235/235 đạt, gồm phân đoạn và thời gian nghỉ cho Trung/Việt, kiểm
+  player thực sự chờ giữa các vế trong cùng một lượt transcript.
+- Nguồn chữ/dữ liệu sách không đổi. Không gửi dấu vào SpeechSynthesis;
+  player chờ bằng timer sau khi mỗi vế đọc xong. Tốc độ mặc định 0.92×.
+- Chưa kiểm nghe bằng tai bộ nhịp mới trên điện thoại thật; chất giọng phụ
+  thuộc thiết bị. Các mốc nghỉ là mặc định biên tập, không phải đo người đọc.
+- QA độc lập đã đọc bản cuối: 14/14 test ôn đạt; đối chiếu ghép các mảnh
+  của cả hai chế độ giữ đủ lời đọc; pause/stop/chuyển lượt hủy timer và
+  callback đúng; khoảng nghỉ thêm chỉ áp giữa ý. Kết luận đạt mã/nhịp thiết
+  kế, chưa khẳng định độ tự nhiên như người thật trên máy người dùng.

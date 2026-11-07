@@ -333,3 +333,12 @@
   Dấu vẫn hiển thị đầy đủ; không đọc tên ký hiệu. Không đổi nội dung học.
 - 235/235 test local đạt, diff sạch. nextTask: kiểm live và phản hồi nhịp
   đọc trên thiết bị người dùng; chưa mở rộng sang bài khác.
+
+## Nghe ôn HSK 2 Bài 2 — D31 (2026-11-08, ĐÃ PHÁT HÀNH)
+
+- Người dùng duyệt mẫu nghe ôn HSK 2 Bài 1 ngày 08/11/2026 (PR #112–#115, merge cuối 05a09877); quyết định mới D31: mở rộng từng bài đã QA, mỗi lượt "Tiếp tục" trọn một bài.
+- branch: feat/hsk2-l02-audio-review → PR #116, merge 8b8708f7; token tài nguyên `20261108-hsk2l2-review1`. Không đổi data/content.json, đáp án hay tiến độ.
+- Triển khai: REVIEW_LESSONS = [hsk2-l01, hsk2-l02] trong module dùng chung; nhãn Ôn chi tiết tính từ dữ liệu thật (Bài 2: "16 từ + 1 tên riêng + 3 điểm ngữ pháp + 4 đoạn"; Bài 1 tự tách thành "14 từ + 1 tên riêng", tổng 15 mục không đổi). Ôn nhanh: 5 điểm tổng kết + câu mẫu. Ôn chi tiết: 182 lượt — 17 mục từ, 3 điểm ngữ pháp （还是……吧 / 多 / định ngữ; điểm nền chữ Hán không đọc), 21 câu/4 đoạn đúng thứ tự kèm nhãn người nói. Mẫu ngữ pháp: công thức nguyên vẹn trên transcript, chỉ đọc lời giải thích tiếng Việt (REVIEW_PATTERN_SPEECH).
+- QA độc lập D17 khép trong nhánh: ĐẠT, 0 lỗi nghiêm trọng/trung bình; 3 lỗi nhẹ — 2 đã sửa trong nhánh (tách khối Mẫu câu khỏi tiêu đề trong transcript; chỉnh diễn đạt paraphrase 还是……吧), 1 là cơ chế tách mảnh thuật ngữ Hán trong câu Việt của mẫu đã duyệt (ghi nhận, không chặn). Kiểm thử local: npm run check 240/240, validator OK, audit-standard đạt, diff sạch — kiểm local, không gọi là CI.
+- Nghiệm thu live: bản mới lên ngay (app.js mang token mới; content.json live khớp byte bản local); Tổng kết Bài 2 có khối nghe ôn đúng nhãn, Ôn chi tiết 182 mục, transcript có nhãn ngôn ngữ; điều khiển Trước/Sau, tốc độ, nghỉ giữa ý, lặp đều hoạt động; hồi quy Bài 1 đạt (174 mục, nhãn mới đúng), Bài 3 không có khối nghe ôn; track 2-1 ở Nghe & đọc phát thật. Giới hạn: trình duyệt kiểm không có giọng TTS nên nút Phát hiện thông báo lỗi đúng thiết kế — chuỗi Phát/Tạm dừng khi đang phát chưa kiểm chứng trên live, chỉ có bằng chứng test jsdom + cơ chế giữ nguyên từ mẫu Bài 1 đã phát được trên điện thoại của Hoa. Báo cáo kiểm live có một dòng liệt kê hai tên điểm ngữ pháp không tồn tại trong dữ liệu; đã đối chiếu content.json live khớp byte nên ghi là lỗi quan sát của lượt kiểm, không phải lỗi app.
+- nextTask: "Tiếp tục" → áp dụng nghe ôn cho HSK 2 Bài 3 theo D31 (triển khai → QA độc lập → phát hành → nghiệm thu live). Các bài đã phát hành còn thiếu nghe ôn làm tiếp từng bài sau đó; không bật hàng loạt.

@@ -4,6 +4,8 @@ import {readFileSync} from 'node:fs';
 import {buildReview, createReviewPlayer} from '../src/audio-review.js';
 const data = JSON.parse(readFileSync(new URL('../data/content.json', import.meta.url)));
 const content = data.additionalLessons.find(c => c.lessonId === 'hsk2-l01');
+const content2 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l02');
+const content3 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l03');
 function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  const spoken = [], timers = [], watchdogs = [];
  const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);u.onstart?.();}};
@@ -11,14 +13,17 @@ function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  p.load([{text:'你好',lang:'zh-CN'},{text:'Xin chào',lang:'vi-VN'}]);
  return {p,spoken,timers,watchdogs};
 }
-test('pilot only, detailed review includes all 15 words and 22 dialogue lines, no exercise answers', () => {
+test('enabled lessons only, detailed review includes all 15 words and 22 dialogue lines, no exercise answers', () => {
  assert.equal(buildReview(data.pilot).length,0);
+ assert.equal(buildReview(content3).length,0);
  const quick=buildReview(content), detail=buildReview(content,'detail');
  assert.ok(detail.length>quick.length);
  for (const w of content.prepWords) assert.ok(detail.some(r=>r.source===w.id && r.text===w.zh));
  for (const s of content.reader.sentences) assert.ok(detail.some(r=>r.source===s.id && r.text===s.zh));
  assert.ok(detail.every(r=> !r.source.startsWith('tb2-')));
- for (const r of [...quick,...detail]) if(r.lang==='vi-VN') assert.ok(!/\p{Script=Han}/u.test(r.text));
+ // Pattern rows are the one exception: their text is the on-screen formula,
+ // while their spoken content is the separate Vietnamese paraphrase.
+ for (const r of [...quick,...detail]) if(r.lang==='vi-VN' && r.label!=='Mẫu câu') assert.ok(!/\p{Script=Han}/u.test(r.text));
 });
 test('automatic bilingual queue ends, replay starts at beginning',()=>{
  const {p,spoken,timers}=fixture(); p.toggle(); assert.equal(spoken[0].lang,'zh-CN');
@@ -99,4 +104,85 @@ test('player waits for comma and full stop within one transcript row',()=>{
  assert.equal(spoken[0].text,'Chào bạn');spoken[0].onend();assert.equal(delays[0],300);assert.equal(p.state().index,0);
  pending.shift()();assert.equal(spoken[1].text,'tôi đến rồi');spoken[1].onend();assert.equal(delays[1],750);
  pending.shift()();assert.equal(spoken[2].text,'Cùng đi nhé');p.stop();
+});
+test('HSK2 lesson 2 detail includes all 17 word entries, 21 dialogue lines in order, no exercise answers', async () => {
+ const {reviewHtml, reviewDetailLabel} = await import('../src/audio-review.js');
+ const detail = buildReview(content2, 'detail'), quick = buildReview(content2);
+ assert.ok(detail.length > quick.length);
+ assert.equal(content2.prepWords.length, 17);
+ for (const w of content2.prepWords) assert.ok(detail.some(r => r.source === w.id && r.text === w.zh), w.zh);
+ // Dialogue lines keep lesson order and speaker attribution on the pair label.
+ const lineRows = content2.reader.sentences.map(s => detail.find(r => r.source === s.id && r.text === s.zh));
+ assert.ok(lineRows.every(Boolean));
+ const positions = lineRows.map(r => detail.indexOf(r));
+ assert.deepEqual(positions, [...positions].sort((a, b) => a - b));
+ for (const s of content2.reader.sentences) {
+  const row = detail.find(r => r.source === s.id && r.text === s.zh);
+  if (s.speaker) assert.ok(row.label.includes(s.speaker), row.label);
+ }
+ assert.ok(detail.every(r => !String(r.source).startsWith('tb2-')));
+ assert.ok(detail.every(r => !content2.exerciseSet.items.some(i => i.id === r.source)));
+ // Counts in the mode button come from this lesson's data.
+ assert.equal(reviewDetailLabel(content2), '16 từ + 1 tên riêng + 3 điểm ngữ pháp + 4 đoạn');
+ assert.ok(reviewHtml(content2).includes('16 từ + 1 tên riêng + 3 điểm ngữ pháp + 4 đoạn'));
+ assert.equal(reviewHtml(content3), '');
+ // Foundation characters are not read as grammar; writing stays in the writing area.
+ assert.ok(detail.every(r => !content2.knowledgePoints.filter(k => k.kind !== 'grammar').some(k => k.id === r.source)));
+});
+test('HSK2 lesson 2 speech is sanitized, negations and parenthetical meanings survive', () => {
+ const detail = buildReview(content2, 'detail');
+ for (const r of detail) { assert.ok(r.speechText); assert.ok(!/[^\p{L}\p{M}\p{N}\s]/u.test(r.speechText), r.speechText); }
+ const neg = detail.filter(r => r.source === 'h2l2-s18');
+ assert.ok(neg.some(r => r.text.includes('别')));
+ assert.ok(neg.some(r => r.text.includes('đừng')));
+ const particle = detail.filter(r => r.source === 'h2l2-w08');
+ assert.ok(particle.some(r => (r.displayText || '').includes('trợ từ cuối câu')));
+ const gloss = detail.filter(r => r.source === 'kp-hsk2-l02-attributive');
+ assert.ok(gloss.some(r => (r.displayText || '').includes('(họ bán)')));
+});
+test('grammar patterns stay on screen but are spoken as Vietnamese paraphrases', () => {
+ for (const lesson of [content, content2]) {
+  const detail = buildReview(lesson, 'detail');
+  for (const k of lesson.knowledgePoints.filter(k => k.kind === 'grammar')) {
+   const row = detail.find(r => r.source === k.id && r.label === 'Mẫu câu');
+   assert.ok(row, k.id);
+   assert.equal(row.displayText, k.pattern);
+   assert.ok(row.speechSource && row.speechSource.length > 20, k.id);
+   assert.ok(!/\+/u.test(row.speechSource), row.speechSource);
+   assert.ok(!/\p{Script=Han}/u.test(row.speechSource), row.speechSource);
+   assert.equal(row.lang, 'vi-VN');
+  }
+ }
+});
+test('player speaks the pattern paraphrase, not the formula fragments', () => {
+ const {p, spoken} = fixture();
+ const detail = buildReview(content2, 'detail');
+ const row = detail.find(r => r.label === 'Mẫu câu' && r.source === 'kp-hsk2-l02-duo');
+ p.load([row]); p.toggle();
+ assert.ok(spoken.length >= 1);
+ assert.ok(!spoken[0].text.includes('+'));
+ assert.ok(!/\p{Script=Han}/u.test(spoken[0].text), spoken[0].text);
+ assert.equal(spoken[0].lang, 'vi-VN');
+ p.stop();
+});
+test('HSK2 lesson 2 summary controls mount, switch modes and stop on book audio', async () => {
+ const {JSDOM} = await import('jsdom');
+ const {reviewHtml, mountReview, stopReview} = await import('../src/audio-review.js');
+ const dom = new JSDOM('<main></main>'); globalThis.window = dom.window; globalThis.document = dom.window.document;
+ const spoken = []; Object.defineProperty(window, 'speechSynthesis', {value: {getVoices: () => [{lang: 'vi-VN'}, {lang: 'zh-CN'}], cancel(){}, speak(u){spoken.push(u); u.onstart?.();}}});
+ window.SpeechSynthesisUtterance = class { constructor(text){ this.text = text; } };
+ const main = document.querySelector('main'); main.innerHTML = reviewHtml(content2);
+ mountReview(content2, () => {});
+ const click = s => document.querySelector(s).click();
+ click('[data-review-mode="detail"]');
+ const detailCount = document.querySelectorAll('[data-review-script] li').length;
+ assert.ok(detailCount > 100);
+ click('[data-review-action="play"]');
+ assert.match(document.querySelector('[data-review-status]').textContent, /Đang nghe/);
+ // Book-audio stop is covered by the lesson 1 DOM test (one shared controller).
+ click('[data-review-action="stop"]');
+ assert.match(document.querySelector('[data-review-status]').textContent, /Sẵn sàng/);
+ click('[data-review-mode="quick"]');
+ assert.ok(document.querySelectorAll('[data-review-script] li').length < detailCount);
+ stopReview(); dom.window.close();
 });

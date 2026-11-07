@@ -1,6 +1,42 @@
-// Pilot review narration: editorial arrangement of existing lesson text.
+// Review narration: editorial arrangement of existing lesson text.
 // Device TTS only; never presented as publisher recordings or verified audio.
-export const REVIEW_LESSON = 'hsk2-l01';
+// A lesson is enabled only after its own content QA (user-approved sample:
+// HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02'];
+export const REVIEW_LESSON = REVIEW_LESSONS[0];
+export function reviewSupported(content) {
+ return !!content && REVIEW_LESSONS.includes(content.lessonId);
+}
+// Counts always come from the lesson's own verified data, never hardcoded.
+export function reviewCounts(content) {
+ const words = content.prepWords || [];
+ const grammar = (content.knowledgePoints || []).filter(k => k.kind === 'grammar');
+ return {
+  words: words.length,
+  properNames: words.filter(w => w.isProperName).length,
+  grammar: grammar.length,
+  passages: content.reader?.passages?.length || 0,
+  sentences: content.reader?.sentences?.length || 0,
+ };
+}
+export function reviewDetailLabel(content) {
+ const c = reviewCounts(content);
+ const wordPart = c.properNames ? `${c.words - c.properNames} từ + ${c.properNames} tên riêng` : `${c.words} từ`;
+ return `${wordPart} + ${c.grammar} điểm ngữ pháp + ${c.passages} đoạn`;
+}
+// Editorial Vietnamese paraphrases of grammar patterns, keyed by knowledge
+// point id. A pattern is only spoken through its paraphrase: the raw formula
+// (with "+", brackets, slashes) stays on screen but is never sent to TTS as
+// joined fragments. Points without a paraphrase are not read as formulas;
+// their meaning, use, position and examples are still read from the lesson.
+export const REVIEW_PATTERN_SPEECH = {
+ 'kp-hsk2-l01-ba': 'Mẫu câu: chủ ngữ đứng đầu, tiếp theo là động từ hoặc tính từ, có thể có tân ngữ, cuối câu thêm trợ từ ba để phỏng đoán và chờ người nghe xác nhận.',
+ 'kp-hsk2-l01-shide': 'Mẫu câu: chủ ngữ đứng đầu, rồi đến chữ thị có nghĩa là là, tiếp theo là chi tiết cần nhấn mạnh như thời gian, địa điểm, cách thức hoặc mục đích, rồi đến động từ, cuối câu là chữ đích.',
+ 'kp-hsk2-l01-pivotal': 'Mẫu câu kiêm ngữ: chủ ngữ đứng đầu, rồi đến một động từ có nghĩa nhờ, để cho hoặc bảo, tiếp theo là người được nhờ, rồi đến việc người đó làm. Người ở giữa vừa là tân ngữ của phần trước, vừa là chủ ngữ của phần sau.',
+ 'kp-hsk2-l02-haishi': 'Mẫu câu: ngay trước phương án được chọn, nói cụm có nghĩa là hay là, cuối câu thêm trợ từ ba, để gợi ý phương án tốt hơn sau khi đã cân nhắc.',
+ 'kp-hsk2-l02-duo': 'Mẫu số gần đúng: nếu con số là bội số của mười, đặt chữ đa có nghĩa là hơn ngay sau con số, rồi mới đến lượng từ và danh từ. Nếu con số không phải bội số của mười, đặt chữ đa sau lượng từ.',
+ 'kp-hsk2-l02-attributive': 'Mẫu định ngữ: đặt động từ, cụm động từ hoặc cả cụm chủ ngữ và động từ ở trước, tiếp theo là chữ đích, rồi mới đến danh từ được bổ nghĩa. Định ngữ đứng trước danh từ, không đứng sau danh từ như tiếng Việt.',
+};
 // Only strip presentation/source annotations, never arbitrary lesson vocabulary.
 export function cleanReviewText(text) {
  return String(text || '')
@@ -32,7 +68,7 @@ export function reviewSpeechChunks(text) {
  return chunks;
 }
 export function buildReview(content, mode = 'quick') {
- if (content.lessonId !== REVIEW_LESSON) return [];
+ if (!reviewSupported(content)) return [];
  const rows = [];
  let groupCounter = 0;
  const add = (label, text, source, group = ++groupCounter, paragraph = 0) => {
@@ -52,13 +88,20 @@ export function buildReview(content, mode = 'quick') {
     lang: /\p{Script=Han}/u.test(part) ? 'zh-CN' : 'vi-VN', source});
    prefix = '';
   }
+  return group;
  };
  const pair = (label, zh, vi, source) => { const group = ++groupCounter; add(label, zh, source, group, 0); add(label, vi, source, group, 1); };
  if (mode === 'detail') {
   add('Từ mới', 'Ôn từ mới. Nghe tiếng Trung, rồi nghe nghĩa tiếng Việt.', 'editorial-intro');
   for (const w of content.prepWords) pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id);
   for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
-   add('Cách dùng', k.title, k.id);
+   const titleGroup = add('Cách dùng', k.title, k.id);
+   // The printed formula stays visible in full; only its Vietnamese
+   // paraphrase is spoken, never the joined formula fragments.
+   const paraphrase = REVIEW_PATTERN_SPEECH[k.id];
+   if (k.pattern && paraphrase) {
+    rows.push({label: 'Mẫu câu', text: k.pattern, displayText: k.pattern, speechText: reviewSpeechText(paraphrase), speechSource: paraphrase, group: titleGroup, paragraph: 1, lang: 'vi-VN', source: k.id});
+   }
    add('Cách dùng', k.useWhenVi, k.id);
    add('Giải thích', k.explanationVi, k.id);
    add('Vị trí', k.positionVi, k.id);
@@ -68,7 +111,7 @@ export function buildReview(content, mode = 'quick') {
    add('Hội thoại', p.title, p.id);
    for (const id of p.sentenceIds) {
     const s = content.reader.sentences.find(s => s.id === id);
-    pair(p.title, s.zh, s.vi, s.id);
+    pair(s.speaker ? `${p.title} · ${s.speaker}` : p.title, s.zh, s.vi, s.id);
    }
   }
  } else {
@@ -101,7 +144,7 @@ export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, cha
    if (mine !== token) return;
    if (index >= queue.length) { if (loop) index = 0; else { status = 'ended'; index = queue.length - 1; emit(); return; } }
    const row = queue[index];
-   const chunks = reviewSpeechChunks(row.displayText ?? row.text);
+   const chunks = reviewSpeechChunks(row.speechSource ?? row.displayText ?? row.text);
    const chunk = chunks[chunkIndex];
    if (!chunk) { index++; chunkIndex = 0; next(); return; }
    utterance = new Utterance(chunk.text); utterance.lang = row.lang; const voice = select(row.lang); if (voice) utterance.voice = voice; utterance.rate = rate;
@@ -146,10 +189,10 @@ const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<'
 let controller, currentContent, mode = 'quick';
 let options = {rate: 0.92, gap: 0, loop: false};
 export function reviewHtml(content) {
- if (content.lessonId !== REVIEW_LESSON) return '';
- return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI · BẢN THỬ</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
+ if (!reviewSupported(content)) return '';
+ return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
  <p>Giọng máy của thiết bị · Tiếng Trung và tiếng Việt. Bấm một lần để nghe liên tục.</p>
- <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính + câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>15 từ + 3 điểm ngữ pháp + 4 đoạn</small></button></div>
+ <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính + câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
  <div class="review-caption"><span data-review-label></span><span data-review-count></span></div>
  <progress class="review-progress" data-review-progress max="1" value="0" aria-label="Tiến độ nghe"></progress>
  <div class="review-transcript" data-review-text aria-label="Lời đọc và nghĩa"></div>
@@ -157,7 +200,7 @@ export function reviewHtml(content) {
  <div class="row-actions review-controls"><button class="btn" data-review-action="prev" aria-label="Nghe mục trước">← Trước</button><button class="btn primary" data-review-action="play">▶ Phát</button><button class="btn" data-review-action="next">Sau →</button><button class="btn" data-review-action="stop">Dừng</button></div>
  <div class="row-actions"><label>Tốc độ <select data-review-rate><option value="0.8">0,8×</option><option value="0.92" selected>Vừa phải · 0,92×</option><option value="1">1×</option><option value="1.2">1,2×</option></select></label><label>Nghỉ giữa ý <select data-review-gap><option value="0" selected>Tự nhiên theo dấu câu</option><option value="1">Ít nhất 1 giây</option><option value="3">3 giây · nhắc lại</option></select></label><label><input type="checkbox" data-review-loop> Lặp cả bài ôn</label></div>
  <p class="muted small">Nếu không nghe được trong ứng dụng ChatGPT, hãy mở link bằng Chrome. Giữ trang mở khi nghe. Khóa màn hình hoặc chuyển ứng dụng có thể ngắt giọng đọc. Tiếp tục sẽ đọc lại lượt đang dở.</p>
- <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Người dùng đã xác nhận phát được audio trên điện thoại. Không đọc tên dấu và ký hiệu; nghỉ ngắn sau dấu phẩy, lâu hơn sau dấu chấm và chuyển ý; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
+ <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Mẫu câu có dấu cộng và ký hiệu vẫn hiện đầy đủ trên màn hình, nhưng khi đọc sẽ nghe lời giải thích bằng tiếng Việt, không đọc nối các ký hiệu. Không đọc tên dấu và ký hiệu; nghỉ ngắn sau dấu phẩy, lâu hơn sau dấu chấm và chuyển ý; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
 }
 function refresh(s) {
  const root = document.querySelector('.audio-review'); if (!root) return;

@@ -260,3 +260,9 @@ Khi sách yêu cầu nghe phân biệt rồi đọc theo và nguồn liệt kê 
 ## Chuẩn bài học theo Bài 8 (D27)
 
 Chuẩn tổ chức bài học áp dụng toàn dự án (cấu trúc, lộ trình, từ mới, kiến thức, bài tập, tra từ, audio, điều kiện hoàn thành) nằm tại `docs/LESSON_STANDARD.md`. File này (CONTENT_STANDARD) giữ các quy tắc nội dung chi tiết theo mục; khi có mâu thuẫn về tổ chức bài, LESSON_STANDARD là chuẩn đã được người dùng duyệt theo Bài 8.
+
+## Bổ sung D31 (08/11/2026) — Nghe ôn bài bằng giọng máy ở mục Tổng kết
+
+- Nghe ôn (Ôn nhanh/Ôn chi tiết) là phần sắp xếp biên tập từ chính nội dung đã kiểm chứng của bài (tổng kết, từ mới, điểm ngữ pháp, hội thoại), đọc bằng giọng máy của thiết bị (zh-CN/vi-VN), ghi nhãn giọng máy rõ ràng; không phải audio sách Baulchino và không thay thế audio sách. Chỉ bật cho bài đã qua QA, theo danh sách `REVIEW_LESSONS`; mỗi bài mở rộng phải QA riêng.
+- Lời hiển thị (transcript) và lời đọc tách riêng: transcript giữ đầy đủ dấu câu/ký hiệu; lời đọc chia cụm theo dấu câu để tạo khoảng nghỉ trước khi loại ký hiệu, không gửi tên dấu vào TTS, không xóa từ có nghĩa/từ phủ định/nội dung trong ngoặc — chỉ lọc chú thích nguồn và số trang theo quy tắc nhận diện rõ ràng.
+- Công thức ngữ pháp có ký hiệu ("+", ngoặc, "/") không đọc thô: chỉ đọc lời giải thích tiếng Việt biên tập đã đối chiếu với pattern/vị trí/giải thích của bài (xem DECISIONS D31). Không tự thêm câu ví dụ hoặc sửa nghĩa để đủ số lượng; không đọc đáp án bài tập, Pinyin hay Hán–Việt.

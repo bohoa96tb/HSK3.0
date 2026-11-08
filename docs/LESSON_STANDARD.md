@@ -57,9 +57,11 @@
   sách (ghi rõ trang), tự đánh dấu đã luyện; không khẳng định chấm phát âm.
 - **Tổng kết**: `summaryPoints` (các điều chính + câu ví dụ) + trạng thái chưa
   làm trung thực (không nói "chưa có câu nào sai" khi chưa làm bài).
-- **Nghe ôn bài (D31)**: khối nghe ôn bằng giọng máy của thiết bị nằm trong
+- **Nghe ôn bài (D31)**: khối nghe ôn nằm trong
   mục Tổng kết (không thêm mục thứ 8), chỉ bật khi bài đã qua QA và có tên
-  trong `REVIEW_LESSONS` (`src/audio-review.js`). Ôn nhanh chỉ đọc ý chính
+  trong `REVIEW_LESSONS` (`src/audio-review.js`). Từ mới và câu hội thoại
+  trong Ôn chi tiết phát audio sách theo đoạn đã có (D33), phần còn lại
+  giọng máy. Ôn nhanh chỉ đọc ý chính
   của các điểm ngữ pháp: tên điểm, "dùng khi nào", mẫu câu (qua lời giải
   thích tiếng Việt) và một câu mẫu (D32); Ôn chi tiết đọc từ mới, điểm ngữ pháp (ý nghĩa/cách dùng/vị trí/ví dụ;
   công thức chỉ đọc qua lời giải thích tiếng Việt) và hội thoại đúng thứ tự,

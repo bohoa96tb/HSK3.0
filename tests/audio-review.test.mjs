@@ -251,3 +251,70 @@ test('HSK2 lesson 3 summary controls mount and switch modes', async () => {
  assert.ok(document.querySelectorAll('[data-review-script] li').length < detailCount);
  stopReview(); dom.window.close();
 });
+test('D33 detail rows carry book audio for words and dialogue lines only', () => {
+ for (const lesson of [content, content2, content3]) {
+  const detail = buildReview(lesson, 'detail'), quick = buildReview(lesson);
+  const tracks = new Map(lesson.reader.audioTracks.map(t => [t.id, t]));
+  const checkUnit = (unit) => {
+   const rows = detail.filter(r => r.source === unit.id && r.lang === 'zh-CN');
+   const carriers = rows.filter(r => r.audio);
+   assert.equal(carriers.length, 1, unit.id);
+   const a = carriers[0].audio;
+   assert.equal(a.trackId, unit.audio.trackId);
+   assert.equal(a.start, unit.audio.start);
+   assert.equal(a.end, unit.audio.end);
+   assert.equal(a.url, tracks.get(unit.audio.trackId).url);
+   assert.ok(a.start < a.end && a.end <= tracks.get(unit.audio.trackId).durationSec + 0.5, unit.id);
+  };
+  lesson.prepWords.forEach(checkUnit);
+  lesson.reader.sentences.forEach(checkUnit);
+  assert.ok(detail.every(r => r.lang !== 'vi-VN' || !r.audio));
+  assert.ok(detail.every(r => r.label !== 'Câu mẫu' || !r.audio));
+  assert.ok(quick.every(r => !r.audio && !r.coveredByAudio));
+ }
+});
+function audioFixture() {
+ const spoken = [], timers = [];
+ class FakeAudio {
+  constructor() { this.listeners = {}; this.currentTime = 0; this.paused = true; this.src = ''; }
+  addEventListener(n, f) { (this.listeners[n] ||= []).push(f); }
+  removeEventListener(n, f) { this.listeners[n] = (this.listeners[n] || []).filter(x => x !== f); }
+  emit(n) { (this.listeners[n] || []).slice().forEach(f => f()); }
+  play() { this.paused = false; this.emit('playing'); return Promise.resolve(); }
+  pause() { this.paused = true; }
+ }
+ const el = new FakeAudio();
+ const p = createReviewPlayer({synth: {getVoices: () => [], cancel() {}, speak(u) { spoken.push(u); u.onstart?.(); }},
+  Utterance: class { constructor(t) { this.text = t; } },
+  schedule: (fn, ms) => { timers.push({fn, ms}); return timers.length; }, unschedule() {},
+  audioFactory: () => el});
+ return {p, el, spoken, timers};
+}
+const segRow = {text: '你好。', displayText: '你好。', speechText: '你好', lang: 'zh-CN', group: 1, paragraph: 0, audio: {trackId: 't1', url: 'https://x/1.mp3', start: 1, end: 3}};
+const viRow = {text: 'Xin chào', displayText: 'Xin chào', speechText: 'Xin chào', lang: 'vi-VN', group: 1, paragraph: 1};
+test('D33 player plays the book segment, stops at its end, then continues with TTS', () => {
+ const {p, el, spoken, timers} = audioFixture();
+ p.load([segRow, viRow]); p.toggle();
+ assert.equal(el.src, 'https://x/1.mp3');
+ assert.equal(el.currentTime, 1);
+ assert.equal(el.paused, false);
+ assert.equal(p.state().status, 'playing');
+ assert.equal(spoken.length, 0);
+ el.currentTime = 3; el.emit('timeupdate');
+ assert.equal(el.paused, true);
+ const wait = timers.at(-1); assert.equal(wait.ms, 750);
+ wait.fn();
+ assert.equal(spoken.length, 1); assert.equal(spoken[0].text, 'Xin chào'); assert.equal(spoken[0].lang, 'vi-VN');
+ p.stop();
+});
+test('D33 segment failure falls back to TTS for that row; covered fragments are skipped', () => {
+ const {p, el, spoken, timers} = audioFixture();
+ const covered = {text: 'bổ sung', displayText: 'bổ sung', speechText: 'bổ sung', lang: 'zh-CN', group: 1, paragraph: 0, coveredByAudio: true};
+ p.load([segRow, covered, viRow]); p.toggle();
+ el.emit('error');
+ assert.equal(spoken.length, 1); assert.equal(spoken[0].text, '你好'); assert.equal(spoken[0].lang, 'zh-CN');
+ spoken[0].onend();
+ const wait = timers.at(-1); wait.fn();
+ assert.equal(spoken.length, 2); assert.equal(spoken[1].text, 'Xin chào');
+ p.stop();
+});

@@ -19,7 +19,10 @@ Phần dưới giữ nguyên hồ sơ vòng thử nghiệm Bài 1.
 Thử nghiệm trên `hsk2-l01` trước. Chỉ đưa lên nhánh/PR để người dùng duyệt;
 **không merge, không phát hành main, không mở rộng sang bài khác trước duyệt**.
 
-- Ôn nhanh: nội dung summaryPoints và câu mẫu/ý nghĩa của Bài 1.
+- Ôn nhanh: ở bản thử là nội dung summaryPoints và câu mẫu của Bài 1; từ
+  D32 (2026-11-08, Hoa chỉ đạo) Ôn nhanh chỉ gồm ý chính của các điểm ngữ
+  pháp — tên điểm, "dùng khi nào", mẫu câu qua lời giải thích tiếng Việt và
+  một câu mẫu cho mỗi điểm; áp dụng cho cả 3 bài HSK 2 đã bật.
 - Ôn chi tiết: 15 mục từ, 3 điểm ngữ pháp (cách dùng, giải thích, vị trí,
   9 ví dụ), 22 câu/4 đoạn hội thoại. Không đọc đáp án bài tập.
 - Trung–Việt tách lượt theo ngôn ngữ, không đọc Pinyin hoặc Hán–Việt.

@@ -59,8 +59,9 @@
   làm trung thực (không nói "chưa có câu nào sai" khi chưa làm bài).
 - **Nghe ôn bài (D31)**: khối nghe ôn bằng giọng máy của thiết bị nằm trong
   mục Tổng kết (không thêm mục thứ 8), chỉ bật khi bài đã qua QA và có tên
-  trong `REVIEW_LESSONS` (`src/audio-review.js`). Ôn nhanh đọc tổng kết + câu
-  mẫu; Ôn chi tiết đọc từ mới, điểm ngữ pháp (ý nghĩa/cách dùng/vị trí/ví dụ;
+  trong `REVIEW_LESSONS` (`src/audio-review.js`). Ôn nhanh chỉ đọc ý chính
+  của các điểm ngữ pháp: tên điểm, "dùng khi nào", mẫu câu (qua lời giải
+  thích tiếng Việt) và một câu mẫu (D32); Ôn chi tiết đọc từ mới, điểm ngữ pháp (ý nghĩa/cách dùng/vị trí/ví dụ;
   công thức chỉ đọc qua lời giải thích tiếng Việt) và hội thoại đúng thứ tự,
   có nhãn người nói. Số lượng hiển thị tính từ dữ liệu thật của bài. Nghe ôn
   không đánh dấu đã học, không đọc đáp án/Pinyin/Hán–Việt.

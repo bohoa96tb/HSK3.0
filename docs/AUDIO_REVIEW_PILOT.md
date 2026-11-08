@@ -27,6 +27,9 @@ Thử nghiệm trên `hsk2-l01` trước. Chỉ đưa lên nhánh/PR để ngư�
   tiết phát đoạn audio sách có sẵn trong dữ liệu (phát trực tuyến, đúng
   mốc start/end của từng đơn vị); phần còn lại vẫn giọng máy; đoạn hỏng
   tự chuyển giọng máy cho hàng đó.
+- D34 (2026-11-08, sau phản hồi nghe thử của Hoa): đoạn TỪ MỚI trong
+  nghe ôn dùng bảng mốc riêng `REVIEW_WORD_SEGMENTS` đủ hai lượt đọc
+  nam–nữ (mốc dữ liệu bài chỉ có lượt đầu); đoạn hội thoại giữ mốc dữ liệu.
 - Ôn chi tiết: 15 mục từ, 3 điểm ngữ pháp (cách dùng, giải thích, vị trí,
   9 ví dụ), 22 câu/4 đoạn hội thoại. Không đọc đáp án bài tập.
 - Trung–Việt tách lượt theo ngôn ngữ, không đọc Pinyin hoặc Hán–Việt.

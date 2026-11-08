@@ -1,10 +1,10 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261108-review-bookaudio1";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261108-review-fullword1";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
 import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261105-hsk2l3-writing1";
 import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261105-hsk2l3-writing1";
-import * as player from "./player.js?v=20261108-review-bookaudio1";
+import * as player from "./player.js?v=20261108-review-fullword1";
 import { viewWritingHome, viewWritingSet, viewWritingChar, writingSetFor } from "./writing.js?v=20261105-hsk2l3-writing1";
 
 const main = document.getElementById("main");

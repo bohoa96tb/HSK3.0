@@ -4,6 +4,67 @@
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
 export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
+// D34 (Hoa, 2026-11-08): the vocabulary tracks read every word TWICE
+// (male, then female), but the word audio refs in the lesson data only
+// span the first reading, so the review cut words off after the male
+// voice. These review-only spans cover BOTH readings: derived from RMS
+// speech-region analysis of the actual tracks (each word's regions in
+// book order), cross-checked by transcribing every region separately;
+// a span runs from just before the word's first reading to just before
+// the next word's first reading. Lesson data itself is unchanged, and
+// sentence segments (read once) keep using the data refs as before.
+// Analysis artifacts: ~/workspace/hsk3-work/review-word-segments-analysis.py
+// and review-word-segments.json in the working area.
+export const REVIEW_WORD_SEGMENTS = {
+ 'h2l1-w01': {start: 0.49, end: 2.75},
+ 'h2l1-w02': {start: 2.77, end: 5.0},
+ 'h2l1-w03': {start: 5.02, end: 7.18},
+ 'h2l1-w04': {start: 7.2, end: 8.96},
+ 'h2l1-w05': {start: 0.61, end: 2.77},
+ 'h2l1-w06': {start: 2.79, end: 5.05},
+ 'h2l1-w07': {start: 0.42, end: 3.64},
+ 'h2l1-w08': {start: 3.66, end: 7.1},
+ 'h2l1-w09': {start: 7.12, end: 9.89},
+ 'h2l1-w10': {start: 9.91, end: 11.57},
+ 'h2l1-w11': {start: 0.36, end: 2.96},
+ 'h2l1-w12': {start: 2.98, end: 5.77},
+ 'h2l1-w13': {start: 5.79, end: 8.1},
+ 'h2l1-w14': {start: 8.12, end: 10.68},
+ 'h2l1-w15': {start: 10.7, end: 14.1},
+ 'h2l2-w01': {start: 0.61, end: 3.81},
+ 'h2l2-w02': {start: 3.83, end: 5.77},
+ 'h2l2-w03': {start: 5.79, end: 8.37},
+ 'h2l2-w04': {start: 8.39, end: 10.72},
+ 'h2l2-w05': {start: 10.74, end: 13.77},
+ 'h2l2-w06': {start: 13.79, end: 16.45},
+ 'h2l2-w07': {start: 16.47, end: 19.76},
+ 'h2l2-w08': {start: 0.35, end: 2.96},
+ 'h2l2-w09': {start: 2.98, end: 5.25},
+ 'h2l2-w10': {start: 5.27, end: 7.62},
+ 'h2l2-w11': {start: 7.64, end: 10.3},
+ 'h2l2-w12': {start: 10.32, end: 13.15},
+ 'h2l2-w13': {start: 13.17, end: 15.26},
+ 'h2l2-w14': {start: 15.28, end: 17.43},
+ 'h2l2-w15': {start: 0.89, end: 4.34},
+ 'h2l2-w16': {start: 4.36, end: 6.19},
+ 'h2l2-w17': {start: 0.77, end: 3.22},
+ 'h2l3-w01': {start: 0.79, end: 3.87},
+ 'h2l3-w02': {start: 3.89, end: 6.41},
+ 'h2l3-w03': {start: 6.43, end: 8.04},
+ 'h2l3-w04': {start: 0.58, end: 3.89},
+ 'h2l3-w05': {start: 3.91, end: 6.51},
+ 'h2l3-w06': {start: 0.76, end: 3.29},
+ 'h2l3-w07': {start: 3.31, end: 6.06},
+ 'h2l3-w08': {start: 6.08, end: 8.16},
+ 'h2l3-w09': {start: 8.18, end: 10.49},
+ 'h2l3-w10': {start: 10.51, end: 13.43},
+ 'h2l3-w11': {start: 13.45, end: 15.66},
+ 'h2l3-w12': {start: 0.48, end: 2.88},
+ 'h2l3-w13': {start: 2.9, end: 5.53},
+ 'h2l3-w14': {start: 5.55, end: 7.85},
+ 'h2l3-w15': {start: 7.87, end: 9.55},
+};
+
 export function reviewSupported(content) {
  return !!content && REVIEW_LESSONS.includes(content.lessonId);
 }
@@ -117,7 +178,10 @@ export function buildReview(content, mode = 'quick') {
  };
  if (mode === 'detail') {
   add('Từ mới', 'Ôn từ mới. Nghe tiếng Trung, rồi nghe nghĩa tiếng Việt.', 'editorial-intro');
-  for (const w of content.prepWords) pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id, w.audio);
+  for (const w of content.prepWords) {
+   const full = REVIEW_WORD_SEGMENTS[w.id];
+   pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id, full ? {...w.audio, ...full} : w.audio);
+  }
   for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
    const titleGroup = add('Cách dùng', k.title, k.id);
    // The printed formula stays visible in full; only its Vietnamese

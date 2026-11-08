@@ -266,7 +266,6 @@ test('D33 detail rows carry book audio for words and dialogue lines only', () =>
    assert.equal(a.url, tracks.get(unit.audio.trackId).url);
    assert.ok(a.start < a.end && a.end <= tracks.get(unit.audio.trackId).durationSec + 0.5, unit.id);
   };
-  lesson.prepWords.forEach(checkUnit);
   lesson.reader.sentences.forEach(checkUnit);
   assert.ok(detail.every(r => r.lang !== 'vi-VN' || !r.audio));
   assert.ok(detail.every(r => r.label !== 'Câu mẫu' || !r.audio));
@@ -317,4 +316,30 @@ test('D33 segment failure falls back to TTS for that row; covered fragments are 
  const wait = timers.at(-1); wait.fn();
  assert.equal(spoken.length, 2); assert.equal(spoken[1].text, 'Xin chào');
  p.stop();
+});
+
+test('D34 word segments in the review span both readings, sentences keep data refs', async () => {
+ const {REVIEW_WORD_SEGMENTS} = await import('../src/audio-review.js');
+ assert.equal(Object.keys(REVIEW_WORD_SEGMENTS).length, 47);
+ for (const lesson of [content, content2, content3]) {
+  const detail = buildReview(lesson, 'detail');
+  const byTrack = new Map();
+  for (const w of lesson.prepWords) {
+   const seg = REVIEW_WORD_SEGMENTS[w.id];
+   assert.ok(seg, w.id);
+   const carrier = detail.find(r => r.source === w.id && r.audio);
+   assert.equal(carrier.audio.start, seg.start, w.id);
+   assert.equal(carrier.audio.end, seg.end, w.id);
+   assert.equal(carrier.audio.trackId, w.audio.trackId, w.id);
+   // The full span is always longer than the first-reading-only data ref.
+   assert.ok(seg.end > w.audio.end, w.id);
+   if (!byTrack.has(w.audio.trackId)) byTrack.set(w.audio.trackId, []);
+   byTrack.get(w.audio.trackId).push(seg);
+  }
+  // Spans on a track never overlap: each word ends before the next begins.
+  for (const segs of byTrack.values()) {
+   segs.sort((a, b) => a.start - b.start);
+   for (let i = 1; i < segs.length; i++) assert.ok(segs[i-1].end < segs[i].start, `${segs[i-1].end} < ${segs[i].start}`);
+  }
+ }
 });

@@ -118,9 +118,19 @@ export function buildReview(content, mode = 'quick') {
    }
   }
  } else {
-  for (const p of content.summaryPoints) {
-   add(p.titleVi, p.bodyVi, 'summaryPoints');
-   pair(p.titleVi, p.exampleZh, p.exampleVi, 'summaryPoints');
+  // D32 (Hoa, 2026-11-08): Ôn nhanh chỉ gồm ý chính của các điểm ngữ pháp —
+  // tên điểm, "dùng khi nào", mẫu câu (đọc bằng lời giải thích tiếng Việt)
+  // và một câu mẫu. Từ mới, hội thoại và điểm tổng kết chỉ có ở Ôn chi tiết.
+  add('Mở đầu', 'Ôn nhanh. Nghe ý chính của từng điểm ngữ pháp: dùng khi nào, mẫu câu và một câu mẫu.', 'editorial-intro');
+  for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
+   const titleGroup = add('Điểm ngữ pháp', k.title, k.id);
+   add('Ý chính', k.useWhenVi, k.id);
+   const paraphrase = REVIEW_PATTERN_SPEECH[k.id];
+   if (k.pattern && paraphrase) {
+    rows.push({label: 'Mẫu câu', text: k.pattern, displayText: k.pattern, speechText: reviewSpeechText(paraphrase), speechSource: paraphrase, group: titleGroup, paragraph: 1, lang: 'vi-VN', source: k.id});
+   }
+   const e = k.examples?.[0];
+   if (e) pair('Câu mẫu', e.zh, e.noteVi, k.id);
   }
  }
  add('Kết thúc', 'Đã ôn xong. Bạn có thể nghe lại hoặc trở về bài học.', 'editorial-outro');
@@ -195,7 +205,7 @@ export function reviewHtml(content) {
  if (!reviewSupported(content)) return '';
  return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
  <p>Giọng máy của thiết bị · Tiếng Trung và tiếng Việt. Bấm một lần để nghe liên tục.</p>
- <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính + câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
+ <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính ngữ pháp + 1 câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
  <div class="review-caption"><span data-review-label></span><span data-review-count></span></div>
  <progress class="review-progress" data-review-progress max="1" value="0" aria-label="Tiến độ nghe"></progress>
  <div class="review-transcript" data-review-text aria-label="Lời đọc và nghĩa"></div>

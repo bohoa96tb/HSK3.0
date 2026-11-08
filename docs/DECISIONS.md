@@ -318,3 +318,10 @@ Sau khi nghiệm thu Bài 8 trên điện thoại Android thật, Hoa phản h�
 - Tách lời hiển thị và lời đọc: transcript giữ nguyên dấu câu, ngoặc, dấu "+" và ký hiệu học tập; lời gửi vào TTS được chia cụm theo dấu câu trước khi loại ký hiệu. Chỉ lọc chú thích nguồn/trang theo quy tắc đã có; không xóa từ có nghĩa, từ phủ định hay nội dung ngữ pháp trong ngoặc.
 - Mẫu ngữ pháp (công thức có "+", ngoặc, dấu gạch chéo) chỉ được đọc bằng lời giải thích tiếng Việt biên tập (`REVIEW_PATTERN_SPEECH`, theo mã điểm kiến thức, suy từ chính pattern/vị trí/giải thích đã kiểm chứng của bài); không nối các thành phần sau khi xóa ký hiệu. Điểm chưa có lời giải thích thì không đọc công thức thô — ý nghĩa, cách dùng, vị trí và ví dụ vẫn được đọc từ dữ liệu bài. Phần chữ Hán/phát âm nền không đọc theo khuôn ngữ pháp; luyện nét chữ ở khu Luyện viết.
 - Hội thoại trong Ôn chi tiết giữ đúng thứ tự sách và nhãn người nói (hiển thị ở dòng nhãn lượt đọc). Không đọc đáp án bài tập, không đọc Pinyin hay Hán–Việt.
+
+## D32 — Ôn nhanh chỉ gồm ý chính các điểm ngữ pháp (2026-11-08, Hoa chỉ đạo)
+
+- Ôn nhanh đổi cấu trúc: bỏ phần điểm tổng kết (`summaryPoints`) khỏi bản ôn; mỗi điểm ngữ pháp (kind `grammar`) chỉ đọc: tên điểm, ý chính ở trường "dùng khi nào" (`useWhenVi`), mẫu câu qua lời giải thích tiếng Việt (`REVIEW_PATTERN_SPEECH`, công thức vẫn hiện trên transcript) và MỘT câu mẫu (ví dụ đầu tiên của điểm, cặp Trung–Việt).
+- Ôn chi tiết giữ nguyên ba mục: từ mới, điểm ngữ pháp đầy đủ (cách dùng/giải thích/vị trí/mọi ví dụ), hội thoại/đoạn văn đúng thứ tự kèm người nói. Không cắt nội dung nào khỏi Ôn chi tiết; điểm tổng kết vẫn hiển thị ở mục Tổng kết như cũ, chỉ không còn nằm trong bản nghe ôn.
+- Áp dụng đồng thời cho cả 3 bài HSK 2 đã bật (Bài 1, 2, 3) vì đây là thay đổi cấu trúc của module dùng chung theo chỉ đạo trực tiếp của Hoa; mỗi bài vẫn phải QA ngữ nghĩa riêng trong cùng vòng. Các bài bật sau này dùng ngay cấu trúc này.
+- Mọi cơ chế khác của D31 giữ nguyên: module dùng chung, nhịp nghỉ theo dấu câu, tốc độ 0,92×, nhãn giọng máy, không ghi tiến độ, không đọc đáp án/Pinyin/Hán–Việt.

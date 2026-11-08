@@ -88,8 +88,29 @@ test('device receives sanitized speech while transcript retains punctuation',()=
 });
 test('non-spoken separators are retained in the displayed paragraph',async()=>{
  const {cleanReviewText}=await import('../src/audio-review.js');const rows=buildReview(content);
- for(const pt of content.summaryPoints){const first=rows.find(r=>r.label===pt.titleVi);const display=rows.filter(r=>r.group===first.group).map(r=>r.displayText).join('');assert.equal(display,cleanReviewText(pt.bodyVi));}
+ for(const k of content.knowledgePoints.filter(k=>k.kind==='grammar')){const first=rows.find(r=>r.label==='Ý chính'&&r.source===k.id);const display=rows.filter(r=>r.group===first.group).map(r=>r.displayText).join('');assert.equal(display,cleanReviewText(k.useWhenVi));}
  assert.ok(rows.some(r=>r.displayText.includes(' + ')));
+});
+test('D32 quick review is grammar main ideas only, for all enabled HSK2 lessons', async () => {
+ const {cleanReviewText} = await import('../src/audio-review.js');
+ for (const lesson of [content, content2, content3]) {
+  const quick = buildReview(lesson), detail = buildReview(lesson, 'detail');
+  const grammar = lesson.knowledgePoints.filter(k => k.kind === 'grammar');
+  assert.equal(grammar.length, 3);
+  for (const k of grammar) {
+   const titleRow = quick.find(r => r.source === k.id && r.label === 'Điểm ngữ pháp');
+   assert.ok(titleRow, k.id);
+   assert.equal(quick.filter(r => r.group === titleRow.group && r.paragraph === 0).map(r => r.displayText).join(''), cleanReviewText(k.title));
+   assert.ok(quick.some(r => r.source === k.id && r.label === 'Ý chính'));
+   const spokenExamples = quick.filter(r => r.source === k.id && r.label === 'Câu mẫu' && r.lang === 'zh-CN');
+   assert.equal(spokenExamples.length, 1, k.id);
+   assert.equal(spokenExamples[0].text, k.examples[0].zh);
+  }
+  assert.ok(quick.every(r => !lesson.prepWords.some(w => w.id === r.source)));
+  assert.ok(quick.every(r => !lesson.reader.sentences.some(s => s.id === r.source)));
+  assert.ok(quick.every(r => r.source !== 'summaryPoints'));
+  assert.ok(quick.length < detail.length / 3, `${quick.length} vs ${detail.length}`);
+ }
 });
 test('Vietnamese and Chinese punctuation produces short and long silent pauses',async()=>{
  const {reviewSpeechChunks}=await import('../src/audio-review.js');

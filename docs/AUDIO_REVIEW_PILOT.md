@@ -23,6 +23,10 @@ Thử nghiệm trên `hsk2-l01` trước. Chỉ đưa lên nhánh/PR để ngư�
   D32 (2026-11-08, Hoa chỉ đạo) Ôn nhanh chỉ gồm ý chính của các điểm ngữ
   pháp — tên điểm, "dùng khi nào", mẫu câu qua lời giải thích tiếng Việt và
   một câu mẫu cho mỗi điểm; áp dụng cho cả 3 bài HSK 2 đã bật.
+- Từ D33 (2026-11-08, Hoa chỉ đạo): từ mới và câu hội thoại trong Ôn chi
+  tiết phát đoạn audio sách có sẵn trong dữ liệu (phát trực tuyến, đúng
+  mốc start/end của từng đơn vị); phần còn lại vẫn giọng máy; đoạn hỏng
+  tự chuyển giọng máy cho hàng đó.
 - Ôn chi tiết: 15 mục từ, 3 điểm ngữ pháp (cách dùng, giải thích, vị trí,
   9 ví dụ), 22 câu/4 đoạn hội thoại. Không đọc đáp án bài tập.
 - Trung–Việt tách lượt theo ngôn ngữ, không đọc Pinyin hoặc Hán–Việt.

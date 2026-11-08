@@ -93,10 +93,31 @@ export function buildReview(content, mode = 'quick') {
   }
   return group;
  };
- const pair = (label, zh, vi, source) => { const group = ++groupCounter; add(label, zh, source, group, 0); add(label, vi, source, group, 1); };
+ // D33 (Hoa, 2026-11-08): units that already have book audio (words and
+ // dialogue lines, as {trackId, start, end} refs into reader.audioTracks)
+ // play the real streamed segment in the review; everything else keeps
+ // device TTS. The first fragment row carries the segment; later fragments
+ // of the same unit are marked covered so the segment is never replayed
+ // or spoken twice.
+ const trackById = new Map((content.reader.audioTracks || []).map(t => [t.id, t]));
+ const resolveAudio = ref => {
+  const track = ref?.trackId && trackById.get(ref.trackId);
+  if (!track?.url || !(ref.end > ref.start)) return null;
+  return {trackId: ref.trackId, url: track.url, start: ref.start, end: ref.end};
+ };
+ const pair = (label, zh, vi, source, audioRef) => {
+  const group = ++groupCounter;
+  const before = rows.length;
+  add(label, zh, source, group, 0);
+  const segment = resolveAudio(audioRef);
+  if (segment) for (let i = before; i < rows.length; i++) {
+   if (i === before) rows[i].audio = segment; else rows[i].coveredByAudio = true;
+  }
+  add(label, vi, source, group, 1);
+ };
  if (mode === 'detail') {
   add('Từ mới', 'Ôn từ mới. Nghe tiếng Trung, rồi nghe nghĩa tiếng Việt.', 'editorial-intro');
-  for (const w of content.prepWords) pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id);
+  for (const w of content.prepWords) pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id, w.audio);
   for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
    const titleGroup = add('Cách dùng', k.title, k.id);
    // The printed formula stays visible in full; only its Vietnamese
@@ -114,7 +135,7 @@ export function buildReview(content, mode = 'quick') {
    add('Hội thoại', p.title, p.id);
    for (const id of p.sentenceIds) {
     const s = content.reader.sentences.find(s => s.id === id);
-    pair(s.speaker ? `${p.title} · ${s.speaker}` : p.title, s.zh, s.vi, s.id);
+    pair(s.speaker ? `${p.title} · ${s.speaker}` : p.title, s.zh, s.vi, s.id, s.audio);
    }
   }
  } else {
@@ -137,26 +158,63 @@ export function buildReview(content, mode = 'quick') {
  return rows;
 }
 
-export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, changed = () => {}, schedule = setTimeout, unschedule = clearTimeout}) {
+export function createReviewPlayer({synth, Utterance, beforePlay = () => {}, changed = () => {}, schedule = setTimeout, unschedule = clearTimeout, audioFactory = null}) {
  let queue = [], index = 0, status = 'idle', error = '', token = 0, timer, watchdog, utterance;
  let rate = 0.92, gap = 0, loop = false;
+ let seg = null, segCleanup = null;
  const state = () => ({queue, index, status, error});
  const emit = () => changed(state());
- function cancel() { token++; unschedule(timer); unschedule(watchdog); if (utterance) { utterance.onstart = null; utterance.onend = null; utterance.onerror = null; } synth?.cancel(); utterance = null; }
+ function cancel() { token++; unschedule(timer); unschedule(watchdog); if (utterance) { utterance.onstart = null; utterance.onend = null; utterance.onerror = null; } synth?.cancel(); utterance = null; if (segCleanup) { segCleanup(); segCleanup = null; } if (seg) { try { seg.pause(); } catch { /* element gone */ } } }
  function stop() { cancel(); status = 'idle'; error = ''; emit(); }
  function play() {
   cancel(); error = '';
   const voices = synth?.getVoices?.() || [];
   const select = lang => voices.find(v => v.lang.replace('_','-').toLowerCase() === lang.toLowerCase()) || voices.find(v => lang === 'zh-CN' ? /^(zh-(cn|sg|tw)|cmn)(-|$)/i.test(v.lang.replace('_','-')) : /^vi(-|$)/i.test(v.lang));
-  if (!Utterance || !synth?.speak) {
-   status = 'error'; error = 'Trình duyệt này không hỗ trợ đọc văn bản. Hãy mở trang bằng Chrome hoặc Safari để thử lại.'; emit(); return;
-  }
   if (!queue.length) return;
   status = 'playing'; beforePlay(); const mine = token; let chunkIndex = 0;
+  const segmentTried = new Set();
+  const rowEndPause = row => {
+   const chunks = reviewSpeechChunks(row.speechSource ?? row.displayText ?? row.text);
+   let pauseMs = chunks.at(-1)?.pauseMs ?? 750;
+   const following = queue[index+1];
+   const newGroup = !following || following.group !== row.group;
+   const newParagraph = following?.paragraph !== row.paragraph;
+   return Math.max(pauseMs, newGroup ? Math.max(900, gap*1000) : newParagraph ? 550 : 120);
+  };
+  // Play the row's book-audio segment [start, end] of its track, then
+  // advance with the same end-of-row pause as the TTS path. Any failure
+  // (no element, load error, never starts) falls back to TTS for the row.
+  const playSegment = row => {
+   if (!seg) { try { seg = audioFactory ? audioFactory() : null; } catch { seg = null; } if (seg) seg.preload = 'auto'; }
+   if (!seg) { next(); return; }
+   synth?.cancel();
+   status = 'starting'; emit();
+   let done = false;
+   const cleanup = () => { seg.removeEventListener?.('timeupdate', onTime); seg.removeEventListener?.('ended', finish); seg.removeEventListener?.('playing', onPlaying); seg.removeEventListener?.('error', fallback); segCleanup = null; };
+   const finish = () => { if (done || mine !== token) return; done = true; cleanup(); try { seg.pause(); } catch { /* ignore */ } unschedule(watchdog); const pauseMs = rowEndPause(row); index++; chunkIndex = 0; timer = schedule(next, pauseMs); };
+   const fallback = () => { if (done || mine !== token) return; done = true; cleanup(); try { seg.pause(); } catch { /* ignore */ } unschedule(watchdog); next(); };
+   const onTime = () => { if (seg.currentTime >= row.audio.end - 0.03) finish(); };
+   const onPlaying = () => { if (done || mine !== token) return; unschedule(watchdog); status = 'playing'; emit(); const remaining = Math.max(0, row.audio.end - Math.max(row.audio.start, seg.currentTime || row.audio.start)); watchdog = schedule(finish, remaining / rate * 1000 + 5000); };
+   segCleanup = cleanup;
+   seg.addEventListener?.('timeupdate', onTime); seg.addEventListener?.('ended', finish); seg.addEventListener?.('playing', onPlaying); seg.addEventListener?.('error', fallback);
+   watchdog = schedule(fallback, 10000);
+   try {
+    if (seg.src !== row.audio.url) seg.src = row.audio.url;
+    seg.playbackRate = rate;
+    seg.currentTime = row.audio.start;
+    const played = seg.play?.();
+    if (played?.catch) played.catch(() => fallback());
+   } catch { fallback(); }
+  };
   const next = () => {
    if (mine !== token) return;
    if (index >= queue.length) { if (loop) index = 0; else { status = 'ended'; index = queue.length - 1; emit(); return; } }
    const row = queue[index];
+   if (chunkIndex === 0 && row.coveredByAudio) { index++; next(); return; }
+   if (chunkIndex === 0 && row.audio && !segmentTried.has(index)) { segmentTried.add(index); playSegment(row); return; }
+   if (!Utterance || !synth?.speak) {
+    status = 'error'; error = 'Trình duyệt này không hỗ trợ đọc văn bản. Hãy mở trang bằng Chrome hoặc Safari để thử lại.'; emit(); return;
+   }
    const chunks = reviewSpeechChunks(row.speechSource ?? row.displayText ?? row.text);
    const chunk = chunks[chunkIndex];
    if (!chunk) { index++; chunkIndex = 0; next(); return; }
@@ -204,7 +262,7 @@ let options = {rate: 0.92, gap: 0, loop: false};
 export function reviewHtml(content) {
  if (!reviewSupported(content)) return '';
  return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
- <p>Giọng máy của thiết bị · Tiếng Trung và tiếng Việt. Bấm một lần để nghe liên tục.</p>
+ <p>Từ mới và hội thoại dùng audio sách (giọng người thật); phần còn lại dùng giọng máy của thiết bị. Bấm một lần để nghe liên tục.</p>
  <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính ngữ pháp + 1 câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
  <div class="review-caption"><span data-review-label></span><span data-review-count></span></div>
  <progress class="review-progress" data-review-progress max="1" value="0" aria-label="Tiến độ nghe"></progress>
@@ -213,13 +271,13 @@ export function reviewHtml(content) {
  <div class="row-actions review-controls"><button class="btn" data-review-action="prev" aria-label="Nghe mục trước">← Trước</button><button class="btn primary" data-review-action="play">▶ Phát</button><button class="btn" data-review-action="next">Sau →</button><button class="btn" data-review-action="stop">Dừng</button></div>
  <div class="row-actions"><label>Tốc độ <select data-review-rate><option value="0.8">0,8×</option><option value="0.92" selected>Vừa phải · 0,92×</option><option value="1">1×</option><option value="1.2">1,2×</option></select></label><label>Nghỉ giữa ý <select data-review-gap><option value="0" selected>Tự nhiên theo dấu câu</option><option value="1">Ít nhất 1 giây</option><option value="3">3 giây · nhắc lại</option></select></label><label><input type="checkbox" data-review-loop> Lặp cả bài ôn</label></div>
  <p class="muted small">Nếu không nghe được trong ứng dụng ChatGPT, hãy mở link bằng Chrome. Giữ trang mở khi nghe. Khóa màn hình hoặc chuyển ứng dụng có thể ngắt giọng đọc. Tiếp tục sẽ đọc lại lượt đang dở.</p>
- <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Đây không phải audio gốc Baulchino. Mẫu câu có dấu cộng và ký hiệu vẫn hiện đầy đủ trên màn hình, nhưng khi đọc sẽ nghe lời giải thích bằng tiếng Việt, không đọc nối các ký hiệu. Không đọc tên dấu và ký hiệu; nghỉ ngắn sau dấu phẩy, lâu hơn sau dấu chấm và chuyển ý; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
+ <details><summary>Xem nội dung và nguồn bản ôn</summary><p>Sắp xếp từ nội dung đã có trong bài; phần tiếng Việt là chú giải biên tập. Từ mới và từng câu hội thoại phát đúng đoạn audio sách Baulchino (phát trực tuyến, không tải về máy); nghĩa tiếng Việt, phần giải thích ngữ pháp và các câu mẫu chưa có audio riêng được đọc bằng giọng máy của thiết bị. Nếu một đoạn audio sách không phát được, máy sẽ đọc thay bằng giọng máy. Mẫu câu có dấu cộng và ký hiệu vẫn hiện đầy đủ trên màn hình, nhưng khi đọc sẽ nghe lời giải thích bằng tiếng Việt, không đọc nối các ký hiệu. Không đọc tên dấu và ký hiệu; nghỉ ngắn sau dấu phẩy, lâu hơn sau dấu chấm và chuyển ý; chú thích nguồn được lọc theo quy tắc, không tự bỏ từ vựng của bài. Ôn chi tiết tập trung từ vựng, ngữ pháp và hội thoại; luyện nét chữ ở khu Luyện viết.</p><ol data-review-script></ol></details></section>`;
 }
 function refresh(s) {
  const root = document.querySelector('.audio-review'); if (!root) return;
  const row = s.queue[s.index];
  const currentIndex = Math.min(s.index, s.queue.length - 1);
- root.querySelector('[data-review-status]').textContent = s.error || ({idle:'Sẵn sàng nghe',starting:'Đang khởi động giọng đọc…',playing:'Đang nghe · phần tô màu',paused:'Tạm dừng',ended:'Đã nghe xong'})[s.status];
+ root.querySelector('[data-review-status]').textContent = s.error || ({idle:'Sẵn sàng nghe',starting:'Đang khởi động…',playing:'Đang nghe · phần tô màu',paused:'Tạm dừng',ended:'Đã nghe xong'})[s.status];
  root.querySelector('[data-review-label]').textContent = row?.label || '';
  root.querySelector('[data-review-count]').textContent = `${Math.max(0,currentIndex+1)} / ${s.queue.length}`;
  const progress = root.querySelector('[data-review-progress]'); progress.max = s.queue.length || 1; progress.value = s.status === 'ended' ? s.queue.length : Math.max(0,currentIndex);
@@ -239,7 +297,7 @@ function refresh(s) {
 export function mountReview(content, pauseBook) {
  const root = document.querySelector('.audio-review'); if (!root) return;
  if (!controller) {
-  controller = createReviewPlayer({synth: window.speechSynthesis, Utterance: window.SpeechSynthesisUtterance, beforePlay: pauseBook, changed: refresh});
+  controller = createReviewPlayer({synth: window.speechSynthesis, Utterance: window.SpeechSynthesisUtterance, beforePlay: pauseBook, changed: refresh, audioFactory: () => new Audio()});
   window.addEventListener('hsk-audio-start', () => controller.stop());
   window.addEventListener('pagehide', () => controller.stop());
  }

@@ -2132,7 +2132,13 @@
        "section": "课文 1"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-1",
+      "start": 0.14,
+      "end": 2.57,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s2",
@@ -2149,7 +2155,13 @@
        "section": "课文 1"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-1",
+      "start": 3.6,
+      "end": 5.73,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s3",
@@ -2166,7 +2178,13 @@
        "section": "课文 2"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-3",
+      "start": 0.0,
+      "end": 0.85,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s4",
@@ -2183,7 +2201,13 @@
        "section": "课文 2"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-3",
+      "start": 2.0,
+      "end": 3.83,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s5",
@@ -2200,7 +2224,13 @@
        "section": "课文 2"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-3",
+      "start": 5.0,
+      "end": 6.31,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s6",
@@ -2217,7 +2247,13 @@
        "section": "课文 2"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-3",
+      "start": 7.0,
+      "end": 8.93,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s7",
@@ -2234,7 +2270,13 @@
        "section": "课文 3"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-5",
+      "start": 0.0,
+      "end": 0.83,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s8",
@@ -2251,7 +2293,13 @@
        "section": "课文 3"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-5",
+      "start": 1.6,
+      "end": 3.05,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s9",
@@ -2268,7 +2316,13 @@
        "section": "课文 3"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-5",
+      "start": 3.74,
+      "end": 5.73,
+      "status": "asr-draft"
+     }
     },
     {
      "id": "tb-s10",
@@ -2285,7 +2339,13 @@
        "section": "课文 3"
       }
      ],
-     "transcriptStatus": "print-verified"
+     "transcriptStatus": "print-verified",
+     "audio": {
+      "trackId": "trk-tb-l01-5",
+      "start": 6.76,
+      "end": 8.53,
+      "status": "asr-draft"
+     }
     }
    ],
    "vocab": [
@@ -4422,7 +4482,13 @@
         "section": "课文 1"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-1",
+       "start": 0.11,
+       "end": 2.58,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s2",
@@ -4439,7 +4505,13 @@
         "section": "课文 1"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-1",
+       "start": 3.23,
+       "end": 4.98,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s3",
@@ -4456,7 +4528,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-3",
+       "start": 0.24,
+       "end": 2.05,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s4",
@@ -4473,7 +4551,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-3",
+       "start": 3.0,
+       "end": 8.47,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s5",
@@ -4490,7 +4574,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-3",
+       "start": 9.34,
+       "end": 10.57,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s6",
@@ -4507,7 +4597,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-3",
+       "start": 11.46,
+       "end": 12.83,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s7",
@@ -4524,7 +4620,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-5",
+       "start": 0.02,
+       "end": 2.17,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s8",
@@ -4541,7 +4643,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-5",
+       "start": 3.12,
+       "end": 5.53,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s9",
@@ -4558,7 +4666,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-5",
+       "start": 6.4,
+       "end": 8.27,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l02-s10",
@@ -4575,7 +4689,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l02-5",
+       "start": 8.72,
+       "end": 11.07,
+       "status": "asr-draft"
+      }
      }
     ],
     "vocab": [],
@@ -6820,7 +6940,13 @@
         "section": "课文 1"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-1",
+       "start": 0.4,
+       "end": 2.05,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s2",
@@ -6837,7 +6963,13 @@
         "section": "课文 1"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-1",
+       "start": 2.05,
+       "end": 4.49,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s3",
@@ -6854,7 +6986,13 @@
         "section": "课文 1"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-1",
+       "start": 4.49,
+       "end": 7.91,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s4",
@@ -6871,7 +7009,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-3",
+       "start": 0.24,
+       "end": 1.25,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s5",
@@ -6888,7 +7032,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-3",
+       "start": 1.97,
+       "end": 3.19,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s6",
@@ -6905,7 +7055,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-3",
+       "start": 4.04,
+       "end": 6.53,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s7",
@@ -6922,7 +7078,13 @@
         "section": "课文 2"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-3",
+       "start": 7.34,
+       "end": 9.39,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s8",
@@ -6939,7 +7101,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 0.21,
+       "end": 1.82,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s9",
@@ -6956,7 +7124,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 2.13,
+       "end": 3.92,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s10",
@@ -6973,7 +7147,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 4.07,
+       "end": 6.56,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s11",
@@ -6990,7 +7170,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 7.31,
+       "end": 9.0,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s12",
@@ -7007,7 +7193,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 9.51,
+       "end": 10.66,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s13",
@@ -7024,7 +7216,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 11.69,
+       "end": 12.84,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s14",
@@ -7041,7 +7239,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 13.37,
+       "end": 14.5,
+       "status": "asr-draft"
+      }
      },
      {
       "id": "l03-s15",
@@ -7058,7 +7262,13 @@
         "section": "课文 3"
        }
       ],
-      "transcriptStatus": "print-verified"
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb-l03-5",
+       "start": 15.21,
+       "end": 16.56,
+       "status": "asr-draft"
+      }
      }
     ],
     "vocab": [],

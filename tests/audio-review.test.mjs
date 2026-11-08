@@ -6,7 +6,7 @@ const data = JSON.parse(readFileSync(new URL('../data/content.json', import.meta
 const content = data.additionalLessons.find(c => c.lessonId === 'hsk2-l01');
 const content2 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l02');
 const content3 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l03');
-const notEnabled = data.additionalLessons.find(c => c.lessonId === 'hsk1-l02');
+const notEnabled = {lessonId: 'hsk2-l04'};
 function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  const spoken = [], timers = [], watchdogs = [];
  const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);u.onstart?.();}};
@@ -15,7 +15,7 @@ function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  return {p,spoken,timers,watchdogs};
 }
 test('enabled lessons only, detailed review includes all 15 words and 22 dialogue lines, no exercise answers', () => {
- assert.equal(buildReview(data.pilot).length,0);
+ assert.ok(buildReview(data.pilot).length > 0);
  assert.equal(buildReview(notEnabled).length,0);
  const quick=buildReview(content), detail=buildReview(content,'detail');
  assert.ok(detail.length>quick.length);
@@ -320,7 +320,7 @@ test('D33 segment failure falls back to TTS for that row; covered fragments are 
 
 test('D34 word segments in the review span both readings, sentences keep data refs', async () => {
  const {REVIEW_WORD_SEGMENTS} = await import('../src/audio-review.js');
- assert.equal(Object.keys(REVIEW_WORD_SEGMENTS).length, 47);
+ assert.equal(Object.keys(REVIEW_WORD_SEGMENTS).filter(k => k.startsWith('h2l')).length, 47);
  for (const lesson of [content, content2, content3]) {
   const detail = buildReview(lesson, 'detail');
   const byTrack = new Map();
@@ -340,6 +340,72 @@ test('D34 word segments in the review span both readings, sentences keep data re
   for (const segs of byTrack.values()) {
    segs.sort((a, b) => a.start - b.start);
    for (let i = 1; i < segs.length; i++) assert.ok(segs[i-1].end < segs[i].start, `${segs[i-1].end} < ${segs[i].start}`);
+  }
+ }
+});
+
+const hsk1Lessons = [data.pilot, ...data.additionalLessons.filter(c => c.lessonId.startsWith('hsk1-'))]
+ .sort((a, b) => a.lessonId.localeCompare(b.lessonId));
+
+test('D35 all 15 HSK 1 lessons enabled with data-derived counts', async () => {
+ const {reviewSupported, reviewCounts, REVIEW_PATTERN_SPEECH} = await import('../src/audio-review.js');
+ assert.equal(hsk1Lessons.length, 15);
+ for (const lesson of hsk1Lessons) {
+  assert.ok(reviewSupported(lesson), lesson.lessonId);
+  const detail = buildReview(lesson, 'detail'), quick = buildReview(lesson, 'quick');
+  assert.ok(detail.length > quick.length, lesson.lessonId);
+  const counts = reviewCounts(lesson);
+  assert.equal(counts.words, lesson.prepWords.length, lesson.lessonId);
+  assert.equal(counts.sentences, lesson.reader.sentences.length, lesson.lessonId);
+  for (const k of lesson.knowledgePoints.filter(k => k.kind === 'grammar')) {
+   assert.ok(REVIEW_PATTERN_SPEECH[k.id], `${lesson.lessonId} paraphrase ${k.id}`);
+   if (k.pattern) assert.ok(quick.some(r => r.source === k.id && r.label === 'Mẫu câu'), `${lesson.lessonId} quick pattern ${k.id}`);
+  }
+  for (const w of lesson.prepWords) assert.ok(detail.some(r => r.source === w.id && r.text === w.zh), `${lesson.lessonId} word ${w.id}`);
+  for (const s of lesson.reader.sentences) assert.ok(detail.some(r => r.source === s.id && r.lang === 'zh-CN'), `${lesson.lessonId} sentence ${s.id}`);
+ }
+});
+
+test('D35 HSK 1 word segments cover every word, ordered per track, within duration', async () => {
+ const {REVIEW_WORD_SEGMENTS} = await import('../src/audio-review.js');
+ let total = 0;
+ for (const lesson of hsk1Lessons) {
+  const detail = buildReview(lesson, 'detail');
+  const tracks = new Map(lesson.reader.audioTracks.map(t => [t.id, t]));
+  const perTrack = new Map();
+  for (const w of lesson.prepWords) {
+   total++;
+   const seg = REVIEW_WORD_SEGMENTS[w.id];
+   assert.ok(seg, `${lesson.lessonId} segment ${w.id}`);
+   const carrier = detail.find(r => r.source === w.id && r.audio);
+   assert.ok(carrier, `${lesson.lessonId} carrier ${w.id}`);
+   assert.equal(carrier.audio.trackId, seg.trackId, w.id);
+   assert.equal(carrier.audio.start, seg.start, w.id);
+   assert.equal(carrier.audio.end, seg.end, w.id);
+   assert.equal(carrier.audio.url, tracks.get(seg.trackId).url, w.id);
+   assert.ok(seg.end <= tracks.get(seg.trackId).durationSec + 0.02, w.id);
+   if (!perTrack.has(seg.trackId)) perTrack.set(seg.trackId, []);
+   perTrack.get(seg.trackId).push(seg);
+  }
+  for (const segs of perTrack.values()) {
+   segs.sort((a, b) => a.start - b.start);
+   for (let i = 1; i < segs.length; i++) assert.ok(segs[i-1].end < segs[i].start, `${lesson.lessonId} overlap`);
+  }
+ }
+ assert.equal(total, 330);
+});
+
+test('D35 HSK 1 lessons 1-3 dialogue sentences carry book segments', () => {
+ for (const lesson of hsk1Lessons.slice(0, 3)) {
+  const detail = buildReview(lesson, 'detail');
+  const tracks = new Map(lesson.reader.audioTracks.map(t => [t.id, t]));
+  for (const s of lesson.reader.sentences) {
+   assert.ok(s.audio && s.audio.trackId, `${lesson.lessonId} data ref ${s.id}`);
+   const carrier = detail.find(r => r.source === s.id && r.audio);
+   assert.ok(carrier, `${lesson.lessonId} carrier ${s.id}`);
+   assert.equal(carrier.audio.start, s.audio.start, s.id);
+   assert.equal(carrier.audio.end, s.audio.end, s.id);
+   assert.ok(s.audio.end <= tracks.get(s.audio.trackId).durationSec + 0.5, s.id);
   }
  }
 });

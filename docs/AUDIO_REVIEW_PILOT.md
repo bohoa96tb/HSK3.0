@@ -30,6 +30,10 @@ Thử nghiệm trên `hsk2-l01` trước. Chỉ đưa lên nhánh/PR để ngư�
 - D34 (2026-11-08, sau phản hồi nghe thử của Hoa): đoạn TỪ MỚI trong
   nghe ôn dùng bảng mốc riêng `REVIEW_WORD_SEGMENTS` đủ hai lượt đọc
   nam–nữ (mốc dữ liệu bài chỉ có lượt đầu); đoạn hội thoại giữ mốc dữ liệu.
+- D35 (2026-11-08): nghe ôn hoàn thành cho HSK 1 — cả 15 bài dùng cùng
+  module; 330 từ có mốc đủ hai lượt đọc trong bảng mốc (kể cả 13 từ dữ
+  liệu chưa có mốc), Bài 1–3 được bổ sung mốc đoạn hội thoại vào dữ liệu
+  (asr-draft), 45 điểm ngữ pháp có lời diễn giải mẫu tiếng Việt.
 - Ôn chi tiết: 15 mục từ, 3 điểm ngữ pháp (cách dùng, giải thích, vị trí,
   9 ví dụ), 22 câu/4 đoạn hội thoại. Không đọc đáp án bài tập.
 - Trung–Việt tách lượt theo ngôn ngữ, không đọc Pinyin hoặc Hán–Việt.

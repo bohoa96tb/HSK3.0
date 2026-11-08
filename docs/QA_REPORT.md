@@ -673,3 +673,10 @@ kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện th
 - Ôn chi tiết so khớp sâu (JSON) với module ở HEAD trước thay đổi: giống hệt từng dòng cho cả 3 bài (174/182/157).
 - Test tự động: audio-review 22/22, toàn bộ npm run check 243/243, validator OK, audit đạt. Phân biệt bằng chứng: kiểm bằng mã + đối chiếu dữ liệu; chưa nghe kiểm chứng bằng tai.
 - Nghiệm thu live sau merge PR #120 (03cbf4cf): token `20261108-review-quick1`; cả 3 bài đúng số lượt Ôn nhanh mới và nhãn nút; Ôn chi tiết nguyên vẹn; điều khiển đạt. Trình duyệt kiểm không có giọng TTS (app báo lỗi đúng thiết kế).
+
+## Nghe ôn lai audio sách/TTS theo D33 — QA (2026-11-08)
+
+- QA độc lập (đọc toàn bộ báo cáo): ĐẠT, 0 nghiêm trọng, 0 trung bình, 1 nhẹ (câu chữ tài liệu, đã sửa trong nhánh). Bằng chứng: dữ liệu có audio cho 100% đơn vị của 3 bài, mọi mốc start<end<=durationSec; mỗi đơn vị đúng một hàng mang audio khớp tuyệt đối trackId/start/end/URL; 19 kiểm hành vi tự viết đạt 19/19 (phát đúng đoạn, dừng đúng end, nhịp nghỉ sau đoạn 900/3000/550/750 ms như nhánh TTS, fallback cả 3 đường lỗi, dừng/chuyển chế độ ngắt cả hai nguồn, tốc độ áp cho cả playbackRate).
+- Hồi quy: so khớp sâu 6 tổ hợp bài × chế độ với HEAD sau khi loại hai trường mới — giống hệt từng hàng; số lượt không đổi.
+- Test tự động: audio-review 25/25, toàn bộ npm run check 246/246, validator OK, audit đạt. Phân biệt bằng chứng: kiểm bằng mã + đối chiếu dữ liệu + nghiệm thu live quan sát trạng thái; chất lượng điểm cắt asr-draft chưa nghe kiểm chứng bằng tai.
+- Nghiệm thu live sau merge PR #122 (d2c83a03): token `20261108-review-bookaudio1`; bằng chứng loại trừ xác nhận đoạn MP3 sách phát thật trong nghe ôn (xem CHECKPOINT); điều khiển đạt; hồi quy đạt.

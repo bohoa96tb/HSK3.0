@@ -358,3 +358,12 @@
 - QA độc lập D17: ĐẠT, 0 nghiêm trọng/trung bình, 3 ghi nhận nhẹ (hai biến thể phụ chỉ có ở Ôn chi tiết — đúng tính chất ý chính; hai mục checkpoint lịch sử của vòng Bài 2/Bài 3 mô tả cấu trúc Ôn nhanh cũ — giữ nguyên như nhật ký thời điểm đó, trạng thái hiện tại là mục này). Kiểm thử local: npm run check 243/243, audit đạt — không gọi là CI.
 - Phát hành: PR #120, merge 03cbf4cf; token `20261108-review-quick1`. Nghiệm thu live đạt cả 3 bài: nhãn nút mới "Ý chính ngữ pháp + 1 câu mẫu", số lượt Ôn nhanh 27/23/17 đúng, nội dung chỉ gồm 3 điểm ngữ pháp + mở đầu/kết thúc, Ôn chi tiết và nhãn của nó nguyên vẹn, điều khiển Trước/Sau/Dừng đạt; file live đối chiếu trực tiếp đúng token + cấu trúc mới. Giới hạn như cũ: trình duyệt kiểm không có giọng TTS — cảm nhận Ôn nhanh mới trên điện thoại thật chờ Hoa nghe thử.
 - nextTask: mạch nghe ôn giữ cấu trúc D32 cho mọi bài bật sau này. Việc biên soạn bài mới HSK 2 Bài 4 vẫn theo nextTask riêng của mạch bài học.
+
+## Nghe ôn dùng audio sách theo D33 (2026-11-08, ĐÃ PHÁT HÀNH)
+
+- Chỉ đạo của Hoa: dùng audio đoạn hội thoại có sẵn trong bài cho phần nghe ôn; từ/câu không có audio thì dùng phát âm của trình duyệt. Ghi thành quyết định D33 (kèm ranh giới với D20: loa trong bài không đổi; nghe ôn dùng đoạn sách, đoạn từ lấy lần đọc đầu; mọi mốc vẫn asr-draft).
+- Triển khai: player của module dùng chung thành cơ chế lai — hàng tiếng Trung của từ mới và câu hội thoại trong Ôn chi tiết phát đúng đoạn [start, end] của track Baulchino (phát trực tuyến), phủ 108/108 đơn vị của 3 bài (47 từ + 61 câu); phần còn lại giọng máy; đoạn hỏng/không khởi động tự chuyển giọng máy cho hàng đó. Số lượt/nội dung hai chế độ không đổi (QA so khớp sâu từng hàng).
+- QA độc lập D17: ĐẠT, 0 nghiêm trọng/trung bình, 1 nhẹ về câu chữ mở đầu hai tài liệu chuẩn (đã sửa trong nhánh). Kiểm thử local: npm run check 246/246, audit đạt — không gọi là CI.
+- Phát hành: PR #122, merge d2c83a03; token `20261108-review-bookaudio1`. Nghiệm thu live đạt và có bằng chứng loại trừ: trình duyệt kiểm không phát được giọng máy (lỗi ở hàng giới thiệu và hàng nghĩa tiếng Việt) nhưng hàng từ mới tiếng Trung （回来） vẫn phát và tự chuyển lượt 2/157 → 3/157 — chỉ có thể là đoạn MP3 sách; Tạm dừng/Tiếp tục/Dừng đạt; hồi quy Ôn nhanh 27/23, Ôn chi tiết 174/182, track 3-1 đạt.
+- Giới hạn còn lại: chất lượng điểm cắt asr-draft và giọng máy phần còn lại chỉ kiểm chứng được khi Hoa nghe trên điện thoại thật.
+- nextTask: giữ cơ chế D32 + D33 cho mọi bài bật nghe ôn sau này. Việc biên soạn bài mới HSK 2 Bài 4 vẫn theo nextTask riêng của mạch bài học.

@@ -367,3 +367,10 @@
 - Phát hành: PR #122, merge d2c83a03; token `20261108-review-bookaudio1`. Nghiệm thu live đạt và có bằng chứng loại trừ: trình duyệt kiểm không phát được giọng máy (lỗi ở hàng giới thiệu và hàng nghĩa tiếng Việt) nhưng hàng từ mới tiếng Trung （回来） vẫn phát và tự chuyển lượt 2/157 → 3/157 — chỉ có thể là đoạn MP3 sách; Tạm dừng/Tiếp tục/Dừng đạt; hồi quy Ôn nhanh 27/23, Ôn chi tiết 174/182, track 3-1 đạt.
 - Giới hạn còn lại: chất lượng điểm cắt asr-draft và giọng máy phần còn lại chỉ kiểm chứng được khi Hoa nghe trên điện thoại thật.
 - nextTask: giữ cơ chế D32 + D33 cho mọi bài bật nghe ôn sau này. Việc biên soạn bài mới HSK 2 Bài 4 vẫn theo nextTask riêng của mạch bài học.
+
+## 2026-11-08 — D34 đoạn từ nghe ôn đủ hai lượt đọc (ĐÃ PHÁT HÀNH, token 20261108-review-fullword1)
+
+- Hoa phản hồi từ thiết bị thật: ôn từ mới bị cắt âm sớm. Nguyên nhân: track từ vựng đọc mỗi từ hai lượt (nam–nữ), mốc dữ liệu bài chỉ theo lượt đầu (di sản căn ASR). Chỉ nghe ôn thay đổi: `REVIEW_WORD_SEGMENTS` trong src/audio-review.js — mốc riêng cho 47 từ của 3 bài HSK 2, suy từ phân tích vùng tiếng nói trên chính các track + đối chiếu ASR theo từng vùng cắt; đoạn chạy từ ngay trước lượt đầu tới ngay trước từ kế tiếp. Dữ liệu bài và đoạn hội thoại không đổi; D20 giữ nguyên.
+- QA độc lập: VÒNG 1 CHƯA ĐẠT — đối chiếu tín hiệu độc lập 47 từ đạt 45/47, bắt lỗi nghiêm trọng: ranh giới 为什么/不错 (trk-tb2-l03-6) lệch một khoảng lặng （为什么 thiếu lượt nữ, 不错 thừa lượt 为什么 ở đầu). Đã sửa đúng hai mốc （为什么 [10.51, 13.43], 不错 [13.45, 15.66]); QA kiểm lại bằng tín hiệu (silencedetect, tham số riêng) + ASR đoạn cắt: ĐẠT. Ghi nhận nhẹ: heuristic 'đoạn mới luôn dài hơn đoạn cũ' không đúng ở 旅游/有时/公交车 — mốc cũ lấn/lặng, đoạn mới đúng (đã chứng minh bằng tín hiệu).
+- Test local 247/247 (test D34 mới: đủ 47 mục, hàng dùng đúng bảng, không chồng nhau, end mới > end dữ liệu). PR #124, merge 905c2eb.
+- Mốc mới vẫn là căn tín hiệu + ASR, chưa nghe kiểm chứng bởi người — chờ Hoa nghe lại phần từ mới trên điện thoại và báo nếu còn từ nào lệch.

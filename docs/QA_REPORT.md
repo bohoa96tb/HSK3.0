@@ -680,3 +680,9 @@ kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện th
 - Hồi quy: so khớp sâu 6 tổ hợp bài × chế độ với HEAD sau khi loại hai trường mới — giống hệt từng hàng; số lượt không đổi.
 - Test tự động: audio-review 25/25, toàn bộ npm run check 246/246, validator OK, audit đạt. Phân biệt bằng chứng: kiểm bằng mã + đối chiếu dữ liệu + nghiệm thu live quan sát trạng thái; chất lượng điểm cắt asr-draft chưa nghe kiểm chứng bằng tai.
 - Nghiệm thu live sau merge PR #122 (d2c83a03): token `20261108-review-bookaudio1`; bằng chứng loại trừ xác nhận đoạn MP3 sách phát thật trong nghe ôn (xem CHECKPOINT); điều khiển đạt; hồi quy đạt.
+
+## D34 — Đoạn từ mới trong nghe ôn đủ hai lượt đọc (2026-11-08)
+
+- Bằng chứng: báo cáo QA độc lập vòng 1 (phân tích tín hiệu độc lập cả 12 track từ vựng bằng tham số riêng + ASR theo vùng cắt; kết luận CHƯA ĐẠT, 1 lỗi nghiêm trọng 为什么/不错, 45/47 đạt, 1 ghi nhận nhẹ về heuristic độ dài đoạn) và báo cáo QA kiểm lại sau sửa (tín hiệu silencedetect + ASR đoạn cắt hai từ đã sửa: ĐẠT; 47/47 giá trị bảng khớp artifact phân tích; diff chỉ gồm bảng mốc + cách dùng + test + tài liệu + token).
+- Kiểm thử bằng mã (local, không phải CI): node --test của vòng — module nghe ôn 26/26; npm run check 247/247. Test tự động chỉ kiểm tính chất cấu trúc của bảng mốc; lỗi ranh giới chỉ lộ khi đối chiếu tín hiệu + ASR (đã thực hiện ở cả hai vòng QA).
+- Phần CHƯA kiểm: nghe bằng tai chất lượng điểm cắt và cảm nhận đệm đầu/cuối (chờ Hoa nghe thử trên điện thoại); danh tính nam/nữ từng lượt suy từ thứ tự đọc + ASR, không đo cao độ giọng.

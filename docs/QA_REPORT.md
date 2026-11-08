@@ -666,3 +666,10 @@ kiểm lại PDF/ASR. Chưa xác minh tiếng phát thực tế trên điện th
 - Display/speech: Ôn chi tiết có 7 dòng display chứa "+", toàn bộ 157 + 46 dòng (chi tiết + ôn nhanh) có speechText thuần chữ/số; chuỗi speak() ghi được cho 3 dòng Mẫu câu đều là tiếng Việt thuần, lang vi-VN, rate 0,92. Nhịp nghỉ đo trực tiếp giữ 300/450/750/900/550 ms. Phủ định còn nguyên （没做完, 没吃完, "không nói 没吃完饭了").
 - Test tự động: audio-review 21/21, toàn bộ npm run check 242/242, validator OK, audit đạt. Phân biệt bằng chứng: kiểm bằng mã + đối chiếu dữ liệu; chưa nghe kiểm chứng bằng tai.
 - Nghiệm thu live sau merge PR #118 (8c099bb5): token `20261108-hsk2l3-review1`; khối nghe ôn ở Tổng kết Bài 3 đúng nhãn, 157 mục, điều khiển đạt; hồi quy Bài 1/Bài 2 đạt; track 3-1 phát thật. Trình duyệt kiểm không có giọng TTS (app báo lỗi đúng), chưa kiểm Android thật và 4 bề rộng cho vòng này — CSS khối nghe ôn không đổi.
+
+## Ôn nhanh theo D32 — QA (2026-11-08)
+
+- QA độc lập (đọc toàn bộ báo cáo): ĐẠT, 0 nghiêm trọng, 0 trung bình, 3 nhẹ (không chặn). Bằng chứng: ý chính 9/9 điểm ghép khớp nguyên văn useWhenVi; câu mẫu đúng ví dụ đầu tiên của từng điểm (zh + nghĩa), ví dụ 2/3 không xuất hiện; chuỗi speak() của 9 paraphrase đều vi-VN, công thức thô không vào TTS; tập source của Ôn nhanh chỉ gồm intro/outro + 3 mã điểm ngữ pháp — không summaryPoints/từ/hội thoại/bài tập/điểm nền.
+- Ôn chi tiết so khớp sâu (JSON) với module ở HEAD trước thay đổi: giống hệt từng dòng cho cả 3 bài (174/182/157).
+- Test tự động: audio-review 22/22, toàn bộ npm run check 243/243, validator OK, audit đạt. Phân biệt bằng chứng: kiểm bằng mã + đối chiếu dữ liệu; chưa nghe kiểm chứng bằng tai.
+- Nghiệm thu live sau merge PR #120 (03cbf4cf): token `20261108-review-quick1`; cả 3 bài đúng số lượt Ôn nhanh mới và nhãn nút; Ôn chi tiết nguyên vẹn; điều khiển đạt. Trình duyệt kiểm không có giọng TTS (app báo lỗi đúng thiết kế).

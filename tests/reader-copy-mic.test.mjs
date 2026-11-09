@@ -55,6 +55,7 @@ test('CSS: copy line hidden by default, shown only in copy mode', () => {
   assert.match(css, /\.copy-line\{display:none/);
   assert.match(css, /#main \.transcript\.copy-on \.copy-line\{display:block\}/);
   assert.ok(!/\.transcript \.copy-line\{display:block\}/.test(css), 'always-visible rule from the rejected build must be gone');
+  assert.match(css, /@media\(min-width:768px\)\{#main \.transcript\.copy-on \.sentence>div\{grid-column:2\}\}/, 'copy mode pins the sentence body to the text column so the control row is not crushed into the hidden speaker column');
 });
 
 test('default reader: no copy mode, no visible copy controls state, mic present per line', async () => {

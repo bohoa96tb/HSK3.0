@@ -850,7 +850,9 @@ function bindReader(content) {
     const details = b.closest(".transcript"); if (details) details.classList.toggle("copy-on", on);
     b.setAttribute("aria-pressed", String(on));
     const hint = document.querySelector("[data-copy-hint]"); if (hint) hint.textContent = on ? COPY_HINT_ON : COPY_HINT_OFF;
-    if (on && details) { const inp = details.querySelector("[data-copy-input]"); if (inp) { try { inp.focus({ preventScroll: true }); } catch { /* older browsers: skip auto-focus rather than jump */ } } }
+    // No auto-focus (D38 live-check note): popping the keyboard / focus
+    // zoom on toggle made the first input render cramped in some
+    // browsers — Hoa's condition was "only if it causes no jump".
   }; });
   $$("[data-copy-input]").forEach((inp) => {
     inp.addEventListener("input", () => {

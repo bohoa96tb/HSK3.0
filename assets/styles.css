@@ -592,7 +592,9 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 
 /* D37/D38: per-line voice recorder — independent of the copy block,
    visible in every mode. Every state has a visible signal. */
-.rec-zone{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.line-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end;margin-top:2px}
+.line-controls .speak-btn{width:44px;height:44px;min-width:44px;min-height:44px}
+.rec-status:empty{display:none}
 .rec-mic-btn{min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:1.05rem;cursor:pointer;padding:0 12px}
 .rec-mic-btn.is-recording{background:#c0392b;color:#fff;border-color:transparent;font-size:.9rem;font-weight:700}
 .rec-mic-btn[disabled]{opacity:.55}

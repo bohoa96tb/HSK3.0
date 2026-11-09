@@ -23,11 +23,10 @@ await tick();
 const $$ = (s) => [...document.querySelectorAll(s)];
 
 test('unsupported browser: mic buttons still render; tap shows guidance', async () => {
-  const zones = $$('[data-rec-zone]');
-  assert.ok(zones.length > 0, 'recorder zones render even without media support');
-  const zone = zones[0];
-  const id = zone.dataset.recZone;
-  zone.querySelector('[data-rec]').click();
+  const mics = $$('[data-rec]');
+  assert.ok(mics.length > 0, 'mic buttons render even without media support');
+  const id = mics[0].dataset.rec;
+  mics[0].click();
   await tick();
   assert.match(document.querySelector(`[data-rec-status="${id}"]`).textContent, /không hỗ trợ thu âm.*Chrome.*Safari/s, 'guidance names a working browser');
 });

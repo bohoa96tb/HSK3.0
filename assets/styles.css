@@ -570,7 +570,8 @@ details.study-tip{padding:10px 12px;margin:8px 0}
    mode (Hoa's correction: no always-visible inputs). Copy mode itself is
    session-only state in app.js. */
 .copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0 10px}
-.copy-line{display:none;margin-top:10px}
+.copy-line{display:none;margin-top:10px;width:100%;box-sizing:border-box}
+.transcript .sentence>div{min-width:0}
 #main .transcript.copy-on .copy-line{display:block}
 #main .transcript.copy-on .sentence .tog-pinyin-sent,
 #main .transcript.copy-on .sentence .zh-sentence,
@@ -583,7 +584,7 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 #main .transcript.copy-on .sentence.copy-revealed .zh-sentence,
 #main .transcript.copy-on .sentence.copy-revealed .tog-vi-sent,
 #main .transcript.copy-on .sentence.copy-revealed .speaker{display:block}
-.copy-input{width:100%;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.copy-input{display:block;width:100%;box-sizing:border-box;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
 .copy-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
 .copy-result{font-size:.9rem;font-weight:600}
 .copy-result.ok{color:var(--accent,#256b46)}
@@ -591,7 +592,7 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 
 /* D37/D38: per-line voice recorder — independent of the copy block,
    visible in every mode. Every state has a visible signal. */
-.rec-zone{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.rec-zone{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
 .rec-mic-btn{min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:1.05rem;cursor:pointer;padding:0 12px}
 .rec-mic-btn.is-recording{background:#c0392b;color:#fff;border-color:transparent;font-size:.9rem;font-weight:700}
 .rec-mic-btn[disabled]{opacity:.55}

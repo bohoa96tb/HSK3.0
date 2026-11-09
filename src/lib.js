@@ -242,7 +242,6 @@ export function emptyProgress() {
       showViSentences: false,
       showPinyinExercises: false,
       showViExercises: false,
-      transcriptCopyMode: false,
       fontScale: 1,
       playbackRate: 1,
     },

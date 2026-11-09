@@ -2,7 +2,7 @@ import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=2026110
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh, checkTranscriptCopy } from "./lib.js?v=20261109-reader-copy1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh, checkTranscriptCopy } from "./lib.js?v=20261109-copymic-fix1";
 import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261105-hsk2l3-writing1";
 import * as player from "./player.js?v=20261109-reader-copy1";
 import { viewWritingHome, viewWritingSet, viewWritingChar, writingSetFor } from "./writing.js?v=20261105-hsk2l3-writing1";
@@ -674,12 +674,32 @@ function trackRowHtml(track) {
       <button class="btn ghost" data-repeat>Nghe lại từ đầu</button></div>` : ""}
     </div></article>`;
 }
-const COPY_HINT_OFF = "Ô chép nằm dưới mỗi câu. Bật chế độ này để ẩn chữ Hán, pinyin và nghĩa khi chép — chỉ còn loa.";
+const COPY_HINT_OFF = "Bấm để chép chính tả: chữ Hán, pinyin và nghĩa sẽ ẩn ngay — chỉ còn loa và ô chép.";
 const COPY_HINT_ON = "Nghe loa của từng câu rồi chép lại bằng chữ Hán hoặc pinyin. Bấm \u201cXem đáp án\u201d ở câu nào thì câu đó hiện lại.";
+// D38 (Hoa's rejection of the always-visible box): copy mode is a
+// SESSION state only — never written to saved settings, so a fresh page
+// load always starts in normal reading mode. It also resets when another
+// lesson opens. The copied drafts themselves still persist (copyDrafts).
+let copyModeOn = false;
+let copyModeLessonId = null;
 // D37: per-line voice recording, session-only (Hoa's choice): blobs live
 // in memory and are gone when the page closes. Nothing is uploaded and
 // nothing touches progress or scores.
-const MIC_OK = typeof navigator !== "undefined" && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== "undefined";
+const REC_SUPPORTED = typeof navigator !== "undefined" && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== "undefined";
+const REC_MIMES = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus", "audio/ogg"];
+function pickRecMime() {
+  if (typeof MediaRecorder === "undefined" || typeof MediaRecorder.isTypeSupported !== "function") return "";
+  for (const m of REC_MIMES) { try { if (MediaRecorder.isTypeSupported(m)) return m; } catch { /* try next */ } }
+  return "";
+}
+function recErrorText(err) {
+  const name = err?.name || "";
+  if (name === "NotAllowedError" || name === "PermissionDeniedError") return "Micro đã bị từ chối quyền. Hãy bấm ổ khoá trên thanh địa chỉ → Quyền → Micro → Cho phép, rồi thử lại.";
+  if (name === "NotFoundError" || name === "DevicesNotFoundError") return "Không tìm thấy thiết bị thu âm trên máy này.";
+  if (name === "NotReadableError" || name === "AbortError") return "Micro đang bận — có thể ứng dụng khác đang dùng. Đóng ứng dụng đó rồi thử lại.";
+  if (name === "SecurityError") return "Trình duyệt chặn micro vì trang chưa an toàn (cần HTTPS). Hãy mở đúng địa chỉ https của trang rồi thử lại.";
+  return "Không mở được micro. Hãy thử lại, hoặc mở trang bằng Chrome (Android) / Safari (iPhone).";
+}
 const recStore = new Map(); // "lessonId:sentenceId" -> {url, dur}
 let recActive = null; // {key, id, recorder, stream, startedAt, timer}
 let recPending = null; // start claim held synchronously across the getUserMedia await
@@ -697,10 +717,17 @@ function stopActiveRecording() {
 function copyLineHtml(content, sen, draft) {
   const verdict = draft.ok === true ? `<span class="copy-result ok">Đúng rồi ✓ (${draft.mode === "pinyin" ? "pinyin" : "chữ Hán"})</span>`
     : draft.ok === false ? `<span class="copy-result no">Chưa khớp — thử lại hoặc xem đáp án</span>` : "";
-  const recRow = MIC_OK ? `<div class="rec-row"><button type="button" class="btn ghost small rec-btn" data-rec="${sen.id}" aria-pressed="false">🎤 Thu âm</button><button type="button" class="btn ghost small" data-rec-play="${sen.id}" disabled>▶ Nghe lại</button><button type="button" class="btn ghost small" data-rec-del="${sen.id}" disabled>Xoá</button><span class="rec-status" data-rec-status="${sen.id}">Thu giọng đọc của bạn để nghe lại — bản thu chỉ giữ trong buổi học này.</span></div>` : "";
-  return `<div class="copy-line"><input type="text" class="copy-input" data-copy-input="${sen.id}" placeholder="Nghe loa rồi chép lại câu này (chữ Hán hoặc pinyin)…" value="${esc(draft.text || "")}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ô chép lại câu"><div class="copy-actions"><button type="button" class="btn ghost small" data-copy-check="${sen.id}">Kiểm tra</button><button type="button" class="btn ghost small" data-copy-reveal="${sen.id}">${draft.revealed ? "Ẩn đáp án" : "Xem đáp án"}</button><span data-copy-result="${sen.id}" role="status">${verdict}</span></div>${recRow}</div>`;
+  return `<div class="copy-line"><input type="text" class="copy-input" data-copy-input="${sen.id}" placeholder="Nghe loa rồi chép lại câu này (chữ Hán hoặc pinyin)…" value="${esc(draft.text || "")}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ô chép lại câu"><div class="copy-actions"><button type="button" class="btn ghost small" data-copy-check="${sen.id}">Kiểm tra</button><button type="button" class="btn ghost small" data-copy-reveal="${sen.id}">${draft.revealed ? "Ẩn đáp án" : "Xem đáp án"}</button><span data-copy-result="${sen.id}" role="status">${verdict}</span></div></div>`;
+}
+// D38: the recorder is INDEPENDENT of the copy block (the copy block is
+// hidden outside copy mode; the mic must work in normal reading mode).
+// Rendered for every line, always — an unsupported browser gets guidance
+// text on tap instead of the feature silently disappearing.
+function recZoneHtml(sen) {
+  return `<div class="rec-zone" data-rec-zone="${sen.id}"><button type="button" class="rec-mic-btn" data-rec="${sen.id}" aria-pressed="false" aria-label="Thu âm câu này để luyện phát âm">🎤</button><span class="rec-actions" data-rec-actions="${sen.id}" hidden><button type="button" class="btn ghost small" data-rec-play="${sen.id}">▶ Nghe giọng mình</button><button type="button" class="btn ghost small" data-rec-again="${sen.id}">🔄 Thu lại</button><button type="button" class="btn ghost small" data-rec-del="${sen.id}">Xóa</button></span><span class="rec-status" data-rec-status="${sen.id}" role="status"></span></div>`;
 }
 function sectionReaderHtml(content) {
+ if (copyModeLessonId !== content.lessonId) { copyModeOn = false; copyModeLessonId = content.lessonId; }
  const r=content.reader,s=settings(),query=parseRoute().query;
  const selected=r.sentences.find(x=>x.id===query.sentence);
  const group=r.passages.find(x=>x.id===(selected?.passageId||query.passage))||r.passages[0];
@@ -711,9 +738,9 @@ function sectionReaderHtml(content) {
  ${(() => { const gidx = r.passages.findIndex((g) => g.id === group.id);
    const relKps = content.knowledgePoints.filter((k) => !String(k.kindLabel || "").startsWith("Mẹo") && (k.sentenceIds || []).some((id) => group.sentenceIds.includes(id)));
    return `<div class="row-actions reader-links"><a class="btn ghost small" href="#/lesson/${content.lessonId}/prep">Xem từ của bài này</a>${relKps.map((k) => `<a class="btn ghost small" href="#/grammar/${esc(k.id)}?return=reader&passage=${esc(group.id)}">Điểm chính: ${esc(k.title)}</a>`).join("")}${group.checkItemId && !(group.checkItems?.length) ? `<a class="btn small" href="#/lesson/${content.lessonId}/exercises?item=${esc(group.checkItemId)}">${esc(group.checkLabelVi || "Câu hỏi ngắn sau khi nghe")} →</a>` : ""}</div>`; })()}
- ${supportBarHtml('sentences')}<details class="transcript${s.transcriptCopyMode ? " copy-on" : ""}" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
- <div class="copy-row"><button type="button" class="support-btn" data-copy-toggle aria-pressed="${!!s.transcriptCopyMode}">Chép lại lời thoại</button><span class="muted small" data-copy-hint>${s.transcriptCopyMode ? COPY_HINT_ON : COPY_HINT_OFF}</span></div>
- ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}${(loadProgress().copyDrafts||{})[content.lessonId+':'+id]?.revealed?' copy-revealed':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(sen.zh, content)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${phraseBtnHtml(content)}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}${copyLineHtml(content, sen, (loadProgress().copyDrafts||{})[content.lessonId+':'+id] || {})}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
+ ${supportBarHtml('sentences')}<details class="transcript${copyModeOn && copyModeLessonId === content.lessonId ? " copy-on" : ""}" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
+ <div class="copy-row"><button type="button" class="support-btn" data-copy-toggle aria-pressed="${copyModeOn && copyModeLessonId === content.lessonId}">Chép lại lời thoại</button><span class="muted small" data-copy-hint>${copyModeOn && copyModeLessonId === content.lessonId ? COPY_HINT_ON : COPY_HINT_OFF}</span></div>
+ ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}${(loadProgress().copyDrafts||{})[content.lessonId+':'+id]?.revealed?' copy-revealed':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(sen.zh, content)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${phraseBtnHtml(content)}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}${copyLineHtml(content, sen, (loadProgress().copyDrafts||{})[content.lessonId+':'+id] || {})}</div>${speakBtnHtml(sentenceAudio(content, sen), "câu này")}${recZoneHtml(sen)}</div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details>${readerCheckBlockHtml(content, group)}<p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
  <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang (đã đối chiếu bản in, chưa nghe kiểm chứng). Mỗi câu có loa riêng: đoạn câu được căn bằng máy từ audio (ASR) nên là mốc nháp, chưa được người nghe xác nhận; vẫn có thể nghe cả track như trước. Bản in không bao gồm lời dẫn của audio.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
 }
@@ -818,11 +845,12 @@ function bindReader(content) {
     Object.assign(d, patch);
   });
   $$("[data-copy-toggle]").forEach((b) => { b.onclick = () => {
-    const on = !settings().transcriptCopyMode;
-    update((p) => { p.settings.transcriptCopyMode = on; });
+    copyModeOn = !copyModeOn; // D38: session state only — never persisted
+    const on = copyModeOn;
     const details = b.closest(".transcript"); if (details) details.classList.toggle("copy-on", on);
     b.setAttribute("aria-pressed", String(on));
     const hint = document.querySelector("[data-copy-hint]"); if (hint) hint.textContent = on ? COPY_HINT_ON : COPY_HINT_OFF;
+    if (on && details) { const inp = details.querySelector("[data-copy-input]"); if (inp) { try { inp.focus({ preventScroll: true }); } catch { /* older browsers: skip auto-focus rather than jump */ } } }
   }; });
   $$("[data-copy-input]").forEach((inp) => {
     inp.addEventListener("input", () => {
@@ -858,94 +886,141 @@ function bindReader(content) {
     b.textContent = on ? "Ẩn đáp án" : "Xem đáp án";
     saveCopyDraft(id, { revealed: on });
   }; });
-  // D37: per-line recording controls (session-only, see recStore above).
+  // D37/D38: per-line recording controls — independent of the copy
+  // block, session-only (see recStore above). Every tap produces an
+  // immediate visible state; no failure path is silent.
   const recKey = (id) => `${content.lessonId}:${id}`;
   const recEls = (id) => ({
     btn: document.querySelector(`[data-rec="${id}"]`),
+    actions: document.querySelector(`[data-rec-actions="${id}"]`),
     play: document.querySelector(`[data-rec-play="${id}"]`),
-    del: document.querySelector(`[data-rec-del="${id}"]`),
     status: document.querySelector(`[data-rec-status="${id}"]`),
   });
+  const recSetStatus = (id, text, kind = "") => {
+    const e = recEls(id); if (!e.status) return;
+    e.status.textContent = text;
+    e.status.className = "rec-status" + (kind ? " " + kind : "");
+  };
   const recRefresh = (id) => {
     const e = recEls(id); if (!e.btn) return;
     const key = recKey(id);
     const has = recStore.has(key);
     const mine = !!(recActive && recActive.key === key);
+    const pending = !!(recPending && recPending.key === key);
+    if (e.actions) e.actions.hidden = !has || mine || pending;
+    e.btn.disabled = pending;
     e.btn.setAttribute("aria-pressed", String(mine));
-    e.btn.textContent = mine ? "⏹ Dừng thu" : "🎤 Thu âm";
-    if (e.play) e.play.disabled = !has || mine;
-    if (e.del) e.del.disabled = !has || mine;
-    if (e.status) {
-      e.status.classList.toggle("recording", mine);
-      if (!mine) e.status.textContent = has ? `Đã thu ${player.fmtTime(recStore.get(key).dur)} — bấm Nghe lại để nghe, hoặc thu lại.` : "Thu giọng đọc của bạn để nghe lại — bản thu chỉ giữ trong buổi học này.";
+    e.btn.classList.toggle("is-recording", mine);
+    e.btn.textContent = mine ? "⏹ Dừng thu" : "🎤";
+    if (mine || pending) return; // the ticker / pending write owns the status line
+    if (!(recAudio && recAudioKey === key)) {
+      if (has) recSetStatus(id, `Đã thu ${player.fmtTime(recStore.get(key).dur)} — bấm Nghe giọng mình để so với loa sách. Bản thu chỉ giữ trong buổi học này.`);
+      else recSetStatus(id, "");
     }
   };
   const recStart = async (id) => {
-    if (recPending) return; // a start is already waiting on the mic — ignore extra taps
+    const e0 = recEls(id);
+    if (!REC_SUPPORTED) { recSetStatus(id, "Trình duyệt này không hỗ trợ thu âm. Hãy mở trang bằng Chrome (Android) hoặc Safari (iPhone) để luyện phát âm.", "error"); return; }
+    if (recPending) { // a start is already waiting on the mic — never leave a tap unanswered
+      if (recPending.key !== recKey(id)) recSetStatus(id, "Đang chờ micro cho một câu khác — hãy đợi hộp thoại quyền của trình duyệt, hoặc thu xong câu đó trước.");
+      return;
+    }
     const key = recKey(id);
     if (recActive && recActive.key !== key) stopActiveRecording();
     const claim = { key, id };
     recPending = claim; // claimed synchronously, before any await (QA D37 race fix)
     player.pause(); stopReview();
     if (recAudio) { recAudio.pause(); recAudio = null; recAudioKey = null; }
-    const e = recEls(id);
-    if (e.status) e.status.textContent = "Đang mở mic…";
+    recSetStatus(id, "Đang xin quyền micro…");
+    if (e0.btn) { e0.btn.disabled = true; }
     let stream = null, recorder = null;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       if (recPending !== claim) { stream.getTracks().forEach((t) => t.stop()); return; }
-      recorder = new MediaRecorder(stream);
-    } catch {
+      const mime = pickRecMime();
+      recorder = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream);
+    } catch (err) {
       if (stream) stream.getTracks().forEach((t) => t.stop());
-      if (recPending === claim) { recPending = null; if (e.status) e.status.textContent = "Không mở được mic — hãy cho phép mic trong trình duyệt rồi thử lại."; }
+      if (recPending === claim) {
+        recPending = null;
+        if (e0.btn) e0.btn.disabled = false;
+        recSetStatus(id, recErrorText(err), "error");
+      }
       return;
     }
     recPending = null;
     const chunks = []; const startedAt = Date.now();
     const gen = ++recGen; recLatestGen.set(key, gen);
     recorder.ondataavailable = (ev) => { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    recorder.onerror = () => {
+      if (recActive && recActive.recorder === recorder) {
+        clearInterval(recActive.timer); recActive = null;
+        if (recLatestGen.get(key) === gen) recLatestGen.delete(key);
+        stream.getTracks().forEach((t) => t.stop());
+        recRefresh(id);
+        recSetStatus(id, "Thu âm bị lỗi giữa chừng — hãy thử lại.", "error");
+      }
+    };
     recorder.onstop = () => {
       stream.getTracks().forEach((t) => t.stop());
       // Generation check (QA D37 round 2): this onstop belongs to THIS
-      // recorder only. A newer take of the same line may already be
-      // recording — never clear its handle, never overwrite its take,
-      // never repaint its row back from the recording state.
+      // recorder only — never clear, overwrite or repaint a newer take.
       if (recActive && recActive.recorder === recorder) { clearInterval(recActive.timer); recActive = null; }
+      const totalSize = chunks.reduce((n, c) => n + c.size, 0);
+      let emptyTake = false;
       if (recLatestGen.get(key) === gen) {
-        const blob = new Blob(chunks, { type: recorder.mimeType || "audio/webm" });
-        const old = recStore.get(key); if (old) URL.revokeObjectURL(old.url);
-        recStore.set(key, { url: URL.createObjectURL(blob), dur: Math.max(1, Math.round((Date.now() - startedAt) / 1000)) });
+        if (totalSize > 0) {
+          const blob = new Blob(chunks, { type: recorder.mimeType || "audio/webm" });
+          const old = recStore.get(key); if (old) URL.revokeObjectURL(old.url);
+          recStore.set(key, { url: URL.createObjectURL(blob), dur: Math.max(1, Math.round((Date.now() - startedAt) / 1000)) });
+        } else emptyTake = true;
       }
       if (!(recActive && recActive.key === key)) recRefresh(id);
+      if (emptyTake && recLatestGen.get(key) === gen) recSetStatus(id, "Bản thu trống — micro có thể đang bị tắt tiếng hoặc bị ứng dụng khác chiếm. Hãy thử thu lại.", "error");
     };
-    recorder.start();
+    try { recorder.start(); } catch (err) {
+      stream.getTracks().forEach((t) => t.stop());
+      const eb = recEls(id); if (eb.btn) eb.btn.disabled = false;
+      recSetStatus(id, recErrorText(err), "error");
+      return;
+    }
     recActive = { key, id, recorder, stream, startedAt, timer: null };
     recActive.timer = setInterval(() => {
-      const el = recEls(id); const sec = Math.floor((Date.now() - startedAt) / 1000);
-      if (el.status) { el.status.textContent = `Đang thu… ${player.fmtTime(sec)}`; el.status.classList.add("recording"); }
+      if (!recActive || recActive.key !== key) return;
+      const sec = Math.floor((Date.now() - startedAt) / 1000);
+      const e = recEls(id);
+      if (e.status) { e.status.innerHTML = `<span class="rec-dot" aria-hidden="true"></span>Đang thu âm ${player.fmtTime(sec)}`; e.status.className = "rec-status recording"; }
       if (sec >= 30) stopActiveRecording();
     }, 500);
     recRefresh(id);
+    recSetStatus(id, "Đang thu âm 0:00", "recording");
   };
   $$("[data-rec]").forEach((b) => { b.onclick = () => {
     const id = b.dataset.rec;
     if (recActive && recActive.key === recKey(id)) { stopActiveRecording(); return; }
     recStart(id);
   }; });
+  $$("[data-rec-again]").forEach((b) => { b.onclick = () => { recStart(b.dataset.recAgain); }; });
   $$("[data-rec-play]").forEach((b) => { b.onclick = () => {
-    const rec = recStore.get(recKey(b.dataset.recPlay)); if (!rec) return;
+    const id = b.dataset.recPlay; const key = recKey(id);
+    const rec = recStore.get(key); if (!rec) return;
     if (recAudio) { recAudio.pause(); recAudio = null; recAudioKey = null; }
     player.pause(); stopReview();
-    recAudio = new Audio(rec.url); recAudioKey = recKey(b.dataset.recPlay); recAudio.play().catch(() => {});
+    const a = new Audio(rec.url);
+    recAudio = a; recAudioKey = key;
+    recSetStatus(id, "Đang phát bản thu của bạn…", "playing");
+    a.onended = () => { if (recAudio === a) { recAudio = null; recAudioKey = null; recRefresh(id); } };
+    a.onerror = () => { if (recAudio === a) { recAudio = null; recAudioKey = null; } recSetStatus(id, "Không phát được bản thu trên trình duyệt này. Hãy thu lại, hoặc mở trang bằng Chrome/Safari.", "error"); };
+    a.play().catch(() => { if (recAudio === a) { recAudio = null; recAudioKey = null; } recSetStatus(id, "Không phát được bản thu trên trình duyệt này. Hãy thu lại, hoặc mở trang bằng Chrome/Safari.", "error"); });
   }; });
   $$("[data-rec-del]").forEach((b) => { b.onclick = () => {
     const id = b.dataset.recDel; const key = recKey(id);
     if (recAudio && recAudioKey === key) { recAudio.pause(); recAudio = null; recAudioKey = null; }
     const rec = recStore.get(key); if (rec) URL.revokeObjectURL(rec.url);
     recStore.delete(key); recRefresh(id);
-    const e = recEls(id); if (e.status) e.status.textContent = "Đã xoá bản thu.";
+    recSetStatus(id, "Đã xóa bản thu.");
   }; });
-  r.sentences.forEach((sen) => { if (recStore.has(recKey(sen.id))) recRefresh(sen.id); });
+  r.sentences.forEach((sen) => { if (recStore.has(recKey(sen.id)) || (recActive && recActive.key === recKey(sen.id)) || (recPending && recPending.key === recKey(sen.id))) recRefresh(sen.id); });
   function bindTrackControls() {
     $$("[data-play]").forEach((b) => b.onclick = () => {
       const track = r.audioTracks.find((t) => t.id === b.dataset.play);

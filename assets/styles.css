@@ -566,15 +566,12 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .audio-review .review-controls{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:7px}.review-controls .btn{padding:10px 8px;min-width:0;font-size:.9rem;white-space:nowrap}
 @media(max-width:420px){.review-transcript{padding:16px}.review-paragraph p{font-size:1.03rem}.review-chinese p{font-size:1.5rem}.audio-review .review-controls{grid-template-columns:1fr 1.4fr 1fr}.review-controls [data-review-action=stop]{grid-column:1/-1;justify-self:center;min-width:90px}}
 
-/* D36: transcript copy practice — every text aid hides, only the per-line
-   speaker and the copy line stay. "Xem đáp án" reveals one sentence. */
+/* D36/D38: transcript copy practice — the copy line exists ONLY in copy
+   mode (Hoa's correction: no always-visible inputs). Copy mode itself is
+   session-only state in app.js. */
 .copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0 10px}
-.transcript .copy-line{display:block;margin-top:10px}
-#main .transcript:not(.copy-on) [data-copy-reveal]{display:none}
-.rec-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
-.rec-btn[aria-pressed="true"]{background:#c0392b;color:#fff;border-color:transparent}
-.rec-status{font-size:.85rem;color:var(--muted)}
-.rec-status.recording{color:#c0392b;font-weight:600}
+.copy-line{display:none;margin-top:10px}
+#main .transcript.copy-on .copy-line{display:block}
 #main .transcript.copy-on .sentence .tog-pinyin-sent,
 #main .transcript.copy-on .sentence .zh-sentence,
 #main .transcript.copy-on .sentence .tog-vi-sent,
@@ -591,3 +588,18 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .copy-result{font-size:.9rem;font-weight:600}
 .copy-result.ok{color:var(--accent,#256b46)}
 .copy-result.no{color:#b45309}
+
+/* D37/D38: per-line voice recorder — independent of the copy block,
+   visible in every mode. Every state has a visible signal. */
+.rec-zone{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.rec-mic-btn{min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:1.05rem;cursor:pointer;padding:0 12px}
+.rec-mic-btn.is-recording{background:#c0392b;color:#fff;border-color:transparent;font-size:.9rem;font-weight:700}
+.rec-mic-btn[disabled]{opacity:.55}
+.rec-actions{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rec-actions[hidden]{display:none}
+.rec-actions .btn{min-height:44px}
+.rec-status{font-size:.88rem;color:var(--muted)}
+.rec-status.recording{color:#c0392b;font-weight:600}
+.rec-status.playing{color:var(--accent,#256b46);font-weight:600}
+.rec-status.error{color:#b3261e;font-weight:600}
+.rec-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#c0392b;margin-right:6px;vertical-align:middle}

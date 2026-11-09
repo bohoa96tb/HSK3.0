@@ -81,11 +81,11 @@ test("D36 checkTranscriptCopy accepts hanzi or pinyin, ignores punctuation/spaci
 
 test("D36 progress gains copy defaults without losing existing data", () => {
   const fresh = emptyProgress();
-  assert.equal(fresh.settings.transcriptCopyMode, false);
+  assert.ok(!("transcriptCopyMode" in fresh.settings), "D38: copy mode is session-only, never a saved setting");
   assert.deepEqual(fresh.copyDrafts, {});
   const old = { schemaVersion: 1, settings: { showPinyinPrep: false }, attempts: [{ id: "a" }] };
   const migrated = migrateProgress(old);
-  assert.equal(migrated.settings.transcriptCopyMode, false);
+  assert.ok(!("transcriptCopyMode" in migrated.settings) || migrated.settings.transcriptCopyMode === false);
   assert.equal(migrated.settings.showPinyinPrep, false);
   assert.deepEqual(migrated.copyDrafts, {});
   assert.equal(migrated.attempts.length, 1);

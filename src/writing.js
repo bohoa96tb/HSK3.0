@@ -5,7 +5,7 @@
 // "mastered" — completing a stage once, especially with hints, is practice,
 // not mastery.
 import { loadProgress, update } from "./store.js?v=20261105-hsk2l3-writing1";
-import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261109-reader-copy1";
+import { markWriting, writingEntryOf, writingStageCount, isWritingDue } from "./lib.js?v=20261109-copymic-fix1";
 
 const VENDOR_SRC = "assets/vendor/hanzi-writer-3.7.3.min.js";
 let hwPromise = null;

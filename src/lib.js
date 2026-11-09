@@ -24,6 +24,22 @@ export function stripTones(value) {
     .replace(/\s+/g, " ");
 }
 
+// D36: reader transcript copy practice. The learner hears a dialogue line
+// and writes it back — in Han characters or in Pinyin. Accept the Hanzi
+// form (punctuation, symbols and spacing ignored) or the Pinyin form
+// (with tone marks, or tone-less, spacing ignored). Returns {ok, mode};
+// the result is practice feedback only, never a graded attempt.
+export function checkTranscriptCopy(input, sentence) {
+  const raw = String(input ?? "");
+  if (!raw.trim()) return { ok: false, mode: null, empty: true };
+  const squash = (v) => String(v ?? "").normalize("NFC").toLowerCase().replace(/[\s\p{P}\p{S}]/gu, "");
+  if (squash(raw) && squash(raw) === squash(sentence?.zh)) return { ok: true, mode: "hanzi" };
+  if (/[a-z]/i.test(raw) && squash(raw) && squash(raw) === squash(sentence?.pinyin)) return { ok: true, mode: "pinyin" };
+  const loose = (v) => stripTones(v).replace(/\s+/g, "");
+  if (loose(raw) && loose(raw) === loose(sentence?.pinyin)) return { ok: true, mode: "pinyin" };
+  return { ok: false, mode: null };
+}
+
 export function matchesQuery(haystacks, query) {
   const q = stripTones(query);
   if (!q) return true;
@@ -226,6 +242,7 @@ export function emptyProgress() {
       showViSentences: false,
       showPinyinExercises: false,
       showViExercises: false,
+      transcriptCopyMode: false,
       fontScale: 1,
       playbackRate: 1,
     },
@@ -236,6 +253,7 @@ export function emptyProgress() {
     exerciseSession: null, // latest session mirror: {setId, index, answers:{}, checked:{}, hintUsed:{}, supportUsed:{}}
     exerciseSessions: {}, // setId -> session, so each lesson keeps its own exercise state
     drafts: {}, // self-check taskId:index -> learner's own written answer (never auto-graded)
+    copyDrafts: {}, // "lessonId:sentenceId" -> {text, ok, mode, revealed} — reader transcript copy practice (D36), never graded, never an attempt
     dictation: {}, // taskId -> {first:{idx:bool}, tries:{idx:n}, peeked:bool, updatedAt} — first-attempt results are never overwritten
     audioState: {}, // trackId -> {position, trackUrl}
     sessions: [], // {date, minutes} active-study estimates recorded on section completion

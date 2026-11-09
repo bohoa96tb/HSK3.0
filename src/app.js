@@ -1,10 +1,10 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261108-review-hsk1-1";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261109-reader-copy1";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
-import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh } from "./lib.js?v=20261105-hsk2l3-writing1";
+import { gradeChoice, gradeDictationCell, dictationExpected, isConflictCell, matchesQuery, nextReviewState, isDue, summarizeAttempts, REVIEW_INTERVALS_DAYS, segmentZh, checkTranscriptCopy } from "./lib.js?v=20261109-reader-copy1";
 import { loadProgress, saveProgress, update, exportProgressJson, importProgressJson, summarizeForPreview } from "./store.js?v=20261105-hsk2l3-writing1";
-import * as player from "./player.js?v=20261108-review-hsk1-1";
+import * as player from "./player.js?v=20261109-reader-copy1";
 import { viewWritingHome, viewWritingSet, viewWritingChar, writingSetFor } from "./writing.js?v=20261105-hsk2l3-writing1";
 
 const main = document.getElementById("main");
@@ -674,6 +674,13 @@ function trackRowHtml(track) {
       <button class="btn ghost" data-repeat>Nghe lại từ đầu</button></div>` : ""}
     </div></article>`;
 }
+const COPY_HINT_OFF = "Bật để ẩn chữ Hán, pinyin và nghĩa — chỉ còn loa và ô chép lại câu.";
+const COPY_HINT_ON = "Nghe loa của từng câu rồi chép lại bằng chữ Hán hoặc pinyin. Bấm \u201cXem đáp án\u201d ở câu nào thì câu đó hiện lại.";
+function copyLineHtml(content, sen, draft) {
+  const verdict = draft.ok === true ? `<span class="copy-result ok">Đúng rồi ✓ (${draft.mode === "pinyin" ? "pinyin" : "chữ Hán"})</span>`
+    : draft.ok === false ? `<span class="copy-result no">Chưa khớp — thử lại hoặc xem đáp án</span>` : "";
+  return `<div class="copy-line"><input type="text" class="copy-input" data-copy-input="${sen.id}" placeholder="Nghe loa rồi chép lại câu này (chữ Hán hoặc pinyin)…" value="${esc(draft.text || "")}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ô chép lại câu"><div class="copy-actions"><button type="button" class="btn ghost small" data-copy-check="${sen.id}">Kiểm tra</button><button type="button" class="btn ghost small" data-copy-reveal="${sen.id}">${draft.revealed ? "Ẩn đáp án" : "Xem đáp án"}</button><span data-copy-result="${sen.id}" role="status">${verdict}</span></div></div>`;
+}
 function sectionReaderHtml(content) {
  const r=content.reader,s=settings(),query=parseRoute().query;
  const selected=r.sentences.find(x=>x.id===query.sentence);
@@ -685,8 +692,9 @@ function sectionReaderHtml(content) {
  ${(() => { const gidx = r.passages.findIndex((g) => g.id === group.id);
    const relKps = content.knowledgePoints.filter((k) => !String(k.kindLabel || "").startsWith("Mẹo") && (k.sentenceIds || []).some((id) => group.sentenceIds.includes(id)));
    return `<div class="row-actions reader-links"><a class="btn ghost small" href="#/lesson/${content.lessonId}/prep">Xem từ của bài này</a>${relKps.map((k) => `<a class="btn ghost small" href="#/grammar/${esc(k.id)}?return=reader&passage=${esc(group.id)}">Điểm chính: ${esc(k.title)}</a>`).join("")}${group.checkItemId && !(group.checkItems?.length) ? `<a class="btn small" href="#/lesson/${content.lessonId}/exercises?item=${esc(group.checkItemId)}">${esc(group.checkLabelVi || "Câu hỏi ngắn sau khi nghe")} →</a>` : ""}</div>`; })()}
- ${supportBarHtml('sentences')}<details class="transcript" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
- ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(sen.zh, content)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${phraseBtnHtml(content)}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
+ ${supportBarHtml('sentences')}<details class="transcript${s.transcriptCopyMode ? " copy-on" : ""}" ${query.sentence||readerOpen?'open':''}><summary>Mở lời thoại để đọc theo <span class="tag">Đã đối chiếu bản in</span></summary>
+ <div class="copy-row"><button type="button" class="support-btn" data-copy-toggle aria-pressed="${!!s.transcriptCopyMode}">Chép lại lời thoại</button><span class="muted small" data-copy-hint>${s.transcriptCopyMode ? COPY_HINT_ON : COPY_HINT_OFF}</span></div>
+ ${group.sentenceIds.map(id=>{const sen=r.sentences.find(x=>x.id===id);return `<div class="sentence ${id===query.sentence?'highlighted':''}${(loadProgress().copyDrafts||{})[content.lessonId+':'+id]?.revealed?' copy-revealed':''}" data-sentence="${id}" id="${id}" data-anchor><span class="speaker">${esc(sen.speaker)}</span><div><div class="pinyin tog-pinyin-sent">${esc(sen.pinyin)}</div><div class="zh-sentence" lang="zh-CN" data-tok-wrap>${zhTokensHtml(sen.zh, content)}</div><button class="btn ghost small reveal-btn" data-reveal="${id}">Xem nghĩa</button><div class="vi tog-vi-sent" id="vi-${id}">${esc(sen.vi)}</div>${phraseBtnHtml(content)}${content.knowledgePoints.filter(k=>k.sentenceIds?.includes(id)).map(k=>`<a class="inline-grammar" href="#/grammar/${k.id}?return=reader&sentence=${id}">${esc(k.title)} ↗</a>`).join('')}${copyLineHtml(content, sen, (loadProgress().copyDrafts||{})[content.lessonId+':'+id] || {})}</div>${speakBtnHtml(sentenceAudio(content, sen), sen.zh)}</div>`;}).join('')}
  ${refsHtml(group.sourceRefs)}</details>${readerCheckBlockHtml(content, group)}<p class="study-tip">Lượt 1: nghe không nhìn chữ. Lượt 2: mở lời thoại và đọc theo. Lượt 3: thử nói lại.</p>
  <details class="audio-status"><summary>Về lời thoại và audio</summary><p>Lời thoại chép từ đúng phần hội thoại trong sách, ghép track theo số in trên trang (đã đối chiếu bản in, chưa nghe kiểm chứng). Mỗi câu có loa riêng: đoạn câu được căn bằng máy từ audio (ASR) nên là mốc nháp, chưa được người nghe xác nhận; vẫn có thể nghe cả track như trước. Bản in không bao gồm lời dẫn của audio.</p><a href="https://www.baulchino.com/new-hsk-audios-2026" target="_blank" rel="noopener">Mở trang audio nguồn ↗</a></details></section>`;
 }
@@ -782,6 +790,55 @@ function bindReader(content) {
     const el = document.getElementById(`vi-${b.dataset.reveal}`); if (!el) return;
     const on = el.classList.toggle("revealed"); b.textContent = on ? "Ẩn nghĩa" : "Xem nghĩa";
   }));
+  // D36: transcript copy practice — in-place like the support bar: no
+  // re-render, no scroll jump, no audio restart. Drafts persist per
+  // sentence; verdicts are practice feedback, never graded attempts.
+  const copyKey = (id) => `${content.lessonId}:${id}`;
+  const saveCopyDraft = (id, patch) => update((p) => {
+    const d = (p.copyDrafts[copyKey(id)] ||= { text: "", ok: null, mode: null, revealed: false });
+    Object.assign(d, patch);
+  });
+  $$("[data-copy-toggle]").forEach((b) => { b.onclick = () => {
+    const on = !settings().transcriptCopyMode;
+    update((p) => { p.settings.transcriptCopyMode = on; });
+    const details = b.closest(".transcript"); if (details) details.classList.toggle("copy-on", on);
+    b.setAttribute("aria-pressed", String(on));
+    const hint = document.querySelector("[data-copy-hint]"); if (hint) hint.textContent = on ? COPY_HINT_ON : COPY_HINT_OFF;
+  }; });
+  $$("[data-copy-input]").forEach((inp) => {
+    inp.addEventListener("input", () => {
+      const id = inp.dataset.copyInput;
+      const saved = (loadProgress().copyDrafts || {})[copyKey(id)];
+      const span = document.querySelector(`[data-copy-result="${id}"]`);
+      if (span && saved && saved.ok !== null && saved.ok !== undefined && inp.value !== saved.text) span.innerHTML = `<span class="copy-result no">Đã sửa — bấm Kiểm tra lại</span>`;
+    });
+    inp.addEventListener("change", () => {
+      const id = inp.dataset.copyInput;
+      const saved = (loadProgress().copyDrafts || {})[copyKey(id)];
+      if (saved && inp.value === saved.text) return;
+      saveCopyDraft(id, { text: inp.value, ok: null, mode: null });
+      const span = document.querySelector(`[data-copy-result="${id}"]`); if (span) span.innerHTML = "";
+    });
+  });
+  $$("[data-copy-check]").forEach((b) => { b.onclick = () => {
+    const id = b.dataset.copyCheck;
+    const inp = document.querySelector(`[data-copy-input="${id}"]`);
+    const sen = r.sentences.find((x) => x.id === id);
+    const span = document.querySelector(`[data-copy-result="${id}"]`);
+    if (!inp || !sen || !span) return;
+    const res = checkTranscriptCopy(inp.value, sen);
+    saveCopyDraft(id, { text: inp.value, ok: res.ok, mode: res.mode });
+    span.innerHTML = res.empty ? `<span class="copy-result no">Hãy nghe loa rồi chép lại câu trước khi kiểm tra</span>`
+      : res.ok ? `<span class="copy-result ok">Đúng rồi ✓ (${res.mode === "pinyin" ? "pinyin" : "chữ Hán"})</span>`
+      : `<span class="copy-result no">Chưa khớp — thử lại hoặc xem đáp án</span>`;
+  }; });
+  $$("[data-copy-reveal]").forEach((b) => { b.onclick = () => {
+    const id = b.dataset.copyReveal;
+    const row = document.querySelector(`[data-sentence="${id}"]`); if (!row) return;
+    const on = row.classList.toggle("copy-revealed");
+    b.textContent = on ? "Ẩn đáp án" : "Xem đáp án";
+    saveCopyDraft(id, { revealed: on });
+  }; });
   function bindTrackControls() {
     $$("[data-play]").forEach((b) => b.onclick = () => {
       const track = r.audioTracks.find((t) => t.id === b.dataset.play);

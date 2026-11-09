@@ -565,3 +565,25 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .review-status{font-size:.82rem;min-height:1.5em;margin:10px 0 14px;color:#526e62}
 .audio-review .review-controls{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:7px}.review-controls .btn{padding:10px 8px;min-width:0;font-size:.9rem;white-space:nowrap}
 @media(max-width:420px){.review-transcript{padding:16px}.review-paragraph p{font-size:1.03rem}.review-chinese p{font-size:1.5rem}.audio-review .review-controls{grid-template-columns:1fr 1.4fr 1fr}.review-controls [data-review-action=stop]{grid-column:1/-1;justify-self:center;min-width:90px}}
+
+/* D36: transcript copy practice — every text aid hides, only the per-line
+   speaker and the copy line stay. "Xem đáp án" reveals one sentence. */
+.copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0 10px}
+.copy-line{display:none;margin-top:10px}
+#main .transcript.copy-on .copy-line{display:block}
+#main .transcript.copy-on .sentence .tog-pinyin-sent,
+#main .transcript.copy-on .sentence .zh-sentence,
+#main .transcript.copy-on .sentence .tog-vi-sent,
+#main .transcript.copy-on .sentence .reveal-btn,
+#main .transcript.copy-on .sentence .speaker,
+#main .transcript.copy-on .sentence .inline-grammar,
+#main .transcript.copy-on .sentence [data-phrase-btn]{display:none}
+#main .transcript.copy-on .sentence.copy-revealed .tog-pinyin-sent,
+#main .transcript.copy-on .sentence.copy-revealed .zh-sentence,
+#main .transcript.copy-on .sentence.copy-revealed .tog-vi-sent,
+#main .transcript.copy-on .sentence.copy-revealed .speaker{display:block}
+.copy-input{width:100%;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.copy-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.copy-result{font-size:.9rem;font-weight:600}
+.copy-result.ok{color:var(--accent,#256b46)}
+.copy-result.no{color:#b45309}

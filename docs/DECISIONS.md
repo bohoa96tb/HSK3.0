@@ -350,3 +350,13 @@ Sau khi nghiệm thu Bài 8 trên điện thoại Android thật, Hoa phản h�
   3. **Lời diễn giải mẫu** cho 45 điểm ngữ pháp HSK 1 trong `REVIEW_PATTERN_SPEECH`, viết từ pattern/positionVi/explanationVi đã kiểm chứng của từng điểm.
 - Đếm lượt luôn từ dữ liệu thật: Ôn chi tiết dao động 76–343 lượt (Bài 4 cao nhất vì điểm số từ có 52 câu mẫu luyện đọc số — giữ nguyên theo dữ liệu, không cắt bớt); Ôn nhanh 10–46 lượt.
 - Giới hạn trung thực như cũ: mọi mốc là căn máy (tín hiệu + ASR), trạng thái asr-draft, chưa nghe kiểm chứng bởi người; chờ Hoa nghe thử trên điện thoại.
+
+## D36 — Dòng "Chép lại lời thoại" trong mục Nghe & đọc (2026-11-09, Hoa chỉ đạo)
+
+- Chỉ đạo của Hoa: mỗi câu trong phần "Mở lời thoại để đọc theo" hiện có 3 dòng (chữ Hán, pinyin, nghĩa) — thêm dòng thứ 4 để chép lại câu, bằng chữ Hán (luyện viết) hoặc bằng pinyin (nhớ cách đọc lâu hơn). Khi chép thì tắt cả chữ Hán lẫn pinyin và nghĩa, chỉ để lại loa của câu.
+- Cách làm (thành phần dùng chung của mục Nghe & đọc, áp dụng mọi bài):
+  - Nút "Chép lại lời thoại" ngay đầu phần lời thoại (cạnh summary), trạng thái lưu trên thiết bị (`settings.transcriptCopyMode`), bật/tắt tại chỗ như thanh hỗ trợ: không render lại, không nhảy trang, không ngắt audio đang phát.
+  - Bật: mọi dòng chữ của câu (người nói, pinyin, chữ Hán, nghĩa, nút Xem nghĩa/Tra cụm, liên kết ngữ pháp) ẩn; chỉ còn loa từng câu và dòng chép: ô nhập + "Kiểm tra" + "Xem đáp án" (hiện lại đúng câu đó khi cần so sánh).
+  - Kiểm tra bằng `checkTranscriptCopy` (src/lib.js): chấp nhận chép chữ Hán (bỏ qua dấu câu/khoảng trắng) hoặc chép pinyin (có dấu thanh, hoặc không dấu, bỏ qua khoảng trắng). Kết quả chỉ là phản hồi luyện tập tại chỗ — KHÔNG ghi attempt, KHÔNG tính điểm, không đổi tiến độ bài.
+  - Nháp chép lưu theo từng câu (`copyDrafts`, sống sót qua refresh và di trú tiến độ cũ); sửa sau khi kiểm tra thì kết quả cũ bị xoá để không hiện verdict sai.
+- Ranh giới: chế độ này chỉ tác động trong phần lời thoại của mục Nghe & đọc; câu hỏi dưới hội thoại (D28, có chấm điểm) và các mục khác không đổi; thanh hỗ trợ Pinyin/Nghĩa giữ nguyên hành vi ngoài phần lời thoại.

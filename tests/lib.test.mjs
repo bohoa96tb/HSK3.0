@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   normalizeTextAnswer, stripTones, matchesQuery, gradeChoice,
   nextReviewState, isDue, validateProgress, migrateProgress, summarizeAttempts,
+  checkTranscriptCopy, emptyProgress,
 } from "../src/lib.js";
 
 test("normalizeTextAnswer trims, collapses spaces and drops a trailing full stop", () => {
@@ -58,4 +59,34 @@ test("attempt summary separates first attempt, retries and hint use", () => {
   ];
   const sum = summarizeAttempts(attempts, ["e1", "e2"]);
   assert.deepEqual(sum, { answered: 2, firstTotal: 2, firstCorrect: 1, retried: 1, hintUsedCount: 1, supportUsedCount: 1 });
+});
+
+test("D36 checkTranscriptCopy accepts hanzi or pinyin, ignores punctuation/spacing", () => {
+  const sen = { zh: "你今天去医院吗？", pinyin: "Nǐ jīntiān qù yīyuàn ma?" };
+  assert.deepEqual(checkTranscriptCopy("你今天去医院吗", sen), { ok: true, mode: "hanzi" });
+  assert.deepEqual(checkTranscriptCopy("你今天去医院吗？", sen), { ok: true, mode: "hanzi" });
+  assert.deepEqual(checkTranscriptCopy("Nǐ jīntiān qù yīyuàn ma?", sen), { ok: true, mode: "pinyin" });
+  assert.deepEqual(checkTranscriptCopy("ni jintian qu yiyuan ma", sen), { ok: true, mode: "pinyin" });
+  assert.deepEqual(checkTranscriptCopy("nijintianquyiyuanma", sen), { ok: true, mode: "pinyin" });
+  assert.equal(checkTranscriptCopy("你今天去学校吗", sen).ok, false);
+  assert.equal(checkTranscriptCopy("ni jintian qu xuexiao ma", sen).ok, false);
+  assert.equal(checkTranscriptCopy("你好 ni hao", sen).ok, false);
+  assert.deepEqual(checkTranscriptCopy("  ", sen), { ok: false, mode: null, empty: true });
+  const latin = { zh: "AI小语，你好！", pinyin: "AI Xiǎoyǔ, nǐ hǎo!" };
+  assert.deepEqual(checkTranscriptCopy("AI小语，你好！", latin), { ok: true, mode: "hanzi" });
+  const u = { zh: "绿", pinyin: "lǜ" };
+  assert.deepEqual(checkTranscriptCopy("lü", u), { ok: true, mode: "pinyin" });
+  assert.deepEqual(checkTranscriptCopy("lu", u), { ok: true, mode: "pinyin" });
+});
+
+test("D36 progress gains copy defaults without losing existing data", () => {
+  const fresh = emptyProgress();
+  assert.equal(fresh.settings.transcriptCopyMode, false);
+  assert.deepEqual(fresh.copyDrafts, {});
+  const old = { schemaVersion: 1, settings: { showPinyinPrep: false }, attempts: [{ id: "a" }] };
+  const migrated = migrateProgress(old);
+  assert.equal(migrated.settings.transcriptCopyMode, false);
+  assert.equal(migrated.settings.showPinyinPrep, false);
+  assert.deepEqual(migrated.copyDrafts, {});
+  assert.equal(migrated.attempts.length, 1);
 });

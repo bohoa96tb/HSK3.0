@@ -360,3 +360,13 @@ Sau khi nghiệm thu Bài 8 trên điện thoại Android thật, Hoa phản h�
   - Kiểm tra bằng `checkTranscriptCopy` (src/lib.js): chấp nhận chép chữ Hán (bỏ qua dấu câu/khoảng trắng) hoặc chép pinyin (có dấu thanh, hoặc không dấu, bỏ qua khoảng trắng). Kết quả chỉ là phản hồi luyện tập tại chỗ — KHÔNG ghi attempt, KHÔNG tính điểm, không đổi tiến độ bài.
   - Nháp chép lưu theo từng câu (`copyDrafts`, sống sót qua refresh và di trú tiến độ cũ); sửa sau khi kiểm tra thì kết quả cũ bị xoá để không hiện verdict sai.
 - Ranh giới: chế độ này chỉ tác động trong phần lời thoại của mục Nghe & đọc; câu hỏi dưới hội thoại (D28, có chấm điểm) và các mục khác không đổi; thanh hỗ trợ Pinyin/Nghĩa giữ nguyên hành vi ngoài phần lời thoại.
+
+## Bổ sung D36 — Ô chép hiện luôn, không chờ bật chế độ (2026-11-09, Hoa phản hồi)
+
+- Hoa phản hồi trên điện thoại: "Dòng chép lời thoại chưa thấy hiện. Ấn vào xem đáp án mới hiện. Phải có ô viết sau đó mới xem đáp án chứ." Đúng ý: ô chép là dòng thứ 4 cố định của câu — phải hiện sẵn dưới mỗi câu trong phần lời thoại; nút bật/tắt chỉ lo việc ẩn chữ khi chép. Đã sửa: `.copy-line` hiện luôn trong transcript; nút "Xem đáp án" chỉ hiện trong chế độ chép (ngoài chế độ, đáp án vốn đã hiện). Gợi ý cạnh nút bật/tắt sửa lại cho khớp.
+
+## D37 — Mic thu âm theo câu trong phần lời thoại (2026-11-09, Hoa chỉ đạo)
+
+- Chỉ đạo của Hoa: thêm mic thu âm để nghe lại phát âm của người học; Hoa chọn phương án CHỈ NGHE LẠI TRONG BUỔI HỌC (không lưu lâu dài).
+- Cách làm: mỗi câu trong phần lời thoại có hàng thu âm (cạnh ô chép): "🎤 Thu âm" → trình duyệt hỏi quyền mic → đọc câu → "⏹ Dừng thu" (tự dừng ở 30 giây) → "▶ Nghe lại" nghe giọng mình, đối chiếu với loa audio sách của chính câu đó; "Xoá" bỏ bản thu. Bắt đầu thu thì dừng audio sách và bản nghe ôn để không lẫn tiếng.
+- Ranh giới: bản thu là blob trong bộ nhớ (Map theo bài:câu), KHÔNG tải lên đâu, KHÔNG ghi vào tiến độ/điểm, mất khi đóng trang — đúng phạm vi "trong buổi học" Hoa chọn. Trình duyệt không hỗ trợ thu âm thì không hiện hàng mic. Lỗi quyền mic hiện lời nhắc tại chỗ, không văng trang.

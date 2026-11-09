@@ -569,8 +569,12 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 /* D36: transcript copy practice — every text aid hides, only the per-line
    speaker and the copy line stay. "Xem đáp án" reveals one sentence. */
 .copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0 10px}
-.copy-line{display:none;margin-top:10px}
-#main .transcript.copy-on .copy-line{display:block}
+.transcript .copy-line{display:block;margin-top:10px}
+#main .transcript:not(.copy-on) [data-copy-reveal]{display:none}
+.rec-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.rec-btn[aria-pressed="true"]{background:#c0392b;color:#fff;border-color:transparent}
+.rec-status{font-size:.85rem;color:var(--muted)}
+.rec-status.recording{color:#c0392b;font-weight:600}
 #main .transcript.copy-on .sentence .tog-pinyin-sent,
 #main .transcript.copy-on .sentence .zh-sentence,
 #main .transcript.copy-on .sentence .tog-vi-sent,

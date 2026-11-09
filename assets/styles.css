@@ -584,6 +584,10 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 #main .transcript.copy-on .sentence.copy-revealed .zh-sentence,
 #main .transcript.copy-on .sentence.copy-revealed .tog-vi-sent,
 #main .transcript.copy-on .sentence.copy-revealed .speaker{display:block}
+/* In copy mode the speaker cell is hidden; on the two-column layout the
+   body would auto-place into the narrow 90px speaker column and crush
+   the control row — pin it to the text column instead. */
+@media(min-width:768px){#main .transcript.copy-on .sentence>div{grid-column:2}}
 .copy-input{display:block;width:100%;box-sizing:border-box;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
 .copy-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
 .copy-result{font-size:.9rem;font-weight:600}

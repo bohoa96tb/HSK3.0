@@ -64,9 +64,13 @@ test('default reader: no copy mode, no visible copy controls state, mic present 
   assert.ok(!details.classList.contains('copy-on'), 'copy mode off by default');
   const toggle = $('[data-copy-toggle]');
   assert.equal(toggle.getAttribute('aria-pressed'), 'false');
-  for (const zone of $$('[data-rec-zone]')) {
-    assert.equal(zone.closest('.copy-line'), null, 'recorder zone is NOT inside the copy block');
-    assert.ok(zone.querySelector('[data-rec]'), 'mic button present in normal reading mode');
+  for (const btn of $$('[data-rec]')) {
+    assert.equal(btn.closest('.copy-line'), null, 'mic is NOT inside the copy block');
+    const row = btn.closest('.line-controls');
+    assert.ok(row, 'mic sits in the line control row');
+    assert.ok(row.querySelector('[data-speak], [data-tts]'), 'speaker and mic share the same row');
+    const zh = btn.closest('.sentence').querySelector('.zh-sentence');
+    assert.ok(zh.compareDocumentPosition(row) & 4 /* DOCUMENT_POSITION_FOLLOWING */, 'control row comes right after the Hanzi line');
   }
 });
 
@@ -96,13 +100,13 @@ test('copy mode does not leak into another lesson or into saved settings', async
 });
 
 test('mic: pending state is immediate, recording state visible, stop yields a playable take', async () => {
-  const zone = $('[data-rec-zone]');
-  const id = zone.dataset.recZone;
+  const micBtn = $$('[data-rec]')[0];
+  const id = micBtn.dataset.rec;
   const status = () => document.querySelector(`[data-rec-status="${id}"]`);
-  zone.querySelector('[data-rec]').click();
+  micBtn.click();
   assert.equal(status().textContent, 'Đang xin quyền micro…', 'pending state shows synchronously on tap');
   await tick(); await tick();
-  const btn = zone.querySelector('[data-rec]');
+  const btn = micBtn;
   assert.match(btn.textContent, /Dừng thu/, 'button switches to stop');
   assert.match(status().textContent, /Đang thu âm/, 'recording state with timer');
   const before = recorders.length;
@@ -119,11 +123,10 @@ test('mic: pending state is immediate, recording state visible, stop yields a pl
 });
 
 test('mic: re-record replaces the take; denied permission shows a useful error', async () => {
-  const zone = $$('[data-rec-zone]')[1];
-  const id = zone.dataset.recZone;
-  const status = () => document.querySelector(`[data-rec-status="${id}"]`);
-  zone.querySelector('[data-rec]').click(); await tick(); await tick();
-  zone.querySelector('[data-rec]').click(); await tick(); // stop take 1
+  const micBtn2 = $$('[data-rec]')[1];
+  const id = micBtn2.dataset.rec;
+  micBtn2.click(); await tick(); await tick();
+  micBtn2.click(); await tick(); // stop take 1
   const firstCount = recorders.length;
   document.querySelector(`[data-rec-again="${id}"]`).click(); await tick(); await tick();
   assert.equal(recorders.length, firstCount + 1, 're-record starts a new recorder');
@@ -132,16 +135,16 @@ test('mic: re-record replaces the take; denied permission shows a useful error',
   document.querySelector(`[data-rec-play="${id}"]`).click(); await tick();
   assert.equal(audios.length, 1, 'playback after re-record plays one take');
   gumError = Object.assign(new Error('denied'), { name: 'NotAllowedError' });
-  const zone3 = $$('[data-rec-zone]')[0];
-  const id3 = zone3.dataset.recZone;
-  zone3.querySelector('[data-rec]').click(); await tick(); await tick();
+  const micBtn3 = $$('[data-rec]')[0];
+  const id3 = micBtn3.dataset.rec;
+  micBtn3.click(); await tick(); await tick();
   assert.match(document.querySelector(`[data-rec-status="${id3}"]`).textContent, /bị từ chối quyền/, 'denial surfaces a specific, useful message');
   gumError = null;
 });
 
 test('mic: navigating away mid-recording stops the recorder and releases the mic', async () => {
-  const zone = $$('[data-rec-zone]')[3] || $$('[data-rec-zone]')[0];
-  zone.querySelector('[data-rec]').click(); await tick(); await tick();
+  const micBtn4 = $$('[data-rec]')[3] || $$('[data-rec]')[0];
+  micBtn4.click(); await tick(); await tick();
   const rec = recorders.at(-1);
   const track = tracks.at(-1);
   await route('lesson/hsk2-l01/summary');

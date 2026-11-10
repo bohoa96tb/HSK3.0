@@ -61,7 +61,7 @@ test("wb renderer is wired into the exercises section with both modes", () => {
   assert.match(app, /data-wb-submit/, "test mode has a submit action");
   assert.match(app, /Điểm của phần này tính riêng trong phiên/, "session-only scoring is stated in the UI");
   const css = readFileSync("assets/styles.css", "utf8");
-  assert.match(css, /\.wb-pic-grid\{display:grid;grid-template-columns:repeat\(2,1fr\);gap:10px\}/, "picture grids are always 2 per row (Hoa 2026-11-10: 3 pictures wrap to 2 rows, 4 pictures are 2 rows of 2)");
+  assert.match(css, /\.wb-pic-grid\{display:grid;grid-template-columns:repeat\(3,1fr\);gap:10px\}/, "a 3-picture set is one row of 3 (Hoa 2026-11-10, corrected)");
+  assert.match(css, /\.wb-shared-set\{grid-template-columns:repeat\(2,1fr\)\}/, "the shared 4-picture set is 2 rows of 2");
   assert.ok(!/\.wb-pic-grid\{grid-template-columns:1fr/.test(css), "the old full-width stacked layout is gone");
-  assert.ok(!/wb-shared-set\{grid-template-columns:repeat\(4,1fr\)/.test(css), "the 4-picture set no longer spreads to one row on desktop");
 });

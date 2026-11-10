@@ -36,7 +36,11 @@ await tick(); await tick();
 test('wb zone renders in the exercises section with book structure', () => {
   const card = document.getElementById('wb-listening-card');
   assert.ok(card, 'wb card present');
-  assert.match(document.body.textContent, /D\. Nghe theo Workbook/);
+  // Zone letter is derived (QA HIGH-1, D40): neither hsk2-l01 nor hsk2-l02 has a
+  // suppExerciseSet, so the workbook zone is C — and the count line must agree.
+  assert.match(document.body.textContent, /Luyện tập gồm 3 phần/);
+  assert.match(document.body.textContent, /C\. Nghe theo Workbook/);
+  assert.ok(!/D\. Nghe theo Workbook/.test(document.body.textContent), "no phantom zone D when there is no mock set");
   assert.equal($$('.wb-item:not(.wb-example)', card).length, 10, '10 questions');
   assert.equal($$('.wb-example', card).length, 3, '3 worked examples, one per part');
   assert.equal($$('.wb-shared-set .wb-pic', card).length, 4, 'part II shared picture set of 4');
@@ -93,4 +97,50 @@ test('test mode: nothing revealed until submit; score counts only correct picks'
   assert.ok(item('wb2-l1-p1-q2').textContent.includes('他们是来帮忙的'), 'transcript revealed after submit');
   $$('[data-wb-reset]')[0].click();
   assert.ok(!item('wb2-l1-p1-q2').textContent.includes('他们是来帮忙的'), 'reset hides transcripts again');
+});
+
+// ---- D40: the same zone on Lesson 2 (no suppExerciseSet on this lesson, so
+// assertions stay generic about the zone heading letter). ----
+await route('lesson/hsk2-l02/exercises');
+await tick(); await tick();
+
+test('wb zone renders on lesson 2 with book structure (D40)', () => {
+  const card = document.getElementById('wb-listening-card');
+  assert.ok(card, 'wb card present on hsk2-l02');
+  assert.match(card.textContent, /Nghe theo Workbook/);
+  assert.match(document.body.textContent, /Luyện tập gồm 3 phần/);
+  assert.match(document.body.textContent, /C\. Nghe theo Workbook/);
+  assert.ok(!/D\. Nghe theo Workbook/.test(document.body.textContent), "lesson 2 also derives zone C (no mock set)");
+  assert.equal($$('.wb-item:not(.wb-example)', card).length, 10, '10 questions');
+  assert.equal($$('.wb-example', card).length, 3, '3 worked examples, one per part');
+  assert.equal($$('.wb-shared-set .wb-pic', card).length, 4, 'part II shared picture set of 4');
+  // shared book example, same text as lesson 1
+  assert.match(item('wb2-l2-p1-ex').textContent, /我每天坐公交车去上班/);
+  assert.match(item('wb2-l2-p1-ex').textContent, /Đáp án mẫu/);
+});
+
+test('lesson 2 practice mode: transcript hidden before checking; wrong then right with redo', () => {
+  const q1 = item('wb2-l2-p1-q1');
+  assert.ok(!q1.textContent.includes('教室里有十多名学生'), 'transcript must not leak before checking');
+  pick('wb2-l2-p1-q1', 'C');
+  $$('[data-wb-check="wb2-l2-p1-q1"]')[0].click();
+  let q1b = item('wb2-l2-p1-q1');
+  assert.match(q1b.textContent, /Chưa đúng — đáp án là A/);
+  assert.ok(q1b.textContent.includes('教室里有十多名学生'), 'transcript revealed after checking');
+  $$('[data-wb-redo="wb2-l2-p1-q1"]')[0].click();
+  pick('wb2-l2-p1-q1', 'A');
+  $$('[data-wb-check="wb2-l2-p1-q1"]')[0].click();
+  q1b = item('wb2-l2-p1-q1');
+  assert.match(q1b.textContent, /Đúng\./);
+});
+
+test('lesson 2 part III: dialogue and option pinyin hidden before checking (D23)', () => {
+  const q9 = item('wb2-l2-p3-q9');
+  assert.ok(!q9.textContent.includes('北京大学'), 'dialogue hidden before checking');
+  assert.ok(!q9.textContent.includes('dǎchē'), 'option pinyin hidden before checking (D23)');
+  pick('wb2-l2-p3-q9', 'A');
+  $$('[data-wb-check="wb2-l2-p3-q9"]')[0].click();
+  const q9b = item('wb2-l2-p3-q9');
+  assert.match(q9b.textContent, /Đúng\./);
+  assert.ok(q9b.textContent.includes('dǎchē'), 'pinyin appears after checking');
 });

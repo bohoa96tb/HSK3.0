@@ -3,53 +3,74 @@ import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
 
 const content = JSON.parse(readFileSync("data/content.json", "utf8"));
-const les = content.additionalLessons.find((l) => l.lessonId === "hsk2-l01");
-const wb = les.wbListening;
 
-test("wb listening data: 3 parts, 10 items, book structure", () => {
-  assert.ok(wb, "wbListening exists on hsk2-l01");
-  assert.equal(wb.parts.length, 3);
-  assert.deepEqual(wb.parts.map((p) => p.items.length), [3, 3, 4]);
-  const ids = new Set();
-  for (const p of wb.parts) {
-    assert.ok(p.example && p.example.answer, `${p.id} has a worked example with an answer`);
-    for (const it of p.items) {
-      assert.ok(!ids.has(it.id), `unique id ${it.id}`); ids.add(it.id);
-      assert.ok(it.answer, `${it.id} has an answer`);
-      assert.ok(it.explainVi, `${it.id} has a Vietnamese explanation`);
-      assert.ok(it.lines.length >= 1, `${it.id} has a transcript`);
-      for (const l of it.lines) { assert.ok(l.zh && l.pinyin, `${it.id} line has zh + pinyin`); }
-    }
-  }
-  assert.equal(ids.size, 10);
-});
+// D39 (Lesson 1) + D40 (Lesson 2): every lesson with a wbListening zone must
+// satisfy the same book-structure, answer, image and segment invariants.
+const WB_LESSONS = [
+  { lessonId: "hsk2-l01", nn: "01" },
+  { lessonId: "hsk2-l02", nn: "02" },
+];
 
-test("wb listening: answers are inside options; picture files exist", () => {
-  for (const p of wb.parts) {
-    const pool = p.kind === "picture-match" ? p.pictureSet : null;
-    for (const it of [p.example, ...p.items]) {
-      const opts = pool || it.options;
-      assert.ok(opts.some((o) => o.id === it.answer), `${it.id}: answer is one of the options`);
-      for (const o of opts) if (o.image) {
-        assert.ok(existsSync(o.image), `image exists: ${o.image}`);
-        assert.ok(o.imageAltVi && o.imageAltVi.length > 10, `${o.image}: alt text describes the scene`);
+for (const { lessonId, nn } of WB_LESSONS) {
+  const les = content.additionalLessons.find((l) => l.lessonId === lessonId);
+  const wb = les.wbListening;
+
+  test(`wb listening data (${lessonId}): 3 parts, 10 items, book structure`, () => {
+    assert.ok(wb, `wbListening exists on ${lessonId}`);
+    assert.equal(wb.answerStatus, "verified-editorial");
+    assert.equal(wb.parts.length, 3);
+    assert.deepEqual(wb.parts.map((p) => p.items.length), [3, 3, 4]);
+    const ids = new Set();
+    for (const p of wb.parts) {
+      assert.ok(p.example && p.example.answer, `${p.id} has a worked example with an answer`);
+      for (const it of p.items) {
+        assert.ok(!ids.has(it.id), `unique id ${it.id}`); ids.add(it.id);
+        assert.ok(it.answer, `${it.id} has an answer`);
+        assert.ok(it.explainVi, `${it.id} has a Vietnamese explanation`);
+        assert.ok(it.lines.length >= 1, `${it.id} has a transcript`);
+        for (const l of it.lines) { assert.ok(l.zh && l.pinyin, `${it.id} line has zh + pinyin`); }
       }
     }
-  }
-});
+    assert.equal(ids.size, 10);
+  });
 
-test("wb listening: audio segments are ordered, inside the track, non-overlapping per part flow", () => {
-  const track = les.reader.audioTracks.find((t) => t.id === wb.trackId);
-  assert.ok(track, "workbook track registered");
-  assert.match(track.url, /cdn\.baulchino\.com\/new-hsk-books-audios\/hsk-2-workbook\/lesson-01\/01-1\.mp3/);
-  let lastEnd = 0;
-  for (const p of wb.parts) for (const it of [p.example, ...p.items]) {
-    const a = it.audio;
-    assert.equal(a.trackId, wb.trackId);
-    assert.ok(a.start >= lastEnd - 0.01, `${it.id}: starts after the previous unit (${a.start} >= ${lastEnd})`);
-    assert.ok(a.end > a.start && a.end <= track.durationSec, `${it.id}: end inside track`);
-    assert.equal(a.status, "asr-draft", `${it.id}: segment stays asr-draft until human listening`);
-    lastEnd = a.end;
+  test(`wb listening (${lessonId}): answers are inside options; picture files exist`, () => {
+    for (const p of wb.parts) {
+      const pool = p.kind === "picture-match" ? p.pictureSet : null;
+      for (const it of [p.example, ...p.items]) {
+        const opts = pool || it.options;
+        assert.ok(opts.some((o) => o.id === it.answer), `${it.id}: answer is one of the options`);
+        for (const o of opts) if (o.image) {
+          assert.ok(existsSync(o.image), `image exists: ${o.image}`);
+          assert.ok(o.imageAltVi && o.imageAltVi.length > 10, `${o.image}: alt text describes the scene`);
+        }
+      }
+    }
+  });
+
+  test(`wb listening (${lessonId}): audio segments are ordered, inside the track, non-overlapping per part flow`, () => {
+    const track = les.reader.audioTracks.find((t) => t.id === wb.trackId);
+    assert.ok(track, "workbook track registered");
+    assert.equal(track.url, `https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-${nn}/${nn}-1.mp3`);
+    let lastEnd = 0;
+    for (const p of wb.parts) for (const it of [p.example, ...p.items]) {
+      const a = it.audio;
+      assert.equal(a.trackId, wb.trackId);
+      assert.ok(a.start >= lastEnd - 0.01, `${it.id}: starts after the previous unit (${a.start} >= ${lastEnd})`);
+      assert.ok(a.end > a.start && a.end <= track.durationSec, `${it.id}: end inside track`);
+      assert.equal(a.status, "asr-draft", `${it.id}: segment stays asr-draft until human listening`);
+      lastEnd = a.end;
+    }
+  });
+}
+
+test("wb examples are the book's shared examples in every lesson (same text, L1 images reused)", () => {
+  const [a, b] = WB_LESSONS.map(({ lessonId }) => content.additionalLessons.find((l) => l.lessonId === lessonId).wbListening);
+  for (let i = 0; i < 3; i++) {
+    const ea = a.parts[i].example, eb = b.parts[i].example;
+    assert.deepEqual(eb.lines, ea.lines, `part ${i + 1} example lines identical`);
+    assert.equal(eb.answer, ea.answer, `part ${i + 1} example answer identical`);
+    if (ea.options) assert.deepEqual(eb.options, ea.options, `part ${i + 1} example options identical (incl. shared L1 image paths)`);
   }
 });
 

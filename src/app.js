@@ -1144,13 +1144,14 @@ function sectionExercisesHtml(content) {
     if (!foundInSet) { const g = passageOfCheckItem(content, requested); if (g) { go(`#/lesson/${content.lessonId}/reader?passage=${g.id}`); return ""; } }
   }
   const scrollBtn = (target, label) => `<button class="btn" type="button" data-scroll-to="${target}">${label}</button>`;
+  const wbZoneLetter = content.suppExerciseSet ? "D" : "C"; // zones run A main, B extra, C mock (when present); the workbook zone takes the next letter (QA HIGH-1, D40)
   return `<section class="card exercise-zones"><h2>Luyện tập gồm ${2 + (content.suppExerciseSet ? 1 : 0) + (content.wbListening ? 1 : 0)} phần</h2>
   <p><strong>A. Luyện sau bài</strong> — ${content.exerciseSet.items.length} câu chính của bài. ${esc(content.exerciseSet.noteVi || "")}</p>
   ${dialogueCheckItems(content).length ? `<p><strong>Câu hỏi của hội thoại</strong> — ${dialogueCheckItems(content).length} câu nằm ngay dưới từng hội thoại ở mục Nghe & đọc, làm tại đó; điểm tính chung vào điểm bài tập của bài.</p>` : ""}
   <p><strong>B. Luyện thêm</strong> — các bài tự luyện theo sách ở phần dưới: nghe – viết, luyện phát âm và tự nói. Phần này tự đối chiếu, không bắt buộc.</p>
   ${content.suppExerciseSet ? `<p><strong>C. Đề mô phỏng</strong> — ${content.suppExerciseSet.items.length} câu, điểm ghi riêng, không gộp vào điểm bài chính và không tự bắt đầu.</p>` : ""}
-  ${content.wbListening ? `<p><strong>D. Nghe theo Workbook</strong> — toàn bộ phần nghe của sách bài tập (10 câu, 3 phần như sách in), tái dựng với hình vẽ lại; hai chế độ luyện tập và kiểm tra, điểm tính riêng trong phiên.</p>` : ""}
-  <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}${content.wbListening ? scrollBtn("wb-listening-card", "D. Nghe Workbook") : ""}</div></section>
+  ${content.wbListening ? `<p><strong>${wbZoneLetter}. Nghe theo Workbook</strong> — toàn bộ phần nghe của sách bài tập (10 câu, 3 phần như sách in), tái dựng với hình vẽ lại; hai chế độ luyện tập và kiểm tra, điểm tính riêng trong phiên.</p>` : ""}
+  <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}${content.wbListening ? scrollBtn("wb-listening-card", `${wbZoneLetter}. Nghe Workbook`) : ""}</div></section>
   ${exerciseCardHtml(content, content.exerciseSet, "")}
   ${content.suppExerciseSet ? exerciseCardHtml(content, content.suppExerciseSet, "supp-") : ""}
   <section class="card dictation-block" id="extra-practice"><h2>B. Luyện thêm theo sách</h2>${dictationHtml(content)}</section>
@@ -1260,12 +1261,13 @@ function wbExampleHtml(part, ex) {
 }
 function wbListeningHtml(content) {
   const wb = content.wbListening;
+  const wbZoneLetter = content.suppExerciseSet ? "D" : "C";
   const st = wbSession(content);
   const total = wb.parts.reduce((n, p) => n + p.items.length, 0);
   const answered = wb.parts.reduce((n, p) => n + p.items.filter((i) => st.sel[i.id]).length, 0);
   const score = wb.parts.reduce((n, p) => n + p.items.filter((i) => st.sel[i.id] === i.answer).length, 0);
   return `<section class="card wb-card" id="wb-listening-card">
-  <div class="wb-book-head"><span class="wb-book-tab">模拟测练 · Simulated Practice</span><h2>D. Nghe theo Workbook — <span lang="zh-CN">一、听力</span> Listening</h2></div>
+  <div class="wb-book-head"><span class="wb-book-tab">模拟测练 · Simulated Practice</span><h2>${wbZoneLetter}. Nghe theo Workbook — <span lang="zh-CN">一、听力</span> Listening</h2></div>
   <p>${esc(wb.introVi)}</p>
   <p class="small muted">${esc(wb.bookPagesVi)}</p>
   <div class="wb-mode" role="group" aria-label="Chế độ làm bài">

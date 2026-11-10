@@ -92,11 +92,62 @@ Ghi chú mốc đoạn (bổ sung sau QA vòng 1): ASR có VAD đã bỏ sót l�
 
 Tổng hình cần vẽ cho Bài 1: **16 hình** (3 ví dụ Part I + 9 Part I + 4 Part II). Lời thoại đầy đủ kèm Pinyin của 10 câu + 3 ví dụ nằm trong dữ liệu `wbListening` của bài (data/content.json), nguồn ghi `src-hsk2-workbook-pdf` + track Baulchino.
 
+## 4c. Kiểm kê chi tiết Bài 2 — tr. in 013–015 (PDF 20–22), track `02-1.mp3`
+
+Track dài 560,8 giây (đo bằng ffprobe; whisper báo 562,1), gồm đúng phần nghe của Bài 2, mỗi câu đọc 2 lần. Mốc là khoảng phát của câu (cả hai lượt đọc), trạng thái asr-draft. Bài học QA của Bài 1 tái xuất hiện: lượt đọc hai của câu 1 bị ASR có VAD bỏ sót — đã khôi phục bằng phân tích envelope tín hiệu + ASR lại không VAD trên cửa sổ hẹp (lượt hai ở 85,7–89,2, nội dung khớp lượt một) trước khi chốt mốc.
+
+### Part I — nghe câu, chọn hình (ví dụ dùng chung cả 15 bài: 我每天坐公交车去上班。→ A; mốc trên track Bài 2: 57,0–66,5)
+
+| Câu | Câu nghe (từ audio) | A | B | C | Đáp án | Mốc (giây) |
+|---|---|---|---|---|---|---|
+| 1 | 教室里有十多名学生。 | Lớp học đang có giờ học, hơn mười học sinh | Phòng học trống | Học sinh chạy chơi trước cổng trường | A | 80,3–89,7 |
+| 2 | 我们还是开车去吧。 | Cô gái vẫy taxi vàng | Xe buýt hai tầng đỏ | Phụ nữ tự lái ô tô | C | 98,0–105,9 |
+| 3 | 王老师的儿子六岁多了。 | Ông lão chạy bộ trong công viên | Người đàn ông thuyết trình | Bé trai vẽ tranh ở giá vẽ | C | 113,9–123,4 |
+
+### Part II — nghe hội thoại, chọn hình trong bộ chung (ví dụ dùng chung: 你喜欢什么运动？/我最喜欢踢足球。→ D; mốc trên track Bài 2: 143,7–157,3)
+
+Bộ hình chung của Bài 2: A — hộp bỏng ngô lớn và tay cầm điện thoại thông minh, phía sau là ghế rạp chiếu phim; B — người đàn ông mặc vest bên chiếc taxi vàng đang mở cửa ở bến; C — người đàn ông đeo kính ngồi ở bàn giáo viên trong lớp học đọc giấy tờ, laptop trên bàn; D — cô gái áo đỏ tâng bóng đá bằng đầu gối.
+
+| Câu | Hội thoại (nguyên văn từ audio) | Đáp án | Mốc (giây) |
+|---|---|---|---|
+| 4 | 我们还是打车去吧？/ 好，打车能早一点到。 | B | 175,7–192,1 |
+| 5 | 电影票贵不贵？/ 不太贵，我是在网上买的。 | A | 204,8–219,7 |
+| 6 | 老师，您在哪儿？我有事找您。/ 我在教室，你过来吧。 | C | 233,4–253,3 |
+
+### Part III — nghe hội thoại, chọn đáp án chữ (ví dụ dùng chung: hội thoại xin viết 姓名 → A; mốc trên track Bài 2: 277,5–302,2)
+
+| Câu | Câu hỏi nghe được | A | B | C | Đáp án | Mốc (giây) |
+|---|---|---|---|---|---|---|
+| 7 | 他们现在在哪儿？(chờ hơn 20 phút, xe buýt chưa tới, định chuyển sang taxi) | 公交站 | 出租车里 | 公交车上 | A | 323,3–353,1 |
+| 8 | 明天他们吃什么？(hôm nay ăn cơm với món đã mua; ngày mai mới ăn sủi cảo) | 菜 | 米饭 | 饺子 | C | 368,6–401,7 |
+| 9 | 男的让女的下次怎么去北京大学？(lần này đi xe buýt; Bắc Đại xa, lần sau nên đi taxi) | 打车 | 坐火车 | 坐公交车 | A | 417,7–475,4 |
+| 10 | 谁去接孩子了？(mẹ có việc bận, bố đã đi đón) | 爸爸 | 妈妈 | 老师 | A | 491,9–546,7 |
+
+### Manifest hình Bài 2 (theo chuẩn D19 — 13 hình mới; 3 hình ví dụ Part I và hình ví dụ Part II dùng lại của Bài 1)
+
+Quy trình như mục 4b: mô tả cảnh từ ảnh gốc trong sách → sinh tranh phẳng → xem lại từng hình đối chiếu đối tượng/số lượng/hành động. Cả 13 hình đạt ngay lần sinh đầu, không hình nào phải sinh lại. Kích thước phát hành: WebP 880px, chất lượng 78 (21–52 KB/hình).
+
+| File | Trang sách | Ảnh gốc mô tả | Đáp án liên quan |
+|---|---|---|---|
+| wb-q1-classroom.webp | tr.013 | Lớp học đang giờ học: giáo viên giảng bài, học sinh ngồi ở bàn | Câu 1 — A (đáp án) |
+| wb-q1-empty.webp | tr.013 | Phòng học trống, dãy bàn ghế ngay ngắn | Câu 1 — B |
+| wb-q1-schoolyard.webp | tr.013 | Nhóm học sinh chạy chơi trước cổng trường | Câu 1 — C |
+| wb-q2-hail.webp | tr.013 | Cô gái giơ tay vẫy chiếc taxi vàng bên đường | Câu 2 — A |
+| wb-q2-bus.webp | tr.013 | Xe buýt hai tầng đỏ, sọc xanh bên hông | Câu 2 — B |
+| wb-q2-driving.webp | tr.013 | Phụ nữ ngồi trong ô tô, hai tay cầm vô lăng | Câu 2 — C (đáp án) |
+| wb-q3-jogging.webp | tr.014 | Ông lão tóc bạc chạy bộ trong công viên lá thu | Câu 3 — A |
+| wb-q3-lecture.webp | tr.014 | Người đàn ông mặc vest thuyết trình trước màn hình, người nghe ngồi dưới | Câu 3 — B |
+| wb-q3-painting.webp | tr.014 | Bé trai đứng trước giá vẽ ngoài trời, cầm bảng màu | Câu 3 — C (đáp án) |
+| wb-p2-cinema.webp | tr.014 | Cận cảnh hộp bỏng ngô và tay cầm điện thoại thông minh | Part II — A (đáp án câu 5) |
+| wb-p2-taxi.webp | tr.014 | Người đàn ông mặc vest đứng cạnh cửa taxi vàng đang mở | Part II — B (đáp án câu 4) |
+| wb-p2-desk.webp | tr.014 | Người đàn ông đeo kính ngồi ở bàn trong lớp đọc giấy tờ, laptop trên bàn | Part II — C (đáp án câu 6) |
+| wb-p2-soccer.webp | tr.014 | Cô gái áo đỏ tâng bóng đá | Part II — D (đáp án ví dụ) |
+
 ## 5. Danh sách trang đã phân tích trực tiếp
 
 - Toàn sách ở mức cấu trúc: bìa, 使用说明 (PDF 5–6), trang đầu/cuối.
 - Bài 1: PDF 8, 10, 11, 12 (tr. in 001, 003, 004, 005) — kiểm kê từng câu ở mục 4.
-- Bài 2: PDF 20 (tr. in 013); Bài 15: PDF 150 (tr. in 143) — xác nhận khuôn Part I và ví dụ dùng chung.
+- Bài 2: PDF 20, 21, 22 (tr. in 013, 014, 015) — kiểm kê từng câu ở mục 4c; Bài 15: PDF 150 (tr. in 143) — xác nhận khuôn Part I và ví dụ dùng chung.
 - Đề mô phỏng cuối sách: PDF 160, 168, 174 (tr. in 153, 161, 167) — xác nhận đề có phần nghe chọn hình riêng và phần viết; kiểm kê chi tiết để sau.
 - Các trang còn lại của từng bài sẽ được đọc trực tiếp khi biên soạn bài đó (mỗi bài một lượt theo quy trình biên soạn → QA độc lập → phát hành), không kiểm kê suy đoán hàng loạt.
 

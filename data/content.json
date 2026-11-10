@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261110-hsk2-wb-listening-l1",
+ "contentVersion": "20261110-hsk2-wb-listening-l2",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -54484,6 +54484,16 @@
        }
       ],
       "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-04 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb2-l02-1",
+      "label": "Workbook Bài 2 · 模拟测练 一、听力 (track duy nhất của bài)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-02/02-1.mp3",
+      "durationSec": 561,
+      "bookRef": "Workbook HSK 2 track 02-1 (Baulchino — HSK 2 WORKBOOK)",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "segmentsNoteVi": "Mốc câu hỏi nằm trong dữ liệu wbListening của bài (căn bằng tín hiệu máy, asr-draft); track không ánh xạ câu đọc trong mục Nghe & đọc."
      }
     ],
     "passages": [
@@ -55890,7 +55900,555 @@
      "examplePinyin": "Jiàoshì li yǒu èrshí duō gè xuéshēng.",
      "exampleVi": "Trong phòng học có hơn hai mươi học sinh."
     }
-   ]
+   ],
+   "wbListening": {
+    "titleZh": "一、听力",
+    "titleEn": "Listening",
+    "titleVi": "Nghe theo Workbook",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 2 — 模拟测练 · 一、听力, trang in 013–015 (PDF tr. 20–22).",
+    "trackId": "trk-wb2-l02-1",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án được đối chiếu từ audio của sách: ghi lại lời đọc bằng máy, rà soát ngữ nghĩa theo đúng các lựa chọn in trong sách. Đây không phải đáp án chính thức của nhà xuất bản.",
+    "segmentNoteVi": "Mốc đoạn trong track được căn bằng tín hiệu máy (asr-draft), chưa có người nghe kiểm chứng.",
+    "introVi": "Toàn bộ phần nghe của Bài 2 trong sách bài tập, tái dựng đúng bố cục sách: 3 phần, 10 câu, mỗi câu nghe hai lần trong track. Hình là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l2-p1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第1—3题：听一句话，选择正确图片。每题听两次。",
+      "instructionVi": "Câu 1–3: nghe một câu, chọn hình đúng. Mỗi câu nghe hai lần.",
+      "kind": "picture",
+      "example": {
+       "id": "wb2-l2-p1-ex",
+       "audio": {
+        "trackId": "trk-wb2-l02-1",
+        "start": 57.0,
+        "end": 66.5,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "我每天坐公交车去上班。",
+         "pinyin": "Wǒ měi tiān zuò gōngjiāochē qù shàngbān."
+        }
+       ],
+       "options": [
+        {
+         "id": "A",
+         "image": "assets/hsk2-lesson-01/wb-ex-bus.webp",
+         "imageAltVi": "Tranh vẽ lại: một chiếc xe buýt thành phố nhìn từ bên hông"
+        },
+        {
+         "id": "B",
+         "image": "assets/hsk2-lesson-01/wb-ex-plane.webp",
+         "imageAltVi": "Tranh vẽ lại: một chiếc máy bay chở khách đang cất cánh"
+        },
+        {
+         "id": "C",
+         "image": "assets/hsk2-lesson-01/wb-ex-bike.webp",
+         "imageAltVi": "Tranh vẽ lại: một chiếc xe đạp nhìn từ bên hông"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-p1-q1",
+        "no": 1,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 80.3,
+         "end": 89.7,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "教室里有十多名学生。",
+          "pinyin": "Jiàoshì lǐ yǒu shí duō míng xuéshēng."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-02/wb-q1-classroom.webp",
+          "imageAltVi": "Tranh vẽ lại: trong lớp học, giáo viên đang giảng bài, hơn mười học sinh ngồi học ở bàn"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-02/wb-q1-empty.webp",
+          "imageAltVi": "Tranh vẽ lại: phòng học trống, dãy bàn ghế xếp ngay ngắn, không có người"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-02/wb-q1-schoolyard.webp",
+          "imageAltVi": "Tranh vẽ lại: nhóm học sinh đeo cặp chạy chơi ngoài sân trước cổng trường"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Câu nói là “教室里有十多名学生” — trong lớp có hơn mười học sinh. Chỉ hình A có học sinh đang học trong lớp; B là lớp trống, C là học sinh chơi ngoài sân trường."
+       },
+       {
+        "id": "wb2-l2-p1-q2",
+        "no": 2,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 98.0,
+         "end": 105.9,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "我们还是开车去吧。",
+          "pinyin": "Wǒmen háishi kāichē qù ba."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-02/wb-q2-hail.webp",
+          "imageAltVi": "Tranh vẽ lại: một cô gái đứng bên đường giơ tay vẫy chiếc taxi màu vàng"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-02/wb-q2-bus.webp",
+          "imageAltVi": "Tranh vẽ lại: xe buýt hai tầng màu đỏ chạy trên phố, phía sau là nhà gạch và cây xanh"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-02/wb-q2-driving.webp",
+          "imageAltVi": "Tranh vẽ lại: một phụ nữ ngồi trong xe ô tô, hai tay cầm vô lăng đang lái xe"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "“开车去” là tự lái xe đi — hình C là người phụ nữ đang lái xe. A là vẫy gọi taxi （打车）, B là xe buýt hai tầng, đều không phải tự lái."
+       },
+       {
+        "id": "wb2-l2-p1-q3",
+        "no": 3,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 113.9,
+         "end": 123.4,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "王老师的儿子六岁多了。",
+          "pinyin": "Wáng lǎoshī de érzi liù suì duō le."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-02/wb-q3-jogging.webp",
+          "imageAltVi": "Tranh vẽ lại: một ông lão tóc bạc đang chạy bộ trong công viên, cây lá mùa thu"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-02/wb-q3-lecture.webp",
+          "imageAltVi": "Tranh vẽ lại: một người đàn ông mặc vest đang thuyết trình trước màn hình lớn, sinh viên ngồi nghe ở dưới"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-02/wb-q3-painting.webp",
+          "imageAltVi": "Tranh vẽ lại: một bé trai đứng trước giá vẽ ngoài trời, tay cầm bảng màu đang vẽ tranh"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Câu nói nhắc “王老师的儿子…六岁多” — con trai thầy Vương hơn sáu tuổi, khớp hình C: bé trai khoảng sáu tuổi. A là ông lão chạy bộ, B là người lớn đang giảng bài."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-p2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第4—6题：听对话，选择最匹配的图片。每题听两次。",
+      "instructionVi": "Câu 4–6: nghe hội thoại, chọn hình khớp nhất trong bộ 4 hình chung. Mỗi hội thoại nghe hai lần.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-02/wb-p2-cinema.webp",
+        "imageAltVi": "Tranh vẽ lại: một hộp bỏng ngô lớn và bàn tay cầm điện thoại thông minh, phía sau là ghế rạp chiếu phim"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-02/wb-p2-taxi.webp",
+        "imageAltVi": "Tranh vẽ lại: một người đàn ông mặc vest đứng cạnh cửa chiếc taxi màu vàng đang mở ở bến xe"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-02/wb-p2-desk.webp",
+        "imageAltVi": "Tranh vẽ lại: một người đàn ông đeo kính ngồi ở bàn giáo viên trong lớp học, đang đọc giấy tờ, bên cạnh có laptop"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-02/wb-p2-soccer.webp",
+        "imageAltVi": "Tranh vẽ lại: một cô gái mặc đồ bóng đá đỏ đang tâng bóng bằng đầu gối trên sân cỏ"
+       }
+      ],
+      "example": {
+       "id": "wb2-l2-p2-ex",
+       "audio": {
+        "trackId": "trk-wb2-l02-1",
+        "start": 143.7,
+        "end": 157.3,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "你喜欢什么运动？",
+         "pinyin": "Nǐ xǐhuan shénme yùndòng?",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "我最喜欢踢足球。",
+         "pinyin": "Wǒ zuì xǐhuan tī zúqiú.",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "answer": "D"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-p2-q4",
+        "no": 4,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 175.7,
+         "end": 192.1,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "我们还是打车去吧？",
+          "pinyin": "Wǒmen háishi dǎchē qù ba?",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "好，打车能早一点到。",
+          "pinyin": "Hǎo, dǎchē néng zǎo yìdiǎn dào.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Hai người thống nhất “打车” — đi taxi cho tới sớm hơn — hình B là người đàn ông bên chiếc taxi vàng đang mở cửa."
+       },
+       {
+        "id": "wb2-l2-p2-q5",
+        "no": 5,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 204.8,
+         "end": 219.7,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "电影票贵不贵？",
+          "pinyin": "Diànyǐng piào guì bu guì?",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "不太贵，我是在网上买的。",
+          "pinyin": "Bú tài guì, wǒ shì zài wǎngshang mǎi de.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Hội thoại nói về vé xem phim mua trên mạng — hình A là bỏng ngô cùng điện thoại thông minh, đúng cảnh rạp phim và mua vé online."
+       },
+       {
+        "id": "wb2-l2-p2-q6",
+        "no": 6,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 233.4,
+         "end": 253.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "老师，您在哪儿？我有事找您。",
+          "pinyin": "Lǎoshī, nín zài nǎr? Wǒ yǒu shì zhǎo nín.",
+          "speakerVi": "Học sinh"
+         },
+         {
+          "zh": "我在教室，你过来吧。",
+          "pinyin": "Wǒ zài jiàoshì, nǐ guòlái ba.",
+          "speakerVi": "Giáo viên"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Thầy giáo trả lời “我在教室” — tôi đang ở trong lớp học — hình C là thầy ngồi ở bàn giáo viên trong lớp học."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-p3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第7—10题：听对话，选择正确答案。每题听两次。",
+      "instructionVi": "Câu 7–10: nghe hội thoại, chọn đáp án đúng. Mỗi hội thoại và câu hỏi nghe hai lần.",
+      "kind": "choice",
+      "example": {
+       "id": "wb2-l2-p3-ex",
+       "audio": {
+        "trackId": "trk-wb2-l02-1",
+        "start": 277.5,
+        "end": 302.2,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "给您笔，请在这儿写一下您的姓名。",
+         "pinyin": "Gěi nín bǐ, qǐng zài zhèr xiě yíxià nín de xìngmíng.",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "好的，是这儿吗？",
+         "pinyin": "Hǎo de, shì zhèr ma?",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "questionZh": "女的要写什么？",
+       "questionPinyin": "Nǚ de yào xiě shénme?",
+       "options": [
+        {
+         "id": "A",
+         "zh": "姓名",
+         "pinyin": "xìngmíng",
+         "vi": "họ tên"
+        },
+        {
+         "id": "B",
+         "zh": "时间",
+         "pinyin": "shíjiān",
+         "vi": "thời gian"
+        },
+        {
+         "id": "C",
+         "zh": "问题",
+         "pinyin": "wèntí",
+         "vi": "câu hỏi; vấn đề"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-p3-q7",
+        "no": 7,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 323.3,
+         "end": 353.1,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "已经二十多分钟了，公交车还没来。",
+          "pinyin": "Yǐjīng èrshí duō fēnzhōng le, gōngjiāochē hái méi lái.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "是啊，我们还是坐出租车吧。",
+          "pinyin": "Shì a, wǒmen háishi zuò chūzūchē ba.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "questionZh": "他们现在在哪儿？",
+        "questionPinyin": "Tāmen xiànzài zài nǎr?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "公交站",
+          "pinyin": "gōngjiāozhàn",
+          "vi": "trạm xe buýt"
+         },
+         {
+          "id": "B",
+          "zh": "出租车里",
+          "pinyin": "chūzūchē li",
+          "vi": "trong xe taxi"
+         },
+         {
+          "id": "C",
+          "zh": "公交车上",
+          "pinyin": "gōngjiāochē shang",
+          "vi": "trên xe buýt"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Họ đã chờ hơn hai mươi phút mà xe buýt vẫn chưa tới — tức là đang đứng ở 公交站 (trạm xe buýt). Đi taxi chỉ mới là ý định tiếp theo, hai người chưa lên taxi hay xe buýt."
+       },
+       {
+        "id": "wb2-l2-p3-q8",
+        "no": 8,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 368.6,
+         "end": 401.7,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "今天别吃饺子了，我买了很多菜，还是吃米饭吧。",
+          "pinyin": "Jīntiān bié chī jiǎozi le, wǒ mǎile hěn duō cài, háishi chī mǐfàn ba.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "好，那明天再吃饺子。",
+          "pinyin": "Hǎo, nà míngtiān zài chī jiǎozi.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "questionZh": "明天他们吃什么？",
+        "questionPinyin": "Míngtiān tāmen chī shénme?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "菜",
+          "pinyin": "cài",
+          "vi": "món ăn; rau"
+         },
+         {
+          "id": "B",
+          "zh": "米饭",
+          "pinyin": "mǐfàn",
+          "vi": "cơm"
+         },
+         {
+          "id": "C",
+          "zh": "饺子",
+          "pinyin": "jiǎozi",
+          "vi": "sủi cảo"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Hôm nay họ ăn cơm với các món đã mua; câu chốt là “那明天再吃饺子” — ngày mai mới ăn sủi cảo."
+       },
+       {
+        "id": "wb2-l2-p3-q9",
+        "no": 9,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 417.7,
+         "end": 475.4,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "我们去北京大学了。北京大学真大呀！",
+          "pinyin": "Wǒmen qù Běijīng Dàxué le. Běijīng Dàxué zhēn dà ya!",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "你们是怎么去的？",
+          "pinyin": "Nǐmen shì zěnme qù de?",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "坐公交车去的。去那儿的公交车很多。",
+          "pinyin": "Zuò gōngjiāochē qù de. Qù nàr de gōngjiāochē hěn duō.",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "北京大学太远了，下次你们还是打车吧。",
+          "pinyin": "Běijīng Dàxué tài yuǎn le, xià cì nǐmen háishi dǎchē ba.",
+          "speakerVi": "Nam"
+         }
+        ],
+        "questionZh": "男的让女的下次怎么去北京大学？",
+        "questionPinyin": "Nán de ràng nǚ de xià cì zěnme qù Běijīng Dàxué?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "打车",
+          "pinyin": "dǎchē",
+          "vi": "đi taxi"
+         },
+         {
+          "id": "B",
+          "zh": "坐火车",
+          "pinyin": "zuò huǒchē",
+          "vi": "đi tàu hỏa"
+         },
+         {
+          "id": "C",
+          "zh": "坐公交车",
+          "pinyin": "zuò gōngjiāochē",
+          "vi": "đi xe buýt"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Lần này họ đi xe buýt; bạn nam chê Bắc Đại quá xa và nói “下次你们还是打车吧” — lần sau nên đi taxi."
+       },
+       {
+        "id": "wb2-l2-p3-q10",
+        "no": 10,
+        "audio": {
+         "trackId": "trk-wb2-l02-1",
+         "start": 491.9,
+         "end": 546.7,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "您是小明妈妈吧？您什么时候来接孩子？",
+          "pinyin": "Nín shì Xiǎomíng māma ba? Nín shénme shíhou lái jiē háizi?",
+          "speakerVi": "Giáo viên"
+         },
+         {
+          "zh": "李老师，今天我有事，他爸爸去接了。",
+          "pinyin": "Lǐ lǎoshī, jīntiān wǒ yǒu shì, tā bàba qù jiē le.",
+          "speakerVi": "Mẹ Tiểu Minh"
+         },
+         {
+          "zh": "他爸爸没来呀。您还是打个电话问一下吧。",
+          "pinyin": "Tā bàba méi lái ya. Nín háishi dǎ ge diànhuà wèn yíxià ba.",
+          "speakerVi": "Giáo viên"
+         },
+         {
+          "zh": "不好意思，我现在就打电话。",
+          "pinyin": "Bù hǎoyìsi, wǒ xiànzài jiù dǎ diànhuà.",
+          "speakerVi": "Mẹ Tiểu Minh"
+         }
+        ],
+        "questionZh": "谁去接孩子了？",
+        "questionPinyin": "Shéi qù jiē háizi le?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố"
+         },
+         {
+          "id": "B",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ"
+         },
+         {
+          "id": "C",
+          "zh": "老师",
+          "pinyin": "lǎoshī",
+          "vi": "thầy/cô giáo"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Mẹ nói “他爸爸去接了” — bố của bé đã đi đón. Bố chưa tới nơi (“他爸爸没来呀”) nhưng người đi đón chính là bố."
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "lessonId": "hsk2-l03",

@@ -660,3 +660,22 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .wb-example-answer{margin:6px 0}
 .wb-submit{position:sticky;bottom:12px;background:var(--card,#fff);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:0 4px 18px rgba(0,0,0,.08)}
 .wb-score{font-size:1.05rem}
+/* Workbook reading & writing (D41) */
+.wb-section-head{margin:26px 0 8px;padding-top:14px;border-top:2px solid #ffe8d6;font-size:1.25rem}
+.wb-bank{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px;padding:10px 12px;border:2px dashed #e8590c;border-radius:12px;background:#fff8f0}
+.wb-bank-item{font-size:1.05rem;padding:4px 6px}
+.wb-bank-letter{font-weight:800;color:#e8590c}
+.wb-letter-big{font-size:1.15rem;min-width:64px}
+.wb-en{color:var(--muted,#666);font-style:italic}
+.wb-chars{display:flex;gap:12px;flex-wrap:wrap;margin:4px 0 12px}
+.wb-char-box{display:inline-flex;flex-direction:column;align-items:center;gap:2px}
+.wb-char-py{font-size:.85rem;color:var(--muted,#666)}
+.wb-char-main{display:inline-flex;align-items:center;justify-content:center;min-width:64px;min-height:64px;padding:6px 8px;border:2px solid var(--line);border-radius:10px;background:repeating-linear-gradient(0deg,transparent,transparent 31px,#f1f3f5 32px),repeating-linear-gradient(90deg,#fff,#fff 31px,#f1f3f5 32px);font-size:1.9rem;line-height:1.1}
+.wb-gap-empty{color:#adb5bd;font-size:1.4rem;padding:0 4px}
+.wb-gap-fill{padding:0 2px;font-weight:700}
+.wb-gap-fill.ok{color:#2b8a3e}
+.wb-gap-fill.bad{color:#e03131}
+.wb-fill-answer{color:#2b8a3e;font-weight:800}
+.wb-completed{margin:8px 0 2px;font-size:1.05rem}
+.wb-write-input{width:100%;max-width:420px;min-height:48px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;font-size:1.3rem;margin:2px 0 10px}
+.wb-write-input:focus{border-color:var(--brand);outline:none}

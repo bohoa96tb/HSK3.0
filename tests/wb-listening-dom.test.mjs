@@ -39,11 +39,17 @@ test('wb zone renders in the exercises section with book structure', () => {
   // Zone letter is derived (QA HIGH-1, D40): neither hsk2-l01 nor hsk2-l02 has a
   // suppExerciseSet, so the workbook zone is C — and the count line must agree.
   assert.match(document.body.textContent, /Luyện tập gồm 3 phần/);
-  assert.match(document.body.textContent, /C\. Nghe theo Workbook/);
-  assert.ok(!/D\. Nghe theo Workbook/.test(document.body.textContent), "no phantom zone D when there is no mock set");
-  assert.equal($$('.wb-item:not(.wb-example)', card).length, 10, '10 questions');
-  assert.equal($$('.wb-example', card).length, 3, '3 worked examples, one per part');
-  assert.equal($$('.wb-shared-set .wb-pic', card).length, 4, 'part II shared picture set of 4');
+  assert.match(document.body.textContent, /C\. Luyện theo Workbook/);
+  assert.match(card.textContent, /模拟测练/);
+  assert.ok(!/D\. Luyện theo Workbook/.test(document.body.textContent), "no phantom zone D when there is no mock set");
+  // Listening block keeps its D39 shape: 10 questions, 3 examples, shared set.
+  const listenSec = document.getElementById('wb-sec-listening');
+  assert.equal($$('.wb-item:not(.wb-example)', listenSec).length, 10, '10 listening questions');
+  assert.equal($$('.wb-example', listenSec).length, 3, '3 listening worked examples, one per part');
+  assert.equal($$('.wb-shared-set .wb-pic', listenSec).length, 4, 'part II shared picture set of 4');
+  // D41: the card now carries the full 30-question set (10 + 14 + 6).
+  assert.equal($$('.wb-item:not(.wb-example)', card).length, 30, '30 questions across listening/reading/writing');
+  assert.equal($$('.wb-example', card).length, 9, '9 worked examples across all parts');
   // examples show their transcripts and marked answers from the start (printed in the book)
   assert.match(item('wb2-l1-p1-ex').textContent, /我每天坐公交车去上班/);
   assert.match(item('wb2-l1-p1-ex').textContent, /Đáp án mẫu/);
@@ -107,13 +113,15 @@ await tick(); await tick();
 test('wb zone renders on lesson 2 with book structure (D40)', () => {
   const card = document.getElementById('wb-listening-card');
   assert.ok(card, 'wb card present on hsk2-l02');
-  assert.match(card.textContent, /Nghe theo Workbook/);
+  assert.match(card.textContent, /Luyện theo Workbook/);
   assert.match(document.body.textContent, /Luyện tập gồm 3 phần/);
-  assert.match(document.body.textContent, /C\. Nghe theo Workbook/);
-  assert.ok(!/D\. Nghe theo Workbook/.test(document.body.textContent), "lesson 2 also derives zone C (no mock set)");
-  assert.equal($$('.wb-item:not(.wb-example)', card).length, 10, '10 questions');
-  assert.equal($$('.wb-example', card).length, 3, '3 worked examples, one per part');
-  assert.equal($$('.wb-shared-set .wb-pic', card).length, 4, 'part II shared picture set of 4');
+  assert.match(document.body.textContent, /C\. Luyện theo Workbook/);
+  assert.ok(!/D\. Luyện theo Workbook/.test(document.body.textContent), "lesson 2 also derives zone C (no mock set)");
+  const listenSec = document.getElementById('wb-sec-listening');
+  assert.equal($$('.wb-item:not(.wb-example)', listenSec).length, 10, '10 listening questions');
+  assert.equal($$('.wb-example', listenSec).length, 3, '3 listening worked examples, one per part');
+  assert.equal($$('.wb-shared-set .wb-pic', listenSec).length, 4, 'part II shared picture set of 4');
+  assert.equal($$('.wb-item:not(.wb-example)', card).length, 30, '30 questions across listening/reading/writing (D41)');
   // shared book example, same text as lesson 1
   assert.match(item('wb2-l2-p1-ex').textContent, /我每天坐公交车去上班/);
   assert.match(item('wb2-l2-p1-ex').textContent, /Đáp án mẫu/);

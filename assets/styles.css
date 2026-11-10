@@ -625,9 +625,10 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .wb-item-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .wb-no{font-weight:800;font-size:1.05rem}
 .wb-play{min-height:44px}
-/* Hoa 2026-11-10: pictures stay small — always 2 per row (a 3-picture set
-   wraps to 2 rows, a 4-picture set is 2 rows of 2), on phone and desktop. */
-.wb-pic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+/* Hoa 2026-11-10 (corrected): pictures stay small — a 3-picture set is ONE
+   row of 3; the shared 4-picture set is 2 rows of 2, on phone and desktop. */
+.wb-pic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wb-shared-set{grid-template-columns:repeat(2,1fr)}
 .wb-pic{display:block;width:100%;padding:0;border:2px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:pointer;text-align:left}
 .wb-pic img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .wb-pic-letter{display:block;padding:7px 10px;font-weight:700;font-size:.95rem}

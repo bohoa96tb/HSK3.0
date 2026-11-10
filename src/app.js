@@ -1144,15 +1144,17 @@ function sectionExercisesHtml(content) {
     if (!foundInSet) { const g = passageOfCheckItem(content, requested); if (g) { go(`#/lesson/${content.lessonId}/reader?passage=${g.id}`); return ""; } }
   }
   const scrollBtn = (target, label) => `<button class="btn" type="button" data-scroll-to="${target}">${label}</button>`;
-  return `<section class="card exercise-zones"><h2>Luyện tập gồm ${content.suppExerciseSet ? 3 : 2} phần</h2>
+  return `<section class="card exercise-zones"><h2>Luyện tập gồm ${2 + (content.suppExerciseSet ? 1 : 0) + (content.wbListening ? 1 : 0)} phần</h2>
   <p><strong>A. Luyện sau bài</strong> — ${content.exerciseSet.items.length} câu chính của bài. ${esc(content.exerciseSet.noteVi || "")}</p>
   ${dialogueCheckItems(content).length ? `<p><strong>Câu hỏi của hội thoại</strong> — ${dialogueCheckItems(content).length} câu nằm ngay dưới từng hội thoại ở mục Nghe & đọc, làm tại đó; điểm tính chung vào điểm bài tập của bài.</p>` : ""}
   <p><strong>B. Luyện thêm</strong> — các bài tự luyện theo sách ở phần dưới: nghe – viết, luyện phát âm và tự nói. Phần này tự đối chiếu, không bắt buộc.</p>
   ${content.suppExerciseSet ? `<p><strong>C. Đề mô phỏng</strong> — ${content.suppExerciseSet.items.length} câu, điểm ghi riêng, không gộp vào điểm bài chính và không tự bắt đầu.</p>` : ""}
-  <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}</div></section>
+  ${content.wbListening ? `<p><strong>D. Nghe theo Workbook</strong> — toàn bộ phần nghe của sách bài tập (10 câu, 3 phần như sách in), tái dựng với hình vẽ lại; hai chế độ luyện tập và kiểm tra, điểm tính riêng trong phiên.</p>` : ""}
+  <div class="row-actions">${scrollBtn("exercise-card", "A. Làm bài chính")}${scrollBtn("extra-practice", "B. Luyện thêm")}${content.suppExerciseSet ? scrollBtn("supp-exercise-card", "C. Đề mô phỏng") : ""}${content.wbListening ? scrollBtn("wb-listening-card", "D. Nghe Workbook") : ""}</div></section>
   ${exerciseCardHtml(content, content.exerciseSet, "")}
   ${content.suppExerciseSet ? exerciseCardHtml(content, content.suppExerciseSet, "supp-") : ""}
-  <section class="card dictation-block" id="extra-practice"><h2>B. Luyện thêm theo sách</h2>${dictationHtml(content)}</section>`;
+  <section class="card dictation-block" id="extra-practice"><h2>B. Luyện thêm theo sách</h2>${dictationHtml(content)}</section>
+  ${content.wbListening ? wbListeningHtml(content) : ""}`;
 }
 let lastDeepLinkItem = null; // ?item= deep link fires once per param change (edge-triggered)
 const dictRevealed = new Set(); // taskIds whose listening script is currently shown
@@ -1196,6 +1198,129 @@ function dictationHtml(content) {
   ${refsHtml(t.sourceRefs)}</details>`; }).join("")}`;
 }
 
+
+// ---------- Workbook listening (D39): the printed Workbook's listening section
+// rebuilt as an interactive zone inside Luyện tập. Book layout (parts,
+// examples, picture grids), two modes (practice / test), session-only scoring
+// kept separate from the lesson's main exercise totals. ----------
+let wbState = null; // {lessonId, mode, sel:{itemId:optId}, checked:{itemId:bool}, submitted, score}
+function wbSession(content) {
+  if (!wbState || wbState.lessonId !== content.lessonId) wbState = { lessonId: content.lessonId, mode: "practice", sel: {}, checked: {}, submitted: false };
+  return wbState;
+}
+function wbPlayBtn(item, label) {
+  const a = item.audio;
+  return `<button class="btn wb-play" type="button" data-wb-play="${esc(a.trackId)}" data-seg-start="${a.start}" data-seg-end="${a.end}">▶ ${esc(label || "Nghe câu này")} (${fmtClock(a.start)}–${fmtClock(a.end)})</button>`;
+}
+function wbLinesHtml(item) {
+  return `<div class="wb-script">${item.lines.map((l) => `<p>${l.speakerVi ? `<span class="wb-speaker">${esc(l.speakerVi)}:</span> ` : ""}<span lang="zh-CN">${esc(l.zh)}</span> <span class="pinyin" lang="zh-Latn">${esc(l.pinyin)}</span></p>`).join("")}${item.questionZh ? `<p><span class="wb-speaker">Câu hỏi:</span> <span lang="zh-CN">${esc(item.questionZh)}</span> <span class="pinyin" lang="zh-Latn">${esc(item.questionPinyin || "")}</span></p>` : ""}</div>`;
+}
+function wbPicOptionsHtml(part, item, st, locked) {
+  const opts = part.kind === "picture-match" ? part.pictureSet : item.options;
+  if (part.kind === "picture-match") {
+    return `<div class="wb-letters" role="group" aria-label="Chọn hình cho câu ${item.no}">${opts.map((o) => {
+      const sel = st.sel[item.id] === o.id;
+      const verdict = locked ? (o.id === item.answer ? " is-answer" : sel ? " is-wrong" : "") : "";
+      return `<button type="button" class="wb-letter${sel ? " sel" : ""}${verdict}" data-wb-pick="${esc(item.id)}:${esc(o.id)}" ${locked ? "disabled" : ""}>${esc(o.id)}${locked && o.id === item.answer ? " ✓" : ""}</button>`;
+    }).join("")}</div>`;
+  }
+  return `<div class="wb-pic-grid">${opts.map((o) => {
+    const sel = st.sel[item.id] === o.id;
+    const verdict = locked ? (o.id === item.answer ? " is-answer" : sel ? " is-wrong" : "") : "";
+    return `<button type="button" class="wb-pic${sel ? " sel" : ""}${verdict}" data-wb-pick="${esc(item.id)}:${esc(o.id)}" ${locked ? "disabled" : ""}><img src="${esc(o.image)}" alt="${esc(o.imageAltVi)}" loading="lazy"><span class="wb-pic-letter">${esc(o.id)}${locked && o.id === item.answer ? " ✓ Đáp án" : locked && sel ? " ✗ Bạn chọn" : ""}</span></button>`;
+  }).join("")}</div>`;
+}
+function wbChoiceOptionsHtml(item, st, locked) {
+  return `<div class="wb-choices">${item.options.map((o) => {
+    const sel = st.sel[item.id] === o.id;
+    const verdict = locked ? (o.id === item.answer ? " is-answer" : sel ? " is-wrong" : "") : "";
+    return `<button type="button" class="wb-choice${sel ? " sel" : ""}${verdict}" data-wb-pick="${esc(item.id)}:${esc(o.id)}" ${locked ? "disabled" : ""}><span class="wb-choice-letter">${esc(o.id)}</span><span lang="zh-CN">${esc(o.zh)}</span>${locked ? `<span class="pinyin" lang="zh-Latn">${esc(o.pinyin)}</span><span class="wb-choice-vi">${esc(o.vi)}</span>` : ""}</button>`;
+  }).join("")}</div>`;
+}
+function wbItemHtml(part, item, st) {
+  const checked = st.mode === "practice" ? !!st.checked[item.id] : st.submitted;
+  const chosen = st.sel[item.id];
+  const right = checked && chosen === item.answer;
+  return `<article class="wb-item" id="${esc(item.id)}">
+    <div class="wb-item-head"><span class="wb-no">${item.no}.</span>${wbPlayBtn(item, part.kind === "picture" ? "Nghe câu này" : "Nghe hội thoại này")}</div>
+    ${part.kind === "choice" ? wbChoiceOptionsHtml(item, st, checked) : wbPicOptionsHtml(part, item, st, checked)}
+    ${st.mode === "practice" && !checked ? `<div class="row-actions"><button class="btn primary" type="button" data-wb-check="${esc(item.id)}" ${chosen ? "" : "disabled"}>Kiểm tra</button></div>` : ""}
+    ${checked ? `<p class="wb-verdict ${right ? "ok" : "bad"}" role="status">${right ? "Đúng." : `Chưa đúng — đáp án là ${esc(item.answer)}.`}</p>${wbLinesHtml(item)}${item.explainVi ? `<p class="wb-explain">${esc(item.explainVi)}</p>` : ""}${st.mode === "practice" ? `<div class="row-actions"><button class="btn" type="button" data-wb-redo="${esc(item.id)}">Làm lại câu này</button></div>` : ""}` : ""}
+  </article>`;
+}
+function wbExampleHtml(part, ex) {
+  const opts = part.kind === "picture-match" ? part.pictureSet : ex.options;
+  return `<article class="wb-item wb-example" id="${esc(ex.id)}">
+    <div class="wb-item-head"><span class="wb-no">例如 · Ví dụ:</span>${wbPlayBtn(ex, "Nghe ví dụ")}</div>
+    ${wbLinesHtml(ex)}
+    ${part.kind === "choice" ? `<div class="wb-choices">${ex.options.map((o) => `<div class="wb-choice is-static${o.id === ex.answer ? " is-answer" : ""}"><span class="wb-choice-letter">${esc(o.id)}</span><span lang="zh-CN">${esc(o.zh)}</span><span class="pinyin" lang="zh-Latn">${esc(o.pinyin)}</span><span class="wb-choice-vi">${esc(o.vi)}</span>${o.id === ex.answer ? "<span class=\"wb-tag\">✓ Đáp án mẫu</span>" : ""}</div>`).join("")}</div>`
+    : part.kind === "picture-match" ? `<p class="wb-example-answer">Đáp án mẫu: <strong>${esc(ex.answer)}</strong> — hình ${esc(ex.answer)} trong bộ hình chung ở dưới.</p>`
+    : `<div class="wb-pic-grid">${opts.map((o) => `<div class="wb-pic is-static${o.id === ex.answer ? " is-answer" : ""}"><img src="${esc(o.image)}" alt="${esc(o.imageAltVi)}" loading="lazy"><span class="wb-pic-letter">${esc(o.id)}${o.id === ex.answer ? " ✓ Đáp án mẫu" : ""}</span></div>`).join("")}</div>`}
+  </article>`;
+}
+function wbListeningHtml(content) {
+  const wb = content.wbListening;
+  const st = wbSession(content);
+  const total = wb.parts.reduce((n, p) => n + p.items.length, 0);
+  const answered = wb.parts.reduce((n, p) => n + p.items.filter((i) => st.sel[i.id]).length, 0);
+  const score = wb.parts.reduce((n, p) => n + p.items.filter((i) => st.sel[i.id] === i.answer).length, 0);
+  return `<section class="card wb-card" id="wb-listening-card">
+  <div class="wb-book-head"><span class="wb-book-tab">模拟测练 · Simulated Practice</span><h2>D. Nghe theo Workbook — <span lang="zh-CN">一、听力</span> Listening</h2></div>
+  <p>${esc(wb.introVi)}</p>
+  <p class="small muted">${esc(wb.bookPagesVi)}</p>
+  <div class="wb-mode" role="group" aria-label="Chế độ làm bài">
+    <button type="button" class="btn ${st.mode === "practice" ? "primary" : ""}" data-wb-mode="practice">Chế độ luyện tập</button>
+    <button type="button" class="btn ${st.mode === "test" ? "primary" : ""}" data-wb-mode="test">Chế độ kiểm tra</button>
+  </div>
+  <p class="small muted">${st.mode === "practice" ? "Luyện tập: nghe và chọn từng câu, bấm Kiểm tra để xem ngay đúng/sai, lời đọc và giải thích; làm lại được từng câu." : "Kiểm tra: chọn hết các câu rồi nộp bài một lần — không hiện đáp án hay lời đọc trước khi nộp; điểm hiện sau khi nộp."} Điểm của phần này tính riêng trong phiên, không gộp vào điểm bài chính.</p>
+  ${wb.parts.map((part) => `<div class="wb-part">
+    <h3 class="wb-part-head"><span lang="zh-CN">${esc(part.titleZh)}</span> · ${esc(part.titleEn)}</h3>
+    <p class="wb-instr"><span lang="zh-CN">${esc(part.instructionZh)}</span><br><span class="muted">${esc(part.instructionVi)}</span></p>
+    ${wbExampleHtml(part, part.example)}
+    ${part.kind === "picture-match" ? `<div class="wb-pic-grid wb-shared-set">${part.pictureSet.map((o) => `<div class="wb-pic is-static"><img src="${esc(o.image)}" alt="${esc(o.imageAltVi)}" loading="lazy"><span class="wb-pic-letter">${esc(o.id)}</span></div>`).join("")}</div><p class="small muted">Bộ 4 hình chung cho cả 3 câu dưới đây, đúng như sách in.</p>` : ""}
+    ${part.items.map((item) => wbItemHtml(part, item, st)).join("")}
+  </div>`).join("")}
+  ${st.mode === "test" && !st.submitted ? `<div class="wb-submit"><p>Đã chọn ${answered}/${total} câu.</p><button class="btn primary" type="button" data-wb-submit ${answered === total ? "" : "disabled"}>Nộp bài</button></div>` : ""}
+  ${st.mode === "test" && st.submitted ? `<div class="wb-submit"><p class="wb-score" role="status">Kết quả: <strong>${score}/${total}</strong> câu đúng.</p><button class="btn" type="button" data-wb-reset>Làm lại từ đầu</button></div>` : ""}
+  <details class="info-fold"><summary>Thông tin thêm và nguồn</summary>
+  <p>${esc(wb.answerNoteVi)}</p><p>${esc(wb.segmentNoteVi)}</p>
+  <p class="small muted">Audio: track Workbook của bài trên Baulchino, phát trực tiếp từ nguồn — dự án không lưu bản sao. Hình minh họa là tranh vẽ lại mới theo ảnh gốc trong sách (xem docs/HSK2_WORKBOOK_VISUAL_AUDIT.md).</p></details>
+  </section>`;
+}
+function refreshWb(content) {
+  const el = document.getElementById("wb-listening-card");
+  if (!el) return;
+  el.outerHTML = wbListeningHtml(content);
+  bindWbListening(content);
+}
+function bindWbListening(content) {
+  const card = document.getElementById("wb-listening-card");
+  if (!card) return;
+  const st = wbSession(content);
+  $$("[data-wb-play]", card).forEach((b) => b.onclick = () => {
+    const track = allTracks().find((t) => t.id === b.dataset.wbPlay);
+    if (track) player.playSegment(track, { start: Number(b.dataset.segStart), end: Number(b.dataset.segEnd), rate: settings().playbackRate });
+  });
+  $$("[data-wb-mode]", card).forEach((b) => b.onclick = () => {
+    if (st.mode === b.dataset.wbMode) return;
+    st.mode = b.dataset.wbMode; st.checked = {}; st.submitted = false;
+    refreshWb(content);
+  });
+  $$("[data-wb-pick]", card).forEach((b) => b.onclick = () => {
+    const [itemId, optId] = b.dataset.wbPick.split(":");
+    st.sel[itemId] = optId;
+    refreshWb(content);
+    const el = document.getElementById(itemId);
+    if (el) el.scrollIntoView({ block: "nearest" });
+  });
+  $$("[data-wb-check]", card).forEach((b) => b.onclick = () => { st.checked[b.dataset.wbCheck] = true; refreshWb(content); const el = document.getElementById(b.dataset.wbCheck); if (el) el.scrollIntoView({ block: "nearest" }); });
+  $$("[data-wb-redo]", card).forEach((b) => b.onclick = () => { delete st.checked[b.dataset.wbRedo]; delete st.sel[b.dataset.wbRedo]; refreshWb(content); const el = document.getElementById(b.dataset.wbRedo); if (el) el.scrollIntoView({ block: "nearest" }); });
+  const submit = $("[data-wb-submit]", card);
+  if (submit) submit.onclick = () => { st.submitted = true; refreshWb(content); const el = document.getElementById("wb-listening-card"); if (el) el.scrollIntoView({ block: "start" }); };
+  const reset = $("[data-wb-reset]", card);
+  if (reset) reset.onclick = () => { st.sel = {}; st.checked = {}; st.submitted = false; refreshWb(content); };
+}
+
 function bindExerciseSet(content, set, prefix) {
   const ses = ensureSession(content, set);
   const item = set.items[ses.index];
@@ -1227,6 +1352,7 @@ function bindExerciseSet(content, set, prefix) {
   if (restart) restart.onclick = () => { updateSession(content, (ss) => { ss.index = 0; ss.answers = {}; ss.checked = {}; ss.hintUsed = {}; ss.supportUsed = {}; delete ss.reviewTarget; }, set); render(); };
 }
 function bindExercises(content) {
+  if (content.wbListening) bindWbListening(content);
   bindSupportBar();
   $$("[data-scroll-to]").forEach((b) => b.onclick = () => { document.getElementById(b.dataset.scrollTo)?.scrollIntoView({ block: "start" }); });
   { const st0 = settings();

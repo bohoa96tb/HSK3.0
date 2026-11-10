@@ -1,4 +1,4 @@
-# Kiểm kê thị giác Workbook HSK 2 — tái dựng phần nghe thành giao diện tương tác
+# Kiểm kê thị giác Workbook HSK 2 — tái dựng 模拟测练 (nghe + đọc + viết) thành giao diện tương tác
 
 Ngày kiểm kê: 2026-11-10. Nguồn: `hsk-course-2-workbook.pdf` (bản scan Hoa tải lên, sha256 `cbf06e6e…`, 227,8 MB) — chỉ đối chiếu nội bộ, không commit PDF vào repo.
 
@@ -7,7 +7,7 @@ Ngày kiểm kê: 2026-11-10. Nguồn: `hsk-course-2-workbook.pdf` (bản scan H
 - 《新HSK教程 2 学练手册》 (New HSK Course 2 Workbook), FLTRP, ISBN 978-7-5213-7178-9.
 - **176 trang PDF**; trang PDF = trang in + 7. Bản scan chỉ có lớp ảnh (không có lớp chữ) — mọi nội dung phải đọc trực tiếp từ ảnh trang; OCR tự động không đáng tin, các mục đọc bằng mắt trong tài liệu này đều ghi rõ trang đối chiếu.
 - Cấu trúc: 15 bài (mỗi bài 10 trang in, bài n bắt đầu ở trang in (n−1)×10+1) + đề mô phỏng cuối sách 模拟测试 HSK（二级） từ trang in 151 đến hết (trang in 169).
-- Mỗi bài gồm: 小语讲堂 (một、汉字 — đã có khu vực luyện viết riêng của dự án; hai、字词拓展） và 模拟测练 （一、听力 / 二、阅读 / 三、写作）. Tài liệu này và khu vực "Nghe Workbook" chỉ xử lý **一、听力**.
+- Mỗi bài gồm: 小语讲堂 (một、汉字 — đã có khu vực luyện viết riêng của dự án; hai、字词拓展） và 模拟测练 （一、听力 / 二、阅读 / 三、写作）. **Đúng 30 câu mỗi bài** (nghe 10, đọc 14, viết 6). Phạm vi xử lý: D39/D40 (2026-11-10) chỉ dựng 一、听力 của Bài 1–2; **D41 (2026-11-10, Hoa chỉ đạo) bổ sung 二、阅读 + 三、书写 cho Bài 1–2 để đủ 30 câu** — kiểm kê ở mục 4d/4e dưới đây. Từ Bài 3 trở đi, mỗi bài dựng đủ 30 câu ngay từ đầu.
 
 ## 2. Phần nghe mỗi bài — cấu trúc thống nhất (đã kiểm chứng Bài 1, 2, 15; các bài còn lại theo cùng khuôn, kiểm chứng ở mức trang khi biên soạn từng bài)
 
@@ -143,11 +143,158 @@ Quy trình như mục 4b: mô tả cảnh từ ảnh gốc trong sách → sinh 
 | wb-p2-desk.webp | tr.014 | Người đàn ông đeo kính ngồi ở bàn trong lớp đọc giấy tờ, laptop trên bàn | Part II — C (đáp án câu 6) |
 | wb-p2-soccer.webp | tr.014 | Cô gái áo đỏ tâng bóng đá | Part II — D (đáp án ví dụ) |
 
+## 4d. Kiểm kê Đọc + Viết Bài 1 — tr. in 006–010 (PDF 13–17) (D41)
+
+Đọc trực tiếp từng trang; ô 田字格 của phần Viết Part I đọc ở bản phóng 300 dpi để xác định đúng phần chữ đã hiện/thiếu. Đáp án là biên tập (sách không in đáp án), trạng thái `verified-editorial`. KHÁC phần nghe: trang Đọc/Viết **in sẵn pinyin** trên chữ Hán — giao diện hiện pinyin như sách in (quyết định thiết kế D41; quy tắc không-hiện-pinyin-của-D23 chỉ áp cho phần nghe).
+
+### 二、阅读 Reading
+
+**Part I — chọn hình khớp câu (tr. in 006).** Bộ 4 hình chung: A — tay viết chữ Phúc thư pháp trên giấy đỏ （字）; B — gia đình đi trong sân bay （旅游）; C — nhóm người bắt tay giới thiệu （介绍朋友）; D — chàng trai rê bóng rổ. Ví dụ: 每个星期六，我都去打篮球。→ **D**.
+
+| Câu | Câu in | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 11 | 我们是来旅游的。 | **B** | 来旅游 — gia đình mang hành lí ở sân bay |
+| 12 | 我给你介绍几个新朋友。 | **C** | 介绍新朋友 — cảnh bắt tay giới thiệu trong nhóm |
+| 13 | 天中，请你说一下这个字的意思。 | **A** | 这个字 — chữ Phúc thư pháp trên giấy đỏ |
+
+**Part II — chọn từ điền trống (tr. in 007).** Khung: A 次 cì · B 懂 dǒng · C 给 gěi · D 不好意思 bù hǎoyìsi · E 完 wán. Ví dụ: 题太多了，所以我没做（　）。→ **E （完）**.
+
+| Câu | Câu in (chỗ trống __) | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 14 | 我是昨天 __ 妈妈打的电话。 | **C 给** | 是……的： 是昨天给妈妈打的电话 |
+| 15 | 这已经是我第三 __ 来西安旅游了。 | **A 次** | 第三 + lượng từ lần 次 |
+| 16 | 女：这几个字的意思我都不 __。/ 男：我们去找老师问一下吧。 | **B 懂** | 都不懂 nên đi hỏi thầy |
+| 17 | 男：__，我家里有点儿事，今天不能去了。/ 女：好的，那你就明天再来吧。 | **D 不好意思** | lời xin lỗi mở đầu khi không đến được |
+
+→ Cả 5 từ trong khung đều được dùng đúng một lần (ví dụ dùng E, 4 câu dùng A–D) — không có từ thừa.
+
+**Part III — nối câu (tr. in 008).** Khung: A 不是，我是来上学的。· B 不客气，有事就给我打电话。· C 王老师，她说这儿的饺子非常好吃。· D 我爸爸，他是中国人。· E 他出去了，一会儿就回来。Ví dụ: 请问李老师在吗？→ **E**.
+
+| Câu | Câu hỏi in | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 18 | 你是来旅游的吧？ | **A** | phủ định: 不是，我是来上学的 |
+| 19 | 是谁给你介绍的这家饭店？ | **C** | người giới thiệu là 王老师 (khen 饺子 của quán) |
+| 20 | 谢谢你这几天都来帮忙。 | **B** | đáp lời cảm ơn bằng 不客气 |
+| 21 | 是谁让你学中文的？ | **D** | 我爸爸 (bố bảo học) |
+
+→ Cả 5 câu trong khung đều được dùng (ví dụ dùng E, 4 câu dùng A–D) — **không có câu nhiễu thừa** ở bài này (khác dự đoán ban đầu "một câu thừa"; kết luận theo ngữ nghĩa từng cặp).
+
+**Part IV — đọc đoạn chọn đáp án (tr. in 009; lựa chọn in kèm pinyin, ví dụ in thêm nghĩa tiếng Anh).** Ví dụ: 我爱跳舞，但跳得不太好。★他：→ **B 喜欢跳舞**.
+
+| Câu | Đoạn + câu hỏi | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 22 | 到了西安，朋友来接我们，还给我们介绍了一家饭店。我们开车去了那里，菜都很好吃。★朋友介绍了什么？ | **B 饭店** | đoạn ghi rõ 介绍了一家饭店 |
+| 23 | 我在北京旅游的时候，一雪姐请我吃了烤鸭，还给我介绍了很多东西。现在，我们已经是好朋友了。★他在北京旅游时，一雪： | **A 请他吃饭** | 请我吃了烤鸭 = mời ăn |
+| 24 | 我家在北京，我爸爸现在在上海工作，他让我和妈妈这个星期六坐火车去上海看他。爸爸说，他会接我们。★爸爸现在在哪儿工作？ | **B 上海** | 爸爸现在在上海工作 |
+
+### 三、书写 Writing (tr. in 010; mục 汉字 của bài ở tr. in 001 dạy 提手旁 扌 và 两点水 冫）
+
+**Part I — ghép bộ phận thành chữ.** Khung: A 冫 · B 纟 · C 忄 · D 十 (đọc ở 300 dpi). Ví dụ: 什么 — ô 什 hiện 亻， thiếu 十 → **D**.
+
+| Câu | Từ + ô thiếu | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 25 | 不懂 — ô 懂 hiện 董 | **C 忄** | 懂 = 忄 + 董 |
+| 26 | 给他 — ô 给 hiện 合 | **B 纟** | 给 = 纟 + 合 |
+| 27 | 两次 — ô 次 hiện 欠 | **A 冫** | 次 = 冫 + 欠 |
+
+→ Cả 4 bộ phận đều được dùng (ví dụ D, câu C/B/A).
+
+**Part II — viết chữ theo pinyin.** Ví dụ: 你想喝茶还（是）喝咖啡？— **是** shì.
+
+| Câu | Câu in (pinyin trên chỗ trống) | Chữ viết | Căn cứ ngắn |
+|---|---|---|---|
+| 28 | 他（　）时候不吃晚饭。(yǒu) | **有** | 有时候 = thỉnh thoảng |
+| 29 | 我现在（　）经到北京了。(yǐ) | **已** | 已经 = đã |
+| 30 | 这个不太贵，（　）我们买这个吧。(nà) | **那** | 那……吧 = vậy thì… |
+
+## 4e. Kiểm kê Đọc + Viết Bài 2 — tr. in 016–020 (PDF 23–27) (D41)
+
+Cùng quy trình đọc như 4d. Ví dụ mẫu của cả 6 phần (Đọc 4 + Viết 2) giống hệt Bài 1 (sách in dùng chung), gồm cả ảnh bóng rổ D của Part I Đọc.
+
+### 二、阅读 Reading
+
+**Part I — chọn hình khớp câu (tr. in 016).** Bộ 4 hình chung: A — cô gái cầm bỏng ngô + vé ở rạp phim; B — phòng học dài trống, cửa sổ bên phải; C — mẹ và bé ăn ở nhà hàng; D — bóng rổ (cùng ảnh Bài 1). Ví dụ → **D**.
+
+| Câu | Câu in | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 11 | 我和朋友去看电影了，是她买的票。 | **A** | 看电影/买票 — rạp phim |
+| 12 | 这是我们的教室，但学生们都去外边玩了。 | **B** | 教室 nhưng học sinh ra ngoài — lớp trống |
+| 13 | 这家饭店的菜都不贵，一个菜十多块钱，还很好吃。 | **C** | món của 饭店 — bàn ăn nhà hàng |
+
+**Part II — chọn từ điền trống (tr. in 017).** Khung: A 万 wàn · B 远 yuǎn · C 教室 jiàoshì · D 车站 chēzhàn · E 完 wán. Ví dụ (giống Bài 1) → **E**.
+
+| Câu | Câu in (chỗ trống __) | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 14 | 下课了，但外边下雨了，我还是在 __ 里看书吧。 | **C 教室** | ở lại trong lớp đọc sách |
+| 15 | 那个 __ 没有到北京大学的公交车。 | **D 车站** | bến xe |
+| 16 | 女：我让一雪来接我们吧。/ 男：一雪家有点儿 __，别让她来接我们了。 | **B 远** | nhà hơi xa |
+| 17 | 男：你们学校有多少学生？/ 女：有一 __ 多名中国学生，还有两千多名外国学生。 | **A 万** | 一万多名 = hơn mười nghìn |
+
+→ Cả 5 từ đều được dùng đúng một lần.
+
+**Part III — nối câu (tr. in 018).** Khung: A 我去找几个人过来帮忙。· B 他五岁多了。· C 天气不好，我们还是在家看电视吧。· D 我没事，你别过来了。· E 他出去了，一会儿就回来。(câu E giống hệt Bài 1). Ví dụ → **E**.
+
+| Câu | Câu hỏi in | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 18 | 小王说你生病了，我下班后就去看你。 | **D** | người ốm đáp 我没事，你别过来了 |
+| 19 | 王老师，你儿子几岁了？ | **B** | 他五岁多了 |
+| 20 | 今天星期天，我们去看电影吧。 | **C** | trời xấu → ở nhà xem TV |
+| 21 | 今天工作太多了。 | **A** | tìm người tới giúp |
+
+→ Cả 5 câu đều được dùng — **không có câu nhiễu thừa** ở bài này.
+
+**Part IV — đọc đoạn chọn đáp án (tr. in 019).** Ví dụ giống Bài 1 → **B**.
+
+| Câu | Đoạn + câu hỏi | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 22 | 我今年要去外国上大学，我妈有个朋友在那儿工作，她让我有事就给她的朋友打电话。★他要到外国做什么？ | **B 上大学** | 要去外国上大学 |
+| 23 | 我在网上认识了一个外国朋友。他九月要来北京学中文，他说到时候来西安找我玩。★外国朋友来北京做什么？ | **C 学中文** | 来北京学中文 (đi Tây An tìm bạn là việc khác) |
+| 24 | 下雪天不好打车，但坐公交车太冷。爸爸说："你还是去学开车吧，开车上下班就不会冷了。"★爸爸让他： | **A 开车上班** | mục đích nêu trong đoạn: 开车上下班 |
+
+### 三、书写 Writing (tr. in 020; mục 汉字 của bài ở tr. in 011–012 dạy 门字框 và 走之旁 辶）
+
+**Part I — ghép bộ phận thành chữ.** Khung: A **攵** · B 辶 · C 刂 · D 十 (chữ A đọc ở 300 dpi: là 反文旁 攵， không phải 彳）. Ví dụ: 什么 — thiếu 十 → **D**.
+
+| Câu | Từ + ô thiếu | Đáp án | Căn cứ ngắn |
+|---|---|---|---|
+| 25 | 很远 — ô 远 hiện 元 | **B 辶** | 远 = 元 + 辶 |
+| 26 | 教室 — ô 教 hiện 孝 | **A 攵** | 教 = 孝 + 攵 |
+| 27 | 别去 — ô 别 hiện 另 | **C 刂** | 别 = 另 + 刂 |
+
+→ Cả 4 bộ phận đều được dùng.
+
+**Part II — viết chữ theo pinyin.** Ví dụ giống Bài 1 → **是**.
+
+| Câu | Câu in (pinyin trên chỗ trống) | Chữ viết | Căn cứ ngắn |
+|---|---|---|---|
+| 28 | 我是在（　）上买的电影票。(wǎng) | **网** | 在网上买 = mua trên mạng |
+| 29 | 王老师在那（　）教室上课。(jiān) | **间** | lượng từ phòng 间 |
+| 30 | 我们下次再过（　）看电影吧。(lái) | **来** | 过来 = qua đây |
+
+## 4f. Manifest 8 hình Đọc Part I (D41, theo chuẩn D19)
+
+Quy trình như mục 4b: mô tả cảnh từ bản scan → sinh tranh phẳng mới (công cụ tạo hình của Muse) → người biên soạn xem từng hình đối chiếu ảnh gốc trong sách → xuất WebP 880×587 q78 thành file riêng trong `assets/`. Cả 7 lượt sinh đều đạt ngay lần đầu (không phải sinh lại); chữ 福 trên hình thư pháp rõ và đúng nét ở mọi tờ giấy hiện đủ. Ảnh D của hai bài là **cùng một file tranh** (sách in dùng cùng một ảnh bóng rổ cho cả hai bài).
+
+| File | Bài/vị trí | Cảnh theo ảnh gốc trong sách | Đối chiếu | Quyền |
+|---|---|---|---|---|
+| `wb-r1-calligraphy.webp` | Bài 1 · A | tay cầm bút lông viết chữ Phúc trên giấy đỏ, nhiều tờ Phúc xung quanh | khớp: chữ 福 rõ, đúng; nghiên mực + đèn lồng | tranh vẽ mới của dự án; ảnh gốc sách không dùng lại |
+| `wb-r1-airport.webp` | Bài 1 · B | gia đình 4 người đi trong sảnh sân bay, bé kéo vali | khớp | như trên |
+| `wb-r1-introduce.webp` | Bài 1 · C | nhóm người lớn trong phòng, một người bắt tay giới thiệu | khớp | như trên |
+| `wb-r1-basketball.webp` | Bài 1 · D | chàng trai áo ba lỗ đen quần đỏ rê bóng rổ | khớp; dùng chung Bài 2 | như trên |
+| `wb-r1-cinema.webp` | Bài 2 · A | cô gái ở sảnh rạp phim cầm bỏng ngô, ly nước, vé; sàn ô đen trắng | khớp: vé để trống không chữ | như trên |
+| `wb-r1-classroom.webp` | Bài 2 · B | phòng học dài trống, cửa sổ dọc tường phải | khớp; bố cục khác hình lớp trống của phần nghe | như trên |
+| `wb-r1-restaurant.webp` | Bài 2 · C | mẹ và bé ăn ở bàn nhà hàng nhiều món | khớp | như trên |
+| `wb-r1-basketball.webp` | Bài 2 · D | cùng ảnh bóng rổ như Bài 1 (sách in dùng cùng ảnh) | cùng file với Bài 1 · D | như trên |
+
+Hình phần Viết: không cần hình — bộ phận và ô chữ là ký tự chữ, dựng bằng văn bản.
+
 ## 5. Danh sách trang đã phân tích trực tiếp
 
 - Toàn sách ở mức cấu trúc: bìa, 使用说明 (PDF 5–6), trang đầu/cuối.
 - Bài 1: PDF 8, 10, 11, 12 (tr. in 001, 003, 004, 005) — kiểm kê từng câu ở mục 4.
+- Bài 1 Đọc + Viết (D41): PDF 13–17 (tr. in 006–010) — kiểm kê từng câu ở mục 4d; ô 田字格 đọc thêm ở bản phóng 300 dpi của PDF 17.
 - Bài 2: PDF 20, 21, 22 (tr. in 013, 014, 015) — kiểm kê từng câu ở mục 4c; Bài 15: PDF 150 (tr. in 143) — xác nhận khuôn Part I và ví dụ dùng chung.
+- Bài 2 Đọc + Viết + 汉字 (D41): PDF 18, 19 (tr. in 011–012, mục Hán tự) và PDF 23–27 (tr. in 016–020) — kiểm kê từng câu ở mục 4e; ô 田字格 và khung bộ phận đọc thêm ở bản phóng 300 dpi của PDF 27.
 - Đề mô phỏng cuối sách: PDF 160, 168, 174 (tr. in 153, 161, 167) — xác nhận đề có phần nghe chọn hình riêng và phần viết; kiểm kê chi tiết để sau.
 - Các trang còn lại của từng bài sẽ được đọc trực tiếp khi biên soạn bài đó (mỗi bài một lượt theo quy trình biên soạn → QA độc lập → phát hành), không kiểm kê suy đoán hàng loạt.
 

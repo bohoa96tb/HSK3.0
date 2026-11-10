@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261110-hsk2-wb-listening-l2",
+ "contentVersion": "20261110-hsk2-wb-full30",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -52986,6 +52986,560 @@
       ]
      }
     ]
+   },
+   "wbReading": {
+    "titleZh": "阅读",
+    "titleEn": "Reading",
+    "titleVi": "Đọc",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 1 — 模拟测练 · 二、阅读， trang in 006–009 (PDF tr. 13–16).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Đọc được đối chiếu trực tiếp từ nội dung in trong sách (đọc câu/đoạn và các lựa chọn in, rà soát ngữ nghĩa từng câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần đọc giữ nguyên bố cục sách in: câu, đoạn và lựa chọn đều kèm pinyin như trên trang sách. Hình ở Phần I là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l1-r1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第11—13题：选择与句子最匹配的图片。",
+      "instructionVi": "Câu 11–13: Chọn hình phù hợp nhất với câu.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-01/wb-r1-calligraphy.webp",
+        "imageAltVi": "Tranh vẽ lại: một bàn tay cầm bút lông viết chữ Phúc lớn trên giấy đỏ, quanh bàn là nhiều tờ giấy đỏ đã viết chữ Phúc"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-01/wb-r1-airport.webp",
+        "imageAltVi": "Tranh vẽ lại: gia đình bốn người (bố mẹ và hai con) đi trong sảnh sân bay sáng, một bé kéo vali du lịch"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-01/wb-r1-introduce.webp",
+        "imageAltVi": "Tranh vẽ lại: nhóm người lớn đứng trong phòng, một người đàn ông bắt tay và giới thiệu một cô gái với mọi người"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-01/wb-r1-basketball.webp",
+        "imageAltVi": "Tranh vẽ lại: chàng trai mặc áo ba lỗ đen, quần đùi đỏ đang rê bóng rổ trên sân"
+       }
+      ],
+      "example": {
+       "sentenceZh": "每个星期六，我都去打篮球。",
+       "sentencePinyin": "Měi gè Xīngqīliù, wǒ dōu qù dǎ lánqiú.",
+       "sentenceEn": "I go to play basketball every Saturday.",
+       "answer": "D",
+       "id": "wb2-l1-r1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-r1-q11",
+        "no": 11,
+        "sentenceZh": "我们是来旅游的。",
+        "sentencePinyin": "Wǒmen shì lái lǚyóu de.",
+        "answer": "B",
+        "explainVi": "“来旅游” là đến du lịch — hình B là gia đình mang hành lí đi trong sân bay."
+       },
+       {
+        "id": "wb2-l1-r1-q12",
+        "no": 12,
+        "sentenceZh": "我给你介绍几个新朋友。",
+        "sentencePinyin": "Wǒ gěi nǐ jièshào jǐ gè xīn péngyou.",
+        "answer": "C",
+        "explainVi": "“介绍新朋友” là giới thiệu bạn mới — hình C là cảnh bắt tay giới thiệu một người với cả nhóm."
+       },
+       {
+        "id": "wb2-l1-r1-q13",
+        "no": 13,
+        "sentenceZh": "天中，请你说一下这个字的意思。",
+        "sentencePinyin": "Tiānzhōng, qǐng nǐ shuō yíxià zhège zì de yìsi.",
+        "answer": "A",
+        "explainVi": "Câu nhắc tới “这个字” (chữ này) — hình A là chữ Phúc viết thư pháp trên giấy đỏ."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l1-r2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第14—17题：选词填空。",
+      "instructionVi": "Câu 14–17: Chọn từ trong khung điền vào chỗ trống; mỗi từ chỉ dùng một lần.",
+      "kind": "word-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "次",
+        "pinyin": "cì"
+       },
+       {
+        "id": "B",
+        "zh": "懂",
+        "pinyin": "dǒng"
+       },
+       {
+        "id": "C",
+        "zh": "给",
+        "pinyin": "gěi"
+       },
+       {
+        "id": "D",
+        "zh": "不好意思",
+        "pinyin": "bù hǎoyìsi"
+       },
+       {
+        "id": "E",
+        "zh": "完",
+        "pinyin": "wán"
+       }
+      ],
+      "example": {
+       "id": "wb2-l1-r2-ex",
+       "lines": [
+        {
+         "zh": "题太多了，所以我没做（　）。",
+         "pinyin": "Tí tài duō le, suǒyǐ wǒ méi zuò ( )."
+        }
+       ],
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-r2-q14",
+        "no": 14,
+        "lines": [
+         {
+          "zh": "我是昨天（　）妈妈打的电话。",
+          "pinyin": "Wǒ shì zuótiān ( ) māma dǎ de diànhuà."
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Cấu trúc nhấn mạnh 是……的： “是昨天给妈妈打的电话” — 给 đi với 打电话 (gọi điện cho mẹ)."
+       },
+       {
+        "id": "wb2-l1-r2-q15",
+        "no": 15,
+        "lines": [
+         {
+          "zh": "这已经是我第三（　）来西安旅游了。",
+          "pinyin": "Zhè yǐjīng shì wǒ dì-sān ( ) lái Xī'ān lǚyóu le."
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Sau số thứ tự 第三 phải dùng lượng từ chỉ lần: 次 — “第三次来西安” (lần thứ ba đến Tây An)."
+       },
+       {
+        "id": "wb2-l1-r2-q16",
+        "no": 16,
+        "lines": [
+         {
+          "speakerVi": "Nữ",
+          "zh": "这几个字的意思我都不（　）。",
+          "pinyin": "Zhè jǐ gè zì de yìsi wǒ dōu bù ( )."
+         },
+         {
+          "speakerVi": "Nam",
+          "zh": "我们去找老师问一下吧。",
+          "pinyin": "Wǒmen qù zhǎo lǎoshī wèn yíxià ba."
+         }
+        ],
+        "answer": "B",
+        "explainVi": "“都不懂” — không hiểu nghĩa mấy chữ này nên mới rủ nhau đi hỏi thầy."
+       },
+       {
+        "id": "wb2-l1-r2-q17",
+        "no": 17,
+        "lines": [
+         {
+          "speakerVi": "Nam",
+          "zh": "（　），我家里有点儿事，今天不能去了。",
+          "pinyin": "( ), wǒ jiā lǐ yǒudiǎnr shì, jīntiān bù néng qù le."
+         },
+         {
+          "speakerVi": "Nữ",
+          "zh": "好的，那你就明天再来吧。",
+          "pinyin": "Hǎo de, nà nǐ jiù míngtiān zài lái ba."
+         }
+        ],
+        "answer": "D",
+        "explainVi": "Mở đầu lời từ chối vì nhà có việc là lời xin lỗi: 不好意思 (ngại quá/xin lỗi)."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l1-r3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第18—21题：匹配句子。",
+      "instructionVi": "Câu 18–21: Chọn câu trả lời trong khung phù hợp với mỗi câu hỏi.",
+      "kind": "match-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "不是，我是来上学的。",
+        "pinyin": "Bú shì, wǒ shì lái shàngxué de."
+       },
+       {
+        "id": "B",
+        "zh": "不客气，有事就给我打电话。",
+        "pinyin": "Bú kèqi, yǒu shì jiù gěi wǒ dǎ diànhuà."
+       },
+       {
+        "id": "C",
+        "zh": "王老师，她说这儿的饺子非常好吃。",
+        "pinyin": "Wáng lǎoshī, tā shuō zhèr de jiǎozi fēicháng hǎochī."
+       },
+       {
+        "id": "D",
+        "zh": "我爸爸，他是中国人。",
+        "pinyin": "Wǒ bàba, tā shì Zhōngguó rén."
+       },
+       {
+        "id": "E",
+        "zh": "他出去了，一会儿就回来。",
+        "pinyin": "Tā chūqù le, yíhuìr jiù huílái."
+       }
+      ],
+      "example": {
+       "id": "wb2-l1-r3-ex",
+       "zh": "请问李老师在吗？",
+       "pinyin": "Qǐngwèn Lǐ lǎoshī zài ma?",
+       "en": "Excuse me, is Mr. Li here?",
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-r3-q18",
+        "no": 18,
+        "zh": "你是来旅游的吧？",
+        "pinyin": "Nǐ shì lái lǚyóu de ba?",
+        "answer": "A",
+        "explainVi": "Bị đoán là đến du lịch, người trả lời phủ định: “不是，我是来上学的” (tôi đến học)."
+       },
+       {
+        "id": "wb2-l1-r3-q19",
+        "no": 19,
+        "zh": "是谁给你介绍的这家饭店？",
+        "pinyin": "Shì shéi gěi nǐ jièshào de zhè jiā fàndiàn?",
+        "answer": "C",
+        "explainVi": "Hỏi ai đã giới thiệu nhà hàng này — C nêu người giới thiệu là thầy Vương （王老师）, người khen sủi cảo ở đây ngon."
+       },
+       {
+        "id": "wb2-l1-r3-q20",
+        "no": 20,
+        "zh": "谢谢你这几天都来帮忙。",
+        "pinyin": "Xièxie nǐ zhè jǐ tiān dōu lái bāngmáng.",
+        "answer": "B",
+        "explainVi": "Lời cảm ơn được đáp bằng “不客气” (đừng khách sáo) — chọn B."
+       },
+       {
+        "id": "wb2-l1-r3-q21",
+        "no": 21,
+        "zh": "是谁让你学中文的？",
+        "pinyin": "Shì shéi ràng nǐ xué Zhōngwén de?",
+        "answer": "D",
+        "explainVi": "Hỏi ai là người bảo học tiếng Trung — D trả lời là bố: “我爸爸，他是中国人”."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l1-r4",
+      "no": 4,
+      "titleZh": "第四部分",
+      "titleEn": "Part IV",
+      "instructionZh": "第22—24题：选择正确答案。",
+      "instructionVi": "Câu 22–24: Đọc đoạn ngắn rồi chọn đáp án đúng.",
+      "kind": "passage-choice",
+      "example": {
+       "passageZh": "我爱跳舞，但跳得不太好。",
+       "passagePinyin": "Wǒ ài tiàowǔ, dàn tiào de bú tài hǎo.",
+       "passageEn": "I love dancing, but I'm not good at it.",
+       "questionZh": "他：",
+       "questionPinyin": "Tā:",
+       "questionEn": "He:",
+       "options": [
+        {
+         "id": "A",
+         "zh": "下课了",
+         "pinyin": "xiàkè le",
+         "en": "finished class",
+         "vi": "đã tan học"
+        },
+        {
+         "id": "B",
+         "zh": "喜欢跳舞",
+         "pinyin": "xǐhuan tiàowǔ",
+         "en": "likes dancing",
+         "vi": "thích nhảy múa"
+        },
+        {
+         "id": "C",
+         "zh": "是小学生",
+         "pinyin": "shì xiǎoxuéshēng",
+         "en": "is a primary school student",
+         "vi": "là học sinh tiểu học"
+        }
+       ],
+       "answer": "B",
+       "id": "wb2-l1-r4-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-r4-q22",
+        "no": 22,
+        "passageZh": "到了西安，朋友来接我们，还给我们介绍了一家饭店。我们开车去了那里，菜都很好吃。",
+        "passagePinyin": "Dàole Xī'ān, péngyou lái jiē wǒmen, hái gěi wǒmen jièshàole yì jiā fàndiàn. Wǒmen kāichē qùle nàlǐ, cài dōu hěn hǎochī.",
+        "questionZh": "朋友介绍了什么？",
+        "questionPinyin": "Péngyou jièshàole shénme?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "车",
+          "pinyin": "chē",
+          "vi": "xe ô tô"
+         },
+         {
+          "id": "B",
+          "zh": "饭店",
+          "pinyin": "fàndiàn",
+          "vi": "nhà hàng"
+         },
+         {
+          "id": "C",
+          "zh": "西安",
+          "pinyin": "Xī'ān",
+          "vi": "Tây An"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Đoạn văn nói rõ bạn “介绍了一家饭店” — giới thiệu một nhà hàng."
+       },
+       {
+        "id": "wb2-l1-r4-q23",
+        "no": 23,
+        "passageZh": "我在北京旅游的时候，一雪姐请我吃了烤鸭，还给我介绍了很多东西。现在，我们已经是好朋友了。",
+        "passagePinyin": "Wǒ zài Běijīng lǚyóu de shíhou, Yīxuě jiě qǐng wǒ chīle kǎoyā, hái gěi wǒ jièshàole hěn duō dōngxi. Xiànzài, wǒmen yǐjīng shì hǎo péngyou le.",
+        "questionZh": "他在北京旅游时，一雪：",
+        "questionPinyin": "Tā zài Běijīng lǚyóu shí, Yīxuě:",
+        "options": [
+         {
+          "id": "A",
+          "zh": "请他吃饭",
+          "pinyin": "qǐng tā chī fàn",
+          "vi": "mời anh ấy ăn cơm"
+         },
+         {
+          "id": "B",
+          "zh": "开车接他",
+          "pinyin": "kāichē jiē tā",
+          "vi": "lái xe đón anh ấy"
+         },
+         {
+          "id": "C",
+          "zh": "不在北京",
+          "pinyin": "bú zài Běijīng",
+          "vi": "không ở Bắc Kinh"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "一雪 “请我吃了烤鸭” — mời ăn vịt quay, tức là mời ăn cơm (A)."
+       },
+       {
+        "id": "wb2-l1-r4-q24",
+        "no": 24,
+        "passageZh": "我家在北京，我爸爸现在在上海工作，他让我和妈妈这个星期六坐火车去上海看他。爸爸说，他会接我们。",
+        "passagePinyin": "Wǒ jiā zài Běijīng, wǒ bàba xiànzài zài Shànghǎi gōngzuò, tā ràng wǒ hé māma zhège Xīngqīliù zuò huǒchē qù Shànghǎi kàn tā. Bàba shuō, tā huì jiē wǒmen.",
+        "questionZh": "爸爸现在在哪儿工作？",
+        "questionPinyin": "Bàba xiànzài zài nǎr gōngzuò?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "北京",
+          "pinyin": "Běijīng",
+          "vi": "Bắc Kinh"
+         },
+         {
+          "id": "B",
+          "zh": "上海",
+          "pinyin": "Shànghǎi",
+          "vi": "Thượng Hải"
+         },
+         {
+          "id": "C",
+          "zh": "西安",
+          "pinyin": "Xī'ān",
+          "vi": "Tây An"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Đoạn văn: “我爸爸现在在上海工作” — bố hiện làm việc ở Thượng Hải."
+       }
+      ]
+     }
+    ]
+   },
+   "wbWriting": {
+    "titleZh": "书写",
+    "titleEn": "Writing",
+    "titleVi": "Viết",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 1 — 模拟测练 · 三、书写， trang in 010 (PDF tr. 17).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Viết được đối chiếu trực tiếp từ ô chữ và pinyin in trong sách (bộ phận còn thiếu xác định theo ô 田字格 và mục Hán tự của chính bài; chữ cần viết xác định duy nhất theo pinyin in trên chỗ trống và ngữ cảnh câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần viết giữ nguyên bố cục sách in: Phần I chọn bộ phận còn thiếu để ghép thành chữ trong ô 田字格； Phần II nhìn pinyin in trên chỗ trống rồi tự gõ chữ Hán.",
+    "parts": [
+     {
+      "id": "wb2-l1-w1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第25—27题：根据部件组字。",
+      "instructionVi": "Câu 25–27: Chọn bộ phận còn thiếu để ghép thành chữ đúng trong ô chữ.",
+      "kind": "component-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "冫"
+       },
+       {
+        "id": "B",
+        "zh": "纟"
+       },
+       {
+        "id": "C",
+        "zh": "忄"
+       },
+       {
+        "id": "D",
+        "zh": "十"
+       }
+      ],
+      "example": {
+       "chars": [
+        {
+         "pinyin": "shén",
+         "full": "什",
+         "shown": "亻",
+         "gap": true
+        },
+        {
+         "pinyin": "me",
+         "full": "么",
+         "shown": "么"
+        }
+       ],
+       "answer": "D",
+       "id": "wb2-l1-w1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-w1-q25",
+        "no": 25,
+        "chars": [
+         {
+          "pinyin": "bù",
+          "full": "不",
+          "shown": "不"
+         },
+         {
+          "pinyin": "dǒng",
+          "full": "懂",
+          "shown": "董",
+          "gap": true
+         }
+        ],
+        "answer": "C",
+        "explainVi": "懂 ghép từ 忄 (bộ tâm đứng) và 董； ô chữ 懂 đang hiện 董 nên bộ phận thiếu là 忄 — chọn C."
+       },
+       {
+        "id": "wb2-l1-w1-q26",
+        "no": 26,
+        "chars": [
+         {
+          "pinyin": "gěi",
+          "full": "给",
+          "shown": "合",
+          "gap": true
+         },
+         {
+          "pinyin": "tā",
+          "full": "他",
+          "shown": "他"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "给 ghép từ 纟 và 合； ô chữ 给 đang hiện 合 nên bộ phận thiếu là 纟 — chọn B."
+       },
+       {
+        "id": "wb2-l1-w1-q27",
+        "no": 27,
+        "chars": [
+         {
+          "pinyin": "liǎng",
+          "full": "两",
+          "shown": "两"
+         },
+         {
+          "pinyin": "cì",
+          "full": "次",
+          "shown": "欠",
+          "gap": true
+         }
+        ],
+        "answer": "A",
+        "explainVi": "次 ghép từ 冫 (hai điểm thủy) và 欠； ô chữ 次 đang hiện 欠 nên bộ phận thiếu là 冫 — chọn A."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l1-w2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第28—30题：根据拼音写汉字。",
+      "instructionVi": "Câu 28–30: Gõ chữ Hán theo pinyin in trên chỗ trống.",
+      "kind": "pinyin-write",
+      "example": {
+       "stemZh": "你想喝茶还（　）喝咖啡？",
+       "stemPinyin": "Nǐ xiǎng hē chá hái (shì) hē kāfēi?",
+       "stemEn": "Would you like tea or coffee?",
+       "blankPinyin": "shì",
+       "answerZh": "是",
+       "id": "wb2-l1-w2-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l1-w2-q28",
+        "no": 28,
+        "stemZh": "他（　）时候不吃晚饭。",
+        "stemPinyin": "Tā (yǒu) shíhou bù chī wǎnfàn.",
+        "blankPinyin": "yǒu",
+        "answerZh": "有",
+        "explainVi": "“有时候” nghĩa là “có lúc, thỉnh thoảng” — chữ cần viết theo pinyin yǒu là 有."
+       },
+       {
+        "id": "wb2-l1-w2-q29",
+        "no": 29,
+        "stemZh": "我现在（　）经到北京了。",
+        "stemPinyin": "Wǒ xiànzài (yǐ) jīng dào Běijīng le.",
+        "blankPinyin": "yǐ",
+        "answerZh": "已",
+        "explainVi": "“已经” nghĩa là “đã” — chữ cần viết theo pinyin yǐ là 已."
+       },
+       {
+        "id": "wb2-l1-w2-q30",
+        "no": 30,
+        "stemZh": "这个不太贵，（　）我们买这个吧。",
+        "stemPinyin": "Zhège bú tài guì, (nà) wǒmen mǎi zhège ba.",
+        "blankPinyin": "nà",
+        "answerZh": "那",
+        "explainVi": "“那我们买这个吧” — “vậy thì mua cái này nhé” — chữ cần viết theo pinyin nà là 那."
+       }
+      ]
+     }
+    ]
    }
   },
   {
@@ -56444,6 +56998,560 @@
         ],
         "answer": "A",
         "explainVi": "Mẹ nói “他爸爸去接了” — bố của bé đã đi đón. Bố chưa tới nơi (“他爸爸没来呀”) nhưng người đi đón chính là bố."
+       }
+      ]
+     }
+    ]
+   },
+   "wbReading": {
+    "titleZh": "阅读",
+    "titleEn": "Reading",
+    "titleVi": "Đọc",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 2 — 模拟测练 · 二、阅读， trang in 016–019 (PDF tr. 23–26).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Đọc được đối chiếu trực tiếp từ nội dung in trong sách (đọc câu/đoạn và các lựa chọn in, rà soát ngữ nghĩa từng câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần đọc giữ nguyên bố cục sách in: câu, đoạn và lựa chọn đều kèm pinyin như trên trang sách. Hình ở Phần I là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l2-r1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第11—13题：选择与句子最匹配的图片。",
+      "instructionVi": "Câu 11–13: Chọn hình phù hợp nhất với câu.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-02/wb-r1-cinema.webp",
+        "imageAltVi": "Tranh vẽ lại: cô gái cười cầm hộp bỏng ngô lớn, ly nước và vé xem phim ở sảnh rạp chiếu phim, sàn lát ô đen trắng"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-02/wb-r1-classroom.webp",
+        "imageAltVi": "Tranh vẽ lại: phòng học dài trống không một người, dãy bàn ghế ngay ngắn, cửa sổ cao dọc bức tường bên phải"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-02/wb-r1-restaurant.webp",
+        "imageAltVi": "Tranh vẽ lại: người mẹ và em bé ngồi ăn cùng nhau ở bàn nhà hàng, trên bàn có nhiều món ăn"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-02/wb-r1-basketball.webp",
+        "imageAltVi": "Tranh vẽ lại: chàng trai mặc áo ba lỗ đen, quần đùi đỏ đang rê bóng rổ trên sân"
+       }
+      ],
+      "example": {
+       "sentenceZh": "每个星期六，我都去打篮球。",
+       "sentencePinyin": "Měi gè Xīngqīliù, wǒ dōu qù dǎ lánqiú.",
+       "sentenceEn": "I go to play basketball every Saturday.",
+       "answer": "D",
+       "id": "wb2-l2-r1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-r1-q11",
+        "no": 11,
+        "sentenceZh": "我和朋友去看电影了，是她买的票。",
+        "sentencePinyin": "Wǒ hé péngyou qù kàn diànyǐng le, shì tā mǎi de piào.",
+        "answer": "A",
+        "explainVi": "“看电影…她买的票” — đi xem phim, vé do bạn mua: hình A là cô gái cầm vé và bỏng ngô ở rạp phim."
+       },
+       {
+        "id": "wb2-l2-r1-q12",
+        "no": 12,
+        "sentenceZh": "这是我们的教室，但学生们都去外边玩了。",
+        "sentencePinyin": "Zhè shì wǒmen de jiàoshì, dàn xuéshēngmen dōu qù wàibian wán le.",
+        "answer": "B",
+        "explainVi": "Đây là 教室 (phòng học) nhưng học sinh đã ra ngoài chơi hết — hình B là lớp học trống."
+       },
+       {
+        "id": "wb2-l2-r1-q13",
+        "no": 13,
+        "sentenceZh": "这家饭店的菜都不贵，一个菜十多块钱，还很好吃。",
+        "sentencePinyin": "Zhè jiā fàndiàn de cài dōu bú guì, yí gè cài shí duō kuài qián, hái hěn hǎochī.",
+        "answer": "C",
+        "explainVi": "Câu nói về món ăn của 饭店 (nhà hàng) rẻ mà ngon — hình C là bàn ăn trong nhà hàng."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-r2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第14—17题：选词填空。",
+      "instructionVi": "Câu 14–17: Chọn từ trong khung điền vào chỗ trống; mỗi từ chỉ dùng một lần.",
+      "kind": "word-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "万",
+        "pinyin": "wàn"
+       },
+       {
+        "id": "B",
+        "zh": "远",
+        "pinyin": "yuǎn"
+       },
+       {
+        "id": "C",
+        "zh": "教室",
+        "pinyin": "jiàoshì"
+       },
+       {
+        "id": "D",
+        "zh": "车站",
+        "pinyin": "chēzhàn"
+       },
+       {
+        "id": "E",
+        "zh": "完",
+        "pinyin": "wán"
+       }
+      ],
+      "example": {
+       "id": "wb2-l2-r2-ex",
+       "lines": [
+        {
+         "zh": "题太多了，所以我没做（　）。",
+         "pinyin": "Tí tài duō le, suǒyǐ wǒ méi zuò ( )."
+        }
+       ],
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-r2-q14",
+        "no": 14,
+        "lines": [
+         {
+          "zh": "下课了，但外边下雨了，我还是在（　）里看书吧。",
+          "pinyin": "Xiàkè le, dàn wàibian xiàyǔ le, wǒ háishi zài ( ) lǐ kànshū ba."
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Tan học mà ngoài trời mưa — ở lại trong 教室 (lớp học) đọc sách."
+       },
+       {
+        "id": "wb2-l2-r2-q15",
+        "no": 15,
+        "lines": [
+         {
+          "zh": "那个（　）没有到北京大学的公交车。",
+          "pinyin": "Nàge ( ) méiyǒu dào Běijīng Dàxué de gōngjiāochē."
+         }
+        ],
+        "answer": "D",
+        "explainVi": "Nơi đón xe buýt đi Bắc Kinh Đại học là 车站 (bến xe)."
+       },
+       {
+        "id": "wb2-l2-r2-q16",
+        "no": 16,
+        "lines": [
+         {
+          "speakerVi": "Nữ",
+          "zh": "我让一雪来接我们吧。",
+          "pinyin": "Wǒ ràng Yīxuě lái jiē wǒmen ba."
+         },
+         {
+          "speakerVi": "Nam",
+          "zh": "一雪家有点儿（　），别让她来接我们了。",
+          "pinyin": "Yīxuě jiā yǒudiǎnr ( ), bié ràng tā lái jiē wǒmen le."
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Nhà 一雪 hơi 远 (xa) nên đừng để cô ấy đến đón nữa."
+       },
+       {
+        "id": "wb2-l2-r2-q17",
+        "no": 17,
+        "lines": [
+         {
+          "speakerVi": "Nam",
+          "zh": "你们学校有多少学生？",
+          "pinyin": "Nǐmen xuéxiào yǒu duōshao xuéshēng?"
+         },
+         {
+          "speakerVi": "Nữ",
+          "zh": "有一（　）多名中国学生，还有两千多名外国学生。",
+          "pinyin": "Yǒu yí ( ) duō míng Zhōngguó xuéshēng, hái yǒu liǎng qiān duō míng wàiguó xuéshēng."
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Đơn vị đếm lớn 万： “一万多名学生” — hơn mười nghìn học sinh."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-r3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第18—21题：匹配句子。",
+      "instructionVi": "Câu 18–21: Chọn câu trả lời trong khung phù hợp với mỗi câu hỏi.",
+      "kind": "match-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "我去找几个人过来帮忙。",
+        "pinyin": "Wǒ qù zhǎo jǐ gè rén guòlái bāngmáng."
+       },
+       {
+        "id": "B",
+        "zh": "他五岁多了。",
+        "pinyin": "Tā wǔ suì duō le."
+       },
+       {
+        "id": "C",
+        "zh": "天气不好，我们还是在家看电视吧。",
+        "pinyin": "Tiānqì bù hǎo, wǒmen háishi zài jiā kàn diànshì ba."
+       },
+       {
+        "id": "D",
+        "zh": "我没事，你别过来了。",
+        "pinyin": "Wǒ méishì, nǐ bié guòlái le."
+       },
+       {
+        "id": "E",
+        "zh": "他出去了，一会儿就回来。",
+        "pinyin": "Tā chūqù le, yíhuìr jiù huílái."
+       }
+      ],
+      "example": {
+       "id": "wb2-l2-r3-ex",
+       "zh": "请问李老师在吗？",
+       "pinyin": "Qǐngwèn Lǐ lǎoshī zài ma?",
+       "en": "Excuse me, is Mr. Li here?",
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-r3-q18",
+        "no": 18,
+        "zh": "小王说你生病了，我下班后就去看你。",
+        "pinyin": "Xiǎowáng shuō nǐ shēngbìng le, wǒ xiàbān hòu jiù qù kàn nǐ.",
+        "answer": "D",
+        "explainVi": "Người nghe đang ốm đáp “我没事，你别过来了” — tôi không sao, đừng qua thăm."
+       },
+       {
+        "id": "wb2-l2-r3-q19",
+        "no": 19,
+        "zh": "王老师，你儿子几岁了？",
+        "pinyin": "Wáng lǎoshī, nǐ érzi jǐ suì le?",
+        "answer": "B",
+        "explainVi": "Hỏi con trai thầy Vương mấy tuổi — B trả lời “他五岁多了” (hơn 5 tuổi)."
+       },
+       {
+        "id": "wb2-l2-r3-q20",
+        "no": 20,
+        "zh": "今天星期天，我们去看电影吧。",
+        "pinyin": "Jīntiān Xīngqītiān, wǒmen qù kàn diànyǐng ba.",
+        "answer": "C",
+        "explainVi": "Được rủ đi xem phim, người trả lời đổi kế hoạch vì “天气不好” — ở nhà xem TV (C)."
+       },
+       {
+        "id": "wb2-l2-r3-q21",
+        "no": 21,
+        "zh": "今天工作太多了。",
+        "pinyin": "Jīntiān gōngzuò tài duō le.",
+        "answer": "A",
+        "explainVi": "Việc hôm nay quá nhiều nên “我去找几个人过来帮忙” — đi tìm người tới giúp."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-r4",
+      "no": 4,
+      "titleZh": "第四部分",
+      "titleEn": "Part IV",
+      "instructionZh": "第22—24题：选择正确答案。",
+      "instructionVi": "Câu 22–24: Đọc đoạn ngắn rồi chọn đáp án đúng.",
+      "kind": "passage-choice",
+      "example": {
+       "passageZh": "我爱跳舞，但跳得不太好。",
+       "passagePinyin": "Wǒ ài tiàowǔ, dàn tiào de bú tài hǎo.",
+       "passageEn": "I love dancing, but I'm not good at it.",
+       "questionZh": "他：",
+       "questionPinyin": "Tā:",
+       "questionEn": "He:",
+       "options": [
+        {
+         "id": "A",
+         "zh": "下课了",
+         "pinyin": "xiàkè le",
+         "en": "finished class",
+         "vi": "đã tan học"
+        },
+        {
+         "id": "B",
+         "zh": "喜欢跳舞",
+         "pinyin": "xǐhuan tiàowǔ",
+         "en": "likes dancing",
+         "vi": "thích nhảy múa"
+        },
+        {
+         "id": "C",
+         "zh": "是小学生",
+         "pinyin": "shì xiǎoxuéshēng",
+         "en": "is a primary school student",
+         "vi": "là học sinh tiểu học"
+        }
+       ],
+       "answer": "B",
+       "id": "wb2-l2-r4-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-r4-q22",
+        "no": 22,
+        "passageZh": "我今年要去外国上大学，我妈有个朋友在那儿工作，她让我有事就给她的朋友打电话。",
+        "passagePinyin": "Wǒ jīnnián yào qù wàiguó shàng dàxué, wǒ mā yǒu gè péngyou zài nàr gōngzuò, tā ràng wǒ yǒu shì jiù gěi tā de péngyou dǎ diànhuà.",
+        "questionZh": "他要到外国做什么？",
+        "questionPinyin": "Tā yào dào wàiguó zuò shénme?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "找朋友",
+          "pinyin": "zhǎo péngyou",
+          "vi": "tìm bạn"
+         },
+         {
+          "id": "B",
+          "zh": "上大学",
+          "pinyin": "shàng dàxué",
+          "vi": "học đại học"
+         },
+         {
+          "id": "C",
+          "zh": "打电话",
+          "pinyin": "dǎ diànhuà",
+          "vi": "gọi điện thoại"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Đoạn văn mở đầu: “要去外国上大学” — ra nước ngoài để học đại học."
+       },
+       {
+        "id": "wb2-l2-r4-q23",
+        "no": 23,
+        "passageZh": "我在网上认识了一个外国朋友。他九月要来北京学中文，他说到时候来西安找我玩。",
+        "passagePinyin": "Wǒ zài wǎngshang rènshile yí gè wàiguó péngyou. Tā Jiǔyuè yào lái Běijīng xué Zhōngwén, tā shuō dào shíhou lái Xī'ān zhǎo wǒ wán.",
+        "questionZh": "外国朋友来北京做什么？",
+        "questionPinyin": "Wàiguó péngyou lái Běijīng zuò shénme?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "旅游",
+          "pinyin": "lǚyóu",
+          "vi": "du lịch"
+         },
+         {
+          "id": "B",
+          "zh": "找朋友",
+          "pinyin": "zhǎo péngyou",
+          "vi": "tìm bạn"
+         },
+         {
+          "id": "C",
+          "zh": "学中文",
+          "pinyin": "xué Zhōngwén",
+          "vi": "học tiếng Trung"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Người bạn nước ngoài “要来北京学中文” — đến Bắc Kinh để học tiếng Trung (việc tìm bạn chơi là ở Tây An)."
+       },
+       {
+        "id": "wb2-l2-r4-q24",
+        "no": 24,
+        "passageZh": "下雪天不好打车，但坐公交车太冷。爸爸说：“你还是去学开车吧，开车上下班就不会冷了。”",
+        "passagePinyin": "Xiàxuětiān bù hǎo dǎchē, dàn zuò gōngjiāochē tài lěng. Bàba shuō: “Nǐ háishi qù xué kāichē ba, kāichē shàng-xiàbān jiù bú huì lěng le.”",
+        "questionZh": "爸爸让他：",
+        "questionPinyin": "Bàba ràng tā:",
+        "options": [
+         {
+          "id": "A",
+          "zh": "开车上班",
+          "pinyin": "kāichē shàngbān",
+          "vi": "lái xe đi làm"
+         },
+         {
+          "id": "B",
+          "zh": "打车上学",
+          "pinyin": "dǎchē shàngxué",
+          "vi": "bắt xe đi học"
+         },
+         {
+          "id": "C",
+          "zh": "坐公交车上班",
+          "pinyin": "zuò gōngjiāochē shàngbān",
+          "vi": "đi xe buýt đi làm"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Bố bảo học lái xe để “开车上下班” — tự lái xe đi làm và về, khỏi lạnh (A)."
+       }
+      ]
+     }
+    ]
+   },
+   "wbWriting": {
+    "titleZh": "书写",
+    "titleEn": "Writing",
+    "titleVi": "Viết",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 2 — 模拟测练 · 三、书写， trang in 020 (PDF tr. 27).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Viết được đối chiếu trực tiếp từ ô chữ và pinyin in trong sách (bộ phận còn thiếu xác định theo ô 田字格 và mục Hán tự của chính bài; chữ cần viết xác định duy nhất theo pinyin in trên chỗ trống và ngữ cảnh câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần viết giữ nguyên bố cục sách in: Phần I chọn bộ phận còn thiếu để ghép thành chữ trong ô 田字格； Phần II nhìn pinyin in trên chỗ trống rồi tự gõ chữ Hán.",
+    "parts": [
+     {
+      "id": "wb2-l2-w1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第25—27题：根据部件组字。",
+      "instructionVi": "Câu 25–27: Chọn bộ phận còn thiếu để ghép thành chữ đúng trong ô chữ.",
+      "kind": "component-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "攵"
+       },
+       {
+        "id": "B",
+        "zh": "辶"
+       },
+       {
+        "id": "C",
+        "zh": "刂"
+       },
+       {
+        "id": "D",
+        "zh": "十"
+       }
+      ],
+      "example": {
+       "chars": [
+        {
+         "pinyin": "shén",
+         "full": "什",
+         "shown": "亻",
+         "gap": true
+        },
+        {
+         "pinyin": "me",
+         "full": "么",
+         "shown": "么"
+        }
+       ],
+       "answer": "D",
+       "id": "wb2-l2-w1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-w1-q25",
+        "no": 25,
+        "chars": [
+         {
+          "pinyin": "hěn",
+          "full": "很",
+          "shown": "很"
+         },
+         {
+          "pinyin": "yuǎn",
+          "full": "远",
+          "shown": "元",
+          "gap": true
+         }
+        ],
+        "answer": "B",
+        "explainVi": "远 ghép từ 元 và 辶 (bộ sước); ô chữ 远 đang hiện 元 nên bộ phận thiếu là 辶 — chọn B."
+       },
+       {
+        "id": "wb2-l2-w1-q26",
+        "no": 26,
+        "chars": [
+         {
+          "pinyin": "jiào",
+          "full": "教",
+          "shown": "孝",
+          "gap": true
+         },
+         {
+          "pinyin": "shì",
+          "full": "室",
+          "shown": "室"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "教 ghép từ 孝 và 攵 (bộ phốc); ô chữ 教 đang hiện 孝 nên bộ phận thiếu là 攵 — chọn A."
+       },
+       {
+        "id": "wb2-l2-w1-q27",
+        "no": 27,
+        "chars": [
+         {
+          "pinyin": "bié",
+          "full": "别",
+          "shown": "另",
+          "gap": true
+         },
+         {
+          "pinyin": "qù",
+          "full": "去",
+          "shown": "去"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "别 ghép từ 另 và 刂 (bộ đao đứng); ô chữ 别 đang hiện 另 nên bộ phận thiếu là 刂 — chọn C."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l2-w2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第28—30题：根据拼音写汉字。",
+      "instructionVi": "Câu 28–30: Gõ chữ Hán theo pinyin in trên chỗ trống.",
+      "kind": "pinyin-write",
+      "example": {
+       "stemZh": "你想喝茶还（　）喝咖啡？",
+       "stemPinyin": "Nǐ xiǎng hē chá hái (shì) hē kāfēi?",
+       "stemEn": "Would you like tea or coffee?",
+       "blankPinyin": "shì",
+       "answerZh": "是",
+       "id": "wb2-l2-w2-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l2-w2-q28",
+        "no": 28,
+        "stemZh": "我是在（　）上买的电影票。",
+        "stemPinyin": "Wǒ shì zài (wǎng) shang mǎi de diànyǐngpiào.",
+        "blankPinyin": "wǎng",
+        "answerZh": "网",
+        "explainVi": "“在网上买票” — mua vé trên mạng; chữ cần viết theo pinyin wǎng là 网."
+       },
+       {
+        "id": "wb2-l2-w2-q29",
+        "no": 29,
+        "stemZh": "王老师在那（　）教室上课。",
+        "stemPinyin": "Wáng lǎoshī zài nà (jiān) jiàoshì shàngkè.",
+        "blankPinyin": "jiān",
+        "answerZh": "间",
+        "explainVi": "Lượng từ chỉ phòng là 间 (jiān) — “那间教室” (phòng học kia); chữ cần viết là 间."
+       },
+       {
+        "id": "wb2-l2-w2-q30",
+        "no": 30,
+        "stemZh": "我们下次再过（　）看电影吧。",
+        "stemPinyin": "Wǒmen xià cì zài guò (lái) kàn diànyǐng ba.",
+        "blankPinyin": "lái",
+        "answerZh": "来",
+        "explainVi": "“过来” nghĩa là qua đây/tới đây; chữ cần viết theo pinyin lái là 来."
        }
       ]
      }

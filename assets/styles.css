@@ -610,3 +610,52 @@ details.study-tip{padding:10px 12px;margin:8px 0}
 .rec-status.playing{color:var(--accent,#256b46);font-weight:600}
 .rec-status.error{color:#b3261e;font-weight:600}
 .rec-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#c0392b;margin-right:6px;vertical-align:middle}
+
+/* Workbook listening zone (D39) — book identity inside the app design system */
+.wb-book-head{border-bottom:3px solid #e8590c;margin-bottom:10px;padding-bottom:8px}
+.wb-book-tab{display:inline-block;background:#e8590c;color:#fff;font-weight:700;font-size:.78rem;padding:3px 10px;border-radius:999px;margin-bottom:6px}
+.wb-book-head h2{margin:2px 0 0}
+.wb-mode{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+.wb-mode .btn{min-height:44px}
+.wb-part{margin-top:22px}
+.wb-part-head{border-left:5px solid #e8590c;padding-left:10px;margin:0 0 6px}
+.wb-instr{margin:4px 0 12px}
+.wb-item{border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 14px;background:var(--card,#fff)}
+.wb-example{background:#fff8f0;border-style:dashed}
+.wb-item-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.wb-no{font-weight:800;font-size:1.05rem}
+.wb-play{min-height:44px}
+.wb-pic-grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:640px){.wb-pic-grid{grid-template-columns:repeat(3,1fr)}.wb-shared-set{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.wb-shared-set{grid-template-columns:repeat(4,1fr)}}
+.wb-pic{display:block;width:100%;padding:0;border:2px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:pointer;text-align:left}
+.wb-pic img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.wb-pic-letter{display:block;padding:7px 10px;font-weight:700;font-size:.95rem}
+.wb-pic.sel{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand) inset}
+.wb-pic.is-answer{border-color:#2b8a3e;box-shadow:0 0 0 2px #2b8a3e inset}
+.wb-pic.is-wrong{border-color:#e03131;box-shadow:0 0 0 2px #e03131 inset}
+.wb-pic.is-static{cursor:default}
+.wb-letters{display:flex;gap:8px;flex-wrap:wrap}
+.wb-letter{min-width:52px;min-height:44px;border:2px solid var(--line);border-radius:10px;background:#fff;font-weight:800;font-size:1rem;cursor:pointer}
+.wb-letter.sel{border-color:var(--brand);background:#e7f5ff}
+.wb-letter.is-answer{border-color:#2b8a3e;background:#ebfbee}
+.wb-letter.is-wrong{border-color:#e03131;background:#fff5f5}
+.wb-choices{display:grid;gap:8px}
+.wb-choice{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-height:44px;padding:9px 12px;border:2px solid var(--line);border-radius:10px;background:#fff;font-size:1.02rem;cursor:pointer;text-align:left}
+.wb-choice.sel{border-color:var(--brand);background:#e7f5ff}
+.wb-choice.is-answer{border-color:#2b8a3e;background:#ebfbee}
+.wb-choice.is-wrong{border-color:#e03131;background:#fff5f5}
+.wb-choice.is-static{cursor:default}
+.wb-choice-letter{font-weight:800}
+.wb-choice-vi{color:var(--muted,#666)}
+.wb-tag{font-size:.8rem;font-weight:700;color:#2b8a3e}
+.wb-verdict{font-weight:700;margin:10px 0 4px}
+.wb-verdict.ok{color:#2b8a3e}
+.wb-verdict.bad{color:#e03131}
+.wb-script{background:#f8f9fa;border-radius:10px;padding:9px 12px;margin:8px 0}
+.wb-script p{margin:3px 0}
+.wb-speaker{font-weight:700}
+.wb-explain{margin:6px 0}
+.wb-example-answer{margin:6px 0}
+.wb-submit{position:sticky;bottom:12px;background:var(--card,#fff);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.wb-score{font-size:1.05rem}

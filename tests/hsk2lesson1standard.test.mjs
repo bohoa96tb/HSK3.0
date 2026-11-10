@@ -35,17 +35,20 @@ test('hsk2 catalogue: 15 lessons from the printed TOC, only lesson 1 open', () =
   assert.equal(content.lessons.filter((l) => l.level === 'HSK 1').length, 15);
 });
 
-test('hsk2 lesson 1 build: 22 sentences, 15 words in 4 groups, 8 tracks', () => {
+test('hsk2 lesson 1 build: 22 sentences, 15 words in 4 groups, 8 textbook tracks + 1 workbook track (D39)', () => {
   assert.equal(l1.reader.sentences.length, 22);
   assert.deepEqual(l1.reader.passages.map((g) => g.sentenceIds.length), [6, 6, 7, 3]);
   assert.deepEqual(l1.prepWords.map((w) => w.dialogueGroup), [1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4]);
   assert.deepEqual(l1.prepGroups.map((g) => g.trackId), ['trk-tb2-l01-2', 'trk-tb2-l01-4', 'trk-tb2-l01-6', 'trk-tb2-l01-8']);
   for (const w of l1.prepWords) assert.ok(w.audio && w.audio.status === 'asr-draft', w.id);
-  const tracks = l1.reader.audioTracks;
+  const tracks = l1.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb2-'));
   assert.equal(tracks.length, 8);
   for (const [i, t] of tracks.entries()) {
     assert.equal(t.url, `https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-01/1-${i + 1}.mp3`, t.id);
   }
+  const wbTrack = l1.reader.audioTracks.find((t) => t.id === 'trk-wb2-l01-1');
+  assert.ok(wbTrack, 'workbook listening track registered (D39)');
+  assert.equal(wbTrack.url, 'https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-01/01-1.mp3');
   for (const s of l1.reader.sentences) {
     const t = tracks.find((x) => x.id === s.audio.trackId);
     assert.ok(t && s.audio.end <= t.durationSec && s.audio.start < s.audio.end, s.id);

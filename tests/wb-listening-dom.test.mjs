@@ -152,3 +152,63 @@ test('lesson 2 part III: dialogue and option pinyin hidden before checking (D23)
   assert.match(q9b.textContent, /Đúng\./);
   assert.ok(q9b.textContent.includes('dǎchē'), 'pinyin appears after checking');
 });
+
+// ---- D42: the same zone on Lesson 3, built full-30 in one round. ----
+await route('lesson/hsk2-l03/exercises');
+await tick(); await tick();
+
+test('wb zone renders on lesson 3 with book structure (D42)', () => {
+  const card = document.getElementById('wb-listening-card');
+  assert.ok(card, 'wb card present on hsk2-l03');
+  assert.match(card.textContent, /Luyện theo Workbook/);
+  assert.match(document.body.textContent, /Luyện tập gồm 3 phần/);
+  assert.match(document.body.textContent, /C\. Luyện theo Workbook/);
+  const listenSec = document.getElementById('wb-sec-listening');
+  assert.equal($$('.wb-item:not(.wb-example)', listenSec).length, 10, '10 listening questions');
+  assert.equal($$('.wb-example', listenSec).length, 3, '3 listening worked examples, one per part');
+  assert.equal($$('.wb-shared-set .wb-pic', listenSec).length, 4, 'part II shared picture set of 4');
+  assert.equal($$('.wb-item:not(.wb-example)', card).length, 30, '30 questions across listening/reading/writing (D42)');
+  assert.equal($$('.wb-example', card).length, 9, '9 worked examples across all parts');
+  // shared book example, same text as lessons 1–2
+  assert.match(item('wb2-l3-p1-ex').textContent, /我每天坐公交车去上班/);
+  assert.match(item('wb2-l3-p1-ex').textContent, /Đáp án mẫu/);
+});
+
+test('lesson 3 practice mode: transcript hidden before checking; wrong then right with redo', () => {
+  const q1 = item('wb2-l3-p1-q1');
+  assert.ok(!q1.textContent.includes('爸爸回来后'), 'transcript must not leak before checking');
+  pick('wb2-l3-p1-q1', 'B');
+  $$('[data-wb-check="wb2-l3-p1-q1"]')[0].click();
+  let q1b = item('wb2-l3-p1-q1');
+  assert.match(q1b.textContent, /Chưa đúng — đáp án là C/);
+  assert.ok(q1b.textContent.includes('爸爸回来后'), 'transcript revealed after checking');
+  $$('[data-wb-redo="wb2-l3-p1-q1"]')[0].click();
+  pick('wb2-l3-p1-q1', 'C');
+  $$('[data-wb-check="wb2-l3-p1-q1"]')[0].click();
+  q1b = item('wb2-l3-p1-q1');
+  assert.match(q1b.textContent, /Đúng\./);
+});
+
+test('lesson 3 part III: dialogue and option pinyin hidden before checking (D23)', () => {
+  const q7 = item('wb2-l3-p3-q7');
+  assert.ok(!q7.textContent.includes('我房间'), 'dialogue hidden before checking');
+  assert.ok(!q7.textContent.includes('jiā li'), 'option pinyin hidden before checking (D23)');
+  pick('wb2-l3-p3-q7', 'C');
+  $$('[data-wb-check="wb2-l3-p3-q7"]')[0].click();
+  const q7b = item('wb2-l3-p3-q7');
+  assert.match(q7b.textContent, /Đúng\./);
+  assert.ok(q7b.textContent.includes('jiā li'), 'pinyin appears after checking');
+});
+
+test('lesson 3 test mode: score counts only correct picks (9/10 with q10 wrong)', () => {
+  $$('[data-wb-mode="test"]')[0].click();
+  const answers = { 'wb2-l3-p1-q1': 'C', 'wb2-l3-p1-q2': 'B', 'wb2-l3-p1-q3': 'A', 'wb2-l3-p2-q4': 'A', 'wb2-l3-p2-q5': 'B', 'wb2-l3-p2-q6': 'C', 'wb2-l3-p3-q7': 'C', 'wb2-l3-p3-q8': 'C', 'wb2-l3-p3-q9': 'B', 'wb2-l3-p3-q10': 'C' };
+  const submit = () => $$('[data-wb-submit]')[0];
+  assert.ok(submit().disabled, 'submit locked until all 10 are answered');
+  for (const [id, opt] of Object.entries(answers)) pick(id, opt);
+  assert.ok(!item('wb2-l3-p1-q3').textContent.includes('他今天不想出去'), 'transcripts stay hidden before submit');
+  submit().click();
+  const card = document.getElementById('wb-listening-card');
+  assert.match(card.textContent, /Kết quả: 9\/10/);
+  assert.ok(item('wb2-l3-p1-q3').textContent.includes('他今天不想出去'), 'transcript revealed after submit');
+});

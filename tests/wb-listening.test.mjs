@@ -9,6 +9,7 @@ const content = JSON.parse(readFileSync("data/content.json", "utf8"));
 const WB_LESSONS = [
   { lessonId: "hsk2-l01", nn: "01" },
   { lessonId: "hsk2-l02", nn: "02" },
+  { lessonId: "hsk2-l03", nn: "03" },
 ];
 
 for (const { lessonId, nn } of WB_LESSONS) {
@@ -65,8 +66,9 @@ for (const { lessonId, nn } of WB_LESSONS) {
 }
 
 test("wb examples are the book's shared examples in every lesson (same text, L1 images reused)", () => {
-  const [a, b] = WB_LESSONS.map(({ lessonId }) => content.additionalLessons.find((l) => l.lessonId === lessonId).wbListening);
-  for (let i = 0; i < 3; i++) {
+  const all = WB_LESSONS.map(({ lessonId }) => content.additionalLessons.find((l) => l.lessonId === lessonId).wbListening);
+  const [a] = all;
+  for (const b of all.slice(1)) for (let i = 0; i < 3; i++) {
     const ea = a.parts[i].example, eb = b.parts[i].example;
     assert.deepEqual(eb.lines, ea.lines, `part ${i + 1} example lines identical`);
     assert.equal(eb.answer, ea.answer, `part ${i + 1} example answer identical`);

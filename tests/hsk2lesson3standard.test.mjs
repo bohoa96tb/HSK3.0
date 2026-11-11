@@ -30,11 +30,14 @@ test('hsk2 lesson 3 build: 18 sentences, 15 words in 4 groups, 8 tracks', () => 
   assert.deepEqual(l3.prepWords.map((w) => w.dialogueGroup), [1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4]);
   assert.deepEqual(l3.prepGroups.map((g) => g.trackId), ['trk-tb2-l03-2', 'trk-tb2-l03-4', 'trk-tb2-l03-6', 'trk-tb2-l03-8']);
   for (const w of l3.prepWords) assert.ok(w.audio && w.audio.status === 'asr-draft', w.id);
-  const tracks = l3.reader.audioTracks;
+  const tracks = l3.reader.audioTracks.filter((t) => t.id.startsWith('trk-tb2-'));
   assert.equal(tracks.length, 8);
   for (const [i, t] of tracks.entries()) {
     assert.equal(t.url, `https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-03/3-${i + 1}.mp3`, t.id);
   }
+  const wbTrack = l3.reader.audioTracks.find((t) => t.id === 'trk-wb2-l03-1');
+  assert.ok(wbTrack, 'workbook listening track registered (D42)');
+  assert.equal(wbTrack.url, 'https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-03/03-1.mp3');
   for (const s of l3.reader.sentences) {
     const t = tracks.find((x) => x.id === s.audio.trackId);
     assert.ok(t && s.audio.end <= t.durationSec && s.audio.start < s.audio.end, s.id);

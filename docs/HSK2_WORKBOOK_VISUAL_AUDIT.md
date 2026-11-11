@@ -7,7 +7,7 @@ Ngày kiểm kê: 2026-11-10. Nguồn: `hsk-course-2-workbook.pdf` (bản scan H
 - 《新HSK教程 2 学练手册》 (New HSK Course 2 Workbook), FLTRP, ISBN 978-7-5213-7178-9.
 - **176 trang PDF**; trang PDF = trang in + 7. Bản scan chỉ có lớp ảnh (không có lớp chữ) — mọi nội dung phải đọc trực tiếp từ ảnh trang; OCR tự động không đáng tin, các mục đọc bằng mắt trong tài liệu này đều ghi rõ trang đối chiếu.
 - Cấu trúc: 15 bài (mỗi bài 10 trang in, bài n bắt đầu ở trang in (n−1)×10+1) + đề mô phỏng cuối sách 模拟测试 HSK（二级） từ trang in 151 đến hết (trang in 169).
-- Mỗi bài gồm: 小语讲堂 (một、汉字 — đã có khu vực luyện viết riêng của dự án; hai、字词拓展） và 模拟测练 （一、听力 / 二、阅读 / 三、写作）. **Đúng 30 câu mỗi bài** (nghe 10, đọc 14, viết 6). Phạm vi xử lý: D39/D40 (2026-11-10) chỉ dựng 一、听力 của Bài 1–2; **D41 (2026-11-10, Hoa chỉ đạo) bổ sung 二、阅读 + 三、书写 cho Bài 1–2 để đủ 30 câu** — kiểm kê ở mục 4d/4e dưới đây. Từ Bài 3 trở đi, mỗi bài dựng đủ 30 câu ngay từ đầu.
+- Mỗi bài gồm: 小语讲堂 (một、汉字 — đã có khu vực luyện viết riêng của dự án; hai、字词拓展） và 模拟测练 （一、听力 / 二、阅读 / 三、写作）. **Đúng 30 câu mỗi bài** (nghe 10, đọc 14, viết 6). Phạm vi xử lý: D39/D40 (2026-11-10) chỉ dựng 一、听力 của Bài 1–2; **D41 (2026-11-10, Hoa chỉ đạo) bổ sung 二、阅读 + 三、书写 cho Bài 1–2 để đủ 30 câu** — kiểm kê ở mục 4d/4e dưới đây. Từ Bài 3 trở đi, mỗi bài dựng đủ 30 câu ngay từ đầu — **D42 (2026-11-11): Bài 3 đã dựng đủ 30 câu trong một lượt**, kiểm kê ở mục 4g.
 
 ## 2. Phần nghe mỗi bài — cấu trúc thống nhất (đã kiểm chứng Bài 1, 2, 15; các bài còn lại theo cùng khuôn, kiểm chứng ở mức trang khi biên soạn từng bài)
 
@@ -288,6 +288,121 @@ Quy trình như mục 4b: mô tả cảnh từ bản scan → sinh tranh phẳng
 
 Hình phần Viết: không cần hình — bộ phận và ô chữ là ký tự chữ, dựng bằng văn bản.
 
+## 4g. Kiểm kê chi tiết Bài 3 《我想去西安旅游》 — đủ 30 câu ngay từ đầu (D42, 2026-11-11)
+
+Bài 3 chiếm tr. in 021–030 (PDF 28–37): mục 汉字 tr. in 021–022 dạy 三点水 氵 (ví dụ 汉、洗） và 宝盖头 宀 (ví dụ 家、完）; phần nghe tr. in 023–025, phần đọc tr. in 026–029, phần viết tr. in 030. Cả 9 ví dụ mẫu (nghe 3 + đọc 4 + viết 2) đều giống hệt Bài 1–2 như sách in dùng chung: dữ liệu ví dụ dùng lại nguyên văn của Bài 1–2, riêng cửa sổ audio của 3 ví dụ nghe được căn lại trên track Bài 3. Hai ảnh dùng chung có bản sao byte-identical trong thư mục bài: `wb-p2-soccer.webp` (Part II nghe · D — sách in dùng cùng ảnh bóng đá ở mọi bài; Bài 3 dùng bản sao của tranh Bài 1) và `wb-r1-basketball.webp` (Part I đọc · D — cùng file với Bài 1–2).
+
+### 一、听力 — tr. in 023–025 (PDF 30–32), track `03-1.mp3`
+
+Track dài 548,8 giây (đo bằng ffprobe), gồm đúng phần nghe của Bài 3, mỗi câu đọc 2 lần. Mốc là khoảng phát của câu (cả hai lượt đọc), trạng thái asr-draft. Kiểm tra đầy đủ bằng envelope tín hiệu (RMS trên bản WAV 16 kHz): cả 13 đơn vị (3 ví dụ + 10 câu) đều có đủ hai lượt đọc trong cửa sổ đã chốt; khác hai bài trước, ASR có VAD lần này không bỏ sót lượt đọc nào. Lưu ý biên Part III (đã hiệu chỉnh theo đo tín hiệu của QA độc lập): lượt hỏi hai của câu 7 kết thúc hẳn ở 377,1 và sau đó là im lặng tuyệt đối; dấu vết "八" ở ~376,9–378,0 trong ASR là lỗi biên của ASR — tiếng báo số câu 8 thực tế nằm ở ~391–393 giây, ngay trước cửa sổ câu 8. Cửa sổ câu 7 kết thúc 377,4 không chứa chút âm thanh báo số nào.
+
+#### Part I — nghe câu, chọn hình (ví dụ dùng chung cả 15 bài: 我每天坐公交车去上班。→ A; mốc trên track Bài 3: 57,4–67,6)
+
+| Câu | Câu nghe (từ audio) | A | B | C | Đáp án | Mốc (giây) |
+|---|---|---|---|---|---|---|
+| 1 | 爸爸回来后，和儿子一起看电视。 | Hai bố con chơi xếp gỗ trên sàn | Hai người đàn ông nấu ăn trong bếp | Hai bố con ngồi xem tivi | C | 81,2–94,4 |
+| 2 | 苹果都洗好了，你想吃就自己拿。 | Người đàn ông bên xe tải chở thùng táo | Bát táo đã rửa sạch trên bàn | Đôi nam nữ chọn táo ở siêu thị | B | 102,1–115,7 |
+| 3 | 他今天不想出去，想在家休息休息。 | Người đàn ông nằm nghỉ trên sofa ở nhà | Phụ nữ ngủ ở ghế phụ trong ô tô | Người vươn vai tập thể dục giữa núi | A | 122,5–137,5 |
+
+#### Part II — nghe hội thoại, chọn hình trong bộ chung (ví dụ dùng chung: 你喜欢什么运动？/我最喜欢踢足球。→ D; mốc trên track Bài 3: 156,8–171,5)
+
+Bộ hình chung của Bài 3: A — gian bếp gia đình: người phụ nữ ngồi ở bàn ăn nói điện thoại, em bé ngồi cạnh, người đàn ông đứng nấu ăn bên quầy bếp; B — cô gái cầm micro hát trên sân khấu rèm đỏ, một tay giơ cao; C — người đàn ông mặc vest xách cặp công tác đi bộ cùng bé gái đeo cặp sách ngoài trời; D — cô gái áo đỏ tâng bóng đá bằng đầu gối (cùng ảnh mọi bài).
+
+| Câu | Hội thoại (nguyên văn từ audio) | Đáp án | Mốc (giây) |
+|---|---|---|---|
+| 4 | 饭做好了，你过来吃饭吧。/ 好，我去洗洗手。 | A | 188,8–206,5 |
+| 5 | 星期天你出去玩了吗？/ 出去了，我和朋友一起去唱歌了。 | B | 218,5–237,5 |
+| 6 | 每天都是您送我上学，为什么不让妈妈送我？/ 她工作太忙，没时间。 | C | 249,5–272,5 |
+
+#### Part III — nghe hội thoại, chọn đáp án chữ (ví dụ dùng chung: hội thoại xin viết 姓名 → A; mốc trên track Bài 3: 294,9–322,3)
+
+| Câu | Câu hỏi nghe được | A | B | C | Đáp án | Mốc (giây) |
+|---|---|---|---|---|---|---|
+| 7 | 他们现在在哪儿？(người bệnh viết xong mấy chữ sẽ về phòng mình nghỉ) | 书店 | 教室 | 家里 | C | 343,3–377,4 |
+| 8 | 他们做什么了？(khen phim tiếng Trung hay, hỏi có nghe hiểu không) | 上课了 | 听歌了 | 看电影了 | C | 393,5–420,3 |
+| 9 | 男的想吃什么？(bữa sáng có trứng, bánh mì, sữa; anh ấy hỏi còn bánh bao hôm qua không) | 鸡蛋 | 包子 | 面包 | B | 435,7–478,0 |
+| 10 | 手机在哪儿？(tìm trên bàn, trên ghế đều không có; điện thoại ở ngay trong tay) | 手里 | 椅子上 | 桌子上 | A | 493,2–535,5 |
+
+### 二、阅读 Reading — tr. in 026–029 (PDF 33–36)
+
+**Part I — chọn hình khớp câu (tr. in 026).** Bộ 4 hình chung: A — cô gái ở bàn làm việc văn phòng trước máy tính, vươn hai tay lên cao mỉm cười; B — đôi bàn tay đầy bọt xà phòng rửa dưới vòi nước ở bồn rửa; C — đôi nam nữ ở bàn nhà hàng cùng xem thực đơn lớn; D — bóng rổ (cùng ảnh Bài 1–2). Ví dụ → **D**.
+
+| Câu | Câu in | Đáp án | Căn cứ |
+|---|---|---|---|
+| 11 | 去洗洗手吧，洗完手来吃饭。 | B | 洗手 — rửa tay dưới vòi nước |
+| 12 | 不到五点，她就做完工作了。 | A | Làm xong việc ở bàn văn phòng, vươn vai nhẹ nhõm |
+| 13 | 这家饭店的菜很不错，你看看想吃什么。 | C | 饭店 — xem thực đơn ở nhà hàng |
+
+**Part II — chọn từ điền trống (tr. in 027).** Khung: A 每 měi · B 自己 zìjǐ · C 这么 zhème · D 出去 chūqù · E 完 wán. Ví dụ (giống Bài 1–2) → **E**. Khung dùng hết 5/5.
+
+| Câu | Chỗ trống | Đáp án | Căn cứ |
+|---|---|---|---|
+| 14 | 学校里（　）间教室都有学生在上课。 | A 每 | 每＋lượng từ 间： phòng nào cũng có học sinh |
+| 15 | 我都是早上七点多（　），晚上八点多回来的。 | D 出去 | Sáng ra ngoài / tối trở về |
+| 16 | 学校电影院的电影票（　）便宜啊！ | C 这么 | 这么＋tính từ: rẻ đến thế (vé chỉ hơn 20 tệ) |
+| 17 | 今天下班后我（　）回去，你别来接我了。 | B 自己 | Tự mình về, đừng đến đón |
+
+**Part III — nối câu (tr. in 028).** Khung: A 她去医院看病了。· B 我这个星期工作太多了。· C 给我吧，我去洗一洗。· D 是的，今天的菜非常好吃。· E 他出去了，一会儿就回来。(câu E giống hệt Bài 1–2). Ví dụ → **E**. Khung dùng hết 5/5 — không có câu nhiễu thừa, như Bài 1–2.
+
+| Câu | Câu hỏi in | Đáp án | Căn cứ |
+|---|---|---|---|
+| 18 | 你们都吃好了吗？ | D | Đáp khẳng định: món hôm nay rất ngon |
+| 19 | 家月为什么没有来上课？ | A | Cô ấy đi bệnh viện khám bệnh |
+| 20 | 你看，我今天买了这么多苹果。 | C | Đưa táo đây, tôi đi rửa |
+| 21 | 你为什么每天都这么晚回来啊？ | B | Tuần này quá nhiều việc |
+
+**Part IV — đọc đoạn chọn đáp án (tr. in 029).** Ví dụ giống Bài 1–2 → **B**.
+
+| Câu | Đoạn in (tóm tắt) | Câu hỏi | A | B | C | Đáp án |
+|---|---|---|---|---|---|---|
+| 22 | Đọc xong một cuốn sách hay mấy ngày nay, muốn giới thiệu cho học sinh của mình cùng đọc | 他想让谁看看那本书？ | 朋友 | 学生 | 老师 | B |
+| 23 | Mua vé phim thứ Bảy định đi với bạn gái; cô ấy bận việc công ty nên đi với bạn học | 他是和谁一起看的电影？ | 自己 | 同学 | 女朋友 | B |
+| 24 | Cùng bạn đến Bắc Kinh du lịch, ghé thăm Bắc Kinh Đại học; trên mạng nói có hơn 3.000 sinh viên nước ngoài học ở đó | 他到北京大学做什么？ | 旅游 | 学习 | 看朋友 | A |
+
+### 三、书写 Writing — tr. in 030 (PDF 37); mục 汉字 của bài ở tr. in 021–022 dạy 三点水 氵 và 宝盖头 宀
+
+**Part I — ghép bộ phận (đọc phóng 300 dpi của PDF 37).** Khung: A 辶 · B 宀 · C 氵 · D 十. Ví dụ （什么 — 什 thiếu 十） → **D**. Khung dùng hết 4/4.
+
+| Câu | Từ | Ô thiếu | Hiện có | Đáp án | Căn cứ |
+|---|---|---|---|---|---|
+| 25 | 送你 | 送 | 关 | A 辶 | 送 = 辶＋关 |
+| 26 | 洗手 | 洗 | 先 | C 氵 | 洗 = 氵＋先； 氵 là bộ bài này dạy (ví dụ chữ 汉、洗） |
+| 27 | 写完 | 完 | 元 | B 宀 | 完 = 宀＋元； 宀 là bộ bài này dạy (ví dụ chữ 家、完）; ô 写 in đầy đủ |
+
+**Part II — viết chữ theo pinyin.** Ví dụ giống Bài 1–2 → **是** (shì).
+
+| Câu | Câu in | Pinyin trên trống | Chữ | Căn cứ |
+|---|---|---|---|---|
+| 28 | 你今天（　）什么来晚了？ | wèi | 为 | 为什么 — vì sao đến muộn |
+| 29 | 外边（　）么热，我们还是回去吧。 | zhè | 这 | 这么热 — nóng thế này |
+| 30 | 这个电影很（　）错，你也可以看看。 | bú | 不 | 很不错 — rất hay |
+
+### Manifest hình Bài 3 (theo chuẩn D19 — 15 hình mới + 2 bản sao dùng chung)
+
+Quy trình như mục 4b/4c: mô tả cảnh từ ảnh gốc trong sách → sinh tranh phẳng → người biên soạn xem từng hình đối chiếu đối tượng/số lượng/hành động/quan hệ. Cả 15 hình đạt ngay lần sinh đầu, không hình nào phải sinh lại. Kích thước phát hành: WebP 880×587 q78 (19–76 KB/hình), thư mục `assets/hsk2-lesson-03/`.
+
+| File | Trang sách | Ảnh gốc mô tả | Đáp án liên quan |
+|---|---|---|---|
+| wb-q1-blocks.webp | tr.023 | Hai bố con ngồi sàn phòng khách chơi xếp gỗ | Câu 1 — A |
+| wb-q1-cooking.webp | tr.023 | Hai người đàn ông nấu ăn trong bếp, một người đổ nguyên liệu từ túi | Câu 1 — B |
+| wb-q1-tv.webp | tr.023 | Hai bố con ngồi sàn xem tivi, bố cầm điều khiển | Câu 1 — C (đáp án) |
+| wb-q2-van.webp | tr.023 | Người đàn ông bên xe tải nhỏ chở đầy thùng táo đỏ | Câu 2 — A |
+| wb-q2-bowl.webp | tr.023 | Bát táo đỏ và vàng đã rửa sạch trên bàn | Câu 2 — B (đáp án) |
+| wb-q2-market.webp | tr.023 | Đôi nam nữ chọn táo ở quầy trái cây siêu thị | Câu 2 — C |
+| wb-q3-sofa.webp | tr.024 | Người đàn ông nằm dài trên sofa ở nhà, tay gác sau đầu | Câu 3 — A (đáp án) |
+| wb-q3-car.webp | tr.024 | Phụ nữ ngủ ở ghế phụ trong ô tô, đàn ông lái xe | Câu 3 — B |
+| wb-q3-mountain.webp | tr.024 | Người vươn vai tập thể dục giữa núi lúc bình minh, bàn cắm trại bên cạnh | Câu 3 — C |
+| wb-p2-kitchen.webp | tr.024 | Bếp gia đình: phụ nữ ngồi bàn ăn nói điện thoại, bé ngồi cạnh, đàn ông nấu ăn | Part II — A (đáp án câu 4) |
+| wb-p2-singing.webp | tr.024 | Cô gái cầm micro hát trên sân khấu rèm đỏ | Part II — B (đáp án câu 5) |
+| wb-p2-school.webp | tr.024 | Đàn ông mặc vest xách cặp đi cùng bé gái đeo cặp sách | Part II — C (đáp án câu 6) |
+| wb-p2-soccer.webp | tr.024 | Cô gái áo đỏ tâng bóng đá (cùng ảnh mọi bài) | Part II — D (đáp án ví dụ); bản sao byte-identical của tranh Bài 1 |
+| wb-r1-office.webp | tr.026 | Cô gái ở bàn văn phòng vươn hai tay lên cao mỉm cười | Đọc Part I — A (đáp án câu 12) |
+| wb-r1-handwash.webp | tr.026 | Đôi bàn tay đầy bọt xà phòng rửa dưới vòi nước | Đọc Part I — B (đáp án câu 11) |
+| wb-r1-menu.webp | tr.026 | Đôi nam nữ ở bàn nhà hàng xem thực đơn lớn | Đọc Part I — C (đáp án câu 13) |
+| wb-r1-basketball.webp | tr.026 | Chàng trai áo ba lỗ đen quần đỏ rê bóng rổ (cùng ảnh Bài 1–2) | Đọc Part I — D (đáp án ví dụ); cùng file với Bài 1 · D |
+
+Hình phần Viết: không cần hình — bộ phận và ô chữ là ký tự chữ, dựng bằng văn bản.
+
 ## 5. Danh sách trang đã phân tích trực tiếp
 
 - Toàn sách ở mức cấu trúc: bìa, 使用说明 (PDF 5–6), trang đầu/cuối.
@@ -295,6 +410,7 @@ Hình phần Viết: không cần hình — bộ phận và ô chữ là ký t�
 - Bài 1 Đọc + Viết (D41): PDF 13–17 (tr. in 006–010) — kiểm kê từng câu ở mục 4d; ô 田字格 đọc thêm ở bản phóng 300 dpi của PDF 17.
 - Bài 2: PDF 20, 21, 22 (tr. in 013, 014, 015) — kiểm kê từng câu ở mục 4c; Bài 15: PDF 150 (tr. in 143) — xác nhận khuôn Part I và ví dụ dùng chung.
 - Bài 2 Đọc + Viết + 汉字 (D41): PDF 18, 19 (tr. in 011–012, mục Hán tự) và PDF 23–27 (tr. in 016–020) — kiểm kê từng câu ở mục 4e; ô 田字格 và khung bộ phận đọc thêm ở bản phóng 300 dpi của PDF 27.
+- Bài 3 đủ 30 câu (D42): PDF 28–37 (tr. in 021–030) — kiểm kê từng câu ở mục 4g; ô 田字格 và khung bộ phận đọc thêm ở bản phóng 300 dpi của PDF 37.
 - Đề mô phỏng cuối sách: PDF 160, 168, 174 (tr. in 153, 161, 167) — xác nhận đề có phần nghe chọn hình riêng và phần viết; kiểm kê chi tiết để sau.
 - Các trang còn lại của từng bài sẽ được đọc trực tiếp khi biên soạn bài đó (mỗi bài một lượt theo quy trình biên soạn → QA độc lập → phát hành), không kiểm kê suy đoán hàng loạt.
 

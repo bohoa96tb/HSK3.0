@@ -138,3 +138,79 @@ test('lesson 2 renders 30 items and grades reading/writing picks (D41)', () => {
   $$('[data-wbw-check="wb2-l2-w2-q29"]')[0].click();
   assert.match(item('wb2-l2-w2-q29').textContent, /Đúng\./);
 });
+
+// ---- Lesson 3 (D42): built full-30 in one round, same renderer ----
+await route('lesson/hsk2-l03/exercises');
+await tick(); await tick();
+
+test('lesson 3 renders 30 items and grades one flow per kind (D42)', () => {
+  const card = document.getElementById('wb-listening-card');
+  assert.match(card.textContent, /C\. Luyện theo Workbook — 模拟测练 Simulated Practice/);
+  const rd = document.getElementById('wb-sec-reading');
+  const wr = document.getElementById('wb-sec-writing');
+  assert.equal($$('.wb-item:not(.wb-example)', rd).length, 14, '14 reading questions');
+  assert.equal($$('.wb-item:not(.wb-example)', wr).length, 6, '6 writing questions');
+  assert.equal($$('.wb-example', rd).length, 4, '4 reading worked examples');
+  assert.equal($$('.wb-example', wr).length, 2, '2 writing worked examples');
+  assert.equal($$('.wb-shared-set .wb-pic', rd).length, 4, 'reading part I shared picture set of 4');
+  // printed pinyin visible by design (D41/D42)
+  assert.ok(item('wb2-l3-r1-q11').textContent.includes('xǐwán'), 'sentence pinyin visible before answering');
+  // picture-match via letter chips
+  rpick('wb2-l3-r1-q11', 'B');
+  $$('[data-wbr-check="wb2-l3-r1-q11"]')[0].click();
+  assert.match(item('wb2-l3-r1-q11').textContent, /Đúng\./);
+  // word bank
+  rpick('wb2-l3-r2-q15', 'D');
+  $$('[data-wbr-check="wb2-l3-r2-q15"]')[0].click();
+  assert.match(item('wb2-l3-r2-q15').textContent, /Đúng\./);
+  // match bank
+  rpick('wb2-l3-r3-q19', 'A');
+  $$('[data-wbr-check="wb2-l3-r3-q19"]')[0].click();
+  assert.match(item('wb2-l3-r3-q19').textContent, /Đúng\./);
+  // passage choice: meaning gloss appears only after checking
+  assert.ok(!item('wb2-l3-r4-q24').textContent.includes('du lịch'), 'option meaning hidden before checking');
+  rpick('wb2-l3-r4-q24', 'A');
+  $$('[data-wbr-check="wb2-l3-r4-q24"]')[0].click();
+  assert.match(item('wb2-l3-r4-q24').textContent, /Đúng\./);
+  assert.ok(item('wb2-l3-r4-q24').textContent.includes('du lịch'), 'option meaning revealed after checking');
+  // component bank: completed word shown after checking
+  wpick('wb2-l3-w1-q26', 'C');
+  $$('[data-wbw-check="wb2-l3-w1-q26"]')[0].click();
+  assert.match(item('wb2-l3-w1-q26').textContent, /Đúng\./);
+  assert.ok(item('wb2-l3-w1-q26').textContent.includes('洗手'), 'completed word 洗手 revealed');
+});
+
+test('lesson 3 typed writing answer: wrong shows the character, redo then right (D42)', () => {
+  const checkBtn = () => $$('[data-wbw-check="wb2-l3-w2-q28"]')[0];
+  assert.ok(checkBtn().disabled, 'check disabled while the input is empty');
+  type('wb2-l3-w2-q28', '这');
+  checkBtn().click();
+  assert.match(item('wb2-l3-w2-q28').textContent, /Chưa đúng — đáp án là 为/);
+  $$('[data-wbw-redo="wb2-l3-w2-q28"]')[0].click();
+  type('wb2-l3-w2-q28', ' 为 ');
+  checkBtn().click();
+  assert.match(item('wb2-l3-w2-q28').textContent, /Đúng\./);
+});
+
+test('lesson 3 test mode: per-section submit locks and scores (D42)', () => {
+  $$('[data-wb-mode="test"]')[0].click();
+  const rSubmit = () => $$('[data-wbr-submit]')[0];
+  const wSubmit = () => $$('[data-wbw-submit]')[0];
+  assert.ok(rSubmit().disabled, 'reading submit locked until all 14 are answered');
+  assert.ok(wSubmit().disabled, 'writing submit locked until all 6 are answered');
+  // 4 reading picks persist from the practice round; answer the remaining 10.
+  for (const [id, opt] of Object.entries({ 'wb2-l3-r1-q12': 'A', 'wb2-l3-r1-q13': 'C', 'wb2-l3-r2-q14': 'A', 'wb2-l3-r2-q16': 'C', 'wb2-l3-r2-q17': 'B', 'wb2-l3-r3-q18': 'D', 'wb2-l3-r3-q20': 'C', 'wb2-l3-r3-q21': 'B', 'wb2-l3-r4-q22': 'B', 'wb2-l3-r4-q23': 'B' })) rpick(id, opt);
+  assert.ok(!rSubmit().disabled, 'reading submit unlocks at 14/14');
+  rSubmit().click();
+  assert.match(document.getElementById('wb-sec-reading').textContent, /Kết quả phần đọc: 14\/14/);
+  assert.ok(wSubmit().disabled, 'writing submit still locked after the reading section was submitted');
+  // writing: q26 pick and q28 typed answer persist; finish the section.
+  wpick('wb2-l3-w1-q25', 'A');
+  wpick('wb2-l3-w1-q27', 'B');
+  type('wb2-l3-w2-q28', '为');
+  type('wb2-l3-w2-q29', '这');
+  type('wb2-l3-w2-q30', '不');
+  assert.ok(!wSubmit().disabled, 'writing submit unlocks at 6/6');
+  wSubmit().click();
+  assert.match(document.getElementById('wb-sec-writing').textContent, /Kết quả phần viết: 6\/6/);
+});

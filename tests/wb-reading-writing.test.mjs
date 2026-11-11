@@ -1,7 +1,8 @@
 // D41: Workbook reading + writing data for HSK 2 Lessons 1–2 — the full
-// 30-question 模拟测练 set. Answers are editorial derivations pinned here from
+// 30-question 模拟测练 set. D42 adds Lesson 3, built full-30 in one round.
+// Answers are editorial derivations pinned here from
 // the printed pages (the book prints no answer key); bank consumption is
-// checked for consistency (in BOTH lessons every bank entry is consumed —
+// checked for consistency (in ALL THREE lessons every bank entry is consumed —
 // the reading Part III banks have NO unused distractor in these lessons).
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -30,6 +31,14 @@ const EXPECTED = {
     r4: { ex: "B", q: { "wb2-l2-r4-q22": "B", "wb2-l2-r4-q23": "C", "wb2-l2-r4-q24": "A" } },
     w1: { ex: "D", q: { "wb2-l2-w1-q25": "B", "wb2-l2-w1-q26": "A", "wb2-l2-w1-q27": "C" } },
     w2: { ex: ["是", "shì"], q: { "wb2-l2-w2-q28": ["网", "wǎng"], "wb2-l2-w2-q29": ["间", "jiān"], "wb2-l2-w2-q30": ["来", "lái"] } },
+  },
+  "hsk2-l03": {
+    r1: { ex: "D", q: { "wb2-l3-r1-q11": "B", "wb2-l3-r1-q12": "A", "wb2-l3-r1-q13": "C" } },
+    r2: { ex: "E", q: { "wb2-l3-r2-q14": "A", "wb2-l3-r2-q15": "D", "wb2-l3-r2-q16": "C", "wb2-l3-r2-q17": "B" } },
+    r3: { ex: "E", q: { "wb2-l3-r3-q18": "D", "wb2-l3-r3-q19": "A", "wb2-l3-r3-q20": "C", "wb2-l3-r3-q21": "B" } },
+    r4: { ex: "B", q: { "wb2-l3-r4-q22": "B", "wb2-l3-r4-q23": "B", "wb2-l3-r4-q24": "A" } },
+    w1: { ex: "D", q: { "wb2-l3-w1-q25": "A", "wb2-l3-w1-q26": "C", "wb2-l3-w1-q27": "B" } },
+    w2: { ex: ["是", "shì"], q: { "wb2-l3-w2-q28": ["为", "wèi"], "wb2-l3-w2-q29": ["这", "zhè"], "wb2-l3-w2-q30": ["不", "bú"] } },
   },
 };
 
@@ -79,7 +88,7 @@ for (const [lessonId, exp] of Object.entries(EXPECTED)) {
     }
     assert.deepEqual([p2.example.answer, ...p2.items.map((i) => i.answer)].sort(), p2.bank.map((b) => b.id).sort(), "word bank fully consumed, each entry once");
 
-    // Part III match bank: answers distinct; in these two lessons the example
+    // Part III match bank: answers distinct; in these lessons the example
     // plus the 4 items consume ALL FIVE responses (no unused distractor).
     const p3 = rd[2];
     assert.equal(p3.bank.length, 5);
@@ -136,9 +145,9 @@ for (const [lessonId, exp] of Object.entries(EXPECTED)) {
   });
 }
 
-test("wb full-30 release wiring: version, token, renderer hooks (D41)", () => {
-  assert.equal(content.contentVersion, "20261110-hsk2-wb-full30");
-  assert.equal((indexHtml.match(/20261110-wb-full30/g) || []).length, 2, "index token bumped in both places");
+test("wb full-30 release wiring: version, token, renderer hooks (D41/D42)", () => {
+  assert.equal(content.contentVersion, "20261111-hsk2-wb-full-l3");
+  assert.equal((indexHtml.match(/20261111-wb-l3/g) || []).length, 2, "index token bumped in both places");
   assert.match(appJs, /Luyện theo Workbook — /);
   assert.match(appJs, /30 câu: nghe 10, đọc 14, viết 6/);
   assert.match(appJs, /wbReadingPartHtml/);

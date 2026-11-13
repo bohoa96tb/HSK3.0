@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04',
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05',
  'hsk1-l01', 'hsk1-l02', 'hsk1-l03', 'hsk1-l04', 'hsk1-l05', 'hsk1-l06', 'hsk1-l07', 'hsk1-l08',
  'hsk1-l09', 'hsk1-l10', 'hsk1-l11', 'hsk1-l12', 'hsk1-l13', 'hsk1-l14', 'hsk1-l15'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
@@ -85,6 +85,28 @@ export const REVIEW_WORD_SEGMENTS = {
  'h2l4-w14': {start: 9.2, end: 12.24},
  'h2l4-w15': {start: 12.25, end: 14.25},
  'h2l4-w16': {start: 0.27, end: 3.1},
+ // hsk2-l05 (D44 rollout): same double-reading span method — RMS speech
+ // regions plus per-region transcription; track 5-2 read order verified
+ // region by region (book order, incl. the unnumbered row read between
+ // the fourth and sixth rows of the printed word box).
+ 'h2l5-w01': {start: 0.82, end: 3.3},
+ 'h2l5-w02': {start: 3.31, end: 6.05},
+ 'h2l5-w03': {start: 6.06, end: 9.41},
+ 'h2l5-w04': {start: 9.42, end: 12.39},
+ 'h2l5-w05': {start: 12.4, end: 15.4},
+ 'h2l5-w06': {start: 15.41, end: 17.81},
+ 'h2l5-w07': {start: 17.82, end: 20.52},
+ 'h2l5-w08': {start: 20.53, end: 23.84},
+ 'h2l5-w09': {start: 23.85, end: 26.81},
+ 'h2l5-w10': {start: 0.52, end: 3.6},
+ 'h2l5-w11': {start: 3.61, end: 6.16},
+ 'h2l5-w12': {start: 6.17, end: 8.58},
+ 'h2l5-w13': {start: 8.59, end: 11.81},
+ 'h2l5-w14': {start: 11.82, end: 14.26},
+ 'h2l5-w15': {start: 0.35, end: 3.37},
+ 'h2l5-w16': {start: 3.38, end: 5.26},
+ 'h2l5-w17': {start: 0.52, end: 2.87},
+ 'h2l5-w18': {start: 2.88, end: 5.67},
  // D35 (Hoa, 2026-11-08): HSK 1 rollout — same double-reading span
  // method as D34, derived per track from RMS speech regions plus
  // per-region crop-ASR verification; entries carry their trackId so
@@ -475,6 +497,9 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l04-guo': 'Mẫu câu: đặt một trợ từ chỉ trải nghiệm ngay sau động từ, rồi mới đến tân ngữ, để nói một việc đã từng xảy ra trong quá khứ. Khi phủ định, đặt một từ có nghĩa là chưa từng ngay trước động từ. Khi hỏi, thêm một trợ từ hỏi ở cuối câu, hoặc lặp lại động từ quanh từ phủ định đó.',
  'kp-hsk2-l04-yinwei': 'Mẫu câu nhân quả: mở đầu vế nguyên nhân bằng một liên từ có nghĩa là vì, mở đầu vế kết quả bằng một liên từ có nghĩa là cho nên. Có thể dùng cả cặp liên từ trong cùng một câu, hoặc chỉ dùng một trong hai liên từ.',
  'kp-hsk2-l04-de': 'Mẫu cụm miêu tả: đặt phần miêu tả như màu sắc, tính chất hoặc hành động ở trước, tiếp theo là một trợ từ kết cấu, rồi mới đến danh từ được chỉ tới. Khi ngữ cảnh đã rõ đang nói về vật gì, có thể lược bỏ danh từ và chỉ giữ lại phần miêu tả cùng trợ từ đó.',
+ 'kp-hsk2-l05-trend1': 'Mẫu câu: đặt một từ chỉ hướng ngay sau động từ để nói hành động di chuyển về phía người nói hay đi ra xa người nói. Mời khách vào nhà, giục bạn xuống lầu chỗ mình thì dùng dạng hướng về phía người nói; tự nói mình sẽ đi xuống hay đi vào xa khỏi chỗ đứng của mình thì dùng dạng còn lại. Nhớ rằng hướng được tính theo vị trí của chính người nói.',
+ 'kp-hsk2-l05-trend2': 'Mẫu câu: khi câu vừa có hướng vừa có tân ngữ, tân ngữ chỉ nơi chốn luôn đứng trước từ hướng cuối cùng, ví dụ vào lớp thì nơi chốn đứng giữa động từ và từ hướng. Tân ngữ chỉ đồ vật đứng trước hoặc sau bổ ngữ hướng đơn đều được, nhưng với bổ ngữ kép như mua mang về hay lấy ra thì đồ vật luôn đứng sau cả cụm.',
+ 'kp-hsk2-l05-dou': 'Mẫu cố định: dùng một cặp từ bao quanh một mốc thời gian hay mức độ để nhấn mạnh ý đã rồi, đến mức rồi, thường kèm sắc thái giục giã hoặc nhắc nhở. Ví dụ: đã mười hai giờ rồi, chúng ta ăn cơm đi; hay đã tám giờ rưỡi rồi mà bạn còn chưa dậy à.',
  // D35: HSK 1 grammar points, paraphrased from each point's verified
  // pattern, position and explanation in the lesson data.
  'kp-hsk1-l01-men': 'Mẫu câu: để nói về một nhóm người, thêm trợ từ chỉ số nhiều ngay sau đại từ hoặc danh từ chỉ người; trợ từ này không đứng một mình.',

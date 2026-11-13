@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03',
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04',
  'hsk1-l01', 'hsk1-l02', 'hsk1-l03', 'hsk1-l04', 'hsk1-l05', 'hsk1-l06', 'hsk1-l07', 'hsk1-l08',
  'hsk1-l09', 'hsk1-l10', 'hsk1-l11', 'hsk1-l12', 'hsk1-l13', 'hsk1-l14', 'hsk1-l15'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
@@ -65,6 +65,26 @@ export const REVIEW_WORD_SEGMENTS = {
  'h2l3-w13': {start: 2.9, end: 5.53},
  'h2l3-w14': {start: 5.55, end: 7.85},
  'h2l3-w15': {start: 7.87, end: 9.55},
+ // hsk2-l04 (2026-11-13): same D34 method — RMS speech regions of the four
+ // vocabulary tracks (4-2/4-4/4-6/4-8), each region cross-checked by
+ // transcribing it separately; merged ASR units on 4-2 and 4-6 resolved
+ // this way. Spans cover both readings, asr-draft like all segments.
+ 'h2l4-w01': {start: 0.06, end: 2.59},
+ 'h2l4-w02': {start: 2.6, end: 5.79},
+ 'h2l4-w03': {start: 5.8, end: 8.44},
+ 'h2l4-w04': {start: 8.45, end: 10.64},
+ 'h2l4-w05': {start: 10.65, end: 12.9},
+ 'h2l4-w06': {start: 0.14, end: 3.59},
+ 'h2l4-w07': {start: 3.6, end: 6.49},
+ 'h2l4-w08': {start: 6.5, end: 8.69},
+ 'h2l4-w09': {start: 8.7, end: 11.39},
+ 'h2l4-w10': {start: 11.4, end: 14.35},
+ 'h2l4-w11': {start: 0.63, end: 3.54},
+ 'h2l4-w12': {start: 3.55, end: 6.29},
+ 'h2l4-w13': {start: 6.3, end: 9.19},
+ 'h2l4-w14': {start: 9.2, end: 12.24},
+ 'h2l4-w15': {start: 12.25, end: 14.25},
+ 'h2l4-w16': {start: 0.27, end: 3.1},
  // D35 (Hoa, 2026-11-08): HSK 1 rollout — same double-reading span
  // method as D34, derived per track from RMS speech regions plus
  // per-region crop-ASR verification; entries carry their trackId so
@@ -452,6 +472,9 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l03-result': 'Mẫu câu: động từ đứng trước, ngay sau đó đặt một động từ hoặc tính từ để nói kết quả của hành động, như làm xong xuôi, ăn hết, đến muộn hay nghe hiểu. Cuối câu có thể thêm một trợ từ để nói việc đã hoàn thành. Khi phủ định, đặt một từ có nghĩa là chưa ngay trước động từ và bỏ trợ từ ở cuối câu.',
  'kp-hsk2-l03-redup1': 'Mẫu trùng điệp cho việc sắp làm: với động từ một âm tiết, lặp lại động từ đó, có thể chêm chữ nhất, nghĩa là một, ở giữa. Với động từ hai âm tiết, lặp lại cả cụm hai âm tiết. Với động từ ly hợp, chỉ lặp lại âm tiết đầu rồi mới nói phần còn lại. Cách lặp này có nghĩa làm một chút, thử làm, nghe nhẹ nhàng.',
  'kp-hsk2-l03-redup2': 'Mẫu trùng điệp cho việc đã làm: với động từ một âm tiết, chêm trợ từ chỉ việc đã xảy ra vào giữa hai lần lặp của động từ. Với động từ hai âm tiết, thường không lặp lại, mà dùng nguyên động từ rồi thêm cụm có nghĩa là một chút ở sau. Với động từ ly hợp, chêm trợ từ đã vào sau âm tiết đầu, rồi mới nói phần còn lại.',
+ 'kp-hsk2-l04-guo': 'Mẫu câu: đặt một trợ từ chỉ trải nghiệm ngay sau động từ, rồi mới đến tân ngữ, để nói một việc đã từng xảy ra trong quá khứ. Khi phủ định, đặt một từ có nghĩa là chưa từng ngay trước động từ. Khi hỏi, thêm một trợ từ hỏi ở cuối câu, hoặc lặp lại động từ quanh từ phủ định đó.',
+ 'kp-hsk2-l04-yinwei': 'Mẫu câu nhân quả: mở đầu vế nguyên nhân bằng một liên từ có nghĩa là vì, mở đầu vế kết quả bằng một liên từ có nghĩa là cho nên. Có thể dùng cả cặp liên từ trong cùng một câu, hoặc chỉ dùng một trong hai liên từ.',
+ 'kp-hsk2-l04-de': 'Mẫu cụm miêu tả: đặt phần miêu tả như màu sắc, tính chất hoặc hành động ở trước, tiếp theo là một trợ từ kết cấu, rồi mới đến danh từ được chỉ tới. Khi ngữ cảnh đã rõ đang nói về vật gì, có thể lược bỏ danh từ và chỉ giữ lại phần miêu tả cùng trợ từ đó.',
  // D35: HSK 1 grammar points, paraphrased from each point's verified
  // pattern, position and explanation in the lesson data.
  'kp-hsk1-l01-men': 'Mẫu câu: để nói về một nhóm người, thêm trợ từ chỉ số nhiều ngay sau đại từ hoặc danh từ chỉ người; trợ từ này không đứng một mình.',

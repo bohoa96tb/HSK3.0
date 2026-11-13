@@ -417,3 +417,60 @@ Hình phần Viết: không cần hình — bộ phận và ô chữ là ký t�
 ## 6. Quyền sử dụng
 
 Quyền tái xuất bản nội dung sách và audio vẫn là `unknown` như toàn dự án: PDF/MP3 không commit vào repo; audio phát trực tuyến từ Baulchino; hình là tranh vẽ lại mới kèm manifest nguồn gốc. Việc vẽ lại hình không thay đổi trạng thái quyền của câu hỏi/nội dung/audio — ba lớp này vẫn phải ghi rõ khi phát hành.
+
+## 4h. Bài 4 《你穿红色的很好看》 — bộ đủ 30 câu (2026-11-13, D41/D42)
+
+Nguồn in: Workbook in 031–040 (PDF 38–47), đối chiếu trực quan từng trang
+ngày 13/11/2026. Audio nghe: track Baulchino
+`hsk-2-workbook/lesson-04/04-1.mp3`, 567,28 s (ffprobe). Ba ví dụ dùng
+chung với Bài 1–3 (xe buýt/máy bay/xe đạp · bóng đá · 姓名） nhưng cửa sổ
+căn lại trên track Bài 4.
+
+### Nghe — đáp án từ transcript (answer: verified-editorial)
+
+| Câu | Transcript (ASR + nghe kiểm cửa sổ) | Đáp án | Cửa sổ |
+|---|---|---|---|
+| VD I | 女的坐公共汽车去公司。 | A | 57,4–67,6 |
+| Q1 | 我给你拿了点儿吃的喝的。 | C (bỏ đồ ăn/thức uống vào túi) | 81,6–90,5 |
+| Q2 | 我们没去过北京，这次想去那儿玩玩。 | C (Thiên Đàn Bắc Kinh) | 99,9–113,2 |
+| Q3 | 因为黑色的裤子都卖完了，所以我就买了一条红色的。 | B (mèo bên chân quần đỏ) | 122,5–139,0 |
+| VD II | 对话 đá bóng (chọn theo nghĩa) | D | 159,4–173,0 |
+| Q4 | 你为什么不喜欢哥哥送的新书包？/ 因为我不喜欢那个颜色。 | C (bộ ba lô: cửa hàng không phải ba lô → cặp to → ba lô nhỏ) | 192,2–210,8 |
+| Q5 | 你喜不喜欢这条白色的裤子？/ 喜欢，但我不想每天洗衣服，还是买黑色的吧。 | A (cửa hàng quần áo) | 224,4–248,9 |
+| Q6 | 你吃了二十多个饺子啊！/ 那是因为我没吃午饭。 | B (sủi cảo) | 262,9–277,5 |
+| VD III | 姓名 | A | 301,6–326,3 |
+| Q7 | 桌子上的苹果都洗过了吧？… Hỏi: 他们现在在哪儿？→ 家里 | B | 348,1–377,7 |
+| Q8 | 你穿红色的好看…太贵了吧，3800多呢。 Hỏi: 女的觉得那件衣服怎么样？→ 很贵 | A | 394,1–429,8 |
+| Q9 | 这条裤子很不错，但颜色不太好。…给我拿条绿色的试试吧。 Hỏi: 绿色 | C | 447,0–496,8 |
+| Q10 | 你来过这家饭店吗？…吃包子吧。 Hỏi: 包子 | C | 513,7–553,2 |
+
+**Chú ý kỹ thuật (bài học D41/D42):** ASR-VAD bỏ lượt đọc thứ hai của Q4
+(vùng 202,46–210,46 s) và của Q9 (472,97–491,12 s kèm câu hỏi lặp
+493,27–496,47 s) — phân tích envelope khẳng định cả hai lượt đọc đều nằm
+trong cửa sổ đã chọn; mốc vẫn là `asr-draft`, chưa nghe kiểm bằng tai.
+
+### Đọc — đáp án theo kiểm kê in (verified-editorial)
+
+P_I: VD bộ 4 hình (mẹ con ở cửa hàng/cốc đen/vịt quay/bóng rổ…) = D (bóng
+rổ); Q11 mẹ con ở cửa hàng quần áo = A; Q12 cốc đen = C; Q13 vịt quay =
+B. P_II ngân hàng A 条/B 因为/C 过去/D 书包/E 完： VD E; Q14 A; Q15 C;
+Q16 D; Q17 B — dùng hết ngân hàng. P_III ngân hàng A 更/B 非常/C 二/D 千/E
+百： VD E; Q18 B; Q19 C; Q20 A; Q21 D — dùng hết ngân hàng. P_IV chọn nghĩa
+tiếng Anh đúng: VD 红色 → red (B); Q22 饭店 → A; Q23 洗手间 → C; Q24 找 →
+B.
+
+### Viết — đáp án theo kiểm kê in (verified-editorial)
+
+P_I ngân hàng A 纟/B 礻/C 辶/D 十： VD 什么 → D; Q25 进（辶） → C; Q26
+裤（礻） → B; Q27 红（纟） → A — dùng hết ngân hàng. P_II viết chữ theo
+pinyin với thân câu in: VD 是 shì; Q28 过 guo; Q29 场 chǎng; Q30 以 yǐ.
+
+### Hình (manifest Bài 4)
+
+24 WebP mới trong `assets/hsk2-lesson-04/` (xem
+`PRACTICE_ATTRIBUTION.md` cùng thư mục): ngữ cảnh 1, warm 4, desc 4,
+WB 15. Hai file dùng lại byte-identical từ Bài 1: `wb-p2-soccer.webp`
+(VD Phần II), `wb-r1-basketball.webp` (Phần I Q13 chọn hình đọc — hình 4
+của bộ 4). Kiểm kê hình in của bài: nghe 13 hình + đọc 7 hình + 0 hình
+viết; bố cục lưới hình của app quyết định theo số hình của bộ (3 = một
+dòng, 4 = 2×2) theo chỉ đạo của Hoa.

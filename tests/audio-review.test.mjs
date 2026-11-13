@@ -6,7 +6,7 @@ const data = JSON.parse(readFileSync(new URL('../data/content.json', import.meta
 const content = data.additionalLessons.find(c => c.lessonId === 'hsk2-l01');
 const content2 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l02');
 const content3 = data.additionalLessons.find(c => c.lessonId === 'hsk2-l03');
-const notEnabled = {lessonId: 'hsk2-l04'};
+const notEnabled = {lessonId: 'hsk2-l05'};
 function fixture(voices = [{lang:'vi-VN'}, {lang:'zh-CN'}]) {
  const spoken = [], timers = [], watchdogs = [];
  const synth = {getVoices: () => voices, cancel(){}, speak(u){spoken.push(u);u.onstart?.();}};
@@ -320,7 +320,7 @@ test('D33 segment failure falls back to TTS for that row; covered fragments are 
 
 test('D34 word segments in the review span both readings, sentences keep data refs', async () => {
  const {REVIEW_WORD_SEGMENTS} = await import('../src/audio-review.js');
- assert.equal(Object.keys(REVIEW_WORD_SEGMENTS).filter(k => k.startsWith('h2l')).length, 47);
+ assert.equal(Object.keys(REVIEW_WORD_SEGMENTS).filter(k => k.startsWith('h2l')).length, 63);
  for (const lesson of [content, content2, content3]) {
   const detail = buildReview(lesson, 'detail');
   const byTrack = new Map();

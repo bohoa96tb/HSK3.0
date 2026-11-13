@@ -1,5 +1,5 @@
 {
-  "contentVersion": "20261113-lookup-ipad1",
+  "contentVersion": "20261113-hsk2-l4-wb",
   "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
   "sources": [
     {
@@ -975,11 +975,16 @@
           "section": "Bài 4 · 你穿红色的很好看"
         }
       ],
-      "textbookAudioTrackCount": null,
-      "workbookAudioTrackCount": null,
-      "publicationStatus": "catalogued",
-      "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
-      "grammarIds": [],
+      "textbookAudioTrackCount": 8,
+      "workbookAudioTrackCount": 1,
+      "publicationStatus": "pilot-ready",
+      "publicationNote": "Đã biên soạn đầy đủ theo kiểm kê trực quan 2026-11-13 (Textbook tr. in 029–036; Workbook phần bài học tr. in 031–032 và phần 模拟测练 tr. in 033–040 dựng đủ 30 câu ngay từ đầu theo khuôn Bài 3/D42; sách viết tr.4) và chuẩn Bài 8/D27/D28/D29/D41. 4 đoạn, 22 câu print-verified; 16 từ mới; 4 điểm kiến thức (3 ngữ pháp + Hán tự nền tảng); 10 câu hỏi in trong sách đặt tại đoạn theo D28; bộ chính 12 câu; Workbook đủ 30 câu (đáp án Nghe suy từ audio, đã kiểm envelope hai lượt đọc từng cửa sổ); khu Luyện viết có bộ chữ của bài （红/绿/场/块）. Mốc đoạn audio là asr-draft, chưa nghe kiểm chứng bởi người.",
+      "grammarIds": [
+        "kp-hsk2-l04-guo",
+        "kp-hsk2-l04-yinwei",
+        "kp-hsk2-l04-de",
+        "kp-hsk2-l04-characters"
+      ],
       "sectionIds": [
         "intro",
         "prep",
@@ -61436,6 +61441,4062 @@
           }
         ]
       }
+    },
+    {
+      "lessonId": "hsk2-l04",
+      "intro": {
+        "goalVi": "Học cách hỏi và kể về trải nghiệm đã qua bằng trợ từ “过”, dùng cụm chữ “的” và màu sắc để chỉ đúng sự vật khi chọn đồ, và nối nguyên nhân – kết quả bằng “因为……，所以……” — qua một buổi hai mẹ con Vương Nhất Tuyết và Lưu Tiểu Tuyết đi mua sắm ở trung tâm thương mại mới mở.",
+        "estimatedMinutes": 75,
+        "sections": [
+          {
+            "id": "intro",
+            "titleVi": "Bắt đầu"
+          },
+          {
+            "id": "prep",
+            "titleVi": "Từ cần biết"
+          },
+          {
+            "id": "knowledge",
+            "titleVi": "Hiểu cách dùng"
+          },
+          {
+            "id": "reader",
+            "titleVi": "Nghe & đọc"
+          },
+          {
+            "id": "exercises",
+            "titleVi": "Luyện tập"
+          },
+          {
+            "id": "apply",
+            "titleVi": "Tự nói"
+          },
+          {
+            "id": "summary",
+            "titleVi": "Tổng kết"
+          }
+        ],
+        "leadVi": "Ở cửa trung tâm thương mại mới mở, Lưu Tiểu Tuyết rủ mẹ vào xem để mua một chiếc quần. Cô bé thích quần trắng, nhưng mẹ khuyên thử chiếc đỏ — “chính vì chưa mặc bao giờ nên mới phải thử”. Sau đó hai mẹ con chọn một chiếc cặp màu xanh lá, và tối về Tiểu Tuyết viết nhật ký: mình mặc màu đỏ cũng rất đẹp. Bài này cũng mở bộ chữ viết thứ tư: 红、绿、场、块.",
+        "outcomesVi": [
+          "Nhận diện và dùng 16 từ mới của bài.",
+          "Dùng trợ từ “过” để hỏi và kể trải nghiệm đã từng （去过、没来过、看没看过）.",
+          "Nối nguyên nhân – kết quả bằng “因为……，所以……” (dùng cả cặp hoặc một vế).",
+          "Dùng cụm “màu + 的” để chỉ đúng món đồ khi chọn mua （红色的、绿色的）.",
+          "Nghe hiểu và trả lời câu hỏi của bốn đoạn; viết được vài câu nhật ký về một buổi đi mua sắm.",
+          "Luyện viết 4 chữ 红、绿、场、块 ở khu Luyện viết chữ Hán."
+        ],
+        "contextImage": {
+          "src": "assets/hsk2-lesson-04/context-mall.webp",
+          "alt": "Tranh vẽ lại hai mẹ con đứng trước cửa một trung tâm thương mại mới mở, cửa kính sáng đèn",
+          "caption": "Tranh vẽ lại theo bối cảnh bài học (Textbook tr.030): hai mẹ con Vương Nhất Tuyết và Lưu Tiểu Tuyết trước cửa trung tâm thương mại mới mở.",
+          "width": 1280,
+          "height": 853
+        },
+        "studyTipVi": "Ba bẫy của bài: “过” nói trải nghiệm đã từng (phủ định bằng 没， không dùng 不） — đừng nhầm với “了” nói việc vừa xong; “过去” ở Đoạn 3 là động từ “đi qua” chứ không phải trợ từ; và khi ngữ cảnh đã rõ, người Trung Quốc lược danh từ sau “的” — “绿色的吧” tức là “lấy cái (cặp) xanh lá”. Cả bốn đoạn đều có câu hỏi in sẵn trong sách — trong app, chúng nằm ngay dưới từng đoạn ở mục Nghe & đọc.",
+        "foundationSummaryVi": "Phần Hán tự (Workbook tr.031 + sách viết Bài 4): hai bộ 绞丝旁 （纟） và 提土旁 （土） qua bốn chữ 红、绿、场、块. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+        "courseTagsVi": "HSK 2 · Bài 4 · 你穿红色的很好看",
+        "priorLessonNoteVi": "Nhân vật của bài: Vương Nhất Tuyết — cái tên đã gặp ở Bài 3 — trong vai người mẹ, cùng cô bé Lưu Tiểu Tuyết. Chữ “过” của bài này có hai vai cần tách rõ: trợ từ trải nghiệm đứng sau động từ （去过 = đã từng đi) và động từ “过去” (đi qua) ở Đoạn 3.",
+        "priorLessonId": "hsk2-l03"
+      },
+      "prepWords": [
+        {
+          "id": "h2l4-w01",
+          "zh": "过",
+          "pinyin": "guo",
+          "vi": "đã từng (trợ từ đặt sau động từ, chỉ việc đã trải qua)",
+          "hanViet": "QUÁ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-2",
+            "start": 0.05,
+            "end": 0.85,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 1
+        },
+        {
+          "id": "h2l4-w02",
+          "zh": "商场",
+          "pinyin": "shāngchǎng",
+          "vi": "trung tâm thương mại",
+          "hanViet": "THƯƠNG TRÀNG",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-2",
+            "start": 2.55,
+            "end": 3.95,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 1
+        },
+        {
+          "id": "h2l4-w03",
+          "zh": "进去",
+          "pinyin": "jìnqù",
+          "vi": "đi vào; vào trong",
+          "hanViet": "TIẾN KHỨ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-2",
+            "start": 5.75,
+            "end": 6.85,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 1
+        },
+        {
+          "id": "h2l4-w04",
+          "zh": "条",
+          "pinyin": "tiáo",
+          "vi": "chiếc (lượng từ cho vật dài, thon: quần, …)",
+          "hanViet": "ĐIỀU",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-2",
+            "start": 8.4,
+            "end": 9.3,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 1
+        },
+        {
+          "id": "h2l4-w05",
+          "zh": "裤子",
+          "pinyin": "kùzi",
+          "vi": "quần (dài)",
+          "hanViet": "KHỐ TỬ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-2",
+            "start": 10.6,
+            "end": 11.6,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 1
+        },
+        {
+          "id": "h2l4-w06",
+          "zh": "白色",
+          "pinyin": "báisè",
+          "vi": "màu trắng",
+          "hanViet": "BẠCH SẮC",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-4",
+            "start": 0.1,
+            "end": 1.4,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 2
+        },
+        {
+          "id": "h2l4-w07",
+          "zh": "因为",
+          "pinyin": "yīnwèi",
+          "vi": "vì; bởi vì",
+          "hanViet": "NHÂN VI",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-4",
+            "start": 3.6,
+            "end": 4.75,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 2
+        },
+        {
+          "id": "h2l4-w08",
+          "zh": "试",
+          "pinyin": "shì",
+          "vi": "thử",
+          "hanViet": "THÍ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-4",
+            "start": 6.5,
+            "end": 7.4,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 2
+        },
+        {
+          "id": "h2l4-w09",
+          "zh": "红色",
+          "pinyin": "hóngsè",
+          "vi": "màu đỏ",
+          "hanViet": "HỒNG SẮC",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-4",
+            "start": 8.75,
+            "end": 9.95,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 2
+        },
+        {
+          "id": "h2l4-w10",
+          "zh": "所以",
+          "pinyin": "suǒyǐ",
+          "vi": "cho nên; vì vậy",
+          "hanViet": "SỞ DĨ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-4",
+            "start": 11.4,
+            "end": 12.7,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 2
+        },
+        {
+          "id": "h2l4-w11",
+          "zh": "书包",
+          "pinyin": "shūbāo",
+          "vi": "cặp sách; ba lô học sinh",
+          "hanViet": "THƯ BAO",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-6",
+            "start": 0.6,
+            "end": 2.05,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 3
+        },
+        {
+          "id": "h2l4-w12",
+          "zh": "过去",
+          "pinyin": "guòqù",
+          "vi": "đi qua; sang (phía bên kia)",
+          "hanViet": "QUÁ KHỨ",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-6",
+            "start": 3.55,
+            "end": 4.7,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 3
+        },
+        {
+          "id": "h2l4-w13",
+          "zh": "绿色",
+          "pinyin": "lǜsè",
+          "vi": "màu xanh lá",
+          "hanViet": "LỤC SẮC",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-6",
+            "start": 6.3,
+            "end": 7.6,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 3
+        },
+        {
+          "id": "h2l4-w14",
+          "zh": "黑色",
+          "pinyin": "hēisè",
+          "vi": "màu đen",
+          "hanViet": "HẮC SẮC",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-6",
+            "start": 9.2,
+            "end": 10.5,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 3
+        },
+        {
+          "id": "h2l4-w15",
+          "zh": "更",
+          "pinyin": "gèng",
+          "vi": "càng; hơn nữa (so sánh hơn)",
+          "hanViet": "CANH",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-6",
+            "start": 12.25,
+            "end": 13.05,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 3
+        },
+        {
+          "id": "h2l4-w16",
+          "zh": "颜色",
+          "pinyin": "yánsè",
+          "vi": "màu sắc",
+          "hanViet": "NHAN SẮC",
+          "hanVietStatus": "verified-editorial",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 51,
+              "printedPage": 35,
+              "section": "生词"
+            }
+          ],
+          "audio": {
+            "trackId": "trk-tb2-l04-8",
+            "start": 0.25,
+            "end": 1.6,
+            "status": "asr-draft"
+          },
+          "dialogueGroup": 4
+        }
+      ],
+      "prepGroups": [
+        {
+          "id": "h2l4-g1",
+          "dialogueId": "h2l4-text-1",
+          "titleVi": "Từ mới Đoạn 1 · Ở cửa trung tâm thương mại",
+          "trackId": "trk-tb2-l04-2",
+          "trackLabelVi": "Track 4-2 · Từ mới Đoạn 1"
+        },
+        {
+          "id": "h2l4-g2",
+          "dialogueId": "h2l4-text-2",
+          "titleVi": "Từ mới Đoạn 2 · Xem quần",
+          "trackId": "trk-tb2-l04-4",
+          "trackLabelVi": "Track 4-4 · Từ mới Đoạn 2"
+        },
+        {
+          "id": "h2l4-g3",
+          "dialogueId": "h2l4-text-3",
+          "titleVi": "Từ mới Đoạn 3 · Chọn cặp sách",
+          "trackId": "trk-tb2-l04-6",
+          "trackLabelVi": "Track 4-6 · Từ mới Đoạn 3"
+        },
+        {
+          "id": "h2l4-g4",
+          "dialogueId": "h2l4-text-4",
+          "titleVi": "Từ mới Đoạn 4 · Nhật ký",
+          "trackId": "trk-tb2-l04-8",
+          "trackLabelVi": "Track 4-8 · Từ mới Đoạn 4"
+        }
+      ],
+      "knowledgePoints": [
+        {
+          "id": "kp-hsk2-l04-guo",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp",
+          "title": "Trợ từ động thái “过”: đã từng làm gì",
+          "explanationVi": "“过” đứng ngay sau động từ để nói một việc ĐÃ TỪNG xảy ra trong quá khứ (một trải nghiệm), chứ không nhấn việc vừa hoàn thành như “了”: “她去过中国” (cô ấy đã từng đi Trung Quốc). Phủ định: thêm 没（有）trước động từ — “她没去过中国”, KHÔNG dùng 不. Ba cách hỏi: (1) thêm 吗 cuối câu; (2) thêm 没有 cuối câu; (3) lặp “động từ + 没 + động từ + 过” （你看没看过那个电影？).",
+          "pattern": "Chủ ngữ + Động từ + 过 + Tân ngữ · phủ định: 没（有）+ Động từ + 过 + Tân ngữ",
+          "useWhenVi": "Dùng khi hỏi hoặc kể về TRẢI NGHIỆM: đã từng đi đâu, ăn gì, xem gì chưa — như hai mẹ con hỏi nhau đã từng đến trung tâm thương mại này chưa.",
+          "positionVi": "“过” dính liền sau động từ, trước tân ngữ. Đừng nhầm với từ “过去” (đi qua) của Đoạn 3: ở đây “过” là trợ từ, đọc nhẹ (guo).",
+          "examples": [
+            {
+              "zh": "她去过中国。",
+              "pinyin": "Tā qùguo Zhōngguó.",
+              "noteVi": "Cô ấy đã từng đi Trung Quốc. (ví dụ trong sách, tr.031)"
+            },
+            {
+              "zh": "我吃过饺子，很好吃。",
+              "pinyin": "Wǒ chīguo jiǎozi, hěn hǎochī.",
+              "noteVi": "Tôi đã ăn sủi cảo rồi, rất ngon. (ví dụ trong sách)"
+            },
+            {
+              "zh": "你看没看过那个电影？",
+              "pinyin": "Nǐ kàn méi kànguo nàge diànyǐng?",
+              "noteVi": "Bạn đã xem bộ phim đó chưa? — cách hỏi lặp động từ. (ví dụ trong sách)"
+            }
+          ],
+          "quickCheck": {
+            "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.031): chọn câu đáp hợp mẫu nhất. Đây là bài mở — đáp án dưới đây là GỢI Ý biên tập theo mẫu của sách, không phải đáp án in trong sách.",
+            "stemZh": "A：今天晚上我想看个电影。B：这个电影不错，____，你也看看吧。",
+            "options": [
+              {
+                "zh": "我看过",
+                "vi": "tôi xem rồi (gợi ý theo mẫu “过”)"
+              },
+              {
+                "zh": "我没看",
+                "vi": "thiếu “过” — không đúng mẫu trải nghiệm"
+              }
+            ],
+            "answer": "1",
+            "explanationVi": "Gợi ý biên tập: phim hay và rủ người kia xem thử thì người nói thường đã xem rồi — “这个电影不错，我看过，你也看看吧”. Bài 完成对话 là bài mở, sách không in đáp án."
+          },
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 47,
+              "printedPage": 31,
+              "section": "小语讲堂 · 动态助词“过”"
+            }
+          ],
+          "sentenceIds": [
+            "h2l4-s1",
+            "h2l4-s2",
+            "h2l4-s11",
+            "h2l4-s22"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk2-l04-yinwei",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp",
+          "title": "Câu phức nhân quả “因为……，所以……”",
+          "explanationVi": "Cặp liên từ “因为……，所以……” nối nguyên nhân với kết quả thành một câu: “就是因为没穿过，所以要试试啊！” （Chính vì chưa mặc bao giờ nên mới phải thử!). Hai vế có thể dùng CẢ CẶP, hoặc chỉ dùng MỘT trong hai: chỉ “因为” ở vế nguyên nhân, hoặc chỉ “所以” ở vế kết quả.",
+          "pattern": "因为 + [nguyên nhân]，所以 + [kết quả]",
+          "useWhenVi": "Dùng khi muốn nói rõ quan hệ vì–nên trong một câu: vì sao vào trung tâm thương mại đồ lại rẻ, vì sao phải thử chiếc quần đỏ.",
+          "positionVi": "“因为” đứng đầu vế nguyên nhân, “所以” đứng đầu vế kết quả (trước động từ của vế đó). Chủ ngữ của hai vế có thể khác nhau.",
+          "examples": [
+            {
+              "zh": "就是因为没穿过，所以要试试啊！",
+              "pinyin": "Jiù shì yīnwèi méi chuānguo, suǒyǐ yào shìshi a!",
+              "noteVi": "Chính vì chưa mặc bao giờ nên mới phải thử chứ! (ví dụ trong sách, tr.033; cũng là câu cuối Đoạn 2)"
+            },
+            {
+              "zh": "因为我生病了，今天没去上班。",
+              "pinyin": "Yīnwèi wǒ shēngbìng le, jīntiān méi qù shàngbān.",
+              "noteVi": "Vì tôi ốm nên hôm nay không đi làm. — chỉ dùng “因为”. (ví dụ trong sách)"
+            },
+            {
+              "zh": "我没去过他家，所以让他来车站接我。",
+              "pinyin": "Wǒ méi qùguo tā jiā, suǒyǐ ràng tā lái chēzhàn jiē wǒ.",
+              "noteVi": "Tôi chưa đến nhà anh ấy bao giờ nên bảo anh ấy ra ga đón. — chỉ dùng “所以”. (ví dụ trong sách)"
+            }
+          ],
+          "quickCheck": {
+            "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.033): chọn câu đáp đúng mẫu nhân quả. Đây là bài mở — đáp án dưới đây là GỢI Ý biên tập theo mẫu của sách, không phải đáp án in trong sách.",
+            "stemZh": "A：你今天回来这么早啊！B：____",
+            "options": [
+              {
+                "zh": "因为工作做完了，所以我先回来了。",
+                "vi": "vì việc xong rồi nên tôi về trước (đúng mẫu)"
+              },
+              {
+                "zh": "所以工作做完了，因为我先回来了。",
+                "vi": "đảo ngược hai vế — sai quan hệ nhân quả"
+              }
+            ],
+            "answer": "1",
+            "explanationVi": "Gợi ý biên tập: vế “因为” phải chứa NGUYÊN NHÂN (việc xong), vế “所以” chứa KẾT QUẢ (về sớm). Bài 完成对话 là bài mở, sách không in đáp án."
+          },
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "小语讲堂 · 因果复句“因为……，所以……”"
+            },
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 49,
+              "printedPage": 33,
+              "section": "小语讲堂 · 因果复句 (tiếp)"
+            }
+          ],
+          "sentenceIds": [
+            "h2l4-s9",
+            "h2l4-s12",
+            "h2l4-s20"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk2-l04-de",
+          "kind": "grammar",
+          "kindLabel": "Ngữ pháp",
+          "title": "Cụm chữ “的”: dùng miêu tả để chỉ đúng sự vật",
+          "explanationVi": "Trợ từ kết cấu “的” đứng sau danh từ, đại từ, động từ hoặc tính từ để tạo một cụm đóng vai trò như danh từ: “红色的” = chiếc (cặp/quần…) màu đỏ. Khi ngữ cảnh đã rõ đang nói về vật gì, danh từ trung tâm được LƯỢC BỎ và chỉ giữ “X + 的”: mẹ hỏi “红色的、绿色的、黑色的，你想买哪个？” tức là hỏi về các chiếc CẶP theo màu.",
+          "pattern": "[Danh từ / đại từ / động từ / tính từ] + 的 (+ danh từ — có thể lược khi đã rõ)",
+          "useWhenVi": "Dùng để chỉ đúng một vật trong nhóm bằng cách miêu tả nó: màu của nó （红色的）, người làm ra nó （爸爸买的）, tính chất của nó （便宜的） — rất hay dùng khi mua sắm và chọn đồ.",
+          "positionVi": "“的” đứng NGAY SAU phần miêu tả và TRƯỚC danh từ được chỉ; khi lược danh từ, cụm “X的” đứng ở đúng vị trí của danh từ đó trong câu.",
+          "examples": [
+            {
+              "zh": "红色的、绿色的、黑色的，你想买哪个？",
+              "pinyin": "Hóngsè de, lǜsè de, hēisè de, nǐ xiǎng mǎi nǎge?",
+              "noteVi": "Màu đỏ, màu xanh lá, màu đen — con muốn mua cái nào? (= 红色的书包、绿色的书包、黑色的书包）. (ví dụ trong sách, tr.034; cũng là câu trong Đoạn 3)"
+            },
+            {
+              "zh": "这个面包是爸爸买的，妈妈买的在那儿。",
+              "pinyin": "Zhège miànbāo shì bàba mǎi de, māma mǎi de zài nàr.",
+              "noteVi": "Cái bánh mì này là (cái) bố mua, (cái) mẹ mua ở đằng kia. (ví dụ trong sách)"
+            },
+            {
+              "zh": "这件衣服太贵了，还是买那件便宜的吧。",
+              "pinyin": "Zhè jiàn yīfu tài guì le, háishi mǎi nà jiàn piányi de ba.",
+              "noteVi": "Cái áo này đắt quá, hay là mua cái rẻ kia đi. (= 便宜的衣服）. (ví dụ trong sách)"
+            }
+          ],
+          "quickCheck": {
+            "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.034): chọn từ điền hợp mẫu nhất. Đây là bài mở — đáp án dưới đây là GỢI Ý biên tập theo mẫu của sách, không phải đáp án in trong sách.",
+            "stemZh": "A：你看见我的书了吗？B：桌子上那本是____吗？",
+            "options": [
+              {
+                "zh": "你的",
+                "vi": "của bạn — cụm “的” chỉ cuốn sách của bạn (gợi ý theo mẫu)"
+              },
+              {
+                "zh": "你",
+                "vi": "thiếu “的” — không tạo được cụm chỉ sự vật"
+              }
+            ],
+            "answer": "1",
+            "explanationVi": "Gợi ý biên tập: “桌子上那本是你的吗？” — cuốn trên bàn có phải của bạn không; “你的” ở đây thay cho “你的书”. Bài 完成对话 là bài mở, sách không in đáp án."
+          },
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "小语讲堂 · “的”字短语"
+            }
+          ],
+          "sentenceIds": [
+            "h2l4-s10",
+            "h2l4-s16",
+            "h2l4-s18",
+            "h2l4-s22"
+          ],
+          "exerciseIds": []
+        },
+        {
+          "id": "kp-hsk2-l04-characters",
+          "kind": "foundation-characters",
+          "kindLabel": "Hán tự nền tảng",
+          "title": "Hán tự nền tảng: bộ Giảo ty 绞丝旁 （纟） và bộ Đề thổ 提土旁 （土）",
+          "explanationVi": "Workbook (tr.031) giới thiệu hai bộ: 绞丝旁 (jiǎosīpáng — bộ Giảo ty 纟， vốn là hình sợi tơ 缩 nhỏ, thường gặp trong các chữ về vải, màu sắc) với chữ ví dụ 红、绿； và 提土旁 (títǔpáng — bộ Đề thổ 土， liên quan đến đất, nơi chốn) với chữ ví dụ 场、块. Chính bốn chữ này là bộ chữ viết của bài ở sách luyện viết (tr.4).",
+          "pattern": "纟 + 工 = 红 · 纟 + 彐 + 氺 = 绿 · 土 + 昜 = 场 · 土 + 夬 = 块",
+          "useWhenVi": "Học bộ thủ để nhận diện nhanh: gặp 纟thì nghĩ tới sợi tơ/màu sắc （红 đỏ, 绿 xanh lá — hai màu trung tâm của bài); gặp 土 ở phía trái thì nghĩ tới đất/địa điểm （场 trong 商场， 块 trong 十块钱）.",
+          "positionVi": "纟viết ở phía trái, ba nét co hẹp; 土 ở phía trái của 场/块 viết nét ngang cuối thành nét hất lên để nhường chỗ cho phần bên phải.",
+          "examples": [
+            {
+              "zh": "红色",
+              "pinyin": "hóngsè",
+              "noteVi": "màu đỏ — chữ mẫu của bộ 纟 (Workbook tr.031)"
+            },
+            {
+              "zh": "绿色",
+              "pinyin": "lǜsè",
+              "noteVi": "màu xanh lá — chữ mẫu của bộ 纟 (Workbook tr.031)"
+            },
+            {
+              "zh": "商场",
+              "pinyin": "shāngchǎng",
+              "noteVi": "trung tâm thương mại — chữ mẫu của bộ 土 (Workbook tr.031)"
+            },
+            {
+              "zh": "十块钱",
+              "pinyin": "shí kuài qián",
+              "noteVi": "mười đồng — chữ mẫu của bộ 土 (Workbook tr.031)"
+            }
+          ],
+          "quickCheck": {
+            "questionVi": "Chữ nào sau đây có bộ 绞丝旁 纟ở phía trái?",
+            "stemZh": "选有纟的字：",
+            "options": [
+              {
+                "zh": "红",
+                "vi": "纟 + 工 — đúng"
+              },
+              {
+                "zh": "场",
+                "vi": "chữ này có 土 — không phải"
+              }
+            ],
+            "answer": "1",
+            "explanationVi": "红 = 纟 （绞丝旁） + 工； còn 场 thuộc bộ 提土旁 土 (Workbook tr.031)."
+          },
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-workbook-pdf",
+              "pdfPage": 38,
+              "printedPage": 31,
+              "section": "汉字 · 绞丝旁/提土旁"
+            }
+          ],
+          "sentenceIds": [],
+          "exerciseIds": []
+        }
+      ],
+      "reader": {
+        "passageId": "reader-hsk2-l04",
+        "titleVi": "Nghe và đọc bốn đoạn của bài",
+        "headingVi": "Bốn đoạn: ở cửa trung tâm thương mại — xem quần — chọn cặp sách — nhật ký",
+        "noteVi": "Mỗi đoạn có track riêng của sách; từ mới của đoạn đọc ở track ngay sau. Câu hỏi in trong sách nằm ngay dưới đoạn của chúng (làm tại chỗ, tính chung tiến độ với bộ Luyện tập).",
+        "sentences": [
+          {
+            "id": "h2l4-s1",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "妈妈，我们来过这家商场吗？",
+            "pinyin": "Māma, wǒmen láiguo zhè jiā shāngchǎng ma?",
+            "vi": "Mẹ ơi, chúng ta đã đến trung tâm thương mại này chưa?",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 0.0,
+              "end": 3.55,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s2",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "没来过，这是新开的。",
+            "pinyin": "Méi láiguo, zhè shì xīn kāi de.",
+            "vi": "Chưa đến bao giờ, đây là trung tâm mới mở.",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 4.32,
+              "end": 7.1,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s3",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "我们进去看看吧。",
+            "pinyin": "Wǒmen jìnqu kànkan ba.",
+            "vi": "Chúng ta vào trong xem đi.",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 7.1,
+              "end": 10.02,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s4",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "好啊！你想买点儿什么？",
+            "pinyin": "Hǎo a! Nǐ xiǎng mǎi diǎnr shénme?",
+            "vi": "Được thôi! Con muốn mua gì nào?",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 10.02,
+              "end": 12.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s5",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "我想买条裤子。",
+            "pinyin": "Wǒ xiǎng mǎi tiáo kùzi.",
+            "vi": "Con muốn mua một chiếc quần.",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 13.45,
+              "end": 15.35,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s6",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "没问题。",
+            "pinyin": "Méi wèntí.",
+            "vi": "Được thôi, không vấn đề gì.",
+            "passageId": "h2l4-text-1",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-1",
+              "start": 15.75,
+              "end": 17.0,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s7",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "妈妈，我想买这条白色的裤子。",
+            "pinyin": "Māma, wǒ xiǎng mǎi zhè tiáo báisè de kùzi.",
+            "vi": "Mẹ ơi, con muốn mua chiếc quần trắng này.",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 0.0,
+              "end": 3.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s8",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "你有很多白色的衣服，为什么还买白色的？",
+            "pinyin": "Nǐ yǒu hěn duō báisè de yīfu, wèi shénme hái mǎi báisè de?",
+            "vi": "Con có nhiều quần áo trắng rồi, sao còn mua màu trắng nữa?",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 4.65,
+              "end": 9.25,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s9",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "因为我喜欢白色啊！",
+            "pinyin": "Yīnwèi wǒ xǐhuan báisè a!",
+            "vi": "Vì con thích màu trắng mà!",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 10.0,
+              "end": 12.3,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s10",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "我觉得这条白色的不太好看，你试试那条红色的吧。",
+            "pinyin": "Wǒ juéde zhè tiáo báisè de bú tài hǎokàn, nǐ shìshi nà tiáo hóngsè de ba.",
+            "vi": "Mẹ thấy chiếc quần trắng này không đẹp lắm, con thử chiếc đỏ kia đi.",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 13.1,
+              "end": 18.8,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s11",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "我没穿过红色的，红色的好看吗？",
+            "pinyin": "Wǒ méi chuānguo hóngsè de, hóngsè de hǎokàn ma?",
+            "vi": "Con chưa mặc màu đỏ bao giờ, màu đỏ có đẹp không ạ?",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 19.95,
+              "end": 24.25,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s12",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "就是因为没穿过，所以要试试啊！",
+            "pinyin": "Jiù shì yīnwèi méi chuānguo, suǒyǐ yào shìshi a!",
+            "vi": "Chính vì chưa mặc bao giờ nên mới phải thử chứ!",
+            "passageId": "h2l4-text-2",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-3",
+              "start": 25.1,
+              "end": 28.6,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s13",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "妈妈，我想买个新书包。",
+            "pinyin": "Māma, wǒ xiǎng mǎi gè xīn shūbāo.",
+            "vi": "Mẹ ơi, con muốn mua một chiếc cặp sách mới.",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 0.0,
+              "end": 2.65,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s14",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "好，那边卖书包，我们过去看看吧。",
+            "pinyin": "Hǎo, nàbian mài shūbāo, wǒmen guòqù kànkan ba.",
+            "vi": "Được, đằng kia có bán cặp sách, chúng ta qua đó xem đi.",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 2.95,
+              "end": 7.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s15",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "这么多漂亮的书包！",
+            "pinyin": "Zhème duō piàoliang de shūbāo!",
+            "vi": "Nhiều cặp sách đẹp quá!",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 7.9,
+              "end": 9.95,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s16",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "红色的、绿色的、黑色的，你想买哪个？",
+            "pinyin": "Hóngsè de, lǜsè de, hēisè de, nǐ xiǎng mǎi nǎge?",
+            "vi": "Màu đỏ, màu xanh lá, màu đen — con muốn mua cái nào?",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 10.3,
+              "end": 15.7,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s17",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "绿色的吧。",
+            "pinyin": "Lǜsè de ba.",
+            "vi": "Cái màu xanh lá đi ạ.",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 16.12,
+              "end": 17.48,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s18",
+            "speaker": "Vương Nhất Tuyết",
+            "zh": "不错，我也觉得绿色的更好看。",
+            "pinyin": "Búcuò, wǒ yě juéde lǜsè de gèng hǎokàn.",
+            "vi": "Khá đấy, mẹ cũng thấy màu xanh lá đẹp hơn.",
+            "passageId": "h2l4-text-3",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-5",
+              "start": 17.48,
+              "end": 21.05,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s19",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "我和妈妈去了一家商场。",
+            "pinyin": "Wǒ hé māma qùle yì jiā shāngchǎng.",
+            "vi": "Tôi cùng mẹ đi đến một trung tâm thương mại.",
+            "passageId": "h2l4-text-4",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "课文 4"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-7",
+              "start": 0.0,
+              "end": 2.8,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s20",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "因为是新开的，所以这几天东西很便宜。",
+            "pinyin": "Yīnwèi shì xīn kāi de, suǒyǐ zhè jǐ tiān dōngxi hěn piányi.",
+            "vi": "Vì mới mở nên mấy hôm nay đồ ở đó rất rẻ.",
+            "passageId": "h2l4-text-4",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "课文 4"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-7",
+              "start": 2.8,
+              "end": 7.65,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s21",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "商场里的衣服颜色很多。",
+            "pinyin": "Shāngchǎng li de yīfu yánsè hěn duō.",
+            "vi": "Quần áo trong trung tâm có rất nhiều màu.",
+            "passageId": "h2l4-text-4",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "课文 4"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-7",
+              "start": 7.65,
+              "end": 10.6,
+              "status": "asr-draft"
+            }
+          },
+          {
+            "id": "h2l4-s22",
+            "speaker": "Lưu Tiểu Tuyết",
+            "zh": "我没穿过红色的裤子，妈妈让我试了试，我觉得我穿红色的也很好看。",
+            "pinyin": "Wǒ méi chuānguo hóngsè de kùzi, māma ràng wǒ shìle shì, wǒ juéde wǒ chuān hóngsè de yě hěn hǎokàn.",
+            "vi": "Tôi chưa từng mặc quần đỏ; mẹ bảo tôi thử, và tôi thấy mình mặc màu đỏ cũng rất đẹp.",
+            "passageId": "h2l4-text-4",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "课文 4"
+              }
+            ],
+            "transcriptStatus": "print-verified",
+            "audio": {
+              "trackId": "trk-tb2-l04-7",
+              "start": 10.85,
+              "end": 18.6,
+              "status": "asr-draft"
+            }
+          }
+        ],
+        "vocab": [],
+        "audioTracks": [
+          {
+            "id": "trk-tb2-l04-1",
+            "label": "Track 4-1 · Đoạn 1 (ở cửa trung tâm thương mại)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-1.mp3",
+            "durationSec": 18.05,
+            "bookRef": "Textbook HSK 2 track 4-1",
+            "segments": [
+              {
+                "sentenceId": "h2l4-s1",
+                "start": 0.0,
+                "end": 3.55,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s2",
+                "start": 4.32,
+                "end": 7.1,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s3",
+                "start": 7.1,
+                "end": 10.02,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s4",
+                "start": 10.02,
+                "end": 12.7,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s5",
+                "start": 13.45,
+                "end": 15.35,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s6",
+                "start": 15.75,
+                "end": 17.0,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "Track 4-1 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-2",
+            "label": "Track 4-2 · Từ mới Đoạn 1",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-2.mp3",
+            "durationSec": 13.06,
+            "bookRef": "Textbook HSK 2 track 4-2",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "Track 4-2 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-3",
+            "label": "Track 4-3 · Đoạn 2 (xem quần)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-3.mp3",
+            "durationSec": 29.5,
+            "bookRef": "Textbook HSK 2 track 4-3",
+            "segments": [
+              {
+                "sentenceId": "h2l4-s7",
+                "start": 0.0,
+                "end": 3.7,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s8",
+                "start": 4.65,
+                "end": 9.25,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s9",
+                "start": 10.0,
+                "end": 12.3,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s10",
+                "start": 13.1,
+                "end": 18.8,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s11",
+                "start": 19.95,
+                "end": 24.25,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s12",
+                "start": 25.1,
+                "end": 28.6,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 47,
+                "printedPage": 31,
+                "section": "Track 4-3 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-4",
+            "label": "Track 4-4 · Từ mới Đoạn 2",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-4.mp3",
+            "durationSec": 14.91,
+            "bookRef": "Textbook HSK 2 track 4-4",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "Track 4-4 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-5",
+            "label": "Track 4-5 · Đoạn 3 (chọn cặp sách)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-5.mp3",
+            "durationSec": 22.3,
+            "bookRef": "Textbook HSK 2 track 4-5",
+            "segments": [
+              {
+                "sentenceId": "h2l4-s13",
+                "start": 0.0,
+                "end": 2.65,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s14",
+                "start": 2.95,
+                "end": 7.7,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s15",
+                "start": 7.9,
+                "end": 9.95,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s16",
+                "start": 10.3,
+                "end": 15.7,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s17",
+                "start": 16.12,
+                "end": 17.48,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s18",
+                "start": 17.48,
+                "end": 21.05,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "Track 4-5 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-6",
+            "label": "Track 4-6 · Từ mới Đoạn 3",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-6.mp3",
+            "durationSec": 14.86,
+            "bookRef": "Textbook HSK 2 track 4-6",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 50,
+                "printedPage": 34,
+                "section": "Track 4-6 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-7",
+            "label": "Track 4-7 · Đoạn 4 (nhật ký)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-7.mp3",
+            "durationSec": 19.54,
+            "bookRef": "Textbook HSK 2 track 4-7",
+            "segments": [
+              {
+                "sentenceId": "h2l4-s19",
+                "start": 0.0,
+                "end": 2.8,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s20",
+                "start": 2.8,
+                "end": 7.65,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s21",
+                "start": 7.65,
+                "end": 10.6,
+                "status": "asr-draft"
+              },
+              {
+                "sentenceId": "h2l4-s22",
+                "start": 10.85,
+                "end": 18.6,
+                "status": "asr-draft"
+              }
+            ],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "Track 4-7 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-tb2-l04-8",
+            "label": "Track 4-8 · Từ mới Đoạn 4",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-04/4-8.mp3",
+            "durationSec": 3.17,
+            "bookRef": "Textbook HSK 2 track 4-8",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (4-1…4-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+            "transcriptStatus": "print-verified",
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "Track 4-8 (ký hiệu in trong sách)"
+              }
+            ],
+            "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-13 (file không đưa vào repo)."
+          },
+          {
+            "id": "trk-wb2-l04-1",
+            "label": "Workbook Bài 4 · 模拟测练 一、听力 (track duy nhất của bài)",
+            "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-04/04-1.mp3",
+            "durationSec": 567.28,
+            "bookRef": "Workbook HSK 2 track 04-1 (Baulchino — HSK 2 WORKBOOK)",
+            "segments": [],
+            "segmentsStatus": "unverified",
+            "segmentsNoteVi": "Mốc câu hỏi nằm trong dữ liệu wbListening của bài (căn bằng tín hiệu máy, asr-draft); track không ánh xạ câu đọc trong mục Nghe & đọc."
+          }
+        ],
+        "passages": [
+          {
+            "id": "h2l4-text-1",
+            "title": "课文 1 · Ở cửa trung tâm thương mại",
+            "context": "Ở cửa một trung tâm thương mại mới mở (Textbook tr.030). Lưu Tiểu Tuyết hỏi mẹ đã từng đến đây chưa, rồi rủ mẹ vào trong xem vì muốn mua một chiếc quần.",
+            "audioTrackId": "trk-tb2-l04-1",
+            "sentenceIds": [
+              "h2l4-s1",
+              "h2l4-s2",
+              "h2l4-s3",
+              "h2l4-s4",
+              "h2l4-s5",
+              "h2l4-s6"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 46,
+                "printedPage": 30,
+                "section": "课文 1"
+              }
+            ],
+            "checkItems": [
+              {
+                "id": "tb2l4-text1-1",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.030, track 4-1): Vương Nhất Tuyết và Lưu Tiểu Tuyết muốn vào đâu xem?",
+                "promptZh": "王一雪和刘小雪要去哪儿看看？",
+                "promptPinyin": "Wáng Yīxuě hé Liú Xiǎoxuě yào qù nǎr kànkan?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "商场",
+                    "pinyin": "shāngchǎng",
+                    "vi": "trung tâm thương mại"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "超市",
+                    "pinyin": "chāoshì",
+                    "vi": "siêu thị"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "学校",
+                    "pinyin": "xuéxiào",
+                    "vi": "trường học"
+                  }
+                ],
+                "answer": "1",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.030. Đáp án A 商场： hai mẹ con đang đứng ở cửa một trung tâm thương mại mới mở và rủ nhau “我们进去看看吧”.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 46,
+                    "printedPage": 30,
+                    "section": "课文 1 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-1",
+                  "start": 0.0,
+                  "end": 17.0,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "tb2l4-text1-2",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.030, track 4-1): Vì sao Lưu Tiểu Tuyết muốn vào trong xem?",
+                "promptZh": "刘小雪为什么要进去看看？",
+                "promptPinyin": "Liú Xiǎoxuě wèi shénme yào jìnqu kànkan?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "想买条裤子",
+                    "pinyin": "xiǎng mǎi tiáo kùzi",
+                    "vi": "muốn mua một chiếc quần"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "妈妈让她进去",
+                    "pinyin": "māma ràng tā jìnqu",
+                    "vi": "mẹ bảo cô bé vào"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "想给妈妈买衣服",
+                    "pinyin": "xiǎng gěi māma mǎi yīfu",
+                    "vi": "muốn mua quần áo cho mẹ"
+                  }
+                ],
+                "answer": "1",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.030. Đáp án A: khi mẹ hỏi muốn mua gì, Tiểu Tuyết đáp “我想买条裤子” — cô bé muốn mua một chiếc quần.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 46,
+                    "printedPage": 30,
+                    "section": "课文 1 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-1",
+                  "start": 0.0,
+                  "end": 17.0,
+                  "status": "asr-draft"
+                }
+              }
+            ]
+          },
+          {
+            "id": "h2l4-text-2",
+            "title": "课文 2 · Xem quần trong trung tâm thương mại",
+            "context": "Trong trung tâm thương mại, hai mẹ con xem quần (Textbook tr.032). Tiểu Tuyết muốn chiếc quần trắng; mẹ thấy không đẹp lắm và khuyên cô bé thử chiếc đỏ.",
+            "audioTrackId": "trk-tb2-l04-3",
+            "sentenceIds": [
+              "h2l4-s7",
+              "h2l4-s8",
+              "h2l4-s9",
+              "h2l4-s10",
+              "h2l4-s11",
+              "h2l4-s12"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 48,
+                "printedPage": 32,
+                "section": "课文 2"
+              }
+            ],
+            "checkItems": [
+              {
+                "id": "tb2l4-text2-1",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.031, track 4-3): Lưu Tiểu Tuyết muốn mua gì?",
+                "promptZh": "刘小雪想买什么？",
+                "promptPinyin": "Liú Xiǎoxuě xiǎng mǎi shénme?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "白色的衣服",
+                    "pinyin": "báisè de yīfu",
+                    "vi": "quần áo màu trắng"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "红色的衣服",
+                    "pinyin": "hóngsè de yīfu",
+                    "vi": "quần áo màu đỏ"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "白色的裤子",
+                    "pinyin": "báisè de kùzi",
+                    "vi": "chiếc quần màu trắng"
+                  }
+                ],
+                "answer": "3",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.031. Đáp án C: câu đầu của đoạn — “我想买这条白色的裤子” (muốn mua chiếc QUẦN trắng này, không phải quần áo nói chung).",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 47,
+                    "printedPage": 31,
+                    "section": "课文 2 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-3",
+                  "start": 0.0,
+                  "end": 28.6,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "tb2l4-text2-2",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.031, track 4-3): Vương Nhất Tuyết bảo Lưu Tiểu Tuyết thử cái gì?",
+                "promptZh": "王一雪让刘小雪试试什么？",
+                "promptPinyin": "Wáng Yīxuě ràng Liú Xiǎoxuě shìshi shénme?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "白色的衣服",
+                    "pinyin": "báisè de yīfu",
+                    "vi": "quần áo màu trắng"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "红色的衣服",
+                    "pinyin": "hóngsè de yīfu",
+                    "vi": "quần áo màu đỏ"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "红色的裤子",
+                    "pinyin": "hóngsè de kùzi",
+                    "vi": "chiếc quần màu đỏ"
+                  }
+                ],
+                "answer": "3",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.031. Đáp án C: mẹ nói “你试试那条红色的吧” — “那条红色的” thay cho chiếc QUẦN đỏ (tiếp nối 裤子 ở câu trước).",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 47,
+                    "printedPage": 31,
+                    "section": "课文 2 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-3",
+                  "start": 0.0,
+                  "end": 28.6,
+                  "status": "asr-draft"
+                }
+              }
+            ]
+          },
+          {
+            "id": "h2l4-text-3",
+            "title": "课文 3 · Chọn cặp sách",
+            "context": "Vẫn trong trung tâm thương mại (Textbook tr.033). Hai mẹ con qua quầy cặp sách; trước ba màu đỏ, xanh lá và đen, Tiểu Tuyết chọn chiếc xanh lá.",
+            "audioTrackId": "trk-tb2-l04-5",
+            "sentenceIds": [
+              "h2l4-s13",
+              "h2l4-s14",
+              "h2l4-s15",
+              "h2l4-s16",
+              "h2l4-s17",
+              "h2l4-s18"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 49,
+                "printedPage": 33,
+                "section": "课文 3"
+              }
+            ],
+            "checkItems": [
+              {
+                "id": "tb2l4-text3-1",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.033, track 4-5): Lưu Tiểu Tuyết muốn mua gì?",
+                "promptZh": "刘小雪想买什么？",
+                "promptPinyin": "Liú Xiǎoxuě xiǎng mǎi shénme?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "新书",
+                    "pinyin": "xīn shū",
+                    "vi": "sách mới"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "书包",
+                    "pinyin": "shūbāo",
+                    "vi": "cặp sách"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "衣服",
+                    "pinyin": "yīfu",
+                    "vi": "quần áo"
+                  }
+                ],
+                "answer": "2",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.033. Đáp án B: “我想买个新书包” — muốn mua một chiếc cặp sách mới.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 49,
+                    "printedPage": 33,
+                    "section": "课文 3 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-5",
+                  "start": 0.0,
+                  "end": 21.05,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "tb2l4-text3-2",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.033, track 4-5): Vương Nhất Tuyết và Lưu Tiểu Tuyết thấy cái nào đẹp?",
+                "promptZh": "王一雪和刘小雪觉得哪个好看？",
+                "promptPinyin": "Wáng Yīxuě hé Liú Xiǎoxuě juéde nǎge hǎokàn?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "红色的",
+                    "pinyin": "hóngsè de",
+                    "vi": "cái màu đỏ"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "绿色的",
+                    "pinyin": "lǜsè de",
+                    "vi": "cái màu xanh lá"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "黑色的",
+                    "pinyin": "hēisè de",
+                    "vi": "cái màu đen"
+                  }
+                ],
+                "answer": "2",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.033. Đáp án B: Tiểu Tuyết chọn “绿色的吧”, mẹ đồng ý “我也觉得绿色的更好看”.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 49,
+                    "printedPage": 33,
+                    "section": "课文 3 · 听两遍对话，选择正确答案"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-5",
+                  "start": 0.0,
+                  "end": 21.05,
+                  "status": "asr-draft"
+                }
+              }
+            ]
+          },
+          {
+            "id": "h2l4-text-4",
+            "title": "课文 4 · Nhật ký của Lưu Tiểu Tuyết",
+            "context": "Ở phòng của mình (Textbook tr.035), Lưu Tiểu Tuyết viết nhật ký về buổi đi mua sắm cùng mẹ. Đây là đoạn văn kể dạng nhật ký, người kể là Lưu Tiểu Tuyết.",
+            "audioTrackId": "trk-tb2-l04-7",
+            "sentenceIds": [
+              "h2l4-s19",
+              "h2l4-s20",
+              "h2l4-s21",
+              "h2l4-s22"
+            ],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "课文 4"
+              }
+            ],
+            "checkItems": [
+              {
+                "id": "tb2l4-text4-1",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.035, track 4-7): nghe đoạn rồi判断 câu sau đúng hay sai — “商场里的东西不便宜。”",
+                "promptZh": "商场里的东西不便宜。",
+                "promptPinyin": "Shāngchǎng li de dōngxi bù piányi.",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "对",
+                    "pinyin": "duì",
+                    "vi": "đúng"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "不对",
+                    "pinyin": "bú duì",
+                    "vi": "sai"
+                  }
+                ],
+                "answer": "2",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu phán đoán in tại Textbook tr.035. Đoạn nhật ký nói “所以这几天东西很便宜” — đồ rất RẺ, nên câu phán đoán “不便宜” là sai.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 51,
+                    "printedPage": 35,
+                    "section": "课文 4 · 听两遍课文，判断正误"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-7",
+                  "start": 0.0,
+                  "end": 18.6,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "tb2l4-text4-2",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.035, track 4-7): nghe đoạn rồi判断 câu sau đúng hay sai — “刘小雪穿红色的裤子很好看。”",
+                "promptZh": "刘小雪穿红色的裤子很好看。",
+                "promptPinyin": "Liú Xiǎoxuě chuān hóngsè de kùzi hěn hǎokàn.",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "对",
+                    "pinyin": "duì",
+                    "vi": "đúng"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "不对",
+                    "pinyin": "bú duì",
+                    "vi": "sai"
+                  }
+                ],
+                "answer": "1",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu phán đoán in tại Textbook tr.035. Câu cuối của nhật ký: “我觉得我穿红色的也很好看” — đúng là cô bé mặc quần đỏ rất đẹp.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 51,
+                    "printedPage": 35,
+                    "section": "课文 4 · 听两遍课文，判断正误"
+                  }
+                ],
+                "audioSegment": {
+                  "trackId": "trk-tb2-l04-7",
+                  "start": 0.0,
+                  "end": 18.6,
+                  "status": "asr-draft"
+                }
+              },
+              {
+                "id": "tb2l4-text4-3",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.035): Lưu Tiểu Tuyết và mẹ đã đi đâu?",
+                "promptZh": "刘小雪和妈妈去了哪里？",
+                "promptPinyin": "Liú Xiǎoxuě hé māma qùle nǎli?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "商场",
+                    "pinyin": "shāngchǎng",
+                    "vi": "trung tâm thương mại"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "超市",
+                    "pinyin": "chāoshì",
+                    "vi": "siêu thị"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "饭店",
+                    "pinyin": "fàndiàn",
+                    "vi": "nhà hàng"
+                  }
+                ],
+                "answer": "1",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.035 (mục 朗读课文，读后选择正确答案）. Đáp án A: câu đầu của nhật ký — “我和妈妈去了一家商场”.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 51,
+                    "printedPage": 35,
+                    "section": "课文 4 · 朗读课文，读后选择正确答案"
+                  }
+                ]
+              },
+              {
+                "id": "tb2l4-text4-4",
+                "type": "multiple-choice",
+                "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.035): Quần áo trong trung tâm thương mại có màu sắc thế nào?",
+                "promptZh": "商场里衣服的颜色怎么样？",
+                "promptPinyin": "Shāngchǎng li yīfu de yánsè zěnmeyàng?",
+                "options": [
+                  {
+                    "id": "1",
+                    "zh": "很少",
+                    "pinyin": "hěn shǎo",
+                    "vi": "rất ít"
+                  },
+                  {
+                    "id": "2",
+                    "zh": "很多",
+                    "pinyin": "hěn duō",
+                    "vi": "rất nhiều"
+                  },
+                  {
+                    "id": "3",
+                    "zh": "不漂亮",
+                    "pinyin": "bú piàoliang",
+                    "vi": "không đẹp"
+                  }
+                ],
+                "answer": "2",
+                "answerStatus": "verified-from-print",
+                "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.035. Đáp án B: “商场里的衣服颜色很多” — màu sắc rất nhiều.",
+                "grammarIds": [],
+                "sourceRefs": [
+                  {
+                    "sourceId": "src-hsk2-textbook-pdf",
+                    "pdfPage": 51,
+                    "printedPage": 35,
+                    "section": "课文 4 · 朗读课文，读后选择正确答案"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "exerciseSet": {
+        "id": "exercises-hsk2-l04-main",
+        "title": "Luyện tập chính · Bài 4",
+        "items": [
+          {
+            "id": "tb2l4-warm-1",
+            "type": "multiple-choice",
+            "promptVi": "Bài nối hình Khởi động (Textbook tr.029): chọn HÌNH đúng cho từ “裤子” (quần).",
+            "promptZh": "裤子",
+            "promptPinyin": "kùzi",
+            "options": [
+              {
+                "id": "1",
+                "zh": "裤子",
+                "pinyin": "kùzi",
+                "vi": "quần (dài)",
+                "image": "assets/hsk2-lesson-04/warm-jeans.webp",
+                "imageAlt": "Tranh minh họa: quần (dài)"
+              },
+              {
+                "id": "2",
+                "zh": "过去",
+                "pinyin": "guòqù",
+                "vi": "đi qua (đường)",
+                "image": "assets/hsk2-lesson-04/warm-cross.webp",
+                "imageAlt": "Tranh minh họa: đi qua (đường)"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc",
+                "image": "assets/hsk2-lesson-04/warm-colors.webp",
+                "imageAlt": "Tranh minh họa: màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách",
+                "image": "assets/hsk2-lesson-04/warm-bag.webp",
+                "imageAlt": "Tranh minh họa: cặp sách"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Bảng nối hình in tại Textbook tr.029: ảnh 1 (quần jean treo trong cửa hàng) tương ứng A 裤子. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 29,
+                "section": "热身 1 · 给下面的词语选择对应的图片"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-warm-2",
+            "type": "multiple-choice",
+            "promptVi": "Bài nối hình Khởi động (Textbook tr.029): chọn HÌNH đúng cho từ “书包” (cặp sách).",
+            "promptZh": "书包",
+            "promptPinyin": "shūbāo",
+            "options": [
+              {
+                "id": "1",
+                "zh": "裤子",
+                "pinyin": "kùzi",
+                "vi": "quần (dài)",
+                "image": "assets/hsk2-lesson-04/warm-jeans.webp",
+                "imageAlt": "Tranh minh họa: quần (dài)"
+              },
+              {
+                "id": "2",
+                "zh": "过去",
+                "pinyin": "guòqù",
+                "vi": "đi qua (đường)",
+                "image": "assets/hsk2-lesson-04/warm-cross.webp",
+                "imageAlt": "Tranh minh họa: đi qua (đường)"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc",
+                "image": "assets/hsk2-lesson-04/warm-colors.webp",
+                "imageAlt": "Tranh minh họa: màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách",
+                "image": "assets/hsk2-lesson-04/warm-bag.webp",
+                "imageAlt": "Tranh minh họa: cặp sách"
+              }
+            ],
+            "answer": "4",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Bảng nối hình in tại Textbook tr.029: ảnh 4 (chiếc cặp sách xanh) tương ứng B 书包. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 29,
+                "section": "热身 1 · 给下面的词语选择对应的图片"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-warm-3",
+            "type": "multiple-choice",
+            "promptVi": "Bài nối hình Khởi động (Textbook tr.029): chọn HÌNH đúng cho từ “过去” (đi qua).",
+            "promptZh": "过去",
+            "promptPinyin": "guòqù",
+            "options": [
+              {
+                "id": "1",
+                "zh": "裤子",
+                "pinyin": "kùzi",
+                "vi": "quần (dài)",
+                "image": "assets/hsk2-lesson-04/warm-jeans.webp",
+                "imageAlt": "Tranh minh họa: quần (dài)"
+              },
+              {
+                "id": "2",
+                "zh": "过去",
+                "pinyin": "guòqù",
+                "vi": "đi qua (đường)",
+                "image": "assets/hsk2-lesson-04/warm-cross.webp",
+                "imageAlt": "Tranh minh họa: đi qua (đường)"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc",
+                "image": "assets/hsk2-lesson-04/warm-colors.webp",
+                "imageAlt": "Tranh minh họa: màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách",
+                "image": "assets/hsk2-lesson-04/warm-bag.webp",
+                "imageAlt": "Tranh minh họa: cặp sách"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Bảng nối hình in tại Textbook tr.029: ảnh 2 (em bé đeo cặp nắm tay người lớn qua đường) tương ứng C 过去. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 29,
+                "section": "热身 1 · 给下面的词语选择对应的图片"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-warm-4",
+            "type": "multiple-choice",
+            "promptVi": "Bài nối hình Khởi động (Textbook tr.029): chọn HÌNH đúng cho từ “颜色” (màu sắc).",
+            "promptZh": "颜色",
+            "promptPinyin": "yánsè",
+            "options": [
+              {
+                "id": "1",
+                "zh": "裤子",
+                "pinyin": "kùzi",
+                "vi": "quần (dài)",
+                "image": "assets/hsk2-lesson-04/warm-jeans.webp",
+                "imageAlt": "Tranh minh họa: quần (dài)"
+              },
+              {
+                "id": "2",
+                "zh": "过去",
+                "pinyin": "guòqù",
+                "vi": "đi qua (đường)",
+                "image": "assets/hsk2-lesson-04/warm-cross.webp",
+                "imageAlt": "Tranh minh họa: đi qua (đường)"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc",
+                "image": "assets/hsk2-lesson-04/warm-colors.webp",
+                "imageAlt": "Tranh minh họa: màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách",
+                "image": "assets/hsk2-lesson-04/warm-bag.webp",
+                "imageAlt": "Tranh minh họa: cặp sách"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-editorial",
+            "answerEvidence": "Bảng nối hình in tại Textbook tr.029: ảnh 3 (các hộp màu vẽ nhìn từ trên xuống) tương ứng D 颜色. Hình trong app là tranh vẽ lại theo cùng cảnh.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 45,
+                "printedPage": 29,
+                "section": "热身 1 · 给下面的词语选择对应的图片"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-fill-1",
+            "type": "multiple-choice",
+            "promptVi": "Bài điền từ tổng hợp (Textbook tr.035): chọn từ trong khung A 进去 / B 书包 / C 颜色 / D 条 / E 商场 để điền vào chỗ trống.",
+            "promptZh": "我看见老师在教室里，你（）找她吧。",
+            "promptPinyin": "Wǒ kànjiàn lǎoshī zài jiàoshì li, nǐ () zhǎo tā ba.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "进去",
+                "pinyin": "jìnqu",
+                "vi": "đi vào"
+              },
+              {
+                "id": "2",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "条",
+                "pinyin": "tiáo",
+                "vi": "chiếc (lượng từ)"
+              },
+              {
+                "id": "5",
+                "zh": "商场",
+                "pinyin": "shāngchǎng",
+                "vi": "trung tâm thương mại"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Textbook tr.035. Đáp án A 进去: “Tôi thấy cô giáo ở trong lớp, bạn vào trong tìm cô đi.”",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 51,
+                "printedPage": 35,
+                "section": "综合练习 · 选词填空"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-fill-2",
+            "type": "multiple-choice",
+            "promptVi": "Bài điền từ tổng hợp (Textbook tr.035): chọn từ trong khung A 进去 / B 书包 / C 颜色 / D 条 / E 商场 để điền vào chỗ trống.",
+            "promptZh": "你已经有一（）黑色的裤子了，别买了。",
+            "promptPinyin": "Nǐ yǐjīng yǒu yì () hēisè de kùzi le, bié mǎi le.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "进去",
+                "pinyin": "jìnqu",
+                "vi": "đi vào"
+              },
+              {
+                "id": "2",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "条",
+                "pinyin": "tiáo",
+                "vi": "chiếc (lượng từ)"
+              },
+              {
+                "id": "5",
+                "zh": "商场",
+                "pinyin": "shāngchǎng",
+                "vi": "trung tâm thương mại"
+              }
+            ],
+            "answer": "4",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Textbook tr.036. Đáp án D 条： lượng từ của 裤子 — “Bạn đã có một chiếc quần đen rồi, đừng mua nữa.”",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 36,
+                "section": "综合练习 · 选词填空"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-fill-3",
+            "type": "multiple-choice",
+            "promptVi": "Bài điền từ tổng hợp (Textbook tr.036): chọn từ trong khung A 进去 / B 书包 / C 颜色 / D 条 / E 商场 để điền vào chỗ trống.",
+            "promptZh": "我来过这家（），它是今年一月新开的。",
+            "promptPinyin": "Wǒ láiguo zhè jiā (), tā shì jīnnián yí yuè xīn kāi de.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "进去",
+                "pinyin": "jìnqu",
+                "vi": "đi vào"
+              },
+              {
+                "id": "2",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "条",
+                "pinyin": "tiáo",
+                "vi": "chiếc (lượng từ)"
+              },
+              {
+                "id": "5",
+                "zh": "商场",
+                "pinyin": "shāngchǎng",
+                "vi": "trung tâm thương mại"
+              }
+            ],
+            "answer": "5",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Textbook tr.036. Đáp án E 商场： “Tôi đã đến trung tâm thương mại này rồi, nó mới mở hồi tháng Một năm nay.” — lượng từ 家 cũng chỉ 商场 trong khung.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 36,
+                "section": "综合练习 · 选词填空"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-fill-4",
+            "type": "multiple-choice",
+            "promptVi": "Bài điền từ tổng hợp (Textbook tr.036): chọn từ trong khung A 进去 / B 书包 / C 颜色 / D 条 / E 商场 để điền vào chỗ trống.",
+            "promptZh": "A：妈妈，你看见我的（）了吗？B：没看见，你再找找吧。",
+            "promptPinyin": "A: Māma, nǐ kànjiàn wǒ de () le ma? B: Méi kànjiàn, nǐ zài zhǎozhao ba.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "进去",
+                "pinyin": "jìnqu",
+                "vi": "đi vào"
+              },
+              {
+                "id": "2",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "条",
+                "pinyin": "tiáo",
+                "vi": "chiếc (lượng từ)"
+              },
+              {
+                "id": "5",
+                "zh": "商场",
+                "pinyin": "shāngchǎng",
+                "vi": "trung tâm thương mại"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Textbook tr.036. Đáp án B 书包： “Mẹ ơi, mẹ có thấy cặp sách của con không?” — vật bị thất lạc trong ngữ cảnh là chiếc cặp.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 36,
+                "section": "综合练习 · 选词填空"
+              }
+            ]
+          },
+          {
+            "id": "tb2l4-fill-5",
+            "type": "multiple-choice",
+            "promptVi": "Bài điền từ tổng hợp (Textbook tr.036): chọn từ trong khung A 进去 / B 书包 / C 颜色 / D 条 / E 商场 để điền vào chỗ trống.",
+            "promptZh": "A：你想买件什么（）的衣服？B：我喜欢绿色，买绿色的吧。",
+            "promptPinyin": "A: Nǐ xiǎng mǎi jiàn shénme () de yīfu? B: Wǒ xǐhuan lǜsè, mǎi lǜsè de ba.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "进去",
+                "pinyin": "jìnqu",
+                "vi": "đi vào"
+              },
+              {
+                "id": "2",
+                "zh": "书包",
+                "pinyin": "shūbāo",
+                "vi": "cặp sách"
+              },
+              {
+                "id": "3",
+                "zh": "颜色",
+                "pinyin": "yánsè",
+                "vi": "màu sắc"
+              },
+              {
+                "id": "4",
+                "zh": "条",
+                "pinyin": "tiáo",
+                "vi": "chiếc (lượng từ)"
+              },
+              {
+                "id": "5",
+                "zh": "商场",
+                "pinyin": "shāngchǎng",
+                "vi": "trung tâm thương mại"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Textbook tr.036. Đáp án C 颜色： “Bạn muốn mua quần áo màu gì?” — câu đáp nhắc 绿色 (một màu) khẳng định chỗ trống hỏi màu sắc.",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-textbook-pdf",
+                "pdfPage": 52,
+                "printedPage": 36,
+                "section": "综合练习 · 选词填空"
+              }
+            ]
+          },
+          {
+            "id": "wb2l4-ext-1",
+            "type": "multiple-choice",
+            "promptVi": "Bài mở rộng từ vựng (Workbook tr.032): chọn cụm 饭菜 / 白猫 / 休息室 để điền vào chỗ trống.",
+            "promptZh": "我很喜欢吃你做的（）。",
+            "promptPinyin": "Wǒ hěn xǐhuan chī nǐ zuò de ().",
+            "options": [
+              {
+                "id": "1",
+                "zh": "饭菜",
+                "pinyin": "fàncài",
+                "vi": "cơm và món ăn; đồ ăn"
+              },
+              {
+                "id": "2",
+                "zh": "白猫",
+                "pinyin": "bái māo",
+                "vi": "mèo trắng"
+              },
+              {
+                "id": "3",
+                "zh": "休息室",
+                "pinyin": "xiūxishi",
+                "vi": "phòng nghỉ"
+              }
+            ],
+            "answer": "1",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Workbook tr.032 （做一做 câu 1). Đáp án 饭菜： “Tôi rất thích ăn đồ ăn bạn nấu.”",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-workbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 32,
+                "section": "字词拓展 · 做一做"
+              }
+            ]
+          },
+          {
+            "id": "wb2l4-ext-2",
+            "type": "multiple-choice",
+            "promptVi": "Bài mở rộng từ vựng (Workbook tr.032): chọn cụm 饭菜 / 白猫 / 休息室 để điền vào chỗ trống.",
+            "promptZh": "小明家有一只黑猫，我家的那只是（）。",
+            "promptPinyin": "Xiǎomíng jiā yǒu yì zhī hēi māo, wǒ jiā de nà zhī shì ().",
+            "options": [
+              {
+                "id": "1",
+                "zh": "饭菜",
+                "pinyin": "fàncài",
+                "vi": "cơm và món ăn; đồ ăn"
+              },
+              {
+                "id": "2",
+                "zh": "白猫",
+                "pinyin": "bái māo",
+                "vi": "mèo trắng"
+              },
+              {
+                "id": "3",
+                "zh": "休息室",
+                "pinyin": "xiūxishi",
+                "vi": "phòng nghỉ"
+              }
+            ],
+            "answer": "2",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Workbook tr.032 （做一做 câu 2). Đáp án 白猫： đối lập với 黑猫 ở vế trước — “nhà Tiểu Minh có một con mèo đen, con nhà tôi là mèo trắng.”",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-workbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 32,
+                "section": "字词拓展 · 做一做"
+              }
+            ]
+          },
+          {
+            "id": "wb2l4-ext-3",
+            "type": "multiple-choice",
+            "promptVi": "Bài mở rộng từ vựng (Workbook tr.032): chọn cụm 饭菜 / 白猫 / 休息室 để điền vào chỗ trống.",
+            "promptZh": "这是一间（），工作累了可以来休息休息。",
+            "promptPinyin": "Zhè shì yì jiān (), gōngzuò lèi le kěyǐ lái xiūxi xiūxi.",
+            "options": [
+              {
+                "id": "1",
+                "zh": "饭菜",
+                "pinyin": "fàncài",
+                "vi": "cơm và món ăn; đồ ăn"
+              },
+              {
+                "id": "2",
+                "zh": "白猫",
+                "pinyin": "bái māo",
+                "vi": "mèo trắng"
+              },
+              {
+                "id": "3",
+                "zh": "休息室",
+                "pinyin": "xiūxishi",
+                "vi": "phòng nghỉ"
+              }
+            ],
+            "answer": "3",
+            "answerStatus": "verified-from-print",
+            "answerEvidence": "Thân câu chép nguyên văn Workbook tr.032 （做一做 câu 3). Đáp án 休息室： “Đây là một phòng nghỉ, làm việc mệt có thể đến nghỉ ngơi.”",
+            "grammarIds": [],
+            "sourceRefs": [
+              {
+                "sourceId": "src-hsk2-workbook-pdf",
+                "pdfPage": 39,
+                "printedPage": 32,
+                "section": "字词拓展 · 做一做"
+              }
+            ]
+          }
+        ]
+      },
+      "selfCheckTasks": [
+        {
+          "id": "st-h2l4-01",
+          "kind": "speaking",
+          "titleVi": "Khởi động 2: khoanh trải nghiệm của bạn (Textbook tr.029)",
+          "instructionVi": "Như bài Khởi động 2 ở Textbook tr.029: với mỗi nhóm dưới đây, nói to những thứ bạn ĐÃ TỪNG làm/chưa từng làm bằng mẫu “我吃过… / 我没喝过…”, dùng đúng trợ từ “过” của bài. Đây là bài tự luyện, app không chấm tự động.",
+          "prompts": [
+            "吃：包子 / 饺子 / 面条儿",
+            "喝：绿茶 / 红茶 / 花茶",
+            "去：中国 / 法国 / 泰国"
+          ],
+          "draftPromptVi": "Viết nháp 3 câu về bạn, mỗi câu một nhóm. Gợi ý: “我吃过饺子，没吃过包子。我喝过绿茶。我没去过法国。”",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 45,
+              "printedPage": 29,
+              "section": "热身 2 · 圈出自己曾经有过的经历"
+            }
+          ]
+        },
+        {
+          "id": "st-h2l4-02",
+          "kind": "speaking",
+          "titleVi": "Nhìn hình, hoàn thành câu (Textbook tr.036)",
+          "instructionVi": "Dùng từ mới và điểm ngôn ngữ của bài để hoàn thành 4 câu dưới mỗi hình như bài tập mô tả hình ở Textbook tr.036. Nói to câu hoàn chỉnh rồi tự đối chiếu gợi ý. Đây là bài tự luyện, app không chấm tự động.",
+          "prompts": [
+            "她们＿＿北京。",
+            "这两个书包，我喜欢＿＿，你呢？",
+            "＿＿，所以她没去上班。",
+            "你看，学校就在那儿，＿＿吧。"
+          ],
+          "promptImages": [
+            {
+              "src": "assets/hsk2-lesson-04/desc-beijing.webp",
+              "alt": "Tranh vẽ lại: hai cô gái vẫy tay chụp ảnh trước một ngôi đền cổ ở Bắc Kinh",
+              "captionVi": "Tranh vẽ lại (Textbook tr.036, hình 1): hai cô gái ở danh thắng Bắc Kinh — gợi ý đáp án: 来过 (đã từng đến).",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk2-textbook-pdf",
+                  "pdfPage": 52,
+                  "printedPage": 36,
+                  "section": "综合练习 · 描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/hsk2-lesson-04/desc-bags.webp",
+              "alt": "Tranh vẽ lại: hai chiếc cặp sách, một đen một đỏ, được hai người cầm cạnh nhau",
+              "captionVi": "Tranh vẽ lại (Textbook tr.036, hình 2): hai chiếc cặp đen/đỏ — gợi ý đáp án: điền cụm màu + 的， ví dụ 红色的 / 黑色的 (câu mở, miễn là một cụm màu + 的）. ",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk2-textbook-pdf",
+                  "pdfPage": 52,
+                  "printedPage": 36,
+                  "section": "综合练习 · 描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/hsk2-lesson-04/desc-sick.webp",
+              "alt": "Tranh vẽ lại: một cô gái nằm ốm trên giường, bạn ngồi cạnh lo lắng",
+              "captionVi": "Tranh vẽ lại (Textbook tr.036, hình 3): cô gái ốm nằm giường — gợi ý đáp án: 因为她生病了 (vì cô ấy bị ốm).",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk2-textbook-pdf",
+                  "pdfPage": 52,
+                  "printedPage": 36,
+                  "section": "综合练习 · 描述图片"
+                }
+              ]
+            },
+            {
+              "src": "assets/hsk2-lesson-04/desc-school.webp",
+              "alt": "Tranh vẽ lại: hai cô gái đứng bên đường chỉ tay về phía trường học bên kia đường",
+              "captionVi": "Tranh vẽ lại (Textbook tr.036, hình 4): trường học ở bên kia đường — gợi ý đáp án: 我们过去 (chúng ta qua đó đi).",
+              "sourceRefs": [
+                {
+                  "sourceId": "src-hsk2-textbook-pdf",
+                  "pdfPage": 52,
+                  "printedPage": 36,
+                  "section": "综合练习 · 描述图片"
+                }
+              ]
+            }
+          ],
+          "draftPromptVi": "Viết lại 4 câu hoàn chỉnh của bạn vào đây trước khi đối chiếu gợi ý trong caption từng hình.",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 52,
+              "printedPage": 36,
+              "section": "综合练习 · 描述图片"
+            }
+          ]
+        },
+        {
+          "id": "st-h2l4-03",
+          "kind": "speaking",
+          "titleVi": "Hoạt động lớp: đóng vai mua quần (Textbook tr.036)",
+          "instructionVi": "Làm việc theo cặp như hoạt động lớp ở Textbook tr.036: một người đóng vai người bán hàng, một người đóng vai khách muốn mua quần. Khách hỏi về màu sắc, cỡ và giá; cố gắng dùng từ và ngữ pháp của bài （过的 trải nghiệm, cụm “的” chỉ đồ, 因为……所以……). Đây là bài tự luyện, app không chấm tự động.",
+          "prompts": [
+            "请问，你们有白色的裤子吗？",
+            "这条多少钱？",
+            "有没有黑色的？我想试试。"
+          ],
+          "draftPromptVi": "Mẫu mở đầu của sách （小语的例子）: A：请问，你们有白色的裤子吗？B：有，您看看。Hãy viết nháp đoạn đóng vai của bạn (khách hỏi ít nhất màu, cỡ, giá), rồi đọc to theo vai.",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 52,
+              "printedPage": 36,
+              "section": "课堂活动 · 角色扮演"
+            }
+          ]
+        },
+        {
+          "id": "st-h2l4-04",
+          "kind": "speaking",
+          "titleVi": "Câu hỏi mở sau mỗi đoạn (Textbook tr.030–034)",
+          "instructionVi": "Trả lời to (hoặc viết nháp) sáu câu hỏi mở in sau các đoạn của bài. Đây là câu hỏi hiểu nội dung, đáp án nằm ngay trong đoạn vừa đọc; app không chấm tự động.",
+          "prompts": [
+            "这家商场是新开的吗？",
+            "王一雪和刘小雪来过这家商场吗？",
+            "王一雪觉得白色的裤子好看吗？",
+            "刘小雪穿过红色的裤子吗？",
+            "商场里的书包怎么样？",
+            "刘小雪想买哪个书包？"
+          ],
+          "draftPromptVi": "Gợi ý đối chiếu: (1) 是，是新开的。(2) 没来过。(3) 她觉得白色的不太好看。(4) 没穿过。(5) 书包很多、很漂亮。(6) 她想买绿色的书包。",
+          "answerStatus": "unverified",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 46,
+              "printedPage": 30,
+              "section": "课文 1 · 读后回答问题"
+            },
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 48,
+              "printedPage": 32,
+              "section": "课文 2 · 读后回答问题"
+            },
+            {
+              "sourceId": "src-hsk2-textbook-pdf",
+              "pdfPage": 50,
+              "printedPage": 34,
+              "section": "课文 3 · 读后回答问题"
+            }
+          ]
+        }
+      ],
+      "selfCheckIntroVi": "Bốn bài tự luyện dưới đây bám đúng các hoạt động của sách (khoanh trải nghiệm, mô tả hình, đóng vai mua quần, câu hỏi mở sau đoạn). Chúng không được chấm tự động — hãy nói/viết ra rồi tự đối chiếu với gợi ý.",
+      "selfCheckListenVi": null,
+      "apply": {
+        "titleVi": "Dùng ngay: đi mua sắm và kể lại",
+        "instructionVi": "Hai nhiệm vụ nói dùng đúng hai tình huống trung tâm của bài: đóng vai khách mua quần ở cửa hàng như hoạt động lớp của sách, rồi viết/kể lại buổi đi mua sắm của chính bạn theo mẫu nhật ký Đoạn 4.",
+        "audioTrackId": "trk-tb2-l04-7",
+        "noteVi": "Câu mẫu lấy từ chính Đoạn 4 và hoạt động lớp tr.036 của bài.",
+        "sourceRefs": [
+          {
+            "sourceId": "src-hsk2-textbook-pdf",
+            "pdfPage": 51,
+            "printedPage": 35,
+            "section": "课文 4"
+          },
+          {
+            "sourceId": "src-hsk2-textbook-pdf",
+            "pdfPage": 52,
+            "printedPage": 36,
+            "section": "课堂活动"
+          }
+        ],
+        "samplePassageIds": [
+          "h2l4-text-4",
+          "h2l4-text-2"
+        ],
+        "tasks": [
+          {
+            "id": "speak-h2l4-shop",
+            "kind": "speaking",
+            "titleVi": "Đóng vai mua quần ở cửa hàng",
+            "promptVi": "Đóng vai khách mua quần: hỏi có màu trắng không, hỏi giá, xin thử chiếc màu khác. Người bán trả lời bằng các mẫu của bài. Đọc to cả hai vai.",
+            "sampleZh": "请问，你们有白色的裤子吗？有，您看看。",
+            "samplePinyin": "Qǐngwèn, nǐmen yǒu báisè de kùzi ma? Yǒu, nín kànkan.",
+            "sampleVi": "Xin hỏi, cửa hàng có quần trắng không ạ? Có, mời bạn xem. (mẫu mở đầu của sách, tr.036)"
+          },
+          {
+            "id": "speak-h2l4-diary",
+            "kind": "speaking",
+            "titleVi": "Kể lại buổi đi mua sắm của bạn",
+            "promptVi": "Đọc to câu mẫu (nhật ký Đoạn 4), rồi kể lại một lần đi mua sắm thật của bạn: đi đâu, vì sao đồ rẻ/đẹp, bạn đã thử và mua gì. Cố gắng dùng 因为……所以…… và một cụm “màu + 的”.",
+            "sampleZh": "因为是新开的，所以这几天东西很便宜。",
+            "samplePinyin": "Yīnwèi shì xīn kāi de, suǒyǐ zhè jǐ tiān dōngxi hěn piányi.",
+            "sampleVi": "Vì mới mở nên mấy hôm nay đồ ở đó rất rẻ. (câu trong Đoạn 4)"
+          }
+        ]
+      },
+      "foundationWords": [],
+      "prepSummaryVi": "16 từ mới xếp theo 4 đoạn: ở cửa trung tâm thương mại （过/商场/进去/条/裤子）, thử quần （白色/因为/试/红色/所以）, chọn cặp （书包/过去/绿色/黑色/更）, viết nhật ký （颜色）.",
+      "learningPath": [
+        {
+          "step": 1,
+          "titleVi": "Xem bức tranh trung tâm thương mại và mục tiêu bài",
+          "descVi": "Bắt đầu: 3 mục tiêu của sách — hỏi về trải nghiệm đã qua, miêu tả để chỉ sự vật, và câu nhân quả “因为……，所以……”.",
+          "sectionId": "intro"
+        },
+        {
+          "step": 2,
+          "titleVi": "Học 16 từ mới theo 4 đoạn",
+          "descVi": "Từ cần biết: mỗi nhóm từ nghe bằng đúng track từ mới của đoạn.",
+          "sectionId": "prep",
+          "dialogueId": "h2l4-text-1"
+        },
+        {
+          "step": 3,
+          "titleVi": "Nắm “过”, câu nhân quả và cụm chữ “的”",
+          "descVi": "Hiểu cách dùng: 3 điểm ngữ pháp + phần Hán tự nền tảng （绞丝旁/提土旁）.",
+          "sectionId": "knowledge"
+        },
+        {
+          "step": 4,
+          "titleVi": "Nghe và đọc 4 đoạn (22 câu)",
+          "descVi": "Nghe & đọc: mỗi đoạn nghe track riêng và trả lời ngay câu hỏi in trong sách ở dưới đoạn.",
+          "sectionId": "reader",
+          "dialogueId": "h2l4-text-1"
+        },
+        {
+          "step": 5,
+          "titleVi": "Làm 12 câu luyện tập chính",
+          "descVi": "Luyện tập: 4 câu nối hình, 5 câu điền từ tổng hợp và 3 câu mở rộng của Workbook — đều là bài in trong sách.",
+          "sectionId": "exercises"
+        },
+        {
+          "step": 6,
+          "titleVi": "Tự nói và tổng kết",
+          "descVi": "Tự nói: đóng vai mua quần và kể lại buổi mua sắm của bạn; Tổng kết: 5 ý chính cần nhớ của bài.",
+          "sectionId": "apply"
+        }
+      ],
+      "summaryPoints": [
+        {
+          "titleVi": "Trợ từ “过”: đã từng làm gì",
+          "bodyVi": "Động từ + 过 + tân ngữ nói một trải nghiệm đã xảy ra: 去过 （đã từng đi), 吃过 （đã từng ăn). Hỏi bằng 吗， 没有 hoặc lặp “động từ + 没 + động từ + 过”.",
+          "exampleZh": "我们来过这家商场吗？",
+          "examplePinyin": "Wǒmen láiguo zhè jiā shāngchǎng ma?",
+          "exampleVi": "Chúng ta đã đến trung tâm thương mại này chưa? (câu trong Đoạn 1)"
+        },
+        {
+          "titleVi": "Phủ định của “过”: 没（有）+ động từ + 过",
+          "bodyVi": "Chưa từng làm gì thì đặt 没 trước động từ: 没来过 (chưa đến bao giờ), 没穿过 (chưa mặc bao giờ). Không dùng 不 với “过”.",
+          "exampleZh": "我没穿过红色的。",
+          "examplePinyin": "Wǒ méi chuānguo hóngsè de.",
+          "exampleVi": "Con chưa mặc màu đỏ bao giờ. (câu trong Đoạn 2)"
+        },
+        {
+          "titleVi": "Nhân quả: “因为……，所以……”",
+          "bodyVi": "Vế “因为” chứa nguyên nhân, vế “所以” chứa kết quả; có thể dùng cả cặp hoặc chỉ một trong hai liên từ.",
+          "exampleZh": "就是因为没穿过，所以要试试啊！",
+          "examplePinyin": "Jiù shì yīnwèi méi chuānguo, suǒyǐ yào shìshi a!",
+          "exampleVi": "Chính vì chưa mặc bao giờ nên mới phải thử chứ! (câu trong Đoạn 2)"
+        },
+        {
+          "titleVi": "Cụm “X + 的” chỉ đúng sự vật",
+          "bodyVi": "Đặt “的” sau màu/tính từ/động từ để tạo cụm thay danh từ; khi đã rõ đang nói về vật gì thì lược danh từ: “绿色的” = chiếc (cặp) màu xanh lá.",
+          "exampleZh": "红色的、绿色的、黑色的，你想买哪个？",
+          "examplePinyin": "Hóngsè de, lǜsè de, hēisè de, nǐ xiǎng mǎi nǎge?",
+          "exampleVi": "Màu đỏ, màu xanh lá, màu đen — con muốn mua cái nào? (câu trong Đoạn 3)"
+        },
+        {
+          "titleVi": "So sánh hơn với “更”",
+          "bodyVi": "“更” đứng trước tính từ để nói mức HƠN trong so sánh ngầm: “绿色的更好看” — cái xanh lá đẹp hơn (so với các cái còn lại).",
+          "exampleZh": "不错，我也觉得绿色的更好看。",
+          "examplePinyin": "Búcuò, wǒ yě juéde lǜsè de gèng hǎokàn.",
+          "exampleVi": "Khá đấy, mẹ cũng thấy màu xanh lá đẹp hơn. (câu trong Đoạn 3)"
+        }
+      ],
+      "lookup": {
+        "introVi": "Chạm vào một từ trong câu (ở Nghe & đọc và các ví dụ) để xem Pinyin, Hán–Việt và nghĩa. Từ điển gồm toàn bộ từ mới của dự án cộng các mục bổ sung riêng cho bài này.",
+        "extras": [
+          {
+            "zh": "刘小雪",
+            "pinyin": "Liú Xiǎoxuě",
+            "hanViet": "LƯU TIỂU TUYẾT",
+            "vi": "Lưu Tiểu Tuyết (nhân vật trong bài — cô bé)"
+          },
+          {
+            "zh": "王一雪",
+            "pinyin": "Wáng Yīxuě",
+            "hanViet": "VƯƠNG NHẤT TUYẾT",
+            "vi": "Vương Nhất Tuyết (nhân vật trong bài — người mẹ)"
+          },
+          {
+            "zh": "陈天中",
+            "pinyin": "Chén Tiānzhōng",
+            "hanViet": "TRẦN THIÊN TRUNG",
+            "vi": "Trần Thiên Trung (tên người trong ví dụ của sách)"
+          },
+          {
+            "zh": "一",
+            "pinyin": "yī",
+            "hanViet": "NHẤT",
+            "vi": "một (trong 一家商场: một trung tâm thương mại)"
+          },
+          {
+            "zh": "点儿",
+            "pinyin": "diǎnr",
+            "hanViet": "ĐIỂM NHI",
+            "vi": "một chút (trong 买点儿什么: mua chút gì)"
+          }
+        ],
+        "phrases": []
+      },
+      "wbListening": {
+        "titleZh": "一、听力",
+        "titleEn": "Listening",
+        "titleVi": "Nghe theo Workbook",
+        "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 4 — 模拟测练 · 一、听力, trang in 033–035 (PDF tr. 40–42).",
+        "trackId": "trk-wb2-l04-1",
+        "answerStatus": "verified-editorial",
+        "answerNoteVi": "Đáp án được đối chiếu từ audio của sách: ghi lại lời đọc bằng máy, rà soát ngữ nghĩa theo đúng các lựa chọn in trong sách. Đây không phải đáp án chính thức của nhà xuất bản.",
+        "segmentNoteVi": "Mốc đoạn trong track được căn bằng tín hiệu máy (asr-draft), chưa có người nghe kiểm chứng.",
+        "introVi": "Toàn bộ phần nghe của Bài 4 trong sách bài tập, tái dựng đúng bố cục sách: 3 phần, 10 câu, mỗi câu nghe hai lần trong track. Hình là tranh vẽ lại theo ảnh gốc trong sách.",
+        "parts": [
+          {
+            "id": "wb2-l4-p1",
+            "no": 1,
+            "titleZh": "第一部分",
+            "titleEn": "Part I",
+            "instructionZh": "第1—3题：听一句话，选择正确图片。每题听两次。",
+            "instructionVi": "Câu 1–3: nghe một câu, chọn hình đúng. Mỗi câu nghe hai lần.",
+            "kind": "picture",
+            "example": {
+              "id": "wb2-l4-p1-ex",
+              "audio": {
+                "trackId": "trk-wb2-l04-1",
+                "start": 57.4,
+                "end": 67.6,
+                "status": "asr-draft"
+              },
+              "lines": [
+                {
+                  "zh": "我每天坐公交车去上班。",
+                  "pinyin": "Wǒ měi tiān zuò gōngjiāochē qù shàngbān."
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "image": "assets/hsk2-lesson-01/wb-ex-bus.webp",
+                  "imageAltVi": "Tranh vẽ lại: một chiếc xe buýt thành phố nhìn từ bên hông"
+                },
+                {
+                  "id": "B",
+                  "image": "assets/hsk2-lesson-01/wb-ex-plane.webp",
+                  "imageAltVi": "Tranh vẽ lại: một chiếc máy bay chở khách đang cất cánh"
+                },
+                {
+                  "id": "C",
+                  "image": "assets/hsk2-lesson-01/wb-ex-bike.webp",
+                  "imageAltVi": "Tranh vẽ lại: một chiếc xe đạp nhìn từ bên hông"
+                }
+              ],
+              "answer": "A"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-p1-q1",
+                "no": 1,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 81.6,
+                  "end": 90.5,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "我给你拿了点儿吃的喝的。",
+                    "pinyin": "Wǒ gěi nǐ nále diǎnr chī de hē de."
+                  }
+                ],
+                "options": [
+                  {
+                    "id": "A",
+                    "image": "assets/hsk2-lesson-04/wb-q1-desk.webp",
+                    "imageAltVi": "Tranh vẽ lại: một chiếc cặp sách đặt trên bàn cùng máy tính tay, vở, kính mắt và hộp bút"
+                  },
+                  {
+                    "id": "B",
+                    "image": "assets/hsk2-lesson-04/wb-q1-suitcase.webp",
+                    "imageAltVi": "Tranh vẽ lại: một chiếc va li mở trên giường, bên trong xếp đầy quần áo gấp gọn"
+                  },
+                  {
+                    "id": "C",
+                    "image": "assets/hsk2-lesson-04/wb-q1-lunch.webp",
+                    "imageAltVi": "Tranh vẽ lại: đôi tay đang xếp một hộp cơm có bánh mì và trái cây cùng chai nước vào ba lô"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Câu nói là “我给你拿了点儿吃的喝的” — tôi lấy cho bạn ít đồ ăn thức uống: hình C là đôi tay xếp hộp cơm và chai nước vào ba lô. A là cặp sách với đồ dùng học tập, B là va li đựng quần áo."
+              },
+              {
+                "id": "wb2-l4-p1-q2",
+                "no": 2,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 99.9,
+                  "end": 113.2,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "我们没去过北京，这次想去那儿玩玩。",
+                    "pinyin": "Wǒmen méi qùguo Běijīng, zhè cì xiǎng qù nàr wánwan."
+                  }
+                ],
+                "options": [
+                  {
+                    "id": "A",
+                    "image": "assets/hsk2-lesson-04/wb-q2-london.webp",
+                    "imageAltVi": "Tranh vẽ lại: tháp đồng hồ Big Ben ở Luân Đôn bên sông Thames lúc hoàng hôn"
+                  },
+                  {
+                    "id": "B",
+                    "image": "assets/hsk2-lesson-04/wb-q2-paris.webp",
+                    "imageAltVi": "Tranh vẽ lại: tháp Eiffel ở Paris dưới bầu trời nhiều mây lúc chạng vạng"
+                  },
+                  {
+                    "id": "C",
+                    "image": "assets/hsk2-lesson-04/wb-q2-beijing.webp",
+                    "imageAltVi": "Tranh vẽ lại: Thiên Đàn ở Bắc Kinh ở cuối lối đi đá dài, trời hoàng hôn"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "“我们没去过北京，这次想去那儿玩玩” — chúng tôi chưa từng đến Bắc Kinh, lần này muốn đến đó chơi: hình C là Thiên Đàn ở Bắc Kinh. A là Luân Đôn, B là Paris."
+              },
+              {
+                "id": "wb2-l4-p1-q3",
+                "no": 3,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 122.5,
+                  "end": 139.0,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "因为黑色的裤子都卖完了，所以我就买了一条红色的。",
+                    "pinyin": "Yīnwèi hēisè de kùzi dōu màiwán le, suǒyǐ wǒ jiù mǎile yì tiáo hóngsè de."
+                  }
+                ],
+                "options": [
+                  {
+                    "id": "A",
+                    "image": "assets/hsk2-lesson-04/wb-q3-rack.webp",
+                    "imageAltVi": "Tranh vẽ lại: một giá treo đầy quần áo trên mắc trong cửa hàng quần áo"
+                  },
+                  {
+                    "id": "B",
+                    "image": "assets/hsk2-lesson-04/wb-q3-cat.webp",
+                    "imageAltVi": "Tranh vẽ lại: một con mèo đen trắng ngồi cạnh đôi chân mặc quần đỏ"
+                  },
+                  {
+                    "id": "C",
+                    "image": "assets/hsk2-lesson-04/wb-q3-woman.webp",
+                    "imageAltVi": "Tranh vẽ lại: một phụ nữ mặc áo len cổ lọ đỏ sẫm, tay chống cằm vẻ trầm tư"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "Người nói mua một chiếc QUẦN đỏ vì quần đen đã bán hết — hình B cho thấy chính đôi chân mặc quần đỏ (cạnh con mèo). A chỉ là giá quần áo chung, C là áo đỏ chứ không phải quần đỏ."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-p2",
+            "no": 2,
+            "titleZh": "第二部分",
+            "titleEn": "Part II",
+            "instructionZh": "第4—6题：听对话，选择最匹配的图片。每题听两次。",
+            "instructionVi": "Câu 4–6: nghe hội thoại, chọn hình khớp nhất trong bộ 4 hình chung. Mỗi hội thoại nghe hai lần.",
+            "kind": "picture-match",
+            "pictureSet": [
+              {
+                "id": "A",
+                "image": "assets/hsk2-lesson-04/wb-p2-store.webp",
+                "imageAltVi": "Tranh vẽ lại: bên trong một cửa hàng quần áo sáng sủa — giá treo đồ, ma-nơ-canh mặc váy và kệ quần áo gấp"
+              },
+              {
+                "id": "B",
+                "image": "assets/hsk2-lesson-04/wb-p2-dumplings.webp",
+                "imageAltVi": "Tranh vẽ lại: một đĩa đầy sủi cảo luộc nhìn cận cảnh"
+              },
+              {
+                "id": "C",
+                "image": "assets/hsk2-lesson-04/wb-p2-backpack.webp",
+                "imageAltVi": "Tranh vẽ lại: một chiếc ba lô xanh đặt trên bàn gỗ, xung quanh là sách vở và đồ dùng học tập (flat-lay)"
+              },
+              {
+                "id": "D",
+                "image": "assets/hsk2-lesson-04/wb-p2-soccer.webp",
+                "imageAltVi": "Tranh vẽ lại: một cô gái mặc đồ bóng đá đỏ đang tâng bóng bằng đầu gối trên sân cỏ"
+              }
+            ],
+            "example": {
+              "id": "wb2-l4-p2-ex",
+              "audio": {
+                "trackId": "trk-wb2-l04-1",
+                "start": 159.4,
+                "end": 173.0,
+                "status": "asr-draft"
+              },
+              "lines": [
+                {
+                  "zh": "你喜欢什么运动？",
+                  "pinyin": "Nǐ xǐhuan shénme yùndòng?",
+                  "speakerVi": "Nam"
+                },
+                {
+                  "zh": "我最喜欢踢足球。",
+                  "pinyin": "Wǒ zuì xǐhuan tī zúqiú.",
+                  "speakerVi": "Nữ"
+                }
+              ],
+              "answer": "D"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-p2-q4",
+                "no": 4,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 192.2,
+                  "end": 210.8,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "你为什么不喜欢哥哥送的新书包？",
+                    "pinyin": "Nǐ wèi shénme bù xǐhuan gēge sòng de xīn shūbāo?",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "因为我不喜欢那个颜色。",
+                    "pinyin": "Yīnwèi wǒ bù xǐhuan nàge yánsè.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Hội thoại nói về chiếc 书包 mới anh trai tặng và màu của nó — hình C là chiếc ba lô/cặp sách. (Lượt đọc thứ hai của câu này bị bản ghi máy bỏ sót; đã kiểm bằng envelope tín hiệu: hai lượt đọc đủ trong cửa sổ.)"
+              },
+              {
+                "id": "wb2-l4-p2-q5",
+                "no": 5,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 224.4,
+                  "end": 248.9,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "你喜不喜欢这条白色的裤子？",
+                    "pinyin": "Nǐ xǐ bu xǐhuan zhè tiáo báisè de kùzi?",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "喜欢，但我不想每天洗衣服，还是买黑色的吧。",
+                    "pinyin": "Xǐhuan, dàn wǒ bù xiǎng měi tiān xǐ yīfu, háishi mǎi hēisè de ba.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "answer": "A",
+                "explainVi": "Hai người đang bàn mua QUẦN trắng hay đen — bối cảnh là cửa hàng quần áo (hình A)."
+              },
+              {
+                "id": "wb2-l4-p2-q6",
+                "no": 6,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 262.9,
+                  "end": 277.5,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "你吃了二十多个饺子啊！",
+                    "pinyin": "Nǐ chīle èrshí duō gè jiǎozi a!",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "那是因为我没吃午饭。",
+                    "pinyin": "Nà shì yīnwèi wǒ méi chī wǔfàn.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "Người được hỏi đã ăn hơn hai mươi chiếc 饺子 (sủi cảo) vì chưa ăn trưa — hình B là đĩa sủi cảo."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-p3",
+            "no": 3,
+            "titleZh": "第三部分",
+            "titleEn": "Part III",
+            "instructionZh": "第7—10题：听对话，选择正确答案。每题听两次。",
+            "instructionVi": "Câu 7–10: nghe hội thoại, chọn đáp án đúng. Mỗi hội thoại và câu hỏi nghe hai lần.",
+            "kind": "choice",
+            "example": {
+              "id": "wb2-l4-p3-ex",
+              "audio": {
+                "trackId": "trk-wb2-l04-1",
+                "start": 301.6,
+                "end": 326.3,
+                "status": "asr-draft"
+              },
+              "lines": [
+                {
+                  "zh": "给您笔，请在这儿写一下您的姓名。",
+                  "pinyin": "Gěi nín bǐ, qǐng zài zhèr xiě yíxià nín de xìngmíng.",
+                  "speakerVi": "Nam"
+                },
+                {
+                  "zh": "好的，是这儿吗？",
+                  "pinyin": "Hǎo de, shì zhèr ma?",
+                  "speakerVi": "Nữ"
+                }
+              ],
+              "questionZh": "女的要写什么？",
+              "questionPinyin": "Nǚ de yào xiě shénme?",
+              "options": [
+                {
+                  "id": "A",
+                  "zh": "姓名",
+                  "pinyin": "xìngmíng",
+                  "vi": "họ tên"
+                },
+                {
+                  "id": "B",
+                  "zh": "时间",
+                  "pinyin": "shíjiān",
+                  "vi": "thời gian"
+                },
+                {
+                  "id": "C",
+                  "zh": "问题",
+                  "pinyin": "wèntí",
+                  "vi": "câu hỏi; vấn đề"
+                }
+              ],
+              "answer": "A"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-p3-q7",
+                "no": 7,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 348.1,
+                  "end": 377.7,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "桌子上的苹果都洗过了吧？",
+                    "pinyin": "Zhuōzi shang de píngguǒ dōu xǐguo le ba?",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "没有，那是我新买的。",
+                    "pinyin": "Méiyǒu, nà shì wǒ xīn mǎi de.",
+                    "speakerVi": "Người 2"
+                  },
+                  {
+                    "zh": "你洗一下再吃。",
+                    "pinyin": "Nǐ xǐ yíxià zài chī.",
+                    "speakerVi": "Người 1"
+                  }
+                ],
+                "questionZh": "他们现在在哪儿？",
+                "questionPinyin": "Tāmen xiànzài zài nǎr?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "超市",
+                    "pinyin": "chāoshì",
+                    "vi": "siêu thị"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "家里",
+                    "pinyin": "jiā li",
+                    "vi": "ở nhà"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "水果店",
+                    "pinyin": "shuǐguǒdiàn",
+                    "vi": "cửa hàng trái cây"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "Táo để trên BÀN ở nhà, một người bảo rửa qua rồi hãy ăn — hai người đang ở nhà (B 家里）, không phải đang ở siêu thị hay cửa hàng trái cây."
+              },
+              {
+                "id": "wb2-l4-p3-q8",
+                "no": 8,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 394.1,
+                  "end": 429.8,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "你穿红色的好看，我们过去看看那件红色的。",
+                    "pinyin": "Nǐ chuān hóngsè de hǎokàn, wǒmen guòqù kànkan nà jiàn hóngsè de.",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "这件吗？太贵了吧，3800多呢。",
+                    "pinyin": "Zhè jiàn ma? Tài guì le ba, sānqiān bābǎi duō ne.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "questionZh": "女的觉得那件衣服怎么样？",
+                "questionPinyin": "Nǚ de juéde nà jiàn yīfu zěnmeyàng?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "很贵",
+                    "pinyin": "hěn guì",
+                    "vi": "rất đắt"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "很漂亮",
+                    "pinyin": "hěn piàoliang",
+                    "vi": "rất đẹp"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "颜色不好看",
+                    "pinyin": "yánsè bù hǎokàn",
+                    "vi": "màu không đẹp"
+                  }
+                ],
+                "answer": "A",
+                "explainVi": "Cô gái thốt lên “太贵了吧，3800多呢” — hơn 3.800 tệ, đắt quá: cô ấy thấy chiếc áo RẤT ĐẮT (A 很贵）."
+              },
+              {
+                "id": "wb2-l4-p3-q9",
+                "no": 9,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 447.0,
+                  "end": 496.8,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "这条裤子很不错，但颜色不太好。",
+                    "pinyin": "Zhè tiáo kùzi hěn búcuò, dàn yánsè bú tài hǎo.",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "我们还有白色、黑色和绿色的，您要不要再看看？",
+                    "pinyin": "Wǒmen hái yǒu báisè, hēisè hé lǜsè de, nín yào bu yào zài kànkan?",
+                    "speakerVi": "Người 2"
+                  },
+                  {
+                    "zh": "给我拿条绿色的试试吧。",
+                    "pinyin": "Gěi wǒ ná tiáo lǜsè de shìshi ba.",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "好，我找一下。",
+                    "pinyin": "Hǎo, wǒ zhǎo yíxià.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "questionZh": "女的想买什么颜色的裤子？",
+                "questionPinyin": "Nǚ de xiǎng mǎi shénme yánsè de kùzi?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "白色",
+                    "pinyin": "báisè",
+                    "vi": "màu trắng"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "黑色",
+                    "pinyin": "hēisè",
+                    "vi": "màu đen"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "绿色",
+                    "pinyin": "lǜsè",
+                    "vi": "màu xanh lá"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Sau khi nghe cửa hàng còn trắng, đen và xanh lá, cô gái nói “给我拿条绿色的试试吧” — lấy cho tôi chiếc XANH LÁ thử (C). (Lượt đọc thứ hai của câu này bị bản ghi máy bỏ sót; envelope tín hiệu xác nhận đủ hai lượt trong cửa sổ.)"
+              },
+              {
+                "id": "wb2-l4-p3-q10",
+                "no": 10,
+                "audio": {
+                  "trackId": "trk-wb2-l04-1",
+                  "start": 513.7,
+                  "end": 553.2,
+                  "status": "asr-draft"
+                },
+                "lines": [
+                  {
+                    "zh": "你来过这家饭店吗？",
+                    "pinyin": "Nǐ láiguo zhè jiā fàndiàn ma?",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "没有，我下班后都回家吃饭。",
+                    "pinyin": "Méiyǒu, wǒ xiàbān hòu dōu huí jiā chī fàn.",
+                    "speakerVi": "Người 2"
+                  },
+                  {
+                    "zh": "这儿的包子不错，饺子也很好吃。",
+                    "pinyin": "Zhèr de bāozi búcuò, jiǎozi yě hěn hǎochī.",
+                    "speakerVi": "Người 1"
+                  },
+                  {
+                    "zh": "吃包子吧。",
+                    "pinyin": "Chī bāozi ba.",
+                    "speakerVi": "Người 2"
+                  }
+                ],
+                "questionZh": "他们今天吃什么？",
+                "questionPinyin": "Tāmen jīntiān chī shénme?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "米饭",
+                    "pinyin": "mǐfàn",
+                    "vi": "cơm"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "饺子",
+                    "pinyin": "jiǎozi",
+                    "vi": "sủi cảo"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "包子",
+                    "pinyin": "bāozi",
+                    "vi": "bánh bao"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Nhà hàng được khen cả bánh bao lẫn sủi cảo, nhưng câu chốt là “吃包子吧” — ăn BÁNH BAO đi (C 包子）."
+              }
+            ]
+          }
+        ]
+      },
+      "wbReading": {
+        "titleZh": "阅读",
+        "titleEn": "Reading",
+        "titleVi": "Đọc",
+        "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 4 — 模拟测练 · 二、阅读, trang in 036–039 (PDF tr. 43–46).",
+        "answerStatus": "verified-editorial",
+        "answerNoteVi": "Đáp án phần Đọc được đối chiếu trực tiếp từ nội dung in trong sách (đọc câu/đoạn và các lựa chọn in, rà soát ngữ nghĩa từng câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+        "introVi": "Phần đọc giữ nguyên bố cục sách in: câu, đoạn và lựa chọn đều kèm pinyin như trên trang sách. Hình ở Phần I là tranh vẽ lại theo ảnh gốc trong sách.",
+        "parts": [
+          {
+            "id": "wb2-l4-r1",
+            "no": 1,
+            "titleZh": "第一部分",
+            "titleEn": "Part I",
+            "instructionZh": "第11—13题：选择与句子最匹配的图片。",
+            "instructionVi": "Câu 11–13: Chọn hình phù hợp nhất với câu.",
+            "kind": "picture-match",
+            "pictureSet": [
+              {
+                "id": "A",
+                "image": "assets/hsk2-lesson-04/wb-r1-store.webp",
+                "imageAltVi": "Tranh vẽ lại: hai mẹ con trong cửa hàng quần áo, người mẹ cầm một chiếc áo trắng trên mắc cho con gái xem"
+              },
+              {
+                "id": "B",
+                "image": "assets/hsk2-lesson-04/wb-r1-duck.webp",
+                "imageAltVi": "Tranh vẽ lại: bàn tiệc với một con vịt quay Bắc Kinh bóng mỡ ở giữa, xung quanh là bánh tráng, dưa chuột và nước chấm"
+              },
+              {
+                "id": "C",
+                "image": "assets/hsk2-lesson-04/wb-r1-cup.webp",
+                "imageAltVi": "Tranh vẽ lại: một chiếc cốc đen có quai, miệng cốc màu be, đặt trên nền sáng"
+              },
+              {
+                "id": "D",
+                "image": "assets/hsk2-lesson-04/wb-r1-basketball.webp",
+                "imageAltVi": "Tranh vẽ lại: chàng trai mặc áo ba lỗ đen, quần đùi đỏ đang rê bóng rổ trên sân"
+              }
+            ],
+            "example": {
+              "sentenceZh": "每个星期六，我都去打篮球。",
+              "sentencePinyin": "Měi gè Xīngqīliù, wǒ dōu qù dǎ lánqiú.",
+              "sentenceEn": "I go to play basketball every Saturday.",
+              "answer": "D",
+              "id": "wb2-l4-r1-ex"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-r1-q11",
+                "no": 11,
+                "sentenceZh": "孩子是和妈妈一起去的商场。",
+                "sentencePinyin": "Háizi shì hé māma yìqǐ qù de shāngchǎng.",
+                "answer": "A",
+                "explainVi": "“孩子是和妈妈一起去的商场” — đứa trẻ đi trung tâm thương mại cùng mẹ: hình A là hai mẹ con trong cửa hàng quần áo."
+              },
+              {
+                "id": "wb2-l4-r1-q12",
+                "no": 12,
+                "sentenceZh": "我觉得这个杯子的颜色很好看。",
+                "sentencePinyin": "Wǒ juéde zhège bēizi de yánsè hěn hǎokàn.",
+                "answer": "C",
+                "explainVi": "Câu nói về màu của chiếc 杯子 (cốc) — hình C là chiếc cốc đen."
+              },
+              {
+                "id": "wb2-l4-r1-q13",
+                "no": 13,
+                "sentenceZh": "我吃过烤鸭，但我不知道烤鸭是怎么做的。",
+                "sentencePinyin": "Wǒ chīguo kǎoyā, dàn wǒ bù zhīdào kǎoyā shì zěnme zuò de.",
+                "answer": "B",
+                "explainVi": "Câu nhắc đến 烤鸭 (vịt quay) — hình B là bàn vịt quay Bắc Kinh."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-r2",
+            "no": 2,
+            "titleZh": "第二部分",
+            "titleEn": "Part II",
+            "instructionZh": "第14—17题：选词填空。",
+            "instructionVi": "Câu 14–17: Chọn từ trong khung điền vào chỗ trống; mỗi từ chỉ dùng một lần.",
+            "kind": "word-bank",
+            "bank": [
+              {
+                "id": "A",
+                "zh": "条",
+                "pinyin": "tiáo"
+              },
+              {
+                "id": "B",
+                "zh": "因为",
+                "pinyin": "yīnwèi"
+              },
+              {
+                "id": "C",
+                "zh": "过去",
+                "pinyin": "guòqù"
+              },
+              {
+                "id": "D",
+                "zh": "书包",
+                "pinyin": "shūbāo"
+              },
+              {
+                "id": "E",
+                "zh": "完",
+                "pinyin": "wán"
+              }
+            ],
+            "example": {
+              "id": "wb2-l4-r2-ex",
+              "lines": [
+                {
+                  "zh": "题太多了，所以我没做（　）。",
+                  "pinyin": "Tí tài duō le, suǒyǐ wǒ méi zuò ( )."
+                }
+              ],
+              "answer": "E"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-r2-q14",
+                "no": 14,
+                "lines": [
+                  {
+                    "zh": "我想给孩子买（　）裤子。",
+                    "pinyin": "Wǒ xiǎng gěi háizi mǎi ( ) kùzi."
+                  }
+                ],
+                "answer": "A",
+                "explainVi": "“买一条裤子” — 条 (A) là lượng từ của quần; các từ còn lại không đi được với 裤子."
+              },
+              {
+                "id": "wb2-l4-r2-q15",
+                "no": 15,
+                "lines": [
+                  {
+                    "zh": "前边有一家商场，我们（　）看看吧。",
+                    "pinyin": "Qiánbian yǒu yì jiā shāngchǎng, wǒmen ( ) kànkan ba."
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Phía trước có một trung tâm thương mại — “我们过去看看吧”: qua đó xem đi, động từ cần điền là 过去 (C)."
+              },
+              {
+                "id": "wb2-l4-r2-q16",
+                "no": 16,
+                "lines": [
+                  {
+                    "zh": "这是你的（　）吗？",
+                    "pinyin": "Zhè shì nǐ de ( ) ma?",
+                    "speakerVi": "Nữ"
+                  },
+                  {
+                    "zh": "不是，我的是黑色的。",
+                    "pinyin": "Bú shì, wǒ de shì hēisè de.",
+                    "speakerVi": "Nam"
+                  }
+                ],
+                "answer": "D",
+                "explainVi": "Câu đáp nói “của tôi là cái màu đen” — vật đang hỏi sở hữu là chiếc 书包 (D): “Đây có phải cặp sách của bạn không?”"
+              },
+              {
+                "id": "wb2-l4-r2-q17",
+                "no": 17,
+                "lines": [
+                  {
+                    "zh": "你们是坐公交车来的吗？",
+                    "pinyin": "Nǐmen shì zuò gōngjiāochē lái de ma?",
+                    "speakerVi": "Nam"
+                  },
+                  {
+                    "zh": "我们是打车过来的，（　）公交站有点儿远。",
+                    "pinyin": "Wǒmen shì dǎchē guòlái de, ( ) gōngjiāozhàn yǒudiǎnr yuǎn.",
+                    "speakerVi": "Nữ"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "Vế sau cho LÝ DO đi taxi: trạm xe buýt hơi xa — liên từ nguyên nhân 因为 (B)."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-r3",
+            "no": 3,
+            "titleZh": "第三部分",
+            "titleEn": "Part III",
+            "instructionZh": "第18—21题：匹配句子。",
+            "instructionVi": "Câu 18–21: Chọn câu trả lời trong khung phù hợp với mỗi câu hỏi.",
+            "kind": "match-bank",
+            "bank": [
+              {
+                "id": "A",
+                "zh": "因为工作太累了，我想休息休息。",
+                "pinyin": "Yīnwèi gōngzuò tài lèi le, wǒ xiǎng xiūxi xiūxi."
+              },
+              {
+                "id": "B",
+                "zh": "有几个包子，还有点儿饺子，你想吃什么？",
+                "pinyin": "Yǒu jǐ gè bāozi, hái yǒu diǎnr jiǎozi, nǐ xiǎng chī shénme?"
+              },
+              {
+                "id": "C",
+                "zh": "去过，学校很漂亮，人也很多。",
+                "pinyin": "Qùguo, xuéxiào hěn piàoliang, rén yě hěn duō."
+              },
+              {
+                "id": "D",
+                "zh": "我不喜欢这个颜色。",
+                "pinyin": "Wǒ bù xǐhuan zhège yánsè."
+              },
+              {
+                "id": "E",
+                "zh": "他出去了，一会儿就回来。",
+                "pinyin": "Tā chūqù le, yíhuìr jiù huílái."
+              }
+            ],
+            "example": {
+              "id": "wb2-l4-r3-ex",
+              "zh": "请问李老师在吗？",
+              "pinyin": "Qǐngwèn Lǐ lǎoshī zài ma?",
+              "en": "Excuse me, is Mr. Li here?",
+              "answer": "E"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-r3-q18",
+                "no": 18,
+                "zh": "家里还有吃的吗？",
+                "pinyin": "Jiā li hái yǒu chī de ma?",
+                "answer": "B",
+                "explainVi": "Hỏi nhà còn gì ăn không — B liệt kê đồ ăn còn lại: “Có mấy cái bánh bao, còn một ít sủi cảo, bạn muốn ăn gì?”"
+              },
+              {
+                "id": "wb2-l4-r3-q19",
+                "no": 19,
+                "zh": "你去过北京大学吗？",
+                "pinyin": "Nǐ qùguo Běijīng Dàxué ma?",
+                "answer": "C",
+                "explainVi": "Hỏi đã từng đến Bắc Kinh Đại học chưa — C đáp “去过” (đã từng đi) rồi nhận xét về trường."
+              },
+              {
+                "id": "wb2-l4-r3-q20",
+                "no": 20,
+                "zh": "你为什么想出去旅游？",
+                "pinyin": "Nǐ wèi shénme xiǎng chūqù lǚyóu?",
+                "answer": "A",
+                "explainVi": "Câu hỏi vì sao được đáp bằng một nguyên nhân bắt đầu bằng 因为： “Vì công việc mệt quá, tôi muốn nghỉ ngơi một chút” (A)."
+              },
+              {
+                "id": "wb2-l4-r3-q21",
+                "no": 21,
+                "zh": "你看这件怎么样？",
+                "pinyin": "Nǐ kàn zhè jiàn zěnmeyàng?",
+                "answer": "D",
+                "explainVi": "Được hỏi xem chiếc này thế nào, câu đáp nhận xét về MÀU: “我不喜欢这个颜色” — tôi không thích màu này (D)."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-r4",
+            "no": 4,
+            "titleZh": "第四部分",
+            "titleEn": "Part IV",
+            "instructionZh": "第22—24题：选择正确答案。",
+            "instructionVi": "Câu 22–24: Đọc đoạn ngắn rồi chọn đáp án đúng.",
+            "kind": "passage-choice",
+            "example": {
+              "passageZh": "我爱跳舞，但跳得不太好。",
+              "passagePinyin": "Wǒ ài tiàowǔ, dàn tiào de bú tài hǎo.",
+              "passageEn": "I love dancing, but I'm not good at it.",
+              "questionZh": "他：",
+              "questionPinyin": "Tā:",
+              "questionEn": "He:",
+              "options": [
+                {
+                  "id": "A",
+                  "zh": "下课了",
+                  "pinyin": "xiàkè le",
+                  "en": "finished class",
+                  "vi": "đã tan học"
+                },
+                {
+                  "id": "B",
+                  "zh": "喜欢跳舞",
+                  "pinyin": "xǐhuan tiàowǔ",
+                  "en": "likes dancing",
+                  "vi": "thích nhảy múa"
+                },
+                {
+                  "id": "C",
+                  "zh": "是小学生",
+                  "pinyin": "shì xiǎoxuéshēng",
+                  "en": "is a primary school student",
+                  "vi": "là học sinh tiểu học"
+                }
+              ],
+              "answer": "B",
+              "id": "wb2-l4-r4-ex"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-r4-q22",
+                "no": 22,
+                "passageZh": "因为饭店的菜很好吃，也很便宜，所以店里的人非常多。我和朋友要了饺子，还要了两个菜，不到80块钱。",
+                "passagePinyin": "Yīnwèi fàndiàn de cài hěn hǎochī, yě hěn piányi, suǒyǐ diàn li de rén fēicháng duō. Wǒ hé péngyou yàole jiǎozi, hái yàole liǎng gè cài, bú dào bāshí kuài qián.",
+                "questionZh": "饭店里为什么人很多？",
+                "questionPinyin": "Fàndiàn li wèi shénme rén hěn duō?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "饭菜好吃",
+                    "pinyin": "fàncài hǎochī",
+                    "vi": "món ăn ngon"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "饺子不要钱",
+                    "pinyin": "jiǎozi bú yào qián",
+                    "vi": "sủi cảo không mất tiền"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "能认识新朋友",
+                    "pinyin": "néng rènshi xīn péngyou",
+                    "vi": "quen được bạn mới"
+                  }
+                ],
+                "answer": "A",
+                "explainVi": "Đoạn mở đầu bằng chính quan hệ nhân quả của bài: “因为饭店的菜很好吃，也很便宜，所以店里的人非常多” — vì món ăn ngon (và rẻ) nên đông khách: A."
+              },
+              {
+                "id": "wb2-l4-r4-q23",
+                "no": 23,
+                "passageZh": "王老师生病了，我和家月去超市买了牛奶和一些好吃的，想去看看她。但我们没去过她家，不知道怎么坐车。",
+                "passagePinyin": "Wáng lǎoshī shēngbìng le, wǒ hé Jiāyuè qù chāoshì mǎile niúnǎi hé yìxiē hǎochī de, xiǎng qù kànkan tā. Dàn wǒmen méi qùguo tā jiā, bù zhīdào zěnme zuòchē.",
+                "questionZh": "他们要去哪儿看王老师？",
+                "questionPinyin": "Tāmen yào qù nǎr kàn Wáng lǎoshī?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "超市",
+                    "pinyin": "chāoshì",
+                    "vi": "siêu thị"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "医院",
+                    "pinyin": "yīyuàn",
+                    "vi": "bệnh viện"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "王老师家",
+                    "pinyin": "Wáng lǎoshī jiā",
+                    "vi": "nhà cô Vương"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "Họ mua đồ ở siêu thị để ĐI THĂM cô Vương — “没去过她家” cho biết nơi đến là nhà cô (C); siêu thị chỉ là nơi mua đồ, bệnh viện không được nhắc."
+              },
+              {
+                "id": "wb2-l4-r4-q24",
+                "no": 24,
+                "passageZh": "小王给我介绍了一家新开的商场。商场里卖的衣服颜色很多，也很漂亮。我想买一条红色的裤子，但朋友说白色的好看，所以我就买了白色的。",
+                "passagePinyin": "Xiǎo Wáng gěi wǒ jièshàole yì jiā xīn kāi de shāngchǎng. Shāngchǎng li mài de yīfu yánsè hěn duō, yě hěn piàoliang. Wǒ xiǎng mǎi yì tiáo hóngsè de kùzi, dàn péngyou shuō báisè de hǎokàn, suǒyǐ wǒ jiù mǎile báisè de.",
+                "questionZh": "朋友觉得哪个颜色的裤子好看？",
+                "questionPinyin": "Péngyou juéde nǎge yánsè de kùzi hǎokàn?",
+                "options": [
+                  {
+                    "id": "A",
+                    "zh": "黑色",
+                    "pinyin": "hēisè",
+                    "vi": "màu đen"
+                  },
+                  {
+                    "id": "B",
+                    "zh": "白色",
+                    "pinyin": "báisè",
+                    "vi": "màu trắng"
+                  },
+                  {
+                    "id": "C",
+                    "zh": "红色",
+                    "pinyin": "hóngsè",
+                    "vi": "màu đỏ"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "Người nói vốn muốn mua quần ĐỎ, nhưng “朋友说白色的好看” — bạn thấy màu TRẮNG đẹp, nên cuối cùng mua màu trắng: B."
+              }
+            ]
+          }
+        ]
+      },
+      "wbWriting": {
+        "titleZh": "书写",
+        "titleEn": "Writing",
+        "titleVi": "Viết",
+        "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 4 — 模拟测练 · 三、书写, trang in 040 (PDF tr. 47).",
+        "answerStatus": "verified-editorial",
+        "answerNoteVi": "Đáp án phần Viết được đối chiếu trực tiếp từ ô chữ và pinyin in trong sách (bộ phận còn thiếu xác định theo ô 田字格 và mục Hán tự của chính bài; chữ cần viết xác định duy nhất theo pinyin in trên chỗ trống và ngữ cảnh câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+        "introVi": "Phần viết giữ nguyên bố cục sách in: Phần I chọn bộ phận còn thiếu để ghép thành chữ trong ô 田字格； Phần II nhìn pinyin in trên chỗ trống rồi tự gõ chữ Hán.",
+        "parts": [
+          {
+            "id": "wb2-l4-w1",
+            "no": 1,
+            "titleZh": "第一部分",
+            "titleEn": "Part I",
+            "instructionZh": "第25—27题：根据部件组字。",
+            "instructionVi": "Câu 25–27: Chọn bộ phận còn thiếu để ghép thành chữ đúng trong ô chữ.",
+            "kind": "component-bank",
+            "bank": [
+              {
+                "id": "A",
+                "zh": "纟"
+              },
+              {
+                "id": "B",
+                "zh": "礻"
+              },
+              {
+                "id": "C",
+                "zh": "辶"
+              },
+              {
+                "id": "D",
+                "zh": "十"
+              }
+            ],
+            "example": {
+              "chars": [
+                {
+                  "pinyin": "shén",
+                  "full": "什",
+                  "shown": "亻",
+                  "gap": true
+                },
+                {
+                  "pinyin": "me",
+                  "full": "么",
+                  "shown": "么"
+                }
+              ],
+              "answer": "D",
+              "id": "wb2-l4-w1-ex"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-w1-q25",
+                "no": 25,
+                "chars": [
+                  {
+                    "pinyin": "jìn",
+                    "full": "进",
+                    "shown": "井",
+                    "gap": true
+                  },
+                  {
+                    "pinyin": "qù",
+                    "full": "去",
+                    "shown": "去"
+                  }
+                ],
+                "answer": "C",
+                "explainVi": "进 ghép từ 井 và 辶 (bộ sước); ô chữ 进 đang hiện 井 nên bộ phận thiếu là 辶 — chọn C."
+              },
+              {
+                "id": "wb2-l4-w1-q26",
+                "no": 26,
+                "chars": [
+                  {
+                    "pinyin": "kù",
+                    "full": "裤",
+                    "shown": "库",
+                    "gap": true
+                  },
+                  {
+                    "pinyin": "zi",
+                    "full": "子",
+                    "shown": "子"
+                  }
+                ],
+                "answer": "B",
+                "explainVi": "裤 ghép từ 礻 (bộ kỳ thị, họ hàng với vải vóc/quần áo) và 库； ô chữ 裤 đang hiện 库 nên bộ phận thiếu là 礻 — chọn B."
+              },
+              {
+                "id": "wb2-l4-w1-q27",
+                "no": 27,
+                "chars": [
+                  {
+                    "pinyin": "hóng",
+                    "full": "红",
+                    "shown": "工",
+                    "gap": true
+                  },
+                  {
+                    "pinyin": "sè",
+                    "full": "色",
+                    "shown": "色"
+                  }
+                ],
+                "answer": "A",
+                "explainVi": "红 ghép từ 纟 (giảo ty — bộ này chính bài dạy ở mục Hán tự) và 工； ô chữ 红 đang hiện 工 nên bộ phận thiếu là 纟 — chọn A."
+              }
+            ]
+          },
+          {
+            "id": "wb2-l4-w2",
+            "no": 2,
+            "titleZh": "第二部分",
+            "titleEn": "Part II",
+            "instructionZh": "第28—30题：根据拼音写汉字。",
+            "instructionVi": "Câu 28–30: Gõ chữ Hán theo pinyin in trên chỗ trống.",
+            "kind": "pinyin-write",
+            "example": {
+              "stemZh": "你想喝茶还（　）喝咖啡？",
+              "stemPinyin": "Nǐ xiǎng hē chá hái (shì) hē kāfēi?",
+              "stemEn": "Would you like tea or coffee?",
+              "blankPinyin": "shì",
+              "answerZh": "是",
+              "id": "wb2-l4-w2-ex"
+            },
+            "items": [
+              {
+                "id": "wb2-l4-w2-q28",
+                "no": 28,
+                "stemZh": "她没买（　）绿色的衣服。",
+                "stemPinyin": "Tā méi mǎi (guo) lǜsè de yīfu.",
+                "blankPinyin": "guo",
+                "answerZh": "过",
+                "explainVi": "“她没买过绿色的衣服” — cô ấy chưa từng mua quần áo màu xanh lá; chữ cần viết theo pinyin guo là 过 (trợ từ của chính bài này)."
+              },
+              {
+                "id": "wb2-l4-w2-q29",
+                "no": 29,
+                "stemZh": "这家商（　）是新开的，我想去看看。",
+                "stemPinyin": "Zhè jiā shāng (chǎng) shì xīn kāi de, wǒ xiǎng qù kànkan.",
+                "blankPinyin": "chǎng",
+                "answerZh": "场",
+                "explainVi": "“这家商场是新开的” — trung tâm thương mại này mới mở; chữ cần viết theo pinyin chǎng là 场."
+              },
+              {
+                "id": "wb2-l4-w2-q30",
+                "no": 30,
+                "stemZh": "因为明天不上班，所（　）今天可以晚点儿睡。",
+                "stemPinyin": "Yīnwèi míngtiān bú shàngbān, suǒ (yǐ) jīntiān kěyǐ wǎn diǎnr shuì.",
+                "blankPinyin": "yǐ",
+                "answerZh": "以",
+                "explainVi": "Cặp nhân quả của bài: “因为……，所以……” — chữ cần viết theo pinyin yǐ là 以 để hoàn thành 所以."
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "writingSets": [
@@ -61912,6 +65973,138 @@
               "pdfPage": 3,
               "printedPage": 3,
               "section": "完"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-hsk2-l04",
+      "lessonId": "hsk2-l04",
+      "titleVi": "Luyện viết Bài 4 · 红 / 绿 / 场 / 块",
+      "introVi": "Bốn chữ của Bài 4 theo đúng thứ tự sách luyện viết chữ Hán HSK 2 (trang 4): mỗi chữ đi từ nhận diện nét, xem thứ tự nét, viết theo hướng dẫn, tự viết, đối chiếu, rồi ghi vào vở giấy. Hai bộ của bài — Giảo ty 纟và Đề thổ 土 — cũng là điểm Hán tự nền tảng trong Workbook tr.031.",
+      "sourceRefs": [
+        {
+          "sourceId": "src-hsk2-writing-pdf",
+          "pdfPage": 4,
+          "printedPage": 4,
+          "section": "Sách viết tr.4 (trang ảnh thứ 4)"
+        }
+      ],
+      "chars": [
+        {
+          "id": "w-h2l4-hong",
+          "char": "红",
+          "pinyin": "hóng",
+          "hanViet": "HỒNG",
+          "meaningVi": "đỏ",
+          "strokeCount": 6,
+          "radical": "纟",
+          "radicalNameVi": "Giảo ty bàng",
+          "word": {
+            "zh": "红色",
+            "pinyin": "hóngsè",
+            "vi": "màu đỏ"
+          },
+          "sentence": {
+            "zh": "我没买过红色的。",
+            "pinyin": "Wǒ méi mǎiguo hóngsè de.",
+            "vi": "Tôi chưa từng mua đồ màu đỏ."
+          },
+          "tipVi": "红 = 纟（giảo ty bàng) + 工. Viết ba nét của 纟trước (nét cuối hất lên), rồi phần 工 ở bên phải.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-writing-pdf",
+              "pdfPage": 4,
+              "printedPage": 4,
+              "section": "红"
+            }
+          ]
+        },
+        {
+          "id": "w-h2l4-lv",
+          "char": "绿",
+          "pinyin": "lǜ",
+          "hanViet": "LỤC",
+          "meaningVi": "xanh lá",
+          "strokeCount": 11,
+          "radical": "纟",
+          "radicalNameVi": "Giảo ty bàng",
+          "word": {
+            "zh": "绿色",
+            "pinyin": "lǜsè",
+            "vi": "màu xanh lá"
+          },
+          "sentence": {
+            "zh": "绿色的书包很好看。",
+            "pinyin": "Lǜsè de shūbāo hěn hǎokàn.",
+            "vi": "Cặp sách màu xanh lá rất đẹp."
+          },
+          "tipVi": "绿 = 纟+ 彐 + 氺. Sau 纟， viết phần 彐 ở trên rồi phần 氺 ở dưới; số nét theo dữ liệu nét của dự án (Make Me a Hanzi) là 11.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-writing-pdf",
+              "pdfPage": 4,
+              "printedPage": 4,
+              "section": "绿"
+            }
+          ]
+        },
+        {
+          "id": "w-h2l4-chang",
+          "char": "场",
+          "pinyin": "chǎng",
+          "hanViet": "TRÀNG",
+          "meaningVi": "nơi, bãi (trong 商场： trung tâm thương mại)",
+          "strokeCount": 6,
+          "radical": "土",
+          "radicalNameVi": "Đề thổ bàng",
+          "word": {
+            "zh": "商场",
+            "pinyin": "shāngchǎng",
+            "vi": "trung tâm thương mại"
+          },
+          "sentence": {
+            "zh": "你去没去过那家商场？",
+            "pinyin": "Nǐ qù méi qùguo nà jiā shāngchǎng?",
+            "vi": "Bạn đã đến trung tâm thương mại đó chưa?"
+          },
+          "tipVi": "场 = 土 （提土旁） + 昜. Nét ngang cuối của 土 ở phía trái viết thành nét hất lên để nhường chỗ cho phần 昜.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-writing-pdf",
+              "pdfPage": 4,
+              "printedPage": 4,
+              "section": "场"
+            }
+          ]
+        },
+        {
+          "id": "w-h2l4-kuai",
+          "char": "块",
+          "pinyin": "kuài",
+          "hanViet": "KHỐI",
+          "meaningVi": "tệ (đơn vị tiền); miếng, khối",
+          "strokeCount": 7,
+          "radical": "土",
+          "radicalNameVi": "Đề thổ bàng",
+          "word": {
+            "zh": "十块钱",
+            "pinyin": "shí kuài qián",
+            "vi": "mười tệ"
+          },
+          "sentence": {
+            "zh": "还是买那个十块钱的吧。",
+            "pinyin": "Háishi mǎi nàge shí kuài qián de ba.",
+            "vi": "Hay là mua cái mười tệ kia đi."
+          },
+          "tipVi": "块 = 土 + 夬. Bên phải 夬 viết nét ngang, nét phẩy dài, rồi nét捺 khép chữ.",
+          "sourceRefs": [
+            {
+              "sourceId": "src-hsk2-writing-pdf",
+              "pdfPage": 4,
+              "printedPage": 4,
+              "section": "块"
             }
           ]
         }

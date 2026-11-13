@@ -421,3 +421,9 @@ Hoa kiểm trên điện thoại và KHÔNG nghiệm thu: (1) ô chép hiện s�
 - **Sửa:** media query ≥641px thêm `bottom:auto` và giới hạn `max-height:calc(100vh - 16px)` (nội dung dài hơn thì cuộn trong thẻ). Hành vi mobile (khung cố định dưới đáy) giữ nguyên. Test hồi quy `tests/lookup-pop.test.mjs` ghim đúng điểm này + kiểm DOM mở đủ thẻ cho từ đã báo lỗi.
 - **Kiểm chứng hình học sau sửa (Chromium, bản dựng local):** 820×1180 cuộn 900 (đúng ca của Hoa): hộp 468px = đủ nội dung, hiện trọn trong khung nhìn; 768 cuộn sâu 1500, 1180×820 và 1024×768 (từ ở giữa màn hình, thẻ lật lên trên), 1440 cuộn 2000: đều đủ chiều cao, không cắt; 390/360px: giữ nguyên khung đáy cố định. Test toàn repo 298/298, validate OK. contentVersion `20261113-lookup-ipad1`.
 - **Chưa kiểm chứng:** chưa thử lại trên iPad thật của Hoa — chờ Hoa mở lại trang (nên tải lại trang một lần để bỏ bản cũ trong bộ nhớ đệm) và chạm thử một từ.
+
+## D44 — 2026-11-13: HSK 2 Bài 4 trọn gói ngay từ đầu (bài học + Workbook 30 + khu viết + nghe ôn)
+- Hoa nhắn "Tiếp tục" → làm trọn Bài 4 《你穿红色的很好看》 trong MỘT đợt theo mô hình D41/D42 mở rộng: từ nay mỗi bài HSK 2 mới gồm cả bài học (chuẩn Bài 8/D27/D28) + Workbook đủ 30 câu + bộ chữ viết + nghe ôn, không tách đợt như Bài 1–3.
+- Nội dung: TB tr. in 029–036 (22 câu/4 đoạn, 16 từ, 3 KP: trợ từ “过” / nhân quả “因为……，所以……” / cụm “的” + KP nền tảng 绞丝旁/提土旁）, WB tr. in 031–040, sách viết tr.4 （红/绿/场/块 nét 6/11/6/7 theo dữ liệu Make Me a Hanzi — 绿 11 nét theo dữ liệu dù ô tô trong sách trông gộp nét), 24 hình vẽ mới + 2 hình dùng chung byte-identical.
+- QA độc lập ĐẠT (0 HIGH / 0 MEDIUM / 5 LOW — đã sửa cả 5 trong cùng nhánh: pinyin 进去 jìnqù theo ô 生词， nhãn trang fill-2, pinyin 休息室 xiūxishi, 2 dòng manifest, thêm ví dụ 块 vào KP chữ Hán). Test 311/311.
+- Tiến độ HSK 2: 4/15 bài (bài học + Workbook). Còn lại: Bài 5–15 + đề mô phỏng cuối sách — làm tiếp khi Hoa nhắn "Tiếp tục". Mốc audio vẫn asr-draft, chưa nghe bằng tai, chưa kiểm máy thật.

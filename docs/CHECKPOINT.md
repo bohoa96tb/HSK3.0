@@ -446,3 +446,7 @@
 ## 2026-11-13 — D44: HSK 2 Bài 4 trọn gói (ĐÃ PHÁT HÀNH)
 - Phạm vi: `hsk2-l04` 《你穿红色的很好看》 — bài học đầy đủ (TB tr. in 029–036: 22 câu/4 đoạn, 16 từ, 3 KP + nền tảng chữ Hán, 10 checkItems, 12 câu luyện tập chính, 4 self-check) + Workbook đủ 30 câu (WB tr. in 033–040) + bộ viết 红/绿/场/块 + nghe ôn (nhanh 29 lượt, chi tiết 180 lượt). QA độc lập ĐẠT (0 chặn, 5 LOW đã sửa trong nhánh). Test 311/311, validate OK, audit chuẩn đạt. contentVersion `20261113-hsk2-l4-wb`.
 - nextTask: HSK 2 Bài 5 《第一次去中国朋友家》 (TB tr. in 037–045, WB tr. in 041–050, sách viết tr.5) trọn gói như Bài 4 khi Hoa nhắn "Tiếp tục"; sau Bài 15 còn đề mô phỏng cuối sách. Chờ Hoa thử lại tra từ trên iPad thật (D43) khi tiện.
+
+## 2026-11-13 — D45: HSK 2 Bài 5 trọn gói (ĐÃ PHÁT HÀNH)
+- Phạm vi: `hsk2-l05` 《第一次去中国朋友家》 — bài học đầy đủ (TB tr. in 037–045: 25 câu/4 đoạn, 18 hàng từ, 3 KP + nền tảng chữ Hán, 10 checkItems, 18 câu luyện tập chính gồm 10 câu nối hình khởi động, 4 self-check) + Workbook đủ 30 câu + bộ viết 茶/菜/店/床 + nghe ôn (nhanh 28, chi tiết 239 lượt). QA độc lập ĐẠT (0 chặn, 5 LOW đã sửa trong nhánh). Test 325/325, validate OK, audit chuẩn đạt. contentVersion `20261113-hsk2-l5-wb`.
+- nextTask: HSK 2 Bài 6 《小雪，生日快乐！》 (TB tr. in 046–055, WB tr. in 051–060, sách viết tr.6) trọn gói khi Hoa nhắn "Tiếp tục"; sau Bài 15 còn đề mô phỏng cuối sách. Chờ Hoa thử lại tra từ trên iPad thật (D43) khi tiện.

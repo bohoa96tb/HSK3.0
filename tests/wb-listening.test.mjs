@@ -11,6 +11,7 @@ const WB_LESSONS = [
   { lessonId: "hsk2-l02", nn: "02" },
   { lessonId: "hsk2-l03", nn: "03" },
   { lessonId: "hsk2-l04", nn: "04" },
+  { lessonId: "hsk2-l05", nn: "05" },
 ];
 
 for (const { lessonId, nn } of WB_LESSONS) {

@@ -474,3 +474,66 @@ WB 15. Hai file dùng lại byte-identical từ Bài 1: `wb-p2-soccer.webp`
 của bộ 4). Kiểm kê hình in của bài: nghe 13 hình + đọc 7 hình + 0 hình
 viết; bố cục lưới hình của app quyết định theo số hình của bộ (3 = một
 dòng, 4 = 2×2) theo chỉ đạo của Hoa.
+
+## 4i. Bài 5 《第一次去中国朋友家》 — bộ đủ 30 câu (2026-11-13, D44)
+
+Nguồn in: Workbook in 043–050 (PDF 50–57), đối chiếu trực quan từng trang
+ngày 13/11/2026 (kiểm kê L5_AUDIT). Audio nghe: track Baulchino
+`hsk-2-workbook/lesson-05/05-1.mp3`, 557,59 s (ffprobe). Ba ví dụ dùng
+chung với Bài 1–4 (xe buýt/máy bay/xe đạp · bóng đá · 姓名） nhưng cửa sổ
+căn lại trên track Bài 5.
+
+### Nghe — đáp án từ transcript (answer: verified-editorial)
+
+| Câu | Transcript (ASR + kiểm envelope cửa sổ) | Đáp án | Cửa sổ |
+|---|---|---|---|
+| VD I | 我每天坐公交车去上班。 | A | 57,4–67,6 |
+| Q1 | 我已经准备好送的东西了。 | C (tay buộc nơ hộp quà) | 79,0–91,3 |
+| Q2 | 你快下来吧。/ 我在这儿等你呢。 | C (người đi xuống cầu thang ngoài trời) | 99,3–110,3 |
+| Q3 | 那边有一家奶茶店。/ 我们去喝杯奶茶吧。 | B (hai cốc trà sữa trân châu) | 118,4–132,5 |
+| VD II | 你喜欢什么运动？/ 我最喜欢踢足球。 | D | 153,4–167,6 |
+| Q4 | 公交车怎么还不来？/ 不知道啊。/ 我都不想等了。 | B (hai người chờ ở trạm xe) | 184,9–200,7 |
+| Q5 | 你再等等，我一会儿就下去。/ 你快点儿吧，出租车已经到了。 | C (tài xế taxi thò đầu qua cửa xe) | 213,4–232,8 |
+| Q6 | 今天的菜都是我爱吃的。/ 对呀。/ 因为这些菜都是给你准备的。 | A (bàn đầy món ăn) | 245,6–265,9 |
+| VD III | 给您笔，请在这儿写一下您的姓名。… Hỏi: 女的要写什么？→ 姓名 | A | 288,4–315,5 |
+| Q7 | 都十一点了，别玩手机了，快睡觉吧。/ 我没玩手机，我在看书呢。 Hỏi: 男的在做什么？→ 看书 | A | 336,4–367,2 |
+| Q8 | 外边冷，这儿有个奶茶店，我们进去等吧。/ 别去了，公交车一会儿就来了。 Hỏi: 他们现在在哪儿？→ 公交站 | C | 383,9–416,8 |
+| Q9 | 这是给谁准备的礼物？…要不要再买点儿水果？ Hỏi: 男的要去买什么？→ 水果 | C | 432,0–479,2 |
+| Q10 | 奶奶，您在家吗？/ 在家呢。今天天气不好，我没出去。… Hỏi: 奶奶为什么没出去？→ 天气不好 | A | 495,5–544,2 |
+
+**Chú ý kỹ thuật:** ASR-VAD bỏ lượt đọc thứ hai của Q6 — phân tích
+envelope (RMS) cho thấy mẫu vùng tín hiệu của lượt đọc 1 lặp lại gần như
+nguyên vẹn ở 256,71–264,82 s, khẳng định cả hai lượt đọc đều nằm trong
+cửa sổ đã chọn. Cả 13 cửa sổ đều được kiểm envelope: vùng tiếng nói phủ
+từ đầu tới cuối cửa sổ, khớp hai lượt đọc. Mốc vẫn là `asr-draft`, chưa
+nghe kiểm bằng tai.
+
+### Đọc — đáp án theo kiểm kê in (verified-editorial)
+
+P_I bộ 4 hình (lấy sách từ thùng giấy / bé trai cầm táo / mẹ con ra khỏi
+sảnh khách sạn / bóng rổ): VD = D (bóng rổ); Q11 儿子给我拿来一个苹果
+= B; Q12 孩子跟妈妈一起走出了酒店 = C; Q13 她拿出一本书 = A. P_II
+ngân hàng A 等/B 跟/C 下去/D 进来/E 完： VD E; Q14 A; Q15 D; Q16 C;
+Q17 B — dùng hết ngân hàng. P_III ngân hàng A 我跟他说过，他不来。/ B
+不是我买的，是小王送来的。/ C 他打电话了，说还在公司。/ D 今天星期天，
+你能不能别叫我起床？/ E 他出去了，一会儿就回来。: VD E; Q18 B; Q19 D;
+Q20 A; Q21 C — dùng hết ngân hàng. P_IV: VD 喜欢跳舞 = B; Q22 小猫生病了
+= B; Q23 李文做菜 = A; Q24 很多人来接她 = C.
+
+### Viết — đáp án theo kiểm kê in (verified-editorial)
+
+P_I ngân hàng A ⺮/B 冫/C 女/D 十： VD 什么 → D; Q25 等 （⺮) → A; Q26
+奶 （女） → C; Q27 准 （冫) → B — dùng hết ngân hàng. P_II viết chữ theo
+pinyin với thân câu in: VD 是 shì; Q28 下 xià; Q29 跟 gēn; Q30 会 huì.
+
+### Hình (manifest Bài 5)
+
+15 WebP mới trong `assets/hsk2-lesson-05/` (chi tiết + nguồn gốc từng
+file: `assets/hsk2-lesson-05/PRACTICE_ATTRIBUTION.md`): Nghe P_I 9
+(Q1–Q3 mỗi câu 3 hình), Nghe P_II 3 mới (bàn đầy món / hai người chờ ở
+trạm xe / tài xế taxi), Đọc P_I 3 mới (lấy sách từ thùng giấy / bé trai
+cầm táo / mẹ con ra khỏi khách sạn). Hai file dùng lại byte-identical từ
+Bài 1: `wb-p2-soccer.webp` (VD Phần II), `wb-r1-basketball.webp` (bộ 4
+hình Đọc Phần I). Kiểm kê hình in của bài: nghe 13 hình + đọc 4 hình + 0
+hình viết; bố cục lưới hình của app quyết định theo số hình của bộ (3 =
+một dòng, 4 = 2×2) theo chỉ đạo của Hoa.

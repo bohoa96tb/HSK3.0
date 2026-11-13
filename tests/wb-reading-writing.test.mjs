@@ -48,6 +48,14 @@ const EXPECTED = {
     w1: { ex: "D", q: { "wb2-l4-w1-q25": "C", "wb2-l4-w1-q26": "B", "wb2-l4-w1-q27": "A" } },
     w2: { ex: ["是", "shì"], q: { "wb2-l4-w2-q28": ["过", "guo"], "wb2-l4-w2-q29": ["场", "chǎng"], "wb2-l4-w2-q30": ["以", "yǐ"] } },
   },
+  "hsk2-l05": {
+    r1: { ex: "D", q: { "wb2-l5-r1-q11": "B", "wb2-l5-r1-q12": "C", "wb2-l5-r1-q13": "A" } },
+    r2: { ex: "E", q: { "wb2-l5-r2-q14": "A", "wb2-l5-r2-q15": "D", "wb2-l5-r2-q16": "C", "wb2-l5-r2-q17": "B" } },
+    r3: { ex: "E", q: { "wb2-l5-r3-q18": "B", "wb2-l5-r3-q19": "D", "wb2-l5-r3-q20": "A", "wb2-l5-r3-q21": "C" } },
+    r4: { ex: "B", q: { "wb2-l5-r4-q22": "B", "wb2-l5-r4-q23": "A", "wb2-l5-r4-q24": "C" } },
+    w1: { ex: "D", q: { "wb2-l5-w1-q25": "A", "wb2-l5-w1-q26": "C", "wb2-l5-w1-q27": "B" } },
+    w2: { ex: ["是", "shì"], q: { "wb2-l5-w2-q28": ["下", "xià"], "wb2-l5-w2-q29": ["跟", "gēn"], "wb2-l5-w2-q30": ["会", "huì"] } },
+  },
 };
 
 for (const [lessonId, exp] of Object.entries(EXPECTED)) {
@@ -154,8 +162,8 @@ for (const [lessonId, exp] of Object.entries(EXPECTED)) {
 }
 
 test("wb full-30 release wiring: version, token, renderer hooks (D41/D42)", () => {
-  assert.equal(content.contentVersion, "20261113-hsk2-l4-wb");
-  assert.equal((indexHtml.match(/20261113-hsk2-l4-wb/g) || []).length, 2, "index token bumped in both places");
+  assert.equal(content.contentVersion, "20261113-hsk2-l5-wb");
+  assert.equal((indexHtml.match(/20261113-hsk2-l5-wb/g) || []).length, 2, "index token bumped in both places");
   assert.match(appJs, /Luyện theo Workbook — /);
   assert.match(appJs, /30 câu: nghe 10, đọc 14, viết 6/);
   assert.match(appJs, /wbReadingPartHtml/);

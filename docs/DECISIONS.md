@@ -427,3 +427,9 @@ Hoa kiểm trên điện thoại và KHÔNG nghiệm thu: (1) ô chép hiện s�
 - Nội dung: TB tr. in 029–036 (22 câu/4 đoạn, 16 từ, 3 KP: trợ từ “过” / nhân quả “因为……，所以……” / cụm “的” + KP nền tảng 绞丝旁/提土旁）, WB tr. in 031–040, sách viết tr.4 （红/绿/场/块 nét 6/11/6/7 theo dữ liệu Make Me a Hanzi — 绿 11 nét theo dữ liệu dù ô tô trong sách trông gộp nét), 24 hình vẽ mới + 2 hình dùng chung byte-identical.
 - QA độc lập ĐẠT (0 HIGH / 0 MEDIUM / 5 LOW — đã sửa cả 5 trong cùng nhánh: pinyin 进去 jìnqù theo ô 生词， nhãn trang fill-2, pinyin 休息室 xiūxishi, 2 dòng manifest, thêm ví dụ 块 vào KP chữ Hán). Test 311/311.
 - Tiến độ HSK 2: 4/15 bài (bài học + Workbook). Còn lại: Bài 5–15 + đề mô phỏng cuối sách — làm tiếp khi Hoa nhắn "Tiếp tục". Mốc audio vẫn asr-draft, chưa nghe bằng tai, chưa kiểm máy thật.
+
+## D45 — 2026-11-13: HSK 2 Bài 5 trọn gói (theo mô hình D44)
+- Bài 5 《第一次去中国朋友家》: TB tr. in 037–045 (25 câu/4 đoạn, 18 hàng từ — gồm 下面 là hàng lồng không đánh số dưới 上去 trong ô 生词， vẫn tính là một hàng từ riêng; 3 KP: bổ ngữ xu hướng đơn giản (1)/(2) + mẫu “都……了”, KP nền tảng 草字头/广字头）, WB tr. in 041–050 đủ 30 câu, sách viết tr.5 （茶/菜/店/床 nét 9/11/8/7 theo dữ liệu), nghe ôn nhanh 28 / chi tiết 239 lượt.
+- Ba phán quyết nội dung đã chốt qua QA độc lập: (1) ánh xạ 6 hình từ chỉ hướng theo vị trí người nói/máy quay là duy nhất, giữ nguyên; (2) câu phán đoán Đoạn 4 "vì Bạch Gia Nguyệt thích trà sữa nên ông chuẩn bị" = SAI (bài không nêu nguyên nhân); (3) Nghe Q1 = C.
+- QA độc lập ĐẠT (0 HIGH / 0 MEDIUM / 5 LOW — đã sửa cả 5 trong nhánh: lựa chọn in "爷爷和奶奶", pinyin tên riêng Yīfēi, hình nhiễu Q2 vẽ lại thành phòng chờ đúng ảnh in — bản nháp đầu đọc nhầm thành bể bơi ở độ phân giải thấp, alt trung tính cho 6 câu nối hình có chấm để không rò đáp án qua kênh trợ năng, thêm ví dụ 起床 cho KP chữ Hán). Test 325/325.
+- Tiến độ HSK 2: 5/15 bài. Tiếp theo Bài 6 《小雪，生日快乐！》 (TB tr. in 046–055) khi Hoa nhắn "Tiếp tục". Mốc vẫn asr-draft, chưa nghe bằng tai, chưa kiểm máy thật.

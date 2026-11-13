@@ -438,3 +438,7 @@
 - **Phát hành:** PR #146 (nhánh `feat/hsk2-wb-full-l3`), merge `99920b4`; verify byte đủ 26 file trước PR. contentVersion `20261111-hsk2-wb-full-l3`; token `20261111-wb-l3`; test 295/295; validate OK; audit đạt. Sổ sách này là PR riêng ngay sau.
 - **Chưa kiểm chứng:** chưa kiểm nghe bằng tai và chưa kiểm ở bề rộng 390 px/máy thật (mốc vẫn asr-draft, đáp án verified-editorial như ba bài đầu).
 - **Tiến độ Workbook:** Bài 1, 2, 3 đủ 30/30. Còn lại: Bài 4–15 và đề mô phỏng cuối sách — làm tiếp khi Hoa nhắn.
+
+## 2026-11-13 — D43: Sửa lỗi thẻ tra từ trên iPad (ĐÃ PHÁT HÀNH)
+- Hoa báo lỗi kèm ảnh: thẻ tra từ ở mặt đọc chỉ hiện đầu thẻ trên iPad. Đã chẩn đoán + tái hiện (xem DECISIONS D43), sửa CSS một điểm (`bottom:auto` ở media ≥641px + trần chiều cao), thêm test hồi quy, kiểm hình học Chromium ở 7 cấu hình bề rộng/cuộn. Test 298/298, validate OK, contentVersion `20261113-lookup-ipad1`.
+- nextTask (không đổi): Workbook Bài 4–15 + đề cuối sách khi Hoa nhắn "Tiếp tục"; chờ Hoa thử lại tra từ trên iPad thật.

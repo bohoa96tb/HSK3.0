@@ -482,7 +482,7 @@ details.study-tip p { color: var(--muted); margin: .4rem 0 0; }
 .lookup-pop .lk-note{font-size:.85rem;color:var(--muted)}
 .lookup-pop .lk-status{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:6px;margin-top:8px}
 .lookup-pop .lk-chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
-@media (min-width:641px){.lookup-pop{position:absolute;left:auto;right:auto;width:320px;max-height:none}}
+@media (min-width:641px){.lookup-pop{position:absolute;left:auto;right:auto;bottom:auto;width:320px;max-height:calc(100vh - 16px)}}
 
 /* ===== D25: compact knowledge UI (smaller type, tighter rhythm; font-scale setting untouched) ===== */
 .zh-sentence{font-size:calc(1.32rem * var(--font-scale));line-height:1.45}

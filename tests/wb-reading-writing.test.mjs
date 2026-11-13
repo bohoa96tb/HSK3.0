@@ -146,8 +146,8 @@ for (const [lessonId, exp] of Object.entries(EXPECTED)) {
 }
 
 test("wb full-30 release wiring: version, token, renderer hooks (D41/D42)", () => {
-  assert.equal(content.contentVersion, "20261111-hsk2-wb-full-l3");
-  assert.equal((indexHtml.match(/20261111-wb-l3/g) || []).length, 2, "index token bumped in both places");
+  assert.equal(content.contentVersion, "20261113-lookup-ipad1");
+  assert.equal((indexHtml.match(/20261113-lookup-ipad1/g) || []).length, 2, "index token bumped in both places");
   assert.match(appJs, /Luyện theo Workbook — /);
   assert.match(appJs, /30 câu: nghe 10, đọc 14, viết 6/);
   assert.match(appJs, /wbReadingPartHtml/);

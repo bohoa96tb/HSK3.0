@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05',
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05', 'hsk2-l06',
  'hsk1-l01', 'hsk1-l02', 'hsk1-l03', 'hsk1-l04', 'hsk1-l05', 'hsk1-l06', 'hsk1-l07', 'hsk1-l08',
  'hsk1-l09', 'hsk1-l10', 'hsk1-l11', 'hsk1-l12', 'hsk1-l13', 'hsk1-l14', 'hsk1-l15'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
@@ -107,6 +107,20 @@ export const REVIEW_WORD_SEGMENTS = {
  'h2l5-w16': {start: 3.38, end: 5.26},
  'h2l5-w17': {start: 0.52, end: 2.87},
  'h2l5-w18': {start: 2.88, end: 5.67},
+ 'h2l6-w01': {start: 0.86, end: 3.75},
+ 'h2l6-w02': {start: 3.76, end: 6.08},
+ 'h2l6-w03': {start: 6.09, end: 8.13},
+ 'h2l6-w04': {start: 8.14, end: 11.34},
+ 'h2l6-w05': {start: 11.35, end: 14.38},
+ 'h2l6-w06': {start: 0.71, end: 3.61},
+ 'h2l6-w07': {start: 3.62, end: 6.46},
+ 'h2l6-w08': {start: 0.47, end: 3.05},
+ 'h2l6-w09': {start: 3.06, end: 5.31},
+ 'h2l6-w10': {start: 5.32, end: 7.47},
+ 'h2l6-w11': {start: 7.48, end: 10.44},
+ 'h2l6-w12': {start: 10.45, end: 12.46},
+ 'h2l6-w13': {start: 0.57, end: 3.03},
+ 'h2l6-w14': {start: 3.04, end: 5.31},
  // D35 (Hoa, 2026-11-08): HSK 1 rollout — same double-reading span
  // method as D34, derived per track from RMS speech regions plus
  // per-region crop-ASR verification; entries carry their trackId so
@@ -500,6 +514,10 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l05-trend1': 'Mẫu câu: đặt một từ chỉ hướng ngay sau động từ để nói hành động di chuyển về phía người nói hay đi ra xa người nói. Mời khách vào nhà, giục bạn xuống lầu chỗ mình thì dùng dạng hướng về phía người nói; tự nói mình sẽ đi xuống hay đi vào xa khỏi chỗ đứng của mình thì dùng dạng còn lại. Nhớ rằng hướng được tính theo vị trí của chính người nói.',
  'kp-hsk2-l05-trend2': 'Mẫu câu: khi câu vừa có hướng vừa có tân ngữ, tân ngữ chỉ nơi chốn luôn đứng trước từ hướng cuối cùng, ví dụ vào lớp thì nơi chốn đứng giữa động từ và từ hướng. Tân ngữ chỉ đồ vật đứng trước hoặc sau bổ ngữ hướng đơn đều được, nhưng với bổ ngữ kép như mua mang về hay lấy ra thì đồ vật luôn đứng sau cả cụm.',
  'kp-hsk2-l05-dou': 'Mẫu cố định: dùng một cặp từ bao quanh một mốc thời gian hay mức độ để nhấn mạnh ý đã rồi, đến mức rồi, thường kèm sắc thái giục giã hoặc nhắc nhở. Ví dụ: đã mười hai giờ rồi, chúng ta ăn cơm đi; hay đã tám giờ rưỡi rồi mà bạn còn chưa dậy à.',
+ 'kp-hsk2-l06-reduplication': 'Tính từ láy: tính từ một âm tiết láy thành hai âm tiết, tính từ hai âm tiết láy thành bốn âm tiết, để tả mức độ đậm hơn hoặc tình cảm yêu mến, ví dụ chiếc bánh sinh nhật thật to, con mèo nhỏ xíu, ngày nào cũng xinh xắn đẹp đẽ. Tính từ đã láy thì không đặt thêm từ rất ở trước.',
+ 'kp-hsk2-l06-shenmede': 'Cụm cố định liệt kê mở: đặt ở cuối một dãy liệt kê để nói còn những thứ tương tự chưa kể hết, nghĩa là vân vân, các thứ, ví dụ trên bàn có máy tính, cốc, sách và bút vẽ các thứ.',
+ 'kp-hsk2-l06-de': 'Trợ từ kết cấu: đứng giữa phần bổ nghĩa và động từ để chỉ cách thức hay trạng thái của hành động, phần bổ nghĩa thường là tính từ láy, ví dụ vui vẻ mà chơi, đến lớp từ sớm, ngủ một giấc thật thoải mái.',
+ 'kp-hsk2-l06-tip-noodle': 'Mẹo văn hóa: người Trung Quốc mừng sinh nhật thường ăn mì, vì sợi mì dài tượng trưng cho sống lâu, trường thọ, nên bát mì trong bữa sinh nhật được gọi là mì trường thọ.',
  // D35: HSK 1 grammar points, paraphrased from each point's verified
  // pattern, position and explanation in the lesson data.
  'kp-hsk1-l01-men': 'Mẫu câu: để nói về một nhóm người, thêm trợ từ chỉ số nhiều ngay sau đại từ hoặc danh từ chỉ người; trợ từ này không đứng một mình.',

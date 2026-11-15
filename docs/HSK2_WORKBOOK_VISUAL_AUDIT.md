@@ -537,3 +537,72 @@ Bài 1: `wb-p2-soccer.webp` (VD Phần II), `wb-r1-basketball.webp` (bộ 4
 hình Đọc Phần I). Kiểm kê hình in của bài: nghe 13 hình + đọc 4 hình + 0
 hình viết; bố cục lưới hình của app quyết định theo số hình của bộ (3 =
 một dòng, 4 = 2×2) theo chỉ đạo của Hoa.
+
+## 4j. Bài 6 《小雪，生日快乐！》 — bộ đủ 30 câu (2026-11-15, khuôn Bài 5/D45)
+
+Nguồn in: Workbook in 053–060 (PDF 60–67), đối chiếu trực quan từng trang
+ngày 15/11/2026 (kiểm kê L6_AUDIT; lưu ý hai trang in 051/052 bị đảo thứ
+tự vật lý trong PDF: PDF 58 = in 052, PDF 59 = in 051). Audio nghe: track
+Baulchino `hsk-2-workbook/lesson-06/06-1.mp3`, 553,81 s (ffprobe). Ba ví
+dụ dùng chung với Bài 1–5 (xe buýt/máy bay/xe đạp · bóng đá · 姓名）
+nhưng cửa sổ căn lại trên track Bài 6.
+
+### Nghe — đáp án từ transcript (answer: verified-editorial)
+
+| Câu | Transcript (ASR + kiểm envelope cửa sổ) | Đáp án | Cửa sổ |
+|---|---|---|---|
+| VD I | 我每天坐公交车去上班。 | A | 56,8–67,0 |
+| Q1 | 这是我女儿画的画。 | B (bé gái giơ bức tranh) | 79,8–89,3 |
+| Q2 | 她高兴地打开生日礼物。 | B (hai cô gái trao quà bên cây thông) | 97,3–106,8 |
+| Q3 | 都九点了，她还在床上睡觉呢。 | A (bé gái ngủ ôm gấu bông) | 113,8–120,3 |
+| VD II | 你喜欢什么运动？/ 我最喜欢踢足球。 | D | 145,4–159,7 |
+| Q4 | 小明，你有哪些颜色的画笔呀？/ 红色的、绿色的，还有黑色的。 | C (ba cây bút xanh lá/đỏ/đen) | 176,6–199,3 |
+| Q5 | 你看，这条裤子是不是有点儿长？/ 我觉得不长。 | B (người giơ chiếc quần thử) | 211,8–228,2 |
+| Q6 | 外边太冷了，你看，孩子的手红红的。/ 是。/ 下次别等公交车了，打车回来吧。 | A (người mua sắm áo ấm ở quầy chợ) | 239,3–265,6 |
+| VD III | 给您笔，请在这儿写一下您的姓名。… Hỏi: 女的要写什么？→ 姓名 | A | 288,7–313,7 |
+| Q7 | 这些肉啊、菜啊什么的，你多吃点儿。/ 我到家您就开始做菜，别再做了，快来吃吧。 Hỏi: 他们现在在哪儿？→ 家里 | B | 333,5–367,0 |
+| Q8 | 忙完这些工作，我要舒舒服服地睡一觉。/ 你的工作有忙完的时候吗？ Hỏi: 女的觉得男的工作怎么样？→ 很忙 | A | 380,9–413,8 |
+| Q9 | 你看，长长的生日面做好了。/ 真不错，我要多吃点儿。/ 生日快乐！/ 谢谢，跟你在一起，我每天都很快乐。 Hỏi: 今天为什么吃面条？→ 男的过生日 | A | 428,6–473,9 |
+| Q10 | 你过来坐坐，这张床很舒服。/ 是很舒服，但儿子的房间小小的，这张床有点儿大。… Hỏi: 他们觉得这张床怎么样？→ 有点儿大 | C | 488,3–539,8 |
+
+**Chú ý kỹ thuật:** ASR gộp hai lượt đọc của Q3 thành một đoạn và bỏ hẳn
+lượt đọc thứ hai của Q7; phân tích envelope (RMS) cho thấy mẫu vùng tín
+hiệu lặp lại đầy đủ bên trong cả hai cửa sổ đã chọn (Q7: mẫu vùng
+351,9–366,3 s khớp lượt 1 ở 335,6–350,0 s). ASR toàn track đọc Q8 rất
+nhiễu — transcript chốt lại bằng cách transcribe riêng các crop cửa sổ
+của từng lượt đọc. Nhãn người nói ở Phần III dùng Người 1/Người 2, trừ Q8
+câu hỏi tự nhắc 男/女 nên gắn Nam/Nữ theo nội dung. Cả 13 cửa sổ đều được
+kiểm envelope: vùng tiếng nói phủ từ đầu tới cuối cửa sổ, khớp hai lượt
+đọc. Mốc vẫn là `asr-draft`, chưa nghe kiểm bằng tai.
+
+### Đọc — đáp án theo kiểm kê in (verified-editorial)
+
+P_I bộ 4 hình (ba nữ sinh đeo cặp / cậu bé lấy sách từ cặp trên giường /
+bàn nhiều món thịt / bóng rổ): VD = D (bóng rổ); Q11 妈妈今天做了几个肉菜
+= C; Q12 他打开书包，拿出一本书 = B; Q13 孩子们高高兴兴地去学校了 = A.
+P_II ngân hàng A 长/B 忘/C 过/D 画笔/E 完： VD E; Q14 D; Q15 C; Q16 A;
+Q17 B — dùng hết ngân hàng. P_III ngân hàng A 这么长时间？我们去北京
+旅游吧？/ B 我们能吃完吗？/ C 喜欢，我和弟弟都很喜欢。/ D 他累了，
+早早地去睡觉了。/ E 他出去了，一会儿就回来。: VD E; Q18 D; Q19 C;
+Q20 B; Q21 A — dùng hết ngân hàng. P_IV: VD 喜欢跳舞 = B; Q22 他过生日
+= A; Q23 他不舒服 = B; Q24 生病了 = A.
+
+### Viết — đáp án theo kiểm kê in (verified-editorial)
+
+P_I ngân hàng A 辶/B 忄/C 月/D 十： VD 什么 → D; Q25 快 （忄） → B; Q26
+过 （辶） → A; Q27 服 （月） → C — dùng hết ngân hàng. P_II viết chữ theo
+pinyin với thân câu in: VD 是 shì; Q28 地 de; Q29 肉 ròu; Q30 长 cháng.
+
+### Hình (manifest Bài 6)
+
+15 WebP mới trong `assets/hsk2-lesson-06/` (chi tiết + nguồn gốc từng
+file: `assets/hsk2-lesson-06/PRACTICE_ATTRIBUTION.md`): Nghe P_I 9
+(Q1–Q3 mỗi câu 3 hình), Nghe P_II 3 mới (quầy chợ / thử quần / ba cây
+bút), Đọc P_I 3 mới (nữ sinh đi học / lấy sách từ cặp / bàn món thịt).
+Hai file dùng lại byte-identical từ Bài 1: `wb-p2-soccer.webp` (VD Phần
+II), `wb-r1-basketball.webp` (bộ 4 hình Đọc Phần I). Kiểm kê hình in của
+bài: nghe 13 hình + đọc 4 hình + 0 hình viết; bố cục lưới hình của app
+quyết định theo số hình của bộ (3 = một dòng, 4 = 2×2) theo chỉ đạo của
+Hoa. Khác Bài 1–5: mọi lựa chọn hình có chấm của Bài 6 (cả warm bài học
+lẫn Workbook) dùng alt trung tính “Tranh minh họa lựa chọn …” theo quy
+tắc alt không lộ ngữ nghĩa đáp án trước khi chấm.

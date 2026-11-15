@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261113-hsk2-l5-wb",
+ "contentVersion": "20261115-hsk2-l6-wb",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -1051,11 +1051,17 @@
      "section": "Bài 6 · 小雪，生日快乐！"
     }
    ],
-   "textbookAudioTrackCount": null,
-   "workbookAudioTrackCount": null,
-   "publicationStatus": "catalogued",
-   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
-   "grammarIds": [],
+   "textbookAudioTrackCount": 8,
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo kiểm kê trực quan 2026-11-15 (Textbook tr. in 046–055; Workbook phần bài học tr. in 051–052 và phần 模拟测练 tr. in 053–060 dựng đủ 30 câu ngay từ đầu theo khuôn Bài 5/D45; sách viết tr.6) và chuẩn Bài 8/D27/D28/D29/D41. 4 đoạn, 27 câu print-verified; 14 từ mới; 5 điểm kiến thức (3 ngữ pháp + mẹo 小语助力 + Hán tự nền tảng); 10 câu hỏi in trong sách đặt tại đoạn theo D28; bộ chính 16 câu (khởi động hai phần nối hình 8 câu, điền từ tổng hợp 5, mở rộng từ vựng 3); Workbook đủ 30 câu (đáp án Nghe suy từ audio, đã kiểm envelope hai lượt đọc từng cửa sổ); khu Luyện viết có bộ chữ của bài （笔/第/快/忙）. Câu phán đoán Đoạn 4 câu 2 giữ kết luận SAI theo cách đọc chặt của sách, chờ QA độc lập phán quyết lại. Mốc đoạn audio là asr-draft, chưa nghe kiểm chứng bởi người.",
+   "grammarIds": [
+    "kp-hsk2-l06-reduplication",
+    "kp-hsk2-l06-shenmede",
+    "kp-hsk2-l06-de",
+    "kp-hsk2-l06-tip-noodle",
+    "kp-hsk2-l06-characters"
+   ],
    "sectionIds": [
     "intro",
     "prep",
@@ -70175,6 +70181,4725 @@
      }
     ]
    }
+  },
+  {
+   "lessonId": "hsk2-l06",
+   "intro": {
+    "goalVi": "Học cách dùng tính từ láy (AA/AABB) để miêu tả sinh động, nắm cụm cố định “……什么的” chỉ liệt kê không hết, dùng trợ từ kết cấu “地” chỉ cách thức của hành động, và hiểu phong tục mừng sinh nhật của người Trung Quốc — qua ngày sinh nhật của Tiểu Tuyết, con gái của Lưu Minh và Vương Nhất Tuyết.",
+    "estimatedMinutes": 80,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "Ngày mai là sinh nhật của Tiểu Tuyết mà bố Lưu Minh suýt quên. Mẹ Vương Nhất Tuyết đề xuất tặng bút vẽ vì con bé mê vẽ tranh; đến ngày sinh nhật, Tiểu Tuyết mở quà, khoe sẽ vẽ cả nhà — có con chó đen, con mèo trắng “các thứ” — rồi cả nhà ăn mì sợi dài, bánh thật to, cá và thịt, ăn xong còn ra ngoài chơi. Cuối ngày, mẹ viết nhật ký: một ngày rất bận, rất mệt, nhưng rất vui. Bài này cũng mở bộ chữ viết thứ sáu: 笔、快 và hai chữ 第、忙.",
+    "outcomesVi": [
+     "Nhận diện và dùng 14 từ mới của bài quanh chủ đề sinh nhật: quà, bánh, món ăn và cảm xúc.",
+     "Láy tính từ đúng dạng: A → AA （大大的）, AB → AABB （漂漂亮亮）, và nhớ tính từ láy không đi với 很.",
+     "Dùng “……什么的” để liệt kê mở: 黑色的狗、白色的猫什么的.",
+     "Đặt “地” đúng chỗ giữa phần bổ nghĩa và động từ: 高高兴兴地玩、舒舒服服地睡.",
+     "Nghe hiểu và trả lời câu hỏi của bốn đoạn; biết phong tục ăn mì trường thọ ngày sinh nhật.",
+     "Luyện viết 4 chữ 笔、快、忙、第 ở khu Luyện viết chữ Hán."
+    ],
+    "contextImage": {
+     "src": "assets/hsk2-lesson-06/context-party.webp",
+     "alt": "Tranh vẽ lại cả nhà Lưu Minh quây quần quanh bàn tiệc sinh nhật: Tiểu Tuyết đội vương miện trước chiếc bánh cắm nến, trên bàn có bát mì dài, đĩa cá và đĩa thịt",
+     "caption": "Tranh vẽ lại theo bối cảnh bài học (Textbook tr.046–052): cả nhà mừng sinh nhật Tiểu Tuyết với bánh, mì dài, cá và thịt.",
+     "width": 1280,
+     "height": 853
+    },
+    "studyTipVi": "Ba bẫy của bài: (1) tính từ đã láy （大大的） thì không thêm 很 ở trước; (2) “什么的” chỉ đứng ở CUỐI dãy liệt kê, đừng đặt giữa chừng; (3) phân biệt ba chữ họ hàng: 的 (trước danh từ: 我的书）, 地 (trước động từ: 高高兴兴地玩）, 得 (sau động từ — sẽ học ở bài sau). Cả bốn đoạn đều có câu hỏi in sẵn trong sách — trong app, chúng nằm ngay dưới từng đoạn ở mục Nghe & đọc.",
+    "foundationSummaryVi": "Phần Hán tự (Workbook tr.051–052 + sách viết Bài 6): hai bộ 竹字头 （⺮) và 竖心旁 （忄) qua bốn chữ 笔、快、忙、第. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+    "courseTagsVi": "HSK 2 · Bài 6 · 小雪，生日快乐！",
+    "priorLessonNoteVi": "Nhân vật của bài: Vương Nhất Tuyết và Lưu Tiểu Tuyết — đã gặp ở Bài 4 và Bài 5; bài này gặp thêm Lưu Minh (bố) và Lưu Tiểu Minh (em trai của Tiểu Tuyết). Bài 4 đã học “过” trong “来过” (đã từng đến); bài này 过 còn có nghĩa “đón, trải qua” trong 过生日.",
+    "priorLessonId": "hsk2-l05"
+   },
+   "prepWords": [
+    {
+     "id": "h2l6-w01",
+     "zh": "生日",
+     "pinyin": "shēngrì",
+     "vi": "sinh nhật",
+     "hanViet": "SINH NHẬT",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 63,
+       "printedPage": 47,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-2",
+      "start": 0.85,
+      "end": 1.8,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l6-w02",
+     "zh": "忘",
+     "pinyin": "wàng",
+     "vi": "quên",
+     "hanViet": "VONG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 63,
+       "printedPage": 47,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-2",
+      "start": 3.7,
+      "end": 4.35,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l6-w03",
+     "zh": "画",
+     "pinyin": "huà",
+     "vi": "vẽ; bức tranh",
+     "hanViet": "HỌA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 63,
+       "printedPage": 47,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-2",
+      "start": 6.05,
+      "end": 6.45,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l6-w04",
+     "zh": "画笔",
+     "pinyin": "huàbǐ",
+     "vi": "bút vẽ",
+     "hanViet": "HỌA BÚT",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 63,
+       "printedPage": 47,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-2",
+      "start": 8.1,
+      "end": 9.05,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l6-w05",
+     "zh": "蛋糕",
+     "pinyin": "dàngāo",
+     "vi": "bánh kem, bánh sinh nhật",
+     "hanViet": "ĐẢN CAO",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 63,
+       "printedPage": 47,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-2",
+      "start": 11.3,
+      "end": 12.25,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l6-w06",
+     "zh": "快乐",
+     "pinyin": "kuàilè",
+     "vi": "vui vẻ",
+     "hanViet": "KHOÁI LẠC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 65,
+       "printedPage": 49,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-4",
+      "start": 0.7,
+      "end": 1.5,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l6-w07",
+     "zh": "打开",
+     "pinyin": "dǎkāi",
+     "vi": "mở ra",
+     "hanViet": "ĐẢ KHAI",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 65,
+       "printedPage": 49,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-4",
+      "start": 3.58,
+      "end": 4.55,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l6-w08",
+     "zh": "长",
+     "pinyin": "cháng",
+     "vi": "dài",
+     "hanViet": "TRƯỜNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-6",
+      "start": 0.45,
+      "end": 1.15,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l6-w09",
+     "zh": "鱼",
+     "pinyin": "yú",
+     "vi": "cá",
+     "hanViet": "NGƯ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-6",
+      "start": 3.0,
+      "end": 3.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l6-w10",
+     "zh": "肉",
+     "pinyin": "ròu",
+     "vi": "thịt",
+     "hanViet": "NHỤC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-6",
+      "start": 5.28,
+      "end": 5.9,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l6-w11",
+     "zh": "过",
+     "pinyin": "guò",
+     "vi": "trải qua (thời gian); đón (sinh nhật, ngày lễ)",
+     "hanViet": "QUÁ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-6",
+      "start": 7.44,
+      "end": 7.98,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l6-w12",
+     "zh": "地",
+     "pinyin": "de",
+     "vi": "trợ từ kết cấu — nối phần bổ nghĩa với động từ",
+     "hanViet": "ĐỊA",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-6",
+      "start": 10.35,
+      "end": 10.65,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l6-w13",
+     "zh": "床",
+     "pinyin": "chuáng",
+     "vi": "giường",
+     "hanViet": "SÀNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 68,
+       "printedPage": 52,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-8",
+      "start": 0.55,
+      "end": 1.25,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    },
+    {
+     "id": "h2l6-w14",
+     "zh": "舒服",
+     "pinyin": "shūfu",
+     "vi": "thoải mái, dễ chịu",
+     "hanViet": "THƯ PHỤC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 68,
+       "printedPage": 52,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l06-8",
+      "start": 3.0,
+      "end": 3.75,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    }
+   ],
+   "prepGroups": [
+    {
+     "id": "h2l6-g1",
+     "dialogueId": "h2l6-text-1",
+     "titleVi": "Từ mới Đoạn 1 · Chuẩn bị quà sinh nhật",
+     "trackId": "trk-tb2-l06-2",
+     "trackLabelVi": "Track 6-2 · Từ mới Đoạn 1"
+    },
+    {
+     "id": "h2l6-g2",
+     "dialogueId": "h2l6-text-2",
+     "titleVi": "Từ mới Đoạn 2 · Tặng quà ở phòng khách",
+     "trackId": "trk-tb2-l06-4",
+     "trackLabelVi": "Track 6-4 · Từ mới Đoạn 2"
+    },
+    {
+     "id": "h2l6-g3",
+     "dialogueId": "h2l6-text-3",
+     "titleVi": "Từ mới Đoạn 3 · Bữa tiệc sinh nhật",
+     "trackId": "trk-tb2-l06-6",
+     "trackLabelVi": "Track 6-6 · Từ mới Đoạn 3"
+    },
+    {
+     "id": "h2l6-g4",
+     "dialogueId": "h2l6-text-4",
+     "titleVi": "Từ mới Đoạn 4 · Nhật ký cuối ngày",
+     "trackId": "trk-tb2-l06-8",
+     "trackLabelVi": "Track 6-8 · Từ mới Đoạn 4"
+    }
+   ],
+   "prepSummaryVi": "14 từ mới xếp theo 4 đoạn: chuẩn bị quà （生日/忘/画/画笔/蛋糕 — 5), tặng quà （快乐/打开 — 2), bữa tiệc sinh nhật （长/鱼/肉/过/地 — 5), nhật ký cuối ngày （床/舒服 — 2).",
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk2-l06-reduplication",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Tính từ láy AA / AABB",
+     "explanationVi": "Tính từ một âm tiết láy đôi thành AA （大 → 大大）, tính từ hai âm tiết láy thành AABB （漂亮 → 漂漂亮亮）. Dạng láy diễn tả mức độ đậm hơn hoặc tình cảm yêu mến, thân mật: “大大的生日蛋糕” là chiếc bánh to hẳn hoi, “小小的” là nhỏ xíu dễ thương. Tính từ đã láy thì KHÔNG đặt 很 ở trước nữa.",
+     "pattern": "A → AA （大 → 大大） · AB → AABB （漂亮 → 漂漂亮亮，高兴 → 高高兴兴）",
+     "useWhenVi": "Dùng khi muốn tả tính chất một cách sinh động, có tình cảm: khen chiếc bánh to, con mèo nhỏ xíu, bộ quần áo đẹp đẽ.",
+     "positionVi": "Tính từ láy đứng trước danh từ kèm 的 （大大的蛋糕）, hoặc làm vị ngữ cuối câu kèm 的 （这只猫小小的）.",
+     "examples": [
+      {
+       "zh": "我再给她买个大大的生日蛋糕。",
+       "pinyin": "Wǒ zài gěi tā mǎi gè dàdà de shēngrì dàngāo.",
+       "noteVi": "Tôi mua thêm cho cô bé một chiếc bánh sinh nhật thật to. (câu trong Đoạn 1; ví dụ 1 của sách, tr.048)"
+      },
+      {
+       "zh": "这只猫小小的，真让人喜欢。",
+       "pinyin": "Zhè zhī māo xiǎoxiǎo de, zhēn ràng rén xǐhuan.",
+       "noteVi": "Con mèo này nhỏ xíu, thật đáng yêu. (ví dụ 2 của sách, tr.048)"
+      },
+      {
+       "zh": "一雪的女儿每天都漂漂亮亮的。",
+       "pinyin": "Yīxuě de nǚ'ér měi tiān dōu piàopiaoliàngliàng de.",
+       "noteVi": "Con gái của Nhất Tuyết ngày nào cũng xinh xắn đẹp đẽ. (ví dụ 3 của sách, tr.048)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 64,
+       "printedPage": 48,
+       "section": "小语讲堂 1 · 形容词重叠"
+      }
+     ],
+     "sentenceIds": [
+      "h2l6-s6",
+      "h2l6-s16"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.048): điền dạng láy hợp nhất. Đây là bài mở — đáp án dưới đây là GỢI Ý theo gợi ý in trong sách, không phải đáp án in sẵn.",
+      "stemZh": "A：这家饭店的饺子＿＿，我一次能吃二十个。B：吃吧，我知道你爱吃饺子。",
+      "options": [
+       {
+        "zh": "香香的",
+        "vi": "thơm thơm — gợi ý của sách （香 → 香香）"
+       },
+       {
+        "zh": "香的香",
+        "vi": "sai dạng láy — không láy kiểu này"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Gợi ý theo sách: sủi cảo thơm lừng thì dùng dạng láy của 香 là 香香的. Câu song song trong sách: “今天买的苹果大大的” （大 → 大大） và “在家好好休息” （好 → 好好）."
+     }
+    },
+    {
+     "id": "kp-hsk2-l06-shenmede",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Cụm cố định “……什么的” — liệt kê mở",
+     "explanationVi": "Sau một dãy liệt kê, thêm “什么的” để nói “và những thứ tương tự nữa, vân vân” — người nói không kể hết mọi thứ. Ví dụ Tiểu Tuyết muốn vẽ nhà mình: “有爸爸、妈妈、弟弟，还有黑色的狗、白色的猫什么的” — còn nhiều thứ nữa trong nhà chưa kể hết.",
+     "pattern": "A、B、C……什么的 (… các thứ / … vân vân)",
+     "useWhenVi": "Dùng khi liệt kê ví dụ mà không cần (hoặc không thể) kể hết: đồ trên bàn, món ăn, đồ mang theo.",
+     "positionVi": "“什么的” luôn đứng ở CUỐI dãy liệt kê, sau hạng mục cuối cùng; thường đi với dấu phẩy liệt kê 、 hoặc chữ 和/还有 ở trước.",
+     "examples": [
+      {
+       "zh": "画我们的家！有爸爸、妈妈、弟弟，还有黑色的狗、白色的猫什么的。",
+       "pinyin": "Huà wǒmen de jiā! Yǒu bàba, māma, dìdi, hái yǒu hēisè de gǒu, báisè de māo shénmede.",
+       "noteVi": "Vẽ nhà của chúng ta! Có bố, mẹ, em trai, còn có con chó đen, con mèo trắng các thứ nữa. (câu trong Đoạn 2; ví dụ 1 của sách, tr.050)"
+      },
+      {
+       "zh": "桌子上有电脑、杯子、书和画笔什么的。",
+       "pinyin": "Zhuōzi shang yǒu diànnǎo, bēizi, shū hé huàbǐ shénmede.",
+       "noteVi": "Trên bàn có máy tính, cốc, sách và bút vẽ các thứ. (ví dụ 2 của sách, tr.050)"
+      },
+      {
+       "zh": "她拿来了一些水、面包和苹果什么的。",
+       "pinyin": "Tā nálái le yìxiē shuǐ, miànbāo hé píngguǒ shénmede.",
+       "noteVi": "Cô ấy mang đến một ít nước, bánh mì và táo các thứ. (ví dụ 3 của sách, tr.050)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 66,
+       "printedPage": 50,
+       "section": "小语讲堂 2 · 固定词组“什么的”"
+      }
+     ],
+     "sentenceIds": [
+      "h2l6-s13",
+      "h2l6-s17",
+      "h2l6-s23"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.050): chọn cách điền đúng vị trí của “什么的”. Đây là bài mở — đáp án dưới đây là GỢI Ý theo mẫu của sách, không phải đáp án in sẵn.",
+      "stemZh": "A：那间教室里有些什么？B：有桌子、椅子、书＿＿。",
+      "options": [
+       {
+        "zh": "什么的",
+        "vi": "đứng cuối dãy liệt kê — đúng mẫu của sách"
+       },
+       {
+        "zh": "什么",
+        "vi": "thiếu 的 — cụm cố định phải là 什么的"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Gợi ý theo sách: sau dãy “桌子、椅子、书” phải thêm trọn cụm 什么的 mới thành liệt kê mở “…các thứ”. Chỉ “什么” thôi thì thành câu hỏi “cái gì”."
+     }
+    },
+    {
+     "id": "kp-hsk2-l06-de",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Trợ từ kết cấu “地” (de)",
+     "explanationVi": "“地” (đọc nhẹ: de) đứng giữa phần bổ nghĩa và động từ, chỉ trạng thái/cách thức của hành động: hành động được làm NHƯ THẾ NÀO. Phần bổ nghĩa thường là tính từ láy: “高高兴兴地玩” (chơi một cách vui vẻ), “早早地到” (đến từ sớm), “舒舒服服地睡” (ngủ thật thoải mái).",
+     "pattern": "Tính từ (thường dạng láy) + 地 + Động từ",
+     "useWhenVi": "Dùng khi muốn nói rõ cách thức/trạng thái của một hành động: vui vẻ mà mở quà, từ sớm đã đến, thật thoải mái mà ngủ.",
+     "positionVi": "“地” đứng NGAY TRƯỚC động từ và ngay sau phần bổ nghĩa. Đừng nhầm với “的” (của/trước danh từ) và “得” (sau động từ, trước bổ ngữ mức độ — học ở bài sau).",
+     "examples": [
+      {
+       "zh": "过生日就要吃好吃的，还要高高兴兴地玩。",
+       "pinyin": "Guò shēngrì jiù yào chī hǎochī de, hái yào gāogāoxìngxìng de wán.",
+       "noteVi": "Sinh nhật là phải ăn món ngon, còn phải chơi thật vui vẻ. (câu trong Đoạn 3; ví dụ 1 của sách, tr.051)"
+      },
+      {
+       "zh": "老师早早地到了教室。",
+       "pinyin": "Lǎoshī zǎozǎo de dàole jiàoshì.",
+       "noteVi": "Thầy cô đã đến lớp từ sớm. (ví dụ 2 của sách, tr.051)"
+      },
+      {
+       "zh": "爸爸很快地吃完早饭，就去上班了。",
+       "pinyin": "Bàba hěn kuài de chīwán zǎofàn, jiù qù shàngbān le.",
+       "noteVi": "Bố ăn sáng thật nhanh rồi đi làm. (ví dụ 3 của sách, tr.052)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "小语讲堂 3 · 结构助词“地”"
+      }
+     ],
+     "sentenceIds": [
+      "h2l6-s21",
+      "h2l6-s25",
+      "h2l6-s26"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Hoàn thành hội thoại như bài 完成对话 của sách (Textbook tr.052): điền dạng đúng theo gợi ý của sách. Đây là bài mở — đáp án dưới đây là GỢI Ý theo gợi ý in trong sách, không phải đáp án in sẵn.",
+      "stemZh": "A：你姐姐去哪儿了？B：她生病了，＿＿回房间休息了。",
+      "options": [
+       {
+        "zh": "早早地",
+        "vi": "dạng láy + 地 — gợi ý của sách （早 → 早早地）"
+       },
+       {
+        "zh": "早早",
+        "vi": "thiếu 地 — trước động từ 回 phải có 地"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Gợi ý theo sách: phần bổ nghĩa “早早” phải kèm 地 mới bổ nghĩa được cho động từ “回”: “早早地回房间休息了”. Hai câu song song trong sách: “好好（地）睡一觉” và “高高兴兴地说”."
+     }
+    },
+    {
+     "id": "kp-hsk2-l06-tip-noodle",
+     "kind": "grammar",
+     "kindLabel": "Mẹo dùng tiếng · 小语助力",
+     "title": "Mẹo 小语助力： sinh nhật ăn mì trường thọ",
+     "explanationVi": "Hộp mẹo văn hóa của sách ở Đoạn 3 (tr.051): người Trung Quốc mừng sinh nhật thường ăn mì, vì sợi mì dài （长长的） tượng trưng cho sống lâu — “长寿” (trường thọ). Vì thế bát mì trong bữa sinh nhật được gọi là “长寿面” (mì trường thọ), và trong nhật ký Đoạn 4 bố mẹ cũng “做了面条儿” cho Tiểu Tuyết.",
+     "pattern": "过生日吃面条儿 → 寓意“长寿”",
+     "useWhenVi": "Dùng khi chúc sinh nhật hoặc kể về phong tục: nhắc tới mì trường thọ là nhắc tới lời chúc sống lâu.",
+     "positionVi": "Hộp mẹo 小语助力 in tại Textbook tr.051, ngay trong trang của Đoạn 3.",
+     "examples": [
+      {
+       "zh": "中国人过生日的时候一般要吃面条儿。",
+       "pinyin": "Zhōngguó rén guò shēngrì de shíhou yìbān yào chī miàntiáor.",
+       "noteVi": "Người Trung Quốc khi mừng sinh nhật thường ăn mì. (hộp 小语助力， tr.051)"
+      },
+      {
+       "zh": "因为面条儿长长的，寓意“长寿”。",
+       "pinyin": "Yīnwèi miàntiáor chángcháng de, yùyì “chángshòu”.",
+       "noteVi": "Vì sợi mì dài dài, tượng trưng cho “trường thọ”. (hộp 小语助力， tr.051)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "小语助力 · 过生日吃面条儿"
+      }
+     ],
+     "sentenceIds": [
+      "h2l6-s16",
+      "h2l6-s23"
+     ],
+     "exerciseIds": []
+    },
+    {
+     "id": "kp-hsk2-l06-characters",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Hán tự nền tảng: bộ Trúc 竹字头 （⺮) và bộ Tâm đứng 竖心旁 （忄)",
+     "explanationVi": "Workbook (tr.051–052) giới thiệu hai bộ: 竹字头 (zhúzìtóu — đầu chữ Trúc ⺮, dạng rút gọn của 竹 “tre”, viết trên đầu chữ) với chữ ví dụ 笔、第； và 竖心旁 (shùxīnpáng — bộ Tâm đứng 忄, dạng đứng của 心 “tim”, viết bên trái chữ) với chữ ví dụ 快、忙. Bốn chữ này cũng là bộ chữ viết của bài ở sách luyện viết (tr.6): 笔、快 nằm ngay trong hai từ mới 画笔 và 快乐.",
+     "pattern": "⺮ + 毛 = 笔 · ⺮ + 弟 = 第 · 忄 + 夬 = 快 · 忄 + 亡 = 忙",
+     "useWhenVi": "Học bộ để nhớ chữ nhanh: gặp ⺮ trên đầu thì nghĩ tới đồ bằng tre/nứa ngày xưa （笔 cây bút, 第 thứ tự); gặp 忄 bên trái thì nghĩ tới cảm xúc, trạng thái tinh thần （快 vui/nhanh, 忙 bận).",
+     "positionVi": "⺮ luôn ở PHÍA TRÊN của chữ; 忄 luôn ở PHÍA TRÁI. Khi viết 忄, nét cuối (nét đứng) viết sau cùng và dài nhất.",
+     "examples": [
+      {
+       "zh": "笔",
+       "pinyin": "bǐ",
+       "noteVi": "bút — chữ mẫu của bộ ⺮ (Workbook tr.051–052)"
+      },
+      {
+       "zh": "第",
+       "pinyin": "dì",
+       "noteVi": "thứ (số thứ tự) — chữ mẫu của bộ ⺮ (Workbook tr.051–052)"
+      },
+      {
+       "zh": "快",
+       "pinyin": "kuài",
+       "noteVi": "nhanh; vui — chữ mẫu của bộ 忄 (Workbook tr.051–052)"
+      },
+      {
+       "zh": "忙",
+       "pinyin": "máng",
+       "noteVi": "bận — chữ mẫu của bộ 忄 (Workbook tr.051–052)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 59,
+       "printedPage": 51,
+       "section": "汉字 · 竹字头/竖心旁"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Chữ nào sau đây có bộ 竖心旁 忄 ở phía trái?",
+      "stemZh": "选有忄的字：",
+      "options": [
+       {
+        "zh": "快",
+        "vi": "忄 + 夬 — đúng"
+       },
+       {
+        "zh": "笔",
+        "vi": "chữ này có 竹字头 ⺮ ở trên đầu — không phải"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "快 = 忄 （竖心旁） + 夬； còn 笔 thuộc bộ 竹字头 ⺮ (Workbook tr.051–052)."
+     }
+    }
+   ],
+   "reader": {
+    "passageId": "reader-hsk2-l06",
+    "titleVi": "Nghe và đọc bốn đoạn của bài",
+    "headingVi": "Bốn đoạn: bàn quà sinh nhật — tặng quà ở phòng khách — mừng sinh nhật Tiểu Tuyết — nhật ký của mẹ",
+    "noteVi": "Mỗi đoạn có track riêng của sách; từ mới của đoạn đọc ở track ngay sau. Câu hỏi in trong sách nằm ngay dưới đoạn của chúng (làm tại chỗ, tính chung tiến độ với bộ Luyện tập).",
+    "sentences": [
+     {
+      "id": "h2l6-s1",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "明天就是女儿的生日了。",
+      "pinyin": "Míngtiān jiù shì nǚ'ér de shēngrì le.",
+      "vi": "Ngày mai là sinh nhật của con gái rồi.",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 0.0,
+       "end": 2.75,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s2",
+      "speaker": "Lưu Minh",
+      "zh": "你不说，我还真忘了。我们给她准备个什么礼物呢？",
+      "pinyin": "Nǐ bù shuō, wǒ hái zhēn wàng le. Wǒmen gěi tā zhǔnbèi gè shénme lǐwù ne?",
+      "vi": "Em không nói thì anh quên thật đấy. Chúng ta chuẩn bị quà gì cho con bé nhỉ?",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 3.9,
+       "end": 9.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s3",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "她喜欢画画，你觉得画笔怎么样？",
+      "pinyin": "Tā xǐhuan huà huà, nǐ juéde huàbǐ zěnmeyàng?",
+      "vi": "Con bé thích vẽ tranh, anh thấy bút vẽ thế nào?",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 10.55,
+       "end": 14.55,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s4",
+      "speaker": "Lưu Minh",
+      "zh": "就送画笔吧！",
+      "pinyin": "Jiù sòng huàbǐ ba!",
+      "vi": "Tặng bút vẽ đi!",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 15.7,
+       "end": 17.35,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s5",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "那我明天上午就去买。",
+      "pinyin": "Nà wǒ míngtiān shàngwǔ jiù qù mǎi.",
+      "vi": "Vậy sáng mai em đi mua luôn.",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 18.0,
+       "end": 20.35,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s6",
+      "speaker": "Lưu Minh",
+      "zh": "好的！我再给她买个大大的生日蛋糕。",
+      "pinyin": "Hǎo de! Wǒ zài gěi tā mǎi gè dàdà de shēngrì dàngāo.",
+      "vi": "Được! Anh sẽ mua thêm cho con bé một chiếc bánh sinh nhật thật to.",
+      "passageId": "h2l6-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-1",
+       "start": 21.0,
+       "end": 25.95,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s7",
+      "speaker": "Lưu Minh",
+      "zh": "小雪，生日快乐！",
+      "pinyin": "Xiǎoxuě, shēngrì kuàilè!",
+      "vi": "Tiểu Tuyết, sinh nhật vui vẻ!",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 0.0,
+       "end": 2.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s8",
+      "speaker": "Lưu Tiểu Minh",
+      "zh": "姐姐，生日快乐！",
+      "pinyin": "Jiějie, shēngrì kuàilè!",
+      "vi": "Chị ơi, sinh nhật vui vẻ!",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 3.05,
+       "end": 5.45,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s9",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "小雪，这是爸爸、妈妈送你的礼物。",
+      "pinyin": "Xiǎoxuě, zhè shì bàba, māma sòng nǐ de lǐwù.",
+      "vi": "Tiểu Tuyết, đây là quà bố mẹ tặng con.",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 5.85,
+       "end": 10.45,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s10",
+      "speaker": "Lưu Minh",
+      "zh": "你打开看看喜欢不喜欢。",
+      "pinyin": "Nǐ dǎkāi kànkan xǐhuan bù xǐhuan.",
+      "vi": "Con mở ra xem có thích không.",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 10.6,
+       "end": 13.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s11",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "画笔！我很喜欢！",
+      "pinyin": "Huàbǐ! Wǒ hěn xǐhuan!",
+      "vi": "Bút vẽ! Con rất thích!",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 14.25,
+       "end": 17.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s12",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "那你想画点儿什么？",
+      "pinyin": "Nà nǐ xiǎng huà diǎnr shénme?",
+      "vi": "Vậy con muốn vẽ gì nào?",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 17.5,
+       "end": 19.8,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s13",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "画我们的家！有爸爸、妈妈、弟弟，还有黑色的狗、白色的猫什么的。",
+      "pinyin": "Huà wǒmen de jiā! Yǒu bàba, māma, dìdi, hái yǒu hēisè de gǒu, báisè de māo shénmede.",
+      "vi": "Vẽ nhà của chúng ta! Có bố, mẹ, em trai, còn có con chó màu đen, con mèo màu trắng các thứ nữa.",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 20.05,
+       "end": 28.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s14",
+      "speaker": "Lưu Tiểu Minh",
+      "zh": "那我要画一个穿白色衣服的姐姐。",
+      "pinyin": "Nà wǒ yào huà yí gè chuān báisè yīfu de jiějie.",
+      "vi": "Vậy em sẽ vẽ một người chị mặc quần áo màu trắng.",
+      "passageId": "h2l6-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-3",
+       "start": 28.8,
+       "end": 31.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s15",
+      "speaker": "Lưu Minh",
+      "zh": "小雪，看看今天有什么好吃的。",
+      "pinyin": "Xiǎoxuě, kànkan jīntiān yǒu shénme hǎochī de.",
+      "vi": "Tiểu Tuyết, xem hôm nay có gì ngon nào.",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 0.0,
+       "end": 4.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s16",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "长长的面条儿，大大的蛋糕。",
+      "pinyin": "Chángcháng de miàntiáor, dàdà de dàngāo.",
+      "vi": "Mì sợi dài dài, bánh thật to.",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 4.55,
+       "end": 7.9,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s17",
+      "speaker": "Lưu Minh",
+      "zh": "你看，还有鱼啊肉啊什么的，都是你喜欢吃的。",
+      "pinyin": "Nǐ kàn, hái yǒu yú a, ròu a shénmede, dōu shì nǐ xǐhuan chī de.",
+      "vi": "Con xem, còn có cá, thịt các thứ nữa, đều là món con thích ăn.",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 7.95,
+       "end": 14.05,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s18",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "谢谢爸爸、妈妈！",
+      "pinyin": "Xièxie bàba, māma!",
+      "vi": "Cảm ơn bố mẹ!",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 14.35,
+       "end": 16.2,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s19",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "快去叫弟弟过来吃饭吧，吃完饭我们还要出去玩呢。",
+      "pinyin": "Kuài qù jiào dìdi guòlái chī fàn ba, chīwán fàn wǒmen hái yào chūqù wán ne.",
+      "vi": "Mau đi gọi em trai ra ăn cơm đi, ăn xong chúng ta còn ra ngoài chơi nữa.",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 16.45,
+       "end": 22.35,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s20",
+      "speaker": "Lưu Tiểu Tuyết",
+      "zh": "过生日真好啊！",
+      "pinyin": "Guò shēngrì zhēn hǎo a!",
+      "vi": "Sinh nhật thật tuyệt!",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 22.45,
+       "end": 25.05,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s21",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "是的，过生日就要吃好吃的，还要高高兴兴地玩。",
+      "pinyin": "Shì de, guò shēngrì jiù yào chī hǎochī de, hái yào gāogāoxìngxìng de wán.",
+      "vi": "Đúng vậy, sinh nhật là phải ăn món ngon, còn phải chơi thật vui vẻ.",
+      "passageId": "h2l6-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-5",
+       "start": 25.15,
+       "end": 30.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s22",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "今天是女儿的生日。",
+      "pinyin": "Jīntiān shì nǚ'ér de shēngrì.",
+      "vi": "Hôm nay là sinh nhật của con gái.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 0.0,
+       "end": 2.45,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s23",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "我们买了蛋糕，做了面条儿，还做了鱼啊肉啊什么的。",
+      "pinyin": "Wǒmen mǎile dàngāo, zuòle miàntiáor, hái zuòle yú a ròu a shénmede.",
+      "vi": "Chúng tôi mua bánh, làm mì, còn làm cá, thịt các thứ nữa.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 2.5,
+       "end": 8.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s24",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "吃完晚饭，一家人去看了个电影。",
+      "pinyin": "Chīwán wǎnfàn, yì jiā rén qù kànle gè diànyǐng.",
+      "vi": "Ăn tối xong, cả nhà đi xem một bộ phim.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 8.95,
+       "end": 12.75,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s25",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "回家后，孩子们早早地就上床了。",
+      "pinyin": "Huí jiā hòu, háizimen zǎozǎo de jiù shàng chuáng le.",
+      "vi": "Về đến nhà, các con lên giường sớm.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 13.3,
+       "end": 17.1,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s26",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "明天不上学，他们说要舒舒服服地睡一觉，让我们晚点儿叫他们起床。",
+      "pinyin": "Míngtiān bú shàngxué, tāmen shuō yào shūshūfúfú de shuì yí jiào, ràng wǒmen wǎn diǎnr jiào tāmen qǐchuáng.",
+      "vi": "Ngày mai không phải đi học, chúng nói muốn ngủ một giấc thật thoải mái, bảo chúng tôi gọi chúng dậy muộn một chút.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 17.6,
+       "end": 25.5,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l6-s27",
+      "speaker": "Vương Nhất Tuyết",
+      "zh": "这是很忙、很累，但很快乐的一天。",
+      "pinyin": "Zhè shì hěn máng, hěn lèi, dàn hěn kuàilè de yì tiān.",
+      "vi": "Đây là một ngày rất bận, rất mệt, nhưng rất vui.",
+      "passageId": "h2l6-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l06-7",
+       "start": 26.0,
+       "end": 30.6,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb2-l06-1",
+      "label": "Track 6-1 · Đoạn 1 (bàn quà sinh nhật)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-1.mp3",
+      "durationSec": 26.43,
+      "bookRef": "Textbook HSK 2 track 6-1",
+      "segments": [
+       {
+        "sentenceId": "h2l6-s1",
+        "start": 0.0,
+        "end": 2.75,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s2",
+        "start": 3.9,
+        "end": 9.65,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s3",
+        "start": 10.55,
+        "end": 14.55,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s4",
+        "start": 15.7,
+        "end": 17.35,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s5",
+        "start": 18.0,
+        "end": 20.35,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s6",
+        "start": 21.0,
+        "end": 25.95,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "Track 6-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-2",
+      "label": "Track 6-2 · Từ mới Đoạn 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-2.mp3",
+      "durationSec": 14.38,
+      "bookRef": "Textbook HSK 2 track 6-2",
+      "segments": [
+       {
+        "sentenceId": "h2l6-w01",
+        "start": 0.85,
+        "end": 1.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w02",
+        "start": 3.7,
+        "end": 4.35,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w03",
+        "start": 6.05,
+        "end": 6.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w04",
+        "start": 8.1,
+        "end": 9.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w05",
+        "start": 11.3,
+        "end": 12.25,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "Track 6-2 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-3",
+      "label": "Track 6-3 · Đoạn 2 (tặng quà ở phòng khách)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-3.mp3",
+      "durationSec": 32.5,
+      "bookRef": "Textbook HSK 2 track 6-3",
+      "segments": [
+       {
+        "sentenceId": "h2l6-s7",
+        "start": 0.0,
+        "end": 2.65,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s8",
+        "start": 3.05,
+        "end": 5.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s9",
+        "start": 5.85,
+        "end": 10.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s10",
+        "start": 10.6,
+        "end": 13.9,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s11",
+        "start": 14.25,
+        "end": 17.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s12",
+        "start": 17.5,
+        "end": 19.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s13",
+        "start": 20.05,
+        "end": 28.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s14",
+        "start": 28.8,
+        "end": 31.9,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "Track 6-3 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-4",
+      "label": "Track 6-4 · Từ mới Đoạn 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-4.mp3",
+      "durationSec": 6.46,
+      "bookRef": "Textbook HSK 2 track 6-4",
+      "segments": [
+       {
+        "sentenceId": "h2l6-w06",
+        "start": 0.7,
+        "end": 1.5,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w07",
+        "start": 3.58,
+        "end": 4.55,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 65,
+        "printedPage": 49,
+        "section": "Track 6-4 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-5",
+      "label": "Track 6-5 · Đoạn 3 (mừng sinh nhật Tiểu Tuyết)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-5.mp3",
+      "durationSec": 31.18,
+      "bookRef": "Textbook HSK 2 track 6-5",
+      "segments": [
+       {
+        "sentenceId": "h2l6-s15",
+        "start": 0.0,
+        "end": 4.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s16",
+        "start": 4.55,
+        "end": 7.9,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s17",
+        "start": 7.95,
+        "end": 14.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s18",
+        "start": 14.35,
+        "end": 16.2,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s19",
+        "start": 16.45,
+        "end": 22.35,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s20",
+        "start": 22.45,
+        "end": 25.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s21",
+        "start": 25.15,
+        "end": 30.7,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "Track 6-5 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-6",
+      "label": "Track 6-6 · Từ mới Đoạn 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-6.mp3",
+      "durationSec": 12.46,
+      "bookRef": "Textbook HSK 2 track 6-6",
+      "segments": [
+       {
+        "sentenceId": "h2l6-w08",
+        "start": 0.45,
+        "end": 1.15,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w09",
+        "start": 3.0,
+        "end": 3.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w10",
+        "start": 5.28,
+        "end": 5.9,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w11",
+        "start": 7.44,
+        "end": 7.98,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w12",
+        "start": 10.35,
+        "end": 10.65,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 67,
+        "printedPage": 51,
+        "section": "Track 6-6 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-7",
+      "label": "Track 6-7 · Đoạn 4 (nhật ký của Vương Nhất Tuyết)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-7.mp3",
+      "durationSec": 31.54,
+      "bookRef": "Textbook HSK 2 track 6-7",
+      "segments": [
+       {
+        "sentenceId": "h2l6-s22",
+        "start": 0.0,
+        "end": 2.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s23",
+        "start": 2.5,
+        "end": 8.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s24",
+        "start": 8.95,
+        "end": 12.75,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s25",
+        "start": 13.3,
+        "end": 17.1,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s26",
+        "start": 17.6,
+        "end": 25.5,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-s27",
+        "start": 26.0,
+        "end": 30.6,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "Track 6-7 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l06-8",
+      "label": "Track 6-8 · Từ mới Đoạn 4",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-06/6-8.mp3",
+      "durationSec": 5.31,
+      "bookRef": "Textbook HSK 2 track 6-8",
+      "segments": [
+       {
+        "sentenceId": "h2l6-w13",
+        "start": 0.55,
+        "end": 1.25,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l6-w14",
+        "start": 3.0,
+        "end": 3.75,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "Track 6-8 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb2-l06-1",
+      "label": "Workbook Bài 6 · 模拟测练 一、听力 (track duy nhất của bài)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-06/06-1.mp3",
+      "durationSec": 553.81,
+      "bookRef": "Workbook HSK 2 track 06-1 (Baulchino — HSK 2 WORKBOOK)",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "segmentsNoteVi": "Mốc câu hỏi nằm trong dữ liệu wbListening của bài (căn bằng tín hiệu máy, asr-draft).",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (6-1…6-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 60,
+        "printedPage": 53,
+        "section": "Track 06-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "h2l6-text-1",
+      "title": "课文 1 · Bàn quà sinh nhật",
+      "context": "Ở nhà (Textbook tr.047): Lưu Minh và Vương Nhất Tuyết đang trò chuyện — ngày mai là sinh nhật con gái Tiểu Tuyết, hai người bàn nhau chuẩn bị quà gì cho con bé.",
+      "audioTrackId": "trk-tb2-l06-1",
+      "sentenceIds": [
+       "h2l6-s1",
+       "h2l6-s2",
+       "h2l6-s3",
+       "h2l6-s4",
+       "h2l6-s5",
+       "h2l6-s6"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 63,
+        "printedPage": 47,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l6-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.047, track 6-1): Vương Nhất Tuyết và Lưu Minh muốn chuẩn bị quà gì?",
+        "promptZh": "王一雪和刘明要准备什么礼物？",
+        "promptPinyin": "Wáng Yīxuě hé Liú Míng yào zhǔnbèi shénme lǐwù?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "画",
+          "pinyin": "huà",
+          "vi": "bức tranh"
+         },
+         {
+          "id": "2",
+          "zh": "衣服",
+          "pinyin": "yīfu",
+          "vi": "quần áo"
+         },
+         {
+          "id": "3",
+          "zh": "画笔",
+          "pinyin": "huàbǐ",
+          "vi": "bút vẽ"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.047. Đáp án C 画笔： Vương Nhất Tuyết đề xuất “她喜欢画画，你觉得画笔怎么样？”, Lưu Minh chốt “就送画笔吧！” — hai người chuẩn bị BÚT VẼ.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 63,
+          "printedPage": 47,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-1",
+         "start": 0.0,
+         "end": 25.95,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l6-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.047, track 6-1): Vương Nhất Tuyết khi nào đi mua quà?",
+        "promptZh": "王一雪什么时候去买礼物？",
+        "promptPinyin": "Wáng Yīxuě shénme shíhou qù mǎi lǐwù?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "明天早上",
+          "pinyin": "míngtiān zǎoshang",
+          "vi": "sáng mai"
+         },
+         {
+          "id": "2",
+          "zh": "明天上午",
+          "pinyin": "míngtiān shàngwǔ",
+          "vi": "buổi sáng mai (trước trưa)"
+         },
+         {
+          "id": "3",
+          "zh": "明天晚上",
+          "pinyin": "míngtiān wǎnshang",
+          "vi": "tối mai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.047. Đáp án B 明天上午： chị nói rõ “那我明天上午就去买” — sáng mai (trước trưa) em đi mua luôn.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 63,
+          "printedPage": 47,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-1",
+         "start": 0.0,
+         "end": 25.95,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l6-text-2",
+      "title": "课文 2 · Tặng quà ở phòng khách",
+      "context": "Trong phòng khách (Textbook tr.048): cả nhà Lưu Minh chúc mừng sinh nhật Tiểu Tuyết; cô bé mở quà và nói mình muốn vẽ gì, Tiểu Minh cũng nói em muốn vẽ gì.",
+      "audioTrackId": "trk-tb2-l06-3",
+      "sentenceIds": [
+       "h2l6-s7",
+       "h2l6-s8",
+       "h2l6-s9",
+       "h2l6-s10",
+       "h2l6-s11",
+       "h2l6-s12",
+       "h2l6-s13",
+       "h2l6-s14"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 64,
+        "printedPage": 48,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l6-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.048, track 6-3): Lưu Tiểu Tuyết muốn vẽ con gì?",
+        "promptZh": "刘小雪想画什么？",
+        "promptPinyin": "Liú Xiǎoxuě xiǎng huà shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "黑色的狗",
+          "pinyin": "hēisè de gǒu",
+          "vi": "con chó màu đen"
+         },
+         {
+          "id": "2",
+          "zh": "黑色的猫",
+          "pinyin": "hēisè de māo",
+          "vi": "con mèo màu đen"
+         },
+         {
+          "id": "3",
+          "zh": "白色的衣服",
+          "pinyin": "báisè de yīfu",
+          "vi": "quần áo màu trắng"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.048. Đáp án A 黑色的狗： Tiểu Tuyết nói muốn vẽ nhà mình, trong đó có “黑色的狗、白色的猫什么的” — con chó màu ĐEN (con mèo là màu trắng, còn quần áo trắng là của người chị trong câu của Tiểu Minh).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 64,
+          "printedPage": 48,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-3",
+         "start": 0.0,
+         "end": 31.9,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l6-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.048, track 6-3): Lưu Tiểu Minh muốn vẽ ai?",
+        "promptZh": "刘小明想画什么？",
+        "promptPinyin": "Liú Xiǎomíng xiǎng huà shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố"
+         },
+         {
+          "id": "2",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ"
+         },
+         {
+          "id": "3",
+          "zh": "姐姐",
+          "pinyin": "jiějie",
+          "vi": "chị gái"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.048. Đáp án C 姐姐： câu cuối của đoạn, Tiểu Minh nói “那我要画一个穿白色衣服的姐姐” — em sẽ vẽ một người CHỊ mặc quần áo trắng.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 64,
+          "printedPage": 48,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-3",
+         "start": 0.0,
+         "end": 31.9,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l6-text-3",
+      "title": "课文 3 · Mừng sinh nhật Tiểu Tuyết",
+      "context": "Trong phòng khách (Textbook tr.050): cả nhà Lưu Minh đang mừng sinh nhật Lưu Tiểu Tuyết — bàn đầy món ngon, có mì sợi dài và chiếc bánh thật to.",
+      "audioTrackId": "trk-tb2-l06-5",
+      "sentenceIds": [
+       "h2l6-s15",
+       "h2l6-s16",
+       "h2l6-s17",
+       "h2l6-s18",
+       "h2l6-s19",
+       "h2l6-s20",
+       "h2l6-s21"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 66,
+        "printedPage": 50,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l6-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.050, track 6-5): đồ ăn hôm nay đều là món ai thích ăn?",
+        "promptZh": "今天的东西都是谁爱吃的？",
+        "promptPinyin": "Jīntiān de dōngxi dōu shì shéi ài chī de?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố"
+         },
+         {
+          "id": "2",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ"
+         },
+         {
+          "id": "3",
+          "zh": "小雪",
+          "pinyin": "Xiǎoxuě",
+          "vi": "Tiểu Tuyết"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.050. Đáp án C 小雪： Lưu Minh nói với Tiểu Tuyết “都是你喜欢吃的” — tất cả đều là món CON thích ăn, và hôm nay là sinh nhật của Tiểu Tuyết.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": 50,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-5",
+         "start": 0.0,
+         "end": 30.7,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l6-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.050, track 6-5): ăn cơm xong họ còn muốn làm gì?",
+        "promptZh": "他们吃完饭要做什么？",
+        "promptPinyin": "Tāmen chīwán fàn yào zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "休息",
+          "pinyin": "xiūxi",
+          "vi": "nghỉ ngơi"
+         },
+         {
+          "id": "2",
+          "zh": "买蛋糕",
+          "pinyin": "mǎi dàngāo",
+          "vi": "mua bánh"
+         },
+         {
+          "id": "3",
+          "zh": "出去玩",
+          "pinyin": "chūqù wán",
+          "vi": "ra ngoài chơi"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.050. Đáp án C 出去玩： Vương Nhất Tuyết giục “吃完饭我们还要出去玩呢” — ăn xong chúng ta còn RA NGOÀI CHƠI nữa.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 66,
+          "printedPage": 50,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-5",
+         "start": 0.0,
+         "end": 30.7,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l6-text-4",
+      "title": "课文 4 · Nhật ký của Vương Nhất Tuyết",
+      "context": "Trong phòng (Textbook tr.052): Vương Nhất Tuyết viết nhật ký về ngày sinh nhật của con gái — một ngày bận và mệt nhưng rất vui.",
+      "audioTrackId": "trk-tb2-l06-7",
+      "sentenceIds": [
+       "h2l6-s22",
+       "h2l6-s23",
+       "h2l6-s24",
+       "h2l6-s25",
+       "h2l6-s26",
+       "h2l6-s27"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 68,
+        "printedPage": 52,
+        "section": "课文 4"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l6-text4-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.052, track 6-7): nghe đoạn rồi判断 câu sau đúng hay sai — “女儿学会做面条儿了。”",
+        "promptZh": "女儿学会做面条儿了。",
+        "promptPinyin": "Nǚ'ér xuéhuì zuò miàntiáor le.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.052. Nhật ký câu 2 nói “我们买了蛋糕，做了面条儿” — mì là do BỐ MẸ làm; cả đoạn không hề nói con gái học làm mì. Gán việc làm mì cho con gái nên phán đoán là SAI.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 68,
+          "printedPage": 52,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-7",
+         "start": 0.0,
+         "end": 30.6,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l6-text4-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.052, track 6-7): nghe đoạn rồi判断 câu sau đúng hay sai — “王一雪今天高高兴兴地过了个生日。”",
+        "promptZh": "王一雪今天高高兴兴地过了个生日。",
+        "promptPinyin": "Wáng Yīxuě jīntiān gāogāoxìng de guòle gè shēngrì.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.052. Theo cách đọc chặt của sách, “过生日” là đón sinh nhật của CHÍNH chủ ngữ — mà sinh nhật hôm nay là của CON GÁI (câu 1: “今天是女儿的生日”); Vương Nhất Tuyết là người chuẩn bị cả ngày và cuối đoạn tự ghi “这是很忙、很累，但很快乐的一天” — bận và mệt, khác hẳn sắc thái “高高兴兴地过生日” của câu phán đoán. Vì vậy phán đoán là SAI. (Mục này được đánh dấu là mục phán đoán cần QA độc lập phán quyết lại.)",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 68,
+          "printedPage": 52,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l06-7",
+         "start": 0.0,
+         "end": 30.6,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l6-text4-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.053): hôm nay cả nhà cùng nhau làm gì?",
+        "promptZh": "今天他们一起做什么了？",
+        "promptPinyin": "Jīntiān tāmen yìqǐ zuò shénme le?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "vi": "xem phim"
+         },
+         {
+          "id": "2",
+          "zh": "做蛋糕",
+          "pinyin": "zuò dàngāo",
+          "vi": "làm bánh"
+         },
+         {
+          "id": "3",
+          "zh": "出去吃饭",
+          "pinyin": "chūqù chī fàn",
+          "vi": "ra ngoài ăn"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.053 (mục 朗读课文，读后选择正确答案）. Đáp án A 看电影： nhật ký câu 3 — “吃完晚饭，一家人去看了个电影” (ăn tối xong, cả nhà đi XEM PHIM). Bánh là MUA （买了蛋糕）, và cả nhà ăn ở nhà chứ không ra ngoài ăn.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 69,
+          "printedPage": 53,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       },
+       {
+        "id": "tb2l6-text4-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.053): vì sao ngày mai các con muốn được gọi dậy muộn một chút?",
+        "promptZh": "孩子们明天为什么要晚点儿起床？",
+        "promptPinyin": "Háizimen míngtiān wèi shénme yào wǎn diǎnr qǐchuáng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "太累了",
+          "pinyin": "tài lèi le",
+          "vi": "quá mệt"
+         },
+         {
+          "id": "2",
+          "zh": "不上学",
+          "pinyin": "bú shàngxué",
+          "vi": "không phải đi học"
+         },
+         {
+          "id": "3",
+          "zh": "过生日",
+          "pinyin": "guò shēngrì",
+          "vi": "đón sinh nhật"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.053. Đáp án B 不上学： nhật ký câu 5 mở đầu bằng lý do “明天不上学” — ngày mai KHÔNG PHẢI ĐI HỌC nên các con muốn ngủ thoải mái và được gọi dậy muộn.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 69,
+          "printedPage": 53,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "exercises-hsk2-l06-main",
+    "title": "Luyện tập chính · Bài 6",
+    "items": [
+     {
+      "id": "tb2l6-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 1 (Textbook tr.046): chọn HÌNH đúng cho từ “鱼” (cá).",
+      "promptZh": "鱼",
+      "promptPinyin": "yú",
+      "options": [
+       {
+        "id": "1",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ (ba cô gái đang cười vui)",
+        "image": "assets/hsk2-lesson-06/warm-joyful.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画笔",
+        "pinyin": "huàbǐ",
+        "vi": "bút vẽ (dãy bút vẽ và bút chì màu)",
+        "image": "assets/hsk2-lesson-06/warm-brushes.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "鱼",
+        "pinyin": "yú",
+        "vi": "cá (con cá vàng bơi dưới nước)",
+        "image": "assets/hsk2-lesson-06/warm-fish.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường (chiếc giường gọn gàng trong phòng ngủ)",
+        "image": "assets/hsk2-lesson-06/warm-bed.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: từ 鱼 ứng với ảnh 3 (con cá dưới nước). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 1 (Textbook tr.046): chọn HÌNH đúng cho từ “画笔” (bút vẽ).",
+      "promptZh": "画笔",
+      "promptPinyin": "huàbǐ",
+      "options": [
+       {
+        "id": "1",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ (ba cô gái đang cười vui)",
+        "image": "assets/hsk2-lesson-06/warm-joyful.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画笔",
+        "pinyin": "huàbǐ",
+        "vi": "bút vẽ (dãy bút vẽ và bút chì màu)",
+        "image": "assets/hsk2-lesson-06/warm-brushes.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "鱼",
+        "pinyin": "yú",
+        "vi": "cá (con cá vàng bơi dưới nước)",
+        "image": "assets/hsk2-lesson-06/warm-fish.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường (chiếc giường gọn gàng trong phòng ngủ)",
+        "image": "assets/hsk2-lesson-06/warm-bed.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: từ 画笔 ứng với ảnh 2 (dãy bút vẽ và bút chì màu). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 1 (Textbook tr.046): chọn HÌNH đúng cho từ “床” (giường).",
+      "promptZh": "床",
+      "promptPinyin": "chuáng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ (ba cô gái đang cười vui)",
+        "image": "assets/hsk2-lesson-06/warm-joyful.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画笔",
+        "pinyin": "huàbǐ",
+        "vi": "bút vẽ (dãy bút vẽ và bút chì màu)",
+        "image": "assets/hsk2-lesson-06/warm-brushes.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "鱼",
+        "pinyin": "yú",
+        "vi": "cá (con cá vàng bơi dưới nước)",
+        "image": "assets/hsk2-lesson-06/warm-fish.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường (chiếc giường gọn gàng trong phòng ngủ)",
+        "image": "assets/hsk2-lesson-06/warm-bed.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: từ 床 ứng với ảnh 4 (chiếc giường gọn gàng). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 1 (Textbook tr.046): chọn HÌNH đúng cho từ “快乐” (vui vẻ).",
+      "promptZh": "快乐",
+      "promptPinyin": "kuàilè",
+      "options": [
+       {
+        "id": "1",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ (ba cô gái đang cười vui)",
+        "image": "assets/hsk2-lesson-06/warm-joyful.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画笔",
+        "pinyin": "huàbǐ",
+        "vi": "bút vẽ (dãy bút vẽ và bút chì màu)",
+        "image": "assets/hsk2-lesson-06/warm-brushes.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "鱼",
+        "pinyin": "yú",
+        "vi": "cá (con cá vàng bơi dưới nước)",
+        "image": "assets/hsk2-lesson-06/warm-fish.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường (chiếc giường gọn gàng trong phòng ngủ)",
+        "image": "assets/hsk2-lesson-06/warm-bed.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: từ 快乐 ứng với ảnh 1 (ba cô gái cười vui). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 2 (Textbook tr.046): chọn HÌNH đúng cho cụm “画画” (vẽ tranh).",
+      "promptZh": "画画",
+      "promptPinyin": "huà huà",
+      "options": [
+       {
+        "id": "1",
+        "zh": "打开礼物",
+        "pinyin": "dǎkāi lǐwù",
+        "vi": "mở quà (người phụ nữ mở hộp quà trong bếp)",
+        "image": "assets/hsk2-lesson-06/warm2-open-gift.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画画",
+        "pinyin": "huà huà",
+        "vi": "vẽ tranh (bé vẽ tranh bằng bút sáp)",
+        "image": "assets/hsk2-lesson-06/warm2-drawing.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "过生日",
+        "pinyin": "guò shēngrì",
+        "vi": "đón sinh nhật (hai bé gái đội vương miện bên chiếc bánh sinh nhật)",
+        "image": "assets/hsk2-lesson-06/warm2-birthday.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "很舒服",
+        "pinyin": "hěn shūfu",
+        "vi": "rất thoải mái (người đàn ông ngả lưng thư giãn trên ghế)",
+        "image": "assets/hsk2-lesson-06/warm2-relax.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: cụm 画画 ứng với ảnh 2 (bé vẽ tranh bằng bút sáp). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 2 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-6",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 2 (Textbook tr.046): chọn HÌNH đúng cho cụm “过生日” (đón sinh nhật).",
+      "promptZh": "过生日",
+      "promptPinyin": "guò shēngrì",
+      "options": [
+       {
+        "id": "1",
+        "zh": "打开礼物",
+        "pinyin": "dǎkāi lǐwù",
+        "vi": "mở quà (người phụ nữ mở hộp quà trong bếp)",
+        "image": "assets/hsk2-lesson-06/warm2-open-gift.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画画",
+        "pinyin": "huà huà",
+        "vi": "vẽ tranh (bé vẽ tranh bằng bút sáp)",
+        "image": "assets/hsk2-lesson-06/warm2-drawing.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "过生日",
+        "pinyin": "guò shēngrì",
+        "vi": "đón sinh nhật (hai bé gái đội vương miện bên chiếc bánh sinh nhật)",
+        "image": "assets/hsk2-lesson-06/warm2-birthday.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "很舒服",
+        "pinyin": "hěn shūfu",
+        "vi": "rất thoải mái (người đàn ông ngả lưng thư giãn trên ghế)",
+        "image": "assets/hsk2-lesson-06/warm2-relax.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: cụm 过生日 ứng với ảnh 3 (hai bé gái đội vương miện dự tiệc sinh nhật). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 2 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-7",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 2 (Textbook tr.046): chọn HÌNH đúng cho cụm “很舒服” (rất thoải mái).",
+      "promptZh": "很舒服",
+      "promptPinyin": "hěn shūfu",
+      "options": [
+       {
+        "id": "1",
+        "zh": "打开礼物",
+        "pinyin": "dǎkāi lǐwù",
+        "vi": "mở quà (người phụ nữ mở hộp quà trong bếp)",
+        "image": "assets/hsk2-lesson-06/warm2-open-gift.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画画",
+        "pinyin": "huà huà",
+        "vi": "vẽ tranh (bé vẽ tranh bằng bút sáp)",
+        "image": "assets/hsk2-lesson-06/warm2-drawing.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "过生日",
+        "pinyin": "guò shēngrì",
+        "vi": "đón sinh nhật (hai bé gái đội vương miện bên chiếc bánh sinh nhật)",
+        "image": "assets/hsk2-lesson-06/warm2-birthday.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "很舒服",
+        "pinyin": "hěn shūfu",
+        "vi": "rất thoải mái (người đàn ông ngả lưng thư giãn trên ghế)",
+        "image": "assets/hsk2-lesson-06/warm2-relax.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: cụm 很舒服 ứng với ảnh 4 (người đàn ông ngả lưng thư giãn trên ghế). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 2 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-warm-8",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động 2 (Textbook tr.046): chọn HÌNH đúng cho cụm “打开礼物” (mở quà).",
+      "promptZh": "打开礼物",
+      "promptPinyin": "dǎkāi lǐwù",
+      "options": [
+       {
+        "id": "1",
+        "zh": "打开礼物",
+        "pinyin": "dǎkāi lǐwù",
+        "vi": "mở quà (người phụ nữ mở hộp quà trong bếp)",
+        "image": "assets/hsk2-lesson-06/warm2-open-gift.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "画画",
+        "pinyin": "huà huà",
+        "vi": "vẽ tranh (bé vẽ tranh bằng bút sáp)",
+        "image": "assets/hsk2-lesson-06/warm2-drawing.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "过生日",
+        "pinyin": "guò shēngrì",
+        "vi": "đón sinh nhật (hai bé gái đội vương miện bên chiếc bánh sinh nhật)",
+        "image": "assets/hsk2-lesson-06/warm2-birthday.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "很舒服",
+        "pinyin": "hěn shūfu",
+        "vi": "rất thoải mái (người đàn ông ngả lưng thư giãn trên ghế)",
+        "image": "assets/hsk2-lesson-06/warm2-relax.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.046: cụm 打开礼物 ứng với ảnh 1 (người phụ nữ mở hộp quà). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 62,
+        "printedPage": 46,
+        "section": "热身 2 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.053): chọn từ trong khung A 忘 / B 快乐 / C 打开 / D 画 / E 床 để điền vào chỗ trống.",
+      "promptZh": "明天10点去小雪家，你别（）了。",
+      "promptPinyin": "Míngtiān shí diǎn qù Xiǎoxuě jiā, nǐ bié ( ) le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên"
+       },
+       {
+        "id": "2",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ"
+       },
+       {
+        "id": "3",
+        "zh": "打开",
+        "pinyin": "dǎkāi",
+        "vi": "mở ra"
+       },
+       {
+        "id": "4",
+        "zh": "画",
+        "pinyin": "huà",
+        "vi": "vẽ"
+       },
+       {
+        "id": "5",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.053. Đáp án A 忘： “Mai 10 giờ đến nhà Tiểu Tuyết, cậu đừng QUÊN nhé.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 53,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.053): chọn từ trong khung A 忘 / B 快乐 / C 打开 / D 画 / E 床 để điền vào chỗ trống.",
+      "promptZh": "衣服在（）上，你看看想穿哪一件？",
+      "promptPinyin": "Yīfu zài ( ) shang, nǐ kànkan xiǎng chuān nǎ yí jiàn?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên"
+       },
+       {
+        "id": "2",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ"
+       },
+       {
+        "id": "3",
+        "zh": "打开",
+        "pinyin": "dǎkāi",
+        "vi": "mở ra"
+       },
+       {
+        "id": "4",
+        "zh": "画",
+        "pinyin": "huà",
+        "vi": "vẽ"
+       },
+       {
+        "id": "5",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.053. Đáp án E 床： “Quần áo ở trên GIƯỜNG, bạn xem muốn mặc chiếc nào.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 53,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.053): chọn từ trong khung A 忘 / B 快乐 / C 打开 / D 画 / E 床 để điền vào chỗ trống.",
+      "promptZh": "看，这是我妹妹（）的，漂亮不漂亮？",
+      "promptPinyin": "Kàn, zhè shì wǒ mèimei ( ) de, piàoliang bù piàoliang?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên"
+       },
+       {
+        "id": "2",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ"
+       },
+       {
+        "id": "3",
+        "zh": "打开",
+        "pinyin": "dǎkāi",
+        "vi": "mở ra"
+       },
+       {
+        "id": "4",
+        "zh": "画",
+        "pinyin": "huà",
+        "vi": "vẽ"
+       },
+       {
+        "id": "5",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.053. Đáp án D 画： “Xem này, đây là (bức tranh) em gái tôi VẼ, có đẹp không?”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 53,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.053): chọn từ trong khung A 忘 / B 快乐 / C 打开 / D 画 / E 床 để điền vào chỗ trống.",
+      "promptZh": "A：这是什么？B：送你的礼物，快（）看看。",
+      "promptPinyin": "Zhè shì shénme? Sòng nǐ de lǐwù, kuài ( ) kànkan.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên"
+       },
+       {
+        "id": "2",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ"
+       },
+       {
+        "id": "3",
+        "zh": "打开",
+        "pinyin": "dǎkāi",
+        "vi": "mở ra"
+       },
+       {
+        "id": "4",
+        "zh": "画",
+        "pinyin": "huà",
+        "vi": "vẽ"
+       },
+       {
+        "id": "5",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.053. Đáp án C 打开： “Quà tặng bạn đấy, mau MỞ ra xem đi.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 53,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l6-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.053): chọn từ trong khung A 忘 / B 快乐 / C 打开 / D 画 / E 床 để điền vào chỗ trống.",
+      "promptZh": "A：今天我过了一个非常（）的生日，谢谢爸爸、妈妈！B：不客气！我们都很爱你！",
+      "promptPinyin": "Jīntiān wǒ guòle yí gè fēicháng ( ) de shēngrì, xièxie bàba, māma!",
+      "options": [
+       {
+        "id": "1",
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên"
+       },
+       {
+        "id": "2",
+        "zh": "快乐",
+        "pinyin": "kuàilè",
+        "vi": "vui vẻ"
+       },
+       {
+        "id": "3",
+        "zh": "打开",
+        "pinyin": "dǎkāi",
+        "vi": "mở ra"
+       },
+       {
+        "id": "4",
+        "zh": "画",
+        "pinyin": "huà",
+        "vi": "vẽ"
+       },
+       {
+        "id": "5",
+        "zh": "床",
+        "pinyin": "chuáng",
+        "vi": "giường"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.053. Đáp án B 快乐： “Hôm nay con đã có một sinh nhật thật VUI VẺ.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 53,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb2l6-ext-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.052): chọn cụm 开机 / 鸡肉 / 红笔 để điền vào chỗ trống.",
+      "promptZh": "我很喜欢吃（），你呢？",
+      "promptPinyin": "Wǒ hěn xǐhuan chī ( ), nǐ ne?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "开机",
+        "pinyin": "kāijī",
+        "vi": "bật máy"
+       },
+       {
+        "id": "2",
+        "zh": "鸡肉",
+        "pinyin": "jīròu",
+        "vi": "thịt gà"
+       },
+       {
+        "id": "3",
+        "zh": "红笔",
+        "pinyin": "hóng bǐ",
+        "vi": "bút đỏ"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.052 （做一做 câu 1). Đáp án 鸡肉： “Tôi rất thích ăn THỊT GÀ, còn bạn?”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 58,
+        "printedPage": 52,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l6-ext-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.052): chọn cụm 开机 / 鸡肉 / 红笔 để điền vào chỗ trống.",
+      "promptZh": "你有（）吗？我想写几个字。",
+      "promptPinyin": "Nǐ yǒu ( ) ma? Wǒ xiǎng xiě jǐ gè zì.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "开机",
+        "pinyin": "kāijī",
+        "vi": "bật máy"
+       },
+       {
+        "id": "2",
+        "zh": "鸡肉",
+        "pinyin": "jīròu",
+        "vi": "thịt gà"
+       },
+       {
+        "id": "3",
+        "zh": "红笔",
+        "pinyin": "hóng bǐ",
+        "vi": "bút đỏ"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.052 （做一做 câu 2). Đáp án 红笔： “Bạn có BÚT ĐỎ không? Tôi muốn viết mấy chữ.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 58,
+        "printedPage": 52,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l6-ext-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.052): chọn cụm 开机 / 鸡肉 / 红笔 để điền vào chỗ trống.",
+      "promptZh": "我的手机不能（）了，你能帮忙看看吗？",
+      "promptPinyin": "Wǒ de shǒujī bù néng ( ) le, nǐ néng bāngmáng kànkan ma?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "开机",
+        "pinyin": "kāijī",
+        "vi": "bật máy"
+       },
+       {
+        "id": "2",
+        "zh": "鸡肉",
+        "pinyin": "jīròu",
+        "vi": "thịt gà"
+       },
+       {
+        "id": "3",
+        "zh": "红笔",
+        "pinyin": "hóng bǐ",
+        "vi": "bút đỏ"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.052 （做一做 câu 3). Đáp án 开机： “Điện thoại của tôi không BẬT MÁY được nữa, bạn giúp xem hộ được không?”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 58,
+        "printedPage": 52,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckIntroVi": "Bốn bài tự luyện dưới đây bám đúng các hoạt động của sách (mô tả hình, hoàn thành hội thoại ở các ô 小语讲堂, đóng vai mừng sinh nhật, câu hỏi mở sau đoạn). Chúng không được chấm tự động — hãy nói/viết ra rồi tự đối chiếu với gợi ý.",
+   "selfCheckTasks": [
+    {
+     "id": "st-h2l6-01",
+     "kind": "speaking",
+     "titleVi": "Nhìn hình, hoàn thành câu (Textbook tr.053)",
+     "instructionVi": "Dùng từ mới và điểm ngôn ngữ của bài để hoàn thành 4 câu dưới mỗi hình như bài tập mô tả hình ở Textbook tr.053. Nói to câu hoàn chỉnh rồi tự đối chiếu gợi ý. Đây là bài tự luyện, app không chấm tự động.",
+     "prompts": [
+      "大家高高兴兴地给他＿＿。",
+      "桌子上有电脑、杯子＿＿。",
+      "爷爷过生日，爸爸给他做了＿＿的面条儿。",
+      "下班了，他＿＿在家休息。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/hsk2-lesson-06/desc-party.webp",
+       "alt": "Tranh vẽ lại: bạn bè vỗ tay mừng sinh nhật một chàng trai, trước mặt anh là chiếc bánh cắm nến",
+       "captionVi": "Tranh vẽ lại (Textbook tr.053, hình 1): bạn bè mừng sinh nhật chàng trai — gợi ý đáp án: 过生日 (mọi người vui vẻ mừng sinh nhật cho anh ấy).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 69,
+         "printedPage": 53,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-06/desc-desk.webp",
+       "alt": "Tranh vẽ lại: mặt bàn học nhìn từ trên xuống, có laptop, cốc cà phê, sổ và bút vẽ",
+       "captionVi": "Tranh vẽ lại (Textbook tr.053, hình 2): bàn học có laptop, cốc, sổ và bút vẽ — gợi ý đáp án: 书和画笔什么的 (sách và bút vẽ các thứ).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 69,
+         "printedPage": 53,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-06/desc-noodles.webp",
+       "alt": "Tranh vẽ lại: những sợi mì tươi rất dài treo trên một thanh gỗ trong bếp",
+       "captionVi": "Tranh vẽ lại (Textbook tr.053, hình 3): mì tươi sợi dài treo trên thanh — gợi ý đáp án: 长长 (mì sợi dài dài).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 69,
+         "printedPage": 53,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-06/desc-rest.webp",
+       "alt": "Tranh vẽ lại: người đàn ông ngả lưng trên ghế bành bên lò sưởi ấm, vẻ mặt thư giãn",
+       "captionVi": "Tranh vẽ lại (Textbook tr.053, hình 4): người đàn ông thư giãn bên lò sưởi sau giờ làm — gợi ý đáp án: 舒舒服服地 (thật thoải mái mà nghỉ ngơi ở nhà).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 69,
+         "printedPage": 53,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết lại 4 câu hoàn chỉnh của bạn vào đây trước khi đối chiếu gợi ý trong caption từng hình.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 69,
+       "printedPage": 53,
+       "section": "综合练习 · 描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l6-02",
+     "kind": "speaking",
+     "titleVi": "Hoàn thành hội thoại ở ba ô 小语讲堂 (Textbook tr.048–052)",
+     "instructionVi": "Nói to các câu hoàn thành hội thoại trong ba ô 小语讲堂 của bài: tính từ láy (tr.048), cụm “什么的” (tr.050) và trợ từ “地” (tr.052). Bài mở — đối chiếu với gợi ý của sách ở phần nháp.",
+     "prompts": [
+      "A：今天买的苹果＿＿。B：我吃了一个，也很好吃。",
+      "A：这家饭店的饺子＿＿，我一次能吃二十个。B：吃吧，我知道你爱吃饺子。",
+      "A：这几天你在家＿＿休息，别出去了。B：好的，我也觉得太累了。",
+      "A：你爱吃什么？B：＿＿，我都爱吃。",
+      "A：那间教室里有些什么？B：＿＿。",
+      "A：休息的时候，你喜欢做些什么？B：＿＿。",
+      "A：你姐姐去哪儿了？B：她生病了，＿＿回房间休息了。",
+      "A：你回家＿＿睡一觉，明天也别来上班了。B：好的，您也别太累了。",
+      "A：小明喜欢你送的礼物吗？B：喜欢，他拿到礼物＿＿说：“这个礼物太好了！”"
+     ],
+     "draftPromptVi": "Gợi ý đối chiếu: ô tính từ láy (1) 大大的/红红的 (dạng AA); (2) 香香的; (3) 好好. Ô “什么的” là bài mở — gợi ý biên tập: (4) 我爱吃鱼啊、肉啊什么的; (5) 有桌子、椅子、书什么的; (6) 我喜欢看看书、听听音乐什么的. Ô trợ từ “地” theo gợi ý của sách: (7) 早早地 （早）; (8) 好好 （好）; (9) 高高兴兴地 （高兴）.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 64,
+       "printedPage": 48,
+       "section": "小语讲堂 1 · 完成对话"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 66,
+       "printedPage": 50,
+       "section": "小语讲堂 2 · 完成对话"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 68,
+       "printedPage": 52,
+       "section": "小语讲堂 3 · 完成对话"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l6-03",
+     "kind": "speaking",
+     "titleVi": "Hoạt động lớp: đóng vai mừng sinh nhật (Textbook tr.054)",
+     "instructionVi": "Đóng vai theo nhóm ba người như hoạt động lớp ở Textbook tr.054: một người có sinh nhật và hai người bạn đến chúc mừng, tặng quà và hỏi mong ước sinh nhật. Đọc to cả ba vai theo mẫu của sách.",
+     "prompts": [
+      "A：明明，今天是你的生日！",
+      "B：生日快乐！这是送你的礼物，快打开看看。",
+      "C：我也给你准备了礼物，你喜欢吗？"
+     ],
+     "draftPromptVi": "Tự thay tên người bạn và món quà của bạn vào mẫu, ví dụ dùng 画笔、蛋糕 và câu “高高兴兴地过生日”.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 70,
+       "printedPage": 54,
+       "section": "课堂活动"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l6-04",
+     "kind": "speaking",
+     "titleVi": "Câu hỏi mở sau mỗi đoạn (Textbook tr.048–052)",
+     "instructionVi": "Trả lời to (hoặc viết nháp) sáu câu hỏi mở in sau Đoạn 1–3 của bài. Đây là câu hỏi hiểu nội dung, đáp án nằm ngay trong đoạn vừa đọc; app không chấm tự động.",
+     "prompts": [
+      "明天是谁的生日？",
+      "他们为什么觉得画笔是很好的礼物？",
+      "爸爸、妈妈送了小雪什么礼物？",
+      "小雪喜欢这个礼物吗？",
+      "刘明和王一雪准备了哪些吃的？",
+      "刘小雪为什么觉得过生日真好？"
+     ],
+     "draftPromptVi": "Gợi ý đối chiếu: (1) 明天是女儿小雪的生日。(2) 因为小雪很喜欢画画。(3) 他们送了画笔。(4) 喜欢，她说“我很喜欢”。(5) 他们准备了面条儿、蛋糕、鱼和肉。(6) 因为过生日有好吃的，还能高高兴兴地玩（、出去玩）。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 64,
+       "printedPage": 48,
+       "section": "课文 1 · 读后回答问题"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 65,
+       "printedPage": 49,
+       "section": "课文 2 · 读后回答问题"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 67,
+       "printedPage": 51,
+       "section": "课文 3 · 读后回答问题"
+      }
+     ]
+    }
+   ],
+   "apply": {
+    "titleVi": "Dùng ngay: mừng sinh nhật người thân",
+    "instructionVi": "Hai nhiệm vụ nói dùng đúng hai tình huống trung tâm của bài: đóng vai tiệc sinh nhật như hoạt động lớp của sách, rồi viết nhật ký một ngày sinh nhật trong nhà theo mẫu nhật ký Đoạn 4.",
+    "audioTrackId": "trk-tb2-l06-7",
+    "noteVi": "Câu mẫu lấy từ chính hoạt động lớp tr.054 và Đoạn 4 của bài.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 68,
+      "printedPage": 52,
+      "section": "课文 4"
+     },
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 70,
+      "printedPage": 54,
+      "section": "课堂活动"
+     }
+    ],
+    "samplePassageIds": [
+     "h2l6-text-2",
+     "h2l6-text-4"
+    ],
+    "tasks": [
+     {
+      "id": "speak-h2l6-party",
+      "kind": "speaking",
+      "titleVi": "Đóng vai mừng sinh nhật bạn",
+      "promptVi": "Đóng vai hai người bạn đến mừng sinh nhật: chúc 生日快乐， tặng quà và giục bạn mở ra xem （快打开看看）, người có sinh nhật cảm ơn và nói mình muốn làm gì trong ngày sinh nhật. Đọc to cả hai vai.",
+      "sampleZh": "明明，今天是你的生日！生日快乐！",
+      "samplePinyin": "Míngming, jīntiān shì nǐ de shēngrì! Shēngrì kuàilè!",
+      "sampleVi": "Minh Minh, hôm nay là sinh nhật của bạn! Sinh nhật vui vẻ! (mẫu mở đầu hoạt động lớp của sách, tr.054)"
+     },
+     {
+      "id": "speak-h2l6-diary",
+      "kind": "speaking",
+      "titleVi": "Viết nhật ký một ngày sinh nhật",
+      "promptVi": "Đọc to câu mẫu (nhật ký Đoạn 4), rồi tự kể lại một ngày sinh nhật trong nhà bạn: ai có sinh nhật, mua/làm những món gì, cả nhà làm gì sau bữa tối. Cố gắng dùng một cụm “…什么的”, một tính từ láy và một câu có “地”.",
+      "sampleZh": "我们买了蛋糕，做了面条儿，还做了鱼啊肉啊什么的。",
+      "samplePinyin": "Wǒmen mǎile dàngāo, zuòle miàntiáor, hái zuòle yú a ròu a shénmede.",
+      "sampleVi": "Chúng tôi mua bánh, làm mì, còn làm cá, thịt các thứ nữa. (câu trong Đoạn 4)"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu (ở Nghe & đọc và các ví dụ) để xem Pinyin, Hán–Việt và nghĩa. Từ điển gồm toàn bộ từ mới của dự án cộng các mục bổ sung riêng cho bài này.",
+    "extras": [
+     {
+      "zh": "刘明",
+      "pinyin": "Liú Míng",
+      "hanViet": "LƯU MINH",
+      "vi": "Lưu Minh (nhân vật trong bài — bố của Tiểu Tuyết)"
+     },
+     {
+      "zh": "刘小明",
+      "pinyin": "Liú Xiǎomíng",
+      "hanViet": "LƯU TIỂU MINH",
+      "vi": "Lưu Tiểu Minh (nhân vật trong bài — em trai của Tiểu Tuyết)"
+     },
+     {
+      "zh": "女儿",
+      "pinyin": "nǚ'ér",
+      "hanViet": "NỮ NHI",
+      "vi": "con gái"
+     },
+     {
+      "zh": "礼物",
+      "pinyin": "lǐwù",
+      "hanViet": "LỄ VẬT",
+      "vi": "quà tặng"
+     },
+     {
+      "zh": "准备",
+      "pinyin": "zhǔnbèi",
+      "hanViet": "CHUẨN BỊ",
+      "vi": "chuẩn bị"
+     },
+     {
+      "zh": "送",
+      "pinyin": "sòng",
+      "hanViet": "TỐNG",
+      "vi": "tặng; tiễn; gửi"
+     },
+     {
+      "zh": "喜欢",
+      "pinyin": "xǐhuan",
+      "hanViet": "HỈ HOAN",
+      "vi": "thích"
+     },
+     {
+      "zh": "弟弟",
+      "pinyin": "dìdi",
+      "hanViet": "ĐỆ ĐỆ",
+      "vi": "em trai"
+     },
+     {
+      "zh": "姐姐",
+      "pinyin": "jiějie",
+      "hanViet": "TỈ TỈ",
+      "vi": "chị gái"
+     },
+     {
+      "zh": "衣服",
+      "pinyin": "yīfu",
+      "hanViet": "Y PHỤC",
+      "vi": "quần áo"
+     },
+     {
+      "zh": "面条儿",
+      "pinyin": "miàntiáor",
+      "hanViet": "MIỆN ĐIỀU NHI",
+      "vi": "mì sợi"
+     },
+     {
+      "zh": "长寿",
+      "pinyin": "chángshòu",
+      "hanViet": "TRƯỜNG THỌ",
+      "vi": "trường thọ, sống lâu"
+     },
+     {
+      "zh": "长寿面",
+      "pinyin": "chángshòumiàn",
+      "hanViet": "TRƯỜNG THỌ MIỆN",
+      "vi": "mì trường thọ (ăn ngày sinh nhật)"
+     },
+     {
+      "zh": "电影",
+      "pinyin": "diànyǐng",
+      "hanViet": "ĐIỆN ẢNH",
+      "vi": "phim, điện ảnh"
+     },
+     {
+      "zh": "起床",
+      "pinyin": "qǐchuáng",
+      "hanViet": "KHỞI SÀNG",
+      "vi": "thức dậy, rời giường"
+     },
+     {
+      "zh": "上学",
+      "pinyin": "shàngxué",
+      "hanViet": "THƯỢNG HỌC",
+      "vi": "đi học"
+     },
+     {
+      "zh": "手机",
+      "pinyin": "shǒujī",
+      "hanViet": "THỦ CƠ",
+      "vi": "điện thoại di động"
+     },
+     {
+      "zh": "鸡蛋",
+      "pinyin": "jīdàn",
+      "hanViet": "KÊ ĐẢN",
+      "vi": "trứng gà"
+     },
+     {
+      "zh": "红色",
+      "pinyin": "hóngsè",
+      "hanViet": "HỒNG SẮC",
+      "vi": "màu đỏ"
+     },
+     {
+      "zh": "书包",
+      "pinyin": "shūbāo",
+      "hanViet": "THƯ BAO",
+      "vi": "cặp sách"
+     },
+     {
+      "zh": "裤子",
+      "pinyin": "kùzi",
+      "hanViet": "KHỐ TỬ",
+      "vi": "quần dài"
+     },
+     {
+      "zh": "饭店",
+      "pinyin": "fàndiàn",
+      "hanViet": "PHẠN ĐIẾM",
+      "vi": "nhà hàng"
+     },
+     {
+      "zh": "酒店",
+      "pinyin": "jiǔdiàn",
+      "hanViet": "TỬU ĐIẾM",
+      "vi": "khách sạn"
+     },
+     {
+      "zh": "生日快乐",
+      "pinyin": "shēngrì kuàilè",
+      "hanViet": "SINH NHẬT KHOÁI LẠC",
+      "vi": "sinh nhật vui vẻ (lời chúc)"
+     },
+     {
+      "zh": "高兴",
+      "pinyin": "gāoxìng",
+      "hanViet": "CAO HỨNG",
+      "vi": "vui vẻ, vui mừng"
+     },
+     {
+      "zh": "高高兴兴",
+      "pinyin": "gāogāoxìng",
+      "hanViet": "CAO CAO HỨNG HỨNG",
+      "vi": "thật vui vẻ (dạng láy của 高兴）"
+     },
+     {
+      "zh": "舒舒服服",
+      "pinyin": "shūshūfúfú",
+      "hanViet": "THƯ THƯ PHỤC PHỤC",
+      "vi": "thật thoải mái (dạng láy của 舒服）"
+     },
+     {
+      "zh": "漂漂亮亮",
+      "pinyin": "piàopiaoliàngliàng",
+      "hanViet": "PHIÊU PHIÊU LƯỢNG LƯỢNG",
+      "vi": "xinh xắn đẹp đẽ (dạng láy của 漂亮）"
+     },
+     {
+      "zh": "一般",
+      "pinyin": "yìbān",
+      "hanViet": "NHẤT BÀN",
+      "vi": "thường, thông thường"
+     },
+     {
+      "zh": "寓意",
+      "pinyin": "yùyì",
+      "hanViet": "DỤ Ý",
+      "vi": "ngụ ý, tượng trưng"
+     },
+     {
+      "zh": "笔",
+      "pinyin": "bǐ",
+      "hanViet": "BÚT",
+      "vi": "bút (chữ viết của bài)"
+     },
+     {
+      "zh": "点儿",
+      "pinyin": "diǎnr",
+      "hanViet": "ĐIỂM NHI",
+      "vi": "một chút, một ít"
+     },
+     {
+      "zh": "晚点儿",
+      "pinyin": "wǎn diǎnr",
+      "hanViet": "VÃN ĐIỂM NHI",
+      "vi": "muộn một chút"
+     },
+     {
+      "zh": "一个",
+      "pinyin": "yí gè",
+      "hanViet": "NHẤT CÁ",
+      "vi": "một (cái, chiếc)"
+     },
+     {
+      "zh": "一家人",
+      "pinyin": "yì jiā rén",
+      "hanViet": "NHẤT GIA NHÂN",
+      "vi": "cả nhà, người một nhà"
+     },
+     {
+      "zh": "一觉",
+      "pinyin": "yí jiào",
+      "hanViet": "NHẤT GIÁC",
+      "vi": "một giấc (ngủ)"
+     },
+     {
+      "zh": "一天",
+      "pinyin": "yì tiān",
+      "hanViet": "NHẤT THIÊN",
+      "vi": "một ngày"
+     },
+     {
+      "zh": "一雪",
+      "pinyin": "Yīxuě",
+      "hanViet": "NHẤT TUYẾT",
+      "vi": "Nhất Tuyết (cách gọi ngắn của Vương Nhất Tuyết)"
+     },
+     {
+      "zh": "明明",
+      "pinyin": "Míngming",
+      "hanViet": "MINH MINH",
+      "vi": "Minh Minh (nhân vật mẫu trong hoạt động lớp của sách)"
+     }
+    ],
+    "phrases": []
+   },
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Xem bức tranh bữa tiệc sinh nhật và mục tiêu bài",
+     "descVi": "Bắt đầu: 4 mục tiêu của sách — dùng tính từ láy, nắm cụm “什么的”, dùng trợ từ “地”, và hiểu phong tục sinh nhật.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Học 14 từ mới theo 4 đoạn",
+     "descVi": "Từ cần biết: mỗi nhóm từ nghe bằng đúng track từ mới của đoạn.",
+     "sectionId": "prep",
+     "dialogueId": "h2l6-text-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Nắm tính từ láy, “什么的” và trợ từ “地”",
+     "descVi": "Hiểu cách dùng: 3 điểm ngữ pháp + mẹo 小语助力 (mì trường thọ) + phần Hán tự nền tảng （竹字头/竖心旁）.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe và đọc 4 đoạn (27 câu)",
+     "descVi": "Nghe & đọc: mỗi đoạn nghe track riêng và trả lời ngay câu hỏi in trong sách dưới đoạn.",
+     "sectionId": "reader",
+     "dialogueId": "h2l6-text-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập: nối hình, điền từ và Workbook 30 câu",
+     "descVi": "Luyện tập: 8 câu nối hình khởi động, 5 câu điền từ tổng hợp, 3 câu mở rộng từ vựng và bộ Workbook 模拟测练 đủ 30 câu.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Đóng vai mừng sinh nhật và viết nhật ký",
+     "descVi": "Tự nói: đóng vai tiệc sinh nhật theo hoạt động lớp, kể lại một ngày sinh nhật theo mẫu nhật ký Đoạn 4.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "Tính từ láy AA / AABB",
+     "bodyVi": "Láy đôi tính từ để tả đậm hơn và có tình cảm: 大 → 大大 （大大的蛋糕）, 高兴 → 高高兴兴. Tính từ láy không đặt 很 ở trước.",
+     "exampleZh": "长长的面条儿，大大的蛋糕。",
+     "examplePinyin": "Chángcháng de miàntiáor, dàdà de dàngāo.",
+     "exampleVi": "Mì sợi dài dài, bánh thật to. (câu trong Đoạn 3)"
+    },
+    {
+     "titleVi": "“…什么的” — liệt kê mở",
+     "bodyVi": "Đặt 什么的 ở cuối dãy liệt kê để nói “và các thứ tương tự nữa”, không cần kể hết.",
+     "exampleZh": "还有鱼啊肉啊什么的，都是你喜欢吃的。",
+     "examplePinyin": "Hái yǒu yú a, ròu a shénmede, dōu shì nǐ xǐhuan chī de.",
+     "exampleVi": "Còn có cá, thịt các thứ nữa, đều là món con thích ăn. (câu trong Đoạn 3)"
+    },
+    {
+     "titleVi": "“地” nối bổ nghĩa với động từ",
+     "bodyVi": "地 (de) đứng giữa phần bổ nghĩa (thường là tính từ láy) và động từ, chỉ cách thức hành động.",
+     "exampleZh": "他们说要舒舒服服地睡一觉。",
+     "examplePinyin": "Tāmen shuō yào shūshūfúfú de shuì yí jiào.",
+     "exampleVi": "Chúng nói muốn ngủ một giấc thật thoải mái. (câu trong Đoạn 4)"
+    },
+    {
+     "titleVi": "过 là “đón, trải qua”",
+     "bodyVi": "Ngoài nghĩa “qua” đã học, 过 còn là động từ “trải qua thời gian”: 过生日 (đón sinh nhật), 过年 (đón Tết).",
+     "exampleZh": "过生日真好啊！",
+     "examplePinyin": "Guò shēngrì zhēn hǎo a!",
+     "exampleVi": "Sinh nhật thật tuyệt! (câu trong Đoạn 3)"
+    },
+    {
+     "titleVi": "Phong tục: mì dài = trường thọ",
+     "bodyVi": "Người Trung Quốc mừng sinh nhật thường ăn mì; sợi mì dài tượng trưng cho sống lâu （长寿）, nên bát mì sinh nhật gọi là 长寿面.",
+     "exampleZh": "因为面条儿长长的，寓意“长寿”。",
+     "examplePinyin": "Yīnwèi miàntiáor chángcháng de, yùyì “chángshòu”.",
+     "exampleVi": "Vì sợi mì dài dài, tượng trưng cho “trường thọ”. (hộp 小语助力， tr.051)"
+    }
+   ],
+   "wbListening": {
+    "titleZh": "一、听力",
+    "titleEn": "Listening",
+    "titleVi": "Nghe theo Workbook",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 6 — 模拟测练 · 一、听力, trang in 053–055 (PDF tr. 60–62).",
+    "trackId": "trk-wb2-l06-1",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án được đối chiếu từ audio của sách: ghi lại lời đọc bằng máy, rà soát ngữ nghĩa theo đúng các lựa chọn in trong sách. Đây không phải đáp án chính thức của nhà xuất bản.",
+    "segmentNoteVi": "Mốc đoạn trong track được căn bằng tín hiệu máy (asr-draft), chưa có người nghe kiểm chứng.",
+    "introVi": "Toàn bộ phần nghe của Bài 6 trong sách bài tập, tái dựng đúng bố cục sách: 3 phần, 10 câu, mỗi câu nghe hai lần trong track. Hình là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l6-p1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第1—3题：听一句话，选择正确图片。每题听两次。",
+      "instructionVi": "Câu 1–3: nghe một câu, chọn hình đúng. Mỗi câu nghe hai lần.",
+      "kind": "picture",
+      "example": {
+       "id": "wb2-l6-p1-ex",
+       "audio": {
+        "trackId": "trk-wb2-l06-1",
+        "start": 56.8,
+        "end": 67.0,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "我每天坐公交车去上班。",
+         "pinyin": "Wǒ měi tiān zuò gōngjiāochē qù shàngbān."
+        }
+       ],
+       "options": [
+        {
+         "id": "A",
+         "image": "assets/hsk2-lesson-01/wb-ex-bus.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn A"
+        },
+        {
+         "id": "B",
+         "image": "assets/hsk2-lesson-01/wb-ex-plane.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn B"
+        },
+        {
+         "id": "C",
+         "image": "assets/hsk2-lesson-01/wb-ex-bike.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn C"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-p1-q1",
+        "no": 1,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 79.8,
+         "end": 89.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "这是我女儿画的画。",
+          "pinyin": "Zhè shì wǒ nǚ'ér huà de huà."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-06/wb-q1-tablet.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-06/wb-q1-painting.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-06/wb-q1-cooking.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Câu nói: “这是我女儿画的画” — đây là bức tranh con gái tôi vẽ — hình B là bé gái giơ bức tranh của mình. A là hai bé chơi điện thoại/máy tính bảng, C là các bé nấu ăn."
+       },
+       {
+        "id": "wb2-l6-p1-q2",
+        "no": 2,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 97.3,
+         "end": 106.8,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "她高兴地打开生日礼物。",
+          "pinyin": "Tā gāoxìng de dǎkāi shēngrì lǐwù."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-06/wb-q2-delivery.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-06/wb-q2-gift.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-06/wb-q2-books.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Câu nói: “她高兴地打开生日礼物” — cô ấy vui vẻ mở món quà sinh nhật — hình B là cảnh trao/mở quà. A là người giao hàng đưa gói hàng, C là người phụ nữ ôm chồng sách."
+       },
+       {
+        "id": "wb2-l6-p1-q3",
+        "no": 3,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 113.8,
+         "end": 120.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "都九点了，她还在床上睡觉呢。",
+          "pinyin": "Dōu jiǔ diǎn le, tā hái zài chuáng shang shuìjiào ne."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-06/wb-q3-sleep.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-06/wb-q3-mirror.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-06/wb-q3-laptop.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Câu nói: “都九点了，她还在床上睡觉呢” — đã 9 giờ rồi mà cô bé vẫn còn ngủ trên giường — hình A là bé gái ngủ ôm gấu bông. B là người đàn ông trước gương phòng tắm, C là người đàn ông dùng laptop trên sofa."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-p2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第4—6题：听对话，选择最匹配的图片。每题听两次。",
+      "instructionVi": "Câu 4–6: nghe hội thoại, chọn hình khớp nhất trong bộ 4 hình chung. Mỗi hội thoại nghe hai lần.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-06/wb-p2-market.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-06/wb-p2-pants.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-06/wb-p2-pens.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-06/wb-p2-soccer.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "example": {
+       "id": "wb2-l6-p2-ex",
+       "audio": {
+        "trackId": "trk-wb2-l06-1",
+        "start": 145.4,
+        "end": 159.7,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "你喜欢什么运动？",
+         "pinyin": "Nǐ xǐhuan shénme yùndòng?",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "我最喜欢踢足球。",
+         "pinyin": "Wǒ zuì xǐhuan tī zúqiú.",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "answer": "D"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-p2-q4",
+        "no": 4,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 176.6,
+         "end": 199.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "小明，你有哪些颜色的画笔呀？",
+          "pinyin": "Xiǎomíng, nǐ yǒu nǎxiē yánsè de huàbǐ ya?",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "红色的、绿色的，还有黑色的。",
+          "pinyin": "Hóngsè de, lǜsè de, hái yǒu hēisè de.",
+          "speakerVi": "Tiểu Minh"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Tiểu Minh kể mình có bút vẽ màu đỏ, màu xanh lá và màu đen — hình C là ba cây bút màu xanh lá/đỏ/đen. A là người mua sắm ở quầy chợ, B là người thử chiếc quần."
+       },
+       {
+        "id": "wb2-l6-p2-q5",
+        "no": 5,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 211.8,
+         "end": 228.2,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你看，这条裤子是不是有点儿长？",
+          "pinyin": "Nǐ kàn, zhè tiáo kùzi shì bù shì yǒudiǎnr cháng?",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "我觉得不长。",
+          "pinyin": "Wǒ juéde bù cháng.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Hai người nói về chiếc QUẦN có hơi dài không — hình B là người đang giơ chiếc quần lên thử. A là quầy chợ, C là ba cây bút màu."
+       },
+       {
+        "id": "wb2-l6-p2-q6",
+        "no": 6,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 239.3,
+         "end": 265.6,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "外边太冷了，你看，孩子的手红红的。",
+          "pinyin": "Wàibian tài lěng le, nǐ kàn, háizi de shǒu hónghóng de.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "是。",
+          "pinyin": "Shì.",
+          "speakerVi": "Người 2"
+         },
+         {
+          "zh": "下次别等公交车了，打车回来吧。",
+          "pinyin": "Xià cì bié děng gōngjiāochē le, dǎchē huílái ba.",
+          "speakerVi": "Người 1"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Hai người vừa ở ngoài trời lạnh về, tay đứa trẻ đỏ lên vì lạnh, lần sau sẽ đi taxi thay vì đợi xe buýt — hình A là người mua sắm mặc áo ấm, xách túi ở quầy chợ ngoài trời (cảnh người ở ngoài về). B là thử quần, C là bút màu — hai hình đã dùng cho câu 4 và 5."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-p3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第7—10题：听对话，选择正确答案。每题听两次。",
+      "instructionVi": "Câu 7–10: nghe hội thoại, chọn đáp án đúng. Mỗi hội thoại và câu hỏi nghe hai lần.",
+      "kind": "choice",
+      "example": {
+       "id": "wb2-l6-p3-ex",
+       "audio": {
+        "trackId": "trk-wb2-l06-1",
+        "start": 288.7,
+        "end": 313.7,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "给您笔，请在这儿写一下您的姓名。",
+         "pinyin": "Gěi nín bǐ, qǐng zài zhèr xiě yíxià nín de xìngmíng.",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "好的，是这儿吗？",
+         "pinyin": "Hǎo de, shì zhèr ma?",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "questionZh": "女的要写什么？",
+       "questionPinyin": "Nǚ de yào xiě shénme?",
+       "options": [
+        {
+         "id": "A",
+         "zh": "姓名",
+         "pinyin": "xìngmíng",
+         "vi": "họ tên"
+        },
+        {
+         "id": "B",
+         "zh": "时间",
+         "pinyin": "shíjiān",
+         "vi": "thời gian"
+        },
+        {
+         "id": "C",
+         "zh": "问题",
+         "pinyin": "wèntí",
+         "vi": "câu hỏi; vấn đề"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-p3-q7",
+        "no": 7,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 333.5,
+         "end": 367.0,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "这些肉啊、菜啊什么的，你多吃点儿。",
+          "pinyin": "Zhèxiē ròu a, cài a shénme de, nǐ duō chī diǎnr.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "我到家您就开始做菜，别再做了，快来吃吧。",
+          "pinyin": "Wǒ dào jiā nín jiù kāishǐ zuò cài, bié zài zuò le, kuài lái chī ba.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "questionZh": "他们现在在哪儿？",
+        "questionPinyin": "Tāmen xiànzài zài nǎr?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "饭店",
+          "pinyin": "fàndiàn",
+          "vi": "nhà hàng"
+         },
+         {
+          "id": "B",
+          "zh": "家里",
+          "pinyin": "jiā li",
+          "vi": "ở nhà"
+         },
+         {
+          "id": "C",
+          "zh": "酒店",
+          "pinyin": "jiǔdiàn",
+          "vi": "khách sạn"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Người thứ hai nói “我到家您就开始做菜” — tôi VỀ ĐẾN NHÀ là ngài đã bắt đầu nấu — bữa ăn nấu tại nhà, hai người đang Ở NHÀ (B)."
+       },
+       {
+        "id": "wb2-l6-p3-q8",
+        "no": 8,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 380.9,
+         "end": 413.8,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "忙完这些工作，我要舒舒服服地睡一觉。",
+          "pinyin": "Mángwán zhèxiē gōngzuò, wǒ yào shūshūfúfú de shuì yí jiào.",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "你的工作有忙完的时候吗？",
+          "pinyin": "Nǐ de gōngzuò yǒu mángwán de shíhou ma?",
+          "speakerVi": "Nữ"
+         }
+        ],
+        "questionZh": "女的觉得男的工作怎么样？",
+        "questionPinyin": "Nǚ de juéde nán de gōngzuò zěnmeyàng?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "很忙",
+          "pinyin": "hěn máng",
+          "vi": "rất bận"
+         },
+         {
+          "id": "B",
+          "zh": "很舒服",
+          "pinyin": "hěn shūfu",
+          "vi": "rất thoải mái"
+         },
+         {
+          "id": "C",
+          "zh": "不太累",
+          "pinyin": "bú tài lèi",
+          "vi": "không mệt lắm"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Người nữ hỏi “你的工作有忙完的时候吗？” — công việc của anh có lúc nào làm xong không? — ý cô là công việc của anh KHÔNG BAO GIỜ hết, tức là RẤT BẬN (A). “舒舒服服” trong câu của người nam nói về giấc ngủ sau khi làm xong việc, không phải nhận xét về công việc."
+       },
+       {
+        "id": "wb2-l6-p3-q9",
+        "no": 9,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 428.6,
+         "end": 473.9,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你看，长长的生日面做好了。",
+          "pinyin": "Nǐ kàn, chángcháng de shēngrì miàn zuòhǎo le.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "真不错，我要多吃点儿。",
+          "pinyin": "Zhēn búcuò, wǒ yào duō chī diǎnr.",
+          "speakerVi": "Người 2"
+         },
+         {
+          "zh": "生日快乐！",
+          "pinyin": "Shēngrì kuàilè!",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "谢谢，跟你在一起，我每天都很快乐。",
+          "pinyin": "Xièxie, gēn nǐ zài yìqǐ, wǒ měi tiān dōu hěn kuàilè.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "questionZh": "今天为什么吃面条？",
+        "questionPinyin": "Jīntiān wèi shénme chī miàntiáo?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "男的过生日",
+          "pinyin": "nán de guò shēngrì",
+          "vi": "người nam đón sinh nhật"
+         },
+         {
+          "id": "B",
+          "zh": "男的很快乐",
+          "pinyin": "nán de hěn kuàilè",
+          "vi": "người nam rất vui"
+         },
+         {
+          "id": "C",
+          "zh": "男的喜欢吃",
+          "pinyin": "nán de xǐhuan chī",
+          "vi": "người nam thích ăn"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Mì hôm nay là “生日面” (mì sinh nhật) và người kia chúc “生日快乐” với người nam, anh đáp “谢谢” — hôm nay ăn mì vì NGƯỜI NAM ĐÓN SINH NHẬT (A), đúng phong tục ăn mì trường thọ."
+       },
+       {
+        "id": "wb2-l6-p3-q10",
+        "no": 10,
+        "audio": {
+         "trackId": "trk-wb2-l06-1",
+         "start": 488.3,
+         "end": 539.8,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你过来坐坐，这张床很舒服。",
+          "pinyin": "Nǐ guòlái zuòzuo, zhè zhāng chuáng hěn shūfu.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "是很舒服，但儿子的房间小小的，这张床有点儿大。",
+          "pinyin": "Shì hěn shūfu, dàn érzi de fángjiān xiǎoxiǎo de, zhè zhāng chuáng yǒudiǎnr dà.",
+          "speakerVi": "Người 2"
+         },
+         {
+          "zh": "那边还有几张床，我们过去看看。",
+          "pinyin": "Nàbian hái yǒu jǐ zhāng chuáng, wǒmen guòqù kànkan.",
+          "speakerVi": "Người 1"
+         },
+         {
+          "zh": "好的。",
+          "pinyin": "Hǎo de.",
+          "speakerVi": "Người 2"
+         }
+        ],
+        "questionZh": "他们觉得这张床怎么样？",
+        "questionPinyin": "Tāmen juéde zhè zhāng chuáng zěnmeyàng?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "不舒服",
+          "pinyin": "bù shūfu",
+          "vi": "không thoải mái"
+         },
+         {
+          "id": "B",
+          "zh": "小小的",
+          "pinyin": "xiǎoxiǎo de",
+          "vi": "nhỏ xíu"
+         },
+         {
+          "id": "C",
+          "zh": "有点儿大",
+          "pinyin": "yǒudiǎnr dà",
+          "vi": "hơi to"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Cả hai đều khen giường thoải mái, nhưng phòng của con trai thì nhỏ (“儿子的房间小小的” — 小小的 nói về PHÒNG), nên chiếc giường này “有点儿大” — HƠI TO so với phòng (C)."
+       }
+      ]
+     }
+    ]
+   },
+   "wbReading": {
+    "titleZh": "阅读",
+    "titleEn": "Reading",
+    "titleVi": "Đọc",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 6 — 模拟测练 · 二、阅读, trang in 056–059 (PDF tr. 63–66).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Đọc được đối chiếu trực tiếp từ nội dung in trong sách (đọc câu/đoạn và các lựa chọn in, rà soát ngữ nghĩa từng câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần đọc giữ nguyên bố cục sách in: câu, đoạn và lựa chọn đều kèm pinyin như trên trang sách. Hình ở Phần I là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l6-r1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第11—13题：选择与句子最匹配的图片。",
+      "instructionVi": "Câu 11–13: Chọn hình phù hợp nhất với câu.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-06/wb-r1-students.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-06/wb-r1-backpack.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-06/wb-r1-meat.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-06/wb-r1-basketball.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "example": {
+       "sentenceZh": "每个星期六，我都去打篮球。",
+       "sentencePinyin": "Měi gè Xīngqīliù, wǒ dōu qù dǎ lánqiú.",
+       "sentenceEn": "I go to play basketball every Saturday.",
+       "answer": "D",
+       "id": "wb2-l6-r1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-r1-q11",
+        "no": 11,
+        "sentenceZh": "妈妈今天做了几个肉菜。",
+        "sentencePinyin": "Māma jīntiān zuòle jǐ gè ròucài.",
+        "answer": "C",
+        "explainVi": "“妈妈今天做了几个肉菜” — hôm nay mẹ làm mấy món THỊT: hình C là bàn đầy món thịt."
+       },
+       {
+        "id": "wb2-l6-r1-q12",
+        "no": 12,
+        "sentenceZh": "他打开书包，拿出一本书。",
+        "sentencePinyin": "Tā dǎkāi shūbāo, náchū yì běn shū.",
+        "answer": "B",
+        "explainVi": "“他打开书包，拿出一本书” — cậu bé mở cặp, lấy ra một cuốn sách: hình B là cậu bé ngồi trên giường lấy sách từ cặp."
+       },
+       {
+        "id": "wb2-l6-r1-q13",
+        "no": 13,
+        "sentenceZh": "孩子们高高兴兴地去学校了。",
+        "sentencePinyin": "Háizimen gāogāoxìng de qù xuéxiào le.",
+        "answer": "A",
+        "explainVi": "“孩子们高高兴兴地去学校了” — các bạn nhỏ vui vẻ ĐI HỌC: hình A là ba nữ sinh đeo cặp đi bộ."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-r2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第14—17题：选词填空。",
+      "instructionVi": "Câu 14–17: Chọn từ trong khung điền vào chỗ trống; mỗi từ chỉ dùng một lần.",
+      "kind": "word-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "长",
+        "pinyin": "cháng"
+       },
+       {
+        "id": "B",
+        "zh": "忘",
+        "pinyin": "wàng"
+       },
+       {
+        "id": "C",
+        "zh": "过",
+        "pinyin": "guò"
+       },
+       {
+        "id": "D",
+        "zh": "画笔",
+        "pinyin": "huàbǐ"
+       },
+       {
+        "id": "E",
+        "zh": "完",
+        "pinyin": "wán"
+       }
+      ],
+      "example": {
+       "id": "wb2-l6-r2-ex",
+       "lines": [
+        {
+         "zh": "题太多了，所以我没做（　）。",
+         "pinyin": "Tí tài duō le, suǒyǐ wǒ méi zuò ( )."
+        }
+       ],
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-r2-q14",
+        "no": 14,
+        "lines": [
+         {
+          "zh": "书啊、（）啊什么的都在书包里。",
+          "pinyin": "Shū a, ( ) a shénme de dōu zài shūbāo li."
+         }
+        ],
+        "answer": "D",
+        "explainVi": "“书啊、画笔啊什么的都在书包里” — sách, BÚT VẼ các thứ đều ở trong cặp: cụm liệt kê “…啊…啊什么的” cần một đồ vật như 画笔 (D)."
+       },
+       {
+        "id": "wb2-l6-r2-q15",
+        "no": 15,
+        "lines": [
+         {
+          "zh": "爷爷，今年生日您想怎么（）？",
+          "pinyin": "Yéye, jīnnián shēngrì nín xiǎng zěnme ( )?"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "“今年生日您想怎么过？” — sinh nhật năm nay ông muốn ĐÓN thế nào: 过 (C) là “trải qua/đón” của bài này."
+       },
+       {
+        "id": "wb2-l6-r2-q16",
+        "no": 16,
+        "lines": [
+         {
+          "zh": "女：很（）时间没吃鱼了。",
+          "pinyin": "Hěn ( ) shíjiān méi chī yú le."
+         },
+         {
+          "zh": "男：那今天晚上我做条鱼。",
+          "pinyin": "Nà jīntiān wǎnshang wǒ zuò tiáo yú."
+         }
+        ],
+        "answer": "A",
+        "explainVi": "“很长时间没吃鱼了” — đã lâu （长时间） không ăn cá: cụm cố định “长时间” cần 长 (A)."
+       },
+       {
+        "id": "wb2-l6-r2-q17",
+        "no": 17,
+        "lines": [
+         {
+          "zh": "男：生日快乐！这是送你的蛋糕。",
+          "pinyin": "Shēngrì kuàilè! Zhè shì sòng nǐ de dàngāo."
+         },
+         {
+          "zh": "女：啊！我都（）了今天是我的生日。",
+          "pinyin": "Ā! Wǒ dōu ( ) le jīntiān shì wǒ de shēngrì."
+         }
+        ],
+        "answer": "B",
+        "explainVi": "“我都忘了今天是我的生日” — tôi QUÊN mất hôm nay là sinh nhật của mình: 忘 (B) đi với 了 thành “đã quên mất”."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-r3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第18—21题：匹配句子。",
+      "instructionVi": "Câu 18–21: Chọn câu trả lời trong khung phù hợp với mỗi câu hỏi.",
+      "kind": "match-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "这么长时间？我们去北京旅游吧？",
+        "pinyin": "Zhème cháng shíjiān? Wǒmen qù Běijīng lǚyóu ba?"
+       },
+       {
+        "id": "B",
+        "zh": "我们能吃完吗？",
+        "pinyin": "Wǒmen néng chīwán ma?"
+       },
+       {
+        "id": "C",
+        "zh": "喜欢，我和弟弟都很喜欢。",
+        "pinyin": "Xǐhuan, wǒ hé dìdi dōu hěn xǐhuan."
+       },
+       {
+        "id": "D",
+        "zh": "他累了，早早地去睡觉了。",
+        "pinyin": "Tā lèi le, zǎozǎo de qù shuìjiào le."
+       },
+       {
+        "id": "E",
+        "zh": "他出去了，一会儿就回来。",
+        "pinyin": "Tā chūqù le, yíhuìr jiù huílái."
+       }
+      ],
+      "example": {
+       "id": "wb2-l6-r3-ex",
+       "zh": "请问李老师在吗？",
+       "pinyin": "Qǐngwèn Lǐ lǎoshī zài ma?",
+       "en": "Excuse me, is Mr. Li here?",
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-r3-q18",
+        "no": 18,
+        "zh": "爸爸为什么不来看电视？",
+        "pinyin": "Bàba wèi shénme bú lái kàn diànshì?",
+        "answer": "D",
+        "explainVi": "Bố không ra xem tivi vì “他累了，早早地去睡觉了” — bố mệt rồi, đi ngủ sớm rồi (D)."
+       },
+       {
+        "id": "wb2-l6-r3-q19",
+        "no": 19,
+        "zh": "你喜欢学画画吗？",
+        "pinyin": "Nǐ xǐhuan xué huàhuà ma?",
+        "answer": "C",
+        "explainVi": "Câu hỏi có thích học vẽ không được trả lời “喜欢，我和弟弟都很喜欢” — thích, tôi và em trai đều rất thích (C)."
+       },
+       {
+        "id": "wb2-l6-r3-q20",
+        "no": 20,
+        "zh": "你看，我给你买了一个大大的生日蛋糕。",
+        "pinyin": "Nǐ kàn, wǒ gěi nǐ mǎile yí gè dàdà de shēngrì dàngāo.",
+        "answer": "B",
+        "explainVi": "Trước chiếc bánh sinh nhật THẬT TO, phản ứng hợp nhất là “我们能吃完吗？” — chúng ta có ăn hết được không? (B)."
+       },
+       {
+        "id": "wb2-l6-r3-q21",
+        "no": 21,
+        "zh": "公司让我休息一下，下个星期再上班。",
+        "pinyin": "Gōngsī ràng wǒ xiūxi yíxià, xià gè xīngqī zài shàngbān.",
+        "answer": "A",
+        "explainVi": "Được nghỉ hẳn đến tuần sau mới đi làm, người kia thốt lên “这么长时间？我们去北京旅游吧？” — lâu thế á? Chúng ta đi Bắc Kinh du lịch đi! (A)."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-r4",
+      "no": 4,
+      "titleZh": "第四部分",
+      "titleEn": "Part IV",
+      "instructionZh": "第22—24题：选择正确答案。",
+      "instructionVi": "Câu 22–24: Đọc đoạn ngắn rồi chọn đáp án đúng.",
+      "kind": "passage-choice",
+      "example": {
+       "passageZh": "我爱跳舞，但跳得不太好。",
+       "passagePinyin": "Wǒ ài tiàowǔ, dàn tiào de bú tài hǎo.",
+       "passageEn": "I love dancing, but I'm not good at it.",
+       "questionZh": "他：",
+       "questionPinyin": "Tā:",
+       "questionEn": "He:",
+       "options": [
+        {
+         "id": "A",
+         "zh": "下课了",
+         "pinyin": "xiàkè le",
+         "en": "finished class",
+         "vi": "đã tan học"
+        },
+        {
+         "id": "B",
+         "zh": "喜欢跳舞",
+         "pinyin": "xǐhuan tiàowǔ",
+         "en": "likes dancing",
+         "vi": "thích nhảy múa"
+        },
+        {
+         "id": "C",
+         "zh": "是小学生",
+         "pinyin": "shì xiǎoxuéshēng",
+         "en": "is a primary school student",
+         "vi": "là học sinh tiểu học"
+        }
+       ],
+       "answer": "B",
+       "id": "wb2-l6-r4-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-r4-q22",
+        "no": 22,
+        "passageZh": "今年过生日，爷爷给我买了新的画笔，有36个颜色。有了新画笔后，我每次都高高兴兴地去上画画课。",
+        "passagePinyin": "Jīnnián guò shēngrì, yéye gěi wǒ mǎile xīn de huàbǐ, yǒu sānshíliù gè yánsè. Yǒule xīn huàbǐ hòu, wǒ měi cì dōu gāogāoxìng de qù shàng huàhuà kè.",
+        "questionZh": "爷爷为什么给他买画笔？",
+        "questionPinyin": "Yéye wèi shénme gěi tā mǎi huàbǐ?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "他过生日",
+          "pinyin": "tā guò shēngrì",
+          "vi": "cậu bé đón sinh nhật"
+         },
+         {
+          "id": "B",
+          "zh": "老师让买的",
+          "pinyin": "lǎoshī ràng mǎi de",
+          "vi": "thầy cô bảo mua"
+         },
+         {
+          "id": "C",
+          "zh": "他的画笔颜色少",
+          "pinyin": "tā de huàbǐ yánsè shǎo",
+          "vi": "bút vẽ của cậu bé ít màu"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Câu đầu của đoạn: “今年过生日，爷爷给我买了新的画笔” — năm nay ĐÓN SINH NHẬT, ông mua cho cậu bút vẽ mới (A)."
+       },
+       {
+        "id": "wb2-l6-r4-q23",
+        "no": 23,
+        "passageZh": "我的小猫每天都要到我的床上来跟我玩。今天我不太舒服，没让它上来。它有点儿不高兴，自己到床下面睡觉去了。",
+        "passagePinyin": "Wǒ de xiǎomāo měi tiān dōu yào dào wǒ de chuáng shang lái gēn wǒ wán. Jīntiān wǒ bú tài shūfu, méi ràng tā shànglái. Tā yǒudiǎnr bù gāoxìng, zìjǐ dào chuáng xiàmiàn shuìjiào qù le.",
+        "questionZh": "他今天为什么不跟小猫玩？",
+        "questionPinyin": "Tā jīntiān wèi shénme bù gēn xiǎomāo wán?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "他不高兴",
+          "pinyin": "tā bù gāoxìng",
+          "vi": "anh ấy không vui"
+         },
+         {
+          "id": "B",
+          "zh": "他不舒服",
+          "pinyin": "tā bù shūfu",
+          "vi": "anh ấy không khỏe"
+         },
+         {
+          "id": "C",
+          "zh": "他想睡觉",
+          "pinyin": "tā xiǎng shuìjiào",
+          "vi": "anh ấy muốn ngủ"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Đoạn văn nói “今天我不太舒服” — hôm nay tôi KHÔNG KHỎE nên không cho mèo lên giường chơi (B). “不高兴” là của con mèo, không phải của chủ."
+       },
+       {
+        "id": "wb2-l6-r4-q24",
+        "no": 24,
+        "passageZh": "小李生病了，今天没去上班，在家好好地睡了一觉。起床后，他去超市买了点儿水果、面包和奶茶什么的。",
+        "passagePinyin": "Xiǎo Lǐ shēngbìng le, jīntiān méi qù shàngbān, zài jiā hǎohǎo de shuìle yí jiào. Qǐchuáng hòu, tā qù chāoshì mǎile diǎnr shuǐguǒ, miànbāo hé nǎichá shénme de.",
+        "questionZh": "小李为什么没去上班？",
+        "questionPinyin": "Xiǎo Lǐ wèi shénme méi qù shàngbān?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "生病了",
+          "pinyin": "shēngbìng le",
+          "vi": "bị ốm"
+         },
+         {
+          "id": "B",
+          "zh": "去超市了",
+          "pinyin": "qù chāoshì le",
+          "vi": "đã đi siêu thị"
+         },
+         {
+          "id": "C",
+          "zh": "要买东西",
+          "pinyin": "yào mǎi dōngxi",
+          "vi": "muốn mua đồ"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Câu đầu của đoạn cho ngay lý do: “小李生病了” — Tiểu Lý BỊ ỐM nên hôm nay không đi làm (A). Đi siêu thị là việc sau khi ngủ dậy, không phải lý do nghỉ làm."
+       }
+      ]
+     }
+    ]
+   },
+   "wbWriting": {
+    "titleZh": "书写",
+    "titleEn": "Writing",
+    "titleVi": "Viết",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 6 — 模拟测练 · 三、书写, trang in 060 (PDF tr. 67).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Viết được đối chiếu trực tiếp từ ô chữ và pinyin in trong sách (bộ phận còn thiếu xác định theo ô 田字格 và mục Hán tự của chính bài; chữ cần viết xác định duy nhất theo pinyin in trên chỗ trống và ngữ cảnh câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần viết giữ nguyên bố cục sách in: Phần I chọn bộ phận còn thiếu để ghép thành chữ trong ô 田字格； Phần II nhìn pinyin in trên chỗ trống rồi tự gõ chữ Hán.",
+    "parts": [
+     {
+      "id": "wb2-l6-w1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第25—27题：根据部件组字。",
+      "instructionVi": "Câu 25–27: Chọn bộ phận còn thiếu để ghép thành chữ đúng trong ô chữ.",
+      "kind": "component-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "辶"
+       },
+       {
+        "id": "B",
+        "zh": "忄"
+       },
+       {
+        "id": "C",
+        "zh": "月"
+       },
+       {
+        "id": "D",
+        "zh": "十"
+       }
+      ],
+      "example": {
+       "chars": [
+        {
+         "pinyin": "shén",
+         "full": "什",
+         "shown": "亻",
+         "gap": true
+        },
+        {
+         "pinyin": "me",
+         "full": "么",
+         "shown": "么"
+        }
+       ],
+       "answer": "D",
+       "id": "wb2-l6-w1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-w1-q25",
+        "no": 25,
+        "chars": [
+         {
+          "pinyin": "kuài",
+          "full": "快",
+          "shown": "夬",
+          "gap": true
+         },
+         {
+          "pinyin": "lè",
+          "full": "乐",
+          "shown": "乐"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "快 ghép từ 忄 (bộ Tâm đứng — bộ bên trái của chữ 快） và 夬； ô chữ 快 đang hiện 夬 nên bộ phận thiếu là 忄 — chọn B."
+       },
+       {
+        "id": "wb2-l6-w1-q26",
+        "no": 26,
+        "chars": [
+         {
+          "pinyin": "guò",
+          "full": "过",
+          "shown": "寸",
+          "gap": true
+         },
+         {
+          "pinyin": "shēng",
+          "full": "生",
+          "shown": "生"
+         },
+         {
+          "pinyin": "rì",
+          "full": "日",
+          "shown": "日"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "过 ghép từ 辶 (bộ Sước — phần bao dưới trái của chữ 过） và 寸； ô chữ 过 đang hiện 寸 nên bộ phận thiếu là 辶 — chọn A."
+       },
+       {
+        "id": "wb2-l6-w1-q27",
+        "no": 27,
+        "chars": [
+         {
+          "pinyin": "shū",
+          "full": "舒",
+          "shown": "舒"
+         },
+         {
+          "pinyin": "fu",
+          "full": "服",
+          "shown": "良",
+          "gap": true
+         }
+        ],
+        "answer": "C",
+        "explainVi": "服 ghép từ 月 (bộ Nguyệt — phần bên trái của chữ 服） và phần còn lại đang hiện; ô chữ 服 đang hiện phần phải nên bộ phận thiếu là 月 — chọn C."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l6-w2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第28—30题：根据拼音写汉字。",
+      "instructionVi": "Câu 28–30: Gõ chữ Hán theo pinyin in trên chỗ trống.",
+      "kind": "pinyin-write",
+      "example": {
+       "stemZh": "你想喝茶还（　）喝咖啡？",
+       "stemPinyin": "Nǐ xiǎng hē chá hái (shì) hē kāfēi?",
+       "stemEn": "Would you like tea or coffee?",
+       "blankPinyin": "shì",
+       "answerZh": "是",
+       "id": "wb2-l6-w2-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l6-w2-q28",
+        "no": 28,
+        "stemZh": "他舒舒服服（）睡了一觉。",
+        "stemPinyin": "Tā shūshūfúfú (de) shuìle yí jiào.",
+        "blankPinyin": "de",
+        "answerZh": "地",
+        "explainVi": "“他舒舒服服地睡了一觉” — anh ấy ngủ một giấc thật thoải mái; chữ cần viết theo pinyin de, đứng giữa tính từ láy và động từ, là trợ từ 地 của bài."
+       },
+       {
+        "id": "wb2-l6-w2-q29",
+        "no": 29,
+        "stemZh": "我妈妈做的鸡（）饭很好吃。",
+        "stemPinyin": "Wǒ māma zuò de jī (ròu) fàn hěn hǎochī.",
+        "blankPinyin": "ròu",
+        "answerZh": "肉",
+        "explainVi": "“我妈妈做的鸡肉饭很好吃” — cơm thịt gà mẹ tôi làm rất ngon; chữ cần viết theo pinyin ròu là 肉 (thịt)."
+       },
+       {
+        "id": "wb2-l6-w2-q30",
+        "no": 30,
+        "stemZh": "这条裤子有点儿（）。",
+        "stemPinyin": "Zhè tiáo kùzi yǒudiǎnr (cháng).",
+        "blankPinyin": "cháng",
+        "answerZh": "长",
+        "explainVi": "“这条裤子有点儿长” — chiếc quần này hơi dài; chữ cần viết theo pinyin cháng là 长 (dài) của bài."
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "writingSets": [
@@ -70915,6 +75640,138 @@
        "pdfPage": 5,
        "printedPage": 5,
        "section": "床"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "writing-hsk2-l06",
+   "lessonId": "hsk2-l06",
+   "titleVi": "Luyện viết Bài 6 · 笔 / 第 / 快 / 忙",
+   "introVi": "Bốn chữ của Bài 6 theo đúng thứ tự sách luyện viết chữ Hán HSK 2 (trang 6): mỗi chữ đi từ nhận diện nét, xem thứ tự nét, viết theo hướng dẫn, tự viết, đối chiếu, rồi ghi vào vở giấy. Hai bộ của bài — Trúc tự đầu ⺮ và Thụ tâm bàng 忄 — cũng là điểm Hán tự nền tảng trong Workbook tr.051–052.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-writing-pdf",
+     "pdfPage": 6,
+     "printedPage": 6,
+     "section": "Sách viết tr.6 (trang ảnh thứ 6)"
+    }
+   ],
+   "chars": [
+    {
+     "id": "w-h2l6-bi",
+     "char": "笔",
+     "pinyin": "bǐ",
+     "hanViet": "BÚT",
+     "meaningVi": "bút",
+     "strokeCount": 10,
+     "radical": "⺮",
+     "radicalNameVi": "Trúc tự đầu",
+     "word": {
+      "zh": "画笔",
+      "pinyin": "huàbǐ",
+      "vi": "bút vẽ"
+     },
+     "sentence": {
+      "zh": "桌子上有书、画笔什么的。",
+      "pinyin": "Zhuōzi shang yǒu shū, huàbǐ shénme de.",
+      "vi": "Trên bàn có sách, bút vẽ các thứ."
+     },
+     "tipVi": "笔 = ⺮ （竹字头） + 毛. Viết phần ⺮ ở trên trước (hai nét ngang), rồi 毛 ở dưới.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 6,
+       "printedPage": 6,
+       "section": "笔"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l6-di",
+     "char": "第",
+     "pinyin": "dì",
+     "hanViet": "ĐỆ",
+     "meaningVi": "thứ (số thứ tự)",
+     "strokeCount": 11,
+     "radical": "⺮",
+     "radicalNameVi": "Trúc tự đầu",
+     "word": {
+      "zh": "第二",
+      "pinyin": "dì-èr",
+      "vi": "thứ hai"
+     },
+     "sentence": {
+      "zh": "你再好好地写一下第二个字。",
+      "pinyin": "Nǐ zài hǎohǎo de xiě yíxià dì-èr gè zì.",
+      "vi": "Bạn hãy viết lại chữ thứ hai cho thật tử tế."
+     },
+     "tipVi": "第 = ⺮ + 弟. Chữ này luôn đứng trước số và lượng từ để chỉ thứ tự: 第一、第二、第三.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 6,
+       "printedPage": 6,
+       "section": "第"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l6-kuai",
+     "char": "快",
+     "pinyin": "kuài",
+     "hanViet": "KHOÁI",
+     "meaningVi": "nhanh; vui vẻ",
+     "strokeCount": 7,
+     "radical": "忄",
+     "radicalNameVi": "Thụ tâm bàng",
+     "word": {
+      "zh": "快乐",
+      "pinyin": "kuàilè",
+      "vi": "vui vẻ"
+     },
+     "sentence": {
+      "zh": "我们每天都要快快乐乐的。",
+      "pinyin": "Wǒmen měi tiān dōu yào kuàikuàilèle de.",
+      "vi": "Ngày nào chúng ta cũng phải thật vui vẻ."
+     },
+     "tipVi": "快 = 忄 （竖心旁） + 夬. Khi viết 忄, nét đứng ở giữa viết sau cùng và dài nhất.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 6,
+       "printedPage": 6,
+       "section": "快"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l6-mang",
+     "char": "忙",
+     "pinyin": "máng",
+     "hanViet": "MANG",
+     "meaningVi": "bận",
+     "strokeCount": 6,
+     "radical": "忄",
+     "radicalNameVi": "Thụ tâm bàng",
+     "word": {
+      "zh": "很忙",
+      "pinyin": "hěn máng",
+      "vi": "rất bận"
+     },
+     "sentence": {
+      "zh": "他很忙，早早地去工作了。",
+      "pinyin": "Tā hěn máng, zǎozǎo de qù gōngzuò le.",
+      "vi": "Anh ấy rất bận, đi làm từ sớm."
+     },
+     "tipVi": "忙 = 忄 + 亡. Bên trái là bộ Tâm đứng — bận rộn trước hết là chuyện của lòng.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 6,
+       "printedPage": 6,
+       "section": "忙"
       }
      ]
     }

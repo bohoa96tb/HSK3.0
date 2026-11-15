@@ -98,3 +98,13 @@ test("wb l7 writing part II q29: the answer is only 爱 — 好 is printed after
   assert.equal(q29.blankPinyin, "ài");
   assert.equal(q29.stemZh, "我爸爸的（）好是游泳。");
 });
+
+// Ghim hồi quy (phát hiện khi nghiệm thu live Bài 7): app.js nạp audio-review.js bằng
+// token ?v= — token này PHẢI đổi mỗi khi audio-review.js đổi nội dung, nếu không trình
+// duyệt đã từng mở app sẽ dùng bản đệm cũ và khối nghe ôn của bài mới không hiện.
+test("app.js imports audio-review.js with the current contentVersion token", () => {
+  const app = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
+  const m = app.match(/audio-review\.js\?v=([0-9a-z-]+)/);
+  assert.ok(m, "app.js phải nạp audio-review.js kèm token ?v=");
+  assert.equal(m[1], content.contentVersion);
+});

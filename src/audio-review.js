@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05', 'hsk2-l06',
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05', 'hsk2-l06', 'hsk2-l07',
  'hsk1-l01', 'hsk1-l02', 'hsk1-l03', 'hsk1-l04', 'hsk1-l05', 'hsk1-l06', 'hsk1-l07', 'hsk1-l08',
  'hsk1-l09', 'hsk1-l10', 'hsk1-l11', 'hsk1-l12', 'hsk1-l13', 'hsk1-l14', 'hsk1-l15'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
@@ -121,6 +121,21 @@ export const REVIEW_WORD_SEGMENTS = {
  'h2l6-w12': {start: 10.45, end: 12.46},
  'h2l6-w13': {start: 0.57, end: 3.03},
  'h2l6-w14': {start: 3.04, end: 5.31},
+ 'h2l7-w01': {start: 0.58, end: 2.9},
+ 'h2l7-w02': {start: 2.91, end: 5.56},
+ 'h2l7-w03': {start: 5.57, end: 7.88},
+ 'h2l7-w04': {start: 7.89, end: 10.06},
+ 'h2l7-w05': {start: 10.07, end: 12.65},
+ 'h2l7-w06': {start: 0.15, end: 3.13},
+ 'h2l7-w07': {start: 3.14, end: 5.29},
+ 'h2l7-w08': {start: 5.3, end: 8.18},
+ 'h2l7-w09': {start: 8.19, end: 10.57},
+ 'h2l7-w10': {start: 10.58, end: 12.7},
+ 'h2l7-w11': {start: 0.45, end: 3.28},
+ 'h2l7-w12': {start: 3.29, end: 6.4},
+ 'h2l7-w13': {start: 6.41, end: 8.38},
+ 'h2l7-w14': {start: 0.26, end: 3.66},
+ 'h2l7-w15': {start: 3.67, end: 6.99},
  // D35 (Hoa, 2026-11-08): HSK 1 rollout — same double-reading span
  // method as D34, derived per track from RMS speech regions plus
  // per-region crop-ASR verification; entries carry their trackId so
@@ -518,6 +533,9 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l06-shenmede': 'Cụm cố định liệt kê mở: đặt ở cuối một dãy liệt kê để nói còn những thứ tương tự chưa kể hết, nghĩa là vân vân, các thứ, ví dụ trên bàn có máy tính, cốc, sách và bút vẽ các thứ.',
  'kp-hsk2-l06-de': 'Trợ từ kết cấu: đứng giữa phần bổ nghĩa và động từ để chỉ cách thức hay trạng thái của hành động, phần bổ nghĩa thường là tính từ láy, ví dụ vui vẻ mà chơi, đến lớp từ sớm, ngủ một giấc thật thoải mái.',
  'kp-hsk2-l06-tip-noodle': 'Mẹo văn hóa: người Trung Quốc mừng sinh nhật thường ăn mì, vì sợi mì dài tượng trưng cho sống lâu, trường thọ, nên bát mì trong bữa sinh nhật được gọi là mì trường thọ.',
+ 'kp-hsk2-l07-yi-jiu': 'Câu phức rút gọn một, liền: hai hành động nối tiếp nhau, hành động sau xảy ra ngay sau hành động trước, việc trước là điều kiện, việc sau là kết quả, ví dụ vừa tan học là chạy ra ngoài ngay, cứ có thời gian là đi vận động.',
+ 'kp-hsk2-l07-state-complement-1': 'Bổ ngữ trạng thái phần một: đứng sau động từ qua trợ từ đắc, bổ sung trạng thái hay mức độ của hành động, trả lời câu hỏi hành động được làm như thế nào, ví dụ đá cũng tạm được, chạy không nhanh, phủ định thì thêm bất trước cụm tính từ.',
+ 'kp-hsk2-l07-state-complement-2': 'Bổ ngữ trạng thái phần hai: khi động từ có tân ngữ hoặc là từ li hợp thì lặp lại động từ sau tân ngữ rồi mới thêm bổ ngữ, hoặc đưa tân ngữ lên trước động từ, ví dụ bơi thì bơi không nhanh, bóng rổ thì chơi rất tốt.',
  // D35: HSK 1 grammar points, paraphrased from each point's verified
  // pattern, position and explanation in the lesson data.
  'kp-hsk1-l01-men': 'Mẫu câu: để nói về một nhóm người, thêm trợ từ chỉ số nhiều ngay sau đại từ hoặc danh từ chỉ người; trợ từ này không đứng một mình.',

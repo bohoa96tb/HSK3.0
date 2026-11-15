@@ -1,5 +1,5 @@
 {
- "contentVersion": "20261115-hsk2-l6-wb",
+ "contentVersion": "20261115-hsk2-l7-wb",
  "generatedNote": "Dữ liệu đã duyệt thủ công từ nguồn Baulchino ngày 2026-10-31. Không có nội dung tự sinh.",
  "sources": [
   {
@@ -1090,11 +1090,16 @@
      "section": "Bài 7 · 他篮球打得很好"
     }
    ],
-   "textbookAudioTrackCount": null,
-   "workbookAudioTrackCount": null,
-   "publicationStatus": "catalogued",
-   "publicationNote": "Đã có trong mục lục đã đối chiếu bản in (Textbook HSK 2). Nội dung chưa biên soạn.",
-   "grammarIds": [],
+   "textbookAudioTrackCount": 8,
+   "workbookAudioTrackCount": 1,
+   "publicationStatus": "pilot-ready",
+   "publicationNote": "Đã biên soạn đầy đủ theo kiểm kê trực quan 2026-11-15 (Textbook tr. in 056–063; Workbook phần bài học tr. in 061–062 và phần 模拟测练 tr. in 063–070 dựng đủ 30 câu ngay từ đầu theo khuôn Bài 6/D46; sách viết tr.7) và chuẩn Bài 8/D27/D28/D29/D41. 4 đoạn, 21 câu print-verified; 15 từ mới; 4 điểm kiến thức (3 ngữ pháp + Hán tự nền tảng; bài này KHÔNG có hộp mẹo 小语助力）; 10 câu hỏi in trong sách đặt tại đoạn theo D28; bộ chính 12 câu (khởi động một phần nối hình 4 câu, điền từ tổng hợp 5, mở rộng từ vựng 3); Workbook đủ 30 câu (đáp án Nghe suy từ audio, đã kiểm envelope hai lượt đọc từng cửa sổ); khu Luyện viết có bộ chữ của bài （跑/踢/往/很）. Câu phán đoán Đoạn 4 câu 1 là ĐÚNG (khác Bài 6: lần này có một phán đoán đúng). ĐÍNH CHÍNH khi dựng: ảnh C của Workbook Nghe Q2 là chàng trai CHẠY BỘ trên cầu cạnh lan can (crop 300 dpi), không phải ván trượt như kiểm kê đầu — đáp án Q2 = C. Mốc đoạn audio là asr-draft, chưa nghe kiểm chứng bởi người.",
+   "grammarIds": [
+    "kp-hsk2-l07-yi-jiu",
+    "kp-hsk2-l07-state-complement-1",
+    "kp-hsk2-l07-state-complement-2",
+    "kp-hsk2-l07-characters"
+   ],
    "sectionIds": [
     "intro",
     "prep",
@@ -74900,6 +74905,4248 @@
      }
     ]
    }
+  },
+  {
+   "lessonId": "hsk2-l07",
+   "intro": {
+    "goalVi": "Học cách nối hai hành động nối tiếp bằng câu phức rút gọn “一……就……”, nắm bổ ngữ trạng thái (1) và (2) để nhận xét một hành động làm得怎么样, và nói được về các môn thể thao mình yêu thích — qua những cuộc trò chuyện về bóng rổ, bóng đá, chạy bộ và bơi của An Ni và Trần Thiên Trung.",
+    "estimatedMinutes": 80,
+    "sections": [
+     {
+      "id": "intro",
+      "titleVi": "Bắt đầu"
+     },
+     {
+      "id": "prep",
+      "titleVi": "Từ cần biết"
+     },
+     {
+      "id": "knowledge",
+      "titleVi": "Hiểu cách dùng"
+     },
+     {
+      "id": "reader",
+      "titleVi": "Nghe & đọc"
+     },
+     {
+      "id": "exercises",
+      "titleVi": "Luyện tập"
+     },
+     {
+      "id": "apply",
+      "titleVi": "Tự nói"
+     },
+     {
+      "id": "summary",
+      "titleVi": "Tổng kết"
+     }
+    ],
+    "leadVi": "An Ni vừa từ Bắc Kinh về, Trần Thiên Trung vừa tan học đã chạy ngay ra ngoài — thì ra anh đã hẹn bạn cùng lớp đi chơi bóng rổ. Hai người vừa đi vừa trò chuyện: Trần Thiên Trung mê cả bóng rổ lẫn bóng đá, đá cũng tạm được; An Ni chơi bóng rổ tạm ổn, chạy không nhanh, bơi cũng không nhanh nhưng lại thích bơi. Cuối bài, nhật ký của Trần Thiên Trung gói gọn sở thích của anh: cứ có thời gian là đi vận động. Bài này cũng mở bộ chữ viết thứ bảy: 跑、踢、往、很.",
+    "outcomesVi": [
+     "Nhận diện và dùng 15 từ mới của bài quanh chủ đề thể thao: bóng rổ, bóng đá, chạy bộ, bơi và sở thích.",
+     "Dùng “一……就……” để nói việc sau nối tiếp ngay việc trước: 一下课就往外跑、一有时间就去运动.",
+     "Đặt bổ ngữ trạng thái đúng cấu trúc: Động từ + 得 + cụm tính từ （踢得还可以、跑得不快）.",
+     "Xử lý động từ có tân ngữ và từ li hợp: lặp lại động từ — 游泳游得不快、篮球打得很好.",
+     "Nghe hiểu và trả lời câu hỏi của bốn đoạn; đọc được nhật ký ngắn về sở thích.",
+     "Luyện viết 4 chữ 跑、踢、往、很 ở khu Luyện viết chữ Hán."
+    ],
+    "contextImage": {
+     "src": "assets/hsk2-lesson-07/context-court.webp",
+     "alt": "Tranh vẽ lại hai sinh viên trò chuyện trên sân bóng rổ trong khuôn viên trường, chàng trai cầm quả bóng rổ",
+     "caption": "Tranh vẽ lại theo bối cảnh bài học (Textbook tr.056–062): An Ni và Trần Thiên Trung trò chuyện trên sân bóng rổ của trường.",
+     "width": 1280,
+     "height": 853
+    },
+    "studyTipVi": "Ba bẫy của bài: (1) “一……就……” — đừng quên 就 ở hành động thứ hai; (2) bổ ngữ trạng thái luôn đi qua 得 — nhận xét “chạy nhanh không” thì nói 跑得快不快， đừng bỏ 得； (3) động từ có tân ngữ thì phải lặp lại động từ: 游泳游得…, không nói “游泳得…”. Bài 6 đã học “地” (de) đặt TRƯỚC động từ; bài này “得” (de) đặt SAU động từ — hai trợ từ đọc giống nhau, đứng ở hai phía của động từ. Cả bốn đoạn đều có câu hỏi in sẵn trong sách — trong app, chúng nằm ngay dưới từng đoạn ở mục Nghe & đọc.",
+    "foundationSummaryVi": "Phần Hán tự (Workbook tr.061–062 + sách viết Bài 7): hai bộ 足字旁 （⻊) và 双人旁 （彳) qua bốn chữ 跑、踢、往、很. Chi tiết và bài tập viết từng nét ở khu Luyện viết chữ Hán của bài.",
+    "courseTagsVi": "HSK 2 · Bài 7 · 他篮球打得很好",
+    "priorLessonNoteVi": "Nhân vật của bài: An Ni — đã gặp ở Bài 2 và Bài 5; Trần Thiên Trung là nhân vật mới của bài này. Nhan đề bài “他篮球打得很好” chính là một câu bổ ngữ trạng thái (2): tân ngữ 篮球 đưa lên trước động từ 打.",
+    "priorLessonId": "hsk2-l06"
+   },
+   "prepWords": [
+    {
+     "id": "h2l7-w01",
+     "zh": "从",
+     "pinyin": "cóng",
+     "vi": "từ (giới từ chỉ điểm xuất phát)",
+     "hanViet": "TÒNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 73,
+       "printedPage": 57,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-2",
+      "start": 0.55,
+      "end": 1.4,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l7-w02",
+     "zh": "往",
+     "pinyin": "wǎng",
+     "vi": "về phía, hướng về",
+     "hanViet": "VÃNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 73,
+       "printedPage": 57,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-2",
+      "start": 2.75,
+      "end": 3.8,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l7-w03",
+     "zh": "跑",
+     "pinyin": "pǎo",
+     "vi": "chạy",
+     "hanViet": "BÀO",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 73,
+       "printedPage": 57,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-2",
+      "start": 5.4,
+      "end": 6.45,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l7-w04",
+     "zh": "打",
+     "pinyin": "dǎ",
+     "vi": "đánh; chơi (các môn bóng)",
+     "hanViet": "ĐẢ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 73,
+       "printedPage": 57,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-2",
+      "start": 7.75,
+      "end": 8.7,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l7-w05",
+     "zh": "篮球",
+     "pinyin": "lánqiú",
+     "vi": "bóng rổ",
+     "hanViet": "LAM CẦU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 73,
+       "printedPage": 57,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-2",
+      "start": 9.9,
+      "end": 11.25,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 1
+    },
+    {
+     "id": "h2l7-w06",
+     "zh": "运动",
+     "pinyin": "yùndòng",
+     "vi": "thể thao; vận động",
+     "hanViet": "VẬN ĐỘNG",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-4",
+      "start": 0.13,
+      "end": 1.38,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l7-w07",
+     "zh": "踢",
+     "pinyin": "tī",
+     "vi": "đá (bóng)",
+     "hanViet": "THÍCH",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-4",
+      "start": 3.0,
+      "end": 3.85,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l7-w08",
+     "zh": "足球",
+     "pinyin": "zúqiú",
+     "vi": "bóng đá",
+     "hanViet": "TÚC CẦU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-4",
+      "start": 5.15,
+      "end": 6.45,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l7-w09",
+     "zh": "球",
+     "pinyin": "qiú",
+     "vi": "bóng; quả bóng",
+     "hanViet": "CẦU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-4",
+      "start": 8.05,
+      "end": 9.05,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l7-w10",
+     "zh": "得",
+     "pinyin": "de",
+     "vi": "trợ từ kết cấu — nối động từ với bổ ngữ trạng thái",
+     "hanViet": "ĐẮC",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-4",
+      "start": 10.4,
+      "end": 10.95,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 2
+    },
+    {
+     "id": "h2l7-w11",
+     "zh": "跑步",
+     "pinyin": "pǎobù",
+     "vi": "chạy bộ",
+     "hanViet": "BÀO BỘ",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-6",
+      "start": 0.45,
+      "end": 1.6,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l7-w12",
+     "zh": "游泳",
+     "pinyin": "yóuyǒng",
+     "vi": "bơi",
+     "hanViet": "DU VỊNH",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-6",
+      "start": 3.15,
+      "end": 4.55,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l7-w13",
+     "zh": "游",
+     "pinyin": "yóu",
+     "vi": "bơi (âm tiết gốc của 游泳)",
+     "hanViet": "DU",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-6",
+      "start": 6.25,
+      "end": 7.15,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 3
+    },
+    {
+     "id": "h2l7-w14",
+     "zh": "爱好",
+     "pinyin": "àihào",
+     "vi": "sở thích; yêu thích",
+     "hanViet": "ÁI HÁO",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 78,
+       "printedPage": 62,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-8",
+      "start": 0.24,
+      "end": 1.43,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    },
+    {
+     "id": "h2l7-w15",
+     "zh": "开始",
+     "pinyin": "kāishǐ",
+     "vi": "bắt đầu",
+     "hanViet": "KHAI THỦY",
+     "hanVietStatus": "verified-editorial",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 78,
+       "printedPage": 62,
+       "section": "生词"
+      }
+     ],
+     "audio": {
+      "trackId": "trk-tb2-l07-8",
+      "start": 3.5,
+      "end": 4.85,
+      "status": "asr-draft"
+     },
+     "dialogueGroup": 4
+    }
+   ],
+   "prepGroups": [
+    {
+     "id": "h2l7-g1",
+     "dialogueId": "h2l7-text-1",
+     "titleVi": "Từ mới Đoạn 1 · Trên sân trường",
+     "trackId": "trk-tb2-l07-2",
+     "trackLabelVi": "Track 7-2 · Từ mới Đoạn 1"
+    },
+    {
+     "id": "h2l7-g2",
+     "dialogueId": "h2l7-text-2",
+     "titleVi": "Từ mới Đoạn 2 · Các môn bóng",
+     "trackId": "trk-tb2-l07-4",
+     "trackLabelVi": "Track 7-4 · Từ mới Đoạn 2"
+    },
+    {
+     "id": "h2l7-g3",
+     "dialogueId": "h2l7-text-3",
+     "titleVi": "Từ mới Đoạn 3 · Chạy và bơi",
+     "trackId": "trk-tb2-l07-6",
+     "trackLabelVi": "Track 7-6 · Từ mới Đoạn 3"
+    },
+    {
+     "id": "h2l7-g4",
+     "dialogueId": "h2l7-text-4",
+     "titleVi": "Từ mới Đoạn 4 · Nhật ký",
+     "trackId": "trk-tb2-l07-8",
+     "trackLabelVi": "Track 7-8 · Từ mới Đoạn 4"
+    }
+   ],
+   "prepSummaryVi": "15 từ mới xếp theo 4 đoạn: trên sân trường （从/往/跑/打/篮球 — 5), các môn bóng （运动/踢/足球/球/得 — 5), chạy và bơi （跑步/游泳/游 — 3), nhật ký （爱好/开始 — 2).",
+   "knowledgePoints": [
+    {
+     "id": "kp-hsk2-l07-yi-jiu",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Câu phức rút gọn “一……就……” — vừa … là … ngay",
+     "explanationVi": "“一……就……” nối hai hành động nối tiếp nhau: hành động sau xảy ra NGAY sau hành động trước; hành động trước là điều kiện/nguyên nhân, hành động sau là kết quả. Trần Thiên Trung “一下课就往外跑” — vừa tan học là chạy ra ngoài ngay; nhật ký của anh cũng viết “我一有时间就去运动” — cứ có thời gian là đi vận động ngay.",
+     "pattern": "一 + hành động 1 + 就 + hành động 2",
+     "useWhenVi": "Dùng khi nói một việc xảy ra ngay sau một việc khác: vừa về đến nhà là…, cứ đến Chủ nhật là…, vừa tan làm là…",
+     "positionVi": "Chủ ngữ giống nhau thì đặt trước “一” hoặc trước “就”; chủ ngữ khác nhau thì mỗi chủ ngữ đứng trước mốc của mình: “我一到家，妈妈就打来电话了” (tôi vừa về đến nhà là mẹ gọi điện đến).",
+     "examples": [
+      {
+       "zh": "你怎么一下课就往外跑？",
+       "pinyin": "Nǐ zěnme yí xiàkè jiù wǎng wài pǎo?",
+       "noteVi": "Sao bạn vừa tan học là chạy ra ngoài ngay thế? (câu trong Đoạn 1; ví dụ 1 của sách, tr.058)"
+      },
+      {
+       "zh": "我一到家，妈妈就打来电话了。",
+       "pinyin": "Wǒ yí dào jiā, māma jiù dǎ lái diànhuà le.",
+       "noteVi": "Tôi vừa về đến nhà là mẹ gọi điện đến. (ví dụ 2 của sách, tr.058)"
+      },
+      {
+       "zh": "一到星期六，陈天中就跟同学去打篮球。",
+       "pinyin": "Yí dào Xīngqīliù, Chén Tiānzhōng jiù gēn tóngxué qù dǎ lánqiú.",
+       "noteVi": "Cứ đến thứ Bảy là Trần Thiên Trung đi chơi bóng rổ cùng bạn học. (ví dụ 3 của sách, tr.058)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 74,
+       "printedPage": 58,
+       "section": "小语讲堂 1 · 紧缩复句“一……就……”"
+      }
+     ],
+     "sentenceIds": [
+      "h2l7-s2",
+      "h2l7-s9",
+      "h2l7-s21"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Chọn cách điền đúng mẫu “一……就……” như các ví dụ của sách (Textbook tr.058). Đây là câu biên soạn theo mẫu — đáp án là đáp án biên soạn, không phải đáp án in sẵn.",
+      "stemZh": "A：你什么时候去运动？B：我＿＿就去运动。",
+      "options": [
+       {
+        "zh": "一下班",
+        "vi": "“一下班就去运动” — vừa tan làm là đi vận động ngay, đúng mẫu"
+       },
+       {
+        "zh": "下班一",
+        "vi": "sai trật tự — “一” phải đứng trước hành động thứ nhất"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Đáp án biên soạn theo mẫu của sách: “我一下班就去运动” — hành động 1 （下班） đặt sau “一”, hành động 2 （去运动） đặt sau “就”."
+     }
+    },
+    {
+     "id": "kp-hsk2-l07-state-complement-1",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Bổ ngữ trạng thái (1): Động từ + 得 + cụm tính từ",
+     "explanationVi": "Bổ ngữ trạng thái đứng sau động từ (nối bằng trợ từ “得” de), bổ sung trạng thái/mức độ của hành động: hành động được làm NHƯ THẾ NÀO — “踢得还可以” (đá tạm được), “跑得不快” (chạy không nhanh). Muốn phủ định, thêm “不” ngay trước cụm tính từ: “玩得很高兴” → “跑得不快”.",
+     "pattern": "Động từ + 得 + cụm tính từ · phủ định: Động từ + 得 + 不 + tính từ",
+     "useWhenVi": "Dùng khi nhận xét một hành động làm tốt đến đâu, nhanh hay chậm, vui hay không: đá bóng thế nào, hát có hay không, đến có sớm không.",
+     "positionVi": "Ba cách hỏi: (1) thêm “吗” cuối câu — 你跑得快吗？ (2) dạng khẳng–phủ của tính từ — 他来得早不早？ (3) hỏi bằng “怎么样” — 他们玩得怎么样？",
+     "examples": [
+      {
+       "zh": "我踢得还可以。",
+       "pinyin": "Wǒ tī de hái kěyǐ.",
+       "noteVi": "Tôi đá cũng tạm được. (câu trong Đoạn 2; ví dụ 1 của sách, tr.059)"
+      },
+      {
+       "zh": "他们玩得很高兴。",
+       "pinyin": "Tāmen wán de hěn gāoxìng.",
+       "noteVi": "Họ chơi rất vui. (ví dụ 2 của sách, tr.059)"
+      },
+      {
+       "zh": "白家月跑得不快。",
+       "pinyin": "Bái Jiāyuè pǎo de bú kuài.",
+       "noteVi": "Bạch Gia Nguyệt chạy không nhanh. (ví dụ 3 của sách, tr.059)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "小语讲堂 2 · 状态补语（1）"
+      }
+     ],
+     "sentenceIds": [
+      "h2l7-s11",
+      "h2l7-s15"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Chọn câu trả lời đúng cấu trúc bổ ngữ trạng thái như các ví dụ của sách (Textbook tr.059). Đây là câu biên soạn theo mẫu — đáp án là đáp án biên soạn, không phải đáp án in sẵn.",
+      "stemZh": "A：他来得早不早？B：他＿＿。",
+      "options": [
+       {
+        "zh": "来得很早",
+        "vi": "“来得很早” — Động từ + 得 + tính từ, đúng cấu trúc"
+       },
+       {
+        "zh": "很早来得",
+        "vi": "sai trật tự — cụm tính từ phải đứng sau “得”"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Đáp án biên soạn theo mẫu của sách: bổ ngữ trạng thái luôn có dạng Động từ + 得 + cụm tính từ: “他来得很早”."
+     }
+    },
+    {
+     "id": "kp-hsk2-l07-state-complement-2",
+     "kind": "grammar",
+     "kindLabel": "Ngữ pháp",
+     "title": "Bổ ngữ trạng thái (2): động từ có tân ngữ / động từ li hợp",
+     "explanationVi": "Khi động từ có tân ngữ hoặc là từ li hợp （游泳、唱歌…), không thể chen bổ ngữ trạng thái vào giữa động từ và tân ngữ. Sách cho hai cách xử lý: lặp lại động từ sau tân ngữ — “游泳游得不快” (bơi thì bơi không nhanh), “写汉字写得很好看”; hoặc đưa tân ngữ lên trước động từ — “篮球打得很好” (bóng rổ thì chơi rất tốt).",
+     "pattern": "Động từ + Tân ngữ + Động từ (lặp lại) + 得 + bổ ngữ · Tân ngữ + Động từ + 得 + bổ ngữ",
+     "useWhenVi": "Dùng khi nhận xét các hành động luôn đi kèm tân ngữ cố định: chơi bóng rổ, đá bóng, bơi, hát, viết chữ Hán.",
+     "positionVi": "KHÔNG nói “游泳得不快” hay “打得篮球很好”: phải lặp lại động từ （游/打/写） rồi mới đến “得”, hoặc đưa tân ngữ lên trước.",
+     "examples": [
+      {
+       "zh": "我游泳游得不快。",
+       "pinyin": "Wǒ yóuyǒng yóu de bú kuài.",
+       "noteVi": "Tôi bơi không nhanh. （游泳 là từ li hợp nên lặp lại 游. Câu trong Đoạn 3; ví dụ 1 của sách, tr.061)"
+      },
+      {
+       "zh": "你篮球打得怎么样？",
+       "pinyin": "Nǐ lánqiú dǎ de zěnmeyàng?",
+       "noteVi": "Bạn chơi bóng rổ thế nào? (tân ngữ 篮球 đưa lên trước 打. Câu trong Đoạn 3; ví dụ 2 của sách, tr.061)"
+      },
+      {
+       "zh": "白家月写汉字写得很好看。",
+       "pinyin": "Bái Jiāyuè xiě Hànzì xiě de hěn hǎokàn.",
+       "noteVi": "Bạch Gia Nguyệt viết chữ Hán rất đẹp. (ví dụ 3 của sách, tr.061)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "小语讲堂 3 · 状态补语（2）"
+      }
+     ],
+     "sentenceIds": [
+      "h2l7-s12",
+      "h2l7-s17",
+      "h2l7-s20"
+     ],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Chọn câu đúng cách lặp lại động từ như các ví dụ của sách (Textbook tr.061). Đây là câu biên soạn theo mẫu — đáp án là đáp án biên soạn, không phải đáp án in sẵn.",
+      "stemZh": "A：你游泳游得快不快？B：我＿＿。",
+      "options": [
+       {
+        "zh": "游泳游得很快",
+        "vi": "“游泳游得很快” — lặp lại động từ 游 rồi mới thêm 得， đúng mẫu"
+       },
+       {
+        "zh": "游泳得很快",
+        "vi": "sai — thiếu động từ lặp lại sau tân ngữ 游泳"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "Đáp án biên soạn theo mẫu của sách: 游泳 là từ li hợp, phải lặp lại 游： “我游泳游得很快”."
+     }
+    },
+    {
+     "id": "kp-hsk2-l07-characters",
+     "kind": "foundation-characters",
+     "kindLabel": "Hán tự nền tảng",
+     "title": "Hán tự nền tảng: bộ Túc 足字旁 （⻊) và bộ Xích 双人旁 （彳)",
+     "explanationVi": "Workbook (tr.061–062) giới thiệu hai bộ: 足字旁 (zúzìpáng — bộ Túc ⻊, dạng rút gọn của 足 “chân”, viết bên trái chữ) với chữ ví dụ 跑、踢； và 双人旁 (shuāngrénpáng — bộ Xích 彳, như hình hai người bước đi, viết bên trái chữ) với chữ ví dụ 往、很. Bốn chữ này cũng là bộ chữ viết của bài ở sách luyện viết (tr.7).",
+     "pattern": "⻊ + 包 = 跑 · ⻊ + 易 = 踢 · 彳 + 主 = 往 · 彳 + 艮 = 很",
+     "useWhenVi": "Học bộ để nhớ chữ nhanh: gặp ⻊ thì nghĩ tới chân — chạy và đá đều là việc của đôi chân （跑、踢）; gặp 彳 thì nghĩ tới đi lại, bước chân trên đường （往） — và cả 很 cũng mang bộ này.",
+     "positionVi": "Cả ⻊ và 彳 đều đứng ở PHÍA TRÁI của chữ. Đừng nhầm 彳 (bộ Xích, ba nét) với 亻 (bộ Nhân, hai nét).",
+     "examples": [
+      {
+       "zh": "跑",
+       "pinyin": "pǎo",
+       "noteVi": "chạy — chữ mẫu của bộ ⻊ (Workbook tr.061–062)"
+      },
+      {
+       "zh": "踢",
+       "pinyin": "tī",
+       "noteVi": "đá — chữ mẫu của bộ ⻊ (Workbook tr.061–062)"
+      },
+      {
+       "zh": "往",
+       "pinyin": "wǎng",
+       "noteVi": "về phía — chữ mẫu của bộ 彳 (Workbook tr.061–062)"
+      },
+      {
+       "zh": "很",
+       "pinyin": "hěn",
+       "noteVi": "rất — chữ mẫu của bộ 彳 (Workbook tr.061–062)"
+      }
+     ],
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-workbook-pdf",
+       "pdfPage": 68,
+       "printedPage": 61,
+       "section": "汉字 · 足字旁/双人旁"
+      }
+     ],
+     "sentenceIds": [],
+     "exerciseIds": [],
+     "quickCheck": {
+      "questionVi": "Chữ nào sau đây có bộ 足字旁 ⻊?",
+      "stemZh": "选有⻊的字：",
+      "options": [
+       {
+        "zh": "跑",
+        "vi": "⻊ + 包 — đúng"
+       },
+       {
+        "zh": "往",
+        "vi": "chữ này có 双人旁 彳 — không phải"
+       }
+      ],
+      "answer": "1",
+      "explanationVi": "跑 = ⻊ （足字旁） + 包； còn 往 thuộc bộ 双人旁 彳 (Workbook tr.061–062)."
+     }
+    }
+   ],
+   "reader": {
+    "passageId": "reader-hsk2-l07",
+    "titleVi": "Nghe và đọc bốn đoạn của bài",
+    "headingVi": "Bốn đoạn: vừa tan học là đi chơi bóng rổ — những môn thể thao yêu thích — chơi thế nào — nhật ký của Trần Thiên Trung",
+    "noteVi": "Mỗi đoạn có track riêng của sách; từ mới của đoạn đọc ở track ngay sau. Câu hỏi in trong sách nằm ngay dưới đoạn của chúng (làm tại chỗ, tính chung tiến độ với bộ Luyện tập).",
+    "sentences": [
+     {
+      "id": "h2l7-s1",
+      "speaker": "Trần Thiên Trung",
+      "zh": "安妮，你是什么时候从北京回来的？",
+      "pinyin": "Ānnī, nǐ shì shénme shíhou cóng Běijīng huílái de?",
+      "vi": "An Ni, bạn từ Bắc Kinh về khi nào thế?",
+      "passageId": "h2l7-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-1",
+       "start": 0.0,
+       "end": 4.55,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s2",
+      "speaker": "An Ni",
+      "zh": "昨天下午。天中，你怎么一下课就往外跑？",
+      "pinyin": "Zuótiān xiàwǔ. Tiānzhōng, nǐ zěnme yí xiàkè jiù wǎng wài pǎo?",
+      "vi": "Chiều hôm qua. Thiên Trung, sao bạn vừa tan học là chạy ra ngoài ngay thế?",
+      "passageId": "h2l7-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-1",
+       "start": 5.4,
+       "end": 11.45,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s3",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我跟同学说好了，一起去打篮球。",
+      "pinyin": "Wǒ gēn tóngxué shuōhǎo le, yìqǐ qù dǎ lánqiú.",
+      "vi": "Mình đã hẹn với các bạn cùng lớp rồi, cùng đi chơi bóng rổ.",
+      "passageId": "h2l7-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-1",
+       "start": 12.2,
+       "end": 16.55,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s4",
+      "speaker": "An Ni",
+      "zh": "我也想跟你们一起玩。",
+      "pinyin": "Wǒ yě xiǎng gēn nǐmen yìqǐ wán.",
+      "vi": "Mình cũng muốn đi chơi cùng các bạn.",
+      "passageId": "h2l7-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-1",
+       "start": 17.3,
+       "end": 20.5,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s5",
+      "speaker": "Trần Thiên Trung",
+      "zh": "没问题，走吧。",
+      "pinyin": "Méi wèntí, zǒu ba.",
+      "vi": "Không vấn đề gì, đi thôi!",
+      "passageId": "h2l7-text-1",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-1",
+       "start": 20.8,
+       "end": 23.2,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s6",
+      "speaker": "An Ni",
+      "zh": "天中，你是不是很喜欢打篮球？",
+      "pinyin": "Tiānzhōng, nǐ shì bu shì hěn xǐhuan dǎ lánqiú?",
+      "vi": "Thiên Trung, bạn rất thích chơi bóng rổ phải không?",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 0.0,
+       "end": 4.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s7",
+      "speaker": "Trần Thiên Trung",
+      "zh": "没错。",
+      "pinyin": "Méi cuò.",
+      "vi": "Đúng vậy.",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 4.45,
+       "end": 5.6,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s8",
+      "speaker": "An Ni",
+      "zh": "你还喜欢什么运动？",
+      "pinyin": "Nǐ hái xǐhuan shénme yùndòng?",
+      "vi": "Bạn còn thích môn thể thao nào nữa?",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 5.75,
+       "end": 8.3,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s9",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我还喜欢踢足球，一到星期天就跟朋友们去踢球。",
+      "pinyin": "Wǒ hái xǐhuan tī zúqiú, yí dào Xīngqītiān jiù gēn péngyoumen qù tī qiú.",
+      "vi": "Mình còn thích đá bóng đá, cứ đến Chủ nhật là đi đá bóng cùng bạn bè.",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 8.9,
+       "end": 15.6,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s10",
+      "speaker": "An Ni",
+      "zh": "你踢得怎么样？",
+      "pinyin": "Nǐ tī de zěnmeyàng?",
+      "vi": "Bạn đá thế nào?",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 15.8,
+       "end": 17.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s11",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我踢得还可以。",
+      "pinyin": "Wǒ tī de hái kěyǐ.",
+      "vi": "Mình đá cũng tạm được.",
+      "passageId": "h2l7-text-2",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-3",
+       "start": 17.85,
+       "end": 19.95,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s12",
+      "speaker": "Trần Thiên Trung",
+      "zh": "你篮球打得怎么样？",
+      "pinyin": "Nǐ lánqiú dǎ de zěnmeyàng?",
+      "vi": "Bạn chơi bóng rổ thế nào?",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 0.0,
+       "end": 2.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s13",
+      "speaker": "An Ni",
+      "zh": "打得还可以。",
+      "pinyin": "Dǎ de hái kěyǐ.",
+      "vi": "Chơi cũng tạm được.",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 3.05,
+       "end": 4.85,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s14",
+      "speaker": "Trần Thiên Trung",
+      "zh": "跑步呢？你跑得快不快？",
+      "pinyin": "Pǎobù ne? Nǐ pǎo de kuài bú kuài?",
+      "vi": "Còn chạy bộ thì sao? Bạn chạy có nhanh không?",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 5.1,
+       "end": 8.25,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s15",
+      "speaker": "An Ni",
+      "zh": "我跑得不快，也不太喜欢跑步。",
+      "pinyin": "Wǒ pǎo de bú kuài, yě bú tài xǐhuan pǎobù.",
+      "vi": "Mình chạy không nhanh, cũng không thích chạy bộ lắm.",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 8.45,
+       "end": 11.8,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s16",
+      "speaker": "Trần Thiên Trung",
+      "zh": "那你喜欢游泳吗？",
+      "pinyin": "Nà nǐ xǐhuan yóuyǒng ma?",
+      "vi": "Vậy bạn có thích bơi không?",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 12.65,
+       "end": 14.85,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s17",
+      "speaker": "An Ni",
+      "zh": "喜欢，但我游泳游得不快。",
+      "pinyin": "Xǐhuan, dàn wǒ yóuyǒng yóu de bú kuài.",
+      "vi": "Thích, nhưng mình bơi không nhanh.",
+      "passageId": "h2l7-text-3",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-5",
+       "start": 15.1,
+       "end": 18.65,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s18",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我的爱好是运动。",
+      "pinyin": "Wǒ de àihào shì yùndòng.",
+      "vi": "Sở thích của tôi là thể thao.",
+      "passageId": "h2l7-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-7",
+       "start": 0.0,
+       "end": 2.6,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s19",
+      "speaker": "Trần Thiên Trung",
+      "zh": "从上小学开始，我每天都跟爸爸去运动。",
+      "pinyin": "Cóng shàng xiǎoxué kāishǐ, wǒ měi tiān dōu gēn bàba qù yùndòng.",
+      "vi": "Từ khi bắt đầu học tiểu học, ngày nào tôi cũng đi vận động cùng bố.",
+      "passageId": "h2l7-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-7",
+       "start": 2.9,
+       "end": 7.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s20",
+      "speaker": "Trần Thiên Trung",
+      "zh": "现在我篮球打得很好，足球踢得不错，游泳游得也很快。",
+      "pinyin": "Xiànzài wǒ lánqiú dǎ de hěn hǎo, zúqiú tī de búcuò, yóuyǒng yóu de yě hěn kuài.",
+      "vi": "Bây giờ tôi chơi bóng rổ rất tốt, đá bóng cũng không tệ, bơi cũng rất nhanh.",
+      "passageId": "h2l7-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-7",
+       "start": 8.2,
+       "end": 15.7,
+       "status": "asr-draft"
+      }
+     },
+     {
+      "id": "h2l7-s21",
+      "speaker": "Trần Thiên Trung",
+      "zh": "我一有时间就去运动。",
+      "pinyin": "Wǒ yì yǒu shíjiān jiù qù yùndòng.",
+      "vi": "Cứ có thời gian là tôi đi vận động.",
+      "passageId": "h2l7-text-4",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "课文 4"
+       }
+      ],
+      "transcriptStatus": "print-verified",
+      "audio": {
+       "trackId": "trk-tb2-l07-7",
+       "start": 16.2,
+       "end": 19.15,
+       "status": "asr-draft"
+      }
+     }
+    ],
+    "vocab": [],
+    "audioTracks": [
+     {
+      "id": "trk-tb2-l07-1",
+      "label": "Track 7-1 · Đoạn 1 (vừa tan học là chạy ra ngoài)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-1.mp3",
+      "durationSec": 23.93,
+      "bookRef": "Textbook HSK 2 track 7-1",
+      "segments": [
+       {
+        "sentenceId": "h2l7-s1",
+        "start": 0.0,
+        "end": 4.55,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s2",
+        "start": 5.4,
+        "end": 11.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s3",
+        "start": 12.2,
+        "end": 16.55,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s4",
+        "start": 17.3,
+        "end": 20.5,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s5",
+        "start": 20.8,
+        "end": 23.2,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "Track 7-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-2",
+      "label": "Track 7-2 · Từ mới Đoạn 1",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-2.mp3",
+      "durationSec": 12.65,
+      "bookRef": "Textbook HSK 2 track 7-2",
+      "segments": [
+       {
+        "sentenceId": "h2l7-w01",
+        "start": 0.55,
+        "end": 1.4,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w02",
+        "start": 2.75,
+        "end": 3.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w03",
+        "start": 5.4,
+        "end": 6.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w04",
+        "start": 7.75,
+        "end": 8.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w05",
+        "start": 9.9,
+        "end": 11.25,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "Track 7-2 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-3",
+      "label": "Track 7-3 · Đoạn 2 (những môn thể thao yêu thích)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-3.mp3",
+      "durationSec": 20.69,
+      "bookRef": "Textbook HSK 2 track 7-3",
+      "segments": [
+       {
+        "sentenceId": "h2l7-s6",
+        "start": 0.0,
+        "end": 4.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s7",
+        "start": 4.45,
+        "end": 5.6,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s8",
+        "start": 5.75,
+        "end": 8.3,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s9",
+        "start": 8.9,
+        "end": 15.6,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s10",
+        "start": 15.8,
+        "end": 17.65,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s11",
+        "start": 17.85,
+        "end": 19.95,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "Track 7-3 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-4",
+      "label": "Track 7-4 · Từ mới Đoạn 2",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-4.mp3",
+      "durationSec": 12.7,
+      "bookRef": "Textbook HSK 2 track 7-4",
+      "segments": [
+       {
+        "sentenceId": "h2l7-w06",
+        "start": 0.13,
+        "end": 1.38,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w07",
+        "start": 3.0,
+        "end": 3.85,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w08",
+        "start": 5.15,
+        "end": 6.45,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w09",
+        "start": 8.05,
+        "end": 9.05,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w10",
+        "start": 10.4,
+        "end": 10.95,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 75,
+        "printedPage": 59,
+        "section": "Track 7-4 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-5",
+      "label": "Track 7-5 · Đoạn 3 (chơi thế nào)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-5.mp3",
+      "durationSec": 19.47,
+      "bookRef": "Textbook HSK 2 track 7-5",
+      "segments": [
+       {
+        "sentenceId": "h2l7-s12",
+        "start": 0.0,
+        "end": 2.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s13",
+        "start": 3.05,
+        "end": 4.85,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s14",
+        "start": 5.1,
+        "end": 8.25,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s15",
+        "start": 8.45,
+        "end": 11.8,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s16",
+        "start": 12.65,
+        "end": 14.85,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s17",
+        "start": 15.1,
+        "end": 18.65,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "Track 7-5 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-6",
+      "label": "Track 7-6 · Từ mới Đoạn 3",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-6.mp3",
+      "durationSec": 8.38,
+      "bookRef": "Textbook HSK 2 track 7-6",
+      "segments": [
+       {
+        "sentenceId": "h2l7-w11",
+        "start": 0.45,
+        "end": 1.6,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w12",
+        "start": 3.15,
+        "end": 4.55,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w13",
+        "start": 6.25,
+        "end": 7.15,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 77,
+        "printedPage": 61,
+        "section": "Track 7-6 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-7",
+      "label": "Track 7-7 · Đoạn 4 (nhật ký của Trần Thiên Trung)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-7.mp3",
+      "durationSec": 19.59,
+      "bookRef": "Textbook HSK 2 track 7-7",
+      "segments": [
+       {
+        "sentenceId": "h2l7-s18",
+        "start": 0.0,
+        "end": 2.6,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s19",
+        "start": 2.9,
+        "end": 7.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s20",
+        "start": 8.2,
+        "end": 15.7,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-s21",
+        "start": 16.2,
+        "end": 19.15,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "Track 7-7 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-tb2-l07-8",
+      "label": "Track 7-8 · Từ mới Đoạn 4",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-textbook/lesson-07/7-8.mp3",
+      "durationSec": 6.99,
+      "bookRef": "Textbook HSK 2 track 7-8",
+      "segments": [
+       {
+        "sentenceId": "h2l7-w14",
+        "start": 0.24,
+        "end": 1.43,
+        "status": "asr-draft"
+       },
+       {
+        "sentenceId": "h2l7-w15",
+        "start": 3.5,
+        "end": 4.85,
+        "status": "asr-draft"
+       }
+      ],
+      "segmentsStatus": "unverified",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "Track 7-8 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     },
+     {
+      "id": "trk-wb2-l07-1",
+      "label": "Workbook Bài 7 · 模拟测练 一、听力 (track duy nhất của bài)",
+      "url": "https://cdn.baulchino.com/new-hsk-books-audios/hsk-2-workbook/lesson-07/07-1.mp3",
+      "durationSec": 541.82,
+      "bookRef": "Workbook HSK 2 track 07-1 (Baulchino — HSK 2 WORKBOOK)",
+      "segments": [],
+      "segmentsStatus": "unverified",
+      "segmentsNoteVi": "Mốc câu hỏi nằm trong dữ liệu wbListening của bài (căn bằng tín hiệu máy, asr-draft).",
+      "playbackVerified": "Đối ứng theo ký hiệu track in trong sách (7-1…7-8 tại các đoạn và ô 生词). Chưa kiểm chứng bằng nghe.",
+      "transcriptStatus": "print-verified",
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 70,
+        "printedPage": 63,
+        "section": "Track 07-1 (ký hiệu in trong sách)"
+       }
+      ],
+      "durationEvidence": "Đo bằng ffprobe trên file tải từ chính URL này ngày 2026-11-15 (file không đưa vào repo)."
+     }
+    ],
+    "passages": [
+     {
+      "id": "h2l7-text-1",
+      "title": "课文 1 · Vừa tan học là đi chơi bóng rổ",
+      "context": "Trong lớp học (Textbook tr.057): An Ni và Trần Thiên Trung đang trò chuyện — An Ni vừa từ Bắc Kinh về chiều qua; Trần Thiên Trung vừa tan học là chạy ra ngoài vì đã hẹn bạn cùng lớp đi chơi bóng rổ.",
+      "audioTrackId": "trk-tb2-l07-1",
+      "sentenceIds": [
+       "h2l7-s1",
+       "h2l7-s2",
+       "h2l7-s3",
+       "h2l7-s4",
+       "h2l7-s5"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 73,
+        "printedPage": 57,
+        "section": "课文 1"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l7-text1-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.057, track 7-1): An Ni từ Bắc Kinh về khi nào?",
+        "promptZh": "安妮是什么时候回来的？",
+        "promptPinyin": "Ānnī shì shénme shíhou huílái de?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "昨天早上",
+          "pinyin": "zuótiān zǎoshang",
+          "vi": "sáng hôm qua"
+         },
+         {
+          "id": "2",
+          "zh": "昨天上午",
+          "pinyin": "zuótiān shàngwǔ",
+          "vi": "buổi sáng hôm qua (trước trưa)"
+         },
+         {
+          "id": "3",
+          "zh": "昨天下午",
+          "pinyin": "zuótiān xiàwǔ",
+          "vi": "chiều hôm qua"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.057. Đáp án C 昨天下午： An Ni tự nói “昨天下午” — cô về CHIỀU hôm qua.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 73,
+          "printedPage": 57,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-1",
+         "start": 0.0,
+         "end": 23.2,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l7-text1-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 1 (in trong sách, Textbook tr.057, track 7-1): An Ni muốn đi cùng Trần Thiên Trung làm gì?",
+        "promptZh": "安妮想跟陈天中去做什么？",
+        "promptPinyin": "Ānnī xiǎng gēn Chén Tiānzhōng qù zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "去教室",
+          "pinyin": "qù jiàoshì",
+          "vi": "đến lớp học"
+         },
+         {
+          "id": "2",
+          "zh": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "vi": "chơi bóng rổ"
+         },
+         {
+          "id": "3",
+          "zh": "去北京",
+          "pinyin": "qù Běijīng",
+          "vi": "đi Bắc Kinh"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.057. Đáp án B 打篮球： Trần Thiên Trung nói đã hẹn bạn cùng lớp “一起去打篮球”, An Ni đáp “我也想跟你们一起玩” — cô muốn đi CHƠI BÓNG RỔ cùng họ.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 73,
+          "printedPage": 57,
+          "section": "课文 1 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-1",
+         "start": 0.0,
+         "end": 23.2,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l7-text-2",
+      "title": "课文 2 · Những môn thể thao yêu thích",
+      "context": "Trong khuôn viên trường (Textbook tr.058): An Ni và Trần Thiên Trung vừa đi vừa trò chuyện về các môn thể thao Trần Thiên Trung yêu thích — bóng rổ và bóng đá.",
+      "audioTrackId": "trk-tb2-l07-3",
+      "sentenceIds": [
+       "h2l7-s6",
+       "h2l7-s7",
+       "h2l7-s8",
+       "h2l7-s9",
+       "h2l7-s10",
+       "h2l7-s11"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 74,
+        "printedPage": 58,
+        "section": "课文 2"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l7-text2-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.058, track 7-3): Chủ nhật Trần Thiên Trung làm gì?",
+        "promptZh": "星期天陈天中做什么？",
+        "promptPinyin": "Xīngqītiān Chén Tiānzhōng zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "学中文",
+          "pinyin": "xué Zhōngwén",
+          "vi": "học tiếng Trung"
+         },
+         {
+          "id": "2",
+          "zh": "踢足球",
+          "pinyin": "tī zúqiú",
+          "vi": "đá bóng đá"
+         },
+         {
+          "id": "3",
+          "zh": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "vi": "chơi bóng rổ"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.058. Đáp án B 踢足球： anh nói “一到星期天就跟朋友们去踢球” — cứ đến Chủ nhật là đi ĐÁ BÓNG cùng bạn bè.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 74,
+          "printedPage": 58,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-3",
+         "start": 0.0,
+         "end": 19.95,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l7-text2-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 2 (in trong sách, Textbook tr.058, track 7-3): Chủ nhật Trần Thiên Trung đi chơi cùng ai?",
+        "promptZh": "星期天陈天中跟谁去玩？",
+        "promptPinyin": "Xīngqītiān Chén Tiānzhōng gēn shéi qù wán?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "李文",
+          "pinyin": "Lǐ Wén",
+          "vi": "Lý Văn"
+         },
+         {
+          "id": "2",
+          "zh": "同学们",
+          "pinyin": "tóngxuémen",
+          "vi": "các bạn cùng lớp"
+         },
+         {
+          "id": "3",
+          "zh": "朋友们",
+          "pinyin": "péngyoumen",
+          "vi": "bạn bè"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.058. Đáp án C 朋友们： nguyên văn là “跟朋友们去踢球” — đi cùng BẠN BÈ (không phải bạn cùng lớp).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 74,
+          "printedPage": 58,
+          "section": "课文 2 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-3",
+         "start": 0.0,
+         "end": 19.95,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l7-text-3",
+      "title": "课文 3 · Chơi thế nào",
+      "context": "Trong khuôn viên trường (Textbook tr.060): hai người tiếp tục trò chuyện — lần này Trần Thiên Trung hỏi An Ni chơi bóng rổ, chạy bộ và bơi thế nào.",
+      "audioTrackId": "trk-tb2-l07-5",
+      "sentenceIds": [
+       "h2l7-s12",
+       "h2l7-s13",
+       "h2l7-s14",
+       "h2l7-s15",
+       "h2l7-s16",
+       "h2l7-s17"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 76,
+        "printedPage": 60,
+        "section": "课文 3"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l7-text3-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.060, track 7-5): An Ni chơi bóng rổ thế nào?",
+        "promptZh": "安妮打篮球打得怎么样？",
+        "promptPinyin": "Ānnī dǎ lánqiú dǎ de zěnmeyàng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "很好",
+          "pinyin": "hěn hǎo",
+          "vi": "rất tốt"
+         },
+         {
+          "id": "2",
+          "zh": "不好",
+          "pinyin": "bù hǎo",
+          "vi": "không tốt"
+         },
+         {
+          "id": "3",
+          "zh": "还可以",
+          "pinyin": "hái kěyǐ",
+          "vi": "cũng tạm được"
+         }
+        ],
+        "answer": "3",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.060. Đáp án C 还可以： An Ni tự nhận “打得还可以” — chơi CŨNG TẠM ĐƯỢC.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 76,
+          "printedPage": 60,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-5",
+         "start": 0.0,
+         "end": 18.65,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l7-text3-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 3 (in trong sách, Textbook tr.060, track 7-5): An Ni thích làm gì?",
+        "promptZh": "安妮喜欢做什么？",
+        "promptPinyin": "Ānnī xǐhuan zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "游泳",
+          "pinyin": "yóuyǒng",
+          "vi": "bơi"
+         },
+         {
+          "id": "2",
+          "zh": "跑步",
+          "pinyin": "pǎobù",
+          "vi": "chạy bộ"
+         },
+         {
+          "id": "3",
+          "zh": "踢球",
+          "pinyin": "tī qiú",
+          "vi": "đá bóng"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và ba lựa chọn in nguyên văn tại Textbook tr.060. Đáp án A 游泳： khi được hỏi “那你喜欢游泳吗？”, An Ni đáp “喜欢” — cô thích BƠI (dù bơi không nhanh); chạy bộ thì cô nói rõ “不太喜欢跑步”.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 76,
+          "printedPage": 60,
+          "section": "课文 3 · 听两遍对话，选择正确答案"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-5",
+         "start": 0.0,
+         "end": 18.65,
+         "status": "asr-draft"
+        }
+       }
+      ]
+     },
+     {
+      "id": "h2l7-text-4",
+      "title": "课文 4 · Nhật ký của Trần Thiên Trung",
+      "context": "Trong phòng (Textbook tr.062): Trần Thiên Trung viết nhật ký về sở thích thể thao của mình — từ nhỏ đã vận động cùng bố mỗi ngày, giờ chơi bóng rổ rất tốt, đá bóng không tệ, bơi cũng nhanh.",
+      "audioTrackId": "trk-tb2-l07-7",
+      "sentenceIds": [
+       "h2l7-s18",
+       "h2l7-s19",
+       "h2l7-s20",
+       "h2l7-s21"
+      ],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "课文 4"
+       }
+      ],
+      "checkItems": [
+       {
+        "id": "tb2l7-text4-1",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.062, track 7-7): nghe đoạn rồi判断 câu sau đúng hay sai — “陈天中非常喜欢运动。”",
+        "promptZh": "陈天中非常喜欢运动。",
+        "promptPinyin": "Chén Tiānzhōng fēicháng xǐhuan yùndòng.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.062. Nhật ký mở đầu bằng “我的爱好是运动” và kết bằng “我一有时间就去运动” — sở thích của anh là thể thao, cứ có thời gian là đi vận động, tức là RẤT thích vận động. Phán đoán ĐÚNG.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 78,
+          "printedPage": 62,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-7",
+         "start": 0.0,
+         "end": 19.15,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l7-text4-2",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi nghe hiểu Đoạn 4 (in trong sách, Textbook tr.062, track 7-7): nghe đoạn rồi判断 câu sau đúng hay sai — “陈天中游泳游得不快。”",
+        "promptZh": "陈天中游泳游得不快。",
+        "promptPinyin": "Chén Tiānzhōng yóuyǒng yóu de bú kuài.",
+        "options": [
+         {
+          "id": "1",
+          "zh": "对",
+          "pinyin": "duì",
+          "vi": "đúng"
+         },
+         {
+          "id": "2",
+          "zh": "不对",
+          "pinyin": "bú duì",
+          "vi": "sai"
+         }
+        ],
+        "answer": "2",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu phán đoán in tại Textbook tr.062. Nhật ký câu 3 nói rõ “游泳游得也很快” — bơi cũng rất NHANH, trái hẳn với “不快” của câu phán đoán. Phán đoán SAI.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 78,
+          "printedPage": 62,
+          "section": "课文 4 · 听两遍课文，判断正误"
+         }
+        ],
+        "audioSegment": {
+         "trackId": "trk-tb2-l07-7",
+         "start": 0.0,
+         "end": 19.15,
+         "status": "asr-draft"
+        }
+       },
+       {
+        "id": "tb2l7-text4-3",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.062): Trần Thiên Trung chơi bóng rổ thế nào?",
+        "promptZh": "陈天中篮球打得怎么样？",
+        "promptPinyin": "Chén Tiānzhōng lánqiú dǎ de zěnmeyàng?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "很好",
+          "pinyin": "hěn hǎo",
+          "vi": "rất tốt"
+         },
+         {
+          "id": "2",
+          "zh": "不好",
+          "pinyin": "bù hǎo",
+          "vi": "không tốt"
+         },
+         {
+          "id": "3",
+          "zh": "还可以",
+          "pinyin": "hái kěyǐ",
+          "vi": "cũng tạm được"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.062 (mục 朗读课文，读后选择正确答案）. Đáp án A 很好： nhật ký câu 3 — “现在我篮球打得很好” (bây giờ tôi chơi bóng rổ RẤT TỐT). Đây cũng là câu làm nên nhan đề của bài.",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 78,
+          "printedPage": 62,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       },
+       {
+        "id": "tb2l7-text4-4",
+        "type": "multiple-choice",
+        "promptVi": "Câu hỏi đọc hiểu Đoạn 4 (in trong sách, Textbook tr.062): Trần Thiên Trung cứ có thời gian là làm gì?",
+        "promptZh": "陈天中一有时间就做什么？",
+        "promptPinyin": "Chén Tiānzhōng yì yǒu shíjiān jiù zuò shénme?",
+        "options": [
+         {
+          "id": "1",
+          "zh": "运动",
+          "pinyin": "yùndòng",
+          "vi": "vận động, chơi thể thao"
+         },
+         {
+          "id": "2",
+          "zh": "休息",
+          "pinyin": "xiūxi",
+          "vi": "nghỉ ngơi"
+         },
+         {
+          "id": "3",
+          "zh": "跟爸爸出去",
+          "pinyin": "gēn bàba chūqù",
+          "vi": "ra ngoài cùng bố"
+         }
+        ],
+        "answer": "1",
+        "answerStatus": "verified-from-print",
+        "answerEvidence": "Câu hỏi và lựa chọn in tại Textbook tr.062. Đáp án A 运动： câu cuối của nhật ký — “我一有时间就去运动” (cứ có thời gian là tôi đi VẬN ĐỘNG).",
+        "grammarIds": [],
+        "sourceRefs": [
+         {
+          "sourceId": "src-hsk2-textbook-pdf",
+          "pdfPage": 78,
+          "printedPage": 62,
+          "section": "课文 4 · 朗读课文，读后选择正确答案"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "exerciseSet": {
+    "id": "exercises-hsk2-l07-main",
+    "title": "Luyện tập chính · Bài 7",
+    "items": [
+     {
+      "id": "tb2l7-warm-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.056): chọn HÌNH đúng cho từ “篮球” (bóng rổ).",
+      "promptZh": "篮球",
+      "promptPinyin": "lánqiú",
+      "options": [
+       {
+        "id": "1",
+        "zh": "篮球",
+        "pinyin": "lánqiú",
+        "vi": "bóng rổ (quả bóng rổ trên sân có rổ)",
+        "image": "assets/hsk2-lesson-07/warm-basketball.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ (người đàn ông chạy bộ trên đường)",
+        "image": "assets/hsk2-lesson-07/warm-running.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi (vận động viên bơi sải trong bể)",
+        "image": "assets/hsk2-lesson-07/warm-swimming.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "足球",
+        "pinyin": "zúqiú",
+        "vi": "bóng đá (quả bóng đá trên cỏ)",
+        "image": "assets/hsk2-lesson-07/warm-soccer.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.056: từ 篮球 ứng với ảnh 1 (quả bóng rổ trên sân). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 72,
+        "printedPage": 56,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-warm-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.056): chọn HÌNH đúng cho từ “跑步” (chạy bộ).",
+      "promptZh": "跑步",
+      "promptPinyin": "pǎobù",
+      "options": [
+       {
+        "id": "1",
+        "zh": "篮球",
+        "pinyin": "lánqiú",
+        "vi": "bóng rổ (quả bóng rổ trên sân có rổ)",
+        "image": "assets/hsk2-lesson-07/warm-basketball.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ (người đàn ông chạy bộ trên đường)",
+        "image": "assets/hsk2-lesson-07/warm-running.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi (vận động viên bơi sải trong bể)",
+        "image": "assets/hsk2-lesson-07/warm-swimming.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "足球",
+        "pinyin": "zúqiú",
+        "vi": "bóng đá (quả bóng đá trên cỏ)",
+        "image": "assets/hsk2-lesson-07/warm-soccer.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.056: từ 跑步 ứng với ảnh 2 (người đàn ông chạy bộ trên đường). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 72,
+        "printedPage": 56,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-warm-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.056): chọn HÌNH đúng cho từ “游泳” (bơi).",
+      "promptZh": "游泳",
+      "promptPinyin": "yóuyǒng",
+      "options": [
+       {
+        "id": "1",
+        "zh": "篮球",
+        "pinyin": "lánqiú",
+        "vi": "bóng rổ (quả bóng rổ trên sân có rổ)",
+        "image": "assets/hsk2-lesson-07/warm-basketball.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ (người đàn ông chạy bộ trên đường)",
+        "image": "assets/hsk2-lesson-07/warm-running.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi (vận động viên bơi sải trong bể)",
+        "image": "assets/hsk2-lesson-07/warm-swimming.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "足球",
+        "pinyin": "zúqiú",
+        "vi": "bóng đá (quả bóng đá trên cỏ)",
+        "image": "assets/hsk2-lesson-07/warm-soccer.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.056: từ 游泳 ứng với ảnh 3 (vận động viên bơi sải trong bể). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 72,
+        "printedPage": 56,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-warm-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài nối hình Khởi động (Textbook tr.056): chọn HÌNH đúng cho từ “足球” (bóng đá).",
+      "promptZh": "足球",
+      "promptPinyin": "zúqiú",
+      "options": [
+       {
+        "id": "1",
+        "zh": "篮球",
+        "pinyin": "lánqiú",
+        "vi": "bóng rổ (quả bóng rổ trên sân có rổ)",
+        "image": "assets/hsk2-lesson-07/warm-basketball.webp",
+        "imageAlt": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "2",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ (người đàn ông chạy bộ trên đường)",
+        "image": "assets/hsk2-lesson-07/warm-running.webp",
+        "imageAlt": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "3",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi (vận động viên bơi sải trong bể)",
+        "image": "assets/hsk2-lesson-07/warm-swimming.webp",
+        "imageAlt": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "4",
+        "zh": "足球",
+        "pinyin": "zúqiú",
+        "vi": "bóng đá (quả bóng đá trên cỏ)",
+        "image": "assets/hsk2-lesson-07/warm-soccer.webp",
+        "imageAlt": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Bảng nối hình in tại Textbook tr.056: từ 足球 ứng với ảnh 4 (quả bóng đá trên cỏ). Hình trong app là tranh vẽ lại theo cùng cảnh.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 72,
+        "printedPage": 56,
+        "section": "热身 1 · 给下面的词语选择对应的图片"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-fill-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.062): chọn từ trong khung A 跑步 / B 运动 / C 从 / D 开始 / E 游泳 để điền vào chỗ trống.",
+      "promptZh": "你看过她（）吗？游得怎么样？",
+      "promptPinyin": "Nǐ kànguo tā ( ) ma? Yóu de zěnmeyàng?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ"
+       },
+       {
+        "id": "2",
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao; vận động"
+       },
+       {
+        "id": "3",
+        "zh": "从",
+        "pinyin": "cóng",
+        "vi": "từ"
+       },
+       {
+        "id": "4",
+        "zh": "开始",
+        "pinyin": "kāishǐ",
+        "vi": "bắt đầu"
+       },
+       {
+        "id": "5",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi"
+       }
+      ],
+      "answer": "5",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.062. Đáp án E 游泳： “Bạn đã xem cô ấy BƠI chưa? Bơi thế nào?” — câu sau hỏi “游得怎么样” nên chỗ trống phải là 游泳.",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-fill-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.062): chọn từ trong khung A 跑步 / B 运动 / C 从 / D 开始 / E 游泳 để điền vào chỗ trống.",
+      "promptZh": "我们9点（）上课，你别来晚了。",
+      "promptPinyin": "Wǒmen jiǔ diǎn ( ) shàngkè, nǐ bié lái wǎn le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ"
+       },
+       {
+        "id": "2",
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao; vận động"
+       },
+       {
+        "id": "3",
+        "zh": "从",
+        "pinyin": "cóng",
+        "vi": "từ"
+       },
+       {
+        "id": "4",
+        "zh": "开始",
+        "pinyin": "kāishǐ",
+        "vi": "bắt đầu"
+       },
+       {
+        "id": "5",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi"
+       }
+      ],
+      "answer": "4",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.062. Đáp án D 开始： “9 giờ chúng ta BẮT ĐẦU học, bạn đừng đến muộn nhé.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-fill-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.062): chọn từ trong khung A 跑步 / B 运动 / C 从 / D 开始 / E 游泳 để điền vào chỗ trống.",
+      "promptZh": "你（）跑得快不快？我想跟你一起去运动。",
+      "promptPinyin": "Nǐ ( ) pǎo de kuài bú kuài? Wǒ xiǎng gēn nǐ yìqǐ qù yùndòng.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ"
+       },
+       {
+        "id": "2",
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao; vận động"
+       },
+       {
+        "id": "3",
+        "zh": "从",
+        "pinyin": "cóng",
+        "vi": "từ"
+       },
+       {
+        "id": "4",
+        "zh": "开始",
+        "pinyin": "kāishǐ",
+        "vi": "bắt đầu"
+       },
+       {
+        "id": "5",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.062. Đáp án A 跑步： “Bạn CHẠY BỘ có nhanh không? Tôi muốn đi vận động cùng bạn.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-fill-4",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.062): chọn từ trong khung A 跑步 / B 运动 / C 从 / D 开始 / E 游泳 để điền vào chỗ trống.",
+      "promptZh": "A：你喜欢什么（）？B：足球、篮球什么的都喜欢。",
+      "promptPinyin": "Nǐ xǐhuan shénme ( )? Zúqiú, lánqiú shénmede dōu xǐhuan.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ"
+       },
+       {
+        "id": "2",
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao; vận động"
+       },
+       {
+        "id": "3",
+        "zh": "从",
+        "pinyin": "cóng",
+        "vi": "từ"
+       },
+       {
+        "id": "4",
+        "zh": "开始",
+        "pinyin": "kāishǐ",
+        "vi": "bắt đầu"
+       },
+       {
+        "id": "5",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.062. Đáp án B 运动： “Bạn thích môn THỂ THAO nào? — Bóng đá, bóng rổ các thứ đều thích.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "tb2l7-fill-5",
+      "type": "multiple-choice",
+      "promptVi": "Bài điền từ tổng hợp (Textbook tr.062): chọn từ trong khung A 跑步 / B 运动 / C 从 / D 开始 / E 游泳 để điền vào chỗ trống.",
+      "promptZh": "A：你喜欢学中文吗？B：喜欢，我（）8岁就开始学中文了。",
+      "promptPinyin": "Nǐ xǐhuan xué Zhōngwén ma? Xǐhuan, wǒ ( ) bā suì jiù kāishǐ xué Zhōngwén le.",
+      "options": [
+       {
+        "id": "1",
+        "zh": "跑步",
+        "pinyin": "pǎobù",
+        "vi": "chạy bộ"
+       },
+       {
+        "id": "2",
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao; vận động"
+       },
+       {
+        "id": "3",
+        "zh": "从",
+        "pinyin": "cóng",
+        "vi": "từ"
+       },
+       {
+        "id": "4",
+        "zh": "开始",
+        "pinyin": "kāishǐ",
+        "vi": "bắt đầu"
+       },
+       {
+        "id": "5",
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Textbook tr.062. Đáp án C 从： “Tôi TỪ năm 8 tuổi đã bắt đầu học tiếng Trung rồi.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-textbook-pdf",
+        "pdfPage": 78,
+        "printedPage": 62,
+        "section": "综合练习 · 选词填空"
+       }
+      ]
+     },
+     {
+      "id": "wb2l7-ext-1",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.062): chọn cụm 鱼肉 / 运动服 / 画师 để điền vào chỗ trống.",
+      "promptZh": "今天吃（）饺子，好不好？",
+      "promptPinyin": "Jīntiān chī ( ) jiǎozi, hǎo bù hǎo?",
+      "options": [
+       {
+        "id": "1",
+        "zh": "鱼肉",
+        "pinyin": "yúròu",
+        "vi": "thịt cá"
+       },
+       {
+        "id": "2",
+        "zh": "运动服",
+        "pinyin": "yùndòngfú",
+        "vi": "đồ thể thao"
+       },
+       {
+        "id": "3",
+        "zh": "画师",
+        "pinyin": "huàshī",
+        "vi": "họa sĩ"
+       }
+      ],
+      "answer": "1",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.062 （做一做 câu 1). Đáp án 鱼肉： “Hôm nay ăn sủi cảo THỊT CÁ nhé, được không?”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 62,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l7-ext-2",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.062): chọn cụm 鱼肉 / 运动服 / 画师 để điền vào chỗ trống.",
+      "promptZh": "我认识那个（）。",
+      "promptPinyin": "Wǒ rènshi nà gè ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "鱼肉",
+        "pinyin": "yúròu",
+        "vi": "thịt cá"
+       },
+       {
+        "id": "2",
+        "zh": "运动服",
+        "pinyin": "yùndòngfú",
+        "vi": "đồ thể thao"
+       },
+       {
+        "id": "3",
+        "zh": "画师",
+        "pinyin": "huàshī",
+        "vi": "họa sĩ"
+       }
+      ],
+      "answer": "3",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.062 （做一做 câu 2). Đáp án 画师： “Tôi quen HỌA SĨ đó.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 62,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     },
+     {
+      "id": "wb2l7-ext-3",
+      "type": "multiple-choice",
+      "promptVi": "Bài mở rộng từ vựng (Workbook tr.062): chọn cụm 鱼肉 / 运动服 / 画师 để điền vào chỗ trống.",
+      "promptZh": "这是姐姐新买的（）。",
+      "promptPinyin": "Zhè shì jiějie xīn mǎi de ( ).",
+      "options": [
+       {
+        "id": "1",
+        "zh": "鱼肉",
+        "pinyin": "yúròu",
+        "vi": "thịt cá"
+       },
+       {
+        "id": "2",
+        "zh": "运动服",
+        "pinyin": "yùndòngfú",
+        "vi": "đồ thể thao"
+       },
+       {
+        "id": "3",
+        "zh": "画师",
+        "pinyin": "huàshī",
+        "vi": "họa sĩ"
+       }
+      ],
+      "answer": "2",
+      "answerStatus": "verified-from-print",
+      "answerEvidence": "Thân câu chép nguyên văn Workbook tr.062 （做一做 câu 3). Đáp án 运动服： “Đây là bộ ĐỒ THỂ THAO chị mới mua.”",
+      "grammarIds": [],
+      "sourceRefs": [
+       {
+        "sourceId": "src-hsk2-workbook-pdf",
+        "pdfPage": 69,
+        "printedPage": 62,
+        "section": "字词拓展 · 做一做"
+       }
+      ]
+     }
+    ]
+   },
+   "selfCheckIntroVi": "Năm bài tự luyện dưới đây bám đúng các hoạt động của sách (mô tả hình, hoàn thành hội thoại ở các ô 小语讲堂, bảng nói Khởi động 2, câu hỏi mở sau đoạn, điều tra nhóm). Chúng không được chấm tự động — hãy nói/viết ra rồi tự đối chiếu với gợi ý.",
+   "selfCheckTasks": [
+    {
+     "id": "st-h2l7-01",
+     "kind": "speaking",
+     "titleVi": "Nhìn hình, hoàn thành câu (Textbook tr.063)",
+     "instructionVi": "Dùng từ mới và điểm ngôn ngữ của bài để hoàn thành 4 câu dưới mỗi hình như bài tập mô tả hình ở Textbook tr.063. Nói to câu hoàn chỉnh rồi tự đối chiếu gợi ý. Đây là bài tự luyện, app không chấm tự động.",
+     "prompts": [
+      "她喜欢画画，＿＿。",
+      "她＿＿有时间就＿＿。",
+      "我的＿＿是唱歌，一有时间我就去唱歌。",
+      "你们＿＿这里＿＿前走，那边更漂亮。"
+     ],
+     "promptImages": [
+      {
+       "src": "assets/hsk2-lesson-07/desc-painting.webp",
+       "alt": "Tranh vẽ lại: cô gái cầm bức tranh hoa rực rỡ, mỉm cười",
+       "captionVi": "Tranh vẽ lại (Textbook tr.063, hình 1): cô gái cầm bức tranh hoa — gợi ý đáp án: 画得很好看 (cô ấy thích vẽ tranh, vẽ rất đẹp).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 79,
+         "printedPage": 63,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-07/desc-swim.webp",
+       "alt": "Tranh vẽ lại: bé gái đeo phao bơi trong bể bơi",
+       "captionVi": "Tranh vẽ lại (Textbook tr.063, hình 2): bé gái đeo phao trong bể bơi — gợi ý đáp án: 她一有时间就去游泳 (cô bé cứ có thời gian là đi bơi).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 79,
+         "printedPage": 63,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-07/desc-singing.webp",
+       "alt": "Tranh vẽ lại: ông bà hát ở nhà cùng người chơi ghi-ta",
+       "captionVi": "Tranh vẽ lại (Textbook tr.063, hình 3): ông bà hát cùng người chơi ghi-ta ở nhà — gợi ý đáp án: 我的爱好是唱歌 (sở thích của tôi là hát).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 79,
+         "printedPage": 63,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      },
+      {
+       "src": "assets/hsk2-lesson-07/desc-pointing.webp",
+       "alt": "Tranh vẽ lại: cô gái chỉ tay về phía đồi núi xa",
+       "captionVi": "Tranh vẽ lại (Textbook tr.063, hình 4): cô gái chỉ về phía đồi núi — gợi ý đáp án: 你们从这里往前走 (các bạn từ đây đi về phía trước).",
+       "sourceRefs": [
+        {
+         "sourceId": "src-hsk2-textbook-pdf",
+         "pdfPage": 79,
+         "printedPage": 63,
+         "section": "综合练习 · 描述图片"
+        }
+       ]
+      }
+     ],
+     "draftPromptVi": "Viết lại 4 câu hoàn chỉnh của bạn vào đây trước khi đối chiếu gợi ý trong caption từng hình.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 79,
+       "printedPage": 63,
+       "section": "综合练习 · 描述图片"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l7-02",
+     "kind": "speaking",
+     "titleVi": "Hoàn thành hội thoại ở ba ô 小语讲堂 (Textbook tr.058–061)",
+     "instructionVi": "Nói to các câu hoàn thành hội thoại trong ba ô 小语讲堂 của bài: “一……就……” (tr.058), bổ ngữ trạng thái (1) (tr.060) và bổ ngữ trạng thái (2) (tr.061). Bài mở — đối chiếu với gợi ý của sách ở phần nháp.",
+     "prompts": [
+      "A：你今天早点儿回来。B：好的，我＿＿就回来。",
+      "A：我一下飞机，＿＿。B：因为我给她打电话了，让她去接你。",
+      "A：你看，小猫＿＿就过来了。B：是啊，因为它爱吃鱼。",
+      "A：你听，她唱得怎么样？B：＿＿。",
+      "A：妹妹喜欢吃这个菜吗？B：不太喜欢，她＿＿。",
+      "A：你昨天晚上＿＿？（睡）B：＿＿。",
+      "A：安妮唱歌唱得好听吗？B：＿＿。",
+      "A：你足球踢得＿＿？B：＿＿。",
+      "A：家月中文说得＿＿？B：＿＿。"
+     ],
+     "draftPromptVi": "Gợi ý đối chiếu theo sách: （一……就……） (1) 一下班/一放学 (vừa tan làm/tan học là về ngay). (2) 姐姐就来接我 (chị đến đón tôi ngay). (3) 一看见鱼 (vừa thấy cá là chạy đến). （Bổ ngữ trạng thái 1) (1) 唱得很好听. (2) 吃得不多. (3) 睡得怎么样 / 睡得很好. （Bổ ngữ trạng thái 2 — trả lời tự do theo mẫu lặp lại động từ) (1) 她唱得很好听. (2) 踢得怎么样 / 我踢得还可以. (3) 说得怎么样 / 她说得很好.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 74,
+       "printedPage": 58,
+       "section": "小语讲堂 1 · 完成对话"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "小语讲堂 2 · 完成对话"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "小语讲堂 3 · 完成对话"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l7-03",
+     "kind": "speaking",
+     "titleVi": "Bảng nói Khởi động 2: việc làm ngay sau đó (Textbook tr.056)",
+     "instructionVi": "Bảng nói mở của phần Khởi động 2 (Textbook tr.056): dùng “一……就……” nói việc mình làm NGAY sau khi ăn xong bữa sáng, sau khi tan học và sau khi về đến nhà. Nói to cả ba câu rồi viết nháp lại.",
+     "prompts": [
+      "吃完早饭，我＿＿。",
+      "下课，我＿＿。",
+      "回家，我＿＿。"
+     ],
+     "draftPromptVi": "Câu mẫu đối chiếu: 我吃完早饭就去上课 (tôi ăn sáng xong là đi học ngay)；我一下课就去打篮球 (tôi vừa tan học là đi chơi bóng rổ)；我一回家就先休息 (tôi vừa về đến nhà là nghỉ ngơi trước).",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 72,
+       "printedPage": 56,
+       "section": "热身 2 · 说一说"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l7-04",
+     "kind": "speaking",
+     "titleVi": "Câu hỏi mở sau mỗi đoạn (Textbook tr.058–061)",
+     "instructionVi": "Trả lời to (hoặc viết nháp) sáu câu hỏi mở in sau Đoạn 1–3 của bài. Đây là câu hỏi hiểu nội dung, đáp án nằm ngay trong đoạn vừa đọc; app không chấm tự động.",
+     "prompts": [
+      "陈天中为什么一下课就往外跑？",
+      "安妮想去做什么？",
+      "陈天中喜欢什么运动？",
+      "陈天中踢球踢得怎么样？",
+      "安妮跑步跑得怎么样？",
+      "安妮游泳游得怎么样？"
+     ],
+     "draftPromptVi": "Gợi ý đối chiếu: (1) 因为他跟同学说好了，一起去打篮球。(2) 她想跟他们一起去打篮球。(3) 他喜欢打篮球和踢足球。(4) 他踢得还可以。(5) 她跑得不快。(6) 她游泳游得不快。",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 74,
+       "printedPage": 58,
+       "section": "课文 1 · 读后回答问题"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 75,
+       "printedPage": 59,
+       "section": "课文 2 · 读后回答问题"
+      },
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 77,
+       "printedPage": 61,
+       "section": "课文 3 · 读后回答问题"
+      }
+     ]
+    },
+    {
+     "id": "st-h2l7-05",
+     "kind": "speaking",
+     "titleVi": "Hoạt động lớp: điều tra nhóm ba người (Textbook tr.063)",
+     "instructionVi": "Điều tra theo nhóm ba người như hoạt động lớp ở Textbook tr.063: hỏi nhau môn thể thao yêu thích, Chủ nhật làm gì và làm得怎么样, ghi vào bảng 姓名 / 喜欢的运动 / 星期天做什么 / 做得怎么样. Đọc to cả hai vai theo mẫu của sách.",
+     "prompts": [
+      "A：天中，你有什么爱好？B：我喜欢打篮球。",
+      "A：你星期天做什么？B：＿＿。",
+      "A：你做得怎么样？B：＿＿。"
+     ],
+     "draftPromptVi": "Tự thay tên người bạn, môn thể thao và mức độ của bạn vào mẫu, ví dụ: 我喜欢游泳，游得很快 / 我喜欢跑步，跑得不快.",
+     "answerStatus": "unverified",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-textbook-pdf",
+       "pdfPage": 79,
+       "printedPage": 63,
+       "section": "课堂活动"
+      }
+     ]
+    }
+   ],
+   "apply": {
+    "titleVi": "Dùng ngay: nói về thể thao của em",
+    "instructionVi": "Hai nhiệm vụ nói dùng đúng hai tình huống trung tâm của bài: kể về buổi chiều của mình bằng “一……就……” và bổ ngữ trạng thái, rồi phỏng vấn một người bạn theo hoạt động điều tra của sách.",
+    "audioTrackId": "trk-tb2-l07-7",
+    "noteVi": "Câu mẫu lấy từ chính Đoạn 4 và hoạt động lớp tr.063 của bài.",
+    "sourceRefs": [
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 78,
+      "printedPage": 62,
+      "section": "课文 4"
+     },
+     {
+      "sourceId": "src-hsk2-textbook-pdf",
+      "pdfPage": 79,
+      "printedPage": 63,
+      "section": "课堂活动"
+     }
+    ],
+    "samplePassageIds": [
+     "h2l7-text-4",
+     "h2l7-text-2"
+    ],
+    "tasks": [
+     {
+      "id": "speak-h2l7-afternoon",
+      "kind": "speaking",
+      "titleVi": "Kể về buổi chiều của em",
+      "promptVi": "Nói về buổi chiều của em bằng “一……就……” và bổ ngữ trạng thái: tan học em làm gì ngay, chơi môn thể thao nào, chơi得怎么样. Đọc to câu mẫu (nhật ký Đoạn 4) trước, rồi kể theo mẫu.",
+      "sampleZh": "现在我篮球打得很好，足球踢得不错，游泳游得也很快。",
+      "samplePinyin": "Xiànzài wǒ lánqiú dǎ de hěn hǎo, zúqiú tī de búcuò, yóuyǒng yóu de yě hěn kuài.",
+      "sampleVi": "Bây giờ tôi chơi bóng rổ rất tốt, đá bóng cũng không tệ, bơi cũng rất nhanh. (câu trong Đoạn 4)"
+     },
+     {
+      "id": "speak-h2l7-survey",
+      "kind": "speaking",
+      "titleVi": "Phỏng vấn bạn về sở thích thể thao",
+      "promptVi": "Phỏng vấn một người bạn theo hoạt động lớp: bạn có sở thích gì, Chủ nhật làm gì, làm得怎么样 — rồi kể lại kết quả bằng bổ ngữ trạng thái. Đọc to cả hai vai.",
+      "sampleZh": "天中，你有什么爱好？我喜欢打篮球。",
+      "samplePinyin": "Tiānzhōng, nǐ yǒu shénme àihào? Wǒ xǐhuan dǎ lánqiú.",
+      "sampleVi": "Thiên Trung, bạn có sở thích gì? Tôi thích chơi bóng rổ. (mẫu hội thoại hoạt động lớp của sách, tr.063)"
+     }
+    ]
+   },
+   "foundationWords": [],
+   "lookup": {
+    "introVi": "Chạm vào một từ trong câu (ở Nghe & đọc và các ví dụ) để xem Pinyin, Hán–Việt và nghĩa. Từ điển gồm toàn bộ từ mới của dự án cộng các mục bổ sung riêng cho bài này.",
+    "extras": [
+     {
+      "zh": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "hanViet": "TRẦN THIÊN TRUNG",
+      "vi": "Trần Thiên Trung (nhân vật trong bài)"
+     },
+     {
+      "zh": "安妮",
+      "pinyin": "Ānnī",
+      "hanViet": "AN NI",
+      "vi": "An Ni (nhân vật trong bài)"
+     },
+     {
+      "zh": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "hanViet": "BẠCH GIA NGUYỆT",
+      "vi": "Bạch Gia Nguyệt (nhân vật trong ví dụ của sách)"
+     },
+     {
+      "zh": "北京",
+      "pinyin": "Běijīng",
+      "hanViet": "BẮC KINH",
+      "vi": "Bắc Kinh"
+     },
+     {
+      "zh": "同学",
+      "pinyin": "tóngxué",
+      "hanViet": "ĐỒNG HỌC",
+      "vi": "bạn học, bạn cùng lớp"
+     },
+     {
+      "zh": "星期天",
+      "pinyin": "Xīngqītiān",
+      "hanViet": "TINH KỲ THIÊN",
+      "vi": "Chủ nhật"
+     },
+     {
+      "zh": "星期六",
+      "pinyin": "Xīngqīliù",
+      "hanViet": "TINH KỲ LỤC",
+      "vi": "thứ Bảy"
+     },
+     {
+      "zh": "小学",
+      "pinyin": "xiǎoxué",
+      "hanViet": "TIỂU HỌC",
+      "vi": "tiểu học"
+     },
+     {
+      "zh": "爸爸",
+      "pinyin": "bàba",
+      "hanViet": "BA BA",
+      "vi": "bố"
+     },
+     {
+      "zh": "唱歌",
+      "pinyin": "chànggē",
+      "hanViet": "XƯỚNG CA",
+      "vi": "hát"
+     },
+     {
+      "zh": "饺子",
+      "pinyin": "jiǎozi",
+      "hanViet": "GIÁO TỬ",
+      "vi": "sủi cảo"
+     },
+     {
+      "zh": "姐姐",
+      "pinyin": "jiějie",
+      "hanViet": "TỈ TỈ",
+      "vi": "chị gái"
+     },
+     {
+      "zh": "画画",
+      "pinyin": "huàhuà",
+      "hanViet": "HỌA HỌA",
+      "vi": "vẽ tranh"
+     },
+     {
+      "zh": "汉字",
+      "pinyin": "Hànzì",
+      "hanViet": "HÁN TỰ",
+      "vi": "chữ Hán"
+     },
+     {
+      "zh": "足球场",
+      "pinyin": "zúqiúchǎng",
+      "hanViet": "TÚC CẦU TRƯỜNG",
+      "vi": "sân bóng đá"
+     },
+     {
+      "zh": "法国",
+      "pinyin": "Fǎguó",
+      "hanViet": "PHÁP QUỐC",
+      "vi": "nước Pháp"
+     },
+     {
+      "zh": "姓名",
+      "pinyin": "xìngmíng",
+      "hanViet": "TÍNH DANH",
+      "vi": "họ và tên"
+     },
+     {
+      "zh": "旅游",
+      "pinyin": "lǚyóu",
+      "hanViet": "LỮ DU",
+      "vi": "du lịch"
+     },
+     {
+      "zh": "休息",
+      "pinyin": "xiūxi",
+      "hanViet": "HƯU TỨC",
+      "vi": "nghỉ ngơi"
+     },
+     {
+      "zh": "接",
+      "pinyin": "jiē",
+      "hanViet": "TIẾP",
+      "vi": "đón; nhận"
+     },
+     {
+      "zh": "李文",
+      "pinyin": "Lǐ Wén",
+      "hanViet": "LÝ VĂN",
+      "vi": "Lý Văn (tên người trong lựa chọn của sách)"
+     },
+     {
+      "zh": "运动服",
+      "pinyin": "yùndòngfú",
+      "hanViet": "VẬN ĐỘNG PHỤC",
+      "vi": "đồ thể thao"
+     },
+     {
+      "zh": "鱼肉",
+      "pinyin": "yúròu",
+      "hanViet": "NGƯ NHỤC",
+      "vi": "thịt cá"
+     },
+     {
+      "zh": "画师",
+      "pinyin": "huàshī",
+      "hanViet": "HỌA SƯ",
+      "vi": "họa sĩ"
+     }
+    ],
+    "phrases": []
+   },
+   "learningPath": [
+    {
+     "step": 1,
+     "titleVi": "Xem bức tranh sân bóng rổ và mục tiêu bài",
+     "descVi": "Bắt đầu: 3 mục tiêu của sách — nghe hiểu và miêu tả trạng thái hành động, nắm câu phức rút gọn “一……就……”, nói về các hoạt động thể chất thường làm.",
+     "sectionId": "intro"
+    },
+    {
+     "step": 2,
+     "titleVi": "Học 15 từ mới theo 4 đoạn",
+     "descVi": "Từ cần biết: mỗi nhóm từ nghe bằng đúng track từ mới của đoạn.",
+     "sectionId": "prep",
+     "dialogueId": "h2l7-text-1"
+    },
+    {
+     "step": 3,
+     "titleVi": "Nắm “一……就……” và bổ ngữ trạng thái (1) + (2)",
+     "descVi": "Hiểu cách dùng: 3 điểm ngữ pháp + phần Hán tự nền tảng （足字旁/双人旁）.",
+     "sectionId": "knowledge"
+    },
+    {
+     "step": 4,
+     "titleVi": "Nghe và đọc 4 đoạn (21 câu)",
+     "descVi": "Nghe & đọc: mỗi đoạn nghe track riêng và trả lời ngay câu hỏi in trong sách dưới đoạn.",
+     "sectionId": "reader",
+     "dialogueId": "h2l7-text-1"
+    },
+    {
+     "step": 5,
+     "titleVi": "Luyện tập: nối hình, điền từ và Workbook 30 câu",
+     "descVi": "Luyện tập: 4 câu nối hình khởi động, 5 câu điền từ tổng hợp, 3 câu mở rộng từ vựng và bộ Workbook 模拟测练 đủ 30 câu.",
+     "sectionId": "exercises"
+    },
+    {
+     "step": 6,
+     "titleVi": "Tự nói về thể thao của em",
+     "descVi": "Tự nói: kể về buổi chiều của mình và phỏng vấn bạn theo hoạt động điều tra của sách.",
+     "sectionId": "apply"
+    }
+   ],
+   "summaryPoints": [
+    {
+     "titleVi": "“一……就……” — việc sau nối tiếp ngay việc trước",
+     "bodyVi": "Hành động trước là điều kiện, hành động sau xảy ra ngay sau đó: vừa tan học là chạy ra ngoài, cứ có thời gian là đi vận động.",
+     "exampleZh": "我一有时间就去运动。",
+     "examplePinyin": "Wǒ yì yǒu shíjiān jiù qù yùndòng.",
+     "exampleVi": "Cứ có thời gian là tôi đi vận động. (câu trong Đoạn 4)"
+    },
+    {
+     "titleVi": "Bổ ngữ trạng thái (1): Động từ + 得 + cụm tính từ",
+     "bodyVi": "Bổ ngữ trạng thái nhận xét hành động làm得怎么样； phủ định thêm 不 trước cụm tính từ.",
+     "exampleZh": "我踢得还可以。",
+     "examplePinyin": "Wǒ tī de hái kěyǐ.",
+     "exampleVi": "Tôi đá cũng tạm được. (câu trong Đoạn 2)"
+    },
+    {
+     "titleVi": "Ba cách hỏi với bổ ngữ trạng thái",
+     "bodyVi": "Thêm 吗 cuối câu （你跑得快吗？), dùng dạng “tính từ + 不 + tính từ” （来得早不早？), hoặc hỏi bằng 怎么样 （玩得怎么样？).",
+     "exampleZh": "你跑得快不快？",
+     "examplePinyin": "Nǐ pǎo de kuài bú kuài?",
+     "exampleVi": "Bạn chạy có nhanh không? (câu trong Đoạn 3)"
+    },
+    {
+     "titleVi": "Bổ ngữ trạng thái (2): lặp lại động từ",
+     "bodyVi": "Động từ li hợp hoặc có tân ngữ thì lặp lại động từ sau tân ngữ, hoặc đưa tân ngữ lên trước: 游泳游得不快、篮球打得很好.",
+     "exampleZh": "我游泳游得不快。",
+     "examplePinyin": "Wǒ yóuyǒng yóu de bú kuài.",
+     "exampleVi": "Tôi bơi không nhanh. (câu trong Đoạn 3)"
+    },
+    {
+     "titleVi": "Thể thao của bài: bốn hoạt động trung tâm",
+     "bodyVi": "打篮球、踢足球、跑步、游泳 — cả bốn đều ghép được với bổ ngữ trạng thái để nhận xét mức độ: 打得很好、踢得不错、跑得不快、游得很快.",
+     "exampleZh": "现在我篮球打得很好，足球踢得不错，游泳游得也很快。",
+     "examplePinyin": "Xiànzài wǒ lánqiú dǎ de hěn hǎo, zúqiú tī de búcuò, yóuyǒng yóu de yě hěn kuài.",
+     "exampleVi": "Bây giờ tôi chơi bóng rổ rất tốt, đá bóng cũng không tệ, bơi cũng rất nhanh. (câu trong Đoạn 4)"
+    }
+   ],
+   "wbListening": {
+    "titleZh": "一、听力",
+    "titleEn": "Listening",
+    "titleVi": "Nghe theo Workbook",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 7 — 模拟测练 · 一、听力, trang in 063–065 (PDF tr. 70–72).",
+    "trackId": "trk-wb2-l07-1",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án được đối chiếu từ audio của sách: ghi lại lời đọc bằng máy, rà soát ngữ nghĩa theo đúng các lựa chọn in trong sách. Đây không phải đáp án chính thức của nhà xuất bản.",
+    "segmentNoteVi": "Mốc đoạn trong track được căn bằng tín hiệu máy (asr-draft), chưa có người nghe kiểm chứng.",
+    "introVi": "Toàn bộ phần nghe của Bài 7 trong sách bài tập, tái dựng đúng bố cục sách: 3 phần, 10 câu, mỗi câu nghe hai lần trong track. Hình là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l7-p1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第1—3题：听一句话，选择正确图片。每题听两次。",
+      "instructionVi": "Câu 1–3: nghe một câu, chọn hình đúng. Mỗi câu nghe hai lần.",
+      "kind": "picture",
+      "example": {
+       "id": "wb2-l7-p1-ex",
+       "audio": {
+        "trackId": "trk-wb2-l07-1",
+        "start": 55.9,
+        "end": 65.3,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "我每天坐公交车去上班。",
+         "pinyin": "Wǒ měi tiān zuò gōngjiāochē qù shàngbān."
+        }
+       ],
+       "options": [
+        {
+         "id": "A",
+         "image": "assets/hsk2-lesson-01/wb-ex-bus.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn A"
+        },
+        {
+         "id": "B",
+         "image": "assets/hsk2-lesson-01/wb-ex-plane.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn B"
+        },
+        {
+         "id": "C",
+         "image": "assets/hsk2-lesson-01/wb-ex-bike.webp",
+         "imageAltVi": "Tranh minh họa lựa chọn C"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-p1-q1",
+        "no": 1,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 78.1,
+         "end": 87.0,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "他游泳游得很快。",
+          "pinyin": "Tā yóuyǒng yóu de hěn kuài."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-07/wb-q1-swim.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-07/wb-q1-family.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-07/wb-q1-leaf.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Câu nói: “他游泳游得很快” — anh ấy BƠI rất nhanh — hình A là vận động viên bơi sải trong bể. B là gia đình ba người ngồi trên đá ngoài trời, C là bé gái cầm chiếc lá to và chỉ tay."
+       },
+       {
+        "id": "wb2-l7-p1-q2",
+        "no": 2,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 95.1,
+         "end": 103.7,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "他的爱好是跑步。",
+          "pinyin": "Tā de àihào shì pǎobù."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-07/wb-q2-dribble.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-07/wb-q2-taichi.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-07/wb-q2-jogging.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Câu nói: “他的爱好是跑步” — sở thích của anh ấy là CHẠY BỘ — hình C là chàng trai đang chạy bộ trên cầu, cạnh lan can (khi dựng bài đã kiểm chứng bằng crop 300 dpi của trang in 063: ảnh C là người chạy bộ). A là chàng trai rê bóng rổ, B là người đàn ông mặc trắng tập thái cực quyền trong công viên."
+       },
+       {
+        "id": "wb2-l7-p1-q3",
+        "no": 3,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 111.5,
+         "end": 122.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "儿子每天一回家就要吃饭。",
+          "pinyin": "Érzi měi tiān yì huí jiā jiù yào chī fàn."
+         }
+        ],
+        "options": [
+         {
+          "id": "A",
+          "image": "assets/hsk2-lesson-07/wb-q3-toys.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn A"
+         },
+         {
+          "id": "B",
+          "image": "assets/hsk2-lesson-07/wb-q3-homework.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn B"
+         },
+         {
+          "id": "C",
+          "image": "assets/hsk2-lesson-07/wb-q3-eating.webp",
+          "imageAltVi": "Tranh minh họa lựa chọn C"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Câu nói: “儿子每天一回家就要吃饭” — con trai ngày nào vừa về đến nhà là đòi ĂN CƠM ngay — hình C là cậu bé ăn bằng đũa từ bát. A là bố và con chơi đồ chơi nhiều màu ở nhà, B là bố giúp con trai làm bài tập ở bàn."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-p2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第4—6题：听对话，选择最匹配的图片。每题听两次。",
+      "instructionVi": "Câu 4–6: nghe hội thoại, chọn hình khớp nhất trong bộ 4 hình chung. Mỗi hội thoại nghe hai lần.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-07/wb-p2-drawing.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-07/wb-p2-reading.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-07/wb-p2-roof.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-07/wb-p2-soccer.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "example": {
+       "id": "wb2-l7-p2-ex",
+       "audio": {
+        "trackId": "trk-wb2-l07-1",
+        "start": 141.8,
+        "end": 156.0,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "你喜欢什么运动？",
+         "pinyin": "Nǐ xǐhuan shénme yùndòng?",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "我最喜欢踢足球。",
+         "pinyin": "Wǒ zuì xǐhuan tī zúqiú.",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "answer": "D"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-p2-q4",
+        "no": 4,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 173.7,
+         "end": 188.0,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "开始下雨了。",
+          "pinyin": "Kāishǐ xià yǔ le.",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "是啊，我们别出去了。",
+          "pinyin": "Shì a, wǒmen bié chūqù le.",
+          "speakerVi": "Nữ"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Trời BẮT ĐẦU MƯA, hai người quyết định không ra ngoài nữa — hình C là mái ngói truyền thống tối màu trong cảnh âm u. A là hai bàn tay vẽ/tô màu, B là người phụ nữ đọc sách bên sông Seine, D là cô gái tâng bóng (hình của ví dụ)."
+       },
+       {
+        "id": "wb2-l7-p2-q5",
+        "no": 5,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 200.9,
+         "end": 214.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你是从哪儿来的？",
+          "pinyin": "Nǐ shì cóng nǎr lái de?",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "我是从法国来的。",
+          "pinyin": "Wǒ shì cóng Fǎguó lái de.",
+          "speakerVi": "Nam"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Người nam nói mình đến từ nước PHÁP — hình B là người phụ nữ đọc sách bên sông Seine với tháp Eiffel ở Paris, nước Pháp."
+       },
+       {
+        "id": "wb2-l7-p2-q6",
+        "no": 6,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 227.7,
+         "end": 248.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你是从什么时候开始学画画的？",
+          "pinyin": "Nǐ shì cóng shénme shíhou kāishǐ xué huàhuà de?",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "小学，那个时候每天都有画画课。",
+          "pinyin": "Xiǎoxué, nà gè shíhou měi tiān dōu yǒu huàhuà kè.",
+          "speakerVi": "Nam"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Người nam bắt đầu học VẼ từ tiểu học, ngày nào cũng có tiết vẽ — hình A là hai bàn tay đang vẽ/tô màu bằng bút chì trên giấy."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-p3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第7—10题：听对话，选择正确答案。每题听两次。",
+      "instructionVi": "Câu 7–10: nghe hội thoại, chọn đáp án đúng. Mỗi hội thoại và câu hỏi nghe hai lần.",
+      "kind": "choice",
+      "example": {
+       "id": "wb2-l7-p3-ex",
+       "audio": {
+        "trackId": "trk-wb2-l07-1",
+        "start": 271.3,
+        "end": 296.2,
+        "status": "asr-draft"
+       },
+       "lines": [
+        {
+         "zh": "给您笔，请在这儿写一下您的姓名。",
+         "pinyin": "Gěi nín bǐ, qǐng zài zhèr xiě yíxià nín de xìngmíng.",
+         "speakerVi": "Nam"
+        },
+        {
+         "zh": "好的，是这儿吗？",
+         "pinyin": "Hǎo de, shì zhèr ma?",
+         "speakerVi": "Nữ"
+        }
+       ],
+       "questionZh": "女的要写什么？",
+       "questionPinyin": "Nǚ de yào xiě shénme?",
+       "options": [
+        {
+         "id": "A",
+         "zh": "姓名",
+         "pinyin": "xìngmíng",
+         "vi": "họ tên"
+        },
+        {
+         "id": "B",
+         "zh": "时间",
+         "pinyin": "shíjiān",
+         "vi": "thời gian"
+        },
+        {
+         "id": "C",
+         "zh": "问题",
+         "pinyin": "wèntí",
+         "vi": "câu hỏi; vấn đề"
+        }
+       ],
+       "answer": "A"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-p3-q7",
+        "no": 7,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 316.7,
+         "end": 347.9,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你今天怎么回来这么早？",
+          "pinyin": "Nǐ jīntiān zěnme huílái zhème zǎo?",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "我没去打球，一下班就回来了。",
+          "pinyin": "Wǒ méi qù dǎ qiú, yí xiàbān jiù huílái le.",
+          "speakerVi": "Nam"
+         }
+        ],
+        "questionZh": "今天，男的下班后做什么了？",
+        "questionPinyin": "Jīntiān, nán de xiàbān hòu zuò shénme le?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "打球",
+          "pinyin": "dǎ qiú",
+          "vi": "chơi bóng"
+         },
+         {
+          "id": "B",
+          "zh": "回家",
+          "pinyin": "huí jiā",
+          "vi": "về nhà"
+         },
+         {
+          "id": "C",
+          "zh": "做饭",
+          "pinyin": "zuò fàn",
+          "vi": "nấu cơm"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Người nam nói rõ “我没去打球，一下班就回来了” — anh KHÔNG đi chơi bóng, vừa tan làm là VỀ NHÀ ngay (B). Nấu cơm không hề được nhắc tới."
+       },
+       {
+        "id": "wb2-l7-p3-q8",
+        "no": 8,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 363.0,
+         "end": 395.9,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你唱歌唱得怎么样？",
+          "pinyin": "Nǐ chànggē chàng de zěnmeyàng?",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "不太好。佳月跟我说你唱得很好。",
+          "pinyin": "Bú tài hǎo. Jiāyuè gēn wǒ shuō nǐ chàng de hěn hǎo.",
+          "speakerVi": "Nữ"
+         }
+        ],
+        "questionZh": "佳月觉得男的唱歌怎么样？",
+        "questionPinyin": "Jiāyuè juéde nán de chànggē zěnmeyàng?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "很好",
+          "pinyin": "hěn hǎo",
+          "vi": "rất hay"
+         },
+         {
+          "id": "B",
+          "zh": "不错",
+          "pinyin": "búcuò",
+          "vi": "không tệ"
+         },
+         {
+          "id": "C",
+          "zh": "不太好",
+          "pinyin": "bú tài hǎo",
+          "vi": "không hay lắm"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "“不太好” là người nữ tự nhận về giọng hát của mình; còn Gia Nguyệt nói với cô rằng người nam hát “很好” — RẤT HAY (A). Câu hỏi hỏi đúng ý của Gia Nguyệt về người nam."
+       },
+       {
+        "id": "wb2-l7-p3-q9",
+        "no": 9,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 410.9,
+         "end": 455.4,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "一到星期天你就往外跑。",
+          "pinyin": "Yí dào Xīngqītiān nǐ jiù wǎng wài pǎo.",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "我跟同学说好了一起踢球。",
+          "pinyin": "Wǒ gēn tóngxué shuōhǎo le yìqǐ tī qiú.",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "他们踢得怎么样？",
+          "pinyin": "Tāmen tī de zěnmeyàng?",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "他们踢得很好，我踢得也很好。",
+          "pinyin": "Tāmen tī de hěn hǎo, wǒ tī de yě hěn hǎo.",
+          "speakerVi": "Nam"
+         }
+        ],
+        "questionZh": "男的觉得自己踢得怎么样？",
+        "questionPinyin": "Nán de juéde zìjǐ tī de zěnmeyàng?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "很好",
+          "pinyin": "hěn hǎo",
+          "vi": "rất tốt"
+         },
+         {
+          "id": "B",
+          "zh": "不好",
+          "pinyin": "bù hǎo",
+          "vi": "không tốt"
+         },
+         {
+          "id": "C",
+          "zh": "不太好",
+          "pinyin": "bú tài hǎo",
+          "vi": "không tốt lắm"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Người nam tự nhận “他们踢得很好，我踢得也很好” — họ đá rất tốt, mình đá cũng RẤT TỐT (A)."
+       },
+       {
+        "id": "wb2-l7-p3-q10",
+        "no": 10,
+        "audio": {
+         "trackId": "trk-wb2-l07-1",
+         "start": 470.6,
+         "end": 527.3,
+         "status": "asr-draft"
+        },
+        "lines": [
+         {
+          "zh": "你一回来就不高兴，有什么事吗？",
+          "pinyin": "Nǐ yì huílái jiù bù gāoxìng, yǒu shénme shì ma?",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "明天我想休息，但还有很多工作没做完。",
+          "pinyin": "Míngtiān wǒ xiǎng xiūxi, dàn hái yǒu hěn duō gōngzuò méi zuòwán.",
+          "speakerVi": "Nữ"
+         },
+         {
+          "zh": "明天不是星期天，你为什么要休息啊？",
+          "pinyin": "Míngtiān bú shì Xīngqītiān, nǐ wèi shénme yào xiūxi a?",
+          "speakerVi": "Nam"
+         },
+         {
+          "zh": "因为我爸妈旅游回来，我想去接他们。",
+          "pinyin": "Yīnwèi wǒ bà-mā lǚyóu huílái, wǒ xiǎng qù jiē tāmen.",
+          "speakerVi": "Nữ"
+         }
+        ],
+        "questionZh": "女的为什么想休息？",
+        "questionPinyin": "Nǚ de wèi shénme xiǎng xiūxi?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "要出去旅游",
+          "pinyin": "yào chūqù lǚyóu",
+          "vi": "sắp đi du lịch"
+         },
+         {
+          "id": "B",
+          "zh": "要去接爸妈",
+          "pinyin": "yào qù jiē bà-mā",
+          "vi": "sắp đi đón bố mẹ"
+         },
+         {
+          "id": "C",
+          "zh": "这几天不高兴",
+          "pinyin": "zhè jǐ tiān bù gāoxìng",
+          "vi": "mấy hôm nay không vui"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Người nữ muốn nghỉ vì “我爸妈旅游回来，我想去接他们” — bố mẹ đi du lịch về, cô muốn ĐI ĐÓN BỐ MẸ (B). Người đi du lịch là bố mẹ chứ không phải cô, và “不高兴” chỉ là vẻ mặt lúc về nhà, không phải lý do xin nghỉ."
+       }
+      ]
+     }
+    ]
+   },
+   "wbReading": {
+    "titleZh": "阅读",
+    "titleEn": "Reading",
+    "titleVi": "Đọc",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 7 — 模拟测练 · 二、阅读, trang in 066–069 (PDF tr. 73–76).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Đọc được đối chiếu trực tiếp từ nội dung in trong sách (đọc câu/đoạn và các lựa chọn in, rà soát ngữ nghĩa từng câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần đọc giữ nguyên bố cục sách in: câu, đoạn và lựa chọn đều kèm pinyin như trên trang sách. Hình ở Phần I là tranh vẽ lại theo ảnh gốc trong sách.",
+    "parts": [
+     {
+      "id": "wb2-l7-r1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第11—13题：选择与句子最匹配的图片。",
+      "instructionVi": "Câu 11–13: Chọn hình phù hợp nhất với câu.",
+      "kind": "picture-match",
+      "pictureSet": [
+       {
+        "id": "A",
+        "image": "assets/hsk2-lesson-07/wb-r1-party.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn A"
+       },
+       {
+        "id": "B",
+        "image": "assets/hsk2-lesson-07/wb-r1-camera.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn B"
+       },
+       {
+        "id": "C",
+        "image": "assets/hsk2-lesson-07/wb-r1-calligraphy.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn C"
+       },
+       {
+        "id": "D",
+        "image": "assets/hsk2-lesson-07/wb-r1-basketball.webp",
+        "imageAltVi": "Tranh minh họa lựa chọn D"
+       }
+      ],
+      "example": {
+       "sentenceZh": "每个星期六，我都去打篮球。",
+       "sentencePinyin": "Měi gè Xīngqīliù, wǒ dōu qù dǎ lánqiú.",
+       "sentenceEn": "I go to play basketball every Saturday.",
+       "answer": "D",
+       "id": "wb2-l7-r1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-r1-q11",
+        "no": 11,
+        "sentenceZh": "他字写得很漂亮。",
+        "sentencePinyin": "Tā zì xiě de hěn piàoliang.",
+        "answer": "C",
+        "explainVi": "“他字写得很漂亮” — chữ của anh ấy viết rất ĐẸP: hình C là tờ giấy thư pháp viết bằng bút lông, bên cạnh có chén trà."
+       },
+       {
+        "id": "wb2-l7-r1-q12",
+        "no": 12,
+        "sentenceZh": "孩子们玩得很高兴。",
+        "sentencePinyin": "Háizimen wán de hěn gāoxìng.",
+        "answer": "A",
+        "explainVi": "“孩子们玩得很高兴” — các bạn nhỏ chơi rất VUI: hình A là các bé đội mũ tiệc, cầm bóng bay reo vui."
+       },
+       {
+        "id": "wb2-l7-r1-q13",
+        "no": 13,
+        "sentenceZh": "她一有时间就去旅游。",
+        "sentencePinyin": "Tā yì yǒu shíjiān jiù qù lǚyóu.",
+        "answer": "B",
+        "explainVi": "“她一有时间就去旅游” — cô ấy cứ có thời gian là đi DU LỊCH: hình B là người phụ nữ cầm máy ảnh chụp ở bức tường của ngôi nhà cổ."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-r2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第14—17题：选词填空。",
+      "instructionVi": "Câu 14–17: Chọn từ trong khung điền vào chỗ trống; mỗi từ chỉ dùng một lần.",
+      "kind": "word-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "往",
+        "pinyin": "wǎng"
+       },
+       {
+        "id": "B",
+        "zh": "爱好",
+        "pinyin": "àihào"
+       },
+       {
+        "id": "C",
+        "zh": "运动",
+        "pinyin": "yùndòng"
+       },
+       {
+        "id": "D",
+        "zh": "跑步",
+        "pinyin": "pǎobù"
+       },
+       {
+        "id": "E",
+        "zh": "完",
+        "pinyin": "wán"
+       }
+      ],
+      "example": {
+       "id": "wb2-l7-r2-ex",
+       "lines": [
+        {
+         "zh": "题太多了，所以我没做（　）。",
+         "pinyin": "Tí tài duō le, suǒyǐ wǒ méi zuò ( )."
+        }
+       ],
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-r2-q14",
+        "no": 14,
+        "lines": [
+         {
+          "zh": "你（）前走，那边有一个公交站。",
+          "pinyin": "Nǐ ( ) qián zǒu, nàbian yǒu yí gè gōngjiāo zhàn."
+         }
+        ],
+        "answer": "A",
+        "explainVi": "“你往前走” — bạn đi VỀ PHÍA trước, đằng kia có trạm xe buýt: 往 (A) là giới từ chỉ hướng của bài này."
+       },
+       {
+        "id": "wb2-l7-r2-q15",
+        "no": 15,
+        "lines": [
+         {
+          "zh": "爷爷、奶奶的（）是看书、画画和写字。",
+          "pinyin": "Yéye, nǎinai de ( ) shì kàn shū, huàhuà hé xiě zì."
+         }
+        ],
+        "answer": "B",
+        "explainVi": "“爷爷、奶奶的爱好是看书、画画和写字” — SỞ THÍCH của ông bà là đọc sách, vẽ tranh và viết chữ: 爱好 (B)."
+       },
+       {
+        "id": "wb2-l7-r2-q16",
+        "no": 16,
+        "lines": [
+         {
+          "zh": "女：你的爱好是什么？",
+          "pinyin": "Nǚ: Nǐ de àihào shì shénme?"
+         },
+         {
+          "zh": "男：我喜欢运动，游泳、（）什么的。",
+          "pinyin": "Nán: Wǒ xǐhuan yùndòng, yóuyǒng, ( ) shénmede."
+         }
+        ],
+        "answer": "D",
+        "explainVi": "Câu liệt kê mở của bài: “游泳、跑步什么的” — bơi, CHẠY BỘ các thứ: 跑步 (D)."
+       },
+       {
+        "id": "wb2-l7-r2-q17",
+        "no": 17,
+        "lines": [
+         {
+          "zh": "男：我们叫小李一起去打篮球吧？",
+          "pinyin": "Nán: Wǒmen jiào Xiǎo Lǐ yìqǐ qù dǎ lánqiú ba?"
+         },
+         {
+          "zh": "女：他不爱（），还是我们去打吧。",
+          "pinyin": "Nǚ: Tā bú ài ( ), háishì wǒmen qù dǎ ba."
+         }
+        ],
+        "answer": "C",
+        "explainVi": "“他不爱运动” — anh ấy không thích VẬN ĐỘNG/THỂ THAO nên hai người tự đi chơi bóng: 运动 (C)."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-r3",
+      "no": 3,
+      "titleZh": "第三部分",
+      "titleEn": "Part III",
+      "instructionZh": "第18—21题：匹配句子。",
+      "instructionVi": "Câu 18–21: Chọn câu trả lời trong khung phù hợp với mỗi câu hỏi.",
+      "kind": "match-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "鱼做得很好，这两个菜也可以。",
+        "pinyin": "Yú zuò de hěn hǎo, zhè liǎng gè cài yě kěyǐ."
+       },
+       {
+        "id": "B",
+        "zh": "会，但踢得不太好。",
+        "pinyin": "Huì, dàn tī de bú tài hǎo."
+       },
+       {
+        "id": "C",
+        "zh": "那我们出去运动运动吧。",
+        "pinyin": "Nà wǒmen chūqù yùndòng yùndòng ba."
+       },
+       {
+        "id": "D",
+        "zh": "是，我一下班就过来。",
+        "pinyin": "Shì, wǒ yí xiàbān jiù guòlái."
+       },
+       {
+        "id": "E",
+        "zh": "他出去了，一会儿就回来。",
+        "pinyin": "Tā chūqù le, yíhuìr jiù huílái."
+       }
+      ],
+      "example": {
+       "id": "wb2-l7-r3-ex",
+       "zh": "请问李老师在吗？",
+       "pinyin": "Qǐngwèn Lǐ lǎoshī zài ma?",
+       "en": "Excuse me, is Mr. Li here?",
+       "answer": "E"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-r3-q18",
+        "no": 18,
+        "zh": "你会踢球吗？",
+        "pinyin": "Nǐ huì tī qiú ma?",
+        "answer": "B",
+        "explainVi": "Hỏi có biết đá bóng không, câu trả lời khớp là “会，但踢得不太好” — biết, nhưng đá không hay lắm (B)."
+       },
+       {
+        "id": "wb2-l7-r3-q19",
+        "no": 19,
+        "zh": "今天晚上的菜怎么样？",
+        "pinyin": "Jīntiān wǎnshang de cài zěnmeyàng?",
+        "answer": "A",
+        "explainVi": "Hỏi món ăn tối nay thế nào, câu trả lời nhận xét đúng món cá: “鱼做得很好，这两个菜也可以” — cá làm rất ngon, hai món kia cũng được (A)."
+       },
+       {
+        "id": "wb2-l7-r3-q20",
+        "no": 20,
+        "zh": "你每天都来这儿游泳吗？",
+        "pinyin": "Nǐ měi tiān dōu lái zhèr yóuyǒng ma?",
+        "answer": "D",
+        "explainVi": "Câu trả lời xác nhận và dùng chính mẫu “一……就……” của bài: “是，我一下班就过来” — đúng, tôi vừa tan làm là qua đây ngay (D)."
+       },
+       {
+        "id": "wb2-l7-r3-q21",
+        "no": 21,
+        "zh": "你们不要在家看电视、玩手机了。",
+        "pinyin": "Nǐmen bú yào zài jiā kàn diànshì, wán shǒujī le.",
+        "answer": "C",
+        "explainVi": "Trước lời nhắc đừng ở nhà xem tivi, chơi điện thoại nữa, câu đáp hợp nhất là lời rủ vận động: “那我们出去运动运动吧” — vậy chúng ta ra ngoài vận động một chút đi (C)."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-r4",
+      "no": 4,
+      "titleZh": "第四部分",
+      "titleEn": "Part IV",
+      "instructionZh": "第22—24题：选择正确答案。",
+      "instructionVi": "Câu 22–24: Đọc đoạn ngắn rồi chọn đáp án đúng.",
+      "kind": "passage-choice",
+      "example": {
+       "passageZh": "我爱跳舞，但跳得不太好。",
+       "passagePinyin": "Wǒ ài tiàowǔ, dàn tiào de bú tài hǎo.",
+       "passageEn": "I love dancing, but I'm not good at it.",
+       "questionZh": "他：",
+       "questionPinyin": "Tā:",
+       "questionEn": "He:",
+       "options": [
+        {
+         "id": "A",
+         "zh": "下课了",
+         "pinyin": "xiàkè le",
+         "en": "finished class",
+         "vi": "đã tan học"
+        },
+        {
+         "id": "B",
+         "zh": "喜欢跳舞",
+         "pinyin": "xǐhuan tiàowǔ",
+         "en": "likes dancing",
+         "vi": "thích nhảy múa"
+        },
+        {
+         "id": "C",
+         "zh": "是小学生",
+         "pinyin": "shì xiǎoxuéshēng",
+         "en": "is a primary school student",
+         "vi": "là học sinh tiểu học"
+        }
+       ],
+       "answer": "B",
+       "id": "wb2-l7-r4-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-r4-q22",
+        "no": 22,
+        "passageZh": "朋友们都知道我是学中文的，他们问我中文说得怎么样，我会跟他们说不太好，但我的中文老师觉得我说得不错。",
+        "passagePinyin": "Péngyoumen dōu zhīdào wǒ shì xué Zhōngwén de, tāmen wèn wǒ Zhōngwén shuō de zěnmeyàng, wǒ huì gēn tāmen shuō bú tài hǎo, dàn wǒ de Zhōngwén lǎoshī juéde wǒ shuō de búcuò.",
+        "questionZh": "老师觉得他的中文怎么样？",
+        "questionPinyin": "Lǎoshī juéde tā de Zhōngwén zěnmeyàng?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "不错",
+          "pinyin": "búcuò",
+          "vi": "không tệ"
+         },
+         {
+          "id": "B",
+          "zh": "不好",
+          "pinyin": "bù hǎo",
+          "vi": "không tốt"
+         },
+         {
+          "id": "C",
+          "zh": "不太好",
+          "pinyin": "bú tài hǎo",
+          "vi": "không tốt lắm"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "Đoạn văn nói rõ “我的中文老师觉得我说得不错” — thầy dạy tiếng Trung thấy anh nói KHÔNG TỆ (A). “不太好” là lời anh tự nói với bạn bè, không phải nhận xét của thầy."
+       },
+       {
+        "id": "wb2-l7-r4-q23",
+        "no": 23,
+        "passageZh": "我喜欢旅游，一有时间就往外跑。我去过泰国、加拿大，但我还没去过中国。今年我想去中国看一看。",
+        "passagePinyin": "Wǒ xǐhuan lǚyóu, yì yǒu shíjiān jiù wǎng wài pǎo. Wǒ qùguo Tàiguó, Jiānádà, dàn wǒ hái méi qùguo Zhōngguó. Jīnnián wǒ xiǎng qù Zhōngguó kàn yí kàn.",
+        "questionZh": "他想去哪儿旅游？",
+        "questionPinyin": "Tā xiǎng qù nǎr lǚyóu?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "泰国",
+          "pinyin": "Tàiguó",
+          "vi": "Thái Lan"
+         },
+         {
+          "id": "B",
+          "zh": "中国",
+          "pinyin": "Zhōngguó",
+          "vi": "Trung Quốc"
+         },
+         {
+          "id": "C",
+          "zh": "加拿大",
+          "pinyin": "Jiānádà",
+          "vi": "Canada"
+         }
+        ],
+        "answer": "B",
+        "explainVi": "Anh ĐÃ đi Thái Lan và Canada rồi (“去过”), “还没去过中国” và “今年我想去中国看一看” — năm nay anh muốn đi TRUNG QUỐC (B)."
+       },
+       {
+        "id": "wb2-l7-r4-q24",
+        "no": 24,
+        "passageZh": "今天是奶奶的80岁生日。爸爸、妈妈从早上起床就开始准备饭菜，有鱼、肉什么的，妈妈还做了长长的生日面。奶奶说这个生日过得很高兴。",
+        "passagePinyin": "Jīntiān shì nǎinai de bāshí suì shēngrì. Bàba, māma cóng zǎoshang qǐchuáng jiù kāishǐ zhǔnbèi fàncài, yǒu yú, ròu shénmede, māma hái zuòle chángcháng de shēngrì miàn. Nǎinai shuō zhè gè shēngrì guò de hěn gāoxìng.",
+        "questionZh": "生日面是谁做的？",
+        "questionPinyin": "Shēngrì miàn shì shéi zuò de?",
+        "options": [
+         {
+          "id": "A",
+          "zh": "爸爸",
+          "pinyin": "bàba",
+          "vi": "bố"
+         },
+         {
+          "id": "B",
+          "zh": "爷爷",
+          "pinyin": "yéye",
+          "vi": "ông"
+         },
+         {
+          "id": "C",
+          "zh": "妈妈",
+          "pinyin": "māma",
+          "vi": "mẹ"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "Đoạn văn nói “妈妈还做了长长的生日面” — MẸ còn làm món mì sinh nhật sợi dài (C). Bố chỉ cùng chuẩn bị cơm canh nói chung, ông không xuất hiện trong đoạn."
+       }
+      ]
+     }
+    ]
+   },
+   "wbWriting": {
+    "titleZh": "书写",
+    "titleEn": "Writing",
+    "titleVi": "Viết",
+    "bookPagesVi": "Workbook 《新HSK教程 2 学练手册》 Bài 7 — 模拟测练 · 三、书写, trang in 070 (PDF tr. 77).",
+    "answerStatus": "verified-editorial",
+    "answerNoteVi": "Đáp án phần Viết được đối chiếu trực tiếp từ ô chữ và pinyin in trong sách (bộ phận còn thiếu xác định theo ô 田字格 và mục Hán tự của chính bài; chữ cần viết xác định duy nhất theo pinyin in trên chỗ trống và ngữ cảnh câu). Đây là đáp án biên tập của dự án, không phải đáp án chính thức của nhà xuất bản.",
+    "introVi": "Phần viết giữ nguyên bố cục sách in: Phần I chọn bộ phận còn thiếu để ghép thành chữ trong ô 田字格； Phần II nhìn pinyin in trên chỗ trống rồi tự gõ chữ Hán.",
+    "parts": [
+     {
+      "id": "wb2-l7-w1",
+      "no": 1,
+      "titleZh": "第一部分",
+      "titleEn": "Part I",
+      "instructionZh": "第25—27题：根据部件组字。",
+      "instructionVi": "Câu 25–27: Chọn bộ phận còn thiếu để ghép thành chữ đúng trong ô chữ.",
+      "kind": "component-bank",
+      "bank": [
+       {
+        "id": "A",
+        "zh": "彳"
+       },
+       {
+        "id": "B",
+        "zh": "王"
+       },
+       {
+        "id": "C",
+        "zh": "⻊"
+       },
+       {
+        "id": "D",
+        "zh": "十"
+       }
+      ],
+      "example": {
+       "chars": [
+        {
+         "pinyin": "shén",
+         "full": "什",
+         "shown": "亻",
+         "gap": true
+        },
+        {
+         "pinyin": "me",
+         "full": "么",
+         "shown": "么"
+        }
+       ],
+       "answer": "D",
+       "id": "wb2-l7-w1-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-w1-q25",
+        "no": 25,
+        "chars": [
+         {
+          "pinyin": "wǎng",
+          "full": "往",
+          "shown": "主",
+          "gap": true
+         },
+         {
+          "pinyin": "qián",
+          "full": "前",
+          "shown": "前"
+         }
+        ],
+        "answer": "A",
+        "explainVi": "往 ghép từ 彳 (bộ Xích — phần bên trái của chữ 往） và 主； ô chữ 往 đang hiện 主 nên bộ phận thiếu là 彳 — chọn A."
+       },
+       {
+        "id": "wb2-l7-w1-q26",
+        "no": 26,
+        "chars": [
+         {
+          "pinyin": "pǎo",
+          "full": "跑",
+          "shown": "包",
+          "gap": true
+         },
+         {
+          "pinyin": "bù",
+          "full": "步",
+          "shown": "步"
+         }
+        ],
+        "answer": "C",
+        "explainVi": "跑 ghép từ ⻊ (bộ Túc — phần bên trái của chữ 跑） và 包； ô chữ 跑 đang hiện 包 nên bộ phận thiếu là ⻊ — chọn C."
+       },
+       {
+        "id": "wb2-l7-w1-q27",
+        "no": 27,
+        "chars": [
+         {
+          "pinyin": "lán",
+          "full": "篮",
+          "shown": "篮"
+         },
+         {
+          "pinyin": "qiú",
+          "full": "球",
+          "shown": "求",
+          "gap": true
+         }
+        ],
+        "answer": "B",
+        "explainVi": "球 ghép từ 王 (bộ Ngọc — phần bên trái của chữ 球） và 求； ô chữ 球 đang hiện 求 nên bộ phận thiếu là 王 — chọn B."
+       }
+      ]
+     },
+     {
+      "id": "wb2-l7-w2",
+      "no": 2,
+      "titleZh": "第二部分",
+      "titleEn": "Part II",
+      "instructionZh": "第28—30题：根据拼音写汉字。",
+      "instructionVi": "Câu 28–30: Gõ chữ Hán theo pinyin in trên chỗ trống.",
+      "kind": "pinyin-write",
+      "example": {
+       "stemZh": "你想喝茶还（　）喝咖啡？",
+       "stemPinyin": "Nǐ xiǎng hē chá hái (shì) hē kāfēi?",
+       "stemEn": "Would you like tea or coffee?",
+       "blankPinyin": "shì",
+       "answerZh": "是",
+       "id": "wb2-l7-w2-ex"
+      },
+      "items": [
+       {
+        "id": "wb2-l7-w2-q28",
+        "no": 28,
+        "stemZh": "你汉字写（）怎么样？",
+        "stemPinyin": "Nǐ Hànzì xiě (de) zěnmeyàng?",
+        "blankPinyin": "de",
+        "answerZh": "得",
+        "explainVi": "“你汉字写得怎么样？” — bạn viết chữ Hán thế nào?; chữ cần viết theo pinyin de, đứng sau động từ 写， là trợ từ 得 của bài (nối với bổ ngữ trạng thái)."
+       },
+       {
+        "id": "wb2-l7-w2-q29",
+        "no": 29,
+        "stemZh": "我爸爸的（）好是游泳。",
+        "stemPinyin": "Wǒ bàba de (ài) hǎo shì yóuyǒng.",
+        "blankPinyin": "ài",
+        "answerZh": "爱",
+        "explainVi": "“我爸爸的爱好是游泳” — sở thích của bố tôi là bơi; ô trống chỉ cần chữ 爱 (ài) vì chữ 好 đã in sẵn ngay sau ô trống trong sách."
+       },
+       {
+        "id": "wb2-l7-w2-q30",
+        "no": 30,
+        "stemZh": "我现在在足球场（）球呢。",
+        "stemPinyin": "Wǒ xiànzài zài zúqiúchǎng (tī) qiú ne.",
+        "blankPinyin": "tī",
+        "answerZh": "踢",
+        "explainVi": "“我现在在足球场踢球呢” — tôi đang đá bóng ở sân bóng đá; chữ cần viết theo pinyin tī là 踢 (đá) của bài."
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "writingSets": [
@@ -75772,6 +80019,138 @@
        "pdfPage": 6,
        "printedPage": 6,
        "section": "忙"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "writing-hsk2-l07",
+   "lessonId": "hsk2-l07",
+   "titleVi": "Luyện viết Bài 7 · 跑 / 踢 / 往 / 很",
+   "introVi": "Bốn chữ của Bài 7 theo đúng thứ tự sách luyện viết chữ Hán HSK 2 (trang 7): mỗi chữ đi từ nhận diện nét, xem thứ tự nét, viết theo hướng dẫn, tự viết, đối chiếu, rồi ghi vào vở giấy. Hai bộ của bài — Túc tự bàng ⻊ và Song nhân bàng 彳 — cũng là điểm Hán tự nền tảng trong Workbook tr.061–062.",
+   "sourceRefs": [
+    {
+     "sourceId": "src-hsk2-writing-pdf",
+     "pdfPage": 7,
+     "printedPage": 7,
+     "section": "Sách viết tr.7 (trang ảnh thứ 7)"
+    }
+   ],
+   "chars": [
+    {
+     "id": "w-h2l7-pao",
+     "char": "跑",
+     "pinyin": "pǎo",
+     "hanViet": "BÀO",
+     "meaningVi": "chạy",
+     "strokeCount": 12,
+     "radical": "⻊",
+     "radicalNameVi": "Túc tự bàng",
+     "word": {
+      "zh": "跑步",
+      "pinyin": "Pǎobù",
+      "vi": "chạy bộ"
+     },
+     "sentence": {
+      "zh": "他跑步跑得很快。",
+      "pinyin": "Tā pǎobù pǎo de hěn kuài.",
+      "vi": "Anh ấy chạy bộ rất nhanh."
+     },
+     "tipVi": "跑 = ⻊ （足字旁） + 包. Bộ Túc ở bên trái liên quan đến chân — chạy là việc của đôi chân.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 7,
+       "printedPage": 7,
+       "section": "跑"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l7-ti",
+     "char": "踢",
+     "pinyin": "tī",
+     "hanViet": "THÍCH",
+     "meaningVi": "đá",
+     "strokeCount": 15,
+     "radical": "⻊",
+     "radicalNameVi": "Túc tự bàng",
+     "word": {
+      "zh": "踢球",
+      "pinyin": "Tī qiú",
+      "vi": "đá bóng"
+     },
+     "sentence": {
+      "zh": "他一到星期天就去踢球。",
+      "pinyin": "Tā yí dào Xīngqītiān jiù qù tī qiú.",
+      "vi": "Anh ấy cứ đến Chủ nhật là đi đá bóng."
+     },
+     "tipVi": "踢 = ⻊ + 易. Cũng mang bộ Túc như 跑 — đá bóng cũng là việc của đôi chân. Đây là chữ nhiều nét nhất của bài (15 nét).",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 7,
+       "printedPage": 7,
+       "section": "踢"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l7-wang",
+     "char": "往",
+     "pinyin": "wǎng",
+     "hanViet": "VÃNG",
+     "meaningVi": "về phía; đi về phía",
+     "strokeCount": 8,
+     "radical": "彳",
+     "radicalNameVi": "Song nhân bàng",
+     "word": {
+      "zh": "往外",
+      "pinyin": "Wǎng wài",
+      "vi": "ra phía ngoài"
+     },
+     "sentence": {
+      "zh": "你怎么一下课就往外跑？",
+      "pinyin": "Nǐ zěnme yí xiàkè jiù wǎng wài pǎo?",
+      "vi": "Sao bạn vừa tan học là chạy ra ngoài ngay thế?"
+     },
+     "tipVi": "往 = 彳 （双人旁） + 主. Bộ Xích 彳 như hình hai người bước đi trên đường — chữ này chỉ hướng đi.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 7,
+       "printedPage": 7,
+       "section": "往"
+      }
+     ]
+    },
+    {
+     "id": "w-h2l7-hen",
+     "char": "很",
+     "pinyin": "hěn",
+     "hanViet": "NGẬN",
+     "meaningVi": "rất",
+     "strokeCount": 9,
+     "radical": "彳",
+     "radicalNameVi": "Song nhân bàng",
+     "word": {
+      "zh": "很好",
+      "pinyin": "Hěn hǎo",
+      "vi": "rất tốt"
+     },
+     "sentence": {
+      "zh": "我写汉字写得很好。",
+      "pinyin": "Wǒ xiě Hànzì xiě de hěn hǎo.",
+      "vi": "Tôi viết chữ Hán rất đẹp (rất tốt)."
+     },
+     "tipVi": "很 = 彳 + 艮. Tuy nghĩa là “rất”, chữ này vẫn mang bộ Xích 彳 ở bên trái như 往 — đừng viết nhầm thành bộ Nhân 亻.",
+     "sourceRefs": [
+      {
+       "sourceId": "src-hsk2-writing-pdf",
+       "pdfPage": 7,
+       "printedPage": 7,
+       "section": "很"
       }
      ]
     }

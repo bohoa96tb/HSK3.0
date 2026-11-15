@@ -450,3 +450,7 @@
 ## 2026-11-13 — D45: HSK 2 Bài 5 trọn gói (ĐÃ PHÁT HÀNH)
 - Phạm vi: `hsk2-l05` 《第一次去中国朋友家》 — bài học đầy đủ (TB tr. in 037–045: 25 câu/4 đoạn, 18 hàng từ, 3 KP + nền tảng chữ Hán, 10 checkItems, 18 câu luyện tập chính gồm 10 câu nối hình khởi động, 4 self-check) + Workbook đủ 30 câu + bộ viết 茶/菜/店/床 + nghe ôn (nhanh 28, chi tiết 239 lượt). QA độc lập ĐẠT (0 chặn, 5 LOW đã sửa trong nhánh). Test 325/325, validate OK, audit chuẩn đạt. contentVersion `20261113-hsk2-l5-wb`.
 - nextTask: HSK 2 Bài 6 《小雪，生日快乐！》 (TB tr. in 046–055, WB tr. in 051–060, sách viết tr.6) trọn gói khi Hoa nhắn "Tiếp tục"; sau Bài 15 còn đề mô phỏng cuối sách. Chờ Hoa thử lại tra từ trên iPad thật (D43) khi tiện.
+
+## 2026-11-15 — D46: HSK 2 Bài 6 trọn gói (ĐÃ PHÁT HÀNH)
+- Phạm vi: `hsk2-l06` 《小雪，生日快乐！》 — bài học đầy đủ (TB tr. in 046–055: 27 câu/4 đoạn, 14 từ, 3 KP + mẹo 小语助力 + nền tảng chữ Hán, 10 checkItems, 16 câu luyện tập chính gồm 8 câu nối hình khởi động hai phần, 4 self-check) + Workbook đủ 30 câu + bộ viết 笔/第/快/忙 + nghe ôn (nhanh 28, chi tiết 187 lượt). QA độc lập ĐẠT có điều kiện (0 HIGH, 1 MEDIUM + 3 LOW đã sửa trong nhánh). Test 336/336, validate OK, audit chuẩn đạt. contentVersion `20261115-hsk2-l6-wb`.
+- nextTask: HSK 2 Bài 7 《我去买票》 (TB tr. in 056–065, WB tr. in 061–070, sách viết tr.7) trọn gói khi Hoa nhắn "Tiếp tục"; sau Bài 15 còn đề mô phỏng cuối sách. Chờ Hoa thử lại tra từ trên iPad thật (D43) khi tiện.

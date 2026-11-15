@@ -1,4 +1,4 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261109-reader-copy1";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261115-hsk2-l7-wb";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.

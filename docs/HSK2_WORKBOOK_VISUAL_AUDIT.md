@@ -606,3 +606,82 @@ quyết định theo số hình của bộ (3 = một dòng, 4 = 2×2) theo ch�
 Hoa. Khác Bài 1–5: mọi lựa chọn hình có chấm của Bài 6 (cả warm bài học
 lẫn Workbook) dùng alt trung tính “Tranh minh họa lựa chọn …” theo quy
 tắc alt không lộ ngữ nghĩa đáp án trước khi chấm.
+
+## 4k. Bài 7 《他篮球打得很好》 — bộ đủ 30 câu (2026-11-15, khuôn Bài 6/D46)
+
+Nguồn in: Workbook in 063–070 (PDF 70–77), đối chiếu trực quan từng trang
+ngày 15/11/2026 (kiểm kê L7_AUDIT). Audio nghe: track Baulchino
+`hsk-2-workbook/lesson-07/07-1.mp3`, 541,82 s (ffprobe). Ba ví dụ dùng
+chung với Bài 1–6 (xe buýt/máy bay/xe đạp · bóng đá · 姓名） nhưng cửa
+sổ căn lại trên track Bài 7.
+
+**ĐÍNH CHÍNH ẢNH Q2 (quan trọng):** kiểm kê đầu đọc ảnh C của Nghe Q2 là
+“chàng trai đứng với ván trượt bên lan can”. Khi dựng bài, crop 300 dpi
+trang in 063 cho thấy ảnh C là **chàng trai đang chạy bộ trên cầu, cạnh
+lan can** (áo khoác tối, quần short đen, giày trắng, tư thế chạy rõ) —
+không có ván trượt. Nhờ vậy đáp án Q2 mới khớp audio “他的爱好是跑步”
+→ C. Hình vẽ lại của app thể hiện đúng người chạy bộ. Đây là lần thứ hai
+kiểm kê ảnh mờ gây sai lệch (sau prompt mô tả hình Bài 6): ảnh in nhỏ/mờ
+bắt buộc kiểm bằng crop 300 dpi trước khi vẽ lại và trước khi chốt đáp án.
+
+### Nghe — đáp án từ transcript (answer: verified-editorial)
+
+| Câu | Transcript (ASR + kiểm envelope cửa sổ) | Đáp án | Cửa sổ |
+|---|---|---|---|
+| VD I | 我每天坐公交车去上班。 | A | 55,9–65,3 |
+| Q1 | 他游泳游得很快。 | A (vận động viên bơi sải trong bể) | 78,1–87,0 |
+| Q2 | 他的爱好是跑步。 | C (chàng trai chạy bộ trên cầu — xem đính chính ở trên) | 95,1–103,7 |
+| Q3 | 儿子每天一回家就要吃饭。 | C (cậu bé ăn bằng đũa từ bát) | 111,5–122,3 |
+| VD II | 你喜欢什么运动？/ 我最喜欢踢足球。 | D | 141,8–156,0 |
+| Q4 | 开始下雨了。/ 是啊，我们别出去了。 | C (mái ngói truyền thống tối màu, cảnh âm u) | 173,7–188,0 |
+| Q5 | 你是从哪儿来的？/ 我是从法国来的。 | B (đọc sách bên sông Seine, tháp Eiffel) | 200,9–214,3 |
+| Q6 | 你是从什么时候开始学画画的？/ 小学，那个时候每天都有画画课。 | A (hai bàn tay vẽ/tô màu bằng bút chì) | 227,7–248,3 |
+| VD III | 给您笔，请在这儿写一下您的姓名。… Hỏi: 女的要写什么？→ 姓名 | A | 271,3–296,2 |
+| Q7 | 你今天怎么回来这么早？/ 我没去打球，一下班就回来了。 Hỏi: 今天，男的下班后做什么了？→ 回家 | B | 316,7–347,9 |
+| Q8 | 你唱歌唱得怎么样？/ 不太好。佳月跟我说你唱得很好。 Hỏi: 佳月觉得男的唱歌怎么样？→ 很好 | A | 363,0–395,9 |
+| Q9 | 一到星期天你就往外跑。/ 我跟同学说好了一起踢球。/ 他们踢得怎么样？/ 他们踢得很好，我踢得也很好。 Hỏi: 男的觉得自己踢得怎么样？→ 很好 | A | 410,9–455,4 |
+| Q10 | 你一回来就不高兴，有什么事吗？/ 明天我想休息，但还有很多工作没做完。/ 明天不是星期天，你为什么要休息啊？/ 因为我爸妈旅游回来，我想去接他们。 Hỏi: 女的为什么想休息？→ 要去接爸妈 | B | 470,6–527,3 |
+
+**Chú ý kỹ thuật:** ASR toàn track đọc lượt hai của Q10 rất nhiễu (chỉ
+còn mảnh câu hỏi); transcript chốt lại bằng cách transcribe riêng crop
+500–528 s — nội dung khớp hoàn toàn lượt một. Phân tích envelope (RMS)
+khớp hai lượt đọc trong cả 13 cửa sổ: mỗi cửa sổ gồm hai vùng tiếng nói
+đầy đủ ngăn bởi khoảng lặng giữa hai lượt. Lượt đọc đầu của Q3 còn kèm
+tiếng đọc số câu “3.” ngay trước câu (nằm trong cửa sổ). Nhãn người nói
+Phần II/III gắn Nam/Nữ theo nội dung hội thoại. Mốc vẫn là `asr-draft`,
+chưa nghe kiểm bằng tai.
+
+### Đọc — đáp án theo kiểm kê in (verified-editorial)
+
+P_I bộ 4 hình (các bé dự tiệc đội mũ, cầm bóng bay / người phụ nữ cầm
+máy ảnh ở tường nhà cổ / giấy thư pháp chữ 茶 với bút lông và chén trà /
+bóng rổ): VD = D (bóng rổ); Q11 他字写得很漂亮 = C; Q12 孩子们玩得
+很高兴 = A; Q13 她一有时间就去旅游 = B. P_II ngân hàng A 往/B 爱好/
+C 运动/D 跑步/E 完： VD E; Q14 A; Q15 B; Q16 D; Q17 C — dùng hết ngân
+hàng. P_III ngân hàng A 鱼做得很好，这两个菜也可以。/ B 会，但踢得
+不太好。/ C 那我们出去运动运动吧。/ D 是，我一下班就过来。/ E 他
+出去了，一会儿就回来。: VD E; Q18 B; Q19 A; Q20 D; Q21 C — dùng hết
+ngân hàng. P_IV: VD 喜欢跳舞 = B; Q22 不错 = A; Q23 中国 = B; Q24
+妈妈 = C.
+
+### Viết — đáp án theo kiểm kê in (verified-editorial)
+
+P_I ngân hàng A 彳/B 王/C ⻊/D 十： VD 什么 → D; Q25 往 （彳） → A; Q26
+跑 （⻊） → C; Q27 球 （王） → B — dùng hết ngân hàng. P_II viết chữ theo
+pinyin với thân câu in: VD 是 shì; Q28 得 de; Q29 爱 ài (chỉ chữ 爱 —
+chữ 好 đã in sẵn ngay sau ô trống trong sách); Q30 踢 tī.
+
+### Hình (manifest Bài 7)
+
+15 WebP mới trong `assets/hsk2-lesson-07/` (chi tiết + nguồn gốc từng
+file: `assets/hsk2-lesson-07/PRACTICE_ATTRIBUTION.md`): Nghe P_I 9
+(Q1–Q3 mỗi câu 3 hình), Nghe P_II 3 mới (vẽ tranh / đọc sách bên tháp
+Eiffel / mái ngói tối, trời xám âm u — hình mái ngói vẽ lại theo QA
+LOW-1 vì bản vẽ đầu trời xanh sáng), Đọc P_I 3 mới (tiệc trẻ em / chụp ảnh / thư
+pháp). Hai file dùng lại byte-identical từ Bài 1: `wb-p2-soccer.webp`
+(VD Phần II), `wb-r1-basketball.webp` (bộ 4 hình Đọc Phần I). Kiểm kê
+hình in của bài: nghe 13 hình + đọc 4 hình + 0 hình viết; bố cục lưới
+hình của app quyết định theo số hình của bộ (3 = một dòng, 4 = 2×2)
+theo chỉ đạo của Hoa. Như Bài 6: mọi lựa chọn hình có chấm của Bài 7
+(cả warm bài học lẫn Workbook) dùng alt trung tính “Tranh minh họa lựa
+chọn …” theo quy tắc alt không lộ ngữ nghĩa đáp án trước khi chấm.

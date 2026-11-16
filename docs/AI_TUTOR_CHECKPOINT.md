@@ -1,6 +1,7 @@
 # AI TUTOR — Checkpoint
 
 - **Nhánh:** `feat/ai-tutor` (từ `main` @ `1a07584`, Merge PR #153). **Không merge vào main.**
+- **Đã push:** commit từ xa `23b2b7f8d05fd7ce7acf60beaf80a5ec1d2aa653` (17 file; đã đối chiếu SHA-256 từng file giữa bản local và bản trên GitHub — khớp). Chưa mở PR, chưa merge.
 - **Trạng thái:** Cả 5 chặng đã dựng xong trên nhánh; chờ nghiệm thu của Hoa + cấu hình Worker thật (secret Gemini) mới dùng được end-to-end.
 - **Phiên bản:** contentVersion `20261116-ai-tutor1` (bump đồng bộ: `data/content.json`, 2 token trong `index.html`, token import audio-review trong `src/app.js` — đúng quy ước phát hành của repo; xem QA report mục "Điểm cần Hoa biết").
 

@@ -1,0 +1,11 @@
+name = "hsk3-ai-tutor-proxy"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+# Secrets (NEVER put values in this file):
+#   npx wrangler secret put GEMINI_API_KEY
+#   npx wrangler secret put TUTOR_ACCESS_PIN   # optional but recommended
+#
+# Plain vars (optional):
+# [vars]
+# GEMINI_MODEL = "gemini-3.5-flash-lite"  # default is gemini-4-hydrogen

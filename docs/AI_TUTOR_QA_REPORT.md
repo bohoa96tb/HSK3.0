@@ -67,6 +67,7 @@ Sự cố thật: Hoa dùng app chính thức trên Android, gửi lượt và n
   (thêm test khóa status log cho success/timeout/rate-limit/truncated/
   PIN + bảo mật log); battery Worker v2 6/6. contentVersion nhánh:
   `20261117-ai-tutor4`.
+- **Kết quả phát hành:** PR #155 ĐÃ MERGE vào main ngày 2026-11-17 (merge commit `b414e8b`); nghiệm thu live frontend đạt (Pages `20261117-ai-tutor4`). Worker production vẫn là bản v4 cũ cho tới khi Hoa deploy bản mới — số đo `gemini_ms` production vẫn CHƯA CÓ.
 - **Test vòng này:** repo **369/369** (thêm 2 test: instruction < 10.000 ký tự vẫn chứa pattern + danh sách từ; response Worker có `timings.geminiMs` và dòng log không chứa PIN/nội dung). Battery Worker riêng 7/7 (gồm Gemini treo → 504 đúng ở ~25s; MAX_TOKENS; x-wav). Harness DOM cho UX chờ: KHÔNG chạy lại được trong môi trường này (jsdom không thực thi dynamic import của view — giới hạn môi trường; module đã chạy thật trên Android của Hoa). Latency Gemini production: CHƯA ĐO ĐƯỢC — chỉ có sau khi Hoa deploy Worker của nhánh này và chạy lượt thật.
 
 ## B. REAL-WORLD INTEGRATION TESTS — trạng thái thật

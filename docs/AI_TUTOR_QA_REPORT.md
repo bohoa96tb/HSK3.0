@@ -92,8 +92,10 @@ bản telemetry: đổi hướng sang model tốc độ cao thay vì chờ đo t
   3 họ + payload thật theo từng model + UPSTREAM 400 kèm mã); battery
   riêng 5/5 (health báo model mới, upstream 404 → 502 kèm mã + log
   google_status, Gemini treo → 504 đúng ở ~40s).
-- Production CHƯA đổi: vẫn chạy Worker v4 + model hydrogen cho tới khi
-  Hoa merge PR này và tự deploy Worker bản mới. Latency thật của
+- **Kết quả phát hành:** PR #156 ĐÃ MERGE vào main ngày 2026-11-17
+  (merge commit `e8867e5`); nghiệm thu live frontend đạt (Pages
+  `20261117-ai-tutor5`). Production vẫn chạy Worker v4 + model hydrogen
+  cho tới khi Hoa tự deploy Worker bản fast-model. Latency thật của
   2.5-flash trên tài khoản của Hoa vẫn cần lượt thật xác nhận.
 
 ## B. REAL-WORLD INTEGRATION TESTS — trạng thái thật

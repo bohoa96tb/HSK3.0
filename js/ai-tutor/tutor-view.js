@@ -4,16 +4,16 @@
 
 import {
   loadLexicon, lookupLocalWord, buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
-} from "./hsk-guardrail.js?v=20261117-ai-tutor2";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor2";
+} from "./hsk-guardrail.js?v=20261117-ai-tutor3";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor3";
 import {
   loadTutorState, updateTutorState, recordSessionStart, recordSpeakingSeconds,
   recordError, recordVocabUsage, recordTopicProgress, saveConversation, clearTutorHistory,
   normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261117-ai-tutor2";
-import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor2";
+} from "./tutor-storage.js?v=20261117-ai-tutor3";
+import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor3";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor2";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor3";
 const CLIENT_TIMEOUT_MS = 30000;
 
 let cssLoaded = false;
@@ -399,17 +399,41 @@ export async function mountTutor(main, ctx) {
     };
   }
 
+  // Live waiting feedback: a flagship model can legitimately take
+  // 10–25 s. Show the phase + elapsed seconds so a long wait never
+  // looks like a hang, and surface the server-reported duration after
+  // the answer so real latency is visible without any dashboard.
+  let waitTimer = null;
+  function startWait(kind) {
+    const t0 = Date.now();
+    const render = () => {
+      const s = Math.floor((Date.now() - t0) / 1000);
+      if (s < 2) setStatus("Đang kết nối tới máy chủ AI…");
+      else if (s < 10) setStatus(`AI đang suy nghĩ… (${s} giây)`);
+      else setStatus(`AI vẫn đang xử lý${kind === "audio" ? " giọng nói" : ""} — model lớn thường mất 10–25 giây, bạn chờ thêm chút nhé… (${s} giây)`);
+    };
+    render();
+    waitTimer = setInterval(render, 500);
+  }
+  function stopWait() { if (waitTimer) { clearInterval(waitTimer); waitTimer = null; } }
+  function showDuration(data) {
+    const ms = data?.timings?.geminiMs;
+    if (typeof ms === "number" && ms > 0) setStatus(`AI đã trả lời sau ${(ms / 1000).toFixed(1)} giây.`);
+  }
+
   async function sendTextTurn(text) {
     if (sending) return;
     if (!ensureReady()) return;
     if (!session.started) startSession({ keepTurns: true });
     sending = true;
-    setStatus("Đang xử lý…");
+    startWait("text");
     try {
       const data = await callTutor(buildPayload({ userText: text }));
+      stopWait();
       await handleResult(data);
-    } catch (e) { setStatus(e.message || "Có lỗi. Thử lại nhé."); }
-    finally { sending = false; }
+      showDuration(data);
+    } catch (e) { stopWait(); setStatus(e.message || "Có lỗi. Thử lại nhé."); }
+    finally { stopWait(); sending = false; }
   }
 
   async function sendAudioTurn(blob, blobUrl) {
@@ -421,14 +445,16 @@ export async function mountTutor(main, ctx) {
     }
     if (!session.started) startSession({ keepTurns: true });
     sending = true;
-    setStatus("Đang xử lý giọng nói…");
+    startWait("audio");
     try {
       const base64 = await blobToBase64(blob);
       const data = await callTutor(buildPayload({
         userAudioBase64: base64,
         audioMimeType: (blob.type || "audio/webm").split(";")[0],
       }));
+      stopWait();
       await handleResult(data, { myBlobUrl: blobUrl });
+      showDuration(data);
       // Offer playback of the learner's own take on the user bubble.
       const lastUser = [...session.turns].reverse().find((t) => t.role === "user");
       if (lastUser && blobUrl) {
@@ -442,8 +468,8 @@ export async function mountTutor(main, ctx) {
           bubble.appendChild(p);
         }
       }
-    } catch (e) { setStatus(e.message || "Có lỗi. Thử lại nhé."); }
-    finally { sending = false; }
+    } catch (e) { stopWait(); setStatus(e.message || "Có lỗi. Thử lại nhé."); }
+    finally { stopWait(); sending = false; }
   }
 
   // ---- controls wiring ----

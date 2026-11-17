@@ -17,6 +17,7 @@ import {
   recordSpeakingSeconds, saveConversation, clearTutorHistory,
 } from "../js/ai-tutor/tutor-storage.js";
 import { _internal } from "../workers/ai-tutor-proxy/worker.js";
+import worker from "../workers/ai-tutor-proxy/worker.js";
 import { pickMimeType, micErrorVi, MAX_RECORD_SECONDS } from "../js/ai-tutor/voice-engine.js";
 
 const content = JSON.parse(readFileSync(new URL("../data/content.json", import.meta.url), "utf8"));
@@ -192,4 +193,43 @@ test("pickMimeType uses isTypeSupported, never assumes", () => {
   assert.equal(MAX_RECORD_SECONDS, 20);
   assert.match(micErrorVi({ name: "NotAllowedError" }), /quyền micro/i);
   assert.match(micErrorVi({ name: "NotFoundError" }), /Không tìm thấy micro/);
+});
+
+// ---------- Latency instrumentation (2026-11-17) ----------
+test("system instruction stays compact after grammar-list compression", () => {
+  const st = buildSystemInstruction({ level: "HSK2", mode: "tutor", scenario: null, lexicon: lex });
+  assert.ok(st.length < 10000, `instruction too long: ${st.length}`);
+  assert.match(st, /你们/); // a grammar pattern survives compression
+  assert.match(st, /VỐN TỪ ĐƯỢC PHÉP/); // word list (the guardrail) intact
+});
+
+test("worker success response carries geminiMs and logs a content-free timing line", async () => {
+  const payload = {
+    user_transcript_hanzi: "你好", user_transcript_pinyin: "nǐhǎo",
+    evaluation: { has_error: false, error_type: "none", corrected_hanzi: "", corrected_pinyin: "", explanation_vi: "", pronunciation_status: "not_assessed", pronunciation_feedback_vi: "" },
+    tutor_reply: { hanzi: "你好！", pinyin: "Nǐhǎo!", translation_vi: "Xin chào!", out_of_level_words: [] },
+  };
+  const realFetch = globalThis.fetch;
+  const realLog = console.log;
+  const lines = [];
+  console.log = (...a) => lines.push(a.join(" "));
+  globalThis.fetch = async () => new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(payload) }] }, finishReason: "STOP" }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+  try {
+    const res = await worker.fetch(new Request("https://w.example/api/tutor-turn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: "https://bohoa96tb.github.io", "X-Tutor-Pin": "test-pin-123" },
+      body: JSON.stringify({ sessionId: "s1", level: "HSK1", mode: "tutor", systemInstruction: "Bạn là giáo viên.", history: [], userText: "NỘI DUNG BÍ MẬT" }),
+    }), { GEMINI_API_KEY: "k", TUTOR_ACCESS_PIN: "test-pin-123" }, {});
+    const data = await res.json();
+    assert.equal(res.status, 200);
+    assert.equal(typeof data.timings?.geminiMs, "number");
+    const line = lines.find((l) => l.startsWith("tutor_timing "));
+    assert.ok(line, "timing line emitted");
+    assert.match(line, /"status":200/);
+    assert.ok(!line.includes("test-pin-123"), "timing line must not contain the PIN");
+    assert.ok(!line.includes("NỘI DUNG BÍ MẬT"), "timing line must not contain conversation content");
+  } finally {
+    globalThis.fetch = realFetch;
+    console.log = realLog;
+  }
 });

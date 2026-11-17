@@ -263,6 +263,12 @@ function buildContents(body) {
   return contents;
 }
 
+function logTiming(fields) {
+  // One structured line per tutor turn for Cloudflare Workers Logs:
+  // durations and sizes ONLY — never PIN, key, message content or audio.
+  try { console.log(`tutor_timing ${JSON.stringify(fields)}`); } catch { /* logging must never break a turn */ }
+}
+
 async function callGemini(env, body) {
   const model = (env.GEMINI_MODEL || DEFAULT_MODEL).trim();
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
@@ -367,10 +373,21 @@ export default {
     const invalid = validateTurn(body);
     if (invalid) return errorVi(400, "BAD_TURN", invalid, origin);
 
+    const t0 = Date.now();
+    const meta = {
+      type: body.userAudioBase64 ? "audio" : "text",
+      model: env.GEMINI_MODEL || "gemini-4-hydrogen",
+      instruction_chars: String(body.systemInstruction || "").length,
+      history_turns: Array.isArray(body.history) ? body.history.length : 0,
+      audio_kb: body.userAudioBase64 ? Math.round(body.userAudioBase64.length / 1024) : 0,
+    };
     try {
       const result = await callGemini(env, body);
-      return jsonResponse(200, { ok: true, ...result }, origin);
+      const geminiMs = Date.now() - t0;
+      logTiming({ ...meta, status: 200, code: "OK", gemini_ms: geminiMs, total_ms: geminiMs });
+      return jsonResponse(200, { ok: true, ...result, timings: { geminiMs } }, origin);
     } catch (e) {
+      logTiming({ ...meta, status: 0, code: e?.code || "GEMINI_ERROR", gemini_ms: Date.now() - t0, total_ms: Date.now() - t0 });
       switch (e.code) {
         case "GEMINI_TIMEOUT": return errorVi(504, "TIMEOUT", "Máy chủ AI phản hồi quá chậm. Thử lại sau ít giây nhé.", origin);
         case "GEMINI_RATE_LIMIT": return errorVi(429, "RATE_LIMIT", "Hệ thống AI đang quá tải. Đợi một lát rồi thử lại.", origin);

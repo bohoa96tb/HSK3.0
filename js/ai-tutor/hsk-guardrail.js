@@ -154,7 +154,12 @@ export function buildSystemInstruction({ level, mode, scenario, lexicon = cached
   const words = allowedWords(lvl, lexicon);
   const grammar = allowedGrammar(lvl, lexicon);
   const wordList = [...new Set(words.map((w) => w.hanzi))].join("、");
-  const grammarList = grammar.map((g) => `${g.title}${g.pattern ? ` (${g.pattern})` : ""}`).join("; ");
+  // Latency round (2026-11-17): the grammar list was the bulk of the
+  // instruction (10.7k of 13.5k chars at HSK2). Keep the teachable
+  // structure/example (pattern) and drop the duplicate Vietnamese label
+  // when a pattern exists; the title remains the fallback. The word list
+  // (the actual level guardrail) is untouched.
+  const grammarList = grammar.map((g) => (g.pattern ? g.pattern : g.title)).join("; ");
   const lines = [
     `Bạn là giáo viên tiếng Trung cho người Việt đang học ở cấp ${lvl} theo giáo trình HSK 3.0 (New HSK Course).`,
     `VỐN TỪ ĐƯỢC PHÉP (chỉ dùng các từ trong danh sách này khi nói tiếng Trung; đây là từ vựng chính thức của giáo trình tới cấp ${lvl}): ${wordList || "(chưa tải được)"}.`,

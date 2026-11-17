@@ -4,15 +4,16 @@
 
 import {
   loadLexicon, lookupLocalWord, buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
-} from "./hsk-guardrail.js?v=20261116-ai-tutor1";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261116-ai-tutor1";
+} from "./hsk-guardrail.js?v=20261117-ai-tutor2";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor2";
 import {
   loadTutorState, updateTutorState, recordSessionStart, recordSpeakingSeconds,
   recordError, recordVocabUsage, recordTopicProgress, saveConversation, clearTutorHistory,
-} from "./tutor-storage.js?v=20261116-ai-tutor1";
-import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261116-ai-tutor1";
+  normalizeWorkerUrl,
+} from "./tutor-storage.js?v=20261117-ai-tutor2";
+import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor2";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261116-ai-tutor1";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor2";
 const CLIENT_TIMEOUT_MS = 30000;
 
 let cssLoaded = false;
@@ -55,6 +56,11 @@ export async function mountTutor(main, ctx) {
   const recorder = new VoiceRecorder({
     onState: (st, extra) => onRecorderState(st, extra),
   });
+
+  // In-flight guard: one tutor turn at a time. Without it, a double
+  // submit (or text + mic together) fires parallel requests whose
+  // replies append out of order and double the Gemini cost.
+  let sending = false;
 
   // Leaving the route must release the mic, TTS and blob URLs.
   const onHash = () => {
@@ -311,7 +317,7 @@ export async function mountTutor(main, ctx) {
     const timer = setTimeout(() => controller.abort(), CLIENT_TIMEOUT_MS);
     let res;
     try {
-      res = await fetch(`${state.config.workerUrl}/api/tutor-turn`, {
+      res = await fetch(`${normalizeWorkerUrl(state.config.workerUrl)}/api/tutor-turn`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -394,22 +400,27 @@ export async function mountTutor(main, ctx) {
   }
 
   async function sendTextTurn(text) {
+    if (sending) return;
     if (!ensureReady()) return;
     if (!session.started) startSession({ keepTurns: true });
+    sending = true;
     setStatus("Đang xử lý…");
     try {
       const data = await callTutor(buildPayload({ userText: text }));
       await handleResult(data);
     } catch (e) { setStatus(e.message || "Có lỗi. Thử lại nhé."); }
+    finally { sending = false; }
   }
 
   async function sendAudioTurn(blob, blobUrl) {
+    if (sending) { setStatus("Đang chờ AI trả lời câu trước…"); return; }
     if (!ensureReady()) return;
     if (blob.size > MAX_AUDIO_BYTES) {
       setStatus("Bản ghi quá dài/nặng. Hãy nói câu ngắn hơn (tối đa 20 giây).");
       return;
     }
     if (!session.started) startSession({ keepTurns: true });
+    sending = true;
     setStatus("Đang xử lý giọng nói…");
     try {
       const base64 = await blobToBase64(blob);
@@ -432,6 +443,7 @@ export async function mountTutor(main, ctx) {
         }
       }
     } catch (e) { setStatus(e.message || "Có lỗi. Thử lại nhé."); }
+    finally { sending = false; }
   }
 
   // ---- controls wiring ----

@@ -13,7 +13,7 @@ import {
 } from "../js/ai-tutor/hsk-guardrail.js";
 import { SCENARIOS, scenarioById } from "../js/ai-tutor/roleplay-scenarios.js";
 import {
-  TUTOR_KEY, defaultState, loadTutorState, saveTutorState, recordError,
+  TUTOR_KEY, defaultState, loadTutorState, saveTutorState, recordError, normalizeWorkerUrl,
   recordSpeakingSeconds, saveConversation, clearTutorHistory,
 } from "../js/ai-tutor/tutor-storage.js";
 import { _internal } from "../workers/ai-tutor-proxy/worker.js";
@@ -100,6 +100,21 @@ test("storage uses only its own key and defaults are sane", () => {
   assert.deepEqual(s, defaultState());
   saveTutorState(s, st);
   assert.deepEqual([...st._map.keys()], [TUTOR_KEY]);
+});
+
+test("normalizeWorkerUrl strips trailing slashes and whitespace", () => {
+  assert.equal(normalizeWorkerUrl("https://x.workers.dev"), "https://x.workers.dev");
+  assert.equal(normalizeWorkerUrl("https://x.workers.dev/"), "https://x.workers.dev");
+  assert.equal(normalizeWorkerUrl("  https://x.workers.dev///  "), "https://x.workers.dev");
+  assert.equal(normalizeWorkerUrl(""), "");
+  assert.equal(normalizeWorkerUrl(undefined), "");
+  assert.equal(normalizeWorkerUrl(null), "");
+});
+
+test("loadTutorState repairs a stored Worker URL with trailing slash", () => {
+  const st = fakeStorage();
+  saveTutorState({ ...defaultState(), config: { enabled: true, workerUrl: "https://x.workers.dev/", accessPin: "" } }, st);
+  assert.equal(loadTutorState(st).config.workerUrl, "https://x.workers.dev");
 });
 
 test("recordError caps at 50 and keeps newest first", () => {

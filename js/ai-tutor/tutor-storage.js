@@ -20,6 +20,15 @@ export function defaultState() {
   };
 }
 
+// Canonical Worker URL: trimmed, no trailing slash. A trailing "/"
+// would make the client call "//api/tutor-turn", which the Worker
+// answers 404 (verified live 2026-11-17). Both save forms already
+// strip it; normalising again on load also repairs configs saved by
+// older builds.
+export function normalizeWorkerUrl(url) {
+  return typeof url === "string" ? url.trim().replace(/\/+$/, "") : "";
+}
+
 export function loadTutorState(storage = localStorage) {
   try {
     const raw = storage.getItem(TUTOR_KEY);
@@ -27,10 +36,12 @@ export function loadTutorState(storage = localStorage) {
     const parsed = JSON.parse(raw);
     if (!parsed || parsed.schemaVersion !== SCHEMA_VERSION) return defaultState();
     const base = defaultState();
+    const config = { ...base.config, ...(parsed.config || {}) };
+    config.workerUrl = normalizeWorkerUrl(config.workerUrl);
     return {
       ...base,
       ...parsed,
-      config: { ...base.config, ...(parsed.config || {}) },
+      config,
       stats: { ...base.stats, ...(parsed.stats || {}) },
       topicProgress: parsed.topicProgress || {},
       vocabUsage: parsed.vocabUsage || {},

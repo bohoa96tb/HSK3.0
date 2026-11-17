@@ -1,9 +1,10 @@
 // =====================================================================
 // HSK3.0 AI Tutor — Cloudflare Worker proxy for Google Gemini
-// FINAL HANDOFF v4 (2026-11-17) — complete drop-in replacement.
-// Supersedes v3: same frontend contract, three hardening fixes from
-// the final review round (rate-limit keying/eviction, streaming body
-// cap, audio MIME normalisation). No other behaviour changed.
+// FAST-MODEL build (2026-11-17) — complete drop-in replacement.
+// Same frontend contract as v4; changes in this build: default model
+// gemini-2.5-flash with per-family thinking config, Gemini timeout
+// 40 s, tutor_timing telemetry (gemini_ms / worker_ms, real HTTP
+// status), transparent UPSTREAM errors carrying Google's status.
 //
 // Contract-verified line by line against the frontend at branch
 // feat/ai-tutor commit f1cffec (js/ai-tutor/tutor-view.js):

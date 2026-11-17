@@ -263,6 +263,19 @@ function buildContents(body) {
   return contents;
 }
 
+// Single source for Gemini-error → HTTP mapping, used for BOTH the
+// client response and the timing log so the logged status can never
+// diverge from the status actually returned.
+function geminiErrorHttp(e) {
+  switch (e?.code) {
+    case "GEMINI_TIMEOUT": return { status: 504, code: "TIMEOUT", message: "Máy chủ AI phản hồi quá chậm. Thử lại sau ít giây nhé." };
+    case "GEMINI_RATE_LIMIT": return { status: 429, code: "RATE_LIMIT", message: "Hệ thống AI đang quá tải. Đợi một lát rồi thử lại." };
+    case "GEMINI_BAD_JSON": return { status: 502, code: "BAD_RESPONSE", message: "AI trả về dữ liệu không hợp lệ. Thử lại một lần nữa nhé." };
+    case "GEMINI_TRUNCATED": return { status: 502, code: "TRUNCATED", message: "Câu trả lời của AI bị cắt ngắn giữa chừng. Hãy nói câu ngắn hơn rồi thử lại." };
+    default: return { status: 502, code: "UPSTREAM", message: "Chưa nối được tới AI. Kiểm tra mạng rồi thử lại." };
+  }
+}
+
 function logTiming(fields) {
   // One structured line per tutor turn for Cloudflare Workers Logs:
   // durations and sizes ONLY — never PIN, key, message content or audio.
@@ -327,6 +340,10 @@ async function callGemini(env, body) {
 
 export default {
   async fetch(request, env) {
+    // worker_ms is measured from here (fetch-handler entry) to the
+    // moment the response is created; gemini_ms covers only the
+    // Gemini call + response processing inside callGemini's window.
+    const tReq = Date.now();
     const origin = request.headers.get("Origin") || "";
     const url = new URL(request.url);
 
@@ -341,39 +358,44 @@ export default {
       return errorVi(404, "NOT_FOUND", "Không tìm thấy endpoint.", origin);
     }
     if (origin && !isAllowedOrigin(origin)) {
+      logTiming({ status: 403, code: "ORIGIN_DENIED", worker_ms: Date.now() - tReq });
       return errorVi(403, "ORIGIN_DENIED", "Origin không được phép.", origin);
     }
     if (!env.GEMINI_API_KEY) {
       console.log("config_error missing GEMINI_API_KEY");
+      logTiming({ status: 503, code: "NOT_CONFIGURED", worker_ms: Date.now() - tReq });
       return errorVi(503, "NOT_CONFIGURED", "Máy chủ chưa cấu hình khóa Gemini. Người quản trị cần đặt secret GEMINI_API_KEY cho Worker.", origin);
     }
     if (env.TUTOR_ACCESS_PIN) {
       const pin = request.headers.get("X-Tutor-Pin") || "";
       if (!safeEqual(pin, env.TUTOR_ACCESS_PIN)) {
+        logTiming({ status: 401, code: "PIN_INVALID", worker_ms: Date.now() - tReq });
         return errorVi(401, "PIN_INVALID", "Mã PIN chưa đúng hoặc chưa nhập. Kiểm tra lại trong Cài đặt của app.", origin);
       }
     }
     const declared = Number(request.headers.get("Content-Length") || 0);
     if (declared > MAX_BODY_BYTES) {
+      logTiming({ status: 413, code: "TOO_LARGE", worker_ms: Date.now() - tReq });
       return errorVi(413, "TOO_LARGE", "Dữ liệu gửi lên quá lớn (tối đa 500 KB). Hãy nói câu ngắn hơn.", origin);
     }
     const ip = request.headers.get("CF-Connecting-IP") || "unknown";
     if (rateLimited(`${ip}|${pinTagOf(env.TUTOR_ACCESS_PIN)}`)) {
+      logTiming({ status: 429, code: "RATE_LIMIT", worker_ms: Date.now() - tReq });
       return errorVi(429, "RATE_LIMIT", "Bạn gửi quá nhanh. Đợi vài phút rồi thử lại nhé.", origin);
     }
     let raw;
     try { raw = await readBodyCapped(request, MAX_BODY_BYTES); }
-    catch { return errorVi(400, "BAD_BODY", "Không đọc được dữ liệu gửi lên.", origin); }
+    catch { logTiming({ status: 400, code: "BAD_BODY", worker_ms: Date.now() - tReq }); return errorVi(400, "BAD_BODY", "Không đọc được dữ liệu gửi lên.", origin); }
     if (raw === null) {
+      logTiming({ status: 413, code: "TOO_LARGE", worker_ms: Date.now() - tReq });
       return errorVi(413, "TOO_LARGE", "Dữ liệu gửi lên quá lớn (tối đa 500 KB). Hãy nói câu ngắn hơn.", origin);
     }
     let body;
     try { body = JSON.parse(raw); }
-    catch { return errorVi(400, "BAD_JSON", "Dữ liệu gửi lên không phải JSON hợp lệ.", origin); }
+    catch { logTiming({ status: 400, code: "BAD_JSON", worker_ms: Date.now() - tReq }); return errorVi(400, "BAD_JSON", "Dữ liệu gửi lên không phải JSON hợp lệ.", origin); }
     const invalid = validateTurn(body);
-    if (invalid) return errorVi(400, "BAD_TURN", invalid, origin);
+    if (invalid) { logTiming({ status: 400, code: "BAD_TURN", worker_ms: Date.now() - tReq }); return errorVi(400, "BAD_TURN", invalid, origin); }
 
-    const t0 = Date.now();
     const meta = {
       type: body.userAudioBase64 ? "audio" : "text",
       model: env.GEMINI_MODEL || "gemini-4-hydrogen",
@@ -381,20 +403,16 @@ export default {
       history_turns: Array.isArray(body.history) ? body.history.length : 0,
       audio_kb: body.userAudioBase64 ? Math.round(body.userAudioBase64.length / 1024) : 0,
     };
+    const g0 = Date.now();
     try {
       const result = await callGemini(env, body);
-      const geminiMs = Date.now() - t0;
-      logTiming({ ...meta, status: 200, code: "OK", gemini_ms: geminiMs, total_ms: geminiMs });
+      const geminiMs = Date.now() - g0;
+      logTiming({ ...meta, status: 200, code: "OK", gemini_ms: geminiMs, worker_ms: Date.now() - tReq });
       return jsonResponse(200, { ok: true, ...result, timings: { geminiMs } }, origin);
     } catch (e) {
-      logTiming({ ...meta, status: 0, code: e?.code || "GEMINI_ERROR", gemini_ms: Date.now() - t0, total_ms: Date.now() - t0 });
-      switch (e.code) {
-        case "GEMINI_TIMEOUT": return errorVi(504, "TIMEOUT", "Máy chủ AI phản hồi quá chậm. Thử lại sau ít giây nhé.", origin);
-        case "GEMINI_RATE_LIMIT": return errorVi(429, "RATE_LIMIT", "Hệ thống AI đang quá tải. Đợi một lát rồi thử lại.", origin);
-        case "GEMINI_BAD_JSON": return errorVi(502, "BAD_RESPONSE", "AI trả về dữ liệu không hợp lệ. Thử lại một lần nữa nhé.", origin);
-        case "GEMINI_TRUNCATED": return errorVi(502, "TRUNCATED", "Câu trả lời của AI bị cắt ngắn giữa chừng. Hãy nói câu ngắn hơn rồi thử lại.", origin);
-        default: return errorVi(502, "UPSTREAM", "Chưa nối được tới AI. Kiểm tra mạng rồi thử lại.", origin);
-      }
+      const mapped = geminiErrorHttp(e);
+      logTiming({ ...meta, status: mapped.status, code: mapped.code, gemini_ms: Date.now() - g0, worker_ms: Date.now() - tReq });
+      return errorVi(mapped.status, mapped.code, mapped.message, origin);
     }
   },
 };

@@ -4,16 +4,16 @@
 
 import {
   loadLexicon, lookupLocalWord, buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
-} from "./hsk-guardrail.js?v=20261117-ai-tutor3";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor3";
+} from "./hsk-guardrail.js?v=20261117-ai-tutor4";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor4";
 import {
   loadTutorState, updateTutorState, recordSessionStart, recordSpeakingSeconds,
   recordError, recordVocabUsage, recordTopicProgress, saveConversation, clearTutorHistory,
   normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261117-ai-tutor3";
-import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor3";
+} from "./tutor-storage.js?v=20261117-ai-tutor4";
+import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor4";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor3";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor4";
 const CLIENT_TIMEOUT_MS = 30000;
 
 let cssLoaded = false;
@@ -418,7 +418,7 @@ export async function mountTutor(main, ctx) {
   function stopWait() { if (waitTimer) { clearInterval(waitTimer); waitTimer = null; } }
   function showDuration(data) {
     const ms = data?.timings?.geminiMs;
-    if (typeof ms === "number" && ms > 0) setStatus(`AI đã trả lời sau ${(ms / 1000).toFixed(1)} giây.`);
+    if (typeof ms === "number" && ms > 0) setStatus(`Gemini đã xử lý trong ${(ms / 1000).toFixed(1)} giây.`);
   }
 
   async function sendTextTurn(text) {

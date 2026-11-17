@@ -55,6 +55,18 @@ Sự cố thật: Hoa dùng app chính thức trên Android, gửi lượt và n
 - **Đo tầng edge (live, không cần PIN):** `/health` 5 lần 0,23–0,54s; POST thiếu PIN → 401 trong 0,29–0,59s. Edge Cloudflare + mã Worker ở các đường nhanh đều dưới 0,6s → điểm nghẽn ở chặng Worker→Gemini.
 - **Yếu tố đầu vào đo được:** `systemInstruction` HSK2 dài **13.516 ký tự** mỗi lượt (danh sách ngữ pháp 10.680 ký tự chiếm phần lớn), gửi lặp mọi lượt; model là model suy luận cao cấp dù đã đặt thinking `low`. Tỉ lệ đóng góp của từng yếu tố CHƯA đủ bằng chứng — cần số đo `gemini_ms` từ production.
 - **Thay đổi ở vòng này (nhánh riêng, chưa merge/deploy):** (1) Worker ghi log `tutor_timing` mỗi lượt (type/model/instruction_chars/history_turns/audio_kb/status/code/gemini_ms — chỉ số đo, KHÔNG nội dung/PIN/key) và response thành công kèm `timings.geminiMs`; (2) frontend hiện pha chờ (kết nối → đang suy nghĩ → vẫn đang xử lý) kèm số giây đã chờ, và sau trả lời hiện "AI đã trả lời sau X giây."; khóa gửi trùng giữ nguyên; (3) thu gọn prompt: danh sách ngữ pháp giữ pattern, bỏ nhãn tiếng Việt trùng lặp — instruction HSK2 còn **8.574 ký tự (−37%)**, danh sách từ giữ nguyên; (4) timeout giữ nguyên 25s/30s — chờ số đo production mới quyết định (tăng hạn Worker hoặc đổi `GEMINI_MODEL` sang `gemini-3.5-flash-lite` là quyết định của Hoa sau khi có dữ liệu).
+- **Review fix (Hoa duyệt diff PR #155, cùng ngày):** telemetry sửa đúng
+  nghĩa — `gemini_ms` chỉ đo cửa sổ gọi Gemini + xử lý response;
+  `worker_ms` đo từ đầu fetch handler tới lúc tạo response; trường
+  `total_ms` gây hiểu nhầm bị bỏ. Log ghi **đúng HTTP status trả về**
+  (200/504/429/502/401/403/413/400) nhờ dùng chung một hàm ánh xạ lỗi
+  `geminiErrorHttp` cho cả response và log; các lỗi từ chối sớm (PIN,
+  origin, quá lớn, rate limit) cũng ghi log và **không có `gemini_ms`**
+  vì Gemini chưa được gọi. Thông báo frontend đổi thành "Gemini đã xử
+  lý trong X giây." cho khớp số liệu. Test repo tăng lên **370/370**
+  (thêm test khóa status log cho success/timeout/rate-limit/truncated/
+  PIN + bảo mật log); battery Worker v2 6/6. contentVersion nhánh:
+  `20261117-ai-tutor4`.
 - **Test vòng này:** repo **369/369** (thêm 2 test: instruction < 10.000 ký tự vẫn chứa pattern + danh sách từ; response Worker có `timings.geminiMs` và dòng log không chứa PIN/nội dung). Battery Worker riêng 7/7 (gồm Gemini treo → 504 đúng ở ~25s; MAX_TOKENS; x-wav). Harness DOM cho UX chờ: KHÔNG chạy lại được trong môi trường này (jsdom không thực thi dynamic import của view — giới hạn môi trường; module đã chạy thật trên Android của Hoa). Latency Gemini production: CHƯA ĐO ĐƯỢC — chỉ có sau khi Hoa deploy Worker của nhánh này và chạy lượt thật.
 
 ## B. REAL-WORLD INTEGRATION TESTS — trạng thái thật

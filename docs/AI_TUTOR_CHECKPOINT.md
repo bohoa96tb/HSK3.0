@@ -1,7 +1,7 @@
 # AI TUTOR — Checkpoint
 
 - **Trạng thái hiện tại (2026-11-17): ĐÃ MERGE vào `main` qua PR #154** (merge commit `e4576b6`) theo lệnh của Hoa; nghiệm thu live đạt: Pages chính thức phục vụ contentVersion `20261117-ai-tutor2`, module JS trả 200 đúng MIME, liên kết Giáo viên AI ở sidebar. (Commit tài liệu `ca3cd24` sau merge là commit RỖNG do lỗi neo văn bản khi sửa file — nội dung ghi nhận merge được bổ sung tại nhánh dưới đây.)
-- **Sự cố độ trễ:** lượt thật đầu tiên của Hoa trên Android nhận 504 TIMEOUT của Worker (Gemini không trả trong 25s). Vòng điều tra + sửa ở nhánh **`fix/ai-tutor-latency`** (từ main `ca3cd24`): Worker ghi log `tutor_timing` + trả `timings.geminiMs`; frontend hiện pha chờ kèm số giây và thời gian trả lời; prompt thu gọn −37% (13.516 → 8.574 ký tự). Test 369/369 + battery Worker 7/7. **Chưa merge, chưa deploy Worker của nhánh.**
+- **Sự cố độ trễ:** lượt thật đầu tiên của Hoa trên Android nhận 504 TIMEOUT của Worker (Gemini không trả trong 25s). Vòng điều tra + sửa ở nhánh **`fix/ai-tutor-latency`** (từ main `ca3cd24`): Worker ghi log `tutor_timing` + trả `timings.geminiMs`; frontend hiện pha chờ kèm số giây và thời gian trả lời; prompt thu gọn −37% (13.516 → 8.574 ký tự). Test 369/369 + battery Worker 7/7. Sau review của Hoa: telemetry sửa đúng nghĩa (gemini_ms/worker_ms tách bạch, log đúng HTTP status, bỏ total_ms), PR #155 đã mở; test 370/370 + battery v2 6/6, contentVersion nhánh `20261117-ai-tutor4`. **Chưa merge, chưa deploy Worker của nhánh.**
 - **Phiên bản:** main ở `20261117-ai-tutor2`; nhánh độ trễ ở `20261117-ai-tutor3`.
 
 ## Đã xong theo chặng

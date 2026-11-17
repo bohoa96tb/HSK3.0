@@ -8,7 +8,7 @@ frontend, HTML, repo, localStorage, URL hay log.
 
 | Model | Trạng thái | GenerateContent | Audio input | Ghi chú |
 |---|---|---|---|---|
-| `gemini-4-hydrogen` (mặc định) | GA 12/11/2026 (Google Cloud model card, cập nhật 2026-11-13) | Có | Có (input only) | Context 1.048.576 token; output đồng bộ tối đa 65.536 — Worker vẫn khóa cứng `maxOutputTokens: 600`. |
+| `gemini-4-hydrogen` (mặc định) | GA 12/11/2026 (Google Cloud model card, cập nhật 2026-11-13) | Có | Có (input only) | Context 1.048.576 token; output đồng bộ tối đa 65.536 — Worker khóa `maxOutputTokens: 800` kèm `thinkingConfig.thinkingLevel: "low"` (bản production v4, xem mục 8). |
 | `gemini-3.5-flash-lite` (tiết kiệm, qua `GEMINI_MODEL`) | GA 21/07/2026 | Có | Có (input only) | Model 3.5 rẻ/nhanh nhất; hợp Structured JSON. |
 
 Cả hai dùng chung cấu hình `responseMimeType: "application/json"` +
@@ -57,11 +57,14 @@ nghị luôn đặt PIN** trước khi chia sẻ URL app cho người khác.
 
 ## 5. Giới hạn chi phí & lạm dụng đã cài
 
-- Body tối đa **500 KB** (kiểm tra cả `Content-Length` và byte thực nhận) → 413.
+- Body tối đa **500 KB** → 413, khóa 3 lớp: pre-check `Content-Length`, **đọc dạng stream và hủy ngay khi vượt ngưỡng** (không nạp hết body vào bộ nhớ), kiểm lại byte thực nhận.
 - Chỉ nhận audio MIME: webm/mp4/ogg/wav/mpeg; client ghi tối đa 20 giây và
   kiểm tra kích thước Blob trước khi mã hóa Base64.
-- Rate limit cơ bản trong bộ nhớ: **30 lượt / 10 phút / (IP + chế độ PIN)** →
-  429. Đây là giới hạn *theo từng isolate* của Cloudflare (không toàn cục).
+- Rate limit cơ bản trong bộ nhớ: **30 lượt / 10 phút / (IP + PIN)** (PIN được
+  băm làm thẻ bucket, không ghi log) → 429. Bucket hết hạn được dọn; khi quá
+  5.000 bucket chỉ evict bucket cũ nhất — **không bao giờ xóa sạch toàn bộ**
+  (xóa sạch sẽ cho phép vượt giới hạn). Đây là giới hạn *theo từng isolate*
+  của Cloudflare (không toàn cục).
   Muốn chặn cứng toàn cục, thêm **Cloudflare Rate Limiting rule** cho route
   của Worker trong dashboard (miễn phí ở mức cơ bản) hoặc Durable Object —
   ngoài phạm vi bản này, ghi rõ để không ngộ nhận.
@@ -78,6 +81,30 @@ nghị luôn đặt PIN** trước khi chia sẻ URL app cho người khác.
   Đáp: schema Structured Outputs gồm `user_transcript_*`, `evaluation`
   (kèm `pronunciation_status` + `pronunciation_feedback_vi` theo Phụ lục
   VIII) và `tutor_reply` (kèm `out_of_level_words`).
+
+## 8. Phiên bản production & quy tắc đồng bộ
+
+**Bản đang chạy production: v4 (2026-11-17)** — chính là file `worker.js`
+trong thư mục này, SHA-256:
+`939a0ccdcaf17bb696ff8f6fc78387e10c853effb236b414ea04d8ffc153f718`.
+So với bản đầu của nhánh (f1cffec), v4 thay đổi đúng 5 điểm, đã kiểm thử
+riêng từng điểm: (1) `thinkingLevel: "low"` + `maxOutputTokens: 800`
+(Hydrogen mặc định suy luận ở mức high và token suy luận tính vào trần
+output — trần 600 cũ có thể bị cắt JSON); (2) rate limit theo IP+PIN và
+không xóa sạch bucket; (3) đọc body dạng stream có hủy sớm; (4) chuẩn hóa
+`audio/x-wav` → `audio/wav` trước khi gọi Gemini; (5) lỗi `MAX_TOKENS` có
+mã/thông báo riêng (`TRUNCATED`).
+
+Quy tắc đồng bộ (bắt buộc):
+- **Repo là nguồn sự thật duy nhất.** File `worker.js` ở đây phải luôn
+  trùng byte với bản đang chạy trên Cloudflare.
+- Deploy = dán đúng nội dung file này vào Cloudflare Dashboard
+  (Edit code) hoặc `wrangler deploy` từ thư mục này. Không sửa code trực
+  tiếp trên Dashboard rồi để lệch repo; nếu buộc phải hotfix trên
+  Dashboard, chép lại vào repo trong cùng vòng làm việc và ghi vào
+  checkpoint.
+- Secrets (`GEMINI_API_KEY`, `TUTOR_ACCESS_PIN`) chỉ quản lý trong
+  Cloudflare (mục 2) — không đổi khi đồng bộ code, không ghi vào repo.
 
 ## 7. Kiểm tra nhanh sau deploy
 

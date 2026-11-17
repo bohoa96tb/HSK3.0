@@ -43,7 +43,7 @@ Tổng: 17 file (13 mới, 4 sửa). Không có thay đổi nào ngoài phạm v
 - **Lỗi F2 (phòng ngừa, có bằng chứng live): URL Worker có dấu `/` ở cuối.** Cả hai form lưu cấu hình đã tự cắt `/` thừa, nhưng cấu hình lưu từ bản cũ thì không; probe live: `POST //api/tutor-turn` → **404 NOT_FOUND**. Đã thêm `normalizeWorkerUrl` (tutor-storage) áp dụng khi nạp cấu hình + khi gọi API. Test đơn vị + harness (state cũ có `/` → request đi đúng `https://worker.test/api/tutor-turn`) đều đạt.
 - Harness DOM vòng 2 (jsdom, Worker giả lập ở tầng fetch): **15/15** — 6 route cũ + tiến độ/settings có khối AI Tutor; thanh dưới vẫn 5 nút; khóa gửi trùng; chuẩn hóa URL; bong bóng + thẻ sửa lỗi dựng đúng; lỗi được ghi vào state, không có dữ liệu audio trong storage; khóa tiến độ chính nguyên vẹn.
 - Bump `contentVersion` → `20261117-ai-tutor2` đồng bộ 13 token `?v=` (data/content.json, index.html, src/app.js, js/ai-tutor/tutor-view.js, 2 dòng ghim trong tests/wb-reading-writing.test.mjs) — đúng bài học PR #153.
-- **Lệch repo ↔ production cần nhớ:** file `workers/ai-tutor-proxy/worker.js` TRONG repo vẫn là bản f1cffec (maxOutputTokens 600, chưa có thinking low); bản đang chạy production là bản bàn giao v4 ngoài repo (thinking `low`, 800 token, rate limit IP+PIN, đọc body dạng stream, chuẩn hóa `audio/x-wav`). Khi mở PR chính thức cần đồng bộ file repo theo v4.
+- **Đồng bộ repo ↔ production (đã thực hiện 2026-11-17 theo quyết định của Hoa):** file `workers/ai-tutor-proxy/worker.js` trong repo đã được thay bằng đúng bản production v4 (SHA-256 `939a0ccd…`, đối chiếu byte) + README Worker bổ sung mục 8 ghi phiên bản production và quy tắc đồng bộ. Commit này nằm trên nhánh, thuộc PR #154. Worker production KHÔNG bị đụng vào (không deploy lại, không đổi secret/CORS).
 
 ---
 

@@ -1,21 +1,49 @@
-// HSK3.0 AI Tutor — Cloudflare Worker proxy for Google Gemini.
-// The Gemini API key lives ONLY as a Worker secret (env.GEMINI_API_KEY).
-// It is never sent to the browser, never logged, never put in a URL.
+// =====================================================================
+// HSK3.0 AI Tutor — Cloudflare Worker proxy for Google Gemini
+// FINAL HANDOFF v4 (2026-11-17) — complete drop-in replacement.
+// Supersedes v3: same frontend contract, three hardening fixes from
+// the final review round (rate-limit keying/eviction, streaming body
+// cap, audio MIME normalisation). No other behaviour changed.
 //
-// Endpoint: POST /api/tutor-turn
-// Health:   GET  /health
+// Contract-verified line by line against the frontend at branch
+// feat/ai-tutor commit f1cffec (js/ai-tutor/tutor-view.js):
+//   POST {workerUrl}/api/tutor-turn
+//   Request : { sessionId, level, mode, scenarioId?, systemInstruction,
+//               history: [{role, hanzi}] (max 10),
+//               userText }                       — text turn
+//             { ..., userAudioBase64, audioMimeType } — audio turn
+//   Header  : X-Tutor-Pin (sent by the app only when a PIN is set)
+//   Response: { ok:true, user_transcript_hanzi, user_transcript_pinyin,
+//               evaluation: { has_error, error_type, corrected_hanzi,
+//                             corrected_pinyin, explanation_vi,
+//                             pronunciation_status,
+//                             pronunciation_feedback_vi },
+//               tutor_reply: { hanzi, pinyin, translation_vi,
+//                              out_of_level_words }, model }
+//   Errors  : { ok:false, code, error } — Vietnamese messages.
 //
-// Security/cost controls (see README.md):
-// - CORS allowlist (no wildcard): https://bohoa96tb.github.io + localhost dev.
-// - Optional shared PIN via env TUTOR_ACCESS_PIN + header X-Tutor-Pin
-//   (timing-safe compare; PIN is a cost gate, not real authentication).
-// - Body hard cap 500 KB (Content-Length AND actual bytes) -> HTTP 413.
-// - Audio MIME allowlist; base64 audio size checked after decode estimate.
-// - Basic per-IP+PIN in-memory rate limit -> HTTP 429 (per isolate; pair
-//   with a Cloudflare Rate Limiting rule for production, see README).
-// - Gemini call: single attempt, 25 s timeout, maxOutputTokens hard cap 600,
-//   Structured Outputs (responseMimeType + responseSchema). No automatic
-//   model fallback: upstream errors are mapped to Vietnamese messages.
+// Security & limits:
+//   - CORS allowlist ONLY: https://bohoa96tb.github.io plus
+//     localhost / 127.0.0.1 on any port (local development). No "*".
+//   - PIN (env TUTOR_ACCESS_PIN) compared timing-safe; enforced
+//     whenever the secret is configured; never logged. PRODUCTION
+//     MUST SET THIS SECRET — without it the endpoint is open.
+//   - Body cap 500 KB enforced THREE ways: Content-Length pre-check,
+//     streaming read that aborts as soon as the cap is exceeded,
+//     and a final byte count. Oversize -> 413.
+//   - Audio: MIME allowlist; audio/x-wav is normalised to audio/wav
+//     before calling Gemini (both are listed/supported formats:
+//     ai.google.dev audio guide lists audio/wav and audio/webm).
+//   - Rate limit: 30 requests / 10 minutes per (IP + PIN) bucket.
+//     Expired buckets are pruned; live buckets are NEVER wiped —
+//     under memory pressure only the oldest buckets are evicted.
+//   - Gemini: v1beta generateContent, key via x-goog-api-key header,
+//     25 s timeout, single attempt, maxOutputTokens 800 with
+//     thinkingConfig.thinkingLevel "low" (Gemini 4 thinks at "high"
+//     by default and thought tokens count toward the output cap).
+//   - The Gemini API key exists ONLY as a Cloudflare Secret; it is
+//     never returned in responses and never written to logs.
+// =====================================================================
 
 const MAX_BODY_BYTES = 500 * 1024;
 const MAX_HISTORY_TURNS = 10;
@@ -70,14 +98,60 @@ function safeEqual(a, b) {
   return diff === 0;
 }
 
+// Bucket tag derived from the configured PIN (FNV-1a hash — used only
+// to separate buckets, never logged, not a security control by itself).
+function pinTagOf(pin) {
+  const s = String(pin || "");
+  if (!s) return "open";
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return "p" + h.toString(16);
+}
+
 function rateLimited(key) {
   const now = Date.now();
+  if (rateBuckets.size > 1000) {
+    // Prune expired buckets first.
+    for (const [k, b] of rateBuckets) {
+      if (now - b.start > RATE_LIMIT.windowMs) rateBuckets.delete(k);
+    }
+    // Still oversized: evict OLDEST buckets one by one. Live buckets
+    // are never wiped wholesale — a flood cannot reset other users'
+    // counters (that was the v3 flaw this replaces).
+    while (rateBuckets.size > 5000) {
+      const oldest = rateBuckets.keys().next().value;
+      if (oldest === undefined || oldest === key) break;
+      rateBuckets.delete(oldest);
+    }
+  }
   const bucket = rateBuckets.get(key) || { start: now, count: 0 };
   if (now - bucket.start > RATE_LIMIT.windowMs) { bucket.start = now; bucket.count = 0; }
   bucket.count += 1;
   rateBuckets.set(key, bucket);
-  if (rateBuckets.size > 5000) rateBuckets.clear(); // crude memory guard
   return bucket.count > RATE_LIMIT.max;
+}
+
+// Read the request body as a stream and abort as soon as the byte cap
+// is exceeded, so an oversize (or endless) body is never fully loaded
+// into memory. Returns the decoded string, or null when over the cap.
+async function readBodyCapped(request, maxBytes) {
+  if (!request.body) return "";
+  const reader = request.body.getReader();
+  const decoder = new TextDecoder();
+  let total = 0;
+  let out = "";
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      try { await reader.cancel(); } catch { /* already closed */ }
+      return null;
+    }
+    out += decoder.decode(value, { stream: true });
+  }
+  out += decoder.decode();
+  return out;
 }
 
 const RESPONSE_SCHEMA = {
@@ -135,6 +209,15 @@ const SERVER_GUARDRAILS = [
   "6. Từ vượt cấp nếu buộc phải dùng phải liệt kê đầy đủ vào tutor_reply.out_of_level_words.",
 ].join("\n");
 
+// Canonical MIME sent to Gemini. audio/x-wav is an alias of audio/wav
+// (the name in Google's supported-format list); codec parameters are
+// stripped. Everything else passes through unchanged.
+function normalizeAudioMime(mime) {
+  const m = String(mime || "").split(";")[0].trim().toLowerCase();
+  if (m === "audio/x-wav") return "audio/wav";
+  return m;
+}
+
 function validateTurn(body) {
   if (!body || typeof body !== "object") return "Thân yêu cầu không hợp lệ.";
   if (typeof body.sessionId !== "string" || !body.sessionId || body.sessionId.length > 80) return "Thiếu sessionId hợp lệ.";
@@ -170,7 +253,7 @@ function buildContents(body) {
   if (typeof body.userAudioBase64 === "string" && body.userAudioBase64) {
     parts.push({
       inlineData: {
-        mimeType: String(body.audioMimeType || "audio/webm").split(";")[0].trim().toLowerCase(),
+        mimeType: normalizeAudioMime(body.audioMimeType || "audio/webm"),
         data: body.userAudioBase64,
       },
     });
@@ -189,7 +272,11 @@ async function callGemini(env, body) {
     generationConfig: {
       responseMimeType: "application/json",
       responseSchema: RESPONSE_SCHEMA,
-      maxOutputTokens: 600,
+      // Thought tokens count toward maxOutputTokens on Gemini 4; keep
+      // thinking at "low" (docs: fewest tokens, lowest latency, suited
+      // to fast chat) and reserve the 800-token cap for the JSON body.
+      thinkingConfig: { thinkingLevel: "low" },
+      maxOutputTokens: 800,
     },
   };
   const controller = new AbortController();
@@ -217,6 +304,11 @@ async function callGemini(env, body) {
     const err = new Error("upstream"); err.code = "GEMINI_UPSTREAM"; err.status = res.status; throw err;
   }
   const data = await res.json();
+  const finishReason = data?.candidates?.[0]?.finishReason || "";
+  if (finishReason === "MAX_TOKENS") {
+    console.log(`gemini_truncated model=${model}`);
+    const err = new Error("truncated"); err.code = "GEMINI_TRUNCATED"; throw err;
+  }
   const text = data?.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
   let parsed;
   try { parsed = JSON.parse(text); }
@@ -260,14 +352,13 @@ export default {
       return errorVi(413, "TOO_LARGE", "Dữ liệu gửi lên quá lớn (tối đa 500 KB). Hãy nói câu ngắn hơn.", origin);
     }
     const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-    const pinTag = env.TUTOR_ACCESS_PIN ? "pin" : "open";
-    if (rateLimited(`${ip}|${pinTag}`)) {
+    if (rateLimited(`${ip}|${pinTagOf(env.TUTOR_ACCESS_PIN)}`)) {
       return errorVi(429, "RATE_LIMIT", "Bạn gửi quá nhanh. Đợi vài phút rồi thử lại nhé.", origin);
     }
     let raw;
-    try { raw = await request.text(); }
+    try { raw = await readBodyCapped(request, MAX_BODY_BYTES); }
     catch { return errorVi(400, "BAD_BODY", "Không đọc được dữ liệu gửi lên.", origin); }
-    if (new TextEncoder().encode(raw).length > MAX_BODY_BYTES) {
+    if (raw === null) {
       return errorVi(413, "TOO_LARGE", "Dữ liệu gửi lên quá lớn (tối đa 500 KB). Hãy nói câu ngắn hơn.", origin);
     }
     let body;
@@ -284,6 +375,7 @@ export default {
         case "GEMINI_TIMEOUT": return errorVi(504, "TIMEOUT", "Máy chủ AI phản hồi quá chậm. Thử lại sau ít giây nhé.", origin);
         case "GEMINI_RATE_LIMIT": return errorVi(429, "RATE_LIMIT", "Hệ thống AI đang quá tải. Đợi một lát rồi thử lại.", origin);
         case "GEMINI_BAD_JSON": return errorVi(502, "BAD_RESPONSE", "AI trả về dữ liệu không hợp lệ. Thử lại một lần nữa nhé.", origin);
+        case "GEMINI_TRUNCATED": return errorVi(502, "TRUNCATED", "Câu trả lời của AI bị cắt ngắn giữa chừng. Hãy nói câu ngắn hơn rồi thử lại.", origin);
         default: return errorVi(502, "UPSTREAM", "Chưa nối được tới AI. Kiểm tra mạng rồi thử lại.", origin);
       }
     }
@@ -291,4 +383,4 @@ export default {
 };
 
 // Exported for unit tests (tests/ai-tutor.test.mjs imports these helpers).
-export const _internal = { isAllowedOrigin, safeEqual, validateTurn, buildContents, RESPONSE_SCHEMA, MAX_BODY_BYTES };
+export const _internal = { isAllowedOrigin, safeEqual, validateTurn, buildContents, RESPONSE_SCHEMA, MAX_BODY_BYTES, normalizeAudioMime, pinTagOf, readBodyCapped };

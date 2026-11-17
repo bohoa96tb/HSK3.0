@@ -70,6 +70,32 @@ Sự cố thật: Hoa dùng app chính thức trên Android, gửi lượt và n
 - **Kết quả phát hành:** PR #155 ĐÃ MERGE vào main ngày 2026-11-17 (merge commit `b414e8b`); nghiệm thu live frontend đạt (Pages `20261117-ai-tutor4`). Worker production vẫn là bản v4 cũ cho tới khi Hoa deploy bản mới — số đo `gemini_ms` production vẫn CHƯA CÓ.
 - **Test vòng này:** repo **369/369** (thêm 2 test: instruction < 10.000 ký tự vẫn chứa pattern + danh sách từ; response Worker có `timings.geminiMs` và dòng log không chứa PIN/nội dung). Battery Worker riêng 7/7 (gồm Gemini treo → 504 đúng ở ~25s; MAX_TOKENS; x-wav). Harness DOM cho UX chờ: KHÔNG chạy lại được trong môi trường này (jsdom không thực thi dynamic import của view — giới hạn môi trường; module đã chạy thật trên Android của Hoa). Latency Gemini production: CHƯA ĐO ĐƯỢC — chỉ có sau khi Hoa deploy Worker của nhánh này và chạy lượt thật.
 
+## A7. Vòng fast-model (2026-11-17, nhánh `fix/ai-tutor-fast-model` từ main `be5cbee`, CHƯA merge/deploy)
+
+Chỉ đạo trực tiếp của Hoa sau khi lượt thật vẫn chạm 504 ở đúng 25s trên
+bản telemetry: đổi hướng sang model tốc độ cao thay vì chờ đo thêm.
+- Worker: `DEFAULT_MODEL` = `gemini-2.5-flash`; `GEMINI_TIMEOUT_MS`
+  25.000 → **40.000** (dự phòng lượt audio); `thinkingConfig` theo họ
+  model qua `thinkingConfigFor` — gemini-2.5 → `{thinkingBudget: 0}`,
+  gemini-3/4 → `{thinkingLevel: "low"}`, khác → không gắn (tránh 400).
+  Đổi ngược lại chỉ cần đặt secret `GEMINI_MODEL` (ví dụ
+  `gemini-4-hydrogen`) — không sửa code.
+- Lỗi UPSTREAM minh bạch: Worker đọc `error.status` của Google (lọc
+  dạng token viết hoa, tối đa 40 ký tự), thông báo lỗi kèm mã HTTP thật
+  ("Không gọi được model AI (mã lỗi Google: 404)…"); response lỗi ở
+  tầng Gemini kèm `upstreamStatus` + `timings.geminiMs`; log
+  `tutor_timing` kèm `upstreamStatus` và `google_status` khi có. Key
+  không bao giờ vào log/response (có test khóa bằng key giả định danh).
+- Frontend: timeout 30s → **45s** (luôn lớn hơn hạn Worker 40s để nhận
+  đúng JSON lỗi của Worker). contentVersion `20261117-ai-tutor5`.
+- Test: repo **372/372** (thêm test mặc định model/timeout/thinkingConfig
+  3 họ + payload thật theo từng model + UPSTREAM 400 kèm mã); battery
+  riêng 5/5 (health báo model mới, upstream 404 → 502 kèm mã + log
+  google_status, Gemini treo → 504 đúng ở ~40s).
+- Production CHƯA đổi: vẫn chạy Worker v4 + model hydrogen cho tới khi
+  Hoa merge PR này và tự deploy Worker bản mới. Latency thật của
+  2.5-flash trên tài khoản của Hoa vẫn cần lượt thật xác nhận.
+
 ## B. REAL-WORLD INTEGRATION TESTS — trạng thái thật
 
 ### B1. Gemini API thật qua Worker đã triển khai — 🟡 MỘT PHẦN (đã có lượt thật đầu tiên: 504 TIMEOUT — xem A6; lượt thành công vẫn chờ)

@@ -272,3 +272,58 @@ test("worker timing logs carry the real HTTP status for success, timeout, rate l
     assert.ok(!r.all.includes("CÂU BÍ MẬT"), "log must not contain conversation content");
   }
 });
+
+// ---------- Fast-model round (2026-11-17) ----------
+test("fast model defaults: gemini-2.5-flash, 40 s timeout, per-family thinking config", () => {
+  assert.equal(_internal.DEFAULT_MODEL, "gemini-2.5-flash");
+  assert.equal(_internal.GEMINI_TIMEOUT_MS, 40000);
+  assert.deepEqual(_internal.thinkingConfigFor("gemini-2.5-flash"), { thinkingBudget: 0 });
+  assert.deepEqual(_internal.thinkingConfigFor("gemini-4-hydrogen"), { thinkingLevel: "low" });
+  assert.deepEqual(_internal.thinkingConfigFor("gemini-3.5-flash-lite"), { thinkingLevel: "low" });
+  assert.equal(_internal.thinkingConfigFor("gemini-2.0-flash"), null);
+  assert.equal(_internal.thinkingConfigFor(""), null);
+});
+
+test("worker sends the right thinkingConfig per model and surfaces Google status on upstream errors", async () => {
+  const payload = {
+    user_transcript_hanzi: "你好", user_transcript_pinyin: "nǐhǎo",
+    evaluation: { has_error: false, error_type: "none", corrected_hanzi: "", corrected_pinyin: "", explanation_vi: "", pronunciation_status: "not_assessed", pronunciation_feedback_vi: "" },
+    tutor_reply: { hanzi: "你好！", pinyin: "Nǐhǎo!", translation_vi: "Xin chào!", out_of_level_words: [] },
+  };
+  const realFetch = globalThis.fetch; const realLog = console.log;
+  const turn = { sessionId: "s1", level: "HSK1", mode: "tutor", systemInstruction: "Bạn là giáo viên.", history: [], userText: "你好" };
+  async function call(stub, env) {
+    const lines = []; let sentBody = null;
+    console.log = (...a) => lines.push(a.join(" "));
+    globalThis.fetch = async (url, init) => { if (String(url).includes("generativelanguage")) sentBody = JSON.parse(init.body); return stub(url, init); };
+    try {
+      const res = await worker.fetch(new Request("https://w.example/api/tutor-turn", {
+        method: "POST", headers: { "Content-Type": "application/json", Origin: "https://bohoa96tb.github.io", "X-Tutor-Pin": "pin-1" },
+        body: JSON.stringify(turn),
+      }), env, {});
+      return { res, data: await res.json(), lines, sentBody };
+    } finally { globalThis.fetch = realFetch; console.log = realLog; }
+  }
+  const okGem = async () => new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(payload) }] }, finishReason: "STOP" }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+  const base = { GEMINI_API_KEY: "SECRET-KEY-XYZ", TUTOR_ACCESS_PIN: "pin-1" };
+
+  const dflt = await call(okGem, { ...base });
+  assert.equal(dflt.res.status, 200);
+  assert.deepEqual(dflt.sentBody.generationConfig.thinkingConfig, { thinkingBudget: 0 });
+
+  const h4 = await call(okGem, { ...base, GEMINI_MODEL: "gemini-4-hydrogen" });
+  assert.deepEqual(h4.sentBody.generationConfig.thinkingConfig, { thinkingLevel: "low" });
+
+  const f20 = await call(okGem, { ...base, GEMINI_MODEL: "gemini-2.0-flash" });
+  assert.ok(!("thinkingConfig" in f20.sentBody.generationConfig));
+
+  const up = await call(async () => new Response(JSON.stringify({ error: { status: "INVALID_ARGUMENT", message: "bad field" } }), { status: 400, headers: { "Content-Type": "application/json" } }), { ...base });
+  assert.equal(up.res.status, 502);
+  assert.match(up.data.error, /mã lỗi Google: 400/);
+  assert.equal(up.data.upstreamStatus, 400);
+  assert.equal(typeof up.data.timings?.geminiMs, "number");
+  const line = up.lines.find((l) => l.startsWith("tutor_timing "));
+  assert.match(line, /"upstreamStatus":400/);
+  assert.match(line, /"google_status":"INVALID_ARGUMENT"/);
+  assert.ok(!up.lines.join(" ").includes("SECRET-KEY-XYZ"), "log must not contain the API key");
+});

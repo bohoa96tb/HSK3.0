@@ -1,4 +1,4 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261115-hsk2-l7-wb";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261117-ai-tutor2";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
@@ -137,6 +137,7 @@ function renderInner() {
     if (!seg[2]) return viewWritingSet(wctx, seg[1], query);
     return viewWritingChar(wctx, seg[1], seg[2]);
   }
+  if (page === "tutor") return viewTutor();
   if (page === "sources") return viewSources(seg[1]);
   main.innerHTML = `<section class="card"><h1>Không tìm thấy trang</h1><p>Đường dẫn không đúng hoặc nội dung chưa có.</p><a class="btn primary" href="#/today">Về Hôm nay</a></section>`;
 }
@@ -170,7 +171,7 @@ function viewToday() {
     <div class="dashboard-side"><section class="card"><p class="kicker">BƯỚC NHỎ HÔM NAY</p><h2>${done}<span class="muted"> / ${sections.length} mục</span></h2><div class="progress-bar"><div style="width:${done/sections.length*100}%"></div></div><p class="muted small">${next ? 'Tiếp theo: '+esc(next.titleVi) : 'Bạn đã đi hết các mục của bài.'}</p><a href="#/progress">Xem tiến độ →</a></section>
     <section class="card review-teaser"><span class="eyebrow">ÔN ĐỂ NHỚ LÂU</span><h2>${due ? due+' mục đến hạn' : 'Dành một phút ôn lại'}</h2><p class="muted small">Ôn những phần bạn còn chậm, theo nhịp của bạn.</p><a href="#/review">Mở sổ ôn tập →</a></section></div></div>
     <div class="section-heading"><h2>Học theo cách của bạn</h2><a href="#/course/HSK%201">Xem lộ trình →</a></div>
-    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>${esc(c.intro.courseTagsVi||'')}</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>${esc(c.exerciseSet.titleVi)}</p><span>Luyện tập →</span></a><a class="quick-card" href="#/writing"><span class="tile-icon" lang="zh-CN">写</span><h3>Luyện viết chữ Hán</h3><p>Viết từng nét theo sách viết HSK 2.</p><span>Mở khu luyện viết →</span></a></div>
+    <div class="quick-grid"><a class="quick-card" href="#/lesson/${l.id}/reader"><span class="tile-icon">♫</span><h3>Nghe một cuộc trò chuyện</h3><p>Nghe trước, mở lời thoại sau.</p><span>Nghe & đọc →</span></a><a class="quick-card" href="#/grammar"><span class="tile-icon" lang="zh-CN">文</span><h3>Hiểu cách dùng</h3><p>${esc(c.intro.courseTagsVi||'')}</p><span>Tra cứu →</span></a><a class="quick-card" href="#/lesson/${l.id}/exercises"><span class="tile-icon">✓</span><h3>Thử điều vừa học</h3><p>${esc(c.exerciseSet.titleVi)}</p><span>Luyện tập →</span></a><a class="quick-card" href="#/writing"><span class="tile-icon" lang="zh-CN">写</span><h3>Luyện viết chữ Hán</h3><p>Viết từng nét theo sách viết HSK 2.</p><span>Mở khu luyện viết →</span></a><a class="quick-card" href="#/tutor"><span class="tile-icon" aria-hidden="true">🎙</span><h3>Nói với giáo viên AI</h3><p>Luyện hội thoại và nhập vai theo vốn từ của bài.</p><span>Mở Giáo viên AI →</span></a></div>
     <p class="source-footer">${["HSK 1","HSK 2"].map(lv=>{const n=readyLessons().filter(x=>x.level===lv).length; return n? lv+': '+n+' bài đang mở':'';}).filter(Boolean).join(' · ')} · Học liệu từ Baulchino · <a href="#/sources">Nguồn và phạm vi đã kiểm tra</a></p>`;
 }
 
@@ -1787,9 +1788,73 @@ function viewProgress() {
   <p>Bài nghe–viết: ${selfDone}/${c.selfCheckTasks.length} bài đã tự đánh giá mức nhớ; điểm chấm tự động (đáp án đã đối chiếu) xem ở mục Tổng kết của bài và ngay trong phần Luyện tập.</p>
   <p class="row-actions"><a class="btn" href="#/lesson/${lesson.id}">Mở Bài ${lesson.lessonNumber}</a></p></section>`; }).join("")}
   <section class="card"><h2>Tổng quan</h2>
-  <p>Mục ôn đang theo dõi: ${Object.keys(p.reviewItems).length}.</p>
+  <p>Mục ôn đang theo dõi: ${Object.keys(p.reviewItems).length}.</p>${tutorStatsHtml()}
   <p class="muted">Các bài còn lại của HSK 1 mới ở mức mục lục đã kiểm chứng; chưa có tiến độ vì chưa mở bài học.</p>
   <a class="btn" href="#/course/HSK%201">Xem lộ trình</a></section>`;
+}
+
+// ---------- AI Tutor (module js/ai-tutor/, lazy-loaded; xem docs/AI_TUTOR_REPO_MAP.md) ----------
+// Reads ONLY the module's own key; any failure degrades to a plain note so
+// Progress/Settings keep working exactly as before.
+function tutorStatsHtml() {
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem("hsk3_ai_tutor_state") || "null"); } catch { s = null; }
+  if (!s || !s.config?.enabled && !(s.stats?.totalSessions > 0)) {
+    return `<section class="card"><h2>Giáo viên AI</h2><p class="muted">Chưa có lượt luyện nói nào. Mở module để luyện hội thoại theo vốn từ giáo trình.</p><p class="row-actions"><a class="btn" href="#/tutor">Mở Giáo viên AI →</a></p></section>`;
+  }
+  const minutes = Math.round(((s.stats?.totalSpeakingSeconds || 0) / 60) * 10) / 10;
+  const errors = Array.isArray(s.recentErrors) ? s.recentErrors : [];
+  const vocabCount = s.vocabUsage ? Object.keys(s.vocabUsage).length : 0;
+  return `<section class="card"><h2>Giáo viên AI — luyện nói</h2>
+  <p>Thời gian luyện nói: <strong>${minutes} phút</strong> · Số phiên: <strong>${s.stats?.totalSessions || 0}</strong> · Từ giáo trình đã dùng trong hội thoại: <strong>${vocabCount}</strong>.</p>
+  ${errors.length ? `<h3>Lỗi thường gặp gần đây</h3>${errors.slice(0, 10).map((e) => `<p class="row-line"><span><span lang="zh-CN">${esc(e.original_hanzi || "")}</span> → <span lang="zh-CN">${esc(e.corrected_hanzi || "")}</span><br><span class="muted small">${esc(e.explanation_vi || "")}</span></span></p>`).join("")}` : `<p class="muted">Chưa ghi lỗi nào.</p>`}
+  <p class="row-actions"><a class="btn" href="#/tutor">Mở Giáo viên AI →</a></p></section>`;
+}
+
+function viewTutor() {
+  navActive();
+  main.innerHTML = `${header("Giáo viên AI", "Luyện nói hội thoại theo đúng vốn từ giáo trình")}<p class="loading">Đang tải module luyện nói…</p>`;
+  import("../js/ai-tutor/tutor-view.js?v=20261117-ai-tutor2")
+    .then((m) => { if ((parseRoute().seg[0] || "today") === "tutor") return m.mountTutor(main, { esc, header, navActive }); })
+    .catch(() => {
+      if ((parseRoute().seg[0] || "today") === "tutor") {
+        main.innerHTML = `${header("Giáo viên AI")}<section class="card"><h1>Chưa tải được module</h1><p>Kiểm tra mạng rồi thử lại. Các phần khác của app không bị ảnh hưởng.</p><a class="btn" href="#/today">Về Hôm nay</a></section>`;
+      }
+    });
+}
+
+function mountTutorSettings() {
+  const host = document.getElementById("tutor-settings-slot");
+  if (!host) return;
+  host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2><p class="muted">Đang tải cấu hình…</p></section>`;
+  import("../js/ai-tutor/tutor-storage.js?v=20261117-ai-tutor2")
+    .then((mod) => {
+      const s = mod.loadTutorState();
+      host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2>
+      <label class="switch-row"><input type="checkbox" id="ts-enabled" ${s.config.enabled ? "checked" : ""}> Bật module Giáo viên AI (độc lập với phần còn lại của app; tắt đi thì 8 trang gốc hoạt động như cũ)</label>
+      <label class="switch-row">Worker URL <input id="ts-worker" type="url" inputmode="url" placeholder="https://hsk3-ai-tutor-proxy.…workers.dev" value="${esc(s.config.workerUrl)}" style="flex:1;min-height:44px;padding:8px 10px"></label>
+      <label class="switch-row">Mã PIN <input id="ts-pin" type="password" autocomplete="off" value="${esc(s.config.accessPin)}" style="flex:1;min-height:44px;padding:8px 10px"></label>
+      <p class="muted small">PIN lưu trên thiết bị này không phải bí mật tuyệt đối. API Key của Gemini chỉ nằm ở Cloudflare Worker, không nhập vào đây.</p>
+      <p class="row-actions"><button class="btn primary" id="ts-save" type="button">Lưu cấu hình AI</button>
+      <button class="btn ghost" id="ts-clear" type="button">Xóa lịch sử AI Tutor</button>
+      <a class="btn" href="#/tutor">Mở Giáo viên AI →</a></p>
+      <p id="ts-msg" class="muted small"></p></section>`;
+      document.getElementById("ts-save").onclick = () => {
+        mod.updateTutorState((st) => {
+          st.config = {
+            enabled: document.getElementById("ts-enabled").checked,
+            workerUrl: document.getElementById("ts-worker").value.trim().replace(/\/+$/, ""),
+            accessPin: document.getElementById("ts-pin").value,
+          };
+        });
+        document.getElementById("ts-msg").textContent = "Đã lưu cấu hình Giáo viên AI.";
+      };
+      document.getElementById("ts-clear").onclick = () => {
+        mod.clearTutorHistory();
+        document.getElementById("ts-msg").textContent = "Đã xóa lịch sử, lỗi và tiến độ AI Tutor. Cấu hình Worker được giữ nguyên; tiến độ học chính không bị đụng tới.";
+      };
+    })
+    .catch(() => { host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2><p class="muted">Chưa tải được phần cấu hình. Các cài đặt khác không bị ảnh hưởng.</p></section>`; });
 }
 
 function viewSettings() {
@@ -1818,7 +1883,9 @@ function viewSettings() {
   <div id="export-out"></div></section>
   <section class="card"><h2>Giới thiệu</h2>
   <p>HSK 3.0 · Ngữ pháp tiếng Trung — ứng dụng học theo giáo trình HSK 3.0 với nguồn học liệu duy nhất từ Baulchino. Tiếng Việt trong app là bản dịch/chú giải biên tập, không phải bản dịch chính thức. Phiên bản dữ liệu: ${esc(CONTENT.contentVersion)}.</p>
-  <p class="row-actions"><a class="btn" href="#/sources">Nguồn và kiểm chứng</a><a class="btn" href="#/progress">Tiến độ học</a></p></section>`;
+  <p class="row-actions"><a class="btn" href="#/sources">Nguồn và kiểm chứng</a><a class="btn" href="#/progress">Tiến độ học</a></p></section>
+  <div id="tutor-settings-slot"></div>`;
+  mountTutorSettings();
   $$("[data-setting]").forEach((el) => el.addEventListener("change", () => { update((p) => { p.settings[el.dataset.setting] = el.checked; }); }));
   $$("[data-setting-select]").forEach((el) => el.addEventListener("change", () => { update((p) => { p.settings[el.dataset.settingSelect] = Number(el.value); }); applyFontScale(); }));
   $("#rate-setting").onchange = (e) => { update((p) => { p.settings.playbackRate = Number(e.target.value); }); player.setRate(Number(e.target.value)); };

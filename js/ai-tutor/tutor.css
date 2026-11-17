@@ -1,0 +1,42 @@
+/* AI Tutor — isolated styles, loaded only when #/tutor opens. */
+#tutor-root .tutor-row { display: flex; gap: 12px; flex-wrap: wrap; }
+#tutor-root .tutor-row label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; }
+#tutor-root .tutor-row .grow { flex: 1; }
+#tutor-root select, #tutor-root input[type="url"], #tutor-root input[type="password"], #tutor-root input[type="text"] {
+  min-height: 44px; padding: 8px 10px; border: 1px solid var(--border, #d8d2c4); border-radius: 10px; font: inherit; background: var(--card, #fff);
+}
+.tutor-field { display: flex; flex-direction: column; gap: 4px; font-weight: 600; margin: 10px 0; }
+.tutor-scenario-info { margin-top: 10px; }
+.tutor-scenario-info ol { margin: 4px 0 8px 20px; }
+
+.tutor-chat { display: flex; flex-direction: column; gap: 12px; margin: 14px 0; }
+.tutor-bubble { background: var(--card, #fff); border: 1px solid var(--border, #e3ddcf); border-radius: 14px; padding: 12px 14px; max-width: 92%; }
+.tutor-bubble.user { align-self: flex-end; background: #eef6ee; }
+.tutor-bubble.tutor { align-self: flex-start; }
+.tutor-who { margin: 0 0 4px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted, #777); }
+.tutor-hanzi { font-size: 22px; line-height: 1.6; margin: 0; }
+.tutor-token { background: none; border: none; padding: 0; margin: 0; font: inherit; cursor: pointer; border-bottom: 1px dotted #9db89d; }
+.tutor-pinyin { margin: 2px 0 0; color: var(--muted, #666); }
+.tutor-pinyin.hidden { display: none; }
+.tutor-vi { margin: 2px 0 0; color: var(--muted, #555); }
+.tutor-bubble-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 0; }
+.tutor-bubble-actions .btn { min-height: 44px; }
+
+.tutor-correction { margin-top: 10px; border: 1px solid #e5b4b4; background: #fdf1f1; border-radius: 10px; padding: 10px 12px; }
+.tutor-correction p { margin: 4px 0; }
+.tutor-pron-note { margin-top: 8px; color: var(--muted, #555); }
+
+.tutor-lookup { position: sticky; bottom: 150px; background: var(--card, #fff); border: 1px solid var(--border, #d8d2c4); border-radius: 12px; padding: 10px 14px; box-shadow: 0 6px 24px rgba(0,0,0,.12); margin: 8px 0; z-index: 5; }
+
+.tutor-dock { position: sticky; bottom: 64px; background: var(--bg, #faf7f0); border-top: 1px solid var(--border, #e3ddcf); padding: 10px 4px calc(10px + env(safe-area-inset-bottom)); z-index: 4; }
+@media (min-width: 900px) { .tutor-dock { bottom: 0; } }
+.tutor-status { min-height: 20px; margin: 0 0 6px; font-weight: 600; }
+.tutor-dock-row { display: flex; align-items: center; gap: 10px; }
+.tutor-mic { flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; border: none; font-size: 26px; background: #2e7d32; color: #fff; cursor: pointer; box-shadow: 0 4px 14px rgba(46,125,50,.35); }
+.tutor-mic.recording { background: #c62828; animation: tutor-pulse 1s infinite; }
+@keyframes tutor-pulse { 50% { transform: scale(1.07); } }
+.tutor-stop { min-height: 44px; }
+.tutor-text-form { flex: 1; display: flex; gap: 8px; }
+.tutor-text-form input { flex: 1; min-width: 0; }
+.tutor-text-form .btn { min-height: 44px; }
+.tutor-empty p { margin: 0; }

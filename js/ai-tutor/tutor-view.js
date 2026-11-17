@@ -4,17 +4,17 @@
 
 import {
   loadLexicon, lookupLocalWord, buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
-} from "./hsk-guardrail.js?v=20261117-ai-tutor4";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor4";
+} from "./hsk-guardrail.js?v=20261117-ai-tutor5";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261117-ai-tutor5";
 import {
   loadTutorState, updateTutorState, recordSessionStart, recordSpeakingSeconds,
   recordError, recordVocabUsage, recordTopicProgress, saveConversation, clearTutorHistory,
   normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261117-ai-tutor4";
-import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor4";
+} from "./tutor-storage.js?v=20261117-ai-tutor5";
+import { VoiceRecorder, blobToBase64, speakZh, stopSpeak, MAX_AUDIO_BYTES } from "./voice-engine.js?v=20261117-ai-tutor5";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor4";
-const CLIENT_TIMEOUT_MS = 30000;
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261117-ai-tutor5";
+const CLIENT_TIMEOUT_MS = 45000; // > Worker Gemini timeout (40 s) so the app surfaces the Worker's own error JSON instead of aborting early
 
 let cssLoaded = false;
 function ensureCss() {

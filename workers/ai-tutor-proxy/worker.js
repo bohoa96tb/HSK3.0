@@ -38,9 +38,12 @@
 //     Expired buckets are pruned; live buckets are NEVER wiped —
 //     under memory pressure only the oldest buckets are evicted.
 //   - Gemini: v1beta generateContent, key via x-goog-api-key header,
-//     25 s timeout, single attempt, maxOutputTokens 800 with
-//     thinkingConfig.thinkingLevel "low" (Gemini 4 thinks at "high"
-//     by default and thought tokens count toward the output cap).
+//     40 s timeout, single attempt, maxOutputTokens 800. Default model
+//     is the fast gemini-2.5-flash (real-time conversation); thinking
+//     config is chosen per model family (see thinkingConfigFor):
+//     gemini-2.5 -> thinkingBudget 0 (instant replies), gemini-3/4 ->
+//     thinkingLevel "low", anything else -> no thinkingConfig (some
+//     models reject unknown fields with 400 INVALID_ARGUMENT).
 //   - The Gemini API key exists ONLY as a Cloudflare Secret; it is
 //     never returned in responses and never written to logs.
 // =====================================================================
@@ -49,8 +52,8 @@ const MAX_BODY_BYTES = 500 * 1024;
 const MAX_HISTORY_TURNS = 10;
 const MAX_SYSTEM_CHARS = 24000;
 const MAX_USER_TEXT_CHARS = 600;
-const GEMINI_TIMEOUT_MS = 25000;
-const DEFAULT_MODEL = "gemini-4-hydrogen";
+const GEMINI_TIMEOUT_MS = 40000;
+const DEFAULT_MODEL = "gemini-2.5-flash";
 const ALLOWED_AUDIO_MIME = ["audio/webm", "audio/mp4", "audio/ogg", "audio/wav", "audio/x-wav", "audio/mpeg"];
 const RATE_LIMIT = { windowMs: 10 * 60 * 1000, max: 30 }; // 30 turns / 10 min / key
 
@@ -272,7 +275,9 @@ function geminiErrorHttp(e) {
     case "GEMINI_RATE_LIMIT": return { status: 429, code: "RATE_LIMIT", message: "Hệ thống AI đang quá tải. Đợi một lát rồi thử lại." };
     case "GEMINI_BAD_JSON": return { status: 502, code: "BAD_RESPONSE", message: "AI trả về dữ liệu không hợp lệ. Thử lại một lần nữa nhé." };
     case "GEMINI_TRUNCATED": return { status: 502, code: "TRUNCATED", message: "Câu trả lời của AI bị cắt ngắn giữa chừng. Hãy nói câu ngắn hơn rồi thử lại." };
-    default: return { status: 502, code: "UPSTREAM", message: "Chưa nối được tới AI. Kiểm tra mạng rồi thử lại." };
+    default:
+      if (e?.status) return { status: 502, code: "UPSTREAM", message: `Không gọi được model AI (mã lỗi Google: ${e.status}). Kiểm tra lại tên model hoặc cấu hình Worker.` };
+      return { status: 502, code: "UPSTREAM", message: "Chưa nối được tới AI. Kiểm tra mạng rồi thử lại." };
   }
 }
 
@@ -280,6 +285,18 @@ function logTiming(fields) {
   // One structured line per tutor turn for Cloudflare Workers Logs:
   // durations and sizes ONLY — never PIN, key, message content or audio.
   try { console.log(`tutor_timing ${JSON.stringify(fields)}`); } catch { /* logging must never break a turn */ }
+}
+
+// Thinking config is model-family specific — sending the wrong shape
+// can make Google reject the request (400 INVALID_ARGUMENT):
+//   gemini-2.5-*  -> { thinkingBudget: 0 }  (thinking off, fastest)
+//   gemini-3*/4*  -> { thinkingLevel: "low" }
+//   anything else -> null (field omitted entirely)
+function thinkingConfigFor(model) {
+  const m = String(model || "").toLowerCase();
+  if (m.includes("gemini-2.5")) return { thinkingBudget: 0 };
+  if (m.includes("gemini-3") || m.includes("gemini-4")) return { thinkingLevel: "low" };
+  return null;
 }
 
 async function callGemini(env, body) {
@@ -291,10 +308,9 @@ async function callGemini(env, body) {
     generationConfig: {
       responseMimeType: "application/json",
       responseSchema: RESPONSE_SCHEMA,
-      // Thought tokens count toward maxOutputTokens on Gemini 4; keep
-      // thinking at "low" (docs: fewest tokens, lowest latency, suited
-      // to fast chat) and reserve the 800-token cap for the JSON body.
-      thinkingConfig: { thinkingLevel: "low" },
+      // Per-family thinking config (see thinkingConfigFor). The
+      // 800-token cap is reserved for the JSON body.
+      ...(thinkingConfigFor(model) ? { thinkingConfig: thinkingConfigFor(model) } : {}),
       maxOutputTokens: 800,
     },
   };
@@ -316,11 +332,20 @@ async function callGemini(env, body) {
   } finally {
     clearTimeout(timer);
   }
-  if (res.status === 429) { const err = new Error("rate"); err.code = "GEMINI_RATE_LIMIT"; throw err; }
+  if (res.status === 429) { const err = new Error("rate"); err.code = "GEMINI_RATE_LIMIT"; err.status = 429; throw err; }
   if (!res.ok) {
-    // Log only status + model, never the key or the request body.
-    console.log(`gemini_error status=${res.status} model=${model}`);
-    const err = new Error("upstream"); err.code = "GEMINI_UPSTREAM"; err.status = res.status; throw err;
+    // Surface Google's own error status (an enum-like string such as
+    // INVALID_ARGUMENT / NOT_FOUND) for diagnosis. Sanitised to a
+    // short uppercase token; the key and request body are never read
+    // into logs or responses.
+    let googleStatus = null;
+    try {
+      const errBody = await res.json();
+      const raw = String(errBody?.error?.status || "");
+      if (/^[A-Z_]{1,40}$/.test(raw)) googleStatus = raw;
+    } catch { /* body unreadable — HTTP status alone still helps */ }
+    console.log(`gemini_error status=${res.status} model=${model}${googleStatus ? ` google_status=${googleStatus}` : ""}`);
+    const err = new Error("upstream"); err.code = "GEMINI_UPSTREAM"; err.status = res.status; err.googleStatus = googleStatus; throw err;
   }
   const data = await res.json();
   const finishReason = data?.candidates?.[0]?.finishReason || "";
@@ -398,7 +423,7 @@ export default {
 
     const meta = {
       type: body.userAudioBase64 ? "audio" : "text",
-      model: env.GEMINI_MODEL || "gemini-4-hydrogen",
+      model: env.GEMINI_MODEL || DEFAULT_MODEL,
       instruction_chars: String(body.systemInstruction || "").length,
       history_turns: Array.isArray(body.history) ? body.history.length : 0,
       audio_kb: body.userAudioBase64 ? Math.round(body.userAudioBase64.length / 1024) : 0,
@@ -407,15 +432,16 @@ export default {
     try {
       const result = await callGemini(env, body);
       const geminiMs = Date.now() - g0;
-      logTiming({ ...meta, status: 200, code: "OK", gemini_ms: geminiMs, worker_ms: Date.now() - tReq });
+      logTiming({ ...meta, status: 200, code: "OK", gemini_ms: geminiMs, worker_ms: Date.now() - tReq, upstreamStatus: 200 });
       return jsonResponse(200, { ok: true, ...result, timings: { geminiMs } }, origin);
     } catch (e) {
       const mapped = geminiErrorHttp(e);
-      logTiming({ ...meta, status: mapped.status, code: mapped.code, gemini_ms: Date.now() - g0, worker_ms: Date.now() - tReq });
-      return errorVi(mapped.status, mapped.code, mapped.message, origin);
+      const geminiMs = Date.now() - g0;
+      logTiming({ ...meta, status: mapped.status, code: mapped.code, gemini_ms: geminiMs, worker_ms: Date.now() - tReq, upstreamStatus: e?.status ?? null, ...(e?.googleStatus ? { google_status: e.googleStatus } : {}) });
+      return jsonResponse(mapped.status, { ok: false, code: mapped.code, error: mapped.message, upstreamStatus: e?.status ?? null, timings: { geminiMs } }, origin);
     }
   },
 };
 
 // Exported for unit tests (tests/ai-tutor.test.mjs imports these helpers).
-export const _internal = { isAllowedOrigin, safeEqual, validateTurn, buildContents, RESPONSE_SCHEMA, MAX_BODY_BYTES, normalizeAudioMime, pinTagOf, readBodyCapped };
+export const _internal = { isAllowedOrigin, safeEqual, validateTurn, buildContents, RESPONSE_SCHEMA, MAX_BODY_BYTES, normalizeAudioMime, pinTagOf, readBodyCapped, thinkingConfigFor, DEFAULT_MODEL, GEMINI_TIMEOUT_MS };

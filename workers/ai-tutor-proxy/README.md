@@ -8,7 +8,7 @@ frontend, HTML, repo, localStorage, URL hay log.
 
 | Model | Trạng thái | GenerateContent | Audio input | Ghi chú |
 |---|---|---|---|---|
-| `gemini-4-hydrogen` (mặc định) | GA 12/11/2026 (Google Cloud model card, cập nhật 2026-11-13) | Có | Có (input only) | Context 1.048.576 token; output đồng bộ tối đa 65.536 — Worker khóa `maxOutputTokens: 800` kèm `thinkingConfig.thinkingLevel: "low"` (bản production v4, xem mục 8). |
+| `gemini-2.5-flash` (mặc định từ bản fast-model 2026-11-17) | GA 12/11/2026 (Google Cloud model card, cập nhật 2026-11-13) | Có | Có (input only) | Context 1.048.576 token; output đồng bộ tối đa 65.536 — Worker khóa `maxOutputTokens: 800` kèm `thinkingConfig.thinkingLevel: "low"` (bản production v4, xem mục 8). |
 | `gemini-3.5-flash-lite` (tiết kiệm, qua `GEMINI_MODEL`) | GA 21/07/2026 | Có | Có (input only) | Model 3.5 rẻ/nhanh nhất; hợp Structured JSON. |
 
 Cả hai dùng chung cấu hình `responseMimeType: "application/json"` +
@@ -84,7 +84,7 @@ nghị luôn đặt PIN** trước khi chia sẻ URL app cho người khác.
 
 ## 8. Phiên bản production & quy tắc đồng bộ
 
-**Bản đang chạy production: v4 (2026-11-17)** — chính là file `worker.js`
+**Bản đang chạy production: v4 (2026-11-17)** — LƯU Ý: repo đã có bản fast-model (model mặc định `gemini-2.5-flash`, timeout 40s, thinkingConfig theo họ model, lỗi UPSTREAM kèm mã Google) chờ Hoa deploy sau khi merge PR tương ứng; production vẫn chạy v4 cho tới lúc đó — chính là file `worker.js`
 trong thư mục này, SHA-256:
 `939a0ccdcaf17bb696ff8f6fc78387e10c853effb236b414ea04d8ffc153f718`.
 So với bản đầu của nhánh (f1cffec), v4 thay đổi đúng 5 điểm, đã kiểm thử

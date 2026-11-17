@@ -14,5 +14,6 @@
 
 ## Việc còn lại (ngoài nhánh này)
 
-- **nextTask duy nhất:** Hoa deploy Worker bản mới lên Cloudflare (dán đè file `workers/ai-tutor-proxy/worker.js` tại main `b414e8b` như mọi lần; Secrets/CORS không đổi), rồi chạy 5 lượt văn bản HSK 2 trên app chính thức và báo lại các số giây app hiển thị (hoặc dòng `tutor_timing` trong Workers Logs) để chốt quyết định timeout/model bằng dữ liệu. Sau đó tiếp tục checklist B1/Android còn thiếu.
+- **Vòng fast-model (2026-11-17):** theo chỉ đạo trực tiếp của Hoa, nhánh `fix/ai-tutor-fast-model` (từ main `be5cbee`) đổi model mặc định sang `gemini-2.5-flash` (thinkingBudget 0), timeout Worker 40s/frontend 45s, lỗi UPSTREAM kèm mã Google + `upstreamStatus`. Test 372/372 + battery 5/5. PR chờ duyệt — chưa merge, chưa deploy (chi tiết QA report A7).
+- **nextTask duy nhất:** Hoa duyệt PR của nhánh `fix/ai-tutor-fast-model`; sau merge, deploy Worker bản mới lên Cloudflare (dán đè file `workers/ai-tutor-proxy/worker.js` trên main như mọi lần; Secrets/CORS không đổi), chạy lượt HSK 2 đầu tiên và báo lại kết quả + số giây (kỳ vọng phản hồi nhanh hơn hẳn; nếu lỗi, thông báo nay kèm mã Google và log có `upstreamStatus`/`google_status` để chẩn đoán ngay). Sau đó tiếp tục checklist B1/Android còn thiếu.
 - Khi app có dữ liệu HSK 3, guardrail tự mở rộng (adapter đọc theo `level` trong dữ liệu, không cần sửa code).

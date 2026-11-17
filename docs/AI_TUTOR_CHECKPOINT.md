@@ -1,9 +1,8 @@
 # AI TUTOR — Checkpoint
 
-- **Nhánh:** `feat/ai-tutor` (từ `main` @ `1a07584`, Merge PR #153). **Không merge vào main.**
-- **Đã push:** commit từ xa `23b2b7f8d05fd7ce7acf60beaf80a5ec1d2aa653` (17 file; đã đối chiếu SHA-256 từng file giữa bản local và bản trên GitHub — khớp). Chưa mở PR, chưa merge.
-- **Trạng thái:** Cả 5 chặng đã dựng xong. Hoa đã triển khai Worker production (bản bàn giao v4) + đặt 2 secret; Muse đã probe live: health/CORS/cổng PIN đều đúng. Vòng 2026-11-17: audit tích hợp frontend↔Worker (contract khớp), sửa 2 lỗi (khóa chống gửi trùng; chuẩn hóa URL Worker) + bump phiên bản — commit bổ sung trên cùng nhánh, chưa PR/merge. Còn thiếu bằng chứng cuối: **một lượt Gemini thật thành công từ app** (chỉ Hoa chạy được bằng PIN của mình) + checklist Android.
-- **Phiên bản:** contentVersion `20261117-ai-tutor2` (bump đồng bộ 13 token `?v=` ở vòng sửa lỗi 2026-11-17). Kiểm thử vòng này: repo **367/367**, harness DOM **15/15**, probe live Worker đạt các mục không cần PIN (xem QA report A5/B1).
+- **Trạng thái hiện tại (2026-11-17): ĐÃ MERGE vào `main` qua PR #154** (merge commit `e4576b6`) theo lệnh của Hoa; nghiệm thu live đạt: Pages chính thức phục vụ contentVersion `20261117-ai-tutor2`, module JS trả 200 đúng MIME, liên kết Giáo viên AI ở sidebar. (Commit tài liệu `ca3cd24` sau merge là commit RỖNG do lỗi neo văn bản khi sửa file — nội dung ghi nhận merge được bổ sung tại nhánh dưới đây.)
+- **Sự cố độ trễ:** lượt thật đầu tiên của Hoa trên Android nhận 504 TIMEOUT của Worker (Gemini không trả trong 25s). Vòng điều tra + sửa ở nhánh **`fix/ai-tutor-latency`** (từ main `ca3cd24`): Worker ghi log `tutor_timing` + trả `timings.geminiMs`; frontend hiện pha chờ kèm số giây và thời gian trả lời; prompt thu gọn −37% (13.516 → 8.574 ký tự). Test 369/369 + battery Worker 7/7. Sau review của Hoa: telemetry sửa đúng nghĩa (gemini_ms/worker_ms tách bạch, log đúng HTTP status, bỏ total_ms), PR #155 đã mở; test 370/370 + battery v2 6/6, contentVersion nhánh `20261117-ai-tutor4`. **Chưa merge, chưa deploy Worker của nhánh.**
+- **Phiên bản:** main ở `20261117-ai-tutor2`; nhánh độ trễ ở `20261117-ai-tutor4`.
 
 ## Đã xong theo chặng
 
@@ -15,5 +14,5 @@
 
 ## Việc còn lại (ngoài nhánh này)
 
-- **nextTask duy nhất:** Hoa mở bản xem trước của nhánh (hoặc bản sau PR), cấu hình Worker URL + PIN trong Cài đặt → Giáo viên AI, gửi lượt văn bản HSK 2 đầu tiên và báo lại kết quả/thông báo lỗi — đó là bằng chứng tích hợp end-to-end còn thiếu (QA report B1). Sau đó chạy checklist Android ở cuối QA report.
+- **nextTask duy nhất:** Hoa xem báo cáo vòng độ trễ; nếu duyệt: merge nhánh `fix/ai-tutor-latency`, deploy Worker của nhánh lên Cloudflare (dán đè như mọi lần), chạy 5 lượt văn bản HSK 2 trên app chính thức và báo lại các số giây app hiển thị (hoặc dòng `tutor_timing` trong Workers Logs) để chốt quyết định timeout/model bằng dữ liệu. Sau đó tiếp tục checklist B1/Android còn thiếu.
 - Khi app có dữ liệu HSK 3, guardrail tự mở rộng (adapter đọc theo `level` trong dữ liệu, không cần sửa code).

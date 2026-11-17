@@ -47,9 +47,31 @@ Tổng: 17 file (13 mới, 4 sửa). Không có thay đổi nào ngoài phạm v
 
 ---
 
+## A6. Vòng điều tra độ trễ (2026-11-17, nhánh `fix/ai-tutor-latency` từ main `ca3cd24`, CHƯA merge)
+
+Sự cố thật: Hoa dùng app chính thức trên Android, gửi lượt và nhận đúng thông báo **"Máy chủ AI phản hồi quá chậm. Thử lại sau ít giây nhé."**
+
+- **Định vị tầng lỗi bằng chính chuỗi thông báo:** chuỗi này chỉ tồn tại ở Worker (`GEMINI_TIMEOUT` → 504 TIMEOUT). Thông báo timeout của frontend là câu khác ("AI phản hồi quá chậm. Kiểm tra mạng rồi thử lại nhé."). Kết luận chắc chắn: request đã tới Worker, PIN/CORS hợp lệ, Worker đã gọi Gemini và **AbortController 25 giây của Worker đã ngắt vì Gemini không trả kết quả trong 25 giây**. Không phải lỗi frontend, PIN/CORS/rate limit, hay frontend hủy sớm (hạn frontend 30s).
+- **Đo tầng edge (live, không cần PIN):** `/health` 5 lần 0,23–0,54s; POST thiếu PIN → 401 trong 0,29–0,59s. Edge Cloudflare + mã Worker ở các đường nhanh đều dưới 0,6s → điểm nghẽn ở chặng Worker→Gemini.
+- **Yếu tố đầu vào đo được:** `systemInstruction` HSK2 dài **13.516 ký tự** mỗi lượt (danh sách ngữ pháp 10.680 ký tự chiếm phần lớn), gửi lặp mọi lượt; model là model suy luận cao cấp dù đã đặt thinking `low`. Tỉ lệ đóng góp của từng yếu tố CHƯA đủ bằng chứng — cần số đo `gemini_ms` từ production.
+- **Thay đổi ở vòng này (nhánh riêng, chưa merge/deploy):** (1) Worker ghi log `tutor_timing` mỗi lượt (type/model/instruction_chars/history_turns/audio_kb/status/code/gemini_ms/worker_ms — chỉ số đo, KHÔNG nội dung/PIN/key) và response thành công kèm `timings.geminiMs`; (2) frontend hiện pha chờ (kết nối → đang suy nghĩ → vẫn đang xử lý) kèm số giây đã chờ, và sau trả lời hiện thời gian xử lý (câu chữ ban đầu "AI đã trả lời sau X giây." — đã đổi thành "Gemini đã xử lý trong X giây." ở review fix bên dưới); khóa gửi trùng giữ nguyên; (3) thu gọn prompt: danh sách ngữ pháp giữ pattern, bỏ nhãn tiếng Việt trùng lặp — instruction HSK2 còn **8.574 ký tự (−37%)**, danh sách từ giữ nguyên; (4) timeout giữ nguyên 25s/30s — chờ số đo production mới quyết định (tăng hạn Worker hoặc đổi `GEMINI_MODEL` sang `gemini-3.5-flash-lite` là quyết định của Hoa sau khi có dữ liệu).
+- **Review fix (Hoa duyệt diff PR #155, cùng ngày):** telemetry sửa đúng
+  nghĩa — `gemini_ms` chỉ đo cửa sổ gọi Gemini + xử lý response;
+  `worker_ms` đo từ đầu fetch handler tới lúc tạo response; trường
+  `total_ms` gây hiểu nhầm bị bỏ. Log ghi **đúng HTTP status trả về**
+  (200/504/429/502/401/403/413/400) nhờ dùng chung một hàm ánh xạ lỗi
+  `geminiErrorHttp` cho cả response và log; các lỗi từ chối sớm (PIN,
+  origin, quá lớn, rate limit) cũng ghi log và **không có `gemini_ms`**
+  vì Gemini chưa được gọi. Thông báo frontend đổi thành "Gemini đã xử
+  lý trong X giây." cho khớp số liệu. Test repo tăng lên **370/370**
+  (thêm test khóa status log cho success/timeout/rate-limit/truncated/
+  PIN + bảo mật log); battery Worker v2 6/6. contentVersion nhánh:
+  `20261117-ai-tutor4`.
+- **Test vòng này:** repo **369/369** (thêm 2 test: instruction < 10.000 ký tự vẫn chứa pattern + danh sách từ; response Worker có `timings.geminiMs` và dòng log không chứa PIN/nội dung). Battery Worker riêng 7/7 (gồm Gemini treo → 504 đúng ở ~25s; MAX_TOKENS; x-wav). Harness DOM cho UX chờ: KHÔNG chạy lại được trong môi trường này (jsdom không thực thi dynamic import của view — giới hạn môi trường; module đã chạy thật trên Android của Hoa). Latency Gemini production: CHƯA ĐO ĐƯỢC — chỉ có sau khi Hoa deploy Worker của nhánh này và chạy lượt thật.
+
 ## B. REAL-WORLD INTEGRATION TESTS — trạng thái thật
 
-### B1. Gemini API thật qua Worker đã triển khai — 🟡 MỘT PHẦN (Worker đã deploy; lượt thành công chờ Hoa)
+### B1. Gemini API thật qua Worker đã triển khai — 🟡 MỘT PHẦN (đã có lượt thật đầu tiên: 504 TIMEOUT — xem A6; lượt thành công vẫn chờ)
 Hoa đã triển khai Worker `hsk3-ai-tutor-proxy` (bản bàn giao v4) và đặt cả hai secret. Muse đã probe live từ ngoài (2026-11-16/17): `/health` → 200 `{ok:true, model: gemini-4-hydrogen}`; preflight origin Pages → 204, origin lạ → 403; thiếu/sai PIN → 401 đúng định dạng lỗi của module. **Lượt hội thoại thành công vẫn CHƯA có bằng chứng** — Muse không có PIN (không được xin/giữ PIN) nên không tự gọi được; không dùng stub để thay thế. Sau khi Hoa cấu hình app và gửi câu đầu tiên, cần chạy đúng các mục sau và ghi kết quả vào đây:
 - [ ] Lượt văn bản: gửi 1 câu đúng + 1 câu sai ngữ pháp → JSON đúng schema; transcript Hanzi/Pinyin khớp câu đã gửi; `evaluation` sửa đúng 1–2 lỗi; `tutor_reply` đủ hanzi/pinyin/translation_vi.
 - [ ] Lượt audio (webm từ Chrome Android hoặc mp4): transcript đúng với câu đã nói; khi nói rõ ràng → `pronunciation_status` hợp lý; khi nói quá nhỏ/ồn → `uncertain` kèm phản hồi tiếng Việt, không kết luận bừa.

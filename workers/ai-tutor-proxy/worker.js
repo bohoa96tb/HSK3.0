@@ -39,7 +39,7 @@
 //     Expired buckets are pruned; live buckets are NEVER wiped —
 //     under memory pressure only the oldest buckets are evicted.
 //   - Gemini: v1beta generateContent, key via x-goog-api-key header,
-//     40 s timeout, single attempt, maxOutputTokens 800. Default model
+//     40 s timeout, single attempt, maxOutputTokens 2048. Default model
 //     is the fast gemini-2.5-flash (real-time conversation); thinking
 //     config is chosen per model family (see thinkingConfigFor):
 //     gemini-2.5 -> thinkingBudget 0 (instant replies), gemini-3/4 ->
@@ -313,9 +313,9 @@ async function callGemini(env, body) {
       responseMimeType: "application/json",
       responseSchema: RESPONSE_SCHEMA,
       // Per-family thinking config (see thinkingConfigFor). The
-      // 800-token cap is reserved for the JSON body.
+      // 2048-token cap gives room for complete pedagogical JSON replies.
       ...(thinkingConfigFor(model) ? { thinkingConfig: thinkingConfigFor(model) } : {}),
-      maxOutputTokens: 800,
+      maxOutputTokens: 2048,
     },
   };
   const controller = new AbortController();

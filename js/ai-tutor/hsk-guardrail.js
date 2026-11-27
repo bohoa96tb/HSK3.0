@@ -692,6 +692,8 @@ function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi,
     ? `${ctx.prevLessons[ctx.prevLessons.length - 1].level} Bài ${String(ctx.prevLessons[ctx.prevLessons.length - 1].lessonNumber).padStart(2, "0")} (${ctx.prevLessons[ctx.prevLessons.length - 1].titleZh})`
     : "";
 
+  const firstMainKp = mainKps[0] ? `${stripChineseMetaTerms(mainKps[0].title)}${mainKps[0].pattern ? ` (${stripChineseMetaTerms(mainKps[0].pattern)})` : ""}` : "ngữ pháp trọng tâm của bài";
+
   return [
     "CHẾ ĐỘ ÔN & DẠY (GIÁO VIÊN SƯ PHẠM GẦN GŨI):",
     ...(kpSummaryPrompt ? [kpSummaryPrompt] : []),
@@ -699,10 +701,11 @@ function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi,
       "LƯỢT MỞ ĐẦU GIẢNG BÀI: Học viên vừa bấm yêu cầu tóm tắt và giảng bài (chưa trả lời câu tiếng Trung nào). BẮT BUỘC đặt evaluation.has_error=false, error_type='none', corrected_hanzi='', corrected_pinyin='', explanation_vi='', pronunciation_status='not_assessed', pronunciation_feedback_vi=''.",
     ] : []),
     "- Ở lượt mở đầu giảng bài, tutor_reply.translation_vi PHẢI trình bày gọn gàng theo đúng cấu trúc:",
-    `  + 3–4 gạch đầu dòng tiếng Việt ngắn gọn (mỗi dòng 1 câu súc tích bắt đầu bằng "- ") tóm tắt ĐẦY ĐỦ toàn bộ các điểm ngữ pháp chính của bài vừa liệt kê${prevTitle ? `, kèm 1 câu liên hệ tự nhiên với ${prevTitle}` : ""}. Giải thích bằng tiếng Việt đời thường, tuyệt đối không dùng thuật ngữ chữ Hán.`,
-    "  + Kết thúc bằng 1 dòng riêng ghi rõ mẫu câu cần dùng cho câu hỏi kiểm tra (ví dụ: `👉 Thực hành: Em hãy dùng mẫu \"还是……吧\" để đề xuất đi taxi đến Đại học Bắc Kinh nhé!`).",
-    "- Phần tiếng Trung (tutor_reply.hanzi): CHỈ chứa 1–2 câu tiếng Trung tự nhiên ngắn gọn gắn trực tiếp với đúng 1 trong các điểm ngữ pháp vừa giảng (ví dụ đặt 1 câu hỏi tình huống ngắn để học viên vận dụng đúng mẫu câu đã chỉ dẫn ở mục Thực hành). Tuyệt đối không giảng ngữ pháp bằng tiếng Trung trong tutor_reply.hanzi.",
-    "- Khi học viên gửi câu trả lời tiếng Trung ở các lượt sau: khen/chỉ lỗi ngắn gọn bằng tiếng Việt tự nhiên trong evaluation.explanation_vi rồi gợi mở sang điểm ngữ pháp tiếp theo của bài.",
+    `  + 3–4 gạch đầu dòng tiếng Việt thật ngắn gọn (mỗi gạch đầu dòng chỉ 1 câu 10–18 từ bắt đầu bằng "- ") tóm tắt ĐẦY ĐỦ toàn bộ các điểm ngữ pháp chính của bài vừa liệt kê${prevTitle ? `, kèm 1 câu ngắn liên hệ tự nhiên với ${prevTitle}` : ""}. Giải thích bằng tiếng Việt đời thường, tuyệt đối không dùng thuật ngữ chữ Hán.`,
+    `  + Kết thúc bằng 1 dòng riêng viết TRỌN CÂU hoàn chỉnh (có dấu chấm hoặc chấm than kết thúc, TUYỆT ĐỐI không bỏ lửng giữa chừng) chỉ rõ đúng mẫu câu trọng tâm của BÀI ĐANG CHỌN mà học viên phải dùng để trả lời câu hỏi kiểm tra (ví dụ cho bài này ưu tiên ép dùng ${firstMainKp} — ví dụ Bài 2 gợi ý dùng 还是……吧/多/định ngữ 的; Bài 3 gợi ý dùng bổ ngữ kết quả 好/完/晚 hoặc động từ trùng điệp, không hỏi lệch sang mẫu chung chung của bài khác).`,
+    "  + Định dạng dòng cuối: `👉 Thực hành: <lời hướng dẫn ngắn gọn, trọn vẹn cả câu kèm mẫu cần dùng>!`",
+    "- Phần tiếng Trung (tutor_reply.hanzi): CHỈ chứa 1–2 câu tiếng Trung tự nhiên ngắn gọn gắn trực tiếp với đúng ngữ pháp trọng tâm vừa chỉ dẫn ở mục Thực hành. Tuyệt đối không giảng ngữ pháp bằng tiếng Trung trong tutor_reply.hanzi.",
+    "- Khi học viên gửi câu trả lời tiếng Trung ở các lượt sau: khen/chỉ lỗi ngắn gọn bằng tiếng Việt tự nhiên trong evaluation.explanation_vi rồi gợi mở sang điểm ngữ pháp tiếp theo của chính bài này (luôn viết trọn câu).",
   ];
 }
 
@@ -770,7 +773,7 @@ export function buildSystemInstruction({
     `VỐN TỪ ĐƯỢC PHÉP (ưu tiên dùng các từ học viên đã học tới bài này): ${activeWordList || "(chưa tải được)"}.`,
     `KHUNG NGỮ PHÁP ĐÃ HỌC TỚI ĐÂY: ${activeGrammarList || "(chưa tải được)"}.`,
     "Không tự ý dùng từ vượt cấp. Nếu bắt buộc phải dùng từ ngoài vốn từ cho phép để câu tự nhiên, vẫn dùng nhưng PHẢI liệt kê từ đó vào tutor_reply.out_of_level_words kèm pinyin và nghĩa tiếng Việt.",
-    "Câu trả lời PHẢI là JSON đúng schema đã cho, không thêm chữ ngoài JSON; giữ phần tiếng Việt súc tích để không bị cắt ngắn ở 800 tokens.",
+    "Câu trả lời PHẢI là JSON đúng schema đã cho, không thêm chữ ngoài JSON; viết súc tích nhưng LUÔN hoàn chỉnh trọn câu ở mọi trường, tuyệt đối không bỏ lửng giữa chừng.",
     "tutor_reply.pinyin phải có dấu thanh đầy đủ; user_transcript_hanzi/pinyin chép lại đúng câu học viên vừa nói/nhập.",
     "evaluation: khi không có lỗi thì has_error=false, error_type='none', corrected_hanzi/corrected_pinyin để trống.",
     PEDAGOGICAL_LANGUAGE_RULES,

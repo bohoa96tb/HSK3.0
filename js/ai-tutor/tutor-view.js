@@ -7,19 +7,19 @@ import {
   buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
   compactLevelCode, listLessons, getLessonContext, lessonReplyHints,
   lessonRoleplayOpening, lessonTranslateSeeds, resolveDrillPassed,
-} from "./hsk-guardrail.js?v=20261127-ai-tutor9";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor9";
+} from "./hsk-guardrail.js?v=20261127-ai-tutor10";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor10";
 import {
   loadTutorState, updateTutorState, updateTutorPrefs, recordSessionStart,
   recordSpeakingSeconds, recordError, recordVocabUsage, recordTopicProgress,
   saveConversation, clearTutorHistory, normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261127-ai-tutor9";
+} from "./tutor-storage.js?v=20261127-ai-tutor10";
 import {
   VoiceRecorder, blobToBase64, speakZh, stopSpeak,
   isVoiceInputSupported, DEFAULT_TTS_RATE, SLOW_TTS_RATE, MAX_AUDIO_BYTES,
-} from "./voice-engine.js?v=20261127-ai-tutor9";
+} from "./voice-engine.js?v=20261127-ai-tutor10";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor9";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor10";
 const CLIENT_TIMEOUT_MS = 45000; // > Worker Gemini timeout (40 s) so the app surfaces the Worker's own error JSON instead of aborting early
 const hasHanzi = (s) => /[\u4e00-\u9fff\u3400-\u4dbf]/.test(String(s || ""));
 

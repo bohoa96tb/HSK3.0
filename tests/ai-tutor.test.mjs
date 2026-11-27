@@ -316,6 +316,7 @@ test("worker sends the right thinkingConfig per model and surfaces Google status
   const dflt = await call(okGem, { ...base });
   assert.equal(dflt.res.status, 200);
   assert.deepEqual(dflt.sentBody.generationConfig.thinkingConfig, { thinkingBudget: 0 });
+  assert.equal(dflt.sentBody.generationConfig.maxOutputTokens, 2048);
 
   const h4 = await call(okGem, { ...base, GEMINI_MODEL: "gemini-4-hydrogen" });
   assert.deepEqual(h4.sentBody.generationConfig.thinkingConfig, { thinkingLevel: "low" });
@@ -398,6 +399,13 @@ test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons 
   assert.match(teachL2, /“多”/);
   assert.match(teachL2, /的 \+ Danh từ/);
   assert.match(teachL2, /LƯỢT MỞ ĐẦU GIẢNG BÀI/);
+  assert.match(teachL2, /TRỌN CÂU hoàn chỉnh/);
+
+  const teachL3 = buildSystemInstruction({
+    level: "HSK2", mode: "tutor", practiceMode: "teach", lessonId: "hsk2-l03", isStarter: true, lexicon: lex,
+  });
+  assert.match(teachL3, /Bổ ngữ kết quả/);
+  assert.match(teachL3, /Động từ trùng điệp/);
 });
 
 test("lessonTranslateSeeds covers all 22 lessons with 6-8 natural, in-lesson sentences and resolveDrillPassed works", () => {

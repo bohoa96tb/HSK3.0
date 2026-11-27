@@ -66,6 +66,13 @@
 #tutor-root.hide-pinyin .tutor-bubble.tutor .tutor-pinyin:not(.force-show) { display: none; }
 #tutor-root.hide-vi .tutor-bubble.tutor .tutor-vi-subtitle:not(.force-show) { display: none; }
 
+/* Translate drill card */
+.tutor-drill-card { margin: 12px 0 0; border-color: #f59e0b; background: #fffbeb; padding: 12px 14px; }
+.tutor-drill-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tutor-drill-badge { font-weight: 700; font-size: 0.88rem; color: #b45309; }
+.tutor-drill-vi { font-size: 1.12rem; font-weight: 700; margin: 6px 0 4px; color: var(--ink, #203731); }
+.tutor-drill-hint-box { margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px dashed var(--line, #dce3df); }
+
 /* Chat stream */
 .tutor-chat { display: flex; flex-direction: column; gap: 12px; margin: 14px 0; }
 .tutor-bubble { background: var(--card, #fff); border: 1px solid var(--line, #e3ddcf); border-radius: 14px; padding: 12px 14px; max-width: 94%; }

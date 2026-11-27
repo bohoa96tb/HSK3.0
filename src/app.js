@@ -1,4 +1,4 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261127-ai-tutor7";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261127-ai-tutor8";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
@@ -1831,7 +1831,7 @@ function viewTutor() {
   main.innerHTML = `${header("Giáo viên AI", "Luyện nói sư phạm theo từng bài giáo trình HSK 3.0")}<p class="loading">Đang tải module luyện nói…</p>`;
   const queryLessonId = parseRoute().query.lesson || "";
   const recent = recentTutorLesson();
-  import("../js/ai-tutor/tutor-view.js?v=20261127-ai-tutor7")
+  import("../js/ai-tutor/tutor-view.js?v=20261127-ai-tutor8")
     .then((m) => {
       if ((parseRoute().seg[0] || "today") === "tutor") {
         return m.mountTutor(main, {
@@ -1853,7 +1853,7 @@ function mountTutorSettings() {
   const host = document.getElementById("tutor-settings-slot");
   if (!host) return;
   host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2><p class="muted">Đang tải cấu hình…</p></section>`;
-  import("../js/ai-tutor/tutor-storage.js?v=20261127-ai-tutor7")
+  import("../js/ai-tutor/tutor-storage.js?v=20261127-ai-tutor8")
     .then((mod) => {
       const s = mod.loadTutorState();
       host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2>

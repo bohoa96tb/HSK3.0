@@ -6,20 +6,20 @@ import {
   PRACTICE_MODES, practiceModeInfo, loadLexicon, lookupLocalWord,
   buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
   compactLevelCode, listLessons, getLessonContext, lessonReplyHints,
-  lessonRoleplayOpening, lessonTranslateSeeds,
-} from "./hsk-guardrail.js?v=20261127-ai-tutor7";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor7";
+  lessonRoleplayOpening, lessonTranslateSeeds, resolveDrillPassed,
+} from "./hsk-guardrail.js?v=20261127-ai-tutor8";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor8";
 import {
   loadTutorState, updateTutorState, updateTutorPrefs, recordSessionStart,
   recordSpeakingSeconds, recordError, recordVocabUsage, recordTopicProgress,
   saveConversation, clearTutorHistory, normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261127-ai-tutor7";
+} from "./tutor-storage.js?v=20261127-ai-tutor8";
 import {
   VoiceRecorder, blobToBase64, speakZh, stopSpeak,
   isVoiceInputSupported, DEFAULT_TTS_RATE, SLOW_TTS_RATE, MAX_AUDIO_BYTES,
-} from "./voice-engine.js?v=20261127-ai-tutor7";
+} from "./voice-engine.js?v=20261127-ai-tutor8";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor7";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor8";
 const CLIENT_TIMEOUT_MS = 45000; // > Worker Gemini timeout (40 s) so the app surfaces the Worker's own error JSON instead of aborting early
 
 let cssLoaded = false;
@@ -101,9 +101,22 @@ export async function mountTutor(main, ctx = {}) {
     mode: practiceModeInfo(initialPracticeMode).workerMode,
     scenarioId: "lesson-context", // default roleplay uses the selected lesson's own context
     pendingPromptVi: "",
-    turns: [], // {role, hanzi, pinyin, translation_vi, evaluation?, outOfLevel?, isOpening?}
+    drillQueue: [],
+    drillIndex: 0,
+    drillFailedCurrent: false,
+    drillRevealAnswer: false,
+    turns: [], // {role, hanzi, pinyin, translation_vi, evaluation?, outOfLevel?, isOpening?, nextChallengeVi?, drillLabel?}
     started: false,
   };
+
+  function initDrillDeck() {
+    session.drillQueue = session.lessonId ? lessonTranslateSeeds(session.lessonId, lexicon) : [];
+    session.drillIndex = 0;
+    session.drillFailedCurrent = false;
+    session.drillRevealAnswer = false;
+    session.pendingPromptVi = session.practiceMode === "translate" ? (session.drillQueue[0]?.vi || "") : "";
+  }
+  initDrillDeck();
 
   const micSupported = isVoiceInputSupported();
   const recorder = new VoiceRecorder({
@@ -217,6 +230,7 @@ export async function mountTutor(main, ctx = {}) {
       ${lexiconError ? `<p class="feedback bad">${esc(lexiconError)}</p>` : ""}
     </section>
 
+    <section class="card tutor-drill-card" id="t-drill-card" hidden aria-live="polite" aria-label="Câu phản xạ hiện tại"></section>
     <section class="tutor-chat" id="t-chat" aria-live="polite" aria-label="Hội thoại với giáo viên"></section>
 
     <div id="t-lookup" class="tutor-lookup" hidden></div>
@@ -235,6 +249,7 @@ export async function mountTutor(main, ctx = {}) {
       </div>
       <div class="tutor-dock-subrow">
         <button class="btn ghost small" id="t-hints-btn" type="button" aria-expanded="false">💡 Gợi ý</button>
+        <button class="btn ghost small" id="t-next-drill" type="button" hidden>⏭️ Câu tiếp theo</button>
         <button class="btn ghost small" id="t-stop-tts" type="button" aria-label="Dừng đọc">■ Dừng đọc</button>
         <span class="muted small tutor-mic-note">${micSupported ? "Giọng đọc là giọng máy của thiết bị. Bấm 🎙️ để nói (tối đa 20 giây)." : "Trình duyệt chưa hỗ trợ ghi âm trực tiếp — hãy gõ hoặc dùng mic trên bàn phím."}</span>
       </div>
@@ -244,11 +259,14 @@ export async function mountTutor(main, ctx = {}) {
   const $ = (sel) => main.querySelector(sel);
   const rootEl = $("#tutor-root");
   const chatEl = $("#t-chat");
+  const drillCard = $("#t-drill-card");
+  const nextDrillBtn = $("#t-next-drill");
   const statusEl = $("#t-status");
   const micBtn = $("#t-mic");
   const hintsPanel = $("#t-hints-panel");
   const hintsBtn = $("#t-hints-btn");
   const setStatus = (t) => { statusEl.textContent = t || ""; };
+  const currentDrill = () => session.drillQueue[session.drillIndex] || null;
 
   function bindSetup() {
     const saveBtn = $("#t-save-config");
@@ -354,14 +372,30 @@ export async function mountTutor(main, ctx = {}) {
     const lctx = session.lessonId ? getLessonContext(session.lessonId, lexicon) : null;
 
     if (session.practiceMode === "translate" && lctx?.current) {
-      // Do NOT spoil full sentences in translate mode — show vocab & grammar patterns instead!
+      const drill = currentDrill();
+      const canShowAnswer = Boolean(drill && (session.drillFailedCurrent || session.drillRevealAnswer));
       const words = lctx.current.prepWords.slice(0, 8);
       const kps = lctx.current.knowledgePoints.filter((k) => k.kind !== "foundation" && k.kind !== "foundation-characters");
       hintsPanel.innerHTML = `
         <div class="tutor-hints-head">
-          <strong>💡 Gợi ý từ vựng & mẫu câu (không lộ đáp án)</strong>
+          <strong>💡 Gợi ý từ vựng & khung câu</strong>
           <button type="button" class="btn ghost small" id="t-close-hints">Đóng</button>
         </div>
+        ${drill ? `<div class="tutor-drill-hint-box">
+          <p class="muted small">Điểm luyện: <strong>${esc(drill.note)}</strong></p>
+          ${canShowAnswer
+            ? `<div class="tutor-hint-item">
+                <div>
+                  <div class="tutor-hint-zh" lang="zh-CN">${esc(drill.refZh)}</div>
+                  ${drill.refPinyin ? `<div class="muted small">${esc(drill.refPinyin)}</div>` : ""}
+                </div>
+                <div class="tutor-hint-actions">
+                  <button type="button" class="btn ghost small" data-hint-speak="${esc(drill.refZh)}">🔊</button>
+                  <button type="button" class="btn ghost small" data-hint-fill="${esc(drill.refZh)}">↳ Dùng</button>
+                </div>
+              </div>`
+            : `<p class="row-actions"><button type="button" class="btn ghost small" id="t-reveal-drill-answer">👀 Xem đáp án mẫu câu này</button></p>`}
+        </div>` : ""}
         <div class="tutor-hints-list">
           ${words.map((w) => `<div class="tutor-hint-item">
             <div><strong lang="zh-CN">${esc(w.zh)}</strong> <span class="muted small">${esc(w.pinyin)} — ${esc(w.vi)}</span></div>
@@ -372,6 +406,13 @@ export async function mountTutor(main, ctx = {}) {
           </div>`).join("")}
           ${kps.map((k) => k.pattern ? `<p class="muted small">Mẫu: <code>${esc(k.pattern)}</code></p>` : "").join("")}
         </div>`;
+      const revealBtn = $("#t-reveal-drill-answer");
+      if (revealBtn) {
+        revealBtn.onclick = () => {
+          session.drillRevealAnswer = true;
+          renderHintsPanel();
+        };
+      }
     } else {
       const hints = lessonReplyHints(session.lessonId, session.practiceMode, lexicon);
       const sc = activeRoleplayScenario();
@@ -409,6 +450,56 @@ export async function mountTutor(main, ctx = {}) {
     });
   }
 
+  function renderDrillCard() {
+    if (session.practiceMode !== "translate" || !session.drillQueue.length) {
+      drillCard.hidden = true;
+      nextDrillBtn.hidden = true;
+      return;
+    }
+    drillCard.hidden = false;
+    nextDrillBtn.hidden = false;
+    const total = session.drillQueue.length;
+    const drill = currentDrill();
+    if (!drill) {
+      drillCard.innerHTML = `
+        <div class="tutor-drill-head">
+          <span class="tutor-drill-badge">🎉 Hoàn thành ${total}/${total} câu</span>
+        </div>
+        <p class="tutor-drill-vi">Bạn đã dịch xong toàn bộ câu trọng tâm của bài này!</p>
+        <p class="row-actions"><button type="button" class="btn primary small" id="t-restart-drill">🔄 Luyện lại từ câu 1</button></p>`;
+      const restartBtn = $("#t-restart-drill");
+      if (restartBtn) {
+        restartBtn.onclick = () => {
+          session.drillIndex = 0;
+          session.drillFailedCurrent = false;
+          session.drillRevealAnswer = false;
+          session.pendingPromptVi = currentDrill()?.vi || "";
+          renderDrillCard();
+          if (hintsOpen) renderHintsPanel();
+        };
+      }
+      return;
+    }
+    drillCard.innerHTML = `
+      <div class="tutor-drill-head">
+        <span class="tutor-drill-badge">⚡ Câu ${session.drillIndex + 1} / ${total}</span>
+        <span class="muted small">${esc(drill.note)}</span>
+      </div>
+      <p class="tutor-drill-vi">${esc(drill.vi)}</p>
+      <p class="muted small">${session.drillFailedCurrent ? "Hãy nghe câu sửa bên dưới và nói lại câu này, hoặc bấm ⏭️ Câu tiếp theo." : "Bấm 🎙️ nói hoặc gõ câu tiếng Trung tương ứng bên dưới."}</p>`;
+  }
+
+  function advanceDrillManual() {
+    if (session.practiceMode !== "translate" || !session.drillQueue.length) return;
+    session.drillIndex = (session.drillIndex + 1) % session.drillQueue.length;
+    session.drillFailedCurrent = false;
+    session.drillRevealAnswer = false;
+    session.pendingPromptVi = currentDrill()?.vi || "";
+    renderDrillCard();
+    if (hintsOpen) renderHintsPanel();
+    setStatus(`Đã chuyển sang câu ${session.drillIndex + 1}/${session.drillQueue.length}.`);
+  }
+
   function refreshControls() {
     const info = practiceModeInfo(session.practiceMode);
     session.mode = info.workerMode;
@@ -422,6 +513,7 @@ export async function mountTutor(main, ctx = {}) {
     $("#t-scenario-info").innerHTML = scenarioInfoHtml();
     $("#t-coverage").textContent = lexicon ? coverageNote(session.level, lexicon) : "";
     renderLessonBrief();
+    renderDrillCard();
     if (hintsOpen) renderHintsPanel();
   }
 
@@ -514,6 +606,8 @@ export async function mountTutor(main, ctx = {}) {
     const ev = turn.evaluation;
     const isTranslateTutor = turn.role === "tutor" && session.practiceMode === "translate";
     const parsedTr = isTranslateTutor ? splitTranslateReply(turn.translation_vi) : { subtitle: turn.translation_vi || "", challenge: "" };
+    const challengeText = turn.nextChallengeVi ?? parsedTr.challenge;
+    const challengeLabel = turn.challengeLabel || "🎯 Câu cần nói sang tiếng Trung:";
 
     if (turn.role === "user") {
       return `<article class="tutor-bubble user">
@@ -528,7 +622,7 @@ export async function mountTutor(main, ctx = {}) {
       </article>`;
     }
 
-    const hasViPart = Boolean(parsedTr.subtitle || parsedTr.challenge || (turn.outOfLevel?.length));
+    const hasViPart = Boolean(parsedTr.subtitle || challengeText || (turn.outOfLevel?.length));
     return `<article class="tutor-bubble tutor">
       <p class="tutor-who">${who}</p>
       ${turn.hanzi ? `<div class="tutor-part-zh">
@@ -545,7 +639,7 @@ export async function mountTutor(main, ctx = {}) {
       ${hasViPart ? `<div class="tutor-part-vi">
         <span class="tutor-part-label">b) Nhận xét & hướng dẫn (tiếng Việt)</span>
         ${parsedTr.subtitle ? `<p class="tutor-vi tutor-vi-subtitle" data-vi>${esc(parsedTr.subtitle)}</p>` : ""}
-        ${parsedTr.challenge ? `<div class="tutor-challenge-box" role="note"><strong>🎯 Câu cần nói sang tiếng Trung:</strong><p>${esc(parsedTr.challenge)}</p></div>` : ""}
+        ${challengeText ? `<div class="tutor-challenge-box" role="note"><strong>${esc(challengeLabel)}</strong><p>${esc(challengeText)}</p></div>` : ""}
         ${turn.outOfLevel?.length ? `<p class="muted small">Từ vượt cấp đã dùng: ${turn.outOfLevel.map((w) => `${esc(w.hanzi)} (${esc(w.pinyin)} — ${esc(w.meaning_vi)})`).join("; ")}</p>` : ""}
       </div>` : ""}
     </article>`;
@@ -576,14 +670,9 @@ export async function mountTutor(main, ctx = {}) {
       </section>`;
     }
     if (session.practiceMode === "translate") {
-      const seeds = session.lessonId ? lessonTranslateSeeds(session.lessonId, lexicon) : [];
       return `<section class="card tutor-empty">
         <p><strong>⚡ Phản xạ dịch nhanh — ${esc(lessonTag)}</strong></p>
-        <p class="muted small">Giáo viên đưa câu tiếng Việt ngắn bám sát mẫu câu của bài để bạn nói/viết sang tiếng Trung và sửa ngay.</p>
-        <p class="row-actions">
-          <button type="button" class="btn primary" id="t-start-translate">⚡ Bắt đầu câu đầu tiên</button>
-          ${seeds.length ? `<button type="button" class="btn ghost" id="t-local-translate">🎲 Lấy câu mẫu tại chỗ</button>` : ""}
-        </p>
+        <p class="muted small">Hãy nhìn câu tiếng Việt ở khung phía trên rồi bấm 🎙️ nói hoặc gõ câu tiếng Trung tương ứng. Trả lời đúng hệ thống sẽ tự chuyển sang câu mới; hoặc bấm <strong>⏭️ Câu tiếp theo</strong> bất cứ lúc nào.</p>
       </section>`;
     }
     return `<section class="card tutor-empty"><p>Chọn tình huống rồi bấm micro hoặc gõ câu để bắt đầu nhập vai.</p></section>`;
@@ -596,27 +685,6 @@ export async function mountTutor(main, ctx = {}) {
       if (startTeach) startTeach.onclick = () => void sendTextTurn("Em muốn ôn và học trọng tâm bài này. Thầy/cô giảng ngắn gọn, liên hệ bài trước và hỏi kiểm tra em nhé.");
       const startCorrect = $("#t-start-correct");
       if (startCorrect) startCorrect.onclick = () => void sendTextTurn("Hãy cho em một gợi ý ngắn để em đặt câu theo mẫu ngữ pháp bài này rồi thầy/cô sửa giúp em.");
-      const startTranslate = $("#t-start-translate");
-      if (startTranslate) startTranslate.onclick = () => void sendTextTurn("Bắt đầu bài tập phản xạ dịch nhanh: hãy cho em câu tiếng Việt đầu tiên bám sát mẫu câu của bài.");
-      const localTranslate = $("#t-local-translate");
-      if (localTranslate) {
-        localTranslate.onclick = () => {
-          const seeds = lessonTranslateSeeds(session.lessonId, lexicon);
-          if (!seeds.length) return;
-          const pick = seeds[Math.floor(Math.random() * seeds.length)];
-          session.started = true;
-          session.pendingPromptVi = pick.vi;
-          session.turns.push({
-            role: "tutor",
-            hanzi: "准备好了吗？我们开始吧！",
-            pinyin: "Zhǔnbèi hǎo le ma? Wǒmen kāishǐ ba!",
-            translation_vi: `Bạn sẵn sàng chưa? Chúng ta bắt đầu nhé!\n🎯 Câu cần nói sang tiếng Trung: "${pick.vi}"`,
-            isOpening: true,
-          });
-          renderChat();
-          if (state.prefs.autoSpeak) speakZh("准备好了吗？我们开始吧！", { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
-        };
-      }
       chatEl.querySelectorAll("[data-quick-ask]").forEach((b) => {
         b.onclick = () => void sendTextTurn(b.dataset.quickAsk);
       });
@@ -766,17 +834,62 @@ export async function mountTutor(main, ctx = {}) {
     };
     if (userTurn.hanzi) session.turns.push(userTurn);
     const reply = data.tutor_reply || {};
+    let tutorHanzi = reply.hanzi || "";
+    let tutorPinyin = reply.pinyin || "";
+    let tutorTranslationVi = reply.translation_vi || "";
+    let nextChallengeVi = "";
+    let challengeLabel = "";
+
     if (session.practiceMode === "translate") {
-      const parsedTr = splitTranslateReply(reply.translation_vi || "");
-      session.pendingPromptVi = parsedTr.challenge || "";
+      const passed = resolveDrillPassed(data);
+      const parsedTr = splitTranslateReply(tutorTranslationVi);
+      tutorTranslationVi = parsedTr.subtitle || tutorTranslationVi;
+
+      if (passed) {
+        // Learner answered right: advance drillIndex in CODE (never rely on AI to pick next)
+        if (session.drillIndex < session.drillQueue.length) {
+          session.drillIndex += 1;
+        }
+        session.drillFailedCurrent = false;
+        session.drillRevealAnswer = false;
+        const nextDrill = currentDrill();
+        session.pendingPromptVi = nextDrill?.vi || "";
+        // Anti-leak: when passed, part (a) ONLY praises/confirms the old sentence; never leak next sentence
+        if (!tutorHanzi) { tutorHanzi = "对，很好！"; tutorPinyin = "Duì, hěn hǎo!"; }
+        if (nextDrill) {
+          nextChallengeVi = nextDrill.vi;
+          challengeLabel = `🎯 Câu ${session.drillIndex + 1}/${session.drillQueue.length} cần nói sang tiếng Trung:`;
+        } else {
+          nextChallengeVi = "Bạn đã hoàn thành toàn bộ câu của bài này!";
+          challengeLabel = "🎉 Hoàn thành bài phản xạ:";
+        }
+      } else {
+        // Learner made a mistake: stay on current question so they can repeat it
+        session.drillFailedCurrent = true;
+        const curDrill = currentDrill();
+        session.pendingPromptVi = curDrill?.vi || "";
+        if (!tutorHanzi && (ev.corrected_hanzi || curDrill?.refZh)) {
+          tutorHanzi = ev.corrected_hanzi || curDrill.refZh;
+          tutorPinyin = ev.corrected_pinyin || curDrill?.refPinyin || "";
+        }
+        if (curDrill) {
+          nextChallengeVi = curDrill.vi;
+          challengeLabel = `🔁 Thử nói lại câu ${session.drillIndex + 1}/${session.drillQueue.length}:`;
+        }
+      }
+      renderDrillCard();
+      if (hintsOpen) renderHintsPanel();
     } else {
       session.pendingPromptVi = "";
     }
+
     session.turns.push({
       role: "tutor",
-      hanzi: reply.hanzi || "",
-      pinyin: reply.pinyin || "",
-      translation_vi: reply.translation_vi || "",
+      hanzi: tutorHanzi,
+      pinyin: tutorPinyin,
+      translation_vi: tutorTranslationVi,
+      nextChallengeVi,
+      challengeLabel,
       outOfLevel: Array.isArray(reply.out_of_level_words) ? reply.out_of_level_words : [],
     });
     if (ev.has_error) {
@@ -798,11 +911,12 @@ export async function mountTutor(main, ctx = {}) {
     session.started = true;
     renderChat();
     setStatus("");
-    if (reply.hanzi && state.prefs.autoSpeak) speakZh(reply.hanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
+    if (tutorHanzi && state.prefs.autoSpeak) speakZh(tutorHanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
   }
 
   function buildPayload(extra) {
     const scenarioObj = session.practiceMode === "roleplay" ? activeRoleplayScenario() : null;
+    const curDrill = session.practiceMode === "translate" ? currentDrill() : null;
     return {
       sessionId: session.id,
       level: session.level,
@@ -814,7 +928,8 @@ export async function mountTutor(main, ctx = {}) {
         practiceMode: session.practiceMode,
         lessonId: session.lessonId,
         scenario: scenarioObj,
-        pendingPromptVi: session.pendingPromptVi,
+        pendingPromptVi: session.practiceMode === "translate" ? (curDrill?.vi || session.pendingPromptVi) : "",
+        expectedAnswerZh: session.practiceMode === "translate" ? (curDrill?.refZh || "") : "",
         lexicon,
       }),
       history: session.turns.slice(-10).map((t) => ({ role: t.role, hanzi: t.hanzi })),
@@ -898,8 +1013,10 @@ export async function mountTutor(main, ctx = {}) {
     endSession(true);
     session.turns = [];
     session.started = false;
-    session.pendingPromptVi = "";
+    hintsOpen = false;
+    initDrillDeck();
     refreshControls();
+    renderHintsPanel();
     if (startOpening || session.practiceMode === "roleplay") startSession();
     else renderChat();
   }
@@ -995,6 +1112,8 @@ export async function mountTutor(main, ctx = {}) {
     hintsOpen = !hintsOpen;
     renderHintsPanel();
   };
+
+  nextDrillBtn.onclick = () => advanceDrillManual();
 
   micBtn.onclick = async () => {
     if (!micSupported) return;

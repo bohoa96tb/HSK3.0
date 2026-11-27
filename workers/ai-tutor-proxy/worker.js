@@ -161,11 +161,13 @@ async function readBodyCapped(request, maxBytes) {
 const RESPONSE_SCHEMA = {
   type: "OBJECT",
   properties: {
+    passed: { type: "BOOLEAN" },
     user_transcript_hanzi: { type: "STRING" },
     user_transcript_pinyin: { type: "STRING" },
     evaluation: {
       type: "OBJECT",
       properties: {
+        passed: { type: "BOOLEAN" },
         has_error: { type: "BOOLEAN" },
         error_type: { type: "STRING", enum: ["none", "grammar", "vocab", "pronunciation_or_tone"] },
         corrected_hanzi: { type: "STRING" },
@@ -211,6 +213,7 @@ const SERVER_GUARDRAILS = [
   "4. Nếu nhận diện giọng nói không đáng tin (âm thanh nhỏ, ồn, thiếu/thừa âm tiết bất thường), hãy phản ánh ở pronunciation_status='uncertain' và nói rõ trong pronunciation_feedback_vi là chưa đủ dữ liệu để kết luận.",
   "5. Chế độ roleplay: tutor_reply.hanzi giữ 100% vai diễn bằng tiếng Trung; tiếng Việt chỉ ở evaluation.explanation_vi, pronunciation_feedback_vi và tutor_reply.translation_vi.",
   "6. Từ vượt cấp nếu buộc phải dùng phải liệt kê đầy đủ vào tutor_reply.out_of_level_words.",
+  "7. Trường passed (và evaluation.passed): đặt true khi câu của người học đạt yêu cầu (đúng ý, đúng ngữ pháp và phát âm rõ/đạt nếu có âm thanh); đặt false khi còn lỗi cần sửa hoặc chưa rõ.",
 ].join("\n");
 
 // Canonical MIME sent to Gemini. audio/x-wav is an alias of audio/wav

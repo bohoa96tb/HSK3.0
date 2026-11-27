@@ -11,7 +11,8 @@ import { JSDOM } from "jsdom";
 import {
   PRACTICE_MODES, buildLexicon, lookupLocalWord, allowedWords, allowedGrammar,
   segmentByLexicon, buildSystemInstruction, coverageNote, normalizeLevel,
-  listLessons, getLessonContext, lessonReplyHints, lessonRoleplayOpening, lessonTranslateSeeds,
+  listLessons, getLessonContext, lessonReplyHints, lessonRoleplayOpening,
+  lessonTranslateSeeds, resolveDrillPassed,
 } from "../js/ai-tutor/hsk-guardrail.js";
 import { SCENARIOS, scenarioById } from "../js/ai-tutor/roleplay-scenarios.js";
 import {
@@ -381,21 +382,38 @@ test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons 
 
   const tr = buildSystemInstruction({
     level: "HSK2", mode: "tutor", practiceMode: "translate", lessonId: "hsk2-l03",
-    pendingPromptVi: "Cơm canh làm xong cả rồi.", lexicon: lex,
+    pendingPromptVi: "Cơm canh làm xong cả rồi.", expectedAnswerZh: "菜都做好了。", lexicon: lex,
   });
   assert.match(tr, /PHẢN XẠ DỊCH NHANH/);
   assert.match(tr, /Cơm canh làm xong cả rồi\./);
+  assert.match(tr, /菜都做好了。/);
+  assert.match(tr, /tuyệt đối KHÔNG viết nhầm là 'thêm 完了 sau động từ'/);
   assert.doesNotMatch(tr, /请试着翻译/);
 });
 
-test("lessonReplyHints, lessonRoleplayOpening, and lessonTranslateSeeds return natural, non-editorial items across all lessons", () => {
+test("lessonTranslateSeeds covers all 22 lessons with 6-8 natural, in-lesson sentences and resolveDrillPassed works", () => {
   for (const l of listLessons(lex)) {
     const seeds = lessonTranslateSeeds(l.id, lex);
-    assert.ok(seeds.length >= 2, `${l.id} has natural translate seeds`);
+    assert.ok(seeds.length >= 5 && seeds.length <= 8, `${l.id} seeds=${seeds.length}`);
     for (const s of seeds) {
       assert.doesNotMatch(s.vi, /trang in|chữ mẫu|thẻ từ|ví dụ trong sách|\s—\s/i, `${l.id}: ${s.vi}`);
     }
   }
+  const h2l3 = lessonTranslateSeeds("hsk2-l03", lex);
+  const allZh = h2l3.map((s) => s.refZh).join(" ");
+  assert.equal(h2l3.length, 8);
+  assert.doesNotMatch(allZh, /打算|准备/, "no out-of-level words in HSK2 L3 drill deck");
+  assert.match(allZh, /做好|做完|想好|休息|看了看|为什么/);
+
+  assert.equal(resolveDrillPassed({ passed: true, evaluation: { has_error: true } }), true);
+  assert.equal(resolveDrillPassed({ passed: false, evaluation: { has_error: false } }), false);
+  assert.equal(resolveDrillPassed({ evaluation: { passed: true, has_error: true } }), true);
+  assert.equal(resolveDrillPassed({ evaluation: { has_error: false, pronunciation_status: "assessed" } }), true);
+  assert.equal(resolveDrillPassed({ evaluation: { has_error: false, pronunciation_status: "uncertain" } }), false);
+  assert.equal(resolveDrillPassed({ evaluation: { has_error: true, pronunciation_status: "assessed" } }), false);
+  assert.equal(_internal.RESPONSE_SCHEMA.properties.passed.type, "BOOLEAN");
+  assert.equal(_internal.RESPONSE_SCHEMA.properties.evaluation.properties.passed.type, "BOOLEAN");
+
   const hints = lessonReplyHints("hsk2-l03", "roleplay", lex);
   assert.ok(hints.length >= 3);
   assert.ok(hints.every((h) => h.zh && h.vi));
@@ -462,27 +480,79 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
       return new Response(JSON.stringify(content), { status: 200, headers: { "Content-Type": "application/json" } });
     }
     sentPayloads.push(JSON.parse(init.body));
-    const isTranslate = sentPayloads.length >= 2;
+    const idx = sentPayloads.length;
+    if (idx === 1) {
+      // Turn 1: correct mode (wrong answer)
+      return new Response(JSON.stringify({
+        ok: true,
+        passed: false,
+        user_transcript_hanzi: "我没吃完饭了",
+        user_transcript_pinyin: "Wǒ méi chīwán fàn le",
+        evaluation: {
+          has_error: true,
+          error_type: "grammar",
+          corrected_hanzi: "我没吃完饭。",
+          corrected_pinyin: "Wǒ méi chīwán fàn.",
+          explanation_vi: "(1) Ghi nhận: Bạn dùng đúng cụm 吃完. (2) Sửa lỗi: Khi phủ định với 没 phải bỏ 了 ở cuối câu.",
+          pronunciation_status: "not_assessed",
+          pronunciation_feedback_vi: "",
+        },
+        tutor_reply: {
+          hanzi: "我没吃完饭。",
+          pinyin: "Wǒ méi chīwán fàn.",
+          translation_vi: "(3) Câu tự nhiên hơn & lặp lại: Tôi chưa ăn xong cơm.",
+          out_of_level_words: [],
+        },
+        timings: { geminiMs: 850 },
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    if (idx === 2) {
+      // Turn 2: translate mode WRONG (passed: false -> stay on Câu 2)
+      return new Response(JSON.stringify({
+        ok: true,
+        passed: false,
+        user_transcript_hanzi: "我休息一休息",
+        user_transcript_pinyin: "Wǒ xiūxi yì xiūxi",
+        evaluation: {
+          has_error: true,
+          error_type: "grammar",
+          corrected_hanzi: "我想休息休息。",
+          corrected_pinyin: "Wǒ xiǎng xiūxi xiūxi.",
+          explanation_vi: "Động từ hai âm tiết khi lặp lại không chèn 一 vào giữa, nói là 休息休息.",
+          pronunciation_status: "not_assessed",
+          pronunciation_feedback_vi: "",
+        },
+        tutor_reply: {
+          hanzi: "我想休息休息。",
+          pinyin: "Wǒ xiǎng xiūxi xiūxi.",
+          translation_vi: "Bạn thử nói lại câu trên một lần nữa nhé.",
+          out_of_level_words: [],
+        },
+        timings: { geminiMs: 700 },
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    // Turn 3: translate mode PASSED (passed: true -> advance to Câu 3 without leaking Câu 3 Chinese!)
     return new Response(JSON.stringify({
       ok: true,
-      user_transcript_hanzi: "我没吃完饭了",
-      user_transcript_pinyin: "Wǒ méi chīwán fàn le",
+      passed: true,
+      user_transcript_hanzi: "我想休息休息。",
+      user_transcript_pinyin: "Wǒ xiǎng xiūxi xiūxi.",
       evaluation: {
-        has_error: true,
-        error_type: "grammar",
-        corrected_hanzi: "我没吃完饭。",
-        corrected_pinyin: "Wǒ méi chīwán fàn.",
-        explanation_vi: "(1) Ghi nhận: Bạn dùng đúng bổ ngữ kết quả 吃完. (2) Sửa lỗi: Khi phủ định với 没 phải bỏ 了 ở cuối câu.",
+        has_error: false,
+        error_type: "none",
+        corrected_hanzi: "",
+        corrected_pinyin: "",
+        explanation_vi: "Chính xác rồi!",
         pronunciation_status: "not_assessed",
         pronunciation_feedback_vi: "",
       },
       tutor_reply: {
-        hanzi: isTranslate ? "很好！请翻译下一句：" : "你可以这样说：我没吃完饭。请跟我再说一遍！",
-        pinyin: isTranslate ? "Hěn hǎo! Qǐng fānyì xià yí jù:" : "Nǐ kěyǐ zhèyàng shuō: Wǒ méi chīwán fàn. Qǐng gēn wǒ zài shuō yí biàn!",
-        translation_vi: isTranslate ? "Tốt lắm! Hãy dịch câu tiếp theo:\n🎯 Câu cần dịch: \"Bạn ăn xong chưa?\"" : "(3) Nói tự nhiên hơn & lặp lại: Bạn có thể nói là: Tôi chưa ăn xong cơm.",
+        hanzi: "对，很好！",
+        pinyin: "Duì, hěn hǎo!",
+        translation_vi: "Chuẩn rồi! Sang câu tiếp theo nhé.",
         out_of_level_words: [],
       },
-      timings: { geminiMs: 850 },
+      timings: { geminiMs: 650 },
     }), { status: 200, headers: { "Content-Type": "application/json" } });
   });
 
@@ -534,14 +604,45 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     assert.match(main.textContent, /\(1\) Ghi nhận ý đúng/);
     assert.match(main.textContent, /我没吃完饭。/);
 
-    // 6. Switch to Phản xạ dịch nhanh -> send turn -> verify challenge box extracted
+    // 6. Switch to Phản xạ dịch nhanh -> verify drill deck, skip button, pass/fail advancement, anti-leak
+    const deck = lessonTranslateSeeds("hsk2-l03", lex);
     main.querySelector('[data-pmode="translate"]').click();
-    main.querySelector("#t-text").value = "我没吃完饭";
+    assert.equal(main.querySelector("#t-drill-card").hidden, false);
+    assert.equal(main.querySelector("#t-next-drill").hidden, false);
+    assert.match(main.querySelector("#t-drill-card").textContent, /Câu 1 \/ 8/);
+    assert.ok(main.querySelector("#t-drill-card").textContent.includes(deck[0].vi));
+    assert.ok(!main.querySelector("#t-drill-card").textContent.includes(deck[0].refZh), "drill card must not leak Chinese answer");
+
+    // Manual skip to Câu 2
+    main.querySelector("#t-next-drill").click();
+    assert.match(main.querySelector("#t-drill-card").textContent, /Câu 2 \/ 8/);
+    assert.ok(main.querySelector("#t-drill-card").textContent.includes(deck[1].vi));
+
+    // Wrong answer -> stays on Câu 2
+    main.querySelector("#t-text").value = "我休息一休息";
     main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
     await new Promise((r) => setTimeout(r, 20));
     assert.equal(sentPayloads.length, 2);
     assert.equal(_internal.validateTurn(sentPayloads[1]), null);
-    assert.match(main.querySelector(".tutor-challenge-box").textContent, /Bạn ăn xong chưa\?/);
+    assert.match(main.querySelector("#t-drill-card").textContent, /Câu 2 \/ 8/);
+    assert.match(main.querySelector(".tutor-challenge-box").textContent, /Thử nói lại câu 2\/8/);
+
+    // Right answer (passed: true) -> auto advances to Câu 3 and does NOT leak Câu 3 Chinese
+    main.querySelector("#t-text").value = "我想休息休息。";
+    main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(sentPayloads.length, 3);
+    assert.match(main.querySelector("#t-drill-card").textContent, /Câu 3 \/ 8/);
+    assert.ok(main.querySelector("#t-drill-card").textContent.includes(deck[2].vi));
+    const latestTutorBubble = [...main.querySelectorAll(".tutor-bubble.tutor")].pop();
+    assert.ok(latestTutorBubble.querySelector(".tutor-challenge-box").textContent.includes(deck[2].vi));
+    assert.ok(!latestTutorBubble.querySelector(".tutor-part-zh").textContent.includes(deck[2].refZh), "part (a) must never leak next question Chinese");
+
+    // Anti-leak in Hints drawer before failing Câu 3
+    main.querySelector("#t-hints-btn").click();
+    assert.ok(!main.querySelector("#t-hints-panel").textContent.includes(deck[2].refZh), "answer hidden until reveal click");
+    main.querySelector("#t-reveal-drill-answer").click();
+    assert.ok(main.querySelector("#t-hints-panel").textContent.includes(deck[2].refZh), "answer revealed on explicit click");
   } finally {
     for (const k of keys) {
       if (prevDescriptors[k]) Object.defineProperty(globalThis, k, prevDescriptors[k]);

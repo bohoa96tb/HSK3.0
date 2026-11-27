@@ -422,35 +422,87 @@ export function lessonTranslateSeeds(lessonId, lexicon = cachedLexicon) {
   const ctx = getLessonContext(lessonId, lexicon);
   if (!ctx?.current) return [];
   const cur = ctx.current;
-  const out = [];
-  const seen = new Set();
-  const addSeed = (vi, refZh, note) => {
+  const deck = [];
+  const seenZh = new Set();
+  const seenVi = new Set();
+
+  const addItem = (zh, pinyin, vi, note, kpId = "") => {
+    const cleanZh = String(zh || "").trim();
     const cleanVi = cleanSeedVi(vi);
-    const cleanZh = String(refZh || "").trim();
-    if (!isNaturalSentencePair(cleanZh, cleanVi)) return;
-    if (cleanZh.length < 4 || seen.has(cleanVi)) return;
-    seen.add(cleanVi);
-    out.push({ vi: cleanVi, refZh: cleanZh, note });
+    if (!isNaturalSentencePair(cleanZh, cleanVi)) return false;
+    if (cleanZh.length < 3 || seenZh.has(cleanZh) || seenVi.has(cleanVi)) return false;
+    seenZh.add(cleanZh);
+    seenVi.add(cleanVi);
+    deck.push({
+      id: `${lessonId}-drill-${deck.length + 1}`,
+      vi: cleanVi,
+      refZh: cleanZh,
+      refPinyin: String(pinyin || "").trim(),
+      note: stripChineseMetaTerms(note || "Mẫu câu bài học"),
+      kpId,
+    });
+    return true;
   };
 
-  // Prioritize real natural dialogue sentences first
-  for (const s of cur.allSentences) {
-    addSeed(s.vi, s.zh, "Bài khóa");
+  // 1. Pick up to 2 representative examples per main grammar point so all grammar targets are covered.
+  const mainKps = cur.knowledgePoints.filter((kp) => kp.kind !== "foundation" && kp.kind !== "foundation-characters");
+  for (const kp of mainKps) {
+    let pickedForKp = 0;
+    for (const ex of kp.examples) {
+      if (addItem(ex.zh, ex.pinyin, ex.vi, kp.title, kp.id)) {
+        pickedForKp += 1;
+        if (pickedForKp >= 1) break;
+      }
+    }
+  }
+
+  // 2. Prioritize authentic dialogue sentences containing negative / question / lesson patterns
+  //    (e.g. 没做完, 没想好, 为什么, 洗好了) to ensure traps and questions are practiced.
+  const rankedSents = [...cur.allSentences].sort((a, b) => {
+    const score = (s) => {
+      let sc = 0;
+      if (/[吗呢吧？?]/.test(s.zh)) sc += 3;
+      if (/没|不|为什么/.test(s.zh)) sc += 4;
+      if (s.zh.length >= 6 && s.zh.length <= 24) sc += 2;
+      return sc;
+    };
+    return score(b) - score(a);
+  });
+  for (const s of rankedSents) {
+    if (deck.length >= 8) break;
+    addItem(s.zh, s.pinyin, s.vi, "Bài khóa");
+  }
+
+  // 3. Second pass over remaining KP examples & summaryPoints / applyTasks if < 8
+  for (const kp of mainKps) {
+    if (deck.length >= 8) break;
+    for (const ex of kp.examples) {
+      if (deck.length >= 8) break;
+      addItem(ex.zh, ex.pinyin, ex.vi, kp.title, kp.id);
+    }
+  }
+  for (const sp of cur.summaryPoints) {
+    if (deck.length >= 8) break;
+    addItem(sp.exampleZh, sp.examplePinyin, sp.exampleVi, sp.titleVi || "Trọng tâm bài");
   }
   for (const t of cur.applyTasks) {
+    if (deck.length >= 8) break;
     if (t.sampleZh && t.sampleVi) {
       const z0 = t.sampleZh.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "");
+      const p0 = t.samplePinyin?.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "") || "";
       const v0 = t.sampleVi.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "");
-      addSeed(v0, z0, t.titleVi || "Mẫu tự nói");
+      addItem(z0, p0, v0, t.titleVi || "Mẫu tự nói");
     }
   }
-  for (const kp of cur.knowledgePoints) {
-    if (kp.kind === "foundation" || kp.kind === "foundation-characters") continue;
-    for (const ex of kp.examples) {
-      addSeed(ex.vi, ex.zh, kp.title);
-    }
-  }
-  return out.slice(0, 8);
+  return deck.slice(0, 8);
+}
+
+export function resolveDrillPassed(data) {
+  if (!data || typeof data !== "object") return false;
+  if (typeof data.passed === "boolean") return data.passed;
+  const ev = data.evaluation || {};
+  if (typeof ev.passed === "boolean") return ev.passed;
+  return ev.has_error === false && ev.pronunciation_status !== "uncertain";
 }
 
 // Segment a Chinese string into clickable tokens by longest-match against
@@ -572,11 +624,11 @@ const PEDAGOGICAL_LANGUAGE_RULES = [
   "NGUYÊN TẮC SƯ PHẠM & NGÔN NGỮ (BẮT BUỘC TUYỆT ĐỐI):",
   "1. TÁCH RÕ 2 PHẦN: (a) tutor_reply.hanzi (+ tutor_reply.pinyin) CHỈ dùng cho câu hội thoại thực tế, tự nhiên chuẩn bản xứ để học viên nghe và nói theo (1–2 câu ngắn). (b) Mọi lời nhận xét, chỉ lỗi, giải thích ngữ pháp và hướng dẫn ĐỀU viết bằng TIẾNG VIỆT tự nhiên, gần gũi như giáo viên thật trong evaluation.explanation_vi và tutor_reply.translation_vi.",
   "2. TUYỆT ĐỐI CẤM THUẬT NGỮ TIẾNG TRUNG KHÓ: Không bao giờ viết các từ thuật ngữ ngữ pháp hoặc chỉ dẫn học thuật bằng chữ Hán như 补语, 表示, 翻译, 语法, 结构, 动词, 名词, 形容词, 重叠, 兼语句, 主语, 谓语, 宾语, 肯定, 否定, 错误, 应该, 意思是, 请翻译 — cả trong tutor_reply.hanzi lẫn trong giải thích tiếng Việt!",
-  "3. CHỌN KẾT HỢP TỪ CHUẨN BẢN XỨ: Luôn nói theo cách người Trung Quốc thật sự nói (ví dụ xong xuôi việc chuẩn bị như mua vé/nấu cơm/rửa hoa quả/nghĩ kỹ phải dùng 好: 我买好票了, 菜做好了, 苹果洗好了, 我想好了; ăn hết/làm hết lượng việc dùng 完: 吃完饭, 做完工作; KHÔNG ghép máy móc thành 我买完票了).",
+  "3. CHỌN KẾT HỢP TỪ & GIẢI THÍCH CHUẨN BẢN XỨ: Luôn dùng cách nói tự nhiên của người Trung Quốc (ví dụ xong xuôi việc chuẩn bị như mua vé/nấu cơm/rửa quả/nghĩ kỹ dùng 好: 我买好票了, 菜做好了, 苹果洗好了, 我想好了; ăn hết/làm hết lượng việc dùng 完: 吃完饭, 做完工作). Khi giải thích ghép động từ với 好/完/晚, nói rõ là gắn chữ 好 hoặc 完 ngay sau động từ (ví dụ 做 + 完 = 做完, 买 + 好 = 买好), tuyệt đối KHÔNG viết nhầm là 'thêm 完了 sau động từ'.",
   "4. KHÔNG KÝ HIỆU THỪA TRONG CÂU ĐỌC: tutor_reply.hanzi chỉ gồm chữ Hán và dấu câu tự nhiên (，。！？), không chèn tiếng Việt, pinyin, số mục (1)(2)(3), ngoặc đơn chú thích hay emoji.",
 ].join("\n");
 
-function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, lexicon = cachedLexicon) {
+function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh = "", lexicon = cachedLexicon) {
   const effectivePractice = practiceMode || (mode === "roleplay" ? "roleplay" : "teach");
 
   if (effectivePractice === "roleplay") {
@@ -609,21 +661,22 @@ function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi,
   }
 
   if (effectivePractice === "translate") {
-    const seeds = ctx?.current ? lessonTranslateSeeds(ctx.current.lessonId, lexicon) : [];
-    const anchorExamples = seeds.slice(0, 4).map((s) => `"${s.vi}" → ${s.refZh}`).join(" | ");
     const lines = [
-      "CHẾ ĐỘ PHẢN XẠ DỊCH NHANH (VIỆT → TRUNG TỰ NHIÊN):",
-      "Nhiệm vụ: đưa 1 câu tiếng Việt hoàn chỉnh, tự nhiên đúng như người Việt nói hàng ngày trong ngữ cảnh bài học để học viên nói/viết sang tiếng Trung rồi sửa ngay.",
-      "QUY TẮC RA CÂU TIẾNG VIỆT:",
-      "- Câu tiếng Việt PHẢI tự nhiên, đúng logic đời sống và hợp ngữ cảnh bài (ví dụ: 'Tôi mua xong vé rồi.', 'Cơm canh nấu xong cả rồi.', 'Em vẫn chưa nghĩ xong đâu.', 'Hôm qua tôi nghỉ ngơi một chút rồi.').",
-      "- TUYỆT ĐỐI KHÔNG ghép máy móc từng chữ từ công thức ngữ pháp gây vô nghĩa như 'Tôi muốn mua vé xong.' hay 'Tôi ăn xong chưa rồi.'.",
-      ...(anchorExamples ? [`MẪU VĂN PHONG TỰ NHIÊN CỦA BÀI: ${anchorExamples}`] : []),
-      "- Nếu học viên vừa trả lời: chấm câu của học viên trong evaluation (has_error, corrected_hanzi, corrected_pinyin, explanation_vi bằng tiếng Việt đời thường dễ hiểu).",
-      "- Trong tutor_reply.hanzi & tutor_reply.pinyin: CHỈ nói câu phản hồi/kích lệ tự nhiên hoặc đọc lại đáp án tiếng Trung chuẩn của câu học viên VỪA làm (ví dụ: `很好！我买好票了。` hoặc `准备好了吗？我们开始吧！`). TUYỆT ĐỐI KHÔNG dùng chữ `翻译` hay `请翻译`, và KHÔNG lộ đáp án tiếng Trung của câu tiếng Việt MỚI!",
-      "- Trong tutor_reply.translation_vi: viết nhận xét/nghĩa tiếng Việt ngắn cho câu vừa nói, rồi xuống dòng ghi CHÍNH XÁC: `🎯 Câu cần nói sang tiếng Trung: \"<1 câu tiếng Việt tự nhiên hoàn chỉnh>\"`.",
+      "CHẾ ĐỘ PHẢN XẠ DỊCH NHANH (VIỆT → TRUNG, ĐỀ BÀI DO HỆ THỐNG QUẢN LÝ):",
+      "Nhiệm vụ của bạn ở lượt này: CHỈ chấm câu tiếng Trung học viên vừa nói/viết so với CÂU TIẾNG VIỆT ĐỀ BÀI hiện tại và phản hồi thật ngắn gọn, chính xác.",
+      "- TUYỆT ĐỐI KHÔNG tự bịa hay đưa ra câu đề bài tiếng Việt mới — hệ thống bài tập sẽ tự chuyển câu tiếp theo dựa trên kết quả đánh giá của bạn!",
+      "- Đánh giá passed & evaluation.has_error:",
+      "  + Đặt passed=true (và evaluation.has_error=false, error_type='none', corrected_hanzi='') KHI học viên dịch đúng ý, đúng mẫu câu & từ vựng trong phạm vi bài học (hoặc bài trước), và phát âm rõ đạt (nếu gửi giọng nói). Chấp nhận các cách diễn đạt tự nhiên tương đương đúng ngữ pháp bài.",
+      "  + Đặt passed=false (và evaluation.has_error=true) CHỈ KHI sai nghĩa, sai ngữ pháp, dùng nhầm từ, hoặc phát âm/thanh điệu còn lỗi rõ.",
+      "- CHỐNG LỘ ĐÁP ÁN & SẠCH KÝ TỰ:",
+      "  + Khi học viên ĐÚNG (passed=true / has_error=false): tutor_reply.hanzi CHỈ nói 1 câu khen ngắn tự nhiên bằng tiếng Trung (ví dụ: `对，很好！` hoặc `说得很自然！`), tutor_reply.translation_vi khen ngắn bằng tiếng Việt (ví dụ: `Chuẩn rồi! Chuyển sang câu tiếp theo nhé.`). KHÔNG nhắc tới hay viết tiếng Trung của bất kỳ câu nào khác!",
+      "  + Khi học viên SAI (passed=false / has_error=true): tutor_reply.hanzi CHỈ đọc câu sửa đúng hoàn chỉnh của CHÍNH câu hiện tại (ví dụ: `我还没吃完饭。`), evaluation.explanation_vi giải thích ngắn 1–2 câu bằng tiếng Việt tự nhiên (chính xác như: thêm 完 ngay sau 做 thành 做完, không ghi nhầm là 完了; phủ định với 没 phải bỏ 了), và tutor_reply.translation_vi mời học viên nói lại câu vừa sửa.",
     ];
     if (pendingPromptVi) {
-      lines.push(`CÂU TIẾNG VIỆT HỌC VIÊN ĐANG TRẢ LỜI Ở LƯỢT NÀY: "${pendingPromptVi}". Hãy chấm câu tiếng Trung của học viên dựa trên đúng câu này.`);
+      lines.push(`CÂU TIẾNG VIỆT ĐỀ BÀI HỌC VIÊN ĐANG TRẢ LỜI: "${pendingPromptVi}".`);
+    }
+    if (expectedAnswerZh) {
+      lines.push(`ĐÁP ÁN THAM KHẢO CỦA ĐỀ BÀI (chỉ dùng để đối chiếu chấm đúng/sai hoặc hiện khi học viên sai; KHÔNG tự bịa câu khác): "${expectedAnswerZh}".`);
     }
     return lines;
   }
@@ -644,6 +697,7 @@ export function buildSystemInstruction({
   lessonId = null,
   scenario = null,
   pendingPromptVi = "",
+  expectedAnswerZh = "",
   lexicon = cachedLexicon,
 } = {}) {
   const ctx = lessonId ? getLessonContext(lessonId, lexicon) : null;
@@ -712,7 +766,7 @@ export function buildSystemInstruction({
     lines.push(...formatLessonContextLines(ctx));
   }
 
-  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, lexicon));
+  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh, lexicon));
 
   let result = lines.join("\n");
   if (result.length > MAX_PROMPT_CHARS) {

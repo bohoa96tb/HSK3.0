@@ -2,7 +2,7 @@
 // Device TTS only; never presented as publisher recordings or verified audio.
 // A lesson is enabled only after its own content QA (user-approved sample:
 // HSK 2 Lesson 1, PR #112–#115; rollout one lesson per round, D31).
-export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05', 'hsk2-l06', 'hsk2-l07',
+export const REVIEW_LESSONS = ['hsk2-l01', 'hsk2-l02', 'hsk2-l03', 'hsk2-l04', 'hsk2-l05', 'hsk2-l06', 'hsk2-l07', 'hsk2-l08',
  'hsk1-l01', 'hsk1-l02', 'hsk1-l03', 'hsk1-l04', 'hsk1-l05', 'hsk1-l06', 'hsk1-l07', 'hsk1-l08',
  'hsk1-l09', 'hsk1-l10', 'hsk1-l11', 'hsk1-l12', 'hsk1-l13', 'hsk1-l14', 'hsk1-l15'];
 export const REVIEW_LESSON = REVIEW_LESSONS[0];
@@ -136,6 +136,23 @@ export const REVIEW_WORD_SEGMENTS = {
  'h2l7-w13': {start: 6.41, end: 8.38},
  'h2l7-w14': {start: 0.26, end: 3.66},
  'h2l7-w15': {start: 3.67, end: 6.99},
+ // HSK2 Lesson 8 (both readings per word; tracks 8-2 15.38s, 8-4 9.53s, 8-6 10.25s, 8-8 10.42s).
+ 'h2l8-w01': {start: 0.30, end: 3.25},
+ 'h2l8-w02': {start: 3.45, end: 5.95},
+ 'h2l8-w03': {start: 6.20, end: 8.28},
+ 'h2l8-w04': {start: 8.45, end: 10.50},
+ 'h2l8-w05': {start: 10.70, end: 12.85},
+ 'h2l8-w06': {start: 13.15, end: 15.00},
+ 'h2l8-w07': {start: 0.55, end: 2.70},
+ 'h2l8-w08': {start: 3.05, end: 6.08},
+ 'h2l8-w09': {start: 6.40, end: 9.25},
+ 'h2l8-w10': {start: 0.35, end: 2.50},
+ 'h2l8-w11': {start: 2.68, end: 5.22},
+ 'h2l8-w12': {start: 5.45, end: 7.95},
+ 'h2l8-w13': {start: 8.25, end: 10.10},
+ 'h2l8-w14': {start: 0.68, end: 4.10},
+ 'h2l8-w15': {start: 4.70, end: 7.05},
+ 'h2l8-w16': {start: 7.45, end: 10.15},
  // D35 (Hoa, 2026-11-08): HSK 1 rollout — same double-reading span
  // method as D34, derived per track from RMS speech regions plus
  // per-region crop-ASR verification; entries carry their trackId so
@@ -504,7 +521,9 @@ export function reviewCounts(content) {
  };
 }
 export function reviewQuickLabel(content) {
- return content?.lessonId === 'hsk2-l03' ? 'Từ vựng theo mạch chuyện + 4 câu xương sống' : 'Ý chính ngữ pháp + 1 câu mẫu';
+ return (content?.lessonId === 'hsk2-l03' || content?.lessonId === 'hsk2-l08')
+  ? 'Từ vựng theo mạch chuyện + 4 câu xương sống'
+  : 'Ý chính ngữ pháp + 1 câu mẫu';
 }
 export function reviewDetailLabel(content) {
  const c = reviewCounts(content);
@@ -539,6 +558,10 @@ export const REVIEW_PATTERN_SPEECH = {
  'kp-hsk2-l07-yi-jiu': 'Câu phức rút gọn một, liền: hai hành động nối tiếp nhau, hành động sau xảy ra ngay sau hành động trước, việc trước là điều kiện, việc sau là kết quả, ví dụ vừa tan học là chạy ra ngoài ngay, cứ có thời gian là đi vận động.',
  'kp-hsk2-l07-state-complement-1': 'Bổ ngữ trạng thái phần một: đứng sau động từ qua trợ từ đắc, bổ sung trạng thái hay mức độ của hành động, trả lời câu hỏi hành động được làm như thế nào, ví dụ đá cũng tạm được, chạy không nhanh, phủ định thì thêm bất trước cụm tính từ.',
  'kp-hsk2-l07-state-complement-2': 'Bổ ngữ trạng thái phần hai: khi động từ có tân ngữ hoặc là từ li hợp thì lặp lại động từ sau tân ngữ rồi mới thêm bổ ngữ, hoặc đưa tân ngữ lên trước động từ, ví dụ bơi thì bơi không nhanh, bóng rổ thì chơi rất tốt.',
+ 'kp-hsk2-l08-bi1': 'Câu so sánh chữ tỷ phần một: đặt chủ thể thứ nhất ở đầu, tiếp theo là chữ tỷ và đối tượng so sánh, rồi mới đặt tính từ ở cuối. Chú ý trật tự ngược với tiếng Việt: nói hôm nay so với hôm qua lạnh, không đặt tính từ trước chữ tỷ.',
+ 'kp-hsk2-l08-bi2': 'Câu so sánh chữ tỷ phần hai: trong câu có chữ tỷ, tuyệt đối không dùng từ rất hay vô cùng trước tính từ. Muốn nhấn mạnh hơn nữa thì thêm từ hoàn hoặc từ cánh có nghĩa là còn hay càng ngay trước tính từ.',
+ 'kp-hsk2-l08-suiran-danshi': 'Câu phức chuyển ý tuy rằng nhưng mà: mở đầu vế thứ nhất bằng tuy rằng để thừa nhận một sự thật, mở đầu vế thứ hai bằng nhưng mà để nêu kết quả trái ngược. Có thể dùng cả cặp, hoặc chỉ dùng một trong hai liên từ.',
+ 'kp-hsk2-l08-tip-qing': 'Mẹo ngữ cảnh: chữ thỉnh không chỉ dùng để mời lịch sự như xin mời ngồi, mà trong bài này còn mang nghĩa mời khách, khao, chiêu đãi người khác đi ăn hoặc xem phim.',
  // D35: HSK 1 grammar points, paraphrased from each point's verified
  // pattern, position and explanation in the lesson data.
  'kp-hsk1-l01-men': 'Mẫu câu: để nói về một nhóm người, thêm trợ từ chỉ số nhiều ngay sau đại từ hoặc danh từ chỉ người; trợ từ này không đứng một mình.',
@@ -728,6 +751,112 @@ function buildHsk2L03Review(content, mode, {add, pair, pushPattern}) {
  pair('Câu xương sống 4', '我觉得他这个月每天都很累，真想让他休息休息。', 'Tháng này ngày nào anh ấy cũng rất mệt, thật muốn để anh ấy nghỉ ngơi một chút. Chú ý: 休息休息 không chèn chữ 一 vào giữa.', 'h2l3-q-bone-4');
 }
 
+const H2L8_COLLOCATIONS = {
+ 'h2l8-w01': {zh: '两块手表；一块漂亮的手表', vi: 'hai chiếc đồng hồ đeo tay; một chiếc đồng hồ đẹp'},
+ 'h2l8-w02': {zh: '左边这个；左边的手表', vi: 'cái bên trái này; chiếc đồng hồ bên trái'},
+ 'h2l8-w03': {zh: '左手；往左看', vi: 'tay trái; nhìn sang bên trái'},
+ 'h2l8-w04': {zh: '今天比昨天冷；左边的比右边的好看', vi: 'hôm nay lạnh hơn hôm qua; cái bên trái đẹp hơn cái bên phải'},
+ 'h2l8-w05': {zh: '右边的；在我的右边', vi: 'cái bên phải; ở bên phải tôi'},
+ 'h2l8-w06': {zh: '右手；右边还是左边', vi: 'tay phải; bên phải hay bên trái'},
+ 'h2l8-w07': {zh: '虽然你忘了，但是我记得；记得清楚', vi: 'tuy em quên rồi nhưng anh nhớ; nhớ rõ'},
+ 'h2l8-w08': {zh: '喜欢看爱情片；那个爱情片', vi: 'thích xem phim tình cảm; bộ phim tình cảm kia'},
+ 'h2l8-w09': {zh: '更有意思；踢足球很有意思', vi: 'càng thú vị hơn; đá bóng rất thú vị'},
+ 'h2l8-w10': {zh: '点菜；点了几个菜', vi: 'gọi món; gọi mấy món ăn'},
+ 'h2l8-w11': {zh: '虽然花了一些钱；虽然有点儿累', vi: 'tuy tốn một ít tiền; tuy hơi mệt'},
+ 'h2l8-w12': {zh: '但是我记得；虽然忙，但是快乐', vi: 'nhưng tôi nhớ; tuy bận nhưng vui'},
+ 'h2l8-w13': {zh: '花了不少钱；花时间学中文', vi: 'tiêu không ít tiền; tốn thời gian học tiếng Trung'},
+ 'h2l8-w14': {zh: '请妻子吃饭；妻子觉得很快乐', vi: 'mời vợ ăn cơm; người vợ thấy rất vui'},
+ 'h2l8-w15': {zh: '丈夫记得妻子的生日；好丈夫', vi: 'chồng nhớ sinh nhật vợ; người chồng tốt'},
+ 'h2l8-w16': {zh: '去饭馆吃饭；这家饭馆的菜很便宜', vi: 'đi nhà hàng ăn cơm; món của nhà hàng này rất rẻ'},
+};
+
+function buildHsk2L08Review(content, mode, {add, pair, pushPattern}) {
+ if (mode === 'detail') {
+  add('Từ mới & cụm ghép', 'Ôn chi tiết Bài 8. Phần một: nghe lại 16 từ mới bằng giọng đọc của sách, rồi ghép ngay vào cụm từ dùng hằng ngày.', 'editorial-intro');
+  for (const w of content.prepWords) {
+   const full = REVIEW_WORD_SEGMENTS[w.id];
+   pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id, full ? {...(w.audio || {}), ...full} : w.audio);
+   const col = H2L8_COLLOCATIONS[w.id];
+   if (col) pair('Cụm ghép · ' + w.zh, col.zh, col.vi, 'h2l8-colloc-' + w.id);
+  }
+  add('Ngữ pháp trọng tâm', 'Phần hai: ôn kỹ ba điểm ngữ pháp, mẹo chữ thỉnh và so sánh trực tiếp những lỗi rất dễ sai khi dùng câu so sánh và câu chuyển ý.', 'editorial-grammar-intro');
+  for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
+   const titleGroup = add('Cách dùng', k.title, k.id);
+   pushPattern(k, titleGroup);
+   add('Cách dùng', k.useWhenVi, k.id);
+   add('Giải thích', k.explanationVi, k.id);
+   add('Vị trí', k.positionVi, k.id);
+   for (const e of k.examples) pair('Câu mẫu', e.zh, e.noteVi, k.id);
+  }
+  add('So sánh dễ nhầm · Cặp 1', 'So sánh cặp dễ nhầm số một: trật tự câu so sánh với 比. Đừng bê nguyên trật tự tính từ đứng trước từ so sánh như tiếng Việt.', 'h2l8-contrast-1');
+  pair('Nói đúng: 比 + B đứng trước tính từ', '左边的比右边的好看。', 'Cái bên trái đẹp hơn cái bên phải. Cụm 比右边的 luôn đứng trước tính từ 好看.', 'h2l8-contrast-1');
+  pair('Lỗi cần tránh: đặt tính từ trước 比', '今天比昨天冷。', 'Không nói 今天冷比昨天; phải đặt 比昨天 ra trước rồi mới tới tính từ 冷.', 'h2l8-contrast-1');
+
+  add('So sánh dễ nhầm · Cặp 2', 'So sánh cặp dễ nhầm số hai: không dùng 很 hay 非常 trong câu so sánh 比; muốn tăng mức độ thì dùng 还 hoặc 更.', 'h2l8-contrast-2');
+  pair('Tăng mức độ với 更 và 还', '这个电影比那个爱情片更有意思。', 'Phim này còn thú vị hơn phim tình cảm kia. Cả hai đều hay, nhưng phim này nhỉnh hơn rõ rệt nên dùng 更.', 'h2l8-contrast-2');
+  pair('Mở rộng với 还', '我觉得奶茶比牛奶还好喝。', 'Tôi thấy trà sữa còn ngon hơn sữa bò. Ghi nhớ: tuyệt đối không nói 比牛奶很好喝.', 'h2l8-contrast-2');
+
+  add('So sánh dễ nhầm · Cặp 3', 'So sánh cặp dễ nhầm số ba: ý nghĩa của 虽然 và cách rút gọn cặp 虽然……，但是…….', 'h2l8-contrast-3');
+  pair('Đủ cặp chuyển ý', '虽然你忘了，但是我记得。', 'Tuy em quên rồi nhưng anh nhớ. Chú ý Hán Việt của 虽然 là tuy nhiên, nhưng nghĩa hiện đại là tuy rằng, mở đầu vế nhượng bộ.', 'h2l8-contrast-3');
+  pair('Chỉ dùng một vế vẫn đúng', '外边下雪了，但是不太冷。', 'Bên ngoài tuyết rơi rồi, nhưng không lạnh lắm. Sách cho phép dùng đủ cặp hoặc chỉ dùng một trong hai từ.', 'h2l8-contrast-3');
+
+  const qaByPassage = {
+   'h2l8-text-1': [
+    {prompt: 'Phản xạ Đoạn 1, câu một: 他们看的是哪个东西？ Bạn thử trả lời trước nhé.', zh: '他们在看两块手表，觉得左边的比右边的好看。', vi: 'Họ đang xem hai chiếc đồng hồ đeo tay, thấy chiếc bên trái đẹp hơn chiếc bên phải.'},
+    {prompt: 'Phản xạ Đoạn 1, câu hai: 这块手表便宜吗？多少钱？ Thử tự đáp nhé.', zh: '真不便宜，要八千八。', vi: 'Không rẻ chút nào, giá tám nghìn tám trăm tệ.'},
+   ],
+   'h2l8-text-2': [
+    {prompt: 'Phản xạ Đoạn 2, câu một: 他们为什么选这个电影，不看爱情片？ Bạn nhẩm đáp án nhé.', zh: '因为网上说这个电影比那个爱情片更有意思。', vi: 'Vì trên mạng nói bộ phim này còn thú vị hơn bộ phim tình cảm kia.'},
+    {prompt: 'Phản xạ Đoạn 2, câu hai: 他们去哪儿买票？为什么？ Thử trả lời nhé.', zh: '到网上买，因为网上买比在这里买便宜。', vi: 'Lên mạng mua, vì mua trên mạng rẻ hơn mua tại rạp.'},
+   ],
+   'h2l8-text-3': [
+    {prompt: 'Phản xạ Đoạn 3: 刘明为什么点这么多菜？还买了什么礼物？ Tự nhẩm cả hai ý trước khi nghe đáp án nhé.', zh: '因为8月27号是王一雪的生日，他虽然花了一些钱买了手表，但是两人过了一个快乐的生日。', vi: 'Vì ngày 27 tháng 8 là sinh nhật Vương Nhất Tuyết; tuy anh tiêu một ít tiền mua đồng hồ, nhưng hai người đã đón một sinh nhật vui vẻ.'},
+   ],
+   'h2l8-text-4': [
+    {prompt: 'Phản xạ Đoạn 4: 丈夫请妻子做了哪些事？妻子觉得怎么样？ Bạn thử tự kể lại nhé.', zh: '丈夫请妻子去饭馆吃饭、去电影院看电影，还买了一块非常漂亮的手表，妻子觉得今天很快乐。', vi: 'Người chồng mời vợ đi nhà hàng ăn cơm, đi rạp xem phim, còn mua tặng một chiếc đồng hồ rất đẹp; người vợ thấy hôm nay rất vui.'},
+   ],
+  };
+
+  for (const p of content.reader.passages) {
+   add('Hội thoại', p.title, p.id);
+   for (const id of p.sentenceIds) {
+    const s = content.reader.sentences.find(s => s.id === id);
+    pair(s.speaker ? `${p.title} · ${s.speaker}` : p.title, s.zh, s.vi, s.id, s.audio);
+   }
+   const drills = qaByPassage[p.id] || [];
+   for (const [i, d] of drills.entries()) {
+    add(`Phản xạ · ${p.title}`, d.prompt, `h2l8-qa-${p.id}-${i + 1}`);
+    pair(`Đáp án · ${p.title}`, d.zh, d.vi, `h2l8-qa-ans-${p.id}-${i + 1}`);
+   }
+  }
+  pair('Chốt câu chuyện Đoạn 4', '虽然妻子忘了今天是自己的生日，但是丈夫记得。丈夫请妻子去饭馆吃饭、去电影院看电影，还给妻子买了一块非常漂亮的手表。妻子觉得今天很快乐。', 'Tuy người vợ quên sinh nhật mình nhưng người chồng vẫn nhớ, mời vợ ăn nhà hàng, xem phim và tặng chiếc đồng hồ đẹp khiến vợ rất vui.', 'h2l8-story-wrap');
+  return;
+ }
+
+ // Quick mode for hsk2-l08: vocabulary by story arc + 4 backbone sentences with active-recall pacing.
+ add('Mở đầu', 'Ôn nhanh Bài 8 theo mạch chuyện sinh nhật của Nhất Tuyết và bốn câu xương sống. Sau mỗi câu gợi ý, bạn tự nhẩm bằng tiếng Trung trước khi nghe đáp án nhé.', 'editorial-intro');
+
+ add('Mạch 1 · Quầy đồng hồ', 'Chặng một, ở trung tâm thương mại: hai vợ chồng xem đồng hồ. Hãy tự nhẩm từ đồng hồ đeo tay, bên trái, bên phải và từ so với.', 'h2l8-q-cue-1');
+ pair('Từ mới · Chặng 1', '手表。左边。右边。比', '手表 là đồng hồ đeo tay; 左边 là bên trái; 右边 là bên phải; 比 là so với, hơn.', 'h2l8-q-w1');
+ add('Câu xương sống 1', 'Câu xương sống một: hãy tự nhẩm bằng tiếng Trung câu, Anh cũng thấy chiếc bên trái đẹp hơn chiếc bên phải.', 'h2l8-q-bone-cue-1');
+ pair('Câu xương sống 1', '我也觉得左边的比右边的好看。', 'Anh cũng thấy chiếc bên trái đẹp hơn chiếc bên phải. Nhớ trật tự: 左边的 đứng trước, đến 比右边的, cuối cùng mới là 好看.', 'h2l8-q-bone-1');
+
+ add('Mạch 2 · Ngoài rạp chiếu phim', 'Chặng hai, ngoài rạp chiếu phim: chọn phim và mua vé. Tự nhẩm ba từ: còn nhớ, phim tình cảm, và thú vị.', 'h2l8-q-cue-2');
+ pair('Từ mới · Chặng 2', '记得。爱情片。有意思', '记得 là còn nhớ; 爱情片 là phim tình cảm; 有意思 là thú vị, hay.', 'h2l8-q-w2');
+ add('Câu xương sống 2', 'Câu xương sống hai: bạn tự nhẩm hai câu, Trên mạng nói phim này còn hay hơn phim tình cảm kia, và Mua trên mạng rẻ hơn mua ở đây.', 'h2l8-q-bone-cue-2');
+ pair('Câu xương sống 2', '网上说这个电影比那个爱情片更有意思。网上买比在这里买便宜。', 'Tăng mức độ trong câu so sánh dùng 更 hoặc 还, tuyệt đối không dùng 很 trước tính từ.', 'h2l8-q-bone-2');
+
+ add('Mạch 3 · Bữa cơm sinh nhật', 'Chặng ba, ở nhà hàng mừng sinh nhật: Lưu Minh gọi nhiều món và lấy quà bất ngờ. Hãy tự nhẩm bốn từ: gọi món, tuy rằng, nhưng mà, và tiêu tiền.', 'h2l8-q-cue-3');
+ pair('Từ mới · Chặng 3', '点。虽然。但是。花', '点 là gọi món; 虽然 là tuy rằng; 但是 là nhưng mà; 花 là tiêu tiền, tốn thời gian.', 'h2l8-q-w3');
+ add('Câu xương sống 3', 'Câu xương sống ba, cũng là tên bài học: hãy tự nhẩm câu, Tuy em quên rồi, nhưng anh vẫn nhớ.', 'h2l8-q-bone-cue-3');
+ pair('Câu xương sống 3', '虽然你忘了，但是我记得。', 'Tuy em quên rồi, nhưng anh vẫn nhớ. 虽然 mở đầu vế nhượng bộ, 但是 mở đầu vế chuyển ý.', 'h2l8-q-bone-3');
+
+ add('Mạch 4 · Kể lại một ngày', 'Chặng bốn, tóm tắt câu chuyện: tự nhẩm ba danh từ vợ, chồng, và nhà hàng.', 'h2l8-q-cue-4');
+ pair('Từ mới · Chặng 4', '妻子。丈夫。饭馆', '妻子 là vợ; 丈夫 là chồng; 饭馆 là nhà hàng, quán ăn.', 'h2l8-q-w4');
+ add('Câu xương sống 4', 'Câu xương sống bốn, chốt lại bài: tự nhẩm câu, Chồng mời vợ đi nhà hàng ăn cơm, đi rạp xem phim, còn mua cho vợ một chiếc đồng hồ rất đẹp.', 'h2l8-q-bone-cue-4');
+ pair('Câu xương sống 4', '丈夫请妻子去饭馆吃饭、去电影院看电影，还给妻子买了一块非常漂亮的手表。', 'Chồng mời vợ đi nhà hàng ăn cơm, đi rạp xem phim, còn mua cho vợ chiếc đồng hồ rất đẹp. Nhớ nghĩa mời khách chiêu đãi của chữ 请.', 'h2l8-q-bone-4');
+}
+
 export function buildReview(content, mode = 'quick') {
  if (!reviewSupported(content)) return [];
  const rows = [];
@@ -781,6 +910,8 @@ export function buildReview(content, mode = 'quick') {
  };
  if (content.lessonId === 'hsk2-l03') {
   buildHsk2L03Review(content, mode, {add, pair, pushPattern});
+ } else if (content.lessonId === 'hsk2-l08') {
+  buildHsk2L08Review(content, mode, {add, pair, pushPattern});
  } else if (mode === 'detail') {
   add('Từ mới', 'Ôn từ mới. Nghe tiếng Trung, rồi nghe nghĩa tiếng Việt.', 'editorial-intro');
   for (const w of content.prepWords) {

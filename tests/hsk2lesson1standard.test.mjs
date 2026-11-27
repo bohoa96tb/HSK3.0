@@ -35,7 +35,8 @@ test('hsk2 catalogue: 15 lessons from the printed TOC, only lesson 1 open', () =
   assert.equal(stubs[4].publicationStatus, 'pilot-ready'); // lesson 5 opened in the round after
   assert.equal(stubs[5].publicationStatus, 'pilot-ready'); // lesson 6 opened in the round after
   assert.equal(stubs[6].publicationStatus, 'pilot-ready'); // lesson 7 opened in the round after
-  assert.ok(stubs.slice(7).every((l) => l.publicationStatus !== 'pilot-ready'));
+  assert.equal(stubs[7].publicationStatus, 'pilot-ready'); // lesson 8 opened in preview/hsk2-bai-8
+  assert.ok(stubs.slice(8).every((l) => l.publicationStatus !== 'pilot-ready'));
   assert.equal(content.lessons.filter((l) => l.level === 'HSK 1').length, 15);
 });
 

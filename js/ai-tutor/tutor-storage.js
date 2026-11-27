@@ -12,6 +12,14 @@ export function defaultState() {
   return {
     schemaVersion: SCHEMA_VERSION,
     config: { enabled: false, workerUrl: "", accessPin: "" },
+    prefs: {
+      showPinyin: true,
+      showVi: true,
+      autoSpeak: true,
+      lessonId: "",
+      lessonUpdatedAt: "",
+      practiceMode: "teach",
+    },
     stats: { totalSpeakingSeconds: 0, totalSessions: 0 },
     topicProgress: {}, // scenarioId -> {sessions, turns, completedTasks: [idx]}
     vocabUsage: {},    // hanzi -> count (words the learner/tutor actually used)
@@ -38,10 +46,12 @@ export function loadTutorState(storage = localStorage) {
     const base = defaultState();
     const config = { ...base.config, ...(parsed.config || {}) };
     config.workerUrl = normalizeWorkerUrl(config.workerUrl);
+    const prefs = { ...base.prefs, ...(parsed.prefs || {}) };
     return {
       ...base,
       ...parsed,
       config,
+      prefs,
       stats: { ...base.stats, ...(parsed.stats || {}) },
       topicProgress: parsed.topicProgress || {},
       vocabUsage: parsed.vocabUsage || {},
@@ -63,6 +73,13 @@ export function updateTutorState(mutator, storage = localStorage) {
   mutator(state);
   saveTutorState(state, storage);
   return state;
+}
+
+export function updateTutorPrefs(patch, storage = localStorage) {
+  if (!patch || typeof patch !== "object") return loadTutorState(storage);
+  return updateTutorState((s) => {
+    s.prefs = { ...s.prefs, ...patch };
+  }, storage);
 }
 
 export function recordSessionStart(storage = localStorage) {
@@ -118,7 +135,9 @@ export function saveConversation(conversation, storage = localStorage) {
       sessionId: conversation.sessionId,
       startedAt: conversation.startedAt || new Date().toISOString(),
       level: conversation.level || "HSK1",
+      lessonId: conversation.lessonId || null,
       mode: conversation.mode || "tutor",
+      practiceMode: conversation.practiceMode || "teach",
       scenarioId: conversation.scenarioId || null,
       turns: (conversation.turns || []).slice(-MAX_TURNS_PER_CONVERSATION).map((t) => ({
         role: t.role === "tutor" ? "tutor" : "user",
@@ -133,7 +152,7 @@ export function saveConversation(conversation, storage = localStorage) {
 }
 
 // Clear history/errors/progress ONLY — config (enabled, Worker URL, PIN)
-// is kept, and no other app key is touched.
+// and display prefs are kept, and no other app key is touched.
 export function clearTutorHistory(storage = localStorage) {
   return updateTutorState((s) => {
     s.stats = { totalSpeakingSeconds: 0, totalSessions: 0 };

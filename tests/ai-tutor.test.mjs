@@ -6,19 +6,21 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { JSDOM } from "jsdom";
 
 import {
-  buildLexicon, lookupLocalWord, allowedWords, allowedGrammar,
+  PRACTICE_MODES, buildLexicon, lookupLocalWord, allowedWords, allowedGrammar,
   segmentByLexicon, buildSystemInstruction, coverageNote, normalizeLevel,
+  listLessons, getLessonContext, lessonReplyHints, lessonRoleplayOpening, lessonTranslateSeeds,
 } from "../js/ai-tutor/hsk-guardrail.js";
 import { SCENARIOS, scenarioById } from "../js/ai-tutor/roleplay-scenarios.js";
 import {
-  TUTOR_KEY, defaultState, loadTutorState, saveTutorState, recordError, normalizeWorkerUrl,
+  TUTOR_KEY, defaultState, loadTutorState, saveTutorState, updateTutorPrefs, recordError, normalizeWorkerUrl,
   recordSpeakingSeconds, saveConversation, clearTutorHistory,
 } from "../js/ai-tutor/tutor-storage.js";
 import { _internal } from "../workers/ai-tutor-proxy/worker.js";
 import worker from "../workers/ai-tutor-proxy/worker.js";
-import { pickMimeType, micErrorVi, MAX_RECORD_SECONDS } from "../js/ai-tutor/voice-engine.js";
+import { pickMimeType, micErrorVi, isVoiceInputSupported, isTtsSupported, MAX_RECORD_SECONDS } from "../js/ai-tutor/voice-engine.js";
 
 const content = JSON.parse(readFileSync(new URL("../data/content.json", import.meta.url), "utf8"));
 const lex = buildLexicon(content);
@@ -326,4 +328,199 @@ test("worker sends the right thinkingConfig per model and surfaces Google status
   assert.match(line, /"upstreamStatus":400/);
   assert.match(line, /"google_status":"INVALID_ARGUMENT"/);
   assert.ok(!up.lines.join(" ").includes("SECRET-KEY-XYZ"), "log must not contain the API key");
+});
+
+// ---------- Pedagogical Tutor Upgrade (2026-11-27) ----------
+test("lesson selector and multi-layer context extract current, 2 prev, and 1 next summary only", () => {
+  const allLessons = listLessons(lex);
+  assert.equal(allLessons.length, 22);
+  assert.equal(listLessons(lex, "HSK 1").length, 15);
+  assert.equal(listLessons(lex, "HSK 2").length, 7);
+
+  const ctx = getLessonContext("hsk2-l03", lex);
+  assert.ok(ctx);
+  assert.equal(ctx.current.lessonId, "hsk2-l03");
+  assert.equal(ctx.current.titleZh, "我想去西安旅游");
+  assert.equal(ctx.prevLessons.map((p) => p.lessonId).join(","), "hsk2-l01,hsk2-l02");
+  assert.equal(ctx.nextLesson.lessonId, "hsk2-l04");
+  assert.equal(ctx.nextLesson.titleZh, "你穿红色的很好看");
+  assert.ok(ctx.nextLesson.topicSummaryVi.length > 0);
+  // First lesson has 0 prevLessons; last populated lesson (hsk2-l07) still peeks catalogued hsk2-l08 title
+  assert.equal(getLessonContext("hsk1-l01", lex).prevLessons.length, 0);
+  const ctx7 = getLessonContext("hsk2-l07", lex);
+  assert.equal(ctx7.nextLesson.lessonId, "hsk2-l08");
+  assert.equal(ctx7.nextLesson.titleZh, "虽然你忘了，但是我记得");
+});
+
+test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons and 4 modes", () => {
+  assert.equal(PRACTICE_MODES.length, 4);
+  for (const l of listLessons(lex)) {
+    for (const pm of PRACTICE_MODES) {
+      const si = buildSystemInstruction({
+        level: l.level.replace(/\s+/g, ""),
+        mode: pm.workerMode,
+        practiceMode: pm.id,
+        lessonId: l.id,
+        lexicon: lex,
+      });
+      assert.ok(si.length > 400 && si.length <= 20000, `${l.id}/${pm.id} length=${si.length}`);
+    }
+  }
+  const corr = buildSystemInstruction({ level: "HSK2", mode: "tutor", practiceMode: "correct", lessonId: "hsk2-l03", lexicon: lex });
+  assert.match(corr, /\(1\) Ghi nhận/);
+  assert.match(corr, /\(2\) Sửa lỗi/);
+  assert.match(corr, /\(3\) Nói tự nhiên hơn/);
+  assert.match(corr, /BÀI LIỀN TRƯỚC/);
+  assert.match(corr, /BÀI TIẾP THEO/);
+  assert.match(corr, /KHÔNG dạy trước/);
+
+  const tr = buildSystemInstruction({
+    level: "HSK2", mode: "tutor", practiceMode: "translate", lessonId: "hsk2-l03",
+    pendingPromptVi: "Cơm canh làm xong cả rồi.", lexicon: lex,
+  });
+  assert.match(tr, /PHẢN XẠ DỊCH NHANH/);
+  assert.match(tr, /Cơm canh làm xong cả rồi\./);
+});
+
+test("lessonReplyHints, lessonRoleplayOpening, and lessonTranslateSeeds return grounded items", () => {
+  const hints = lessonReplyHints("hsk2-l03", "roleplay", lex);
+  assert.ok(hints.length >= 3);
+  assert.ok(hints.every((h) => h.zh && h.vi));
+  const rp = lessonRoleplayOpening("hsk2-l03", lex);
+  assert.ok(rp.opening.hanzi && rp.opening.pinyin && rp.opening.translation_vi);
+  const seeds = lessonTranslateSeeds("hsk2-l03", lex);
+  assert.ok(seeds.length >= 3);
+});
+
+test("storage prefs persist and survive clearTutorHistory", () => {
+  const st = fakeStorage();
+  updateTutorPrefs({ showPinyin: false, showVi: true, lessonId: "hsk2-l03", practiceMode: "correct" }, st);
+  saveTutorState({ ...loadTutorState(st), config: { enabled: true, workerUrl: "https://x.workers.dev", accessPin: "" } }, st);
+  const afterClear = clearTutorHistory(st);
+  assert.equal(afterClear.prefs.showPinyin, false);
+  assert.equal(afterClear.prefs.lessonId, "hsk2-l03");
+  assert.equal(afterClear.prefs.practiceMode, "correct");
+  assert.equal(afterClear.config.enabled, true);
+});
+
+test("voice capability checks report false cleanly when browser APIs are absent", () => {
+  assert.equal(isVoiceInputSupported({}, undefined), false);
+  assert.equal(isVoiceInputSupported({ mediaDevices: { getUserMedia: () => {} } }, function FakeRec() {}), true);
+  assert.equal(isTtsSupported({}), false);
+  assert.equal(isTtsSupported({ speechSynthesis: {} }), true);
+});
+
+test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and Worker contract", async () => {
+  const dom = new JSDOM("<!doctype html><html><head></head><body><main id=\"main\"></main></body></html>", {
+    url: "https://bohoa96tb.github.io/HSK3.0/#/tutor",
+  });
+  const keys = ["window", "document", "location", "localStorage", "navigator", "fetch", "HTMLElement"];
+  const prevDescriptors = Object.fromEntries(keys.map((k) => [k, Object.getOwnPropertyDescriptor(globalThis, k)]));
+  const setGlobal = (k, v) => Object.defineProperty(globalThis, k, { value: v, writable: true, configurable: true });
+  const storage = fakeStorage();
+  saveTutorState({
+    ...defaultState(),
+    config: { enabled: true, workerUrl: "https://tutor.example.workers.dev/", accessPin: "9999" },
+  }, storage);
+
+  const sentPayloads = [];
+  setGlobal("window", dom.window);
+  setGlobal("document", dom.window.document);
+  setGlobal("location", dom.window.location);
+  setGlobal("localStorage", storage);
+  setGlobal("navigator", {}); // no mic API -> tests graceful unsupported fallback
+  setGlobal("HTMLElement", dom.window.HTMLElement);
+  dom.window.HTMLElement.prototype.scrollIntoView = () => {};
+  dom.window.confirm = () => true;
+  setGlobal("fetch", async (url, init) => {
+    if (String(url).includes("data/content.json")) {
+      return new Response(JSON.stringify(content), { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    sentPayloads.push(JSON.parse(init.body));
+    const isTranslate = sentPayloads.length >= 2;
+    return new Response(JSON.stringify({
+      ok: true,
+      user_transcript_hanzi: "我没吃完饭了",
+      user_transcript_pinyin: "Wǒ méi chīwán fàn le",
+      evaluation: {
+        has_error: true,
+        error_type: "grammar",
+        corrected_hanzi: "我没吃完饭。",
+        corrected_pinyin: "Wǒ méi chīwán fàn.",
+        explanation_vi: "(1) Ghi nhận: Bạn dùng đúng bổ ngữ kết quả 吃完. (2) Sửa lỗi: Khi phủ định với 没 phải bỏ 了 ở cuối câu.",
+        pronunciation_status: "not_assessed",
+        pronunciation_feedback_vi: "",
+      },
+      tutor_reply: {
+        hanzi: isTranslate ? "很好！请翻译下一句：" : "你可以这样说：我没吃完饭。请跟我再说一遍！",
+        pinyin: isTranslate ? "Hěn hǎo! Qǐng fānyì xià yí jù:" : "Nǐ kěyǐ zhèyàng shuō: Wǒ méi chīwán fàn. Qǐng gēn wǒ zài shuō yí biàn!",
+        translation_vi: isTranslate ? "Tốt lắm! Hãy dịch câu tiếp theo:\n🎯 Câu cần dịch: \"Bạn ăn xong chưa?\"" : "(3) Nói tự nhiên hơn & lặp lại: Bạn có thể nói là: Tôi chưa ăn xong cơm.",
+        out_of_level_words: [],
+      },
+      timings: { geminiMs: 850 },
+    }), { status: 200, headers: { "Content-Type": "application/json" } });
+  });
+
+  try {
+    const { mountTutor } = await import("../js/ai-tutor/tutor-view.js");
+    const main = dom.window.document.getElementById("main");
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    await mountTutor(main, {
+      esc,
+      header: (t, s) => `<header><h1>${t}</h1><p>${s || ""}</p></header>`,
+      navActive: () => {},
+      recentLessonId: "hsk2-l03",
+      recentLessonUpdatedAt: "2026-11-27T12:00:00Z",
+    });
+
+    // 1. Defaults to most recent lesson (HSK 2 Bài 03)
+    assert.equal(main.querySelector("#t-level").value, "HSK2");
+    assert.equal(main.querySelector("#t-lesson").value, "hsk2-l03");
+    assert.match(main.querySelector("#t-lesson-brief").textContent, /我想去西安旅游/);
+
+    // 2. Graceful mic unsupported note
+    assert.equal(main.querySelector("#t-mic").disabled, true);
+    assert.match(main.querySelector(".tutor-mic-note").textContent, /chưa hỗ trợ ghi âm/);
+
+    // 3. Global Pinyin & Nghĩa Việt toggles
+    const root = main.querySelector("#tutor-root");
+    main.querySelector("#t-toggle-global-pinyin").click();
+    assert.ok(root.classList.contains("hide-pinyin"));
+    main.querySelector("#t-toggle-global-vi").click();
+    assert.ok(root.classList.contains("hide-vi"));
+    main.querySelector("#t-toggle-global-pinyin").click();
+    main.querySelector("#t-toggle-global-vi").click();
+
+    // 4. Switch to Roleplay & open Hints drawer
+    main.querySelector('[data-pmode="roleplay"]').click();
+    assert.equal(main.querySelectorAll(".tutor-bubble.tutor").length, 1);
+    main.querySelector("#t-hints-btn").click();
+    assert.equal(main.querySelector("#t-hints-panel").hidden, false);
+    assert.ok(main.querySelectorAll(".tutor-hint-item").length >= 3);
+
+    // 5. Switch to Kiểm tra & Sửa lỗi -> send turn -> verify 3-step pedagogical rendering & Worker contract
+    main.querySelector('[data-pmode="correct"]').click();
+    main.querySelector("#t-text").value = "我没吃完饭了";
+    main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(sentPayloads.length, 1);
+    assert.equal(_internal.validateTurn(sentPayloads[0]), null);
+    assert.equal(sentPayloads[0].mode, "tutor");
+    assert.match(main.textContent, /\(1\) Ghi nhận ý đúng/);
+    assert.match(main.textContent, /我没吃完饭。/);
+
+    // 6. Switch to Phản xạ dịch nhanh -> send turn -> verify challenge box extracted
+    main.querySelector('[data-pmode="translate"]').click();
+    main.querySelector("#t-text").value = "我没吃完饭";
+    main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(sentPayloads.length, 2);
+    assert.equal(_internal.validateTurn(sentPayloads[1]), null);
+    assert.match(main.querySelector(".tutor-challenge-box").textContent, /Bạn ăn xong chưa\?/);
+  } finally {
+    for (const k of keys) {
+      if (prevDescriptors[k]) Object.defineProperty(globalThis, k, prevDescriptors[k]);
+      else delete globalThis[k];
+    }
+  }
 });

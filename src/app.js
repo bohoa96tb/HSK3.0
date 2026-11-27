@@ -1,4 +1,4 @@
-import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261117-ai-tutor5";
+import { reviewHtml, mountReview, stopReview } from "./audio-review.js?v=20261127-ai-tutor6";
 // HSK 3.0 · Ngữ pháp tiếng Trung — pilot app (static, no build step).
 // All learning content comes from data/content.json, whose items carry
 // sourceRefs back to Baulchino / the printed Workbook. Nothing is invented.
@@ -1815,11 +1815,33 @@ function tutorStatsHtml() {
   <p class="row-actions"><a class="btn" href="#/tutor">Mở Giáo viên AI →</a></p></section>`;
 }
 
+function recentTutorLesson() {
+  const rs = readyLessons();
+  const readyIds = new Set(rs.map((l) => l.id));
+  const p = loadProgress();
+  const entries = Object.entries(p.lessons || {})
+    .filter(([id, st]) => readyIds.has(id) && st?.updatedAt)
+    .sort((a, b) => String(b[1].updatedAt).localeCompare(String(a[1].updatedAt)));
+  if (entries[0]) return { lessonId: entries[0][0], updatedAt: entries[0][1].updatedAt };
+  return { lessonId: "", updatedAt: "" };
+}
+
 function viewTutor() {
   navActive();
-  main.innerHTML = `${header("Giáo viên AI", "Luyện nói hội thoại theo đúng vốn từ giáo trình")}<p class="loading">Đang tải module luyện nói…</p>`;
-  import("../js/ai-tutor/tutor-view.js?v=20261117-ai-tutor5")
-    .then((m) => { if ((parseRoute().seg[0] || "today") === "tutor") return m.mountTutor(main, { esc, header, navActive }); })
+  main.innerHTML = `${header("Giáo viên AI", "Luyện nói sư phạm theo từng bài giáo trình HSK 3.0")}<p class="loading">Đang tải module luyện nói…</p>`;
+  const queryLessonId = parseRoute().query.lesson || "";
+  const recent = recentTutorLesson();
+  import("../js/ai-tutor/tutor-view.js?v=20261127-ai-tutor6")
+    .then((m) => {
+      if ((parseRoute().seg[0] || "today") === "tutor") {
+        return m.mountTutor(main, {
+          esc, header, navActive,
+          recentLessonId: recent.lessonId,
+          recentLessonUpdatedAt: recent.updatedAt,
+          queryLessonId,
+        });
+      }
+    })
     .catch(() => {
       if ((parseRoute().seg[0] || "today") === "tutor") {
         main.innerHTML = `${header("Giáo viên AI")}<section class="card"><h1>Chưa tải được module</h1><p>Kiểm tra mạng rồi thử lại. Các phần khác của app không bị ảnh hưởng.</p><a class="btn" href="#/today">Về Hôm nay</a></section>`;
@@ -1831,7 +1853,7 @@ function mountTutorSettings() {
   const host = document.getElementById("tutor-settings-slot");
   if (!host) return;
   host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2><p class="muted">Đang tải cấu hình…</p></section>`;
-  import("../js/ai-tutor/tutor-storage.js?v=20261117-ai-tutor5")
+  import("../js/ai-tutor/tutor-storage.js?v=20261127-ai-tutor6")
     .then((mod) => {
       const s = mod.loadTutorState();
       host.innerHTML = `<section class="card"><h2>Giáo viên AI</h2>

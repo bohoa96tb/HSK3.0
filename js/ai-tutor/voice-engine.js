@@ -13,6 +13,14 @@ const MIME_CANDIDATES = [
   "audio/ogg",
 ];
 
+export function isVoiceInputSupported(nav = typeof navigator !== "undefined" ? navigator : null, recorderCtor = typeof MediaRecorder !== "undefined" ? MediaRecorder : null) {
+  return Boolean(nav?.mediaDevices?.getUserMedia && typeof recorderCtor !== "undefined");
+}
+
+export function isTtsSupported(win = typeof window !== "undefined" ? window : null) {
+  return Boolean(win && "speechSynthesis" in win);
+}
+
 // Pick the first MIME the CURRENT device actually supports — never assume
 // Android Chrome supports webm or mp4 uniformly.
 export function pickMimeType(recorderCtor = typeof MediaRecorder !== "undefined" ? MediaRecorder : null) {
@@ -59,7 +67,7 @@ export class VoiceRecorder {
 
   async start() {
     if (this.state === "recording" || this.state === "requesting") return false;
-    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+    if (!isVoiceInputSupported()) {
       this._setState("error", { message: "Trình duyệt này không hỗ trợ ghi âm. Hãy mở app bằng Chrome (Android) hoặc Safari/Chrome mới nhất rồi thử lại." });
       return false;
     }
@@ -160,7 +168,7 @@ export function blobToBase64(blob) {
 let zhVoiceCache = null;
 
 function pickZhVoice() {
-  if (!("speechSynthesis" in window)) return null;
+  if (!isTtsSupported()) return null;
   const voices = window.speechSynthesis.getVoices();
   zhVoiceCache = voices.find((v) => /^zh[-_]CN/i.test(v.lang || "")) ||
     voices.find((v) => /^zh/i.test(v.lang || "")) || null;
@@ -174,7 +182,7 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
 export function speakZh(text, { rate = 1, onStatus } = {}) {
   const clean = String(text || "").trim();
   if (!clean) return false;
-  if (!("speechSynthesis" in window)) {
+  if (!isTtsSupported()) {
     onStatus?.("Trình duyệt này không có giọng đọc. Hãy thử Chrome trên Android.");
     return false;
   }

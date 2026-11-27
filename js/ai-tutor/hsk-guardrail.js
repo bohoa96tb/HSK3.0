@@ -332,6 +332,28 @@ export function getLessonContext(lessonId, lexicon = cachedLexicon) {
   return { current, prevLessons, nextLesson };
 }
 
+function isEditorialNoteVi(vi) {
+  return /trang in|chữ mẫu|thẻ từ|ví dụ trong sách|lược bỏ|nhóm âm tiết|bốn thanh|thanh mẫu|vận mẫu|bộ thủ|có bộ|nhờ ai làm gì|âm tiết|quy tắc|từ mới trọng tâm|chép mẫu/i.test(vi)
+    || /\s—\s/.test(vi);
+}
+
+function cleanSeedVi(vi) {
+  return String(vi || "")
+    .replace(/\s*\([^)]*\)\s*/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isNaturalSentencePair(zh, vi) {
+  const z = String(zh || "").trim();
+  const v = cleanSeedVi(vi);
+  if (!z || !v || z === "—") return false;
+  if (!/[\u4e00-\u9fff]/.test(z)) return false;
+  if (isEditorialNoteVi(v)) return false;
+  if (v.length < 8 || v.length > 90) return false;
+  return true;
+}
+
 export function lessonReplyHints(lessonId, practiceMode = "roleplay", lexicon = cachedLexicon) {
   const ctx = getLessonContext(lessonId, lexicon);
   if (!ctx?.current) return [];
@@ -340,26 +362,26 @@ export function lessonReplyHints(lessonId, practiceMode = "roleplay", lexicon = 
   const seen = new Set();
   const pushHint = (zh, pinyin, vi, tag) => {
     const clean = String(zh || "").trim();
-    if (!clean || seen.has(clean)) return;
+    const cleanVi = cleanSeedVi(vi);
+    if (!clean || seen.has(clean) || isEditorialNoteVi(cleanVi)) return;
     seen.add(clean);
-    hints.push({ zh: clean, pinyin: String(pinyin || ""), vi: String(vi || ""), tag });
+    hints.push({ zh: clean, pinyin: String(pinyin || ""), vi: cleanVi, tag });
   };
 
   for (const t of cur.applyTasks) {
     if (t.sampleZh) {
-      // Take the first sentence if multi-line dialogue sample is long
       const firstLine = t.sampleZh.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "");
       pushHint(firstLine, t.samplePinyin?.split(/\n+/)[0] || "", t.sampleVi?.split(/\n+/)[0] || t.titleVi, "Mẫu tự nói");
     }
   }
+  for (const s of cur.allSentences.slice(0, 6)) {
+    if (s.zh.length >= 4) pushHint(s.zh, s.pinyin, s.vi, "Bài khóa");
+  }
   for (const kp of cur.knowledgePoints) {
     if (kp.kind === "foundation" || kp.kind === "foundation-characters") continue;
     for (const ex of kp.examples.slice(0, 2)) {
-      pushHint(ex.zh, ex.pinyin, ex.vi || kp.title, kp.title);
+      if (isNaturalSentencePair(ex.zh, ex.vi)) pushHint(ex.zh, ex.pinyin, ex.vi, kp.title);
     }
-  }
-  for (const s of cur.allSentences.slice(0, 6)) {
-    pushHint(s.zh, s.pinyin, s.vi, "Bài khóa");
   }
   if (hints.length < 6 && practiceMode !== "translate") {
     for (const w of cur.prepWords.slice(0, 4)) {
@@ -402,19 +424,30 @@ export function lessonTranslateSeeds(lessonId, lexicon = cachedLexicon) {
   const cur = ctx.current;
   const out = [];
   const seen = new Set();
+  const addSeed = (vi, refZh, note) => {
+    const cleanVi = cleanSeedVi(vi);
+    const cleanZh = String(refZh || "").trim();
+    if (!isNaturalSentencePair(cleanZh, cleanVi)) return;
+    if (cleanZh.length < 4 || seen.has(cleanVi)) return;
+    seen.add(cleanVi);
+    out.push({ vi: cleanVi, refZh: cleanZh, note });
+  };
+
+  // Prioritize real natural dialogue sentences first
+  for (const s of cur.allSentences) {
+    addSeed(s.vi, s.zh, "Bài khóa");
+  }
+  for (const t of cur.applyTasks) {
+    if (t.sampleZh && t.sampleVi) {
+      const z0 = t.sampleZh.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "");
+      const v0 = t.sampleVi.split(/\n+/)[0].replace(/^[^：:]+[：:]\s*/, "");
+      addSeed(v0, z0, t.titleVi || "Mẫu tự nói");
+    }
+  }
   for (const kp of cur.knowledgePoints) {
     if (kp.kind === "foundation" || kp.kind === "foundation-characters") continue;
     for (const ex of kp.examples) {
-      if (ex.vi && !seen.has(ex.vi)) {
-        seen.add(ex.vi);
-        out.push({ vi: ex.vi.replace(/\s*\([^)]*\)\s*$/, "").trim(), refZh: ex.zh, note: kp.title });
-      }
-    }
-  }
-  for (const s of cur.allSentences) {
-    if (s.vi && !seen.has(s.vi) && s.vi.length >= 6 && s.vi.length <= 80) {
-      seen.add(s.vi);
-      out.push({ vi: s.vi, refZh: s.zh, note: "Bài khóa" });
+      addSeed(ex.vi, ex.zh, kp.title);
     }
   }
   return out.slice(0, 8);
@@ -451,6 +484,13 @@ export function segmentByLexicon(text, lexicon = cachedLexicon) {
   return merged;
 }
 
+function stripChineseMetaTerms(text) {
+  return String(text || "")
+    .replace(/[（(]\s*(?:兼语句|提手旁|两点水|三点水|宝盖头|跟读绕口令|听读练|抄写字词|氵|扌|冫)\s*[）)]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function formatLessonContextLines(ctx) {
   const cur = ctx.current;
   const lines = [];
@@ -467,26 +507,27 @@ function formatLessonContextLines(ctx) {
   if (vocabPairs.length) lines.push(`TỪ VỰNG TRỌNG TÂM CỦA BÀI: ${vocabPairs.join("; ")}`);
   if (foundPairs.length) lines.push(`TỪ NỀN TẢNG CỦA BÀI: ${foundPairs.join("; ")}`);
 
-  // Grammar + Pitfalls
+  // Grammar + Pitfalls (strip Chinese linguistic jargon so Gemini doesn't echo it)
   const kpLines = cur.knowledgePoints.map((kp) => {
     const isCharNote = kp.kind === "foundation" || kp.kind === "foundation-characters";
     const explMax = isCharNote ? 120 : 280;
-    const parts = [kp.title];
-    if (kp.pattern) parts.push(`Mẫu: ${kp.pattern}`);
-    if (kp.useWhenVi && !isCharNote) parts.push(`Khi dùng: ${clipText(kp.useWhenVi, 140)}`);
-    if (kp.explanationVi) parts.push(`Giải thích/Lưu ý: ${clipText(kp.explanationVi, explMax)}`);
+    const parts = [stripChineseMetaTerms(kp.title)];
+    if (kp.pattern) parts.push(`Mẫu: ${stripChineseMetaTerms(kp.pattern)}`);
+    if (kp.useWhenVi && !isCharNote) parts.push(`Khi dùng: ${clipText(stripChineseMetaTerms(kp.useWhenVi), 140)}`);
+    if (kp.explanationVi) parts.push(`Giải thích/Lưu ý: ${clipText(stripChineseMetaTerms(kp.explanationVi), explMax)}`);
     if (!isCharNote && kp.examples.length) {
-      parts.push(`VD: ${kp.examples.slice(0, 2).map((e) => `${e.zh} (${e.vi})`).join(" / ")}`);
+      const cleanEx = kp.examples.filter((e) => isNaturalSentencePair(e.zh, e.vi)).slice(0, 2);
+      if (cleanEx.length) parts.push(`VD: ${cleanEx.map((e) => `${e.zh} (${cleanSeedVi(e.vi)})`).join(" / ")}`);
     }
     return `- ${parts.join(" | ")}`;
   });
   if (kpLines.length) lines.push(`NGỮ PHÁP & KIẾN THỨC BÀI NÀY:\n${kpLines.join("\n")}`);
 
   const trapLines = [];
-  if (cur.studyTipVi) trapLines.push(`Mẹo & bẫy trọng tâm: ${cur.studyTipVi}`);
+  if (cur.studyTipVi) trapLines.push(`Mẹo & bẫy trọng tâm: ${stripChineseMetaTerms(cur.studyTipVi)}`);
   for (const sp of cur.summaryPoints) {
     if (sp.bodyVi && /bẫy|sai|lưu ý|nhầm|không/i.test(sp.bodyVi)) {
-      trapLines.push(`${sp.titleVi}: ${clipText(sp.bodyVi, 240)}`);
+      trapLines.push(`${stripChineseMetaTerms(sp.titleVi)}: ${clipText(stripChineseMetaTerms(sp.bodyVi), 240)}`);
     }
   }
   if (trapLines.length) lines.push(`BẪY LỖI HAY SAI CẦN SOI KỸ:\n- ${trapLines.join("\n- ")}`);
@@ -506,13 +547,13 @@ function formatLessonContextLines(ctx) {
       const pVocab = p.prepWords.map((w) => `${w.zh}(${w.vi})`).join("、");
       const pGram = p.knowledgePoints
         .filter((k) => k.kind !== "foundation" && k.kind !== "foundation-characters")
-        .map((k) => k.pattern || k.title)
+        .map((k) => stripChineseMetaTerms(k.pattern || k.title))
         .join("; ");
       return `- ${pTitle}: Từ [${pVocab}] | Ngữ pháp [${pGram}]`;
     }).join("\n");
     lines.push(
       `=== BÀI LIỀN TRƯỚC (1–2 bài trước, dùng để tái sử dụng từ cũ & so sánh đối chiếu) ===\n${prevBlock}`,
-      "HƯỚNG DẪN LIÊN KẾT BÀI CŨ: Tự nhiên lồng ghép từ vựng của các bài trước vào câu hỏi/ví dụ, và khi giảng hoặc sửa lỗi hãy so sánh đối chiếu điểm mới của bài này với cấu trúc bài trước để học viên thấy sự nối tiếp.",
+      "HƯỚNG DẪN LIÊN KẾT BÀI CŨ: Tự nhiên lồng ghép từ vựng của các bài trước vào câu hỏi/ví dụ, và khi giảng hoặc sửa lỗi hãy so sánh đối chiếu điểm mới của bài này với cấu trúc bài trước bằng tiếng Việt dễ hiểu.",
     );
   }
 
@@ -527,7 +568,15 @@ function formatLessonContextLines(ctx) {
   return lines;
 }
 
-function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi) {
+const PEDAGOGICAL_LANGUAGE_RULES = [
+  "NGUYÊN TẮC SƯ PHẠM & NGÔN NGỮ (BẮT BUỘC TUYỆT ĐỐI):",
+  "1. TÁCH RÕ 2 PHẦN: (a) tutor_reply.hanzi (+ tutor_reply.pinyin) CHỈ dùng cho câu hội thoại thực tế, tự nhiên chuẩn bản xứ để học viên nghe và nói theo (1–2 câu ngắn). (b) Mọi lời nhận xét, chỉ lỗi, giải thích ngữ pháp và hướng dẫn ĐỀU viết bằng TIẾNG VIỆT tự nhiên, gần gũi như giáo viên thật trong evaluation.explanation_vi và tutor_reply.translation_vi.",
+  "2. TUYỆT ĐỐI CẤM THUẬT NGỮ TIẾNG TRUNG KHÓ: Không bao giờ viết các từ thuật ngữ ngữ pháp hoặc chỉ dẫn học thuật bằng chữ Hán như 补语, 表示, 翻译, 语法, 结构, 动词, 名词, 形容词, 重叠, 兼语句, 主语, 谓语, 宾语, 肯定, 否定, 错误, 应该, 意思是, 请翻译 — cả trong tutor_reply.hanzi lẫn trong giải thích tiếng Việt!",
+  "3. CHỌN KẾT HỢP TỪ CHUẨN BẢN XỨ: Luôn nói theo cách người Trung Quốc thật sự nói (ví dụ xong xuôi việc chuẩn bị như mua vé/nấu cơm/rửa hoa quả/nghĩ kỹ phải dùng 好: 我买好票了, 菜做好了, 苹果洗好了, 我想好了; ăn hết/làm hết lượng việc dùng 完: 吃完饭, 做完工作; KHÔNG ghép máy móc thành 我买完票了).",
+  "4. KHÔNG KÝ HIỆU THỪA TRONG CÂU ĐỌC: tutor_reply.hanzi chỉ gồm chữ Hán và dấu câu tự nhiên (，。！？), không chèn tiếng Việt, pinyin, số mục (1)(2)(3), ngoặc đơn chú thích hay emoji.",
+].join("\n");
+
+function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, lexicon = cachedLexicon) {
   const effectivePractice = practiceMode || (mode === "roleplay" ? "roleplay" : "teach");
 
   if (effectivePractice === "roleplay") {
@@ -538,49 +587,53 @@ function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi)
         `CHẾ ĐỘ LUYỆN NÓI (ĐÓNG VAI): Bạn đóng vai ${activeRole.aiRoleZh} (${activeRole.aiRoleVi}). Học viên đóng vai: ${activeRole.learnerRoleVi}.`,
         `Tình huống: ${activeRole.titleVi}. Nhiệm vụ của học viên: ${(activeRole.tasksVi || []).join("; ")}.`,
         "tutor_reply.hanzi phải GIỮ 100% VAI DIỄN bằng tiếng Trung tự nhiên như nhân vật thật — TUYỆT ĐỐI không chèn tiếng Việt, không giảng ngữ pháp trong lời thoại nhân vật.",
-        "Mỗi lượt chỉ nói 1–2 câu tiếng Trung ngắn gọn, rõ ràng, ưu tiên tối đa từ vựng & mẫu câu của bài đang chọn để học viên dễ nghe và đáp lại.",
-        "Nếu học viên mắc lỗi, sửa ngắn gọn bằng tiếng Việt trong evaluation.explanation_vi rồi tiếp tục mạch hội thoại tự nhiên trong tutor_reply.hanzi.",
+        "Mỗi lượt chỉ nói 1–2 câu tiếng Trung ngắn gọn, tự nhiên, ưu tiên tối đa từ vựng & mẫu câu của bài đang chọn để học viên dễ nghe và đáp lại.",
+        "Nếu học viên mắc lỗi, sửa ngắn gọn bằng tiếng Việt tự nhiên trong evaluation.explanation_vi rồi tiếp tục mạch hội thoại tự nhiên trong tutor_reply.hanzi.",
       ];
     }
     return [
-      "CHẾ ĐỘ LUYỆN NÓI (ĐÓNG VAI): tutor_reply.hanzi GIỮ 100% VAI DIỄN bằng tiếng Trung (1–2 câu ngắn), dẫn dắt học viên dùng từ vựng và ngữ pháp của bài đang chọn.",
+      "CHẾ ĐỘ LUYỆN NÓI (ĐÓNG VAI): tutor_reply.hanzi GIỮ 100% VAI DIỄN bằng tiếng Trung (1–2 câu ngắn tự nhiên), dẫn dắt học viên dùng từ vựng và ngữ pháp của bài đang chọn.",
     ];
   }
 
   if (effectivePractice === "correct") {
     return [
-      "CHẾ ĐỘ KIỂM TRA & SỬA LỖI (SƯ PHẠM 3 BƯỚC BẮT BUỘC):",
-      "Mỗi khi học viên gửi câu (nói hoặc gõ), bạn PHẢI phản hồi đúng cấu trúc 3 bước rõ ràng:",
-      "- Bước (1) Ghi nhận ý đúng & Bước (2) Chỉ lỗi cụ thể: viết trong evaluation.explanation_vi theo đúng mẫu `(1) Ghi nhận: ... (2) Sửa lỗi: ...`.",
-      "  + Ở (1) Ghi nhận: khen/xác nhận phần học viên đã diễn đạt đúng ý, đúng từ hoặc đúng trật tự câu.",
-      "  + Ở (2) Sửa lỗi: chỉ rõ lỗi ngữ pháp, dùng từ, hoặc Pinyin/thanh điệu (lưu ý chỉ nhận xét phát âm khi có ÂM THANH thật), giải thích dễ hiểu và liên hệ bẫy của bài hoặc đối chiếu với bài trước. Nếu câu học viên không sai, ghi `(2) Nhận xét: Câu đúng ngữ pháp và từ vựng, có thể nói tự nhiên hơn ở bước (3).`",
-      "- Bước (3) Phiên bản nói tự nhiên hơn & mời lặp lại: đặt câu tiếng Trung tự nhiên, chuẩn xác trong tutor_reply.hanzi (1–2 câu ngắn, kèm câu mời lặp lại như `请跟我再说一遍！` hoặc `你可以这样说：…… 请再说一次！`), còn tutor_reply.translation_vi ghi `(3) Nói tự nhiên hơn & lặp lại: ...` kèm nghĩa tiếng Việt.",
-      "Giữ tổng phần giải thích súc tích (2–4 câu tiếng Việt) để không bị cắt cụt.",
+      "CHẾ ĐỘ KIỂM TRA & SỬA LỖI (SƯ PHẠM TỰ NHIÊN):",
+      "Mỗi khi học viên gửi câu (nói hoặc gõ), bạn PHẢI phản hồi rõ 2 phần:",
+      "- Phần tiếng Việt trong evaluation.explanation_vi theo 2 ý ngắn gọn, gần gũi: `(1) Ghi nhận: ... (2) Sửa lỗi: ...`.",
+      "  + Ở (1) Ghi nhận: khen cụ thể phần học viên đã nói đúng ý hoặc dùng đúng từ.",
+      "  + Ở (2) Sửa lỗi: chỉ rõ lỗi dùng từ, trật tự câu hoặc thanh điệu (chỉ nhận xét phát âm khi có ÂM THANH thật), giải thích hoàn toàn bằng tiếng Việt đời thường dễ hiểu (ví dụ: 'mua xong vé người bản xứ nói là 买好票 chứ không nói 买完票') và liên hệ bài trước nếu phù hợp; không dùng chữ Hán học thuật như 补语 hay 表示. Nếu câu đã đúng, ghi `(2) Nhận xét: Câu đúng và dễ hiểu rồi, có thể nói tự nhiên hơn như câu mẫu bên trên.`",
+      "- Phần tiếng Trung trong tutor_reply.hanzi: CHỈ đặt 1–2 câu tiếng Trung chuẩn bản xứ tự nhiên nhất để học viên nghe và nói theo (ví dụ: `我买好票了！你跟我说一遍吧。`), KHÔNG chèn số `(3)` hay tiếng Việt vào tutor_reply.hanzi.",
+      "- Trong tutor_reply.translation_vi: ghi `(3) Câu tự nhiên hơn & lặp lại:` kèm nghĩa tiếng Việt tự nhiên của câu tiếng Trung vừa đưa.",
     ];
   }
 
   if (effectivePractice === "translate") {
+    const seeds = ctx?.current ? lessonTranslateSeeds(ctx.current.lessonId, lexicon) : [];
+    const anchorExamples = seeds.slice(0, 4).map((s) => `"${s.vi}" → ${s.refZh}`).join(" | ");
     const lines = [
-      "CHẾ ĐỘ PHẢN XẠ DỊCH NHANH (VIỆT → TRUNG):",
-      "Nhiệm vụ: luyện phản xạ đặt câu tiếng Trung từ câu tiếng Việt ngắn bám sát mẫu câu và từ vựng của bài đang chọn (tự nhiên lồng ghép từ 1–2 bài trước).",
-      "- Nếu học viên vừa gửi bản dịch tiếng Trung: chấm ngay trong evaluation (has_error, corrected_hanzi, corrected_pinyin, explanation_vi giải thích ngắn gọn đối chiếu mẫu câu/bẫy của bài).",
-      "- Trong tutor_reply.hanzi & tutor_reply.pinyin: CHỈ nói lời nhận xét/đáp án chuẩn cho câu học viên VỪA dịch (hoặc lời chào ngắn nếu mới bắt đầu) và câu dẫn sang câu mới (ví dụ `对！请试着翻译下一句：` hoặc `准备好了吗？请用中文说：`).",
-      "- TUYỆT ĐỐI KHÔNG tiết lộ đáp án tiếng Trung của câu tiếng Việt MỚI trong tutor_reply.hanzi hay tutor_reply.pinyin!",
-      "- Trong tutor_reply.translation_vi: ghi bản dịch tiếng Việt của tutor_reply.hanzi, rồi xuống dòng ghi CHÍNH XÁC dòng: `🎯 Câu cần dịch: \"<1 câu tiếng Việt ngắn, tự nhiên, bám sát mẫu câu của bài>\"`.",
+      "CHẾ ĐỘ PHẢN XẠ DỊCH NHANH (VIỆT → TRUNG TỰ NHIÊN):",
+      "Nhiệm vụ: đưa 1 câu tiếng Việt hoàn chỉnh, tự nhiên đúng như người Việt nói hàng ngày trong ngữ cảnh bài học để học viên nói/viết sang tiếng Trung rồi sửa ngay.",
+      "QUY TẮC RA CÂU TIẾNG VIỆT:",
+      "- Câu tiếng Việt PHẢI tự nhiên, đúng logic đời sống và hợp ngữ cảnh bài (ví dụ: 'Tôi mua xong vé rồi.', 'Cơm canh nấu xong cả rồi.', 'Em vẫn chưa nghĩ xong đâu.', 'Hôm qua tôi nghỉ ngơi một chút rồi.').",
+      "- TUYỆT ĐỐI KHÔNG ghép máy móc từng chữ từ công thức ngữ pháp gây vô nghĩa như 'Tôi muốn mua vé xong.' hay 'Tôi ăn xong chưa rồi.'.",
+      ...(anchorExamples ? [`MẪU VĂN PHONG TỰ NHIÊN CỦA BÀI: ${anchorExamples}`] : []),
+      "- Nếu học viên vừa trả lời: chấm câu của học viên trong evaluation (has_error, corrected_hanzi, corrected_pinyin, explanation_vi bằng tiếng Việt đời thường dễ hiểu).",
+      "- Trong tutor_reply.hanzi & tutor_reply.pinyin: CHỈ nói câu phản hồi/kích lệ tự nhiên hoặc đọc lại đáp án tiếng Trung chuẩn của câu học viên VỪA làm (ví dụ: `很好！我买好票了。` hoặc `准备好了吗？我们开始吧！`). TUYỆT ĐỐI KHÔNG dùng chữ `翻译` hay `请翻译`, và KHÔNG lộ đáp án tiếng Trung của câu tiếng Việt MỚI!",
+      "- Trong tutor_reply.translation_vi: viết nhận xét/nghĩa tiếng Việt ngắn cho câu vừa nói, rồi xuống dòng ghi CHÍNH XÁC: `🎯 Câu cần nói sang tiếng Trung: \"<1 câu tiếng Việt tự nhiên hoàn chỉnh>\"`.",
     ];
     if (pendingPromptVi) {
-      lines.push(`CÂU TIẾNG VIỆT HỌC VIÊN ĐANG DỊCH Ở LƯỢT NÀY: "${pendingPromptVi}". Hãy đối chiếu câu tiếng Trung của học viên với đúng câu tiếng Việt này khi chấm ở evaluation.`);
+      lines.push(`CÂU TIẾNG VIỆT HỌC VIÊN ĐANG TRẢ LỜI Ở LƯỢT NÀY: "${pendingPromptVi}". Hãy chấm câu tiếng Trung của học viên dựa trên đúng câu này.`);
     }
     return lines;
   }
 
   // Default: teach (Ôn & Dạy)
   return [
-    "CHẾ ĐỘ ÔN & DẠY (GIÁO VIÊN SƯ PHẠM):",
-    "Hãy đóng vai giáo viên tiếng Trung tận tâm cho người Việt: giảng ngắn gọn trọng tâm từ vựng/ngữ pháp/bẫy hay sai của bài đang chọn, chủ động liên hệ so sánh với kiến thức của 1–2 bài trước, rồi đặt 1 câu hỏi kiểm tra hiểu bài để học viên trả lời bằng tiếng Trung.",
-    "- Phần giảng/giải thích tiếng Việt ngắn gọn, rõ ràng (2–4 câu) đặt trong tutor_reply.translation_vi (hoặc evaluation.explanation_vi nếu học viên vừa trả lời một câu hỏi kiểm tra).",
-    "- tutor_reply.hanzi CHỈ chứa tiếng Trung (1–2 câu ngắn gồm ví dụ trọng tâm hoặc câu hỏi kiểm tra hiểu bài cho học viên trả lời).",
-    "Nếu chưa có lượt nào trước đó hoặc học viên bấm Bắt đầu, hãy tóm tắt ngắn gọn 1–2 điểm cốt lõi nhất của bài (liên hệ bài trước) trong translation_vi và đặt 1 câu hỏi tiếng Trung đơn giản để học viên luyện ngay.",
+    "CHẾ ĐỘ ÔN & DẠY (GIÁO VIÊN SƯ PHẠM GẦN GŨI):",
+    "Hãy dạy như một giáo viên tiếng Trung nói chuyện trực tiếp với học viên Việt Nam:",
+    "- Phần tiếng Trung (tutor_reply.hanzi): CHỈ đưa 1–2 câu hội thoại/ví dụ chuẩn bản xứ kèm 1 câu hỏi giao tiếp ngắn bằng tiếng Trung để học viên trả lời (ví dụ: `菜都做好了，你吃饭了吗？`). Tuyệt đối không giảng ngữ pháp bằng tiếng Trung trong tutor_reply.hanzi.",
+    "- Phần tiếng Việt (tutor_reply.translation_vi và evaluation.explanation_vi nếu học viên vừa trả lời): giảng ngắn gọn trọng tâm bài bằng tiếng Việt đời thường dễ hiểu (nên nhớ điểm gì, tránh bẫy nào, liên hệ bài trước ra sao), rồi giải thích nghĩa của câu tiếng Trung vừa đưa để học viên hiểu và nói lại.",
   ];
 }
 
@@ -649,6 +702,7 @@ export function buildSystemInstruction({
     "Câu trả lời PHẢI là JSON đúng schema đã cho, không thêm chữ ngoài JSON; giữ phần tiếng Việt súc tích để không bị cắt ngắn ở 800 tokens.",
     "tutor_reply.pinyin phải có dấu thanh đầy đủ; user_transcript_hanzi/pinyin chép lại đúng câu học viên vừa nói/nhập.",
     "evaluation: khi không có lỗi thì has_error=false, error_type='none', corrected_hanzi/corrected_pinyin để trống.",
+    PEDAGOGICAL_LANGUAGE_RULES,
   ];
 
   const note = coverageNote(lvl, lexicon);
@@ -658,7 +712,7 @@ export function buildSystemInstruction({
     lines.push(...formatLessonContextLines(ctx));
   }
 
-  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi));
+  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, lexicon));
 
   let result = lines.join("\n");
   if (result.length > MAX_PROMPT_CHARS) {

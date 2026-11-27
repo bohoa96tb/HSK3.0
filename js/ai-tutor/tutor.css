@@ -72,6 +72,8 @@
 .tutor-bubble.user { align-self: flex-end; background: #eef6ee; }
 .tutor-bubble.tutor { align-self: flex-start; }
 .tutor-who { margin: 0 0 4px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted, #777); }
+.tutor-part-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--brand, #176349); margin-bottom: 4px; }
+.tutor-part-vi { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line, #dce3df); }
 .tutor-hanzi { font-size: 21px; line-height: 1.6; margin: 0; }
 .tutor-token { background: none; border: none; padding: 0; margin: 0; font: inherit; cursor: pointer; border-bottom: 1px dotted #9db89d; }
 .tutor-pinyin { margin: 3px 0 0; color: var(--muted, #666); }

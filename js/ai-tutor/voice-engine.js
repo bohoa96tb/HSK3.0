@@ -165,22 +165,88 @@ export function blobToBase64(blob) {
 
 // ---------------- TTS (device speech, labelled as machine voice) ----------
 
+export const DEFAULT_TTS_RATE = 0.9;
+export const SLOW_TTS_RATE = 0.65;
+
 let zhVoiceCache = null;
 
-function pickZhVoice() {
-  if (!isTtsSupported()) return null;
-  const voices = window.speechSynthesis.getVoices();
-  zhVoiceCache = voices.find((v) => /^zh[-_]CN/i.test(v.lang || "")) ||
-    voices.find((v) => /^zh/i.test(v.lang || "")) || null;
+export function scoreZhVoice(voice) {
+  if (!voice) return -1;
+  const lang = String(voice.lang || "").replace(/_/g, "-").toLowerCase();
+  const name = String(voice.name || "").toLowerCase();
+  if (!/^zh|^cmn/.test(lang) && !/chinese|mandarin|普通话|中文|xiaoxiao|yunxi|tingting/.test(name)) return -1;
+
+  let score = 0;
+  if (/^(zh-cn|zh-hans-cn|cmn-hans-cn)$/.test(lang)) score += 1000;
+  else if (/^zh-hans/.test(lang)) score += 700;
+  else if (/^zh/.test(lang)) score += 300;
+  if (/-(hk|mo)|yue|cantonese/.test(lang + " " + name)) score -= 500;
+  if (/-(tw)/.test(lang)) score -= 200;
+
+  if (/natural|neural|online/.test(name)) score += 350;
+  if (/xiaoxiao|google\s*普通话|ting-?ting/.test(name)) score += 240;
+  else if (/yunxi|xiaoyi|yunjian|xiaochen|meijia/.test(name)) score += 180;
+  if (/enhanced|premium/.test(name)) score += 140;
+  if (voice.localService === false) score += 60;
+  if (voice.default) score += 10;
+  return score;
+}
+
+export function pickZhVoice(voicesInput = null) {
+  const voices = Array.isArray(voicesInput)
+    ? voicesInput
+    : (isTtsSupported() ? window.speechSynthesis.getVoices() : []);
+  if (!voices.length) return null;
+  let best = null;
+  let bestScore = -1;
+  for (const v of voices) {
+    const s = scoreZhVoice(v);
+    if (s > bestScore) {
+      bestScore = s;
+      best = v;
+    }
+  }
+  zhVoiceCache = bestScore >= 0 ? best : null;
   return zhVoiceCache;
+}
+
+export function cleanZhForSpeech(text) {
+  let s = String(text || "").trim();
+  if (!s) return "";
+  // Strip parenthetical / bracketed notes containing Latin/Vietnamese or numbering
+  s = s
+    .replace(/\([^)]*[A-Za-zÀ-ỹ0-9][^)]*\)/g, " ")
+    .replace(/\[[^\]]*\]/g, " ")
+    .replace(/【[^】]*】/g, " ")
+    .replace(/^\s*(?:\(\d+\)|\d+[.)]|[•\-–—*#]+)\s*/gm, " ");
+
+  // Remove standalone Latin/Vietnamese words (preserve short uppercase tag directly attached to Hanzi like AI小语)
+  s = s.replace(/[A-Za-zÀ-ỹ]+(?:['’-][A-Za-zÀ-ỹ]+)*/g, (tok, offset, full) => {
+    const after = full[offset + tok.length] || "";
+    if (/^[A-Z]{1,4}$/.test(tok) && /[\u4e00-\u9fff]/.test(after)) return tok;
+    return " ";
+  });
+
+  // Keep only Hanzi, attached uppercase prefix/digits with Hanzi, and clean pause punctuation
+  s = s
+    .replace(/[^\u4e00-\u9fff\u3400-\u4dbfA-Z0-9，。！？、；：,.!?\s]/g, " ")
+    .replace(/(?<![\u4e00-\u9fff])\d+(?![\u4e00-\u9fff点分号岁年月日个块元])/g, " ")
+    .replace(/[A-Z]+(?![A-Z\u4e00-\u9fff])/g, " ")
+    .replace(/\s*([，。！？、；：,.!?])\s*/g, "$1")
+    .replace(/([，。！？、；：,.!?]){2,}/g, "$1")
+    .replace(/^[，。！？、；：,.!?\s]+/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return /[\u4e00-\u9fff\u3400-\u4dbf]/.test(s) ? s : "";
 }
 
 if (typeof window !== "undefined" && "speechSynthesis" in window) {
   try { window.speechSynthesis.onvoiceschanged = () => pickZhVoice(); } catch { /* noop */ }
 }
 
-export function speakZh(text, { rate = 1, onStatus } = {}) {
-  const clean = String(text || "").trim();
+export function speakZh(text, { rate = DEFAULT_TTS_RATE, slow = false, onStatus } = {}) {
+  const clean = cleanZhForSpeech(text);
   if (!clean) return false;
   if (!isTtsSupported()) {
     onStatus?.("Trình duyệt này không có giọng đọc. Hãy thử Chrome trên Android.");
@@ -190,11 +256,13 @@ export function speakZh(text, { rate = 1, onStatus } = {}) {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(clean);
     u.lang = "zh-CN";
-    u.rate = rate === 0.75 ? 0.75 : 1;
+    const numRate = Number(rate);
+    const isSlow = Boolean(slow) || (Number.isFinite(numRate) && numRate > 0 && numRate <= 0.75);
+    u.rate = isSlow ? SLOW_TTS_RATE : DEFAULT_TTS_RATE;
     const voice = pickZhVoice();
     if (voice) u.voice = voice;
     else onStatus?.("Thiết bị chưa có giọng tiếng Trung — máy sẽ đọc bằng giọng mặc định, có thể không chuẩn.");
-    u.onstart = () => onStatus?.(rate === 0.75 ? "Đang đọc chậm…" : "Đang đọc…");
+    u.onstart = () => onStatus?.(isSlow ? "Đang đọc chậm…" : "Đang đọc…");
     u.onend = () => onStatus?.("");
     u.onerror = () => onStatus?.("Chưa đọc được câu này. Thử lại một lần nữa nhé.");
     window.speechSynthesis.speak(u);

@@ -20,7 +20,10 @@ import {
 } from "../js/ai-tutor/tutor-storage.js";
 import { _internal } from "../workers/ai-tutor-proxy/worker.js";
 import worker from "../workers/ai-tutor-proxy/worker.js";
-import { pickMimeType, micErrorVi, isVoiceInputSupported, isTtsSupported, MAX_RECORD_SECONDS } from "../js/ai-tutor/voice-engine.js";
+import {
+  pickMimeType, micErrorVi, isVoiceInputSupported, isTtsSupported,
+  pickZhVoice, cleanZhForSpeech, DEFAULT_TTS_RATE, SLOW_TTS_RATE, MAX_RECORD_SECONDS,
+} from "../js/ai-tutor/voice-engine.js";
 
 const content = JSON.parse(readFileSync(new URL("../data/content.json", import.meta.url), "utf8"));
 const lex = buildLexicon(content);
@@ -369,7 +372,9 @@ test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons 
   const corr = buildSystemInstruction({ level: "HSK2", mode: "tutor", practiceMode: "correct", lessonId: "hsk2-l03", lexicon: lex });
   assert.match(corr, /\(1\) Ghi nhận/);
   assert.match(corr, /\(2\) Sửa lỗi/);
-  assert.match(corr, /\(3\) Nói tự nhiên hơn/);
+  assert.match(corr, /\(3\) Câu tự nhiên hơn/);
+  assert.match(corr, /TUYỆT ĐỐI CẤM THUẬT NGỮ TIẾNG TRUNG KHÓ/);
+  assert.match(corr, /我买好票了/);
   assert.match(corr, /BÀI LIỀN TRƯỚC/);
   assert.match(corr, /BÀI TIẾP THEO/);
   assert.match(corr, /KHÔNG dạy trước/);
@@ -380,16 +385,22 @@ test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons 
   });
   assert.match(tr, /PHẢN XẠ DỊCH NHANH/);
   assert.match(tr, /Cơm canh làm xong cả rồi\./);
+  assert.doesNotMatch(tr, /请试着翻译/);
 });
 
-test("lessonReplyHints, lessonRoleplayOpening, and lessonTranslateSeeds return grounded items", () => {
+test("lessonReplyHints, lessonRoleplayOpening, and lessonTranslateSeeds return natural, non-editorial items across all lessons", () => {
+  for (const l of listLessons(lex)) {
+    const seeds = lessonTranslateSeeds(l.id, lex);
+    assert.ok(seeds.length >= 2, `${l.id} has natural translate seeds`);
+    for (const s of seeds) {
+      assert.doesNotMatch(s.vi, /trang in|chữ mẫu|thẻ từ|ví dụ trong sách|\s—\s/i, `${l.id}: ${s.vi}`);
+    }
+  }
   const hints = lessonReplyHints("hsk2-l03", "roleplay", lex);
   assert.ok(hints.length >= 3);
   assert.ok(hints.every((h) => h.zh && h.vi));
   const rp = lessonRoleplayOpening("hsk2-l03", lex);
   assert.ok(rp.opening.hanzi && rp.opening.pinyin && rp.opening.translation_vi);
-  const seeds = lessonTranslateSeeds("hsk2-l03", lex);
-  assert.ok(seeds.length >= 3);
 });
 
 test("storage prefs persist and survive clearTutorHistory", () => {
@@ -403,11 +414,25 @@ test("storage prefs persist and survive clearTutorHistory", () => {
   assert.equal(afterClear.config.enabled, true);
 });
 
-test("voice capability checks report false cleanly when browser APIs are absent", () => {
+test("voice capability checks, zh-CN smooth voice ranking, rate constants, and speech cleaning", () => {
   assert.equal(isVoiceInputSupported({}, undefined), false);
   assert.equal(isVoiceInputSupported({ mediaDevices: { getUserMedia: () => {} } }, function FakeRec() {}), true);
   assert.equal(isTtsSupported({}), false);
   assert.equal(isTtsSupported({ speechSynthesis: {} }), true);
+  assert.equal(DEFAULT_TTS_RATE, 0.9);
+  assert.equal(SLOW_TTS_RATE, 0.65);
+
+  const picked = pickZhVoice([
+    { name: "Microsoft Huihui - Chinese (Simplified, PRC)", lang: "zh-CN", localService: true },
+    { name: "Microsoft WanLung Online (Natural)", lang: "zh-HK", localService: false },
+    { name: "Microsoft Xiaoxiao Online (Natural) - Chinese (Mainland)", lang: "zh-CN", localService: false },
+  ]);
+  assert.equal(picked?.name, "Microsoft Xiaoxiao Online (Natural) - Chinese (Mainland)");
+
+  assert.equal(cleanZhForSpeech("我买好票了！"), "我买好票了！");
+  assert.equal(cleanZhForSpeech("AI小语，你好！"), "AI小语，你好！");
+  assert.equal(cleanZhForSpeech("(3) 我还没想好呢。(Em chưa nghĩ xong) — nǐ hǎo 🎯"), "我还没想好呢。");
+  assert.equal(cleanZhForSpeech("Chỉ có tiếng Việt thôi 123"), "");
 });
 
 test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and Worker contract", async () => {

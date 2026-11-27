@@ -7,19 +7,19 @@ import {
   buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
   compactLevelCode, listLessons, getLessonContext, lessonReplyHints,
   lessonRoleplayOpening, lessonTranslateSeeds,
-} from "./hsk-guardrail.js?v=20261127-ai-tutor6";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor6";
+} from "./hsk-guardrail.js?v=20261127-ai-tutor7";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor7";
 import {
   loadTutorState, updateTutorState, updateTutorPrefs, recordSessionStart,
   recordSpeakingSeconds, recordError, recordVocabUsage, recordTopicProgress,
   saveConversation, clearTutorHistory, normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261127-ai-tutor6";
+} from "./tutor-storage.js?v=20261127-ai-tutor7";
 import {
   VoiceRecorder, blobToBase64, speakZh, stopSpeak,
-  isVoiceInputSupported, MAX_AUDIO_BYTES,
-} from "./voice-engine.js?v=20261127-ai-tutor6";
+  isVoiceInputSupported, DEFAULT_TTS_RATE, SLOW_TTS_RATE, MAX_AUDIO_BYTES,
+} from "./voice-engine.js?v=20261127-ai-tutor7";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor6";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor7";
 const CLIENT_TIMEOUT_MS = 45000; // > Worker Gemini timeout (40 s) so the app surfaces the Worker's own error JSON instead of aborting early
 
 let cssLoaded = false;
@@ -40,7 +40,7 @@ function newSessionId() {
 function splitTranslateReply(translationVi) {
   const raw = String(translationVi || "").trim();
   if (!raw) return { subtitle: "", challenge: "" };
-  const match = raw.match(/(?:🎯\s*)?(?:Câu(?:\s+tiếp\s+theo)?\s+cần\s+dịch(?:\s+sang\s+tiếng\s+Trung)?)\s*[:：]\s*[“"']?([^”"\n]+)[”"']?/i);
+  const match = raw.match(/(?:🎯\s*)?(?:Câu(?:\s+tiếp\s+theo)?\s+cần\s+(?:nói(?:\s+sang\s+tiếng\s+Trung)?|dịch(?:\s+sang\s+tiếng\s+Trung)?))\s*[:：]\s*[“"']?([^”"\n]+)[”"']?/i);
   if (!match) return { subtitle: raw, challenge: "" };
   const challenge = match[1].trim();
   const subtitle = raw.replace(match[0], "").replace(/\n{2,}/g, "\n").trim();
@@ -327,7 +327,7 @@ export async function mountTutor(main, ctx = {}) {
       </div>`;
 
     el.querySelectorAll("[data-speak-word]").forEach((btn) => {
-      btn.onclick = () => speakZh(btn.dataset.speakWord, { rate: 1, onStatus: setStatus });
+      btn.onclick = () => speakZh(btn.dataset.speakWord, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
     });
   }
 
@@ -398,7 +398,7 @@ export async function mountTutor(main, ctx = {}) {
 
     $("#t-close-hints").onclick = () => { hintsOpen = false; renderHintsPanel(); };
     hintsPanel.querySelectorAll("[data-hint-speak]").forEach((b) => {
-      b.onclick = () => speakZh(b.dataset.hintSpeak, { rate: 1, onStatus: setStatus });
+      b.onclick = () => speakZh(b.dataset.hintSpeak, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
     });
     hintsPanel.querySelectorAll("[data-hint-fill]").forEach((b) => {
       b.onclick = () => {
@@ -515,20 +515,39 @@ export async function mountTutor(main, ctx = {}) {
     const isTranslateTutor = turn.role === "tutor" && session.practiceMode === "translate";
     const parsedTr = isTranslateTutor ? splitTranslateReply(turn.translation_vi) : { subtitle: turn.translation_vi || "", challenge: "" };
 
-    return `<article class="tutor-bubble ${turn.role}">
+    if (turn.role === "user") {
+      return `<article class="tutor-bubble user">
+        <p class="tutor-who">${who}</p>
+        ${turn.hanzi ? `<p class="tutor-hanzi">${tokensHtml(turn.hanzi)}</p>` : ""}
+        ${turn.pinyin ? `<p class="tutor-pinyin" data-pinyin>${esc(turn.pinyin)}</p>` : ""}
+        ${turn.hanzi ? `<p class="tutor-bubble-actions">
+          <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${DEFAULT_TTS_RATE}">🔊 Nghe</button>
+          <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${SLOW_TTS_RATE}">🐢 Chậm</button>
+        </p>` : ""}
+        ${ev ? correctionHtml(ev, idx) : ""}
+      </article>`;
+    }
+
+    const hasViPart = Boolean(parsedTr.subtitle || parsedTr.challenge || (turn.outOfLevel?.length));
+    return `<article class="tutor-bubble tutor">
       <p class="tutor-who">${who}</p>
-      ${turn.hanzi ? `<p class="tutor-hanzi">${tokensHtml(turn.hanzi)}</p>` : ""}
-      ${turn.pinyin ? `<p class="tutor-pinyin" data-pinyin>${esc(turn.pinyin)}</p>` : ""}
-      ${parsedTr.subtitle ? `<p class="tutor-vi tutor-vi-subtitle" data-vi>${esc(parsedTr.subtitle)}</p>` : ""}
-      ${parsedTr.challenge ? `<div class="tutor-challenge-box" role="note"><strong>🎯 Câu cần dịch sang tiếng Trung:</strong><p>${esc(parsedTr.challenge)}</p></div>` : ""}
-      ${turn.hanzi ? `<p class="tutor-bubble-actions">
-        <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="1">🔊 Nghe</button>
-        <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="0.75">🐢 Chậm</button>
-        ${turn.pinyin ? `<button class="btn ghost small" type="button" data-toggle-pinyin="${idx}">Pinyin</button>` : ""}
-        ${parsedTr.subtitle ? `<button class="btn ghost small" type="button" data-toggle-vi="${idx}">Nghĩa</button>` : ""}
-      </p>` : ""}
-      ${turn.role === "tutor" && turn.outOfLevel?.length ? `<p class="muted small">Từ vượt cấp đã dùng: ${turn.outOfLevel.map((w) => `${esc(w.hanzi)} (${esc(w.pinyin)} — ${esc(w.meaning_vi)})`).join("; ")}</p>` : ""}
-      ${ev ? correctionHtml(ev, idx) : ""}
+      ${turn.hanzi ? `<div class="tutor-part-zh">
+        <span class="tutor-part-label">a) Câu tiếng Trung để nghe & nói theo</span>
+        <p class="tutor-hanzi">${tokensHtml(turn.hanzi)}</p>
+        ${turn.pinyin ? `<p class="tutor-pinyin" data-pinyin>${esc(turn.pinyin)}</p>` : ""}
+        <p class="tutor-bubble-actions">
+          <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${DEFAULT_TTS_RATE}">🔊 Nghe</button>
+          <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${SLOW_TTS_RATE}">🐢 Chậm</button>
+          ${turn.pinyin ? `<button class="btn ghost small" type="button" data-toggle-pinyin="${idx}">Pinyin</button>` : ""}
+          ${parsedTr.subtitle ? `<button class="btn ghost small" type="button" data-toggle-vi="${idx}">Nghĩa</button>` : ""}
+        </p>
+      </div>` : ""}
+      ${hasViPart ? `<div class="tutor-part-vi">
+        <span class="tutor-part-label">b) Nhận xét & hướng dẫn (tiếng Việt)</span>
+        ${parsedTr.subtitle ? `<p class="tutor-vi tutor-vi-subtitle" data-vi>${esc(parsedTr.subtitle)}</p>` : ""}
+        ${parsedTr.challenge ? `<div class="tutor-challenge-box" role="note"><strong>🎯 Câu cần nói sang tiếng Trung:</strong><p>${esc(parsedTr.challenge)}</p></div>` : ""}
+        ${turn.outOfLevel?.length ? `<p class="muted small">Từ vượt cấp đã dùng: ${turn.outOfLevel.map((w) => `${esc(w.hanzi)} (${esc(w.pinyin)} — ${esc(w.meaning_vi)})`).join("; ")}</p>` : ""}
+      </div>` : ""}
     </article>`;
   }
 
@@ -589,13 +608,13 @@ export async function mountTutor(main, ctx = {}) {
           session.pendingPromptVi = pick.vi;
           session.turns.push({
             role: "tutor",
-            hanzi: "准备好了吗？请用中文说这句话：",
-            pinyin: "Zhǔnbèi hǎo le ma? Qǐng yòng Zhōngwén shuō zhè jù huà:",
-            translation_vi: `Bạn sẵn sàng chưa? Hãy nói câu này bằng tiếng Trung:\n🎯 Câu cần dịch: "${pick.vi}"`,
+            hanzi: "准备好了吗？我们开始吧！",
+            pinyin: "Zhǔnbèi hǎo le ma? Wǒmen kāishǐ ba!",
+            translation_vi: `Bạn sẵn sàng chưa? Chúng ta bắt đầu nhé!\n🎯 Câu cần nói sang tiếng Trung: "${pick.vi}"`,
             isOpening: true,
           });
           renderChat();
-          if (state.prefs.autoSpeak) speakZh("准备好了吗？请用中文说这句话：", { rate: 1, onStatus: setStatus });
+          if (state.prefs.autoSpeak) speakZh("准备好了吗？我们开始吧！", { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
         };
       }
       chatEl.querySelectorAll("[data-quick-ask]").forEach((b) => {
@@ -619,7 +638,7 @@ export async function mountTutor(main, ctx = {}) {
     chatEl.querySelectorAll("[data-speak-corrected]").forEach((b) => {
       b.onclick = () => {
         const turn = session.turns[Number(b.dataset.speakCorrected)];
-        if (turn?.evaluation?.corrected_hanzi) speakZh(turn.evaluation.corrected_hanzi, { rate: 1, onStatus: setStatus });
+        if (turn?.evaluation?.corrected_hanzi) speakZh(turn.evaluation.corrected_hanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
       };
     });
     chatEl.querySelectorAll("[data-toggle-pinyin]").forEach((b) => {
@@ -663,7 +682,7 @@ export async function mountTutor(main, ctx = {}) {
       <p class="tutor-bubble-actions"><button class="btn ghost small" type="button" id="t-lookup-speak">🔊 Nghe từ này</button>
       <button class="btn ghost small" type="button" id="t-lookup-close">Đóng</button></p>`;
     box.hidden = false;
-    $("#t-lookup-speak").onclick = () => speakZh(entry.hanzi, { rate: 1, onStatus: setStatus });
+    $("#t-lookup-speak").onclick = () => speakZh(entry.hanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
     $("#t-lookup-close").onclick = () => { box.hidden = true; };
   }
 
@@ -779,7 +798,7 @@ export async function mountTutor(main, ctx = {}) {
     session.started = true;
     renderChat();
     setStatus("");
-    if (reply.hanzi && state.prefs.autoSpeak) speakZh(reply.hanzi, { rate: 1, onStatus: setStatus });
+    if (reply.hanzi && state.prefs.autoSpeak) speakZh(reply.hanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
   }
 
   function buildPayload(extra) {

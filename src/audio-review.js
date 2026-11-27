@@ -503,6 +503,9 @@ export function reviewCounts(content) {
   sentences: content.reader?.sentences?.length || 0,
  };
 }
+export function reviewQuickLabel(content) {
+ return content?.lessonId === 'hsk2-l03' ? 'Từ vựng theo mạch chuyện + 4 câu xương sống' : 'Ý chính ngữ pháp + 1 câu mẫu';
+}
 export function reviewDetailLabel(content) {
  const c = reviewCounts(content);
  const wordPart = c.properNames ? `${c.words - c.properNames} từ + ${c.properNames} tên riêng` : `${c.words} từ`;
@@ -614,6 +617,117 @@ export function reviewSpeechChunks(text) {
  if (tail) chunks.push({text:tail,pauseMs:0});
  return chunks;
 }
+const H2L3_COLLOCATIONS = {
+ 'h2l3-w01': {zh: '回来这么晚；刚回来', vi: 'về muộn thế này; vừa mới về'},
+ 'h2l3-w02': {zh: '这么晚；这么累', vi: 'muộn thế này; mệt thế này'},
+ 'h2l3-w03': {zh: '做完工作；吃完饭；送完孩子', vi: 'làm xong việc; ăn xong cơm; đưa con xong'},
+ 'h2l3-w04': {zh: '一起出去玩；一起去旅游', vi: 'cùng nhau ra ngoài chơi; cùng nhau đi du lịch'},
+ 'h2l3-w05': {zh: '出去玩；不想出去', vi: 'ra ngoài chơi; không muốn ra ngoài'},
+ 'h2l3-w06': {zh: '洗洗手；洗好苹果；洗车', vi: 'rửa tay một chút; rửa xong táo; rửa xe'},
+ 'h2l3-w07': {zh: '自己拿；我自己去', vi: 'tự mình lấy; tự tôi đi'},
+ 'h2l3-w08': {zh: '拿苹果；拿杯子', vi: 'lấy táo; cầm cốc'},
+ 'h2l3-w09': {zh: '洗手；左手和右手', vi: 'rửa tay; tay trái và tay phải'},
+ 'h2l3-w10': {zh: '为什么回来晚了；为什么想去西安', vi: 'tại sao về muộn; sao lại muốn đi Tây An'},
+ 'h2l3-w11': {zh: '很不错；这个时候很不错', vi: 'rất ổn, rất tuyệt; thời điểm này rất tốt'},
+ 'h2l3-w12': {zh: '送孩子去学校；送朋友回家', vi: 'đưa con đi học; tiễn bạn về nhà'},
+ 'h2l3-w13': {zh: '回去上班；我们回去吧', vi: 'quay về đi làm; chúng ta về thôi'},
+ 'h2l3-w14': {zh: '每天都很累；每天早上', vi: 'ngày nào cũng rất mệt; mỗi buổi sáng'},
+ 'h2l3-w15': {zh: '觉得很累；累了就休息休息', vi: 'cảm thấy rất mệt; mệt rồi thì nghỉ ngơi một chút'},
+};
+
+function buildHsk2L03Review(content, mode, {add, pair, pushPattern}) {
+ if (mode === 'detail') {
+  add('Từ mới & cụm ghép', 'Ôn chi tiết Bài 3. Phần một: nghe lại 15 từ mới bằng giọng đọc của sách, rồi ghép ngay vào cụm từ dùng hằng ngày.', 'editorial-intro');
+  for (const w of content.prepWords) {
+   const full = REVIEW_WORD_SEGMENTS[w.id];
+   pair('Từ mới · ' + w.zh, w.zh, w.vi, w.id, full ? {...(w.audio || {}), ...full} : w.audio);
+   const col = H2L3_COLLOCATIONS[w.id];
+   if (col) pair('Cụm ghép · ' + w.zh, col.zh, col.vi, 'h2l3-colloc-' + w.id);
+  }
+  add('Ngữ pháp trọng tâm', 'Phần hai: ôn kỹ ba điểm ngữ pháp và so sánh trực tiếp những cặp rất dễ nhầm.', 'editorial-grammar-intro');
+  for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
+   const titleGroup = add('Cách dùng', k.title, k.id);
+   pushPattern(k, titleGroup);
+   add('Cách dùng', k.useWhenVi, k.id);
+   add('Giải thích', k.explanationVi, k.id);
+   add('Vị trí', k.positionVi, k.id);
+   for (const e of k.examples) pair('Câu mẫu', e.zh, e.noteVi, k.id);
+  }
+  add('So sánh dễ nhầm · Cặp 1', 'So sánh cặp dễ nhầm số một: khẳng định và phủ định bổ ngữ kết quả. Hãy nghe sự khác nhau ở chữ 了 cuối câu.', 'h2l3-contrast-1');
+  pair('Khẳng định kết quả', '我吃完饭了。', 'Tôi ăn xong cơm rồi. Khẳng định dùng 吃完 rồi thêm 了.', 'h2l3-contrast-1');
+  pair('Phủ định bỏ 了', '我没吃完饭。', 'Tôi chưa ăn xong cơm. Phủ định dùng 没 và bắt buộc bỏ 了; tuyệt đối không nói 我没吃完饭了.', 'h2l3-contrast-1');
+  pair('Áp dụng trong bài', '菜都做好了。我还没想好呢。', 'Khẳng định có 了 ở 菜都做好了; còn khi dùng 还没 ở Đoạn 2 thì không thêm 了 sau 想好.', 'h2l3-contrast-1');
+
+  add('So sánh dễ nhầm · Cặp 2', 'So sánh cặp dễ nhầm số hai: động từ trùng điệp cho việc sắp làm và việc đã làm.', 'h2l3-contrast-2');
+  pair('Một âm tiết: sắp làm vs đã làm', '想一想。看了看。', 'Sắp làm hoặc rủ nhẹ dùng 想一想 hoặc 洗洗手; việc đã làm rồi chêm 了 vào giữa thành 看了看, không đặt ở cuối kiểu 看一看了.', 'h2l3-contrast-2');
+  pair('Hai âm tiết: bẫy chữ 一 và chữ 了', '休息休息。休息了一下。', 'Việc sắp làm dùng 休息休息, tuyệt đối không chèn 一 vào giữa; khi đã làm rồi dùng 休息了一下, không nói 休息了休息.', 'h2l3-contrast-2');
+  pair('Động từ ly hợp', '帮帮忙。帮了帮忙。', 'Động từ ly hợp chỉ lặp chữ đầu: sắp làm là 帮帮忙, đã làm là 帮了帮忙.', 'h2l3-contrast-2');
+
+  add('So sánh dễ nhầm · Cặp 3', 'So sánh cặp dễ nhầm số ba: 回来 và 回去. Điểm phân biệt nằm ở vị trí của chính người nói.', 'h2l3-contrast-3');
+  pair('回来: hướng về phía người nói', '今天回来这么晚啊！', 'Nhất Tuyết đang ở nhà đón Lưu Minh về phía mình, nên dùng 回来.', 'h2l3-contrast-3');
+  pair('回去: đi ra xa khỏi chỗ người nói', '医院就来电话了，让他回去上班。', 'Ở nhà nói việc Lưu Minh quay lại bệnh viện, đi xa khỏi chỗ người nói, nên dùng 回去.', 'h2l3-contrast-3');
+
+  const qaByPassage = {
+   'h2l3-text-1': [
+    {prompt: 'Phản xạ Đoạn 1, câu một: 刘明为什么回来这么晚？ Bạn thử trả lời trước nhé.', zh: '因为工作太多了，下班的时候没做完。', vi: 'Vì việc nhiều quá, lúc tan làm vẫn chưa làm xong.'},
+    {prompt: 'Phản xạ Đoạn 1, câu hai: 王一雪做好饭了吗？ Thử tự đáp nhé.', zh: '做好了，菜都做好了。', vi: 'Làm xong rồi, cơm canh làm xong cả rồi.'},
+   ],
+   'h2l3-text-2': [
+    {prompt: 'Phản xạ Đoạn 2, câu một: 刘明想和王一雪去做什么？ Bạn nhẩm đáp án nhé.', zh: '他想找个时间一起去旅游。', vi: 'Anh ấy muốn tìm lúc nào đó cùng đi du lịch.'},
+    {prompt: 'Phản xạ Đoạn 2, câu hai: 王一雪想好去哪儿了吗？ Thử trả lời nhé.', zh: '她还没想好呢，刘明让她再想一想。', vi: 'Cô ấy vẫn chưa nghĩ xong, Lưu Minh bảo cô ấy nghĩ thêm chút nữa.'},
+   ],
+   'h2l3-text-3': [
+    {prompt: 'Phản xạ Đoạn 3: 王一雪想去哪里旅游？为什么？ Tự nhẩm cả hai ý trước khi nghe đáp án nhé.', zh: '她想去西安旅游，因为她看了看网上的介绍，这个时候去西安很不错。', vi: 'Cô ấy muốn đi Tây An du lịch, vì đã xem qua giới thiệu trên mạng và thấy thời điểm này đi rất ổn.'},
+   ],
+   'h2l3-text-4': [
+    {prompt: 'Phản xạ Đoạn 4: 早上刘明做了什么？医院为什么来电话？ Bạn thử tự kể lại nhé.', zh: '他开车送孩子去学校，送完孩子回家后，医院来电话让他回去上班。', vi: 'Anh ấy lái xe đưa con đến trường; đưa con xong về nhà thì bệnh viện gọi điện bảo anh quay lại làm việc.'},
+   ],
+  };
+
+  for (const p of content.reader.passages) {
+   add('Hội thoại', p.title, p.id);
+   for (const id of p.sentenceIds) {
+    const s = content.reader.sentences.find(s => s.id === id);
+    pair(s.speaker ? `${p.title} · ${s.speaker}` : p.title, s.zh, s.vi, s.id, s.audio);
+   }
+   const drills = qaByPassage[p.id] || [];
+   for (const [i, d] of drills.entries()) {
+    add(`Phản xạ · ${p.title}`, d.prompt, `h2l3-qa-${p.id}-${i + 1}`);
+    pair(`Đáp án · ${p.title}`, d.zh, d.vi, `h2l3-qa-ans-${p.id}-${i + 1}`);
+   }
+  }
+  pair('Chốt câu chuyện Đoạn 4', '早上刘明开车送孩子去学校，送完孩子回家后，医院来电话让他回去上班。王一雪觉得他这个月每天都很累，真想让他休息休息。', 'Sáng Lưu Minh đưa con đi học, về nhà thì bệnh viện gọi quay lại làm. Nhất Tuyết thấy tháng này ngày nào anh cũng mệt nên muốn anh được nghỉ ngơi — đó là lý do hai người bàn đi Tây An.', 'h2l3-story-wrap');
+  return;
+ }
+
+ // Quick mode for hsk2-l03: vocabulary by story arc + 4 backbone sentences with active-recall pacing.
+ add('Mở đầu', 'Ôn nhanh Bài 3 theo mạch chuyện và bốn câu xương sống. Sau mỗi câu gợi ý, bạn tự nhẩm bằng tiếng Trung trước khi nghe đáp án nhé.', 'editorial-intro');
+
+ add('Mạch 1 · Ở cửa nhà', 'Chặng một, ở cửa nhà: Lưu Minh tan làm về muộn. Hãy tự nhẩm từ trở về phía người nói.', 'h2l3-q-cue-1');
+ pair('Từ mới · Chặng 1', '回来', 'trở về, về.', 'h2l3-q-w1');
+ add('Mạch 1 · Ở cửa nhà', 'Muốn nói mức độ như thế này, và kết quả làm xong hay ăn hết, bạn nhẩm hai từ đó nhé.', 'h2l3-q-cue-2');
+ pair('Từ mới · Chặng 1', '这么。完', '这么 là như thế này; 完 là xong, hết.', 'h2l3-q-w2');
+ add('Câu xương sống 1', 'Câu xương sống một: hãy tự nhẩm bằng tiếng Trung câu, Việc nhiều quá, lúc tan làm vẫn chưa làm xong.', 'h2l3-q-bone-cue-1');
+ pair('Câu xương sống 1', '工作太多了，下班的时候没做完。', 'Việc nhiều quá, lúc tan làm vẫn chưa làm xong. Nhớ bẫy: phủ định bằng 没 thì bỏ 了 ở cuối câu. Còn cơm canh làm xong rồi là: 菜都做好了。', 'h2l3-q-bone-1');
+
+ add('Mạch 2 · Ở phòng khách', 'Chặng hai, ở phòng khách: hai vợ chồng bàn đi du lịch. Tự nhẩm từ cùng nhau và từ ra ngoài nhé.', 'h2l3-q-cue-3');
+ pair('Từ mới · Chặng 2', '一起。出去', '一起 là cùng nhau; 出去 là ra ngoài, đi ra.', 'h2l3-q-w3');
+ add('Câu xương sống 2', 'Câu xương sống hai: bạn tự nhẩm hai câu, Em vẫn chưa nghĩ xong đâu, và Vậy em nghĩ thêm chút đi, nghĩ xong thì anh mua vé.', 'h2l3-q-bone-cue-2');
+ pair('Câu xương sống 2', '我还没想好呢。那你再想一想，你想好了，我来买票。', 'Em vẫn chưa nghĩ xong đâu. Vậy em nghĩ thêm đi, nghĩ xong thì anh mua vé. Việc sắp làm dùng 想一想.', 'h2l3-q-bone-2');
+
+ add('Mạch 3 · Ăn táo, bàn đi Tây An', 'Chặng ba: Lưu Minh mời ăn táo. Hãy tự nhẩm bốn từ: rửa, tự mình, cầm lấy, và tay.', 'h2l3-q-cue-4');
+ pair('Từ mới · Chặng 3', '洗。自己。拿。手', '洗 là rửa; 自己 là tự mình; 拿 là cầm, lấy; 手 là tay.', 'h2l3-q-w4');
+ add('Mạch 3 · Ăn táo, bàn đi Tây An', 'Bây giờ nhẩm từ để hỏi vì sao, và nhận xét khá tốt, không tệ.', 'h2l3-q-cue-5');
+ pair('Từ mới · Chặng 3', '为什么。不错', '为什么 là vì sao, tại sao; 不错 là khá tốt, không tệ.', 'h2l3-q-w5');
+ add('Câu xương sống 3', 'Câu xương sống ba: thử tự nhẩm câu chuyển ý sang Tây An, câu hỏi sao lại muốn đi, và câu trả lời em đã xem qua giới thiệu trên mạng rồi.', 'h2l3-q-bone-cue-3');
+ pair('Câu xương sống 3', '对了，我们去西安旅游，怎么样？为什么想去西安？我看了看网上的介绍，这个时候去西安很不错！', 'Chuyển ý dùng 对了; hỏi lý do dùng 为什么 trước động từ; việc đã làm rồi đổi sang 看了看.', 'h2l3-q-bone-3');
+
+ add('Mạch 4 · Kể chuyện Lưu Minh', 'Chặng bốn: Nhất Tuyết gọi điện kể một ngày của Lưu Minh. Bạn tự nhẩm bốn từ: đưa tiễn, quay về chỗ kia, mỗi, và mệt.', 'h2l3-q-cue-6');
+ pair('Từ mới · Chặng 4', '送。回去。每。累', '送 là đưa tiễn; 回去 là quay về xa chỗ người nói; 每 là mỗi; 累 là mệt.', 'h2l3-q-w6');
+ add('Câu xương sống 4', 'Câu xương sống bốn, chốt lại bài: tự nhẩm câu, Em thấy tháng này ngày nào anh ấy cũng rất mệt, thật muốn để anh ấy nghỉ ngơi một chút.', 'h2l3-q-bone-cue-4');
+ pair('Câu xương sống 4', '我觉得他这个月每天都很累，真想让他休息休息。', 'Tháng này ngày nào anh ấy cũng rất mệt, thật muốn để anh ấy nghỉ ngơi một chút. Chú ý: 休息休息 không chèn chữ 一 vào giữa.', 'h2l3-q-bone-4');
+}
+
 export function buildReview(content, mode = 'quick') {
  if (!reviewSupported(content)) return [];
  const rows = [];
@@ -659,7 +773,15 @@ export function buildReview(content, mode = 'quick') {
   }
   add(label, vi, source, group, 1);
  };
- if (mode === 'detail') {
+ const pushPattern = (k, titleGroup) => {
+  const paraphrase = REVIEW_PATTERN_SPEECH[k.id];
+  if (k.pattern && paraphrase) {
+   rows.push({label: 'Mẫu câu', text: k.pattern, displayText: k.pattern, speechText: reviewSpeechText(paraphrase), speechSource: paraphrase, group: titleGroup, paragraph: 1, lang: 'vi-VN', source: k.id});
+  }
+ };
+ if (content.lessonId === 'hsk2-l03') {
+  buildHsk2L03Review(content, mode, {add, pair, pushPattern});
+ } else if (mode === 'detail') {
   add('Từ mới', 'Ôn từ mới. Nghe tiếng Trung, rồi nghe nghĩa tiếng Việt.', 'editorial-intro');
   for (const w of content.prepWords) {
    const full = REVIEW_WORD_SEGMENTS[w.id];
@@ -669,10 +791,7 @@ export function buildReview(content, mode = 'quick') {
    const titleGroup = add('Cách dùng', k.title, k.id);
    // The printed formula stays visible in full; only its Vietnamese
    // paraphrase is spoken, never the joined formula fragments.
-   const paraphrase = REVIEW_PATTERN_SPEECH[k.id];
-   if (k.pattern && paraphrase) {
-    rows.push({label: 'Mẫu câu', text: k.pattern, displayText: k.pattern, speechText: reviewSpeechText(paraphrase), speechSource: paraphrase, group: titleGroup, paragraph: 1, lang: 'vi-VN', source: k.id});
-   }
+   pushPattern(k, titleGroup);
    add('Cách dùng', k.useWhenVi, k.id);
    add('Giải thích', k.explanationVi, k.id);
    add('Vị trí', k.positionVi, k.id);
@@ -693,10 +812,7 @@ export function buildReview(content, mode = 'quick') {
   for (const k of content.knowledgePoints.filter(k => k.kind === 'grammar')) {
    const titleGroup = add('Điểm ngữ pháp', k.title, k.id);
    add('Ý chính', k.useWhenVi, k.id);
-   const paraphrase = REVIEW_PATTERN_SPEECH[k.id];
-   if (k.pattern && paraphrase) {
-    rows.push({label: 'Mẫu câu', text: k.pattern, displayText: k.pattern, speechText: reviewSpeechText(paraphrase), speechSource: paraphrase, group: titleGroup, paragraph: 1, lang: 'vi-VN', source: k.id});
-   }
+   pushPattern(k, titleGroup);
    const e = k.examples?.[0];
    if (e) pair('Câu mẫu', e.zh, e.noteVi, k.id);
   }
@@ -810,7 +926,7 @@ export function reviewHtml(content) {
  if (!reviewSupported(content)) return '';
  return `<section class="audio-review" aria-labelledby="review-heading"><p class="kicker">NGHE ÔN BÀI</p><h3 id="review-heading">Rảnh tay, nghe lại bài</h3>
  <p>Từ mới và hội thoại dùng audio sách (giọng người thật); phần còn lại dùng giọng máy của thiết bị. Bấm một lần để nghe liên tục.</p>
- <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>Ý chính ngữ pháp + 1 câu mẫu</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
+ <div class="review-modes"><button class="btn" data-review-mode="quick">Ôn nhanh<small>${escape(reviewQuickLabel(content))}</small></button><button class="btn" data-review-mode="detail">Ôn chi tiết<small>${escape(reviewDetailLabel(content))}</small></button></div>
  <div class="review-caption"><span data-review-label></span><span data-review-count></span></div>
  <progress class="review-progress" data-review-progress max="1" value="0" aria-label="Tiến độ nghe"></progress>
  <div class="review-transcript" data-review-text aria-label="Lời đọc và nghĩa"></div>

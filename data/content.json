@@ -60279,39 +60279,39 @@
    ],
    "summaryPoints": [
     {
-     "titleVi": "Bổ ngữ kết quả: động từ + 好/完/晚…",
-     "bodyVi": "Động từ hoặc tính từ đứng sau động từ để nói kết quả: 做+好， 吃+完， 来+晚. Tân ngữ thường đứng sau bổ ngữ.",
+     "titleVi": "1. Bổ ngữ kết quả (khẳng định): Động từ + 好 / 完 / 晚… (+ 了)",
+     "bodyVi": "Công thức: Chủ ngữ + Động từ + Bổ ngữ kết quả (好 / 完 / 晚 / 懂…) + (了) + (Tân ngữ), hoặc đưa tân ngữ lên trước. Bổ ngữ dính liền ngay sau động từ để chốt hành động đã đạt kết quả gì: 做好 (nấu/làm xong), 吃完 (ăn hết), 洗好 (rửa xong), 想好 (nghĩ kỹ), 送完 (đưa xong). ⚠ Bẫy hay sai: KHÔNG chèn chữ hay tân ngữ vào giữa động từ và bổ ngữ (nói “吃完饭了”, KHÔNG nói “吃完了饭” hay tách “做饭好了”); chỉ thêm “了” sau cụm V + Bổ ngữ (hoặc cuối câu) khi báo việc đã hoàn thành.",
      "exampleZh": "菜都做好了。",
      "examplePinyin": "Cài dōu zuòhǎo le.",
-     "exampleVi": "Cơm canh làm xong cả rồi."
+     "exampleVi": "Cơm canh làm xong cả rồi. (Đoạn 1 — còn có ở Đoạn 3: 吃个苹果吧，我都洗好了。)"
     },
     {
-     "titleVi": "Phủ định bổ ngữ kết quả: 没… và bỏ “了”",
-     "bodyVi": "Phủ định thì đặt 没（有）trước động từ và bỏ “了” ở cuối: “我没吃完饭” — chưa ăn xong, không nói “没吃完饭了”.",
-     "exampleZh": "我还没想好呢。",
-     "examplePinyin": "Wǒ hái méi xiǎnghǎo ne.",
-     "exampleVi": "Em vẫn chưa nghĩ xong đâu. (câu trong Đoạn 2)"
+     "titleVi": "2. Phủ định bổ ngữ kết quả: 没（有） + V + Bổ ngữ (BẮT BUỘC bỏ 了)",
+     "bodyVi": "Công thức: Chủ ngữ + 没（有） + Động từ + Bổ ngữ kết quả + (Tân ngữ) — tuyệt đối KHÔNG có “了”. Dùng để nói hành động chưa đạt được kết quả mong muốn. Câu hỏi dùng “…了吗”, “…（了）没有” hoặc “V + 没 + V + Bổ ngữ”. ⚠ Bẫy hay sai: (1) Không dùng “不” để phủ định việc chưa làm xong — phải dùng “没（有）”; (2) Lỗi nặng nhất là vẫn giữ “了” ở cuối câu (SAI: “我没吃完饭了” / “我还没想好了” → ĐÚNG: “我没吃完饭” / “我还没想好呢”).",
+     "exampleZh": "工作太多了，下班的时候没做完。",
+     "examplePinyin": "Gōngzuò tài duō le, xiàbān de shíhou méi zuòwán.",
+     "exampleVi": "Việc nhiều quá, lúc tan làm vẫn chưa làm xong. (Đoạn 1 — Đoạn 2 còn có: 我还没想好呢。)"
     },
     {
-     "titleVi": "Trùng điệp cho việc sắp làm: A（一）A · ABAB · AAB",
-     "bodyVi": "Động từ một âm tiết: 想一想； hai âm tiết: 休息休息； từ ly hợp: 帮帮忙. Nghĩa: làm một chút, thử làm — giọng nhẹ nhàng.",
+     "titleVi": "3. Động từ trùng điệp việc sắp làm: A(一)A · ABAB · AAB",
+     "bodyVi": "Công thức: (1) Động từ 1 âm tiết: A(一)A — 想一想, 洗洗手, 看看; (2) Động từ 2 âm tiết: ABAB — 休息休息; (3) Động từ ly hợp (V+O): AAB — 帮帮忙. Dùng để rủ rê nhẹ nhàng, nói làm một chút hoặc thử làm. ⚠ Bẫy hay sai: (1) Tuyệt đối KHÔNG chèn “一” vào giữa động từ 2 âm tiết (SAI: “休息一休息” → ĐÚNG: “休息休息”); (2) Không lặp cả cụm ly hợp thành ABAB (SAI: “帮忙帮忙” → ĐÚNG: “帮帮忙”); (3) Âm tiết lặp thường đọc thanh nhẹ.",
      "exampleZh": "那你再想一想，你想好了，我来买票。",
      "examplePinyin": "Nà nǐ zài xiǎng yi xiǎng, nǐ xiǎnghǎo le, wǒ lái mǎi piào.",
-     "exampleVi": "Vậy em nghĩ thêm đi, nghĩ xong thì anh mua vé."
+     "exampleVi": "Vậy em nghĩ thêm chút đi, em nghĩ xong thì anh mua vé. (Đoạn 2 — Đoạn 3: 我去洗洗手。; Đoạn 4: 真想让他休息休息。)"
     },
     {
-     "titleVi": "Trùng điệp cho việc đã làm: A了A · AB了一下 · A了AB",
-     "bodyVi": "Việc đã xảy ra: 看了看； động từ hai âm tiết dùng “AB了一下” （休息了一下）; từ ly hợp: 帮了帮忙.",
-     "exampleZh": "我看了看网上的介绍。",
-     "examplePinyin": "Wǒ kànle kàn wǎngshang de jièshào.",
-     "exampleVi": "Tôi đã xem qua phần giới thiệu trên mạng."
+     "titleVi": "4. Động từ trùng điệp việc đã làm: A了A · AB了一下 · A了AB",
+     "bodyVi": "Công thức: (1) Động từ 1 âm tiết: A了A — 看了看; (2) Động từ 2 âm tiết: AB了一下 — 休息了一下; (3) Động từ ly hợp: A了AB — 帮了帮忙. Dùng khi kể lại một hành động ngắn đã xảy ra xong rồi. ⚠ Bẫy hay sai: (1) Chữ “了” chêm VÀO GIỮA, không đặt cuối kiểu “看一看了”; (2) Động từ 2 âm tiết việc đã làm KHÔNG lặp “休息了休息” — bắt buộc đổi sang “休息了一下”; (3) Không dùng nhầm dạng chưa làm “看一看” khi đang kể chuyện đã làm.",
+     "exampleZh": "我看了看网上的介绍，这个时候去西安很不错！",
+     "examplePinyin": "Wǒ kànle kàn wǎngshang de jièshào, zhège shíhou qù Xī'ān hěn búcuò!",
+     "exampleVi": "Em đã xem qua phần giới thiệu trên mạng rồi, thời điểm này đi Tây An rất ổn! (Đoạn 3 — hoặc: 我休息了一下。)"
     },
     {
-     "titleVi": "Hỏi lý do bằng 为什么， chuyển ý bằng 对了",
-     "bodyVi": "为什么 đặt trước động từ để hỏi lý do. Khi chợt nhớ ra việc khác, người Trung Quốc mở đầu bằng “对了” — như Vương Nhất Tuyết chợt nhớ ra chuyến đi Tây An.",
-     "exampleZh": "为什么想去西安？",
-     "examplePinyin": "Wèi shénme xiǎng qù Xī'ān?",
-     "exampleVi": "Sao lại muốn đi Tây An? (câu trong Đoạn 3)"
+     "titleVi": "5. Hỏi lý do bằng 为什么 và chuyển ý tự nhiên bằng 对了",
+     "bodyVi": "Công thức: (1) Hỏi lý do: (Chủ ngữ) + 为什么 + Động từ/Tính từ + …? Đặt 为什么 trước động từ để hỏi “tại sao / sao lại…”, trả lời bằng nguyên nhân (có thể kèm 因为…). (2) Chuyển ý: “对了，…” đứng đầu câu khi đang nói chuyện bỗng nhớ ra việc khác hay đổi đề tài tự nhiên. ⚠ Bẫy hay sai: Không đặt 为什么 ở cuối câu theo trật tự tiếng Việt (SAI: “你想去西安为什么？” → ĐÚNG: “为什么想去西安？”); không nhầm “对了” (À đúng rồi, chợt nhớ ra…) với “对” (đúng/chính xác).",
+     "exampleZh": "我去洗洗手。对了，我们去西安旅游，怎么样？— 为什么想去西安？",
+     "examplePinyin": "Wǒ qù xǐxi shǒu. Duìle, wǒmen qù Xī'ān lǚyóu, zěnmeyàng? — Wèi shénme xiǎng qù Xī'ān?",
+     "exampleVi": "Em đi rửa tay đã. À đúng rồi, chúng ta đi du lịch Tây An nhé, được không? — Sao lại muốn đi Tây An? (Đoạn 3)"
     }
    ],
    "lookup": {

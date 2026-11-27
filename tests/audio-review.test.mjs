@@ -91,9 +91,9 @@ test('non-spoken separators are retained in the displayed paragraph',async()=>{
  for(const k of content.knowledgePoints.filter(k=>k.kind==='grammar')){const first=rows.find(r=>r.label==='Ý chính'&&r.source===k.id);const display=rows.filter(r=>r.group===first.group).map(r=>r.displayText).join('');assert.equal(display,cleanReviewText(k.useWhenVi));}
  assert.ok(rows.some(r=>r.displayText.includes(' + ')));
 });
-test('D32 quick review is grammar main ideas only, for all enabled HSK2 lessons', async () => {
+test('D32 quick review is grammar main ideas only, for HSK2 lessons 1-2', async () => {
  const {cleanReviewText} = await import('../src/audio-review.js');
- for (const lesson of [content, content2, content3]) {
+ for (const lesson of [content, content2]) {
   const quick = buildReview(lesson), detail = buildReview(lesson, 'detail');
   const grammar = lesson.knowledgePoints.filter(k => k.kind === 'grammar');
   assert.equal(grammar.length, 3);
@@ -207,6 +207,26 @@ test('HSK2 lesson 2 summary controls mount, switch modes and stop on book audio'
  click('[data-review-mode="quick"]');
  assert.ok(document.querySelectorAll('[data-review-script] li').length < detailCount);
  stopReview(); dom.window.close();
+});
+test('HSK2 lesson 3 pedagogical quick & detail review scripts cover story, backbone, collocations, contrasts, Q&A and wrap-up', async () => {
+ const {reviewHtml} = await import('../src/audio-review.js');
+ const quick = buildReview(content3), detail = buildReview(content3, 'detail');
+ assert.ok(reviewHtml(content3).includes('Từ vựng theo mạch chuyện + 4 câu xương sống'));
+ for (const w of content3.prepWords) assert.ok(quick.some(r => r.text.includes(w.zh)), `quick missing ${w.zh}`);
+ for (const bone of ['工作太多了，下班的时候没做完。', '那你再想一想，你想好了，我来买票。', '我看了看网上的介绍，这个时候去西安很不错！', '我觉得他这个月每天都很累，真想让他休息休息。']) {
+  assert.ok(quick.some(r => r.text.includes(bone)), `quick missing backbone ${bone}`);
+ }
+ for (const r of [...quick, ...detail]) {
+  assert.ok(r.speechText);
+  assert.ok(!/[^\p{L}\p{M}\p{N}\s]/u.test(r.speechText), r.speechText);
+  if (r.lang === 'vi-VN' && r.label !== 'Mẫu câu') assert.ok(!/\p{Script=Han}/u.test(r.text), r.text);
+ }
+ assert.ok(detail.some(r => r.label.startsWith('Cụm ghép · ')));
+ assert.ok(detail.some(r => r.source === 'h2l3-contrast-1' && r.text.includes('我没吃完饭')));
+ assert.ok(detail.some(r => r.source === 'h2l3-contrast-2' && r.text.includes('休息了一下')));
+ assert.ok(detail.some(r => r.source === 'h2l3-contrast-3' && r.text.includes('回去上班')));
+ for (const p of content3.reader.passages) assert.ok(detail.some(r => r.source.startsWith(`h2l3-qa-${p.id}-`)), p.id);
+ assert.ok(detail.some(r => r.source === 'h2l3-story-wrap'));
 });
 test('HSK2 lesson 3 detail includes all 15 words, 18 dialogue lines in order, no exercise answers', async () => {
  const {reviewHtml, reviewDetailLabel} = await import('../src/audio-review.js');

@@ -61,7 +61,7 @@ test('hsk2 lesson 3 build: 3 grammar points with the printed examples + characte
   assert.ok(f && f.title.includes('三点水') && f.title.includes('宝盖头'), 'foundation KP covers both radicals');
   assert.equal(l3.learningPath.length, 6);
   assert.equal(l3.summaryPoints.length, 5);
-  for (const sp of l3.summaryPoints) assert.ok(sp.exampleZh && sp.bodyVi, sp.titleVi);
+  for (const sp of l3.summaryPoints) assert.ok(sp.exampleZh && sp.bodyVi && sp.examplePinyin, sp.titleVi);
 });
 
 test('hsk2 lesson 3: 12 set items and 10 printed dialogue checks (D28)', () => {

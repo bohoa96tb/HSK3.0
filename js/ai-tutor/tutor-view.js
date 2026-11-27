@@ -7,20 +7,21 @@ import {
   buildSystemInstruction, segmentByLexicon, coverageNote, normalizeLevel,
   compactLevelCode, listLessons, getLessonContext, lessonReplyHints,
   lessonRoleplayOpening, lessonTranslateSeeds, resolveDrillPassed,
-} from "./hsk-guardrail.js?v=20261127-ai-tutor8";
-import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor8";
+} from "./hsk-guardrail.js?v=20261127-ai-tutor9";
+import { SCENARIOS, scenarioById } from "./roleplay-scenarios.js?v=20261127-ai-tutor9";
 import {
   loadTutorState, updateTutorState, updateTutorPrefs, recordSessionStart,
   recordSpeakingSeconds, recordError, recordVocabUsage, recordTopicProgress,
   saveConversation, clearTutorHistory, normalizeWorkerUrl,
-} from "./tutor-storage.js?v=20261127-ai-tutor8";
+} from "./tutor-storage.js?v=20261127-ai-tutor9";
 import {
   VoiceRecorder, blobToBase64, speakZh, stopSpeak,
   isVoiceInputSupported, DEFAULT_TTS_RATE, SLOW_TTS_RATE, MAX_AUDIO_BYTES,
-} from "./voice-engine.js?v=20261127-ai-tutor8";
+} from "./voice-engine.js?v=20261127-ai-tutor9";
 
-const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor8";
+const CSS_HREF = "js/ai-tutor/tutor.css?v=20261127-ai-tutor9";
 const CLIENT_TIMEOUT_MS = 45000; // > Worker Gemini timeout (40 s) so the app surfaces the Worker's own error JSON instead of aborting early
+const hasHanzi = (s) => /[\u4e00-\u9fff\u3400-\u4dbf]/.test(String(s || ""));
 
 let cssLoaded = false;
 function ensureCss() {
@@ -610,15 +611,16 @@ export async function mountTutor(main, ctx = {}) {
     const challengeLabel = turn.challengeLabel || "🎯 Câu cần nói sang tiếng Trung:";
 
     if (turn.role === "user") {
-      return `<article class="tutor-bubble user">
-        <p class="tutor-who">${who}</p>
-        ${turn.hanzi ? `<p class="tutor-hanzi">${tokensHtml(turn.hanzi)}</p>` : ""}
-        ${turn.pinyin ? `<p class="tutor-pinyin" data-pinyin>${esc(turn.pinyin)}</p>` : ""}
-        ${turn.hanzi ? `<p class="tutor-bubble-actions">
+      const showZhActions = !turn.isStarter && hasHanzi(turn.hanzi);
+      return `<article class="tutor-bubble user ${turn.isStarter ? "starter" : ""}">
+        <p class="tutor-who">${turn.isStarter ? "Yêu cầu học tập" : who}</p>
+        ${turn.hanzi ? (showZhActions ? `<p class="tutor-hanzi">${tokensHtml(turn.hanzi)}</p>` : `<p class="tutor-vi-request">${esc(turn.hanzi)}</p>`) : ""}
+        ${showZhActions && turn.pinyin ? `<p class="tutor-pinyin" data-pinyin>${esc(turn.pinyin)}</p>` : ""}
+        ${showZhActions ? `<p class="tutor-bubble-actions">
           <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${DEFAULT_TTS_RATE}">🔊 Nghe</button>
           <button class="btn ghost small" type="button" data-speak="${idx}" data-rate="${SLOW_TTS_RATE}">🐢 Chậm</button>
         </p>` : ""}
-        ${ev ? correctionHtml(ev, idx) : ""}
+        ${!turn.isStarter && ev ? correctionHtml(ev, idx) : ""}
       </article>`;
     }
 
@@ -682,11 +684,11 @@ export async function mountTutor(main, ctx = {}) {
     if (!session.turns.length) {
       chatEl.innerHTML = emptyStateHtml();
       const startTeach = $("#t-start-teach");
-      if (startTeach) startTeach.onclick = () => void sendTextTurn("Em muốn ôn và học trọng tâm bài này. Thầy/cô giảng ngắn gọn, liên hệ bài trước và hỏi kiểm tra em nhé.");
+      if (startTeach) startTeach.onclick = () => void sendTextTurn("Em muốn ôn và học trọng tâm bài này. Thầy/cô giảng ngắn gọn, liên hệ bài trước và hỏi kiểm tra em nhé.", { isStarter: true });
       const startCorrect = $("#t-start-correct");
-      if (startCorrect) startCorrect.onclick = () => void sendTextTurn("Hãy cho em một gợi ý ngắn để em đặt câu theo mẫu ngữ pháp bài này rồi thầy/cô sửa giúp em.");
+      if (startCorrect) startCorrect.onclick = () => void sendTextTurn("Hãy cho em một gợi ý ngắn để em đặt câu theo mẫu ngữ pháp bài này rồi thầy/cô sửa giúp em.", { isStarter: true });
       chatEl.querySelectorAll("[data-quick-ask]").forEach((b) => {
-        b.onclick = () => void sendTextTurn(b.dataset.quickAsk);
+        b.onclick = () => void sendTextTurn(b.dataset.quickAsk, { isStarter: true });
       });
       return;
     }
@@ -812,15 +814,17 @@ export async function mountTutor(main, ctx = {}) {
     return data;
   }
 
-  async function handleResult(data, { myBlobUrl = null, fallbackUserText = "" } = {}) {
+  async function handleResult(data, { myBlobUrl = null, fallbackUserText = "", isStarter = false } = {}) {
     const ev = data.evaluation || {};
     const userHanzi = data.user_transcript_hanzi || fallbackUserText || "";
+    const isViStarterTurn = Boolean(isStarter || (!myBlobUrl && !hasHanzi(userHanzi)));
     const userTurn = {
       role: "user",
       hanzi: userHanzi,
-      pinyin: data.user_transcript_pinyin || "",
+      pinyin: isViStarterTurn ? "" : (data.user_transcript_pinyin || ""),
       translation_vi: "",
-      evaluation: ev.has_error ? {
+      isStarter: isViStarterTurn,
+      evaluation: isViStarterTurn ? null : (ev.has_error ? {
         ...ev,
         original_hanzi: userHanzi,
         original_pinyin: data.user_transcript_pinyin || "",
@@ -829,7 +833,7 @@ export async function mountTutor(main, ctx = {}) {
         explanation_vi: ev.explanation_vi || "",
         pronunciation_status: ev.pronunciation_status || "not_assessed",
         pronunciation_feedback_vi: ev.pronunciation_feedback_vi || "",
-      } : null),
+      } : null)),
       audioUrl: myBlobUrl,
     };
     if (userTurn.hanzi) session.turns.push(userTurn);
@@ -892,7 +896,7 @@ export async function mountTutor(main, ctx = {}) {
       challengeLabel,
       outOfLevel: Array.isArray(reply.out_of_level_words) ? reply.out_of_level_words : [],
     });
-    if (ev.has_error) {
+    if (ev.has_error && !isViStarterTurn) {
       state = recordError({
         error_type: ev.error_type, original_hanzi: userTurn.hanzi, original_pinyin: userTurn.pinyin,
         corrected_hanzi: ev.corrected_hanzi, corrected_pinyin: ev.corrected_pinyin,
@@ -914,7 +918,7 @@ export async function mountTutor(main, ctx = {}) {
     if (tutorHanzi && state.prefs.autoSpeak) speakZh(tutorHanzi, { rate: DEFAULT_TTS_RATE, onStatus: setStatus });
   }
 
-  function buildPayload(extra) {
+  function buildPayload(extra, { isStarter = false } = {}) {
     const scenarioObj = session.practiceMode === "roleplay" ? activeRoleplayScenario() : null;
     const curDrill = session.practiceMode === "translate" ? currentDrill() : null;
     return {
@@ -930,6 +934,7 @@ export async function mountTutor(main, ctx = {}) {
         scenario: scenarioObj,
         pendingPromptVi: session.practiceMode === "translate" ? (curDrill?.vi || session.pendingPromptVi) : "",
         expectedAnswerZh: session.practiceMode === "translate" ? (curDrill?.refZh || "") : "",
+        isStarter,
         lexicon,
       }),
       history: session.turns.slice(-10).map((t) => ({ role: t.role, hanzi: t.hanzi })),
@@ -955,16 +960,16 @@ export async function mountTutor(main, ctx = {}) {
     if (typeof ms === "number" && ms > 0) setStatus(`Gemini đã xử lý trong ${(ms / 1000).toFixed(1)} giây.`);
   }
 
-  async function sendTextTurn(text) {
+  async function sendTextTurn(text, { isStarter = false } = {}) {
     if (sending) return;
     if (!ensureReady()) return;
     if (!session.started) startSession({ keepTurns: true });
     sending = true;
     startWait("text");
     try {
-      const data = await callTutor(buildPayload({ userText: text }));
+      const data = await callTutor(buildPayload({ userText: text }, { isStarter }));
       stopWait();
-      await handleResult(data, { fallbackUserText: text });
+      await handleResult(data, { fallbackUserText: text, isStarter });
       showDuration(data);
     } catch (e) { stopWait(); setStatus(e.message || "Có lỗi. Thử lại nhé."); }
     finally { stopWait(); sending = false; }

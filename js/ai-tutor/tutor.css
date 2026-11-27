@@ -85,7 +85,9 @@
 .tutor-token { background: none; border: none; padding: 0; margin: 0; font: inherit; cursor: pointer; border-bottom: 1px dotted #9db89d; }
 .tutor-pinyin { margin: 3px 0 0; color: var(--muted, #666); }
 .tutor-pinyin.hidden, .tutor-vi-subtitle.hidden { display: none; }
-.tutor-vi { margin: 4px 0 0; color: var(--ink, #203731); font-size: 0.95rem; }
+.tutor-vi { margin: 4px 0 0; color: var(--ink, #203731); font-size: 0.95rem; white-space: pre-line; }
+.tutor-vi-request { margin: 0; font-size: 0.95rem; color: var(--ink, #203731); }
+.tutor-bubble.user.starter { background: #f4f7f4; }
 .tutor-bubble-actions { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 0; }
 .tutor-bubble-actions .btn { min-height: 44px; padding: 6px 11px; }
 

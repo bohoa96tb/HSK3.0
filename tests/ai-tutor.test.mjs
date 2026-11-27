@@ -389,6 +389,15 @@ test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons 
   assert.match(tr, /菜都做好了。/);
   assert.match(tr, /tuyệt đối KHÔNG viết nhầm là 'thêm 完了 sau động từ'/);
   assert.doesNotMatch(tr, /请试着翻译/);
+
+  const teachL2 = buildSystemInstruction({
+    level: "HSK2", mode: "tutor", practiceMode: "teach", lessonId: "hsk2-l02", isStarter: true, lexicon: lex,
+  });
+  assert.match(teachL2, /CÁC ĐIỂM NGỮ PHÁP CHÍNH CỦA BÀI BẮT BUỘC PHẢI TÓM TẮT ĐẦY ĐỦ/);
+  assert.match(teachL2, /还是……吧/);
+  assert.match(teachL2, /“多”/);
+  assert.match(teachL2, /的 \+ Danh từ/);
+  assert.match(teachL2, /LƯỢT MỞ ĐẦU GIẢNG BÀI/);
 });
 
 test("lessonTranslateSeeds covers all 22 lessons with 6-8 natural, in-lesson sentences and resolveDrillPassed works", () => {
@@ -482,7 +491,31 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     sentPayloads.push(JSON.parse(init.body));
     const idx = sentPayloads.length;
     if (idx === 1) {
-      // Turn 1: correct mode (wrong answer)
+      // Turn 1: teach mode starter -> even if backend includes evaluation text, UI hides evaluation & TTS buttons on Vietnamese starter bubble
+      return new Response(JSON.stringify({
+        ok: true,
+        user_transcript_hanzi: "Em muốn ôn và học trọng tâm bài này.",
+        user_transcript_pinyin: "",
+        evaluation: {
+          has_error: false,
+          error_type: "none",
+          corrected_hanzi: "",
+          corrected_pinyin: "",
+          explanation_vi: "(1) Ghi nhận ý đúng (2) Nhận xét",
+          pronunciation_status: "not_assessed",
+          pronunciation_feedback_vi: "",
+        },
+        tutor_reply: {
+          hanzi: "我们怎么去北大？",
+          pinyin: "Wǒmen zěnme qù Běidà?",
+          translation_vi: "- Điểm 1: 还是……吧\n- Điểm 2: 多\n- Điểm 3: định ngữ 的\n👉 Thực hành: Em hãy dùng 还是……吧 để đề xuất đi taxi đến Đại học Bắc Kinh nhé!",
+          out_of_level_words: [],
+        },
+        timings: { geminiMs: 720 },
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    if (idx === 2) {
+      // Turn 2: correct mode (wrong answer)
       return new Response(JSON.stringify({
         ok: true,
         passed: false,
@@ -506,8 +539,8 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
         timings: { geminiMs: 850 },
       }), { status: 200, headers: { "Content-Type": "application/json" } });
     }
-    if (idx === 2) {
-      // Turn 2: translate mode WRONG (passed: false -> stay on Câu 2)
+    if (idx === 3) {
+      // Turn 3: translate mode WRONG (passed: false -> stay on Câu 2)
       return new Response(JSON.stringify({
         ok: true,
         passed: false,
@@ -586,6 +619,16 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     main.querySelector("#t-toggle-global-pinyin").click();
     main.querySelector("#t-toggle-global-vi").click();
 
+    // 3b. Test Ôn & Dạy starter turn: no correction box and no 🔊 Nghe / 🐢 Chậm on Vietnamese starter bubble
+    main.querySelector("#t-start-teach").click();
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(sentPayloads.length, 1);
+    assert.match(sentPayloads[0].systemInstruction, /LƯỢT MỞ ĐẦU GIẢNG BÀI/);
+    const starterBubble = main.querySelector(".tutor-bubble.user.starter");
+    assert.ok(starterBubble, "starter user bubble rendered");
+    assert.equal(starterBubble.querySelectorAll("[data-speak]").length, 0, "no TTS buttons on Vietnamese starter bubble");
+    assert.equal(starterBubble.querySelector(".tutor-correction"), null, "no correction/evaluation card on starter bubble");
+
     // 4. Switch to Roleplay & open Hints drawer
     main.querySelector('[data-pmode="roleplay"]').click();
     assert.equal(main.querySelectorAll(".tutor-bubble.tutor").length, 1);
@@ -598,9 +641,9 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     main.querySelector("#t-text").value = "我没吃完饭了";
     main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
     await new Promise((r) => setTimeout(r, 20));
-    assert.equal(sentPayloads.length, 1);
-    assert.equal(_internal.validateTurn(sentPayloads[0]), null);
-    assert.equal(sentPayloads[0].mode, "tutor");
+    assert.equal(sentPayloads.length, 2);
+    assert.equal(_internal.validateTurn(sentPayloads[1]), null);
+    assert.equal(sentPayloads[1].mode, "tutor");
     assert.match(main.textContent, /\(1\) Ghi nhận ý đúng/);
     assert.match(main.textContent, /我没吃完饭。/);
 
@@ -622,8 +665,8 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     main.querySelector("#t-text").value = "我休息一休息";
     main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
     await new Promise((r) => setTimeout(r, 20));
-    assert.equal(sentPayloads.length, 2);
-    assert.equal(_internal.validateTurn(sentPayloads[1]), null);
+    assert.equal(sentPayloads.length, 3);
+    assert.equal(_internal.validateTurn(sentPayloads[2]), null);
     assert.match(main.querySelector("#t-drill-card").textContent, /Câu 2 \/ 8/);
     assert.match(main.querySelector(".tutor-challenge-box").textContent, /Thử nói lại câu 2\/8/);
 
@@ -631,7 +674,7 @@ test("tutor-view DOM mount: lesson selector, 4 modes, global toggles, hints, and
     main.querySelector("#t-text").value = "我想休息休息。";
     main.querySelector("#t-text-form").dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
     await new Promise((r) => setTimeout(r, 20));
-    assert.equal(sentPayloads.length, 3);
+    assert.equal(sentPayloads.length, 4);
     assert.match(main.querySelector("#t-drill-card").textContent, /Câu 3 \/ 8/);
     assert.ok(main.querySelector("#t-drill-card").textContent.includes(deck[2].vi));
     const latestTutorBubble = [...main.querySelectorAll(".tutor-bubble.tutor")].pop();

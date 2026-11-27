@@ -628,7 +628,7 @@ const PEDAGOGICAL_LANGUAGE_RULES = [
   "4. KHÔNG KÝ HIỆU THỪA TRONG CÂU ĐỌC: tutor_reply.hanzi chỉ gồm chữ Hán và dấu câu tự nhiên (，。！？), không chèn tiếng Việt, pinyin, số mục (1)(2)(3), ngoặc đơn chú thích hay emoji.",
 ].join("\n");
 
-function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh = "", lexicon = cachedLexicon) {
+function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh = "", isStarter = false, lexicon = cachedLexicon) {
   const effectivePractice = practiceMode || (mode === "roleplay" ? "roleplay" : "teach");
 
   if (effectivePractice === "roleplay") {
@@ -682,11 +682,27 @@ function buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi,
   }
 
   // Default: teach (Ôn & Dạy)
+  const mainKps = ctx?.current
+    ? ctx.current.knowledgePoints.filter((k) => k.kind !== "foundation" && k.kind !== "foundation-characters")
+    : [];
+  const kpSummaryPrompt = mainKps.length
+    ? `CÁC ĐIỂM NGỮ PHÁP CHÍNH CỦA BÀI BẮT BUỘC PHẢI TÓM TẮT ĐẦY ĐỦ (không bỏ sót điểm nào):\n${mainKps.map((k, i) => `${i + 1}. ${stripChineseMetaTerms(k.title)}${k.pattern ? ` (${stripChineseMetaTerms(k.pattern)})` : ""}`).join("\n")}`
+    : "";
+  const prevTitle = ctx?.prevLessons?.length
+    ? `${ctx.prevLessons[ctx.prevLessons.length - 1].level} Bài ${String(ctx.prevLessons[ctx.prevLessons.length - 1].lessonNumber).padStart(2, "0")} (${ctx.prevLessons[ctx.prevLessons.length - 1].titleZh})`
+    : "";
+
   return [
     "CHẾ ĐỘ ÔN & DẠY (GIÁO VIÊN SƯ PHẠM GẦN GŨI):",
-    "Hãy dạy như một giáo viên tiếng Trung nói chuyện trực tiếp với học viên Việt Nam:",
-    "- Phần tiếng Trung (tutor_reply.hanzi): CHỈ đưa 1–2 câu hội thoại/ví dụ chuẩn bản xứ kèm 1 câu hỏi giao tiếp ngắn bằng tiếng Trung để học viên trả lời (ví dụ: `菜都做好了，你吃饭了吗？`). Tuyệt đối không giảng ngữ pháp bằng tiếng Trung trong tutor_reply.hanzi.",
-    "- Phần tiếng Việt (tutor_reply.translation_vi và evaluation.explanation_vi nếu học viên vừa trả lời): giảng ngắn gọn trọng tâm bài bằng tiếng Việt đời thường dễ hiểu (nên nhớ điểm gì, tránh bẫy nào, liên hệ bài trước ra sao), rồi giải thích nghĩa của câu tiếng Trung vừa đưa để học viên hiểu và nói lại.",
+    ...(kpSummaryPrompt ? [kpSummaryPrompt] : []),
+    ...(isStarter ? [
+      "LƯỢT MỞ ĐẦU GIẢNG BÀI: Học viên vừa bấm yêu cầu tóm tắt và giảng bài (chưa trả lời câu tiếng Trung nào). BẮT BUỘC đặt evaluation.has_error=false, error_type='none', corrected_hanzi='', corrected_pinyin='', explanation_vi='', pronunciation_status='not_assessed', pronunciation_feedback_vi=''.",
+    ] : []),
+    "- Ở lượt mở đầu giảng bài, tutor_reply.translation_vi PHẢI trình bày gọn gàng theo đúng cấu trúc:",
+    `  + 3–4 gạch đầu dòng tiếng Việt ngắn gọn (mỗi dòng 1 câu súc tích bắt đầu bằng "- ") tóm tắt ĐẦY ĐỦ toàn bộ các điểm ngữ pháp chính của bài vừa liệt kê${prevTitle ? `, kèm 1 câu liên hệ tự nhiên với ${prevTitle}` : ""}. Giải thích bằng tiếng Việt đời thường, tuyệt đối không dùng thuật ngữ chữ Hán.`,
+    "  + Kết thúc bằng 1 dòng riêng ghi rõ mẫu câu cần dùng cho câu hỏi kiểm tra (ví dụ: `👉 Thực hành: Em hãy dùng mẫu \"还是……吧\" để đề xuất đi taxi đến Đại học Bắc Kinh nhé!`).",
+    "- Phần tiếng Trung (tutor_reply.hanzi): CHỈ chứa 1–2 câu tiếng Trung tự nhiên ngắn gọn gắn trực tiếp với đúng 1 trong các điểm ngữ pháp vừa giảng (ví dụ đặt 1 câu hỏi tình huống ngắn để học viên vận dụng đúng mẫu câu đã chỉ dẫn ở mục Thực hành). Tuyệt đối không giảng ngữ pháp bằng tiếng Trung trong tutor_reply.hanzi.",
+    "- Khi học viên gửi câu trả lời tiếng Trung ở các lượt sau: khen/chỉ lỗi ngắn gọn bằng tiếng Việt tự nhiên trong evaluation.explanation_vi rồi gợi mở sang điểm ngữ pháp tiếp theo của bài.",
   ];
 }
 
@@ -698,6 +714,7 @@ export function buildSystemInstruction({
   scenario = null,
   pendingPromptVi = "",
   expectedAnswerZh = "",
+  isStarter = false,
   lexicon = cachedLexicon,
 } = {}) {
   const ctx = lessonId ? getLessonContext(lessonId, lexicon) : null;
@@ -766,7 +783,7 @@ export function buildSystemInstruction({
     lines.push(...formatLessonContextLines(ctx));
   }
 
-  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh, lexicon));
+  lines.push(...buildModeDirectives(practiceMode, mode, scenario, ctx, pendingPromptVi, expectedAnswerZh, isStarter, lexicon));
 
   let result = lines.join("\n");
   if (result.length > MAX_PROMPT_CHARS) {

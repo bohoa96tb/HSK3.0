@@ -144,3 +144,11 @@ Bài 8 (contentVersion `20261102-lesson8-continue1`) là chuẩn chất lượng
 Bài tập có hình dùng tranh minh họa phẳng vẽ mới (không dùng ảnh sách khi phát hành), hình phải đủ ý nghĩa và chỉ có một đáp án đúng rõ ràng, lưu truy vết + trạng thái quyền từng hình, phát hành dạng file WebP riêng đã tối ưu, nhãn chữ của lựa chọn hình chỉ hiện sau khi kiểm tra. Quyền của hình vẽ mới tách riêng khỏi quyền câu hỏi/nội dung sách và audio gốc (vẫn `unknown`). Mốc đoạn audio phải kiểm bằng ASR mức từ/khoảng lặng và thử phát trên trình duyệt thông thường trước phát hành; chưa nghe bằng tai và chưa thử thiết bị thật thì giữ `asr-draft` và ghi rõ. Chi tiết: CONTENT_STANDARD mục D19.
 
 - D47: mục lục tham khảo bên ngoài SAI tiêu đề/KP từ Bài 7 trở đi (Bài 7 thật 《他篮球打得很好》, Bài 8 thật 《虽然你忘了，但是我记得》) — tiêu đề/KP/phân trang của mọi bài chưa làm phải lấy từ kiểm kê trực tiếp bản in, không tin bất kỳ danh sách ngoài nào.
+
+## 12. Quy trình 3 Agent & Quy luật hình ảnh bắt buộc (ƯU TIÊN CAO NHẤT)
+
+Mọi phiên làm việc sau trên repo `HSK3.0` khi thêm mới hoặc chỉnh sửa bất kỳ bài học nào **BẮT BUỘC** thực hiện đúng 3 nguyên tắc sau (xem chi tiết tại [GEMINI.md](GEMINI.md)):
+
+1. **Tạo nhánh `preview/<ten-bai>` mới** (tách từ `main`), tuyệt đối **KHÔNG** commit, push hay merge trực tiếp lên `main` khi người dùng chưa xác nhận duyệt.
+2. **Đọc và tuân thủ** tuyệt đối [`.agent/rules/lesson-images.md`](.agent/rules/lesson-images.md) (cấm tuyệt đối `<svg>` minh họa vẽ tay/raster từ SVG; giữ đúng 1 Art Direction chuẩn Bài 3 HSK 2; đồng bộ 100% nền, độ sáng và bối cảnh trong từng bộ A/B/C/D; không chữ thừa; rõ nét trên màn hình `390px`).
+3. **Chạy đủ quy trình 3 vai** trong [`.agent/workflows/lesson-creation-team.md`](.agent/workflows/lesson-creation-team.md): **Builder Agent → Art Agent → Visual QA Agent** (kiểm thực tế bản preview ở viewport `390×844`, đạt 6/6 tiêu chí) rồi mới gửi link xem thử chờ người dùng duyệt.

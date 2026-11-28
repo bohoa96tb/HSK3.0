@@ -8,7 +8,7 @@ const lessons = [content.pilot, ...content.additionalLessons];
 // ---- Data: Han-Viet coverage + context-correct readings --------------------
 test('han-viet: all prep words carry a verified, context-checked reading', () => {
   const words = lessons.flatMap((c) => c.prepWords);
-  assert.equal(words.length, 440); // 310 before + 20 Lesson 15 entries (17 words + 3 proper nouns, D27 standard build) + 15 HSK2 Lesson 1 entries (14 words + 1 proper noun) + 17 HSK2 Lesson 2 entries (16 words + 1 proper noun) + 15 HSK2 Lesson 3 entries (15 words, no proper noun) + 16 HSK2 Lesson 4 entries (16 words, no proper noun) + 18 HSK2 Lesson 5 entries (18 word rows incl. the unnumbered row, no proper noun) + 14 HSK2 Lesson 6 entries (14 words, no proper noun) + 15 HSK2 Lesson 7 entries (15 words, no proper noun)
+  assert.equal(words.length, 456); // 440 through HSK2 Lesson 7 + 16 HSK2 Lesson 8 entries (14 numbered + 2 base rows 左/右)
   for (const w of words) {
     assert.equal(w.hanVietStatus, 'verified-editorial', w.id);
     assert.ok(w.hanViet && w.hanViet === w.hanViet.toUpperCase(), w.id);
@@ -29,7 +29,7 @@ test('han-viet: all prep words carry a verified, context-checked reading', () =>
 
 test('exercise support data: every Chinese option has pinyin and Vietnamese meaning', () => {
   const options = lessons.flatMap((c) => c.exerciseSet.items.flatMap((i) => i.options.filter((o) => o.zh)));
-  assert.equal(options.length, 1446); // exercise-set options only; since D28 the dialogues' own questions (312 options) live at their dialogues; HSK2 Lesson 6 adds 66 (warm 8 items share two 4-option sets counted per item = 32, fill 5x5 = 25, ext 3x3 = 9); HSK2 Lesson 7 adds 50 (warm 4 items share one 4-option set counted per item = 16, fill 5x5 = 25, ext 3x3 = 9)
+  assert.equal(options.length, 1496); // 1446 through HSK2 Lesson 7 + 50 HSK2 Lesson 8 (warm 4x4=16, fill 5x5=25, ext 3x3=9)
   for (const o of options) { assert.ok(o.pinyin, o.zh); assert.ok(o.vi, o.zh); }
 });
 

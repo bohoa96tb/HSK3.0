@@ -45,7 +45,7 @@ test("guardrail builds lexicon from real content.json without mutating it", () =
   const l2 = buildLexicon(content);
   assert.equal(JSON.stringify(content), before);
   assert.ok(l2.words.length > 900, `words=${l2.words.length}`);
-  assert.equal(l2.grammar.length, 105);
+  assert.equal(l2.grammar.length, 110);
   assert.deepEqual(l2.levelsPresent, ["HSK 1", "HSK 2"]);
 });
 
@@ -338,9 +338,9 @@ test("worker sends the right thinkingConfig per model and surfaces Google status
 // ---------- Pedagogical Tutor Upgrade (2026-11-27) ----------
 test("lesson selector and multi-layer context extract current, 2 prev, and 1 next summary only", () => {
   const allLessons = listLessons(lex);
-  assert.equal(allLessons.length, 22);
+  assert.equal(allLessons.length, 23);
   assert.equal(listLessons(lex, "HSK 1").length, 15);
-  assert.equal(listLessons(lex, "HSK 2").length, 7);
+  assert.equal(listLessons(lex, "HSK 2").length, 8);
 
   const ctx = getLessonContext("hsk2-l03", lex);
   assert.ok(ctx);
@@ -350,14 +350,16 @@ test("lesson selector and multi-layer context extract current, 2 prev, and 1 nex
   assert.equal(ctx.nextLesson.lessonId, "hsk2-l04");
   assert.equal(ctx.nextLesson.titleZh, "你穿红色的很好看");
   assert.ok(ctx.nextLesson.topicSummaryVi.length > 0);
-  // First lesson has 0 prevLessons; last populated lesson (hsk2-l07) still peeks catalogued hsk2-l08 title
+  // First lesson has 0 prevLessons; last populated lesson (hsk2-l08) peeks catalogued hsk2-l09 title
   assert.equal(getLessonContext("hsk1-l01", lex).prevLessons.length, 0);
   const ctx7 = getLessonContext("hsk2-l07", lex);
   assert.equal(ctx7.nextLesson.lessonId, "hsk2-l08");
   assert.equal(ctx7.nextLesson.titleZh, "虽然你忘了，但是我记得");
+  const ctx8 = getLessonContext("hsk2-l08", lex);
+  assert.equal(ctx8.nextLesson.lessonId, "hsk2-l09");
 });
 
-test("multi-layer system instruction fits Worker 24KB cap across all 22 lessons and 4 modes", () => {
+test("multi-layer system instruction fits Worker 24KB cap across all 23 lessons and 4 modes", () => {
   assert.equal(PRACTICE_MODES.length, 4);
   for (const l of listLessons(lex)) {
     for (const pm of PRACTICE_MODES) {

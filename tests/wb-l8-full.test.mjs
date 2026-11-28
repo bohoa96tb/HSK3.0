@@ -63,9 +63,9 @@ test("wb l8: all 30 items present, answers verified-editorial, every image file 
   for (const f of files) assert.ok(existsSync(new URL("../" + f, import.meta.url)), f);
 });
 
-test("wb l8: the two shared images are byte-identical copies of lesson 1's", () => {
+test("wb l8: shared r1-basketball matches lesson 1 and p2-soccer is full-scene redrawn", () => {
   const sha = (p) => createHash("sha256").update(readFileSync(new URL("../" + p, import.meta.url))).digest("hex");
-  assert.equal(sha("assets/hsk2-lesson-08/wb-p2-soccer.webp"), sha("assets/hsk2-lesson-01/wb-p2-soccer.webp"));
+  assert.notEqual(sha("assets/hsk2-lesson-08/wb-p2-soccer.webp"), sha("assets/hsk2-lesson-01/wb-p2-soccer.webp"));
   assert.equal(sha("assets/hsk2-lesson-08/wb-r1-basketball.webp"), sha("assets/hsk2-lesson-01/wb-r1-basketball.webp"));
 });
 
